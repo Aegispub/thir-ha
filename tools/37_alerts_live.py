@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Tool 37 — Alerts
-THIR · nikhilsalunkemumbai/thir-live
+THIR · Aegispub/thir-ha
 Input:  data/*.json  (all pipeline outputs)
 Output: Slack webhook POST and/or email via SMTP
         data/alert_history.json  (deduplication state)
