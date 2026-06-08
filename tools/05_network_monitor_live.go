@@ -23,7 +23,7 @@ NIST CSF COVERAGE:
   assets.json  → ID.AM-1  (Asset Inventory)
 
 ROLE IN THIR PIPELINE:
-  Checks Cowrie honeypot port 2222 on AWS EC2 every hour.
+  Checks Cowrie honeypot port 2222 on Oracle Cloud VM2 (HAProxy) every 2 hours.
   Writes data/posture.json → portfolio posture dashboard reads it live.
   Writes data/assets.json  → asset inventory for ID.AM-1 coverage.
 
