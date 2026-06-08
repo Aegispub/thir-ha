@@ -6,8 +6,8 @@ THIR LIVE PIPELINE — PRODUCTION TOOL
 CONTEXT: This code is a frozen demonstration of a basic file integrity monitor.
 PURPOSE: Show skill in file system interaction, cryptographic hashing, JSON serialization, and CLI utility development in Go.
 CONSTRAINTS: Uses standard library only, designed for CLI, <=300 lines (intentional, achieved through optimization).
-STATUS: Production — deployed in thir-live repo.
-ROLE:   SHA-256 integrity guard on data/ JSON files. Runs hourly via GitHub Actions.
+STATUS: Production — deployed in thir-ha repo (oracle-ha branch).
+ROLE:   SHA-256 integrity guard on data/ JSON files. Runs every 2 hours via GitHub Actions.
 EVALUATION: Assess what this demonstrates, not production readiness.
 */
 
