@@ -1,5 +1,5 @@
 // Tool 30 Extension — ASN Clustering
-// THIR · nikhilsalunkemumbai/thir-live
+// THIR · Aegispub/thir-ha
 // Input:  data/threat_ips.json
 // Output: data/asn_clusters.json
 //
