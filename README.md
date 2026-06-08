@@ -2,7 +2,7 @@
 
 A live honeypot threat intelligence dashboard. A Cowrie SSH honeypot runs on AWS EC2, feeding a GitHub Actions pipeline every two hours. Attacker sessions are parsed, enriched, false-positive filtered, clustered, malware-analyzed, alerted, and published to a live dashboard with automated SOC reporting.
 
-**Live:** [threats.aegispub.com](https://threats.aegispub.com)
+**Live:** [thirha.aegispub.com](https://thirha.aegispub.com)
 
 ---
 
