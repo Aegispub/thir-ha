@@ -1,16 +1,17 @@
 {
-  "generated_at": "2026-06-07T23:09:36.418886606Z",
+  "generated_at": "2026-06-08T05:55:04.840042008Z",
   "services": [
     {
-      "address": "13.235.92.17:2222",
-      "status": "UP",
-      "checked_at": "2026-06-07T23:09:36.20521462Z"
+      "address": "150.230.174.199:2222",
+      "status": "DOWN",
+      "error": "dial tcp 150.230.174.199:2222: i/o timeout",
+      "checked_at": "2026-06-08T05:55:01.839707361Z"
     }
   ],
   "summary": {
     "total": 1,
-    "up": 1,
-    "down": 0,
-    "overall": "HEALTHY"
+    "up": 0,
+    "down": 1,
+    "overall": "DOWN"
   }
 }
