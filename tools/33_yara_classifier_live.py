@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Tool 33 — YARA Classifier
-THIR · nikhilsalunkemumbai/thir-live
+THIR · Aegispub/thir-ha
 Input:  /tmp/cowrie-downloads/
         tools/yara_rules/   (YARA rule files, *.yar / *.yara)
 Output: data/yara_matches.json
