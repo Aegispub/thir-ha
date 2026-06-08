@@ -32,7 +32,7 @@ Output schema (data/credentials.json):
 Pipeline position: Step 7a — after Tool 26, before Step 8 (IP extraction).
 Reads /tmp/cowrie.json directly (same file fetched in Step 6).
 
-THIR Live — nikhilsalunkemumbai/thir-live
+THIR Live — Aegispub/thir-ha
 """
 
 import argparse
