@@ -1,10 +1,39 @@
 {
-  "generated_at": "2026-06-08T05:55:08.135232+00:00",
-  "total_sessions_with_commands": 0,
-  "total_clusters": 0,
+  "generated_at": "2026-06-08T06:21:38.043235+00:00",
+  "total_sessions_with_commands": 1,
+  "total_clusters": 1,
   "campaign_clusters": 0,
-  "singleton_clusters": 0,
+  "singleton_clusters": 1,
   "highest_severity": "NONE",
   "active_campaigns": [],
-  "clusters": []
+  "clusters": [
+    {
+      "cluster_id": "CLU-001",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "223.228.43.34"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "e596899f114b5162",
+      "ttps": [],
+      "representative_commands": [
+        "exit"
+      ],
+      "members": [
+        {
+          "session_id": "IR-76813f01aabd",
+          "src_ip": "223.228.43.34",
+          "country": "",
+          "isp": "",
+          "command_count": 1,
+          "timestamp": "2026-06-08T06:02:18.369609Z"
+        }
+      ]
+    }
+  ]
 }

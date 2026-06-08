@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-06-08 |
-| **Generated At** | 2026-06-08T05:55:13Z |
-| **Shift Time** | 05:55 UTC |
+| **Generated At** | 2026-06-08T06:21:44Z |
+| **Shift Time** | 06:21 UTC |
 | **Honeypot Status** | ❌ DOWN |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -14,14 +14,14 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **1** |
-| Confirmed Threats | **0** |
-| False Positives Filtered | **1** (100.0%) |
-| Unique Attacker IPs | **1** |
-| Countries of Origin | **0** |
-| High Severity Cases | **0** |
+| Total Sessions Captured | **15** |
+| Confirmed Threats | **10** |
+| False Positives Filtered | **5** (33.3%) |
+| Unique Attacker IPs | **8** |
+| Countries of Origin | **5** |
+| High Severity Cases | **1** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **1** |
+| Low Severity Cases | **14** |
 | Malware Samples Analyzed | **0** HIGH · **20** MED · 4 empty upload attempt(s) |
 
 ---
@@ -30,11 +30,66 @@
 
 | Metric | Value |
 |---|---|
-| Total Auth Attempts | **0** |
-| Unique Credential Pairs | **0** |
-| Unique Usernames | **0** |
-| Unique Passwords | **0** |
-| Successful Auth Pairs | **0** |
+| Total Auth Attempts | **1** |
+| Unique Credential Pairs | **1** |
+| Unique Usernames | **1** |
+| Unique Passwords | **1** |
+| Successful Auth Pairs | **1** |
+
+**Top Usernames:**
+
+| Username | Attempts |
+|---|---|
+| `root` | 1 |
+
+**Top Passwords:**
+
+| Password | Attempts |
+|---|---|
+| `` | 1 |
+
+**Top Credential Pairs:**
+
+| Username | Password | Attempts |
+|---|---|---|
+| `root` | `` | 1 |
+
+**⚠️ Successful Auth Pairs (Priority — cross-reference with IR cases):**
+
+| Username | Password | Source IP | Timestamp |
+|---|---|---|---|
+| `root` | `` | `223.228.43.34` | 2026-06-08T06:02:27 |
+
+---
+
+## 🖥 SSH Fingerprint Intelligence
+
+| Metric | Value |
+|---|---|
+| Total Sessions Parsed | **15** |
+| Sessions with Fingerprint | **2** |
+| Unique HASSH Fingerprints | **2** |
+
+**Client Family Distribution:**
+
+| Client Family | Sessions |
+|---|---|
+| Go SSH scanner | 1 |
+| OpenSSH | 1 |
+
+**⚠️ Botnet/Scanner KEX Signatures Detected:**
+
+| HASSH | Signature | Sessions | IPs |
+|---|---|---|---|
+| `873a5fb5fedc...` | Mirai/variant | 1 | 1 |
+| `eeca2460550b...` | libssh-based | 1 | 1 |
+
+**Top Fingerprints:**
+
+| HASSH | Client | Sessions | IPs | Botnet Sig |
+|---|---|---|---|---|
+| `873a5fb5fedc...` | Go SSH scanner | 1 | 1 | Mirai/variant |
+| `eeca2460550b...` | OpenSSH | 1 | 1 | libssh-based |
 
 ---
 
@@ -42,16 +97,23 @@
 
 | Metric | Value |
 |---|---|
-| Total IPs Analysed | **1** |
-| Unique ASNs | **1** |
-| High-Risk ASNs | **0** |
+| Total IPs Analysed | **8** |
+| Unique ASNs | **8** |
+| High-Risk ASNs | **5** |
 | Anon Infrastructure ASNs | **0** |
 
 **Top Attack ASNs:**
 
 | ASN | Provider | IPs | Risk |
 |---|---|---|---|
+| `AS4766` | Korea Telecom | 1 | HIGH |
+| `AS398705` | Censys, Inc. | 1 | LOW |
+| `AS56040` | China Mobile communications corporation | 1 | HIGH |
 | `AS0` |  | 1 | LOW |
+| `AS9808` | China Mobile Communications Group Co., Ltd. | 1 | HIGH |
+| `AS45609` | Bharti Airtel Ltd. AS for GPRS Service | 1 | LOW |
+| `AS36352` | HostPapa | 1 | HIGH |
+| `AS14061` | DigitalOcean, LLC | 1 | HIGH |
 
 ---
 
@@ -71,7 +133,13 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 > Repeated connect/close sessions with no auth success, commands, or downloads.
 > Grouped within a 120-minute window per IP to reduce noise.
 
-_No reconnaissance sessions this shift._
+| IP | Sessions | First Seen | Last Seen | Duration | Login Attempts | TTPs | Severity |
+|---|---|---|---|---|---|---|---|
+| `107.174.155[.]67` | **4** | 2026-06-08 05:53 | 2026-06-08 06:17 | 3m | 0 | `T1592` | 🟢 LOW |
+| `123.88.103[.]173` | **3** | 2026-06-08 06:20 | 2026-06-08 06:20 | 0m | 0 | `T1592` | 🟢 LOW |
+| `121.134.151[.]223` | 1 | 2026-06-08 06:17 | 2026-06-08 06:17 | 30s | 0 | `T1592` | 🟢 LOW |
+| `183.222.14[.]9` | 1 | 2026-06-08 06:19 | 2026-06-08 06:19 | 0s | 0 | `T1592` | 🟢 LOW |
+| `206.81.2[.]201` | 1 | 2026-06-08 06:11 | 2026-06-08 06:12 | 38s | 0 | `T1592` | 🟢 LOW |
 
 ---
 
@@ -119,15 +187,30 @@ _No reconnaissance sessions this shift._
 
 ## 🌐 Top Attacker IPs by Abuse Score
 
-_No enriched IPs with abuse scores available._
+| IP | Country | ISP | Abuse Score | OTX Pulses |
+|---|---|---|---|---|
+| `123.88.103[.]173` | CN | China Mobile Communications Corporation | **100** ⚠️ | 0 |
+| `183.222.14[.]9` | CN | China Mobile Communications Corporation | **100** ⚠️ | 0 |
+| `107.174.155[.]67` | US | sally wang | **100** ⚠️ | 0 |
+| `206.81.2[.]201` | US | DigitalOcean, LLC | **100** ⚠️ | 4 |
+| `121.134.151[.]223` | KR | Korea Telecom | **100** ⚠️ | 50 |
 
 ---
 
-## 🔕 False Positive Summary (1 filtered)
+## 🎯 Top TTPs Observed (MITRE ATT&CK)
+
+| TTP ID | Count |
+|---|---|
+| [T1592](https://attack.mitre.org/techniques/T1592) | 2 |
+| [T1078](https://attack.mitre.org/techniques/T1078) | 1 |
+
+---
+
+## 🔕 False Positive Summary (5 filtered)
 
 | Reason | Count |
 |---|---|
-| AbuseIPDB score 0 below threshold 25 | 1 |
+| AbuseIPDB score 0 below threshold 25 | 5 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -138,19 +221,19 @@ _No enriched IPs with abuse scores available._
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05  | Network Monitor (port 2222) | ❌ DOWN |
-| Tool 26  | Incident Timeline Generator | ✅ 1 cases |
-| Tool 34  | Credential Extractor        | ✅ 0 attempts |
-| Tool 35  | SSH Fingerprint Aggregator  | ✅ 0 fingerprints |
-| Tool 36  | Command Clustering          | ✅ 0 clusters |
-| Tool 27  | Threat Intel Feeder         | ✅ 1 IPs enriched |
-| Tool 29  | False Positive Tracker      | ✅ 1 filtered (100.0%) |
+| Tool 26  | Incident Timeline Generator | ✅ 15 cases |
+| Tool 34  | Credential Extractor        | ✅ 1 attempts |
+| Tool 35  | SSH Fingerprint Aggregator  | ✅ 2 fingerprints |
+| Tool 36  | Command Clustering          | ✅ 1 clusters |
+| Tool 27  | Threat Intel Feeder         | ✅ 8 IPs enriched |
+| Tool 29  | False Positive Tracker      | ✅ 5 filtered (33.3%) |
 | Tool 30  | Metric Exporter             | ✅ stats.json written |
-| Tool 30b | ASN Clustering              | ✅ 1 ASNs |
+| Tool 30b | ASN Clustering              | ✅ 8 ASNs |
 | Tool 31  | Malware Analyzer            | ✅ 35 files |
 | Tool 33  | YARA Classifier             | ✅ 10 classified |
 | Tool 28  | SOC Handover Report         | ✅ This report (v2.2) |
 
-> **Report grouping:** 0 priority case(s) shown individually · 0 recon entry/entries in table (0 group(s) consolidating 0 session(s)).
+> **Report grouping:** 0 priority case(s) shown individually · 5 recon entry/entries in table (2 group(s) consolidating 7 session(s)).
 
 ---
 
@@ -166,4 +249,4 @@ _No enriched IPs with abuse scores available._
 
 _Generated by THIR · Tool 28 v2.3 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-06-08T05:55:13Z_
+_Report time: 2026-06-08T06:21:44Z_
