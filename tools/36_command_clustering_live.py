@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Tool 36 — Command Clustering
-THIR · nikhilsalunkemumbai/thir-live
+THIR · Aegispub/thir-ha
 Input:  data/ir_cases.json
 Output: data/command_clusters.json
 
