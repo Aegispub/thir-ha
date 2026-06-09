@@ -1,11 +1,24 @@
 {
-  "generated_at": "2026-06-09T03:54:11.315870+00:00",
-  "total_sessions_with_commands": 20,
-  "total_clusters": 6,
-  "campaign_clusters": 0,
-  "singleton_clusters": 4,
-  "highest_severity": "NONE",
-  "active_campaigns": [],
+  "generated_at": "2026-06-09T07:54:54.393771+00:00",
+  "total_sessions_with_commands": 14,
+  "total_clusters": 8,
+  "campaign_clusters": 1,
+  "singleton_clusters": 3,
+  "highest_severity": "HIGH",
+  "active_campaigns": [
+    {
+      "cluster_id": "CLU-003",
+      "name": "Mirai/IoT Botnet",
+      "severity": "HIGH",
+      "session_count": 1,
+      "unique_ip_count": 1,
+      "ttps": [
+        "T1082",
+        "T1105",
+        "T1059.004"
+      ]
+    }
+  ],
   "clusters": [
     {
       "cluster_id": "CLU-001",
@@ -14,9 +27,60 @@
       "campaign_severity": null,
       "campaign_description": null,
       "matched_campaigns": [],
-      "session_count": 1,
+      "session_count": 3,
       "unique_ips": [
-        "138.2.98.41"
+        "69.164.213.157"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "e707cc0f441aefd0",
+      "ttps": [],
+      "representative_commands": [
+        "From: <sip:nm@nm>;tag=root",
+        "To: <sip:nm2@nm2>",
+        "Call-ID: 50000",
+        "CSeq: 42 OPTIONS",
+        "Max-Forwards: 70",
+        "Content-Length: 0",
+        "Contact: <sip:nm@nm>",
+        "Accept: application/sdp"
+      ],
+      "members": [
+        {
+          "session_id": "IR-d6a70de9c1bf",
+          "src_ip": "69.164.213.157",
+          "country": "",
+          "isp": "",
+          "command_count": 8,
+          "timestamp": "2026-06-09T04:56:15.276276Z"
+        },
+        {
+          "session_id": "IR-1f7639e2ebc8",
+          "src_ip": "69.164.213.157",
+          "country": "",
+          "isp": "",
+          "command_count": 8,
+          "timestamp": "2026-06-09T04:56:20.287921Z"
+        },
+        {
+          "session_id": "IR-515b059d8ab3",
+          "src_ip": "69.164.213.157",
+          "country": "",
+          "isp": "",
+          "command_count": 8,
+          "timestamp": "2026-06-09T04:56:20.288808Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-002",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 2,
+      "unique_ips": [
+        "137.131.9.65"
       ],
       "unique_ip_count": 1,
       "sequence_hash": "d2af147dd3fa2817",
@@ -37,75 +101,76 @@
       ],
       "members": [
         {
-          "session_id": "IR-1d9ce44eb99c",
-          "src_ip": "138.2.98.41",
+          "session_id": "IR-8e0d75161cd9",
+          "src_ip": "137.131.9.65",
           "country": "",
           "isp": "",
           "command_count": 7,
-          "timestamp": "2026-06-09T02:11:06.275380Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-002",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "35.203.211.11"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "49efc5eb7bb5604b",
-      "ttps": [
+          "timestamp": "2026-06-09T05:15:52.453575Z"
+        },
         {
-          "id": "T1083",
-          "name": "File & Directory Discovery"
-        }
-      ],
-      "representative_commands": [
-        "User-Agent: Hello from Palo Alto Networks, find out more about our scans in https://docs-cortex.paloaltonetworks.com/r/1/Cortex-Xpanse/Scanning-activity",
-        "Accept-Encoding: gzip"
-      ],
-      "members": [
-        {
-          "session_id": "IR-ea354369efe5",
-          "src_ip": "35.203.211.11",
+          "session_id": "IR-f7913cba4ea3",
+          "src_ip": "137.131.9.65",
           "country": "",
           "isp": "",
-          "command_count": 2,
-          "timestamp": "2026-06-09T00:42:15.165462Z"
+          "command_count": 7,
+          "timestamp": "2026-06-09T05:18:24.756679Z"
         }
       ]
     },
     {
       "cluster_id": "CLU-003",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
+      "is_campaign": true,
+      "campaign_name": "Mirai/IoT Botnet",
+      "campaign_severity": "HIGH",
+      "campaign_description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
+      "matched_campaigns": [
+        {
+          "name": "Mirai/IoT Botnet",
+          "ttps": [
+            "T1105",
+            "T1059.004"
+          ],
+          "severity": "HIGH",
+          "description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
+          "pattern_hits": 2,
+          "pattern_total": 3
+        }
+      ],
       "session_count": 1,
       "unique_ips": [
-        "34.76.175.4"
+        "176.65.139.41"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "6c2b02475f4c7e7e",
-      "ttps": [],
+      "sequence_hash": "247e5eacc7fee14d",
+      "ttps": [
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        },
+        {
+          "id": "T1105",
+          "name": "T1105"
+        },
+        {
+          "id": "T1059.004",
+          "name": "T1059.004"
+        }
+      ],
       "representative_commands": [
-        "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36",
-        "Accept-Encoding: gzip"
+        "echo SHELL_TEST",
+        "/bin/busybox TEST",
+        "cat /proc",
+        "./"
       ],
       "members": [
         {
-          "session_id": "IR-778113d11e61",
-          "src_ip": "34.76.175.4",
+          "session_id": "IR-0b7de8c08e82",
+          "src_ip": "176.65.139.41",
           "country": "",
           "isp": "",
-          "command_count": 2,
-          "timestamp": "2026-06-09T02:46:38.509264Z"
+          "command_count": 4,
+          "timestamp": "2026-06-09T04:02:45.429977Z"
         }
       ]
     },
@@ -116,13 +181,116 @@
       "campaign_severity": null,
       "campaign_description": null,
       "matched_campaigns": [],
-      "session_count": 3,
+      "session_count": 1,
       "unique_ips": [
-        "27.185.75.194",
-        "10.0.0.73",
-        "180.76.174.73"
+        "66.228.53.136"
       ],
-      "unique_ip_count": 3,
+      "unique_ip_count": 1,
+      "sequence_hash": "0084449e5825fe2e",
+      "ttps": [],
+      "representative_commands": [
+        "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+        "Accept: */*",
+        "Accept-Encoding: gzip"
+      ],
+      "members": [
+        {
+          "session_id": "IR-0f2d5953d603",
+          "src_ip": "66.228.53.136",
+          "country": "",
+          "isp": "",
+          "command_count": 3,
+          "timestamp": "2026-06-09T06:22:08.409220Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-005",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 2,
+      "unique_ips": [
+        "34.52.249.200",
+        "34.76.162.94"
+      ],
+      "unique_ip_count": 2,
+      "sequence_hash": "6c2b02475f4c7e7e",
+      "ttps": [],
+      "representative_commands": [
+        "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36",
+        "Accept-Encoding: gzip"
+      ],
+      "members": [
+        {
+          "session_id": "IR-68ae14cfcefc",
+          "src_ip": "34.76.162.94",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-09T02:58:46.678858Z"
+        },
+        {
+          "session_id": "IR-76fe26234e1d",
+          "src_ip": "34.52.249.200",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-09T03:33:53.077284Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-006",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 2,
+      "unique_ips": [
+        "34.52.249.200",
+        "34.76.162.94"
+      ],
+      "unique_ip_count": 2,
+      "sequence_hash": "758d61f26a444483",
+      "ttps": [],
+      "representative_commands": [
+        "PING"
+      ],
+      "members": [
+        {
+          "session_id": "IR-b80fb3c06199",
+          "src_ip": "34.76.162.94",
+          "country": "",
+          "isp": "",
+          "command_count": 1,
+          "timestamp": "2026-06-09T02:59:00.205767Z"
+        },
+        {
+          "session_id": "IR-f25931451a84",
+          "src_ip": "34.52.249.200",
+          "country": "",
+          "isp": "",
+          "command_count": 1,
+          "timestamp": "2026-06-09T03:34:06.533064Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-007",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "113.249.112.188"
+      ],
+      "unique_ip_count": 1,
       "sequence_hash": "6fa4c8ac58e7a1d9",
       "ttps": [
         {
@@ -135,41 +303,25 @@
       ],
       "members": [
         {
-          "session_id": "IR-0150ce359dc9",
-          "src_ip": "27.185.75.194",
+          "session_id": "IR-18ebb28e3628",
+          "src_ip": "113.249.112.188",
           "country": "",
           "isp": "",
           "command_count": 1,
-          "timestamp": "2026-06-09T00:03:44.900882Z"
-        },
-        {
-          "session_id": "IR-f9a9cc99e829",
-          "src_ip": "180.76.174.73",
-          "country": "",
-          "isp": "",
-          "command_count": 1,
-          "timestamp": "2026-06-09T00:08:58.145059Z"
-        },
-        {
-          "session_id": "IR-6c5fe0a06f65",
-          "src_ip": "10.0.0.73",
-          "country": "",
-          "isp": "",
-          "command_count": 1,
-          "timestamp": "2026-06-09T02:44:52.919187Z"
+          "timestamp": "2026-06-09T03:55:26.286779Z"
         }
       ]
     },
     {
-      "cluster_id": "CLU-005",
+      "cluster_id": "CLU-008",
       "is_campaign": false,
       "campaign_name": null,
       "campaign_severity": null,
       "campaign_description": null,
       "matched_campaigns": [],
-      "session_count": 13,
+      "session_count": 2,
       "unique_ips": [
-        "2.57.122.238"
+        "80.94.92.171"
       ],
       "unique_ip_count": 1,
       "sequence_hash": "876deb10d4cf5b5c",
@@ -184,136 +336,20 @@
       ],
       "members": [
         {
-          "session_id": "IR-14c97f7a613d",
-          "src_ip": "2.57.122.238",
+          "session_id": "IR-05f062624547",
+          "src_ip": "80.94.92.171",
           "country": "",
           "isp": "",
           "command_count": 1,
-          "timestamp": "2026-06-09T01:50:16.959194Z"
+          "timestamp": "2026-06-09T06:47:31.003947Z"
         },
         {
-          "session_id": "IR-6a6b1c6bbfc5",
-          "src_ip": "2.57.122.238",
+          "session_id": "IR-89fe6a8b8837",
+          "src_ip": "80.94.92.171",
           "country": "",
           "isp": "",
           "command_count": 1,
-          "timestamp": "2026-06-09T01:52:43.082660Z"
-        },
-        {
-          "session_id": "IR-256eede4283c",
-          "src_ip": "2.57.122.238",
-          "country": "",
-          "isp": "",
-          "command_count": 1,
-          "timestamp": "2026-06-09T01:55:04.440800Z"
-        },
-        {
-          "session_id": "IR-a6213703f60d",
-          "src_ip": "2.57.122.238",
-          "country": "",
-          "isp": "",
-          "command_count": 1,
-          "timestamp": "2026-06-09T01:57:16.529374Z"
-        },
-        {
-          "session_id": "IR-470a59f3e9af",
-          "src_ip": "2.57.122.238",
-          "country": "",
-          "isp": "",
-          "command_count": 1,
-          "timestamp": "2026-06-09T01:59:29.221001Z"
-        },
-        {
-          "session_id": "IR-3b294a89cad4",
-          "src_ip": "2.57.122.238",
-          "country": "",
-          "isp": "",
-          "command_count": 1,
-          "timestamp": "2026-06-09T02:01:36.649029Z"
-        },
-        {
-          "session_id": "IR-8f11a8407761",
-          "src_ip": "2.57.122.238",
-          "country": "",
-          "isp": "",
-          "command_count": 1,
-          "timestamp": "2026-06-09T02:03:45.336809Z"
-        },
-        {
-          "session_id": "IR-8f97e7723e6e",
-          "src_ip": "2.57.122.238",
-          "country": "",
-          "isp": "",
-          "command_count": 1,
-          "timestamp": "2026-06-09T02:06:05.371482Z"
-        },
-        {
-          "session_id": "IR-ddf59b58889b",
-          "src_ip": "2.57.122.238",
-          "country": "",
-          "isp": "",
-          "command_count": 1,
-          "timestamp": "2026-06-09T02:08:22.731854Z"
-        },
-        {
-          "session_id": "IR-4df20bcb5d41",
-          "src_ip": "2.57.122.238",
-          "country": "",
-          "isp": "",
-          "command_count": 1,
-          "timestamp": "2026-06-09T02:10:39.925831Z"
-        },
-        {
-          "session_id": "IR-bef291c5af28",
-          "src_ip": "2.57.122.238",
-          "country": "",
-          "isp": "",
-          "command_count": 1,
-          "timestamp": "2026-06-09T02:12:59.406914Z"
-        },
-        {
-          "session_id": "IR-8c11f9d29c8a",
-          "src_ip": "2.57.122.238",
-          "country": "",
-          "isp": "",
-          "command_count": 1,
-          "timestamp": "2026-06-09T02:15:06.702879Z"
-        },
-        {
-          "session_id": "IR-94c055e6d723",
-          "src_ip": "2.57.122.238",
-          "country": "",
-          "isp": "",
-          "command_count": 1,
-          "timestamp": "2026-06-09T02:17:20.649928Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-006",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "34.76.175.4"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "758d61f26a444483",
-      "ttps": [],
-      "representative_commands": [
-        "PING"
-      ],
-      "members": [
-        {
-          "session_id": "IR-b636c9865f87",
-          "src_ip": "34.76.175.4",
-          "country": "",
-          "isp": "",
-          "command_count": 1,
-          "timestamp": "2026-06-09T02:46:47.016448Z"
+          "timestamp": "2026-06-09T06:52:10.059927Z"
         }
       ]
     }
