@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-This project is actively maintained. Security fixes are applied to the `main` branch only.
+This project is actively maintained. Security fixes are applied to the `oracle-ha` branch only.
 
 ## Reporting a Vulnerability
 
@@ -25,13 +25,17 @@ We aim to respond within **72 hours** and will keep you informed as the issue is
 
 | In Scope | Out of Scope |
 |---|---|
-| Pipeline tool vulnerabilities (tools/) | Third-party APIs (AbuseIPDB, OTX) |
+| Pipeline tool vulnerabilities (`tools/`) | Third-party APIs (AbuseIPDB, OTX, VirusTotal) |
 | Data injection via crafted Cowrie logs | Cowrie honeypot itself |
 | Dashboard XSS or data exposure | GitHub Actions runner infrastructure |
-| SSH key or secret exposure | AWS EC2 configuration |
+| SSH key or secret exposure | Oracle Cloud infrastructure |
+| HAProxy misconfiguration | Cloudflare network |
+| rsync collector logic (`tools/ha/`) | |
 
 ## Known Design Decisions
 
 - Honeypot data (attacker IPs, commands) is published publicly via GitHub Pages. This is intentional — it is sanitised via `sanitise_ip()` and `sanitise_session_id()` before publication.
-- The pipeline runs with `contents: write` permission scoped to the repo only.
-- SSH keys for EC2 access are stored as GitHub Actions secrets and deleted from the runner after each run.
+- The pipeline runs with `contents: write` permission scoped to the repository only.
+- SSH keys for Oracle VM2 access are stored as GitHub Actions secrets and deleted from the runner after each run.
+- VM1 (sensor node) public IP is never stored in any GitHub secret. GitHub Actions only accesses VM2. A compromise of VM2 does not expose VM1's admin credentials.
+- VM2 backup Cowrie instance binds to `127.0.0.1` only — ports 4222, 4223, 4323 are never reachable from outside VM2.
