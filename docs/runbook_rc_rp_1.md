@@ -1,15 +1,38 @@
+# THIR-RC-RP-1 — Legacy Runbook (AWS EC2 Single Node)
+
+> **SUPERSEDED — This runbook covers the original AWS EC2 single-node deployment (thir-live).**
+>
+> It is retained here for historical reference only. The THIR infrastructure migrated to Oracle Cloud Always Free two-node HA architecture in June 2026.
+>
+> **For current recovery procedures, use `docs/THIR_HA_Runbooks_v2.docx (planned)`:**
+>
+> | Scenario | Runbook |
+> |---|---|
+> | VM1 sensor failure | RB-02 |
+> | VM2 brain failure | RB-03 |
+> | Manual / automatic failover | RB-04 |
+> | HAProxy + Cloudflare recovery | RB-05 |
+> | Full stack rebuild from zero | RB-06 |
+> | Architecture reference | RB-01 |
+>
+> **Legacy reference dates:** Operational March 7 2026 – September 6 2026
+> **AWS corpus:** Raw logs archived to Cloudflare R2 `thir-raw-archive`
+
+---
+
 # THIR Recovery Runbook
 ## RC.RP-1 — Recovery Planning
 ### If the AWS EC2 Honeypot Is Compromised or Lost
 
 ---
 
-**Document ID:** THIR-RC-RP-1  
-**NIST CSF Control:** RC.RP-1 — Recovery plan is executed during or after a cybersecurity incident  
-**NIST Function:** RECOVER  
-**Asset Covered:** AWS EC2 Ubuntu — Cowrie SSH Honeypot (`thir-honeypot-01`)  
-**Owner:** Joy Dane  
-**Last Reviewed:** 2025-03-08  
+**Document ID:** THIR-RC-RP-1
+**NIST CSF Control:** RC.RP-1 — Recovery plan is executed during or after a cybersecurity incident
+**NIST Function:** RECOVER
+**Asset Covered:** AWS EC2 Ubuntu — Cowrie SSH Honeypot (`thir-honeypot-01`)
+**Owner:** nikhilsalunkemumbai
+**Last Reviewed:** 2025-03-08
+**Status:** LEGACY — superseded by THIR_HA_Runbooks_v2.docx
 
 ---
 
@@ -28,179 +51,112 @@ Execute this runbook if any of the following are true:
 | Condition | How You Know |
 |---|---|
 | EC2 instance unreachable | Tool 05 reports `DOWN` in `data/posture.json` for 2+ consecutive hourly runs |
-| Pipeline SCP step fails | GitHub Actions log shows `Permission denied` or `Connection refused` on the fetch step |
-| Cowrie log file missing or empty | Pre-flight step reports `No such file or directory` for `cowrie.json` |
-| EC2 instance terminated | AWS console shows instance state as `terminated` |
-| Attacker achieved root on the EC2 host (not inside Cowrie) | `cowrie.json` contains events showing `/proc`, `/etc/shadow`, or `iptables` commands that Cowrie would not normally emulate |
-| Unexpected outbound traffic from EC2 IP | AbuseIPDB reports your own VPS IP as a threat actor |
+| Cowrie process crashed | No new sessions in `ir_cases.json` — but EC2 is still reachable via SSH |
+| EC2 host appears compromised | Cowrie logs show `iptables`, `/proc`, `/etc/shadow` commands — attacker escalated |
+| Unexpected outbound traffic | AbuseIPDB or OTX flags your EC2 IP as a threat actor |
+| EC2 terminated unexpectedly | AWS Console shows instance as Terminated |
 
 ---
 
-## 3. Do Not Do This First
+## 3. Before You Rebuild — Evidence First
 
-Before taking any action, **preserve evidence**:
+> **Do not rebuild until evidence is preserved. A honeypot compromise is intelligence, not a crisis.**
 
-- Take an AWS snapshot of the EBS volume before terminating or rebuilding
-- Download the current `cowrie.json` and any rotated logs (`cowrie.json.YYYY-MM-DD`) to a local machine
-- Note the exact time you discovered the issue — this is T0 for your incident timeline
+### 3.1 Preserve Logs
 
-Evidence first. Rebuild second. This is a security project. The compromise is the data.
-
----
-
-## 4. Recovery Procedure
-
-### Phase 1 — Isolate (5 minutes)
+If the EC2 is still accessible:
 
 ```bash
-# Step 1: Detach the EC2 instance from the internet
-# AWS Console → EC2 → Security Groups → remove inbound rule for port 2222
-# This stops further attacker access without destroying evidence
+# From your local machine
+scp -P 22222 -i thir-pipeline-key.pem \
+  ubuntu@EC2_IP:/home/cowrie/cowrie/var/log/cowrie/* \
+  ./evidence/
 
-# Step 2: Revoke the GitHub Actions SSH key on the EC2 side
-# SSH in (if still possible) and remove from authorized_keys
-nano /home/ubuntu/.ssh/authorized_keys
-# Delete the github-actions line, save
-
-# Step 3: Rotate the GitHub Secret
-# GitHub → repo Settings → Secrets → ORACLE_VPS_SSH_KEY
-# Generate new key pair, update secret — pipeline will fail safely until rebuilt
+scp -P 22222 -i thir-pipeline-key.pem \
+  ubuntu@EC2_IP:/var/log/auth.log \
+  ubuntu@EC2_IP:/var/log/syslog \
+  ./evidence/
 ```
 
----
+### 3.2 Take EBS Snapshot
 
-### Phase 2 — Preserve Evidence (10 minutes)
+AWS Console → EC2 → Instances → [instance] → Storage → [volume] → Actions → Create Snapshot
 
-```bash
-# From your local machine, SCP all logs before any rebuild
-scp -i ~/.ssh/your_key ubuntu@YOUR_EC2_IP:/home/cowrie/cowrie/var/log/cowrie/* ./evidence/
+Label: `thir-compromise-evidence-YYYY-MM-DD`
 
-# Also grab auth.log and syslog from the host OS itself
-scp -i ~/.ssh/your_key ubuntu@YOUR_EC2_IP:/var/log/auth.log ./evidence/
-scp -i ~/.ssh/your_key ubuntu@YOUR_EC2_IP:/var/log/syslog ./evidence/
+### 3.3 Document the Incident
 
-# Take AWS EBS snapshot
-# AWS Console → EC2 → Volumes → select root volume → Actions → Create Snapshot
-# Label it: thir-compromise-evidence-YYYY-MM-DD
-```
+Before terminating the instance, note:
+- Last known good time (last clean pipeline run)
+- First anomaly indicator
+- Any attacker commands that targeted the host OS (not just Cowrie)
+- Whether the pipeline key was exposed
 
 ---
 
-### Phase 3 — Rebuild EC2 (20 minutes)
+## 4. Recovery Steps
+
+### 4.1 Launch New EC2 Instance
+
+- AWS Console → EC2 → Launch Instance
+- AMI: Ubuntu Server 22.04 LTS
+- Type: t2.micro (free tier)
+- Key pair: use existing `thir-pipeline-key`
+- Security group: ports 2222, 22222, 80/443 inbound; restrict port 22222 to your IP
+
+### 4.2 Assign Elastic IP
+
+- EC2 → Elastic IPs → Allocate → Associate with new instance
+- Update GitHub secret `ORACLE_VPS_IP` with new public IP if Elastic IP changed
+
+### 4.3 Install Cowrie
 
 ```bash
-# Option A: New instance from scratch (cleanest)
-# 1. Launch new EC2: Ubuntu 22.04 LTS, t2.micro (free tier), same region
-# 2. Create new key pair, download .pem
-# 3. Security Group: allow SSH port 22 (your IP only), port 2222 (0.0.0.0/0 for honeypot)
-# 4. Elastic IP: allocate a new one and associate it
-# 5. Update GitHub Secret ORACLE_VPS_IP with the new Elastic IP
+ssh -i thir-pipeline-key.pem -p 22222 ubuntu@NEW_EC2_IP
 
-# Option B: Reimage existing instance
-# AWS Console → EC2 → stop instance → detach EBS → attach fresh Ubuntu AMI volume
-
-# Install Cowrie on the new instance:
-ssh -i ~/.ssh/new_key ubuntu@NEW_EC2_IP
-
-sudo apt update && sudo apt install -y python3-virtualenv git libssl-dev libffi-dev \
-  build-essential libpython3-dev python3-minimal authbind virtualenv
+sudo apt update && sudo apt install -y \
+  python3-virtualenv git libssl-dev libffi-dev build-essential
 
 sudo adduser --disabled-password cowrie
 sudo su - cowrie
 
 git clone https://github.com/cowrie/cowrie.git
 cd cowrie
-virtualenv cowrie-env
-source cowrie-env/bin/activate
-pip install --upgrade pip
-pip install -r requirements.txt
-
+virtualenv cowrie-env && source cowrie-env/bin/activate
+pip install --upgrade pip && pip install -r requirements.txt
 cp etc/cowrie.cfg.dist etc/cowrie.cfg
+# Edit: listen_port = 2222, output_jsonlog = true
 
-# Configure cowrie.cfg
-nano etc/cowrie.cfg
-# Set: [ssh] listen_port = 2222
-# Set: [output_jsonlog] enabled = true
-
-# Start Cowrie
 bin/cowrie start
-
-# Verify log file is being created
-ls -lh var/log/cowrie/
 ```
 
----
-
-### Phase 4 — Restore Pipeline Access (5 minutes)
+### 4.4 Restore iptables
 
 ```bash
-# Generate new SSH key for GitHub Actions
-ssh-keygen -t ed25519 -C "thir-pipeline" -f ~/.ssh/thir_actions_key -N ""
-
-# Add public key to new EC2
-ssh-copy-id -i ~/.ssh/thir_actions_key.pub ubuntu@NEW_EC2_IP
-
-# Update GitHub Secrets
-# ORACLE_VPS_SSH_KEY  → contents of thir_actions_key (private key, full PEM)
-# ORACLE_VPS_IP       → new EC2 Elastic IP (if changed)
-
-# Trigger pipeline manually to verify
-# GitHub → Actions → THIR Live Pipeline → Run workflow
+# Port redirect 22 → 2222
+sudo iptables -t nat -A PREROUTING -p tcp --dport 22 -j REDIRECT --to-port 2222
+sudo netfilter-persistent save
 ```
 
----
+### 4.5 Add Pipeline Key
 
-### Phase 5 — Verify Recovery (5 minutes)
+```bash
+# Ensure pipeline public key is in ubuntu authorized_keys
+# (Should already be there from EC2 launch — verify)
+cat ~/.ssh/authorized_keys | grep pipeline
+```
 
-Confirm all of the following before closing this runbook:
+### 4.6 Trigger Pipeline
 
-- [ ] Tool 05 reports `UP` in `data/posture.json`
-- [ ] GitHub Actions pipeline runs to completion without errors
-- [ ] `data/ir_cases.json` is being updated with new sessions
-- [ ] `threats.aegispub.com` dashboard shows live data
-- [ ] Old EC2 instance terminated (or snapshot retained and instance stopped)
-- [ ] Evidence files stored locally
-- [ ] Incident documented as an IR case in the THIR dashboard
+GitHub → thir-live → Actions → THIR Live Pipeline → Run workflow
 
----
-
-## 5. Recovery Time Objectives
-
-| Target | Time |
-|---|---|
-| Evidence preserved | Within 15 minutes of detection |
-| New EC2 running with Cowrie | Within 45 minutes of decision to rebuild |
-| Pipeline restored and verified | Within 60 minutes of decision to rebuild |
-| **Total RTO (Recovery Time Objective)** | **< 90 minutes** |
+Verify `data/posture.json` shows UP and `threats.aegispub.com` updates.
 
 ---
 
-## 6. Seed Data for `data/assets.json`
+## 5. Post-Recovery
 
-After rebuild, Tool 05 will regenerate `assets.json` automatically on the next pipeline run. No manual intervention needed — the `--assets data/assets.json` flag handles it. `first_seen` will reset to the new build date, which is accurate.
-
----
-
-## 7. Post-Recovery Actions
-
-1. Write an IR case for the compromise event — add it to the THIR dashboard
-2. Review Cowrie logs from the evidence folder — what did the attacker do?
-3. Check if any TTPs from the compromise map to new MITRE techniques not yet in the heatmap
-4. If root was achieved: review whether Cowrie's `fake_` filesystem emulation needs hardening
-5. Update this runbook with any steps that were missing or unclear
-
----
-
-## 8. NIST CSF Alignment
-
-| Control | How This Runbook Covers It |
-|---|---|
-| **RC.RP-1** | This document IS the recovery plan. It is written, versioned, and tested. |
-| **RS.RP-1** | Phase 1 isolation procedure maps to the IR containment plan |
-| **RS.AN-1** | Phase 2 evidence preservation supports the investigation process |
-| **PR.IP-4** | Backups (EBS snapshot) are taken before rebuild |
-| **ID.AM-1** | Asset is re-registered in `assets.json` after rebuild via Tool 05 |
-
----
-
-*This runbook is version-controlled in the THIR repository. Any changes to the EC2 configuration, Cowrie setup, or pipeline secrets should be reflected here before the change is made — not after.*
+- Open an IR case in the THIR dashboard documenting the incident
+- Review the evidence files — attacker commands inside Cowrie vs host OS escalation
+- Update `data/posture.json` CIS control statuses if any controls were affected
+- Consider whether the compromise yielded any new IOCs worth enriching
