@@ -1,6 +1,6 @@
-# Contributing to THIR
+# Contributing to THIR-HA
 
-Thanks for your interest in contributing to THIR (Threat Hunter Intelligence Range).
+Thanks for your interest in contributing to THIR-HA (Threat Hunter Intelligence Range-HAProxy).
 
 ## What We Welcome
 
@@ -23,10 +23,10 @@ Thanks for your interest in contributing to THIR (Threat Hunter Intelligence Ran
 ## How to Contribute
 
 1. **Fork** the repository
-2. **Create a branch** — `git checkout -b fix/your-fix-name`
+2. **Create a branch** from `oracle-ha` — `git checkout -b fix/your-fix-name`
 3. **Make your changes** — keep commits focused and descriptive
 4. **Test locally** if possible — run tools against a sample `cowrie.json`
-5. **Open a Pull Request** — describe what you changed and why
+5. **Open a Pull Request** targeting `oracle-ha` — describe what you changed and why
 
 ## Code Style
 
@@ -36,7 +36,7 @@ Thanks for your interest in contributing to THIR (Threat Hunter Intelligence Ran
 
 ## Testing Locally
 
-Most pipeline tools can be tested without a live EC2 instance by pointing them at a sample Cowrie log:
+Most pipeline tools can be tested without a live VM by pointing them at a sample Cowrie log:
 
 ```bash
 # Tool 26 — parse a sample cowrie.json
@@ -54,7 +54,13 @@ go run tools/27_threat_intel_feeder_live.go \
 
 ## Port Note
 
-The real EC2 management SSH port is **22222** — not 22. Port 22 on the EC2 instance redirects to Cowrie. If you're testing SSH access or SCP commands locally, always specify `-p 22222`.
+The admin SSH port on both Oracle VMs is **22222** — not 22.
+
+- **VM1 (sensor):** Port 22 on VM1 redirects to Cowrie port 2222 via iptables. Always use port 22222 for admin access to VM1.
+- **VM2 (brain):** Port 22 on VM2 is unused. Admin access is port 22222 only.
+- **GitHub Actions** SSHes to VM2 port 22222 only — VM1 is never directly accessed by the pipeline.
+
+If you're testing SSH access or SCP commands locally, always specify `-p 22222`.
 
 ## Reporting Issues
 
