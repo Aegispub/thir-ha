@@ -74,6 +74,7 @@ type PostureReport struct {
 	GeneratedAt time.Time            `json:"generated_at"`
 	Services    []ServiceCheckResult `json:"services"`
 	Summary     PostureSummary       `json:"summary"`
+    Controls    []CISControl         `json:"cis_controls"`   // ADD THIS LINE
 }
 
 type PostureSummary struct {
@@ -82,6 +83,17 @@ type PostureSummary struct {
 	Down    int    `json:"down"`
 	Overall string `json:"overall"` // "HEALTHY" | "DEGRADED" | "DOWN"
 }
+
+// CISControl represents a single CIS Critical Security Control status.
+type CISControl struct {
+    ID          string `json:"id"`           // "CIS-1"
+    Name        string `json:"name"`         // "Asset Inventory"
+    Status      string `json:"status"`       // "ACTIVE" | "MONITORING" | "PLANNED"
+    Evidence    string `json:"evidence"`     // brief source description
+}
+
+// PostureReport is the JSON structure written to data/posture.json
+// Extended: CISControls block added for dashboard Section 05.
 
 // AssetRecord represents a single known asset in the inventory.
 // Covers NIST CSF ID.AM-1: Physical devices and systems are inventoried.
@@ -205,6 +217,38 @@ func writeTextReport(results []ServiceCheckResult, output *os.File) {
 	}
 }
 
+// buildCISControls returns the CIS control statuses derived from known
+// infrastructure facts. States are static for controls that don't vary
+// per run. CIS-1 (asset count) is set dynamically from the service check result.
+func buildCISControls(overallStatus string) []CISControl {
+    active := "ACTIVE"
+    monitoring := "MONITORING"
+    planned := "PLANNED"
+
+    controls := []CISControl{
+        {ID: "CIS-1",  Name: "Asset Inventory",          Status: active,     Evidence: "assets.json updated every pipeline run by Tool 05"},
+        {ID: "CIS-2",  Name: "Software Inventory",       Status: monitoring, Evidence: "tool_manifest.yaml tracks pipeline tools"},
+        {ID: "CIS-3",  Name: "Data Protection",          Status: active,     Evidence: "R2 archive encrypted at rest — thirha-raw-archive"},
+        {ID: "CIS-4",  Name: "Secure Configuration",     Status: active,     Evidence: "haproxy.cfg, cowrie.cfg, VCN rules in config/"},
+        {ID: "CIS-5",  Name: "Account Management",       Status: active,     Evidence: "Two key pairs, dedicated cowrie user, no shared credentials"},
+        {ID: "CIS-6",  Name: "Access Control",           Status: active,     Evidence: "Pipeline key vs personal key separation, GitHub Secrets"},
+        {ID: "CIS-7",  Name: "Vulnerability Management", Status: monitoring, Evidence: "Oracle security patches — pending regular cadence"},
+        {ID: "CIS-8",  Name: "Audit Log Management",     Status: active,     Evidence: "cowrie.json + cowrie.log dual streams, 59-day corpus"},
+        {ID: "CIS-9",  Name: "Email/Web Protection",     Status: planned,    Evidence: "cloudflared tunnels planned — direct IP exposure currently"},
+        {ID: "CIS-10", Name: "Malware Defence",          Status: active,     Evidence: "Tool 31 malware analysis + Tool 33 YARA classification"},
+        {ID: "CIS-11", Name: "Data Recovery",            Status: active,     Evidence: "R2 archive, EBS snapshots, runbook recovery procedures"},
+        {ID: "CIS-12", Name: "Network Infrastructure",   Status: active,     Evidence: "VCN private networking, HAProxy TCP LB, Cloudflare DNS"},
+    }
+
+    // CIS-1 status reflects current honeypot health
+    if overallStatus == "DOWN" {
+        controls[0].Status = "MONITORING"
+        controls[0].Evidence = "Honeypot DOWN — asset unreachable at check time"
+    }
+
+    return controls
+}
+
 // writeJSONReport — writes posture.json for the portfolio dashboard.
 func writeJSONReport(results []ServiceCheckResult, output *os.File) error {
 	up, down := 0, 0
@@ -232,6 +276,7 @@ func writeJSONReport(results []ServiceCheckResult, output *os.File) error {
 			Down:    down,
 			Overall: overall,
 		},
+	    Controls: buildCISControls(overall),   // ADD THIS LINE
 	}
 
 	enc := json.NewEncoder(output)
@@ -308,7 +353,7 @@ func buildAssetRecord(result ServiceCheckResult, existing map[string]AssetRecord
 		Hostname:       h,
 		IPAddress:      h,
 		Port:           portNum,
-		Role:           "Cowrie SSH/Telnet Honeypot",
+		Role:           "HAProxy Load Balancer · Pipeline Brain (Oracle VM2)",
 		Classification: "PUBLIC",
 		Owner:          "aegispub — THIR Project",
 		Platform:       "Oracle Cloud VM.Standard.E2.1.Micro (Always Free)",
