@@ -370,6 +370,7 @@ def main():
     parser.add_argument("--input",     default="data/ir_cases.json",        help="Path to ir_cases.json")
     parser.add_argument("--output",    default="data/command_clusters.json", help="Output path")
     parser.add_argument("--threshold", type=float, default=0.7,              help="Similarity threshold 0.0-1.0")
+    parser.add_argument("--threat-ips", default="data/threat_ips.json",              help="Path to threat_ips.json for geo/ISP enrichment (optional)")    
     args = parser.parse_args()
 
     print(f"[Tool36] Reading {args.input}")
