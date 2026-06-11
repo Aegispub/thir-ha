@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-11T04:19:07.126669685Z",
+  "generated_at": "2026-06-11T06:05:34.696928896Z",
   "services": [
     {
       "address": "150.230.174.199:2222",
       "status": "UP",
-      "checked_at": "2026-06-11T04:19:07.064099534Z"
+      "checked_at": "2026-06-11T06:05:34.64559287Z"
     }
   ],
   "summary": {
@@ -12,5 +12,79 @@
     "up": 1,
     "down": 0,
     "overall": "HEALTHY"
-  }
+  },
+  "cis_controls": [
+    {
+      "id": "CIS-1",
+      "name": "Asset Inventory",
+      "status": "ACTIVE",
+      "evidence": "assets.json updated every pipeline run by Tool 05"
+    },
+    {
+      "id": "CIS-2",
+      "name": "Software Inventory",
+      "status": "MONITORING",
+      "evidence": "tool_manifest.yaml tracks pipeline tools"
+    },
+    {
+      "id": "CIS-3",
+      "name": "Data Protection",
+      "status": "ACTIVE",
+      "evidence": "R2 archive encrypted at rest — thirha-raw-archive"
+    },
+    {
+      "id": "CIS-4",
+      "name": "Secure Configuration",
+      "status": "ACTIVE",
+      "evidence": "haproxy.cfg, cowrie.cfg, VCN rules in config/"
+    },
+    {
+      "id": "CIS-5",
+      "name": "Account Management",
+      "status": "ACTIVE",
+      "evidence": "Two key pairs, dedicated cowrie user, no shared credentials"
+    },
+    {
+      "id": "CIS-6",
+      "name": "Access Control",
+      "status": "ACTIVE",
+      "evidence": "Pipeline key vs personal key separation, GitHub Secrets"
+    },
+    {
+      "id": "CIS-7",
+      "name": "Vulnerability Management",
+      "status": "MONITORING",
+      "evidence": "Oracle security patches — pending regular cadence"
+    },
+    {
+      "id": "CIS-8",
+      "name": "Audit Log Management",
+      "status": "ACTIVE",
+      "evidence": "cowrie.json + cowrie.log dual streams, 59-day corpus"
+    },
+    {
+      "id": "CIS-9",
+      "name": "Email/Web Protection",
+      "status": "PLANNED",
+      "evidence": "cloudflared tunnels planned — direct IP exposure currently"
+    },
+    {
+      "id": "CIS-10",
+      "name": "Malware Defence",
+      "status": "ACTIVE",
+      "evidence": "Tool 31 malware analysis + Tool 33 YARA classification"
+    },
+    {
+      "id": "CIS-11",
+      "name": "Data Recovery",
+      "status": "ACTIVE",
+      "evidence": "R2 archive, EBS snapshots, runbook recovery procedures"
+    },
+    {
+      "id": "CIS-12",
+      "name": "Network Infrastructure",
+      "status": "ACTIVE",
+      "evidence": "VCN private networking, HAProxy TCP LB, Cloudflare DNS"
+    }
+  ]
 }
