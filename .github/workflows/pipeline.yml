@@ -346,6 +346,7 @@ jobs:
           python tools/36_command_clustering_live.py \
             --input     data/ir_cases.json \
             --output    data/command_clusters.json \
+            --threat-ips data/threat_ips.json \
             --threshold 0.7
 
       # ----------------------------------------------------------------
