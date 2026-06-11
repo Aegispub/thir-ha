@@ -628,7 +628,7 @@ def build_report(ir, threats, fp, stats, malware, creds=None, ssh_fps=None, cmd_
     ln(f"| **Generated At** | {now_str} |")
     ln(f"| **Shift Time** | {shift_time} |")
     ln(f"| **Honeypot Status** | {honeypot_icon(hstatus)} |")
-    ln(f"| **Source** | Cowrie SSH Honeypot · Oracle Cloud HA · Port 2222f |")
+    ln(f"| **Source** | Cowrie SSH Honeypot · Oracle Cloud HA · Port 2222 |")
     ln()
 
     # ── Executive summary ─────────────────────────────────────────────────────
