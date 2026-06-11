@@ -3,7 +3,7 @@
 # THIR LIVE PIPELINE
 # Runs every 2 hours. Fetches Cowrie honeypot logs from Oracle VM2 (local rsync copy),
 # processes it through the tool chain, and pushes updated JSON to
-# data/ so the dashboard at threats.aegispub.com stays live.
+# data/ so the dashboard at thirha.aegispub.com stays live.
 #
 # TOOL EXECUTION ORDER:
 #   Tool 05 → check VPS alive            → data/posture.json + data/assets.json
