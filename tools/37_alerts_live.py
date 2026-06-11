@@ -313,7 +313,7 @@ def send_slack(webhook_url: str, alerts: list, dry_run: bool = False) -> int:
                         {"title": "Detail",   "value": alert["detail"], "short": False},
                         {"title": "Time",     "value": now_str, "short": True},
                     ],
-                    "footer": "THIR · threats.aegispub.com",
+                    "footer": "THIR · thirha.aegispub.com",
                 }
             ],
         }
@@ -374,7 +374,7 @@ def send_email(smtp_host: str, smtp_port: int, smtp_user: str, smtp_pass: str,
       </tr>
       {rows}
     </table>
-    <p style="color:#888;font-size:11px">THIR · threats.aegispub.com · {now_str}</p>
+    <p style="color:#888;font-size:11px">THIR · thirha.aegispub.com · {now_str}</p>
     </body></html>"""
 
     if dry_run:
