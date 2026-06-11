@@ -136,7 +136,7 @@ HAProxy health check fingerprints show in VM1's sshd journal as `kex_exchange_id
 ## Data Flow — End to End
 
 ```
-Attacker connects to threats.aegispub.com honeypot IP
+Attacker connects to thirha.aegispub.com honeypot IP
         │
         ▼
 Cloudflare (DNS + DDoS protection)
