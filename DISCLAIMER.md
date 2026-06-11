@@ -12,7 +12,7 @@ This repository contains tools and infrastructure for operating a Cowrie SSH hon
 
 ## Honeypot Data
 
-The dashboard at `threats.aegispub.com` displays **real attacker IPs and TTPs** captured by a live honeypot. This data is:
+The dashboard at `thirha.aegispub.com` displays **real attacker IPs and TTPs** captured by a live honeypot. This data is:
 
 - Collected passively — the honeypot does not initiate contact
 - Enriched using public APIs (AbuseIPDB, AlienVault OTX) under their respective terms of service
