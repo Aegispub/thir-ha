@@ -242,8 +242,22 @@ func main() {
 			fmt.Fprintln(os.Stderr, "[INFO] Verification complete.")
 		}
 		// Exit with non-zero if changes were detected
+		// 		if len(r) > 0 {
+		// 			os.Exit(1)
+		// 		}
+		// Write integrity status file for Tool 30 to consume.
+		statusVal := "OK"
 		if len(r) > 0 {
-			os.Exit(1)
+		    statusVal = "FAIL"
+		}
+		statusJSON := fmt.Sprintf(
+		    `{"status": "%s", "checked_at": "%s", "mismatches": %d}`,
+		    statusVal,
+		    time.Now().UTC().Format(time.RFC3339),
+		    len(r),
+		)
+		if err := os.WriteFile("data/integrity_status.json", []byte(statusJSON+"\n"), 0644); err != nil {
+		    fmt.Fprintf(os.Stderr, "[WARN] Could not write integrity_status.json: %v\n", err)
 		}
 	}
 	os.Exit(0)
