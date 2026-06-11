@@ -107,6 +107,25 @@ def load_ir_cases(path: str) -> list:
         return data
     return data.get("cases", data.get("ir_cases", []))
 
+def build_ip_lookup(threat_ips_path: str) -> dict:
+    """Build a src_ip → {country, isp, asn, abuse_score} lookup from threat_ips.json.
+    Returns empty dict if file is missing or unreadable — Tool 36 degrades gracefully."""
+    lookup = {}
+    try:
+        with open(threat_ips_path) as f:
+            data = json.load(f)
+        for ip in data.get("ips", []):
+            indicator = ip.get("indicator", "")
+            if indicator:
+                lookup[indicator] = {
+                    "country":     ip.get("country", ""),
+                    "isp":         ip.get("isp", ip.get("org", "")),
+                    "asn":         ip.get("asn", ""),
+                    "abuse_score": ip.get("abuse_score", 0),
+                }
+    except Exception as e:
+        print(f"[Tool36] WARN: could not load threat_ips — geo attribution will be empty: {e}")
+    return lookup
 
 def extract_command_sessions(cases: list) -> list:
     """Extract sessions with their command sequences.
