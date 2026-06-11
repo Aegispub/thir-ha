@@ -397,6 +397,9 @@ def main():
     print(f"[Tool36] Reading {args.input}")
     cases = load_ir_cases(args.input)
     print(f"[Tool36] Loaded {len(cases)} IR cases")
+    ip_lookup = build_ip_lookup(args.threat_ips)
+    print(f"[Tool36] Geo lookup: {len(ip_lookup)} IPs loaded from threat_ips")
+    sessions = extract_command_sessions(cases, ip_lookup)
 
     sessions = extract_command_sessions(cases)
     print(f"[Tool36] Sessions with commands: {len(sessions)}")
