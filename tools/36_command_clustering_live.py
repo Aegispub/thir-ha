@@ -127,7 +127,7 @@ def build_ip_lookup(threat_ips_path: str) -> dict:
         print(f"[Tool36] WARN: could not load threat_ips — geo attribution will be empty: {e}")
     return lookup
 
-def extract_command_sessions(cases: list) -> list:
+def extract_command_sessions(cases: list, ip_lookup: dict = None) -> list:
     """Extract sessions with their command sequences.
 
     Supports two IR case formats:
@@ -147,8 +147,10 @@ def extract_command_sessions(cases: list) -> list:
         src_ip = case.get("src_ip", case.get("attacker_ip", ""))
         case_id = case.get("case_id", "")
         events = case.get("events", [])
-        country = case.get("country", "")
-        isp = case.get("isp", case.get("org", ""))
+        # Replacement:
+        _geo = (ip_lookup or {}).get(src_ip, {})
+        country = _geo.get("country", case.get("country", ""))
+        isp = _geo.get("isp", case.get("isp", case.get("org", "")))
 
         commands = []
         ts_first = None
