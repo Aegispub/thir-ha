@@ -293,22 +293,6 @@ jobs:
             --output data/ssh_fingerprints.json
 
       # ----------------------------------------------------------------
-      # 7.c Tool 36 — command clustering
-      #    Reads data/ir_cases.json (Tool 26 output).
-      #    Groups sessions by Jaccard similarity of command sequences.
-      #    Detects known campaigns (mdrfckr, XMRig, Mirai, Tsunami).
-      #    Output: data/command_clusters.json.
-      # ----------------------------------------------------------------
-      - name: Tool 36 — command clustering
-        continue-on-error: true
-        timeout-minutes: 3
-        run: |
-          python tools/36_command_clustering_live.py \
-            --input     data/ir_cases.json \
-            --output    data/command_clusters.json \
-            --threshold 0.7
-
-      # ----------------------------------------------------------------
       # 8. Extract unique attacker IPs for Tool 27
       # ----------------------------------------------------------------
       - name: Extract attacker IPs from IR cases
@@ -347,6 +331,22 @@ jobs:
             --output data/fp_filter.json \
             --threshold 25 \
             --verbose
+
+      # ----------------------------------------------------------------
+      # 7.c Tool 36 — command clustering
+      #    Reads data/ir_cases.json (Tool 26 output).
+      #    Groups sessions by Jaccard similarity of command sequences.
+      #    Detects known campaigns (mdrfckr, XMRig, Mirai, Tsunami).
+      #    Output: data/command_clusters.json.
+      # ----------------------------------------------------------------
+      - name: Tool 36 — command clustering
+        continue-on-error: true
+        timeout-minutes: 3
+        run: |
+          python tools/36_command_clustering_live.py \
+            --input     data/ir_cases.json \
+            --output    data/command_clusters.json \
+            --threshold 0.7
 
       # ----------------------------------------------------------------
       # 11. Tool 30 — aggregate pipeline metrics
