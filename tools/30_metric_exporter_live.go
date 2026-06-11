@@ -363,11 +363,33 @@ func aggregateStats(
 	}
 
 	// ── Tool 05: posture.json ───────────────────────────────────────────
+	// 	var postureData struct {
+	// 		Summary struct {
+	// 			Overall string `json:"overall"`
+	// 		} `json:"summary"`
+	// 		IntegrityStatus string `json:"integrity_status,omitempty"`
+	// 	}
+	// 
+	// 	if loadJSON(posturePath, &postureData) {
+	// 		logInfo(fmt.Sprintf("loaded posture: %s", postureData.Summary.Overall))
+	// 		if postureData.Summary.Overall != "" {
+	// 			stats.HoneypotStatus = postureData.Summary.Overall
+	// 		}
+	// 		if postureData.IntegrityStatus != "" {
+	// 			stats.IntegrityStatus = postureData.IntegrityStatus
+	// 		}
+	// 	} else {
+	// 		logWarning("posture.json not loaded — honeypot status will be UNKNOWN")
+	// 	}
+	// 
+	// 	return stats
+	// }
+
+	// ── Tool 05: posture.json ───────────────────────────────────────────
 	var postureData struct {
 		Summary struct {
 			Overall string `json:"overall"`
 		} `json:"summary"`
-		IntegrityStatus string `json:"integrity_status,omitempty"`
 	}
 
 	if loadJSON(posturePath, &postureData) {
@@ -375,16 +397,25 @@ func aggregateStats(
 		if postureData.Summary.Overall != "" {
 			stats.HoneypotStatus = postureData.Summary.Overall
 		}
-		if postureData.IntegrityStatus != "" {
-			stats.IntegrityStatus = postureData.IntegrityStatus
-		}
 	} else {
 		logWarning("posture.json not loaded — honeypot status will be UNKNOWN")
 	}
 
+	// ── Tool 07: integrity_status.json ──────────────────────────────────
+	var integrityData struct {
+		Status string `json:"status"`
+	}
+
+	if loadJSON("data/integrity_status.json", &integrityData) && integrityData.Status != "" {
+		stats.IntegrityStatus = integrityData.Status
+		logInfo(fmt.Sprintf("loaded integrity_status: %s", integrityData.Status))
+	} else {
+		logWarning("integrity_status.json not loaded — integrity status will be UNKNOWN")
+	}
+
 	return stats
 }
-
+	
 // -----------------------------------------------------------------------
 // JSON output (replaces writeCSV)
 // -----------------------------------------------------------------------
