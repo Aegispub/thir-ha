@@ -1,7 +1,7 @@
 # .github/workflows/pipeline.yml
 #
 # THIR LIVE PIPELINE
-# Runs every hour. Fetches Cowrie honeypot data from AWS EC2 Ubuntu,
+# Runs every 2 hours. Fetches Cowrie honeypot logs from Oracle VM2 (local rsync copy),
 # processes it through the tool chain, and pushes updated JSON to
 # data/ so the dashboard at threats.aegispub.com stays live.
 #
@@ -30,8 +30,8 @@
 #            always contains current-run malware analysis results.
 #
 # SECRETS REQUIRED (repo Settings → Secrets → Actions):
-#   ORACLE_VPS_SSH_KEY    Private SSH key for scp access to AWS EC2
-#   ORACLE_VPS_IP         Public IP of AWS EC2 running Cowrie
+#   ORACLE_VPS_SSH_KEY    Private SSH key for SSH access to Oracle VM2 (150.230.174.199)
+#   ORACLE_VPS_IP         Public IP of Oracle VM2 (brain node — HAProxy + pipeline)
 #   ABUSEIPDB_API_KEY     AbuseIPDB free account (1000 checks/day)
 #   OTX_API_KEY           AlienVault OTX free account
 #   VIRUSTOTAL_API_KEY    VirusTotal free account (optional — Tool 31)
@@ -39,8 +39,8 @@
 #   SLACK_WEBHOOK_URL     Slack incoming webhook URL (optional — Tool 37)
 #   SMTP_HOST/USER/PASS   SMTP credentials (optional — Tool 37 email)
 #
-# NOTE: All SSH/SCP connections use port 22222 (real EC2 management port).
-#       Port 22 on EC2 is redirected to Cowrie via iptables — never use
+# NOTE: All SSH connections use port 22222 (admin port — both VMs).
+#       Port 22 on VM1 is redirected to Cowrie via iptables. VM2 has no port 22 redirect.
 #       port 22 for pipeline access or you will land in the honeypot.
 
 name: THIR Live Pipeline
@@ -89,7 +89,7 @@ jobs:
           python-version: '3.11'
 
       # ----------------------------------------------------------------
-      # 3. Write SSH key for AWS EC2 access
+      # 3. Write SSH key for Oracle VM2 access
       # ----------------------------------------------------------------
       - name: Prepare SSH key
         run: |
@@ -102,7 +102,7 @@ jobs:
       #    Writes data/posture.json with UP/DOWN status.
       #    Writes data/assets.json with live asset inventory (ID.AM-1).
       #    continue-on-error: true so pipeline keeps running even if
-      #    EC2 is temporarily unreachable.
+      #    VM2 is temporarily unreachable.
       # ----------------------------------------------------------------
       - name: Tool 05 — network monitor (honeypot liveness + asset inventory)
         continue-on-error: true
