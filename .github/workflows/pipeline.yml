@@ -663,32 +663,63 @@ jobs:
       #    On fresh baseline: create and record SHA-256 of all data/ files.
       #    On existing baseline: verify no unexpected modifications.
       # ----------------------------------------------------------------
-      - name: Run Tool 07 — File Integrity Monitor
+      #       - name: Run Tool 07 — File Integrity Monitor
+      #         continue-on-error: true
+      #         run: |
+      #          BASELINE="data/integrity_baseline.json"
+      #           REBUILD=false
+      # 
+      #         if [ ! -f "$BASELINE" ]; then
+      #           echo "[Tool 07] Baseline missing — creating fresh baseline"
+      #           REBUILD=true
+      #          else
+      #           BASELINE_AGE=$(( $(date +%s) - $(date -r "$BASELINE" +%s) ))
+      #           echo "[Tool 07] Baseline age: ${BASELINE_AGE}s"
+      #             if [ "$BASELINE_AGE" -gt 7200 ]; then
+      #               echo "[Tool 07] Baseline older than 2 hours — rebuilding"
+      #               REBUILD=true
+      #             fi
+      #           fi
+      # 
+      #           if [ "$REBUILD" = "true" ]; then
+      #             go run tools/07_file_integrity_live.go \
+      #               --create-baseline "$BASELINE" \
+      #               --path data/ \
+      #               -v
+      #            echo "[Tool 07] Baseline created at $(date -u)"
+      #          else
+      #            echo "[Tool 07] Baseline is fresh — verifying"
+      #            go run tools/07_file_integrity_live.go \
+      #              --verify-baseline "$BASELINE" \
+      #              --path data/ \
+      #              -v
+      #          fi
+
+      # ----------------------------------------------------------------
+      # 12. Tool 07 — file integrity verification (verify only)
+      #    Verifies data/ against the baseline committed by the
+      #    PREVIOUS pipeline run (Step 15 below creates it post-commit).
+      #
+      #    This catches genuine out-of-band modifications: files changed
+      #    between runs without going through the pipeline. It does NOT
+      #    fire on files written legitimately by this run — those are
+      #    captured in the new baseline created after git push (Step 15).
+      #
+      #    First-run behaviour: if baseline is missing, skip verify and
+      #    let Step 15 create the first baseline cleanly.
+      # ----------------------------------------------------------------
+      - name: Run Tool 07 — File Integrity Verify
         continue-on-error: true
         run: |
           BASELINE="data/integrity_baseline.json"
-          REBUILD=false
 
           if [ ! -f "$BASELINE" ]; then
-            echo "[Tool 07] Baseline missing — creating fresh baseline"
-            REBUILD=true
+            echo "[Tool 07] No baseline found — skipping verify (first run). Step 15 will create it."
+            # Write a clean status so the dashboard does not show FAIL on first run
+            echo '{"status": "BASELINE_PENDING", "checked_at": "'$(date -u +%Y-%m-%dT%H:%M:%SZ)'", "mismatches": 0}' \
+              > data/integrity_status.json
           else
-            BASELINE_AGE=$(( $(date +%s) - $(date -r "$BASELINE" +%s) ))
-            echo "[Tool 07] Baseline age: ${BASELINE_AGE}s"
-            if [ "$BASELINE_AGE" -gt 7200 ]; then
-              echo "[Tool 07] Baseline older than 2 hours — rebuilding"
-              REBUILD=true
-            fi
-          fi
-
-          if [ "$REBUILD" = "true" ]; then
-            go run tools/07_file_integrity_live.go \
-              --create-baseline "$BASELINE" \
-              --path data/ \
-              -v
-            echo "[Tool 07] Baseline created at $(date -u)"
-          else
-            echo "[Tool 07] Baseline is fresh — verifying"
+            echo "[Tool 07] Verifying data/ against previous-run baseline"
             go run tools/07_file_integrity_live.go \
               --verify-baseline "$BASELINE" \
               --path data/ \
