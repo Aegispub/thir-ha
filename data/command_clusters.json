@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-12T21:51:20.553371+00:00",
+  "generated_at": "2026-06-12T23:22:11.711781+00:00",
   "total_sessions_with_commands": 4,
   "total_clusters": 3,
-  "campaign_clusters": 1,
+  "campaign_clusters": 2,
   "singleton_clusters": 2,
   "highest_severity": "HIGH",
   "active_campaigns": [
@@ -10,12 +10,27 @@
       "cluster_id": "CLU-001",
       "name": "Mirai/IoT Botnet",
       "severity": "HIGH",
-      "session_count": 2,
-      "unique_ip_count": 2,
+      "session_count": 1,
+      "unique_ip_count": 1,
       "ttps": [
         "T1082",
+        "T1592",
         "T1105",
         "T1059.004"
+      ]
+    },
+    {
+      "cluster_id": "CLU-002",
+      "name": "mdrfckr SSH Key Injection",
+      "severity": "HIGH",
+      "session_count": 1,
+      "unique_ip_count": 1,
+      "ttps": [
+        "T1021.004",
+        "T1078",
+        "T1070",
+        "T1140",
+        "T1105"
       ]
     }
   ],
@@ -35,21 +50,24 @@
           ],
           "severity": "HIGH",
           "description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
-          "pattern_hits": 2,
+          "pattern_hits": 1,
           "pattern_total": 3
         }
       ],
-      "session_count": 2,
+      "session_count": 1,
       "unique_ips": [
-        "176.65.148.251",
-        "74.208.181.249"
+        "31.56.209.125"
       ],
-      "unique_ip_count": 2,
-      "sequence_hash": "3142de6db2386023",
+      "unique_ip_count": 1,
+      "sequence_hash": "c8dafb159800b0ad",
       "ttps": [
         {
           "id": "T1082",
           "name": "System Information Discovery"
+        },
+        {
+          "id": "T1592",
+          "name": "Gather Victim Host Info"
         },
         {
           "id": "T1105",
@@ -62,61 +80,80 @@
       ],
       "representative_commands": [
         "echo SHELL_TEST",
-        "uname -h",
-        "/bin/busybox TEST",
+        "busybox TEST",
         "cat /proc",
-        "./"
+        "cat /proc/1/root"
       ],
       "members": [
         {
-          "session_id": "IR-74180340e00b",
-          "src_ip": "176.65.148.251",
+          "session_id": "IR-2f85c58d81b0",
+          "src_ip": "31.56.209.125",
           "country": "NL",
-          "isp": "Pfcloud UG",
-          "command_count": 5,
-          "timestamp": "2026-06-12T17:45:07.336173Z"
-        },
-        {
-          "session_id": "IR-572ade9b1445",
-          "src_ip": "74.208.181.249",
-          "country": "US",
-          "isp": "IONOS Inc.",
+          "isp": "SWISSNET LLC",
           "command_count": 4,
-          "timestamp": "2026-06-12T18:14:52.510579Z"
+          "timestamp": "2026-06-12T20:57:52.258970Z"
         }
       ]
     },
     {
       "cluster_id": "CLU-002",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
+      "is_campaign": true,
+      "campaign_name": "mdrfckr SSH Key Injection",
+      "campaign_severity": "HIGH",
+      "campaign_description": "Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.",
+      "matched_campaigns": [
+        {
+          "name": "mdrfckr SSH Key Injection",
+          "ttps": [
+            "T1021.004",
+            "T1078",
+            "T1105"
+          ],
+          "severity": "HIGH",
+          "description": "Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.",
+          "pattern_hits": 1,
+          "pattern_total": 3
+        }
+      ],
       "session_count": 1,
       "unique_ips": [
-        "35.203.211.88"
+        "130.12.180.51"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "49efc5eb7bb5604b",
+      "sequence_hash": "560104d0f634867a",
       "ttps": [
         {
-          "id": "T1083",
-          "name": "File & Directory Discovery"
+          "id": "T1021.004",
+          "name": "Remote Services: SSH"
+        },
+        {
+          "id": "T1078",
+          "name": "Valid Accounts"
+        },
+        {
+          "id": "T1070",
+          "name": "Indicator Removal"
+        },
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        },
+        {
+          "id": "T1105",
+          "name": "T1105"
         }
       ],
       "representative_commands": [
-        "User-Agent: Hello from Palo Alto Networks, find out more about our scans in https://docs-cortex.paloaltonetworks.com/r/1/Cortex-Xpanse/Scanning-activity",
-        "Accept-Encoding: gzip"
+        "chmod +x clean.sh; sh clean.sh; rm -rf clean.sh; chmod +x setup.sh; sh setup.sh; rm -rf setup.sh; mkdir -p ~/.ssh; chattr -ia ~/.ssh/authorized_keys; echo \"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCqHrvnL6l7rT/mt1AdgdY9tC1GPK216q0q/7neNVqm7AgvfJIM3ZKniGC3S5x6KOEApk+83GM4IKjCPfq007SvT07qh9AscVxegv66I5yuZTEaDAG6cPXxg3/0oXHTOTvxelgbRrMzfU5SEDAEi8+ByKMefE+pDVALgSTBYhol96hu1GthAMtPAFahqxrvaRR4nL4ijxOsmSLREoAb1lxiX7yvoYLT45/1c5dJdrJrQ60uKyieQ6FieWpO2xF6tzfdmHbiVdSmdw0BiCRwe+fuknZYQxIC1owAj2p5bc+nzVTi3mtBEk9rGpgBnJ1h"
       ],
       "members": [
         {
-          "session_id": "IR-5c33012db513",
-          "src_ip": "35.203.211.88",
-          "country": "GB",
-          "isp": "Google LLC",
-          "command_count": 2,
-          "timestamp": "2026-06-12T20:20:42.795112Z"
+          "session_id": "IR-a3cc9c2cbb10",
+          "src_ip": "130.12.180.51",
+          "country": "DE",
+          "isp": "Virtualine Technologies",
+          "command_count": 1,
+          "timestamp": "2026-06-12T22:31:45.616418Z"
         }
       ]
     },
@@ -127,24 +164,38 @@
       "campaign_severity": null,
       "campaign_description": null,
       "matched_campaigns": [],
-      "session_count": 1,
+      "session_count": 2,
       "unique_ips": [
-        "128.1.132.136"
+        "182.92.183.213",
+        "36.111.80.93"
       ],
-      "unique_ip_count": 1,
-      "sequence_hash": "4ade1590247e2996",
-      "ttps": [],
+      "unique_ip_count": 2,
+      "sequence_hash": "6fa4c8ac58e7a1d9",
+      "ttps": [
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        }
+      ],
       "representative_commands": [
-        "Accept: */*"
+        "uname -s -m"
       ],
       "members": [
         {
-          "session_id": "IR-c255ea2e1e0c",
-          "src_ip": "128.1.132.136",
-          "country": "HK",
-          "isp": "UCLOUD",
+          "session_id": "IR-d6464534661b",
+          "src_ip": "182.92.183.213",
+          "country": "CN",
+          "isp": "Aliyun Computing Co., LTD",
           "command_count": 1,
-          "timestamp": "2026-06-12T19:38:10.447198Z"
+          "timestamp": "2026-06-12T22:48:18.467759Z"
+        },
+        {
+          "session_id": "IR-6209b6a3a1b2",
+          "src_ip": "36.111.80.93",
+          "country": "CN",
+          "isp": "CHINANET Zhejiang province network",
+          "command_count": 1,
+          "timestamp": "2026-06-12T22:51:17.152478Z"
         }
       ]
     }
