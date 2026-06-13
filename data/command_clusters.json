@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-13T11:56:39.602838+00:00",
-  "total_sessions_with_commands": 4,
+  "generated_at": "2026-06-13T14:15:12.207156+00:00",
+  "total_sessions_with_commands": 2,
   "total_clusters": 2,
   "campaign_clusters": 0,
-  "singleton_clusters": 1,
+  "singleton_clusters": 2,
   "highest_severity": "NONE",
   "active_campaigns": [],
   "clusters": [
@@ -16,28 +16,24 @@
       "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "147.185.133.194"
+        "65.49.1.122"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "49efc5eb7bb5604b",
-      "ttps": [
-        {
-          "id": "T1083",
-          "name": "File & Directory Discovery"
-        }
-      ],
+      "sequence_hash": "a2aa3ec2673f6861",
+      "ttps": [],
       "representative_commands": [
-        "User-Agent: Hello from Palo Alto Networks, find out more about our scans in https://docs-cortex.paloaltonetworks.com/r/1/Cortex-Xpanse/Scanning-activity",
+        "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36",
+        "Accept: */*",
         "Accept-Encoding: gzip"
       ],
       "members": [
         {
-          "session_id": "IR-c2831372bf61",
-          "src_ip": "147.185.133.194",
-          "country": "FI",
-          "isp": "Palo Alto Networks, Inc",
-          "command_count": 2,
-          "timestamp": "2026-06-13T10:30:30.628928Z"
+          "session_id": "IR-15dc5e910a81",
+          "src_ip": "65.49.1.122",
+          "country": "US",
+          "isp": "The Shadowserver Foundation, Inc.",
+          "command_count": 3,
+          "timestamp": "2026-06-13T11:58:14.886136Z"
         }
       ]
     },
@@ -48,49 +44,30 @@
       "campaign_severity": null,
       "campaign_description": null,
       "matched_campaigns": [],
-      "session_count": 3,
+      "session_count": 1,
       "unique_ips": [
-        "188.166.210.196"
+        "47.251.92.23"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "b6678999db5542a6",
+      "sequence_hash": "5dbc2dba6c33377a",
       "ttps": [
         {
-          "id": "T1083",
-          "name": "File & Directory Discovery"
-        },
-        {
-          "id": "T1082",
-          "name": "System Information Discovery"
+          "id": "T1105",
+          "name": "Ingress Tool Transfer"
         }
       ],
       "representative_commands": [
-        "which ls 2>/dev/null || echo 'missing:ls'; echo '---SEP---'; which ps 2>/dev/null || echo 'missing:ps'; echo '---SEP---'; which cat 2>/dev/null || echo 'missing:cat'; echo '---SEP---'; which netstat 2>/dev/null || echo 'missing:netstat'; echo '---SEP---'; uname -m 2>/dev/null | tr -d '\\n\\r' || echo 'unknown'; echo '---SEP---'; cat /etc/os-release 2>/dev/null | grep '^NAME=' | cut -d'=' -f2 | tr -d '\"' | tr -d '\\n\\r' || echo 'Linux'; echo '---SEP---'; hostname 2>/dev/null | tr -d '\\n\\r' || echo 'unknown'; ec"
+        "User-Agent: curl/7.64.1",
+        "Accept: */*"
       ],
       "members": [
         {
-          "session_id": "IR-7b229bfceca7",
-          "src_ip": "188.166.210.196",
-          "country": "SG",
-          "isp": "DigitalOcean, LLC",
-          "command_count": 1,
-          "timestamp": "2026-06-13T08:58:03.955167Z"
-        },
-        {
-          "session_id": "IR-d1dcdd4706fd",
-          "src_ip": "188.166.210.196",
-          "country": "SG",
-          "isp": "DigitalOcean, LLC",
-          "command_count": 1,
-          "timestamp": "2026-06-13T08:58:07.861953Z"
-        },
-        {
-          "session_id": "IR-7756cf35e133",
-          "src_ip": "188.166.210.196",
-          "country": "SG",
-          "isp": "DigitalOcean, LLC",
-          "command_count": 1,
-          "timestamp": "2026-06-13T08:58:11.846589Z"
+          "session_id": "IR-44078168b82c",
+          "src_ip": "47.251.92.23",
+          "country": "US",
+          "isp": "Alibaba Cloud - US",
+          "command_count": 2,
+          "timestamp": "2026-06-13T12:25:50.497213Z"
         }
       ]
     }
