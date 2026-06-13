@@ -1,70 +1,208 @@
 {
-  "generated_at": "2026-06-13T19:42:36Z",
+  "generated_at": "2026-06-13T21:20:49Z",
   "threshold_used": 25,
-  "total_cases_in": 50,
-  "confirmed_threats": 48,
-  "flagged_as_fp": 2,
-  "fp_rate": 0.04,
+  "total_cases_in": 96,
+  "confirmed_threats": 71,
+  "flagged_as_fp": 25,
+  "fp_rate": 0.2604,
   "fp_cases": [
     {
-      "case_id": "IR-292606fe30a1",
+      "case_id": "IR-cb932a2953b6",
       "src_ip": "10.0.0.73",
       "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
-      "case_id": "IR-eb37c17d4e11",
+      "case_id": "IR-776af806c8df",
+      "src_ip": "10.0.0.73",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-1dd4084d99fa",
+      "src_ip": "205.210.31.35",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-162c06bb3bf3",
+      "src_ip": "10.0.0.73",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-0907cbd49943",
+      "src_ip": "10.0.0.73",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-712a6dc94ee6",
+      "src_ip": "10.0.0.73",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-8d6c689b08ad",
+      "src_ip": "147.185.132.52",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-1bef8311f0aa",
+      "src_ip": "10.0.0.73",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-fbcc1cfc55b7",
+      "src_ip": "147.185.133.245",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-91348e742b61",
+      "src_ip": "10.0.0.73",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-575a29457373",
+      "src_ip": "162.216.149.40",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-8df4f20e7df4",
+      "src_ip": "10.0.0.73",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-8ddf01ecf8a4",
+      "src_ip": "10.0.0.73",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-73805c1037d7",
+      "src_ip": "10.0.0.73",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-98b864ab6b6c",
+      "src_ip": "10.0.0.73",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-39b64262102a",
+      "src_ip": "123.182.233.166",
+      "reason": "Mass-scanner pattern: no commands, no downloads, \u22642 login attempts"
+    },
+    {
+      "case_id": "IR-73fd30d6d9af",
+      "src_ip": "147.185.133.164",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-9acc294e8205",
+      "src_ip": "205.210.31.12",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-07634d77f999",
+      "src_ip": "60.248.127.209",
+      "reason": "AbuseIPDB score 5 below threshold 25"
+    },
+    {
+      "case_id": "IR-0abf0399cb4a",
+      "src_ip": "180.103.135.73",
+      "reason": "Mass-scanner pattern: no commands, no downloads, \u22642 login attempts"
+    },
+    {
+      "case_id": "IR-193fcb507b85",
+      "src_ip": "10.0.0.73",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-d659e5dbbe53",
+      "src_ip": "162.216.150.12",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-0b64dcf109ca",
+      "src_ip": "162.216.150.12",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-84e93962c62b",
+      "src_ip": "10.0.0.73",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-937e8dc29001",
       "src_ip": "10.0.0.73",
       "reason": "AbuseIPDB score 0 below threshold 25"
     }
   ],
   "clean_cases": [
-    "IR-5ffeeb85b40d",
-    "IR-d98d53b59fff",
-    "IR-1d816592ace8",
-    "IR-fbb348ae57a5",
-    "IR-4f9c2608c600",
-    "IR-7011828400e6",
-    "IR-04e1b738361f",
-    "IR-b1c42d972f70",
-    "IR-12fc0b937e45",
-    "IR-08a47d04dc2f",
-    "IR-8f3de78977f4",
-    "IR-972f3c4ae54b",
-    "IR-a9050b81a7d0",
-    "IR-990007ecda11",
-    "IR-9f6052e697b3",
-    "IR-1850b5c9b9b3",
-    "IR-563870b4e5ed",
-    "IR-21c96934ce22",
-    "IR-2659b64233bb",
-    "IR-bf6ff9216f68",
-    "IR-ee0c5e16ed30",
-    "IR-c5461d60cb1a",
-    "IR-4ed9a4044f5a",
-    "IR-fb7a0eb22025",
-    "IR-b6e99ae10651",
-    "IR-1e4f1ac0ac84",
-    "IR-7b66f3f631a2",
-    "IR-51dc8f281976",
-    "IR-9e5f606bd243",
-    "IR-78fde2cc0806",
-    "IR-9d37e8bb5161",
-    "IR-837557b14ce6",
-    "IR-ad5c00eefe5c",
-    "IR-dcfaf8217f50",
-    "IR-ff77fd873a8d",
-    "IR-369d6ef902b8",
-    "IR-8df22371c6c4",
-    "IR-551ddfcc07a5",
-    "IR-c8f2c099d2b5",
-    "IR-bc4df538d2c3",
-    "IR-51781d9babba",
-    "IR-925bf13aef00",
-    "IR-0181cbcc0194",
-    "IR-f77d8d026b32",
-    "IR-3c959568d640",
-    "IR-e97cebad8fcf",
-    "IR-c25605850618",
-    "IR-d1ba8a9ab24a"
+    "IR-d1ba8a9ab24a",
+    "IR-101453cda3aa",
+    "IR-ce9cc43ab2fe",
+    "IR-44f5e8923bc5",
+    "IR-d2557f9a25e7",
+    "IR-2155bd585e2c",
+    "IR-b7c23731991f",
+    "IR-97da9f997446",
+    "IR-bbee1ff74a85",
+    "IR-192cbb10ad02",
+    "IR-dfbb671e7c6d",
+    "IR-2788d2be3b0b",
+    "IR-4ef8d174d1f5",
+    "IR-21702584ff94",
+    "IR-0cde8c018f42",
+    "IR-b1d0b4731c39",
+    "IR-510f723a6c68",
+    "IR-b408dcb4fa1e",
+    "IR-27a2e8a8f0cd",
+    "IR-ae24e530785c",
+    "IR-5615db944902",
+    "IR-a8efd14fa14c",
+    "IR-72208e025723",
+    "IR-6cab3a7f0b1f",
+    "IR-69c1ceb4c153",
+    "IR-b76b41173aa0",
+    "IR-28b01263aec2",
+    "IR-d8397cbd2931",
+    "IR-202f64889315",
+    "IR-07772e071b1a",
+    "IR-8ec0b3f4f06b",
+    "IR-3ace5a6cac84",
+    "IR-dc90449eeba6",
+    "IR-aaf74ba6b5a1",
+    "IR-15049956ca85",
+    "IR-dd291867b48a",
+    "IR-0745809dbb40",
+    "IR-eaae20ae116a",
+    "IR-40df5ab15abd",
+    "IR-763d618f10bd",
+    "IR-b614246455b3",
+    "IR-f53465d9803b",
+    "IR-29cdb89fa1ac",
+    "IR-9d9edc3ded22",
+    "IR-dcf764765b97",
+    "IR-ddb875deecfc",
+    "IR-09b7d9d6143c",
+    "IR-a3159922416c",
+    "IR-94bab339b7eb",
+    "IR-a3185f4c6e2b",
+    "IR-78ae82374e20",
+    "IR-4bf85b8fb3a7",
+    "IR-b7c1c51abebc",
+    "IR-be5e763b51fc",
+    "IR-9e7b44d19d96",
+    "IR-d0098f34e4fb",
+    "IR-725cd15452d5",
+    "IR-8827781d9648",
+    "IR-f8ed1da1d888",
+    "IR-8210da55407a",
+    "IR-b77c8b91a194",
+    "IR-56898422332d",
+    "IR-e98faebffd42",
+    "IR-29a2b8c52a0d",
+    "IR-3c09ee3b4f5a",
+    "IR-d629d87fe7a8",
+    "IR-0bee33b3772d",
+    "IR-e28a33ee482f",
+    "IR-6f49aceb4f60",
+    "IR-9e2b99184455",
+    "IR-0c756727541c"
   ]
 }
