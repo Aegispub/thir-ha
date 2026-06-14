@@ -110,7 +110,7 @@ function bindStats(stats) {
     setEl('last-updated', 'Pipeline: ' + fmt);
   }
 
-  if (stats.integrity_status === 'MODIFIED') {
+  if (stats.integrity_status === 'FAIL') {
     const badge = document.querySelector('#posture .section-header');
     if (badge) {
       const warn = document.createElement('span');
