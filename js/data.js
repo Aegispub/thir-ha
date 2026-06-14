@@ -158,7 +158,7 @@ const TOOLS_DATA = [
   },
   {
     name: 'Network Service Monitor', langs: ['go'],
-    desc: 'Concurrent TCP port checker. Verifies Cowrie honeypot liveness on AWS EC2 port 2222. Writes data/posture.json (DE.CM-1) and data/assets.json — a live asset inventory covering NIST ID.AM-1. Runs before each pipeline cycle.',
+    desc: 'Concurrent TCP port checker. Verifies Cowrie honeypot liveness on Oracle VM2 (HAProxy endpoint) port 2222. Writes data/posture.json (DE.CM-1) and data/assets.json — a live asset inventory covering NIST ID.AM-1. Runs before each pipeline cycle.',
     domain: 'Infrastructure', lines: 280,
   },
   {
@@ -270,7 +270,7 @@ const POSTURE_CONTROLS = [
   // Tool 32: peak stats tracking in stats.json
   { id: 'DE.AE-1',  name: 'Peak Threat Tracking',           status: 'active',     tool: 'Tool 32' },
 
-  // Runbook: documented EC2 rebuild procedure — version-controlled in docs/
+  // Runbook: documented Oracle HA rebuild procedure (THIR_HA_Runbooks_v2.docx) — version-controlled in docs/
   { id: 'RC.RP-1',  name: 'Recovery Planning',              status: 'active',     tool: 'Runbook' },
 
   // Planned: YARA rule scanning for downloaded samples
