@@ -560,6 +560,11 @@ jobs:
           ALERT_EMAIL_FROM: ${{ secrets.ALERT_EMAIL_FROM }}
           ALERT_EMAIL_TO:   ${{ secrets.ALERT_EMAIL_TO }}
         run: |
+          PRUNE_ARGS=""
+          if [ -f "data/.rollup_monthly_pending" ]; then
+            PRUNE_ARGS="--prune-days 180"
+            echo "[Tool37] Monthly sentinel present — pruning alert_history entries older than 180 days"
+          fi
           python tools/37_alerts_live.py \
             --malware-report   data/malware_report.json \
             --yara-matches     data/yara_matches.json \
@@ -568,7 +573,8 @@ jobs:
             --ir-cases         data/ir_cases.json \
             --command-clusters data/command_clusters.json \
             --alert-history    data/alert_history.json \
-            --channel          "${ALERT_CHANNEL:-dry-run}"
+            --channel          "${ALERT_CHANNEL:-dry-run}" \
+            $PRUNE_ARGS
 
       # ----------------------------------------------------------------
       # 11.e Tool 32 — Save daily report + update peak stats (every run)
