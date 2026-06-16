@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Tool 35 — SSH Fingerprint Aggregator
+Tool_35 SSH_Fingerprint_Aggregator
 THIR · Aegispub/thir-ha
 Input:  data/ir_cases.json
 Output: data/ssh_fingerprints.json
