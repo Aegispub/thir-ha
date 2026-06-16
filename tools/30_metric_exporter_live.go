@@ -1,3 +1,6 @@
+/*
+Tool_30 metric_dashboard_exporter
+
 // 30_metric_exporter_live.go
 //
 // THIR LIVE PIPELINE — PRODUCTION TOOL
@@ -62,6 +65,7 @@
 //     "unique_countries":   14,
 //     "metrics":           [{"source":"custom","name":"patch_compliance","value":"94%",...}]
 //   }
+*/
 
 package main
 
