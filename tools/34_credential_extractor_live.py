@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Tool 34 — Credential Pair Extractor (THIR Live)
+Tool_34 Credential_Pair_Extractor (THIR-HA Live)
 
 Reads raw Cowrie NDJSON log and extracts credential intelligence:
   - All username/password pairs attempted (failed + success)
