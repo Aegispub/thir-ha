@@ -533,7 +533,7 @@ def render_priority_case(case, malware_index, L):
 # Report builder
 # ─────────────────────────────────────────────────────────────────────────────
 
-def build_report(ir, threats, fp, stats, malware, creds=None, ssh_fps=None, cmd_cls=None, asn_cls=None, yara=None):
+def build_report(ir, threats, fp, stats, malware, creds=None, ssh_fps=None, cmd_cls=None, asn_cls=None, yara=None, posture=None):
     now         = datetime.now(timezone.utc)
     now_str     = now.strftime("%Y-%m-%dT%H:%M:%SZ")
     report_date = now.strftime("%Y-%m-%d")
@@ -1076,6 +1076,19 @@ def build_report(ir, threats, fp, stats, malware, creds=None, ssh_fps=None, cmd_
     ln("- [ ] Integrity baseline auto-recreates every 2 hours via pipeline")
     ln()
 
+    # ── CIS Controls — backend audit evidence (Tool 05) ────────────────────────
+    cis_controls = (posture or {}).get("cis_controls", [])
+    if cis_controls:
+        ln("---")
+        ln()
+        ln("## 🛡️ CIS Controls Snapshot")
+        ln()
+        ln("| Control | Name | Status | Evidence |")
+        ln("|---|---|---|---|")
+        for c in cis_controls:
+            ln(f"| {c.get('id','')} | {c.get('name','')} | {c.get('status','')} | {c.get('evidence','')} |")
+        ln()
+
     # ── Footer ────────────────────────────────────────────────────────────────
     ln("---")
     ln()
@@ -1109,6 +1122,7 @@ def main():
     parser.add_argument("--command-clusters",  default="data/command_clusters.json")
     parser.add_argument("--asn-clusters",      default="data/asn_clusters.json")
     parser.add_argument("--yara-matches",      default="data/yara_matches.json")
+    parser.add_argument("--posture",           default="data/posture.json")
     args = parser.parse_args()
 
     log("Tool 28 v2.3 — SOC Handover Report Generator started", "INFO", True)
@@ -1123,8 +1137,9 @@ def main():
     cmd_cls = load_json(args.command_clusters,  "command_clusters.json", args.verbose)
     asn_cls = load_json(args.asn_clusters,      "asn_clusters.json",     args.verbose)
     yara    = load_json(args.yara_matches,      "yara_matches.json",     args.verbose)
+    posture = load_json(args.posture, "posture.json", args.verbose)
 
-    report = build_report(ir, threats, fp, stats, malware, creds, ssh_fps, cmd_cls, asn_cls, yara)
+    report = build_report(ir, threats, fp, stats, malware, creds, ssh_fps, cmd_cls, asn_cls, yara, posture)
 
     out_dir = os.path.dirname(args.output)
     if out_dir and not os.path.exists(out_dir):
