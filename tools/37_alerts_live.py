@@ -84,6 +84,24 @@ def save_alert_history(history: dict, path: str):
     with open(p, "w") as f:
         json.dump(history, f, indent=2)
 
+def prune_alert_history(history: dict, max_age_days: int = 180) -> int:
+    """Remove dedup entries older than max_age_days. Returns count removed."""
+    cutoff = datetime.now(timezone.utc) - timedelta(days=max_age_days)
+    alerts = history.get("alerts", {})
+    stale_keys = []
+    for key, record in alerts.items():
+        try:
+            last_fired = datetime.fromisoformat(record["last_fired"])
+            if last_fired.tzinfo is None:
+                last_fired = last_fired.replace(tzinfo=timezone.utc)
+            if last_fired < cutoff:
+                stale_keys.append(key)
+        except Exception:
+            continue
+    for key in stale_keys:
+        del alerts[key]
+    return len(stale_keys)
+
 
 def alert_key(alert_type: str, detail: str) -> str:
     """Compute a deduplication key."""
@@ -411,6 +429,8 @@ def main():
     parser.add_argument("--ir-cases",         default="data/ir_cases.json")
     parser.add_argument("--command-clusters", default="data/command_clusters.json")
     parser.add_argument("--alert-history",    default="data/alert_history.json")
+    parser.add_argument("--prune-days", type=int, default=0,
+                        help="Delete alert_history entries with last_fired older than N days (0 = disabled)")
     parser.add_argument("--channel",          default=os.environ.get("ALERT_CHANNEL", "slack"),
                         choices=["slack", "email", "both", "dry-run"],
                         help="Notification channel")
@@ -441,7 +461,10 @@ def main():
     history = load_alert_history(args.alert_history)
     cred_history = history.setdefault("credential_ips", {})
     asn_history  = history.setdefault("asn_seen", {})
-
+    if args.prune_days > 0:
+            pruned = prune_alert_history(history, args.prune_days)
+            print(f"[Tool37] Pruned {pruned} alert_history entries older than {args.prune_days} days") 
+        
     # Evaluate all triggers
     raw_alerts = []
     raw_alerts.extend(check_malware_alerts(malware_data, yara_data))
