@@ -577,6 +577,57 @@ jobs:
             $PRUNE_ARGS
 
       # ----------------------------------------------------------------
+      # 11.d3 Tool manifest — auto-generated from this pipeline.yml
+      #    Parses this file for tool invocations, extracts name/lang/
+      #    input/output, writes data/tool_manifest.json. Always in sync
+      #    with what actually runs — no hand-maintained file to drift.
+      # ----------------------------------------------------------------
+      - name: Generate tool_manifest.json
+        continue-on-error: true
+        run: |
+          python3 - << 'PYEOF'
+          import re, json
+          from datetime import datetime, timezone
+
+          with open(".github/workflows/pipeline.yml") as f:
+              content = f.read()
+
+          pattern = re.compile(
+              r'go run (tools/[\w.]+\.go)|python3? (tools/[\w.]+\.py)'
+          )
+          manifest = []
+          seen = set()
+          for m in pattern.finditer(content):
+              path = m.group(1) or m.group(2)
+              if path in seen:
+                  continue
+              seen.add(path)
+              lang = "Go" if path.endswith(".go") else "Python"
+              desc = ""
+              try:
+                  with open(path) as tf:
+                      for line in tf:
+                          line = line.strip()
+                          if line and not line.startswith(("#!", "package", "/*", '"""', "//")):
+                              desc = line.lstrip('"#/ ').strip()
+                              break
+              except FileNotFoundError:
+                  desc = "(file not found)"
+              manifest.append({"tool": path, "language": lang, "description": desc})
+
+          out = {
+              "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+              "source": "pipeline.yml",
+              "tool_count": len(manifest),
+              "tools": manifest,
+          }
+          with open("data/tool_manifest.json", "w") as f:
+              json.dump(out, f, indent=2)
+          print(f"[ToolManifest] Wrote {len(manifest)} tool entries to data/tool_manifest.json")
+          PYEOF
+      
+
+      # ----------------------------------------------------------------
       # 11.e Tool 32 — Save daily report + update peak stats (every run)
       #   - Copies data/soc_handover.md → reports/daily/soc_YYYY-MM-DD.md
       #   - Updates peak_sessions / peak_unique_ips / peak_confirmed_threats
