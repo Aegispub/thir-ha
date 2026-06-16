@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Tool_26_incident_timeline: Cowrie_To_IR_cases
+Tool_26_incident_timeline (Cowrie_To_IR_cases)
 
 THIR LIVE PIPELINE — PRODUCTION TOOL
 Adapted from: InfraReadyPortfolio/06_soc_collaboration_tools/26_incident_timeline_generator/
