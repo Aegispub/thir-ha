@@ -1,4 +1,5 @@
-// Tool 30 Extension — ASN Clustering
+/*
+Tool_30 Extension_ASN_Clustering
 // THIR · Aegispub/thir-ha
 // Input:  data/threat_ips.json
 // Output: data/asn_clusters.json
@@ -7,7 +8,7 @@
 // Pure aggregation on existing data — no new API calls.
 // Run as standalone: go run tools/30b_asn_clustering_live.go
 // Or integrated: called directly from pipeline after Tool 30.
-
+*/
 package main
 
 import (
