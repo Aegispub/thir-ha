@@ -535,6 +535,7 @@ jobs:
             --fp-filter      data/fp_filter.json \
             --stats          data/stats.json \
             --malware-report data/malware_report.json \
+            --posture          data/posture.json \
             --output         data/soc_handover.md \
             --verbose
 
