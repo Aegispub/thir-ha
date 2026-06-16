@@ -1,0 +1,82 @@
+{
+  "generated_at": "2026-06-16T10:28:19Z",
+  "source": "pipeline.yml",
+  "tool_count": 15,
+  "tools": [
+    {
+      "tool": "tools/05_network_monitor_live.go",
+      "language": "Go",
+      "description": "THIR LIVE PIPELINE \u2014 PRODUCTION TOOL"
+    },
+    {
+      "tool": "tools/26_incident_timeline_live.py",
+      "language": "Python",
+      "description": "26_incident_timeline_live.py"
+    },
+    {
+      "tool": "tools/34_credential_extractor_live.py",
+      "language": "Python",
+      "description": "Tool 34 \u2014 Credential Pair Extractor (THIR Live)"
+    },
+    {
+      "tool": "tools/35_ssh_fingerprint_live.py",
+      "language": "Python",
+      "description": "Tool 35 \u2014 SSH Fingerprint Aggregator"
+    },
+    {
+      "tool": "tools/27_threat_intel_feeder_live.go",
+      "language": "Go",
+      "description": "import ("
+    },
+    {
+      "tool": "tools/29_false_positive_live.py",
+      "language": "Python",
+      "description": "29_false_positive_live.py"
+    },
+    {
+      "tool": "tools/36_command_clustering_live.py",
+      "language": "Python",
+      "description": "Tool 36 \u2014 Command Clustering"
+    },
+    {
+      "tool": "tools/30_metric_exporter_live.go",
+      "language": "Go",
+      "description": "import ("
+    },
+    {
+      "tool": "tools/30b_asn_clustering_live.go",
+      "language": "Go",
+      "description": "import ("
+    },
+    {
+      "tool": "tools/31_malware_analyzer_live.py",
+      "language": "Python",
+      "description": "Tool 31 \u2014 Malware Analyzer (THIR Live)"
+    },
+    {
+      "tool": "tools/33_yara_classifier_live.py",
+      "language": "Python",
+      "description": "Tool 33 \u2014 YARA Classifier"
+    },
+    {
+      "tool": "tools/28_soc_handover_live.py",
+      "language": "Python",
+      "description": "Tool 28 \u2014 SOC Handover Report Generator (THIR Live)"
+    },
+    {
+      "tool": "tools/37_alerts_live.py",
+      "language": "Python",
+      "description": "Tool 37 \u2014 Alerts"
+    },
+    {
+      "tool": "tools/32_report_lifecycle.py",
+      "language": "Python",
+      "description": "Tool 32 \u2014 THIR Report Lifecycle Manager"
+    },
+    {
+      "tool": "tools/07_file_integrity_live.go",
+      "language": "Go",
+      "description": "THIR LIVE PIPELINE \u2014 PRODUCTION TOOL"
+    }
+  ]
+}
