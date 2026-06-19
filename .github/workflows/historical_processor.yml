@@ -1,0 +1,232 @@
+# .github/workflows/historical_processor.yml
+#
+# THIR HISTORICAL PROCESSOR
+#
+# Runs quarterly. Downloads any new rotated log files from both R2
+# archive buckets (thir-raw-archive = AWS corpus, thirha-raw-archive =
+# Oracle corpus), processes them via Tool 00, and commits
+# historical_data/ as a permanent baseline.
+#
+# Design decisions locked this session (see THIR_Decisions_and_Tool00_Spec_v2.md,
+# Tool00_Workflow_Design_v3.md, historical_ir_cases_index_design.md,
+# r2_bucket_structure_final_v2.md):
+#   - Purpose: portfolio/credibility, durable even if all VMs are retired
+#   - Schedule: quarterly cron, both corpora, fully automatic, no manual step needed
+#   - historical_ir_cases.json committed to the repo is an ID-only INDEX
+#     (case_id, src_ip, first_seen, severity, source_file) — full records
+#     are archived to each corpus's own R2 bucket under live-archives/
+#     and never committed to git, keeping repo growth in single-digit MB
+#     even at multi-year horizons
+#   - --skip-enrich always — Tool 00 never calls AbuseIPDB/OTX, zero shared
+#     quota risk with the live 2-hour pipeline, zero API secrets needed here
+#   - Each corpus has its OWN R2 bucket and its OWN rclone remote/token —
+#     these are NOT interchangeable account-wide keys
+#   - Each corpus has its own .EOF marker — once a bucket's file listing is
+#     unchanged from the previous run, that corpus is marked complete and
+#     skipped on all future runs until the marker is manually removed
+#   - Representation is corpus_metadata.json only — no SUMMARY.md, no
+#     soc_handover.md section, no dashboard wiring in this phase
+#
+# This workflow is fully independent of pipeline.yml. It never reads or
+# writes data/ or reports/, and cannot regress the live 2-hour pipeline.
+# It is also independent of any VM being alive — only the two R2 buckets
+# need to exist for this to keep running.
+
+name: THIR Historical Processor
+
+on:
+  schedule:
+    - cron: '0 3 1 1,4,7,10 *'   # 03:00 UTC, 1st of Jan/Apr/Jul/Oct — quarterly
+  workflow_dispatch: {}            # manual trigger always available for ad-hoc runs
+
+jobs:
+  process-historical:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install rclone
+        run: curl https://rclone.org/install.sh | sudo bash
+
+      # ------------------------------------------------------------
+      # rclone config — TWO separate remotes, TWO separate bucket-
+      # scoped tokens. thir-raw-archive and thirha-raw-archive are
+      # not the same account-wide key — each was created as its own
+      # "Object Read & Write -> [single bucket]" token. Do not
+      # collapse these into one [r2] block.
+      # ------------------------------------------------------------
+      - name: Configure rclone for R2 — both corpora
+        env:
+          AWS_R2_ACCOUNT_ID:    ${{ secrets.AWS_R2_ACCOUNT_ID }}
+          AWS_R2_ACCESS_KEY:    ${{ secrets.AWS_R2_ACCESS_KEY }}
+          AWS_R2_SECRET_KEY:    ${{ secrets.AWS_R2_SECRET_KEY }}
+          ORACLE_R2_ACCOUNT_ID: ${{ secrets.ORACLE_R2_ACCOUNT_ID }}
+          ORACLE_R2_ACCESS_KEY: ${{ secrets.ORACLE_R2_ACCESS_KEY }}
+          ORACLE_R2_SECRET_KEY: ${{ secrets.ORACLE_R2_SECRET_KEY }}
+        run: |
+          mkdir -p ~/.config/rclone
+          cat > ~/.config/rclone/rclone.conf << EOF
+          [r2-aws]
+          type = s3
+          provider = Cloudflare
+          access_key_id = ${AWS_R2_ACCESS_KEY}
+          secret_access_key = ${AWS_R2_SECRET_KEY}
+          endpoint = https://${AWS_R2_ACCOUNT_ID}.r2.cloudflarestorage.com
+
+          [r2-oracle]
+          type = s3
+          provider = Cloudflare
+          access_key_id = ${ORACLE_R2_ACCESS_KEY}
+          secret_access_key = ${ORACLE_R2_SECRET_KEY}
+          endpoint = https://${ORACLE_R2_ACCOUNT_ID}.r2.cloudflarestorage.com
+          EOF
+
+      # ==============================================================
+      # AWS corpus — thir-raw-archive
+      # ==============================================================
+
+      - name: Check AWS corpus EOF status
+        id: aws_eof
+        run: |
+          if [ -f "historical_data/aws-corpus/.EOF" ]; then
+            echo "is_eof=true" >> "$GITHUB_OUTPUT"
+            echo "[AWS] EOF marker present — skipping this corpus"
+          else
+            echo "is_eof=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Download AWS corpus delta
+        if: steps.aws_eof.outputs.is_eof == 'false'
+        run: |
+          mkdir -p /tmp/aws-logs
+          rclone copy r2-aws:thir-raw-archive/cowrie-json/ /tmp/aws-logs/ -v
+          rclone lsf r2-aws:thir-raw-archive/cowrie-json/ --recursive > /tmp/aws_current_listing.txt
+          echo "Files found in thir-raw-archive:"
+          wc -l < /tmp/aws_current_listing.txt
+
+      - name: Run Tool 00 — AWS corpus
+        if: steps.aws_eof.outputs.is_eof == 'false'
+        run: |
+          mkdir -p historical_data/aws-corpus
+          python3 tools/00_historical_processor.py \
+            --log-dir /tmp/aws-logs/ \
+            --output-dir historical_data/aws-corpus/ \
+            --corpus-name aws-2026-03-07-onwards \
+            --current-listing /tmp/aws_current_listing.txt \
+            --check-eof \
+            --full-records-out /tmp/aws_full_records.json \
+            --verbose
+
+      - name: Upload AWS full-record archive to R2
+        if: steps.aws_eof.outputs.is_eof == 'false' && hashFiles('/tmp/aws_full_records.json') != ''
+        run: |
+          if [ -f /tmp/aws_full_records.json ]; then
+            gzip -k /tmp/aws_full_records.json
+            DATE=$(date -u +%Y-%m-%d)
+            FILENAME="historical_ir_cases_full_${DATE}.json.gz"
+            DEST_PATH="thir-raw-archive/live-archives/aws-corpus"
+
+            rclone copyto /tmp/aws_full_records.json.gz \
+              "r2-aws:${DEST_PATH}/${FILENAME}" \
+              --retries 5 \
+              --low-level-retries 10
+
+            # Verify the object actually landed — rclone's exit code alone
+            # is not sufficient proof; confirm it by re-listing the bucket.
+            if rclone lsf "r2-aws:${DEST_PATH}" | grep -Fxq "$FILENAME"; then
+              echo "Verified AWS full-record archive uploaded: ${FILENAME}"
+            else
+              echo "ERROR: ${FILENAME} not found in r2-aws:${DEST_PATH} after upload — failing this step"
+              exit 1
+            fi
+          else
+            echo "No full-records file produced this run (EOF reached during this run) — nothing to upload"
+          fi
+
+      # ==============================================================
+      # Oracle corpus — thirha-raw-archive
+      # ==============================================================
+
+      - name: Check Oracle corpus EOF status
+        id: oracle_eof
+        run: |
+          if [ -f "historical_data/oracle-corpus/.EOF" ]; then
+            echo "is_eof=true" >> "$GITHUB_OUTPUT"
+            echo "[Oracle] EOF marker present — skipping this corpus"
+          else
+            echo "is_eof=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Download Oracle corpus delta
+        if: steps.oracle_eof.outputs.is_eof == 'false'
+        run: |
+          mkdir -p /tmp/oracle-logs
+          rclone copy r2-oracle:thirha-raw-archive/cowrie-json/ /tmp/oracle-logs/ -v
+          rclone lsf r2-oracle:thirha-raw-archive/cowrie-json/ --recursive > /tmp/oracle_current_listing.txt
+          echo "Files found in thirha-raw-archive:"
+          wc -l < /tmp/oracle_current_listing.txt
+
+      - name: Run Tool 00 — Oracle corpus
+        if: steps.oracle_eof.outputs.is_eof == 'false'
+        run: |
+          mkdir -p historical_data/oracle-corpus
+          python3 tools/00_historical_processor.py \
+            --log-dir /tmp/oracle-logs/ \
+            --output-dir historical_data/oracle-corpus/ \
+            --corpus-name oracle-2026-06-08-onwards \
+            --current-listing /tmp/oracle_current_listing.txt \
+            --check-eof \
+            --full-records-out /tmp/oracle_full_records.json \
+            --verbose
+
+      - name: Upload Oracle full-record archive to R2
+        if: steps.oracle_eof.outputs.is_eof == 'false' && hashFiles('/tmp/oracle_full_records.json') != ''
+        run: |
+          if [ -f /tmp/oracle_full_records.json ]; then
+            gzip -k /tmp/oracle_full_records.json
+            DATE=$(date -u +%Y-%m-%d)
+            FILENAME="historical_ir_cases_full_${DATE}.json.gz"
+            DEST_PATH="thirha-raw-archive/live-archives/oracle-corpus"
+
+            rclone copyto /tmp/oracle_full_records.json.gz \
+              "r2-oracle:${DEST_PATH}/${FILENAME}" \
+              --retries 5 \
+              --low-level-retries 10
+
+            # Verify the object actually landed — rclone's exit code alone
+            # is not sufficient proof; confirm it by re-listing the bucket.
+            if rclone lsf "r2-oracle:${DEST_PATH}" | grep -Fxq "$FILENAME"; then
+              echo "Verified Oracle full-record archive uploaded: ${FILENAME}"
+            else
+              echo "ERROR: ${FILENAME} not found in r2-oracle:${DEST_PATH} after upload — failing this step"
+              exit 1
+            fi
+          else
+            echo "No full-records file produced this run (EOF reached during this run) — nothing to upload"
+          fi
+
+      # ==============================================================
+      # Commit — historical_data/ index files + corpus_metadata.json +
+      # .EOF markers (if written this run). Full records never reach
+      # git; they go to R2 only, per the index design.
+      # ==============================================================
+
+      - name: Commit historical_data/
+        run: |
+          git config user.name  "THIR Historical Processor"
+          git config user.email "actions@github.com"
+          git add historical_data/
+          if git diff --cached --quiet; then
+            echo "No changes to historical_data/ — nothing to commit"
+          else
+            git commit -m "Historical processor run — $(date -u +%Y-%m-%d)"
+            git push
+          fi
