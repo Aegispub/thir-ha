@@ -86,6 +86,7 @@ jobs:
           access_key_id = ${AWS_R2_ACCESS_KEY}
           secret_access_key = ${AWS_R2_SECRET_KEY}
           endpoint = https://${AWS_R2_ACCOUNT_ID}.r2.cloudflarestorage.com
+          no_check_bucket = true
 
           [r2-oracle]
           type = s3
@@ -93,6 +94,7 @@ jobs:
           access_key_id = ${ORACLE_R2_ACCESS_KEY}
           secret_access_key = ${ORACLE_R2_SECRET_KEY}
           endpoint = https://${ORACLE_R2_ACCOUNT_ID}.r2.cloudflarestorage.com
+          no_check_bucket = true
           EOF
 
       # ==============================================================
