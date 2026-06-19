@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Tool 00  Historical Processor
+Tool 00: Historical Processor
 
 Batch re-processes a directory of rotated Cowrie cowrie.json.* log files
 (plain or .gz) through the same logic as Tools 26, 34, 35, and 36 — but
@@ -311,16 +311,62 @@ def extract_sessions(files: List[Path], verbose: bool) -> Tuple[List[Dict], int]
     return cases, lines_skipped
 
 
-def build_index_records(cases: List[Dict]) -> List[Dict]:
-    """The 5-field committed-to-repo index. Full case detail stays only
-    in the in-memory `cases` list and the full-records archive file."""
+# ---------------------------------------------------------------------------
+# OLD VERSION -- preserved as-is, commented out, not called.
+# Superseded by build_index_records_v2() below, which replaces the
+# "source_file" string (42 bytes/record, 104 distinct values repeated
+# 338,045 times in the real AWS run) with an integer "source_file_idx"
+# referencing corpus_metadata.json's files_processed_list -- same lookup
+# capability, ~26% smaller committed index file. See session decision:
+# source_file string cost was the single largest line-item in the index
+# schema; src_ip was deliberately kept as-is (lower redundancy, higher
+# utility for direct IP filtering without an R2 round-trip).
+# ---------------------------------------------------------------------------
+# def build_index_records(cases: List[Dict]) -> List[Dict]:
+#     """The 5-field committed-to-repo index. Full case detail stays only
+#     in the in-memory `cases` list and the full-records archive file."""
+#     return [
+#         {
+#             "case_id": c["case_id"],
+#             "src_ip": c["src_ip"],
+#             "first_seen": c["first_seen"],
+#             "severity": c["severity"],
+#             "source_file": c["source_file"],
+#         }
+#         for c in cases
+#     ]
+
+
+def build_source_file_index(files: List[Path]) -> Dict[str, int]:
+    """Maps filename -> stable integer index, in the same chronological
+    order discover_log_files() already produces and the same order
+    corpus_metadata.json's files_processed_list is written in (see
+    main(): files_processed_list defaults to [f.name for f in files]
+    when --current-listing is not supplied). Building the index from
+    this same `files` list -- rather than re-deriving order from the
+    cases themselves -- is what keeps the mapping stable: every case's
+    source_file_idx will correctly resolve against
+    corpus_metadata.json["files_processed_list"][idx] on every run,
+    including reruns where --current-listing supplies a differently
+    ordered listing (current_listing is sorted separately; this index
+    is independent of that and always keyed off `files` order)."""
+    return {f.name: i for i, f in enumerate(files)}
+
+
+def build_index_records_v2(cases: List[Dict], source_file_index: Dict[str, int]) -> List[Dict]:
+    """The 5-field committed-to-repo index, v2. Replaces the old
+    "source_file" string field with "source_file_idx" (int) -- resolve
+    via corpus_metadata.json["files_processed_list"][source_file_idx].
+    Falls back to -1 if a case's source_file somehow isn't in the index
+    (should not happen in normal operation, but fails safe rather than
+    raising, so a single malformed case can't abort the whole run)."""
     return [
         {
             "case_id": c["case_id"],
             "src_ip": c["src_ip"],
             "first_seen": c["first_seen"],
             "severity": c["severity"],
-            "source_file": c["source_file"],
+            "source_file_idx": source_file_index.get(c["source_file"], -1),
         }
         for c in cases
     ]
@@ -924,7 +970,10 @@ def main() -> None:
              f"— upload this to R2 live-archives/, then it can be deleted locally")
 
     # ---- Output: index-only historical_ir_cases.json (committed to repo) ----
-    index_records = build_index_records(cases)
+    # OLD CALL -- preserved, commented out, not executed:
+    # index_records = build_index_records(cases)
+    source_file_index = build_source_file_index(files)
+    index_records = build_index_records_v2(cases, source_file_index)
     (output_dir / "historical_ir_cases.json").write_text(json.dumps({
         "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "corpus_name": args.corpus_name,
