@@ -132,7 +132,7 @@ jobs:
             --verbose
 
       - name: Upload AWS full-record archive to R2
-        if: steps.aws_eof.outputs.is_eof == 'false' && hashFiles('/tmp/aws_full_records.json') != ''
+        if: steps.aws_eof.outputs.is_eof == 'false'
         run: |
           if [ -f /tmp/aws_full_records.json ]; then
             gzip -k /tmp/aws_full_records.json
@@ -194,7 +194,7 @@ jobs:
             --verbose
 
       - name: Upload Oracle full-record archive to R2
-        if: steps.oracle_eof.outputs.is_eof == 'false' && hashFiles('/tmp/oracle_full_records.json') != ''
+        if: steps.oracle_eof.outputs.is_eof == 'false'
         run: |
           if [ -f /tmp/oracle_full_records.json ]; then
             gzip -k /tmp/oracle_full_records.json
