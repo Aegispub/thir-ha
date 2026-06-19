@@ -34,6 +34,12 @@
 
 name: THIR Historical Processor
 
+permissions:
+  contents: write   # required to git push historical_data/ commits.
+                     # Scoped to this workflow only -- does not change
+                     # the repo-wide default, and does not affect
+                     # pipeline.yml's own permissions.
+
 on:
   schedule:
     - cron: '0 3 1 1,4,7,10 *'   # 03:00 UTC, 1st of Jan/Apr/Jul/Oct — quarterly
