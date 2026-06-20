@@ -99,6 +99,41 @@
   </div>
 </div>
 
+
+<!-- CORPUS HIGHLIGHTS — quarterly historical processor banner.
+     Hidden by default (style="display:none"); JS reveals this only on a
+     successful fetch of historical_data/oracle-corpus/corpus_highlights.json.
+     Deliberately fails silent on fetch failure (section stays hidden)
+     rather than showing a [cached] label or a stale/zero fallback —
+     these numbers come from a quarterly batch job, not the live 2h
+     pipeline, so a generic "stale data" treatment would be misleading.
+     Do NOT add hardcoded fallback numbers here to match the data.js
+     convention used elsewhere on this page — see thread decision:
+     corpus highlights must only ever show real, fetched values. -->
+<div class="metrics-bar corpus-highlights-bar" id="corpus-highlights" style="display:none;">
+  <div class="metric">
+    <div class="metric-val blue" id="ch-sessions">--</div>
+    <div class="metric-key">Sessions Analyzed</div>
+  </div>
+  <div class="metric">
+    <div class="metric-val yellow" id="ch-ips">--</div>
+    <div class="metric-key">Unique Source IPs</div>
+  </div>
+  <div class="metric">
+    <div class="metric-val red" id="ch-botnet">--</div>
+    <div class="metric-key">Botnet Signatures Matched</div>
+  </div>
+  <div class="metric">
+    <div class="metric-val green" id="ch-campaigns">--</div>
+    <div class="metric-key">Active Campaign Clusters</div>
+  </div>
+  <div class="metric">
+    <div class="metric-val" id="ch-updated">--</div>
+    <div class="metric-key">Historical Analysis Updated</div>
+  </div>
+</div>
+
+  
 <!-- THREAT INTEL FEED -->
 <section id="intel">
   <div class="section-header">
