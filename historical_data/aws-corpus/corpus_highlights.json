@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-06-20T05:53:32Z",
+  "corpus_name": "aws-2026-03-07-onwards",
+  "ir_cases": {
+    "total_sessions": 340036,
+    "severity_breakdown": {
+      "critical": 12027,
+      "high": 141886,
+      "medium": 0,
+      "low": 186123
+    }
+  },
+  "credentials": {
+    "total_attempts": 200695,
+    "unique_username_password_pairs": 57720,
+    "unique_usernames": 5080,
+    "unique_passwords": 47492,
+    "successful_auth_count": 153913,
+    "credential_diversity_index": "high"
+  },
+  "ssh_fingerprints": {
+    "unique_hassh_values": 89,
+    "known_client_families_identified": 5,
+    "sessions_without_kex": 126017,
+    "botnet_signature_matches": 58
+  },
+  "threat_ips": {
+    "unique_source_ips": 17198,
+    "enriched": false,
+    "note": "geo/ASN/abuse-score enrichment not performed by the historical processor \u2014 --skip-enrich is permanent"
+  },
+  "command_clusters": {
+    "total_clusters": 142,
+    "campaign_clusters": 24,
+    "singleton_clusters": 85,
+    "largest_cluster_session_count": 127666
+  }
+}

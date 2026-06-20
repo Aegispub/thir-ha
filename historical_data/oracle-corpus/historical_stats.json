@@ -1,0 +1,240 @@
+{
+  "corpus_name": "oracle-2026-06-08-onwards",
+  "generated_at": "2026-06-20T05:54:24Z",
+  "date_range": {
+    "start": "2026-06-07",
+    "end": "2026-06-19"
+  },
+  "total_sessions": 58367,
+  "total_unique_ips": 2372,
+  "total_unique_countries": 0,
+  "sessions_per_day": [
+    {
+      "date": "2026-06-07",
+      "sessions": 92
+    },
+    {
+      "date": "2026-06-08",
+      "sessions": 3050
+    },
+    {
+      "date": "2026-06-09",
+      "sessions": 2964
+    },
+    {
+      "date": "2026-06-10",
+      "sessions": 3187
+    },
+    {
+      "date": "2026-06-11",
+      "sessions": 2887
+    },
+    {
+      "date": "2026-06-12",
+      "sessions": 4798
+    },
+    {
+      "date": "2026-06-13",
+      "sessions": 2350
+    },
+    {
+      "date": "2026-06-14",
+      "sessions": 1324
+    },
+    {
+      "date": "2026-06-15",
+      "sessions": 1818
+    },
+    {
+      "date": "2026-06-16",
+      "sessions": 3995
+    },
+    {
+      "date": "2026-06-17",
+      "sessions": 4808
+    },
+    {
+      "date": "2026-06-18",
+      "sessions": 4914
+    },
+    {
+      "date": "2026-06-19",
+      "sessions": 22180
+    }
+  ],
+  "daily_median": 3050,
+  "anomaly_days": [
+    {
+      "date": "2026-06-19",
+      "sessions": 22180,
+      "vs_median": "7x",
+      "note": "anomalous volume \u2014 investigate"
+    }
+  ],
+  "top_source_ips": [
+    {
+      "ip": "10.0.0.73",
+      "session_count": 22161
+    },
+    {
+      "ip": "138.68.100.228",
+      "session_count": 5006
+    },
+    {
+      "ip": "154.16.146.65",
+      "session_count": 3478
+    },
+    {
+      "ip": "143.198.150.219",
+      "session_count": 2044
+    },
+    {
+      "ip": "176.65.132.129",
+      "session_count": 1562
+    },
+    {
+      "ip": "206.81.2.201",
+      "session_count": 1257
+    },
+    {
+      "ip": "45.153.34.186",
+      "session_count": 800
+    },
+    {
+      "ip": "176.65.132.22",
+      "session_count": 800
+    },
+    {
+      "ip": "45.153.34.181",
+      "session_count": 800
+    },
+    {
+      "ip": "91.92.42.147",
+      "session_count": 762
+    }
+  ],
+  "top_credential_pairs": [
+    {
+      "username": "root",
+      "password": "LeitboGi0ro",
+      "count": 574
+    },
+    {
+      "username": "root",
+      "password": "123@@@",
+      "count": 395
+    },
+    {
+      "username": "admin",
+      "password": "admin",
+      "count": 378
+    },
+    {
+      "username": "root",
+      "password": "smo@@kkklss",
+      "count": 275
+    },
+    {
+      "username": "root",
+      "password": "",
+      "count": 155
+    },
+    {
+      "username": "GET / HTTP/1.1",
+      "password": "Host: 129.80.119.236:23",
+      "count": 63
+    },
+    {
+      "username": "ubuntu",
+      "password": "ubuntu",
+      "count": 59
+    },
+    {
+      "username": "root",
+      "password": "root",
+      "count": 54
+    },
+    {
+      "username": "root",
+      "password": "admin",
+      "count": 53
+    },
+    {
+      "username": "root",
+      "password": "\ufeff------fuck------",
+      "count": 48
+    },
+    {
+      "username": "root",
+      "password": "password",
+      "count": 41
+    },
+    {
+      "username": "*1",
+      "password": "$4",
+      "count": 40
+    },
+    {
+      "username": "root",
+      "password": "ubuntu",
+      "count": 40
+    },
+    {
+      "username": "root",
+      "password": "---fuck_you----",
+      "count": 39
+    },
+    {
+      "username": "sol",
+      "password": "sol",
+      "count": 37
+    },
+    {
+      "username": "node",
+      "password": "node",
+      "count": 37
+    },
+    {
+      "username": "sol",
+      "password": "123",
+      "count": 37
+    },
+    {
+      "username": "solana",
+      "password": "solana",
+      "count": 36
+    },
+    {
+      "username": "user",
+      "password": "user",
+      "count": 36
+    },
+    {
+      "username": "test",
+      "password": "test",
+      "count": 29
+    }
+  ],
+  "ttp_frequency": [
+    {
+      "ttp": "T1078",
+      "count": 37821
+    },
+    {
+      "ttp": "T1059",
+      "count": 35921
+    },
+    {
+      "ttp": "T1105",
+      "count": 219
+    },
+    {
+      "ttp": "T1222",
+      "count": 11
+    },
+    {
+      "ttp": "T1098.004",
+      "count": 7
+    }
+  ]
+}
