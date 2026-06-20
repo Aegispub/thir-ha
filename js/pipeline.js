@@ -365,3 +365,75 @@ function bindAssets(data) {
     }
   });
 }
+
+// --------------------------------------------------
+// CORPUS HIGHLIGHTS — quarterly historical processor banner
+//
+// Independent fetch, independent failure mode from loadLiveData() above.
+// Source: historical_data/oracle-corpus/corpus_highlights.json, written
+// by tools/00_historical_processor.py via the historical_processor.yml
+// workflow (quarterly cron + manual workflow_dispatch).
+//
+// DELIBERATELY hardcoded to the oracle-corpus path, not the aws-corpus
+// one — Oracle is the live/current deployment and is the corpus this
+// banner is meant to represent. Do not make this dynamic/configurable
+// without revisiting that decision; the AWS corpus has its own
+// corpus_highlights.json but showing both or making this swappable was
+// explicitly out of scope when this was built.
+//
+// DELIBERATELY fail-silent: corpus_highlights.json only changes
+// quarterly, so a missing/failed fetch is not "stale" in the same
+// sense as the 2h live pipeline — there is no sensible [cached] value
+// to fall back to for a visitor who has never loaded the page before.
+// On any failure the #corpus-highlights bar simply stays hidden
+// (display:none, set in index.html) rather than showing zeros or a
+// stale-looking placeholder.
+// --------------------------------------------------
+async function loadCorpusHighlights() {
+  let data;
+  try {
+    const res = await fetch('historical_data/oracle-corpus/corpus_highlights.json');
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    data = await res.json();
+  } catch (err) {
+    console.warn('[THIR] corpus_highlights.json unavailable — historical banner hidden', err);
+    return;
+  }
+
+  // Defensive: a malformed/partial file should hide the banner, not
+  // render "undefined" or "NaN" into a public-facing hero stat.
+  const sessions   = data?.ir_cases?.total_sessions;
+  const ips        = data?.threat_ips?.unique_source_ips;
+  const botnet     = data?.ssh_fingerprints?.botnet_signature_matches;
+  const campaigns  = data?.command_clusters?.campaign_clusters;
+  const generated  = data?.generated_at;
+
+  const allPresent = [sessions, ips, botnet, campaigns].every(
+    v => typeof v === 'number' && Number.isFinite(v)
+  );
+  if (!allPresent) {
+    console.warn('[THIR] corpus_highlights.json missing expected fields — historical banner hidden', data);
+    return;
+  }
+
+  setEl('ch-sessions',  sessions.toLocaleString());
+  setEl('ch-ips',       ips.toLocaleString());
+  setEl('ch-botnet',    botnet.toLocaleString());
+  setEl('ch-campaigns', campaigns.toLocaleString());
+  setEl('ch-updated',   formatGeneratedAt(generated));
+
+  const bar = document.getElementById('corpus-highlights');
+  if (bar) bar.style.display = '';
+}
+
+// --------------------------------------------------
+// Helper: "2026-06-20T05:54:24Z" -> "Jun 2026" for the banner's
+// "updated" cell — a full timestamp is more precision than a
+// quarterly-refresh figure needs, and clutters a hero stat row.
+// --------------------------------------------------
+function formatGeneratedAt(iso) {
+  if (!iso) return '--';
+  const d = new Date(iso);
+  if (isNaN(d.getTime())) return '--';
+  return d.toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' });
+}
