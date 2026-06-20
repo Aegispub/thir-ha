@@ -169,6 +169,13 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Attempt to fetch live pipeline data
   await loadLiveData();
 
+  
+  // Attempt to fetch quarterly historical corpus highlights — fully
+  // independent of the live pipeline fetch above (different file,
+  // different refresh cadence, different failure mode: fails silent,
+  // banner just stays hidden rather than showing [cached]/stale data).
+  loadCorpusHighlights();
+
   if (pipelineOnline) {
     // renderIPFeed / renderIOCFeed already called inside bindThreatIPs
     // only re-init map if live points were loaded
