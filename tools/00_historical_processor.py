@@ -396,9 +396,13 @@ def aggregate_credentials(all_attempts: List[Dict], success_pairs: List[Dict]) -
         "top_usernames": [{"username": u, "count": c} for u, c in top_usernames],
         "top_passwords": [{"password": p, "count": c} for p, c in top_passwords],
         "top_pairs": [{"username": u, "password": p, "count": c} for (u, p), c in top_pairs],
+        # total_successful_logins is the TRUE count, taken before truncation.
+        # success_pairs below is intentionally capped at _CRED_TOP_N for
+        # display purposes — do not use len(success_pairs) as a count
+        # anywhere; it silently reads as min(true_count, _CRED_TOP_N).
+        "total_successful_logins": len(success_pairs),
         "success_pairs": success_pairs[:_CRED_TOP_N],
     }
-
 
 # ──────────────────────────────────────────────────────────────────────────
 # Phase 4 — HASSH fingerprinting (Tool 35 logic — operates on in-memory cases)
@@ -748,7 +752,7 @@ def build_corpus_highlights(cases: List[Dict], credentials: Dict,
             "unique_username_password_pairs": credentials.get("unique_pairs", 0),
             "unique_usernames": credentials.get("unique_usernames", 0),
             "unique_passwords": credentials.get("unique_passwords", 0),
-            "successful_auth_count": len(credentials.get("success_pairs", [])),
+            "successful_auth_count": credentials.get("total_successful_logins", 0),
             "credential_diversity_index": diversity_index,
         },
         "ssh_fingerprints": {
