@@ -12,14 +12,31 @@ recurring quarterly).
 Run mode: one-shot, offline. NOT part of pipeline.yml. Does not touch
 data/*.json, does not call Tool 37, does not update cowrie_watermark.json.
 
-Output files (all under --output-dir):
-    historical_ir_cases.json           — ID-only index (5 fields/case)
-    historical_credentials.json        — same schema as data/credentials.json
-    historical_ssh_fingerprints.json   — same schema as data/ssh_fingerprints.json
-    historical_threat_ips.json         — IPs only, enriched=false (--skip-enrich)
-    historical_command_clusters.json   — same schema as data/command_clusters.json
-    historical_stats.json              — per-day time series + aggregates
+Output files (all under --output-dir, committed to git — every field in
+both is a count or a label, never a raw IP, credential, command,
+fingerprint, or session ID):
+    historical_stats.json              — per-day time series + top-N highlights
+                                          (kept as-is: daily series, anomaly
+                                          days, top 10 IPs, top 20 credential
+                                          pairs — a deliberate curated cut)
+    corpus_highlights.json             — lightweight no-PII summary proving
+                                          the credential/fingerprint/threat-ip/
+                                          command-cluster/ir-case analysis
+                                          passes ran, and their aggregate shape
+                                          (counts, severity breakdown, cluster
+                                          counts — never the underlying rows)
     corpus_metadata.json               — run metadata, anomaly days, EOF status
+
+The five raw per-category files this tool used to write
+(historical_ir_cases.json, historical_credentials.json,
+historical_ssh_fingerprints.json, historical_threat_ips.json,
+historical_command_clusters.json) are NOT written to --output-dir anymore.
+Row-level data for all five categories — individual IPs, credential pairs,
+SSH fingerprints, commands, and session IDs — exists only in the full,
+un-truncated R2 archive (see --full-records-out below), never in git. This
+keeps the repo from absorbing PII-adjacent attacker IP/credential data and
+keeps repo growth roughly flat regardless of corpus size, since the only
+git-committed outputs are now aggregate counts.
 
 Full (un-truncated) case records are written to a local temp file for
 upload to R2 live-archives/ by the calling workflow — see
@@ -309,67 +326,6 @@ def extract_sessions(files: List[Path], verbose: bool) -> Tuple[List[Dict], int]
     cases.sort(key=lambda c: c.get("first_seen", ""))
     log_info(f"Built {len(cases)} deduplicated IR case(s)", verbose)
     return cases, lines_skipped
-
-
-# ---------------------------------------------------------------------------
-# OLD VERSION -- preserved as-is, commented out, not called.
-# Superseded by build_index_records_v2() below, which replaces the
-# "source_file" string (42 bytes/record, 104 distinct values repeated
-# 338,045 times in the real AWS run) with an integer "source_file_idx"
-# referencing corpus_metadata.json's files_processed_list -- same lookup
-# capability, ~26% smaller committed index file. See session decision:
-# source_file string cost was the single largest line-item in the index
-# schema; src_ip was deliberately kept as-is (lower redundancy, higher
-# utility for direct IP filtering without an R2 round-trip).
-# ---------------------------------------------------------------------------
-# def build_index_records(cases: List[Dict]) -> List[Dict]:
-#     """The 5-field committed-to-repo index. Full case detail stays only
-#     in the in-memory `cases` list and the full-records archive file."""
-#     return [
-#         {
-#             "case_id": c["case_id"],
-#             "src_ip": c["src_ip"],
-#             "first_seen": c["first_seen"],
-#             "severity": c["severity"],
-#             "source_file": c["source_file"],
-#         }
-#         for c in cases
-#     ]
-
-
-def build_source_file_index(files: List[Path]) -> Dict[str, int]:
-    """Maps filename -> stable integer index, in the same chronological
-    order discover_log_files() already produces and the same order
-    corpus_metadata.json's files_processed_list is written in (see
-    main(): files_processed_list defaults to [f.name for f in files]
-    when --current-listing is not supplied). Building the index from
-    this same `files` list -- rather than re-deriving order from the
-    cases themselves -- is what keeps the mapping stable: every case's
-    source_file_idx will correctly resolve against
-    corpus_metadata.json["files_processed_list"][idx] on every run,
-    including reruns where --current-listing supplies a differently
-    ordered listing (current_listing is sorted separately; this index
-    is independent of that and always keyed off `files` order)."""
-    return {f.name: i for i, f in enumerate(files)}
-
-
-def build_index_records_v2(cases: List[Dict], source_file_index: Dict[str, int]) -> List[Dict]:
-    """The 5-field committed-to-repo index, v2. Replaces the old
-    "source_file" string field with "source_file_idx" (int) -- resolve
-    via corpus_metadata.json["files_processed_list"][source_file_idx].
-    Falls back to -1 if a case's source_file somehow isn't in the index
-    (should not happen in normal operation, but fails safe rather than
-    raising, so a single malformed case can't abort the whole run)."""
-    return [
-        {
-            "case_id": c["case_id"],
-            "src_ip": c["src_ip"],
-            "first_seen": c["first_seen"],
-            "severity": c["severity"],
-            "source_file_idx": source_file_index.get(c["source_file"], -1),
-        }
-        for c in cases
-    ]
 
 
 # ──────────────────────────────────────────────────────────────────────────
@@ -754,6 +710,72 @@ def build_clusters_output(clusters: List[Dict], total_sessions: int) -> Dict:
 
 
 # ──────────────────────────────────────────────────────────────────────────
+# Phase 6b — Corpus highlights (lightweight, no-PII summary of the five
+# categories that are no longer written to the repo in full: ir_cases,
+# credentials, ssh_fingerprints, threat_ips, command_clusters. Every field
+# here must be a COUNT or a LABEL — never a raw IP, credential, command,
+# fingerprint, or session ID. The full row-level data for all five
+# categories lives exclusively in the R2 full-record archive; this file
+# exists only to prove those five analysis passes ran and show their shape.
+# ──────────────────────────────────────────────────────────────────────────
+
+def build_corpus_highlights(cases: List[Dict], credentials: Dict,
+                             ssh_fingerprints: Dict, threat_ips: Dict,
+                             command_clusters: Dict) -> Dict:
+    severity_breakdown: Dict[str, int] = defaultdict(int)
+    for c in cases:
+        severity_breakdown[c.get("severity", "LOW")] += 1
+
+    total_pairs = credentials.get("unique_pairs", 0)
+    diversity_index = (
+        "high" if total_pairs > 5000 else
+        "medium" if total_pairs > 500 else
+        "low"
+    )
+
+    return {
+        "ir_cases": {
+            "total_sessions": len(cases),
+            "severity_breakdown": {
+                "critical": severity_breakdown.get("CRITICAL", 0),
+                "high": severity_breakdown.get("HIGH", 0),
+                "medium": severity_breakdown.get("MEDIUM", 0),
+                "low": severity_breakdown.get("LOW", 0),
+            },
+        },
+        "credentials": {
+            "total_attempts": credentials.get("total_attempts", 0),
+            "unique_username_password_pairs": credentials.get("unique_pairs", 0),
+            "unique_usernames": credentials.get("unique_usernames", 0),
+            "unique_passwords": credentials.get("unique_passwords", 0),
+            "successful_auth_count": len(credentials.get("success_pairs", [])),
+            "credential_diversity_index": diversity_index,
+        },
+        "ssh_fingerprints": {
+            "unique_hassh_values": ssh_fingerprints.get("unique_fingerprints", 0),
+            "known_client_families_identified": len(ssh_fingerprints.get("top_families", [])),
+            "sessions_without_kex": ssh_fingerprints.get("sessions_without_kex", 0),
+            "botnet_signature_matches": len(ssh_fingerprints.get("botnet_signals", [])),
+        },
+        "threat_ips": {
+            "unique_source_ips": threat_ips.get("total_ips", 0),
+            "enriched": threat_ips.get("enriched", False),
+            "note": "geo/ASN/abuse-score enrichment not performed by the "
+                    "historical processor — --skip-enrich is permanent",
+        },
+        "command_clusters": {
+            "total_clusters": command_clusters.get("total_clusters", 0),
+            "campaign_clusters": command_clusters.get("campaign_clusters", 0),
+            "singleton_clusters": command_clusters.get("singleton_clusters", 0),
+            "largest_cluster_session_count": max(
+                (cl["session_count"] for cl in command_clusters.get("clusters", [])),
+                default=0,
+            ),
+        },
+    }
+
+
+# ──────────────────────────────────────────────────────────────────────────
 # Phase 6 — Stats aggregation (genuinely new — no existing tool equivalent)
 # ──────────────────────────────────────────────────────────────────────────
 
@@ -969,32 +991,22 @@ def main() -> None:
     log_info(f"Wrote full (un-truncated) case records to {full_records_path} "
              f"— upload this to R2 live-archives/, then it can be deleted locally")
 
-    # ---- Output: index-only historical_ir_cases.json (committed to repo) ----
-    # OLD CALL -- preserved, commented out, not executed:
-    # index_records = build_index_records(cases)
-    source_file_index = build_source_file_index(files)
-    index_records = build_index_records_v2(cases, source_file_index)
-    (output_dir / "historical_ir_cases.json").write_text(json.dumps({
+    # ---- Output: corpus_highlights.json (committed to repo) ----
+    # Replaces the five raw per-category files (historical_ir_cases.json,
+    # historical_credentials.json, historical_ssh_fingerprints.json,
+    # historical_threat_ips.json, historical_command_clusters.json), none
+    # of which are written to the repo anymore. Row-level data for all
+    # five categories (IPs, credential pairs, fingerprints, commands,
+    # session IDs) lives ONLY in the full R2 archive (full_records_path,
+    # uploaded by the calling workflow) — never in git. This file is
+    # counts and labels only; see build_corpus_highlights() docstring.
+    highlights = build_corpus_highlights(
+        cases, credentials, ssh_fingerprints, threat_ips, command_clusters)
+    (output_dir / "corpus_highlights.json").write_text(json.dumps({
         "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "corpus_name": args.corpus_name,
-        "total_cases": len(index_records),
-        "cases": index_records,
+        **highlights,
     }, indent=2))
-
-    (output_dir / "historical_credentials.json").write_text(json.dumps({
-        "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "corpus_name": args.corpus_name,
-        **credentials,
-    }, indent=2))
-
-    (output_dir / "historical_ssh_fingerprints.json").write_text(
-        json.dumps({"corpus_name": args.corpus_name, **ssh_fingerprints}, indent=2))
-
-    (output_dir / "historical_threat_ips.json").write_text(
-        json.dumps({"corpus_name": args.corpus_name, **threat_ips}, indent=2))
-
-    (output_dir / "historical_command_clusters.json").write_text(
-        json.dumps({"corpus_name": args.corpus_name, **command_clusters}, indent=2))
 
     (output_dir / "historical_stats.json").write_text(
         json.dumps({"corpus_name": args.corpus_name, **stats}, indent=2))
