@@ -396,6 +396,24 @@ h2 .dim { color: var(--text-dim); font-weight: 300; }
 /* INTEL FEED */
 #intel { background: var(--bg); }
 
+
+/* CORPUS HIGHLIGHTS — quarterly historical processor banner.
+   Reuses .metrics-bar/.metric/.metric-val/.metric-key as-is; the only
+   addition is a thin top accent so it's visually distinct from the
+   live 2h-pipeline metrics bar immediately above it, and a smaller
+   font on the "updated" cell since it holds a date string, not a
+   number, and would otherwise look oversized at 1.4rem. */
+.corpus-highlights-bar {
+  border-top: 2px solid var(--accent);
+}
+
+.corpus-highlights-bar #ch-updated {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--text-dim);
+}
+
+
 .intel-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
