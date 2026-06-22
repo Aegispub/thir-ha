@@ -63,12 +63,21 @@ async function loadLiveData() {
     threatIPsLoaded = true;   // FIX-2: mark threat feed as loaded
   } else {
     console.warn('[THIR] threat_ips.json unavailable — using demo IPs');
+    // threatIPsLoaded stays false → main.js will start liveSimulate()
+  }
+
+  // FIX (bindAssets nesting bug): this was previously nested inside
+  // threatResult's else-branch above, so it only ever ran when
+  // threat_ips.json FAILED to load — on every normal healthy pipeline
+  // cycle (the common case), this block was skipped entirely and the
+  // ID.AM-1 asset card never bound live data. Moved to its own top-level
+  // check, sibling to statsResult/irResult/threatResult above, so it
+  // runs independent of threat_ips.json's outcome — matching how
+  // assetsResult is fetched independently in the Promise.allSettled call.
   if (assetsResult.status === 'fulfilled') {
     bindAssets(assetsResult.value);
   } else {
     console.warn('[THIR] assets.json unavailable — ID.AM-1 showing static label');
-  }
-    // threatIPsLoaded stays false → main.js will start liveSimulate()
   }
 
   updateNavStatus();
