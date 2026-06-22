@@ -98,13 +98,20 @@ jobs:
 
       # ----------------------------------------------------------------
       # 4. Tool 05 — check honeypot is alive
-      #    Checks Cowrie SSH port 2222 (not 22 — 22 goes to honeypot).
-      #    Writes data/posture.json with UP/DOWN status.
-      #    Writes data/assets.json with live asset inventory (ID.AM-1).
+      #    Checks Cowrie SSH port 2222 on VM2 (not 22 — 22 goes to honeypot).
+      #    v3: ALSO checks VM1 (the actual Cowrie sensor) via an SSH relay
+      #    through VM2, since VM1's private VCN IP (10.0.0.53) is not
+      #    reachable from the GitHub Actions runner directly. Closes DEBT-4 —
+      #    previously, if Cowrie crashed on VM1 while HAProxy on VM2 stayed
+      #    up, this tool reported HEALTHY with no visibility into the actual
+      #    failure. Both VM1 and VM2 now appear in posture.json + assets.json.
+      #    Writes data/posture.json with UP/DOWN status for both hosts.
+      #    Writes data/assets.json with live asset inventory (ID.AM-1),
+      #    now covering both the sensor (VM1) and brain (VM2) nodes.
       #    continue-on-error: true so pipeline keeps running even if
-      #    VM2 is temporarily unreachable.
+      #    either VM is temporarily unreachable.
       # ----------------------------------------------------------------
-      - name: Tool 05 — network monitor (honeypot liveness + asset inventory)
+      - name: Tool 05 — network monitor (honeypot liveness + asset inventory, VM1+VM2)
         continue-on-error: true
         timeout-minutes: 3
         env:
@@ -116,6 +123,57 @@ jobs:
             --json \
             -o data/posture.json \
             --assets data/assets.json \
+            --ssh-host "$VPS_IP" \
+            --ssh-user ubuntu \
+            --ssh-port 22222 \
+            --ssh-key /tmp/vps_key \
+            --vm1-target 10.0.0.53:2222 \
+            -v
+
+      # ----------------------------------------------------------------
+      # 4.b Tool 39 — periodic failover auditor (VM1 <-> VM2 HAProxy)
+      #    NOTE: named "auditor" not "notifier" deliberately — runs on this
+      #    same 2h cadence, NOT a real-time check. HAProxy itself fails
+      #    over in 30-60s (HA Runbooks RB-04); a failover that starts and
+      #    resolves between pipeline runs may be missed or only visible
+      #    after the fact. Accepted, documented tradeoff — see tool header.
+      #
+      #    Covers BOTH HAProxy backends independently, confirmed against
+      #    the live haproxy.cfg on VM2 (not assumed from docs):
+      #      cowrie_backend: vm1 10.0.0.53:2222 <-> vm2_backup 127.0.0.1:4222
+      #      telnet_backend: vm1_telnet 10.0.0.53:2223 <-> vm2_telnet_backup 127.0.0.1:4223
+      #    These are independent failover states — SSH can fail over while
+      #    telnet stays healthy, or vice versa. Originally only
+      #    cowrie_backend was checked; that left telnet failovers silent.
+      #
+      #    Two-state VM1 check per backend (admin port 22222, shared, vs
+      #    that backend's service port — 2222 or 2223) + HAProxy backend
+      #    status for both, all via SSH relay through VM2 (same
+      #    reachability constraint as Tool 05's VM1 check — the runner has
+      #    no route to VM1's private VCN IP, only VM2 does).
+      #
+      #    Writes data/failover_events.json as a LIST of 0-2 events (one
+      #    per backend with something to report). Does NOT alert directly
+      #    — Tool 37 (next relevant step, further below) reads this file
+      #    as a new input alongside its existing 6, iterating it the same
+      #    way it iterates every other collection-shaped input.
+      # ----------------------------------------------------------------
+      - name: Tool 39 — periodic failover auditor (VM1/VM2 HAProxy correlation, both backends)
+        continue-on-error: true
+        timeout-minutes: 2
+        env:
+          VPS_IP: ${{ secrets.ORACLE_VPS_IP }}
+        run: |
+          go run tools/39_failover_auditor_live.go \
+            --ssh-host "$VPS_IP" \
+            --ssh-user ubuntu \
+            --ssh-port 22222 \
+            --ssh-key /tmp/vps_key \
+            --vm1-host 10.0.0.53 \
+            --vm1-admin-port 22222 \
+            --vm1-cowrie-port 2222 \
+            --vm1-telnet-port 2223 \
+            --output data/failover_events.json \
             -v
 
       # ----------------------------------------------------------------
@@ -573,6 +631,7 @@ jobs:
             --asn-clusters     data/asn_clusters.json \
             --ir-cases         data/ir_cases.json \
             --command-clusters data/command_clusters.json \
+            --failover-events  data/failover_events.json \
             --alert-history    data/alert_history.json \
             --channel          "${ALERT_CHANNEL:-dry-run}" \
             $PRUNE_ARGS
