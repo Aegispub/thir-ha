@@ -1,32 +1,36 @@
 {
-  "generated_at": "2026-06-16T10:28:19.479987+00:00",
+  "generated_at": "2026-06-22T18:15:26.100061+00:00",
   "downloads_dir": "/tmp/cowrie-downloads",
   "downloads_found": true,
-  "files_scanned": 16,
+  "files_scanned": 28,
   "files_skipped": 1,
-  "files_classified": 13,
+  "files_classified": 24,
   "yara_available": false,
   "analysis_method": "heuristic",
   "families_detected": [
     {
-      "family": "Rootkit",
-      "count": 10
+      "family": "Downloader",
+      "count": 17
     },
     {
-      "family": "Downloader",
-      "count": 9
+      "family": "Rootkit",
+      "count": 17
     },
     {
       "family": "Gafgyt",
+      "count": 11
+    },
+    {
+      "family": "XMRig",
       "count": 7
     },
     {
       "family": "Mushtik",
-      "count": 6
+      "count": 7
     },
     {
-      "family": "XMRig",
-      "count": 6
+      "family": "Mirai",
+      "count": 3
     },
     {
       "family": "Sora",
@@ -42,11 +46,21 @@
     }
   ],
   "severity_summary": {
-    "CRITICAL": 11,
-    "LOW": 2,
-    "UNKNOWN": 3
+    "HIGH": 3,
+    "CRITICAL": 18,
+    "LOW": 3,
+    "UNKNOWN": 4
   },
   "critical_samples": [
+    {
+      "filename": "00b374d5249b32ab298f86c2137962e6bf1f71e03c4db8e3ae169b601480d730",
+      "sha256": "00b374d5249b32ab298f86c2137962e6bf1f71e03c4db8e3ae169b601480d730",
+      "families": [
+        "Downloader",
+        "Gafgyt"
+      ],
+      "severity": "HIGH"
+    },
     {
       "filename": "048e374baac36d8cf68dd32e48313ef8eb517d647548b1bf5f26d2d0e2e3cdc7",
       "sha256": "048e374baac36d8cf68dd32e48313ef8eb517d647548b1bf5f26d2d0e2e3cdc7",
@@ -56,14 +70,34 @@
       "severity": "CRITICAL"
     },
     {
+      "filename": "289fd4a7a10aaf8aa313ab80cc170018fc662d0a7d034a3b92b9d3d3945b0736",
+      "sha256": "289fd4a7a10aaf8aa313ab80cc170018fc662d0a7d034a3b92b9d3d3945b0736",
+      "families": [
+        "Rootkit"
+      ],
+      "severity": "CRITICAL"
+    },
+    {
       "filename": "2a39d592018600e4b3db2caed6cdaa8c651d3dacbebf8ac1f0960e493843c435",
       "sha256": "2a39d592018600e4b3db2caed6cdaa8c651d3dacbebf8ac1f0960e493843c435",
       "families": [
-        "Gafgyt",
-        "Mushtik",
-        "Downloader",
         "XMRig",
-        "Rootkit"
+        "Gafgyt",
+        "Downloader",
+        "Rootkit",
+        "Mushtik"
+      ],
+      "severity": "CRITICAL"
+    },
+    {
+      "filename": "3552f719a379865960a169e2dacea968f4e8f46bd31907f2f89df431d09d9d9e",
+      "sha256": "3552f719a379865960a169e2dacea968f4e8f46bd31907f2f89df431d09d9d9e",
+      "families": [
+        "XMRig",
+        "Gafgyt",
+        "Downloader",
+        "Rootkit",
+        "Mushtik"
       ],
       "severity": "CRITICAL"
     },
@@ -71,11 +105,21 @@
       "filename": "3625cfdcd6d434bfa672753ef4b197df8a01388d220bafc9edfa2d0d29c7fcef",
       "sha256": "3625cfdcd6d434bfa672753ef4b197df8a01388d220bafc9edfa2d0d29c7fcef",
       "families": [
-        "Gafgyt",
-        "Mushtik",
-        "Downloader",
         "XMRig",
-        "Rootkit"
+        "Gafgyt",
+        "Downloader",
+        "Rootkit",
+        "Mushtik"
+      ],
+      "severity": "CRITICAL"
+    },
+    {
+      "filename": "3ad48bae18b7ea8e7ffe3608b6eeaa4673b6ff47e9e6a21def774eecba66364a",
+      "sha256": "3ad48bae18b7ea8e7ffe3608b6eeaa4673b6ff47e9e6a21def774eecba66364a",
+      "families": [
+        "Downloader",
+        "Rootkit",
+        "Mirai"
       ],
       "severity": "CRITICAL"
     },
@@ -88,14 +132,23 @@
       "severity": "CRITICAL"
     },
     {
+      "filename": "64b8416c418c265ee1a7999470d9f688ad8204c1d85341e270e23649ee21e11b",
+      "sha256": "64b8416c418c265ee1a7999470d9f688ad8204c1d85341e270e23649ee21e11b",
+      "families": [
+        "Downloader",
+        "Gafgyt"
+      ],
+      "severity": "HIGH"
+    },
+    {
       "filename": "75737a0d2987fb60d7a1f17ff2a7122132545e84a327e3a5372be51500a3be12",
       "sha256": "75737a0d2987fb60d7a1f17ff2a7122132545e84a327e3a5372be51500a3be12",
       "families": [
-        "Gafgyt",
-        "Mushtik",
-        "Downloader",
         "XMRig",
-        "Rootkit"
+        "Gafgyt",
+        "Downloader",
+        "Rootkit",
+        "Mushtik"
       ],
       "severity": "CRITICAL"
     },
@@ -112,24 +165,43 @@
       "filename": "7a9da7d10aa80b0f9e2e3f9e518030c86026a636e0b6de35905e15dd4c8e3e2d",
       "sha256": "7a9da7d10aa80b0f9e2e3f9e518030c86026a636e0b6de35905e15dd4c8e3e2d",
       "families": [
-        "Gafgyt",
-        "Mushtik",
-        "Downloader",
-        "Sora",
         "XMRig",
-        "Rootkit"
+        "Gafgyt",
+        "Downloader",
+        "Rootkit",
+        "Mushtik",
+        "Sora"
       ],
       "severity": "CRITICAL"
+    },
+    {
+      "filename": "88d028a54a136782982817d1d93c89b075b7f04897b0c0681311add7c8712eb6",
+      "sha256": "88d028a54a136782982817d1d93c89b075b7f04897b0c0681311add7c8712eb6",
+      "families": [
+        "Downloader",
+        "Rootkit",
+        "Mirai"
+      ],
+      "severity": "CRITICAL"
+    },
+    {
+      "filename": "b1633346a694467b99d9596fe36d0cc88ff1f82f8e86f1c53d3218de1839a43e",
+      "sha256": "b1633346a694467b99d9596fe36d0cc88ff1f82f8e86f1c53d3218de1839a43e",
+      "families": [
+        "Downloader",
+        "Gafgyt"
+      ],
+      "severity": "HIGH"
     },
     {
       "filename": "b1e4374da060cb4bf9ff872f3e060486d9cd400519e0b2823f61670d64148ab4",
       "sha256": "b1e4374da060cb4bf9ff872f3e060486d9cd400519e0b2823f61670d64148ab4",
       "families": [
-        "Gafgyt",
-        "Mushtik",
-        "Downloader",
         "XMRig",
-        "Rootkit"
+        "Gafgyt",
+        "Downloader",
+        "Rootkit",
+        "Mushtik"
       ],
       "severity": "CRITICAL"
     },
@@ -137,10 +209,28 @@
       "filename": "b20f39fc00d242e706b6c30367ad811c676e0575050a4ec2f30104b696944b49",
       "sha256": "b20f39fc00d242e706b6c30367ad811c676e0575050a4ec2f30104b696944b49",
       "families": [
-        "CoinMiner",
-        "Gafgyt",
-        "Mushtik",
         "XMRig",
+        "Gafgyt",
+        "CoinMiner",
+        "Rootkit",
+        "Mushtik"
+      ],
+      "severity": "CRITICAL"
+    },
+    {
+      "filename": "c8545034cd4fe71eeadb24dacddc5da95c4311c7112c299f1325801f3e06f928",
+      "sha256": "c8545034cd4fe71eeadb24dacddc5da95c4311c7112c299f1325801f3e06f928",
+      "families": [
+        "Downloader",
+        "Rootkit",
+        "Mirai"
+      ],
+      "severity": "CRITICAL"
+    },
+    {
+      "filename": "ce3cb467257e402122e4ab5f3f40fefcbdb4a662664659672a38967ee8aaaad0",
+      "sha256": "ce3cb467257e402122e4ab5f3f40fefcbdb4a662664659672a38967ee8aaaad0",
+      "families": [
         "Rootkit"
       ],
       "severity": "CRITICAL"
@@ -157,9 +247,17 @@
       "filename": "ea73a088909b53110444807188562c406c6c6c89b3748aee016bc996ab1f1318",
       "sha256": "ea73a088909b53110444807188562c406c6c6c89b3748aee016bc996ab1f1318",
       "families": [
+        "Downloader",
         "Gafgyt",
-        "Tsunami",
-        "Downloader"
+        "Tsunami"
+      ],
+      "severity": "CRITICAL"
+    },
+    {
+      "filename": "f200744b6900aeb0a27df08c71fc28a7f07b0aee21e844beca214eb8c4ab58dd",
+      "sha256": "f200744b6900aeb0a27df08c71fc28a7f07b0aee21e844beca214eb8c4ab58dd",
+      "families": [
+        "Rootkit"
       ],
       "severity": "CRITICAL"
     }
@@ -171,6 +269,60 @@
     }
   ],
   "results": [
+    {
+      "filename": "00b374d5249b32ab298f86c2137962e6bf1f71e03c4db8e3ae169b601480d730",
+      "sha256": "00b374d5249b32ab298f86c2137962e6bf1f71e03c4db8e3ae169b601480d730",
+      "md5": "8fd10ab5b189d5b42b4d41e9335cbe9e",
+      "file_size_bytes": 28390,
+      "file_type": "Text/Script",
+      "classified": true,
+      "families": [
+        "Downloader",
+        "Gafgyt"
+      ],
+      "severity": "HIGH",
+      "match_count": 2,
+      "matches": [
+        {
+          "rule": "heuristic_gafgyt",
+          "family": "Gafgyt",
+          "description": "Gafgyt/BASHLITE IoT malware",
+          "tags": [
+            "Gafgyt",
+            "heuristic"
+          ],
+          "meta": {
+            "description": "Gafgyt/BASHLITE IoT malware",
+            "author": "THIR-heuristic",
+            "severity": "HIGH"
+          },
+          "strings_matched": [
+            "SCANNER"
+          ],
+          "match_type": "heuristic"
+        },
+        {
+          "rule": "heuristic_downloader",
+          "family": "Downloader",
+          "description": "Shell/script downloader",
+          "tags": [
+            "Downloader",
+            "heuristic"
+          ],
+          "meta": {
+            "description": "Shell/script downloader",
+            "author": "THIR-heuristic",
+            "severity": "LOW"
+          },
+          "strings_matched": [
+            "/tmp/",
+            "chmod +x"
+          ],
+          "match_type": "heuristic"
+        }
+      ],
+      "analysis_method": "heuristic"
+    },
     {
       "filename": "048e374baac36d8cf68dd32e48313ef8eb517d647548b1bf5f26d2d0e2e3cdc7",
       "sha256": "048e374baac36d8cf68dd32e48313ef8eb517d647548b1bf5f26d2d0e2e3cdc7",
@@ -240,6 +392,74 @@
       "analysis_method": "heuristic"
     },
     {
+      "filename": "197c74408e15bd1168105f564f96aace4fd4819961b724630bf5a6be4878daf8",
+      "sha256": "197c74408e15bd1168105f564f96aace4fd4819961b724630bf5a6be4878daf8",
+      "md5": "3abda8076fc0d1a9c3bc2731cadeca14",
+      "file_size_bytes": 1269,
+      "file_type": "Shell script",
+      "classified": true,
+      "families": [
+        "Downloader"
+      ],
+      "severity": "LOW",
+      "match_count": 1,
+      "matches": [
+        {
+          "rule": "heuristic_downloader",
+          "family": "Downloader",
+          "description": "Shell/script downloader",
+          "tags": [
+            "Downloader",
+            "heuristic"
+          ],
+          "meta": {
+            "description": "Shell/script downloader",
+            "author": "THIR-heuristic",
+            "severity": "LOW"
+          },
+          "strings_matched": [
+            "/tmp/"
+          ],
+          "match_type": "heuristic"
+        }
+      ],
+      "analysis_method": "heuristic"
+    },
+    {
+      "filename": "289fd4a7a10aaf8aa313ab80cc170018fc662d0a7d034a3b92b9d3d3945b0736",
+      "sha256": "289fd4a7a10aaf8aa313ab80cc170018fc662d0a7d034a3b92b9d3d3945b0736",
+      "md5": "cf95d8205a013bcdfd75fd22a65f3491",
+      "file_size_bytes": 1015808,
+      "file_type": "ELF 64-bit executable",
+      "classified": true,
+      "families": [
+        "Rootkit"
+      ],
+      "severity": "CRITICAL",
+      "match_count": 1,
+      "matches": [
+        {
+          "rule": "heuristic_rootkit",
+          "family": "Rootkit",
+          "description": "Rootkit/hiding tool",
+          "tags": [
+            "Rootkit",
+            "heuristic"
+          ],
+          "meta": {
+            "description": "Rootkit/hiding tool",
+            "author": "THIR-heuristic",
+            "severity": "CRITICAL"
+          },
+          "strings_matched": [
+            "/proc/"
+          ],
+          "match_type": "heuristic"
+        }
+      ],
+      "analysis_method": "heuristic"
+    },
+    {
       "filename": "2a39d592018600e4b3db2caed6cdaa8c651d3dacbebf8ac1f0960e493843c435",
       "sha256": "2a39d592018600e4b3db2caed6cdaa8c651d3dacbebf8ac1f0960e493843c435",
       "md5": "e2965c97cc9be1c328e1bb318c489af2",
@@ -247,11 +467,124 @@
       "file_type": "ELF 64-bit executable",
       "classified": true,
       "families": [
-        "Gafgyt",
-        "Mushtik",
-        "Downloader",
         "XMRig",
-        "Rootkit"
+        "Gafgyt",
+        "Downloader",
+        "Rootkit",
+        "Mushtik"
+      ],
+      "severity": "CRITICAL",
+      "match_count": 5,
+      "matches": [
+        {
+          "rule": "heuristic_xmrig",
+          "family": "XMRig",
+          "description": "XMRig cryptocurrency miner",
+          "tags": [
+            "XMRig",
+            "heuristic"
+          ],
+          "meta": {
+            "description": "XMRig cryptocurrency miner",
+            "author": "THIR-heuristic",
+            "severity": "HIGH"
+          },
+          "strings_matched": [
+            "xmrig"
+          ],
+          "match_type": "heuristic"
+        },
+        {
+          "rule": "heuristic_gafgyt",
+          "family": "Gafgyt",
+          "description": "Gafgyt/BASHLITE IoT malware",
+          "tags": [
+            "Gafgyt",
+            "heuristic"
+          ],
+          "meta": {
+            "description": "Gafgyt/BASHLITE IoT malware",
+            "author": "THIR-heuristic",
+            "severity": "HIGH"
+          },
+          "strings_matched": [
+            "PING",
+            "hold",
+            "junk"
+          ],
+          "match_type": "heuristic"
+        },
+        {
+          "rule": "heuristic_mushtik",
+          "family": "Mushtik",
+          "description": "Mushtik mining/backdoor",
+          "tags": [
+            "Mushtik",
+            "heuristic"
+          ],
+          "meta": {
+            "description": "Mushtik mining/backdoor",
+            "author": "THIR-heuristic",
+            "severity": "MEDIUM"
+          },
+          "strings_matched": [
+            ".onion"
+          ],
+          "match_type": "heuristic"
+        },
+        {
+          "rule": "heuristic_downloader",
+          "family": "Downloader",
+          "description": "Shell/script downloader",
+          "tags": [
+            "Downloader",
+            "heuristic"
+          ],
+          "meta": {
+            "description": "Shell/script downloader",
+            "author": "THIR-heuristic",
+            "severity": "LOW"
+          },
+          "strings_matched": [
+            "/tmp/",
+            "chmod +x"
+          ],
+          "match_type": "heuristic"
+        },
+        {
+          "rule": "heuristic_rootkit",
+          "family": "Rootkit",
+          "description": "Rootkit/hiding tool",
+          "tags": [
+            "Rootkit",
+            "heuristic"
+          ],
+          "meta": {
+            "description": "Rootkit/hiding tool",
+            "author": "THIR-heuristic",
+            "severity": "CRITICAL"
+          },
+          "strings_matched": [
+            "/proc/"
+          ],
+          "match_type": "heuristic"
+        }
+      ],
+      "analysis_method": "heuristic"
+    },
+    {
+      "filename": "3552f719a379865960a169e2dacea968f4e8f46bd31907f2f89df431d09d9d9e",
+      "sha256": "3552f719a379865960a169e2dacea968f4e8f46bd31907f2f89df431d09d9d9e",
+      "md5": "934fe3afcf0fce6102d6acc71d608900",
+      "file_size_bytes": 3571712,
+      "file_type": "ELF 64-bit executable",
+      "classified": true,
+      "families": [
+        "XMRig",
+        "Gafgyt",
+        "Downloader",
+        "Rootkit",
+        "Mushtik"
       ],
       "severity": "CRITICAL",
       "match_count": 5,
@@ -360,11 +693,11 @@
       "file_type": "ELF 64-bit executable",
       "classified": true,
       "families": [
-        "Gafgyt",
-        "Mushtik",
-        "Downloader",
         "XMRig",
-        "Rootkit"
+        "Gafgyt",
+        "Downloader",
+        "Rootkit",
+        "Mushtik"
       ],
       "severity": "CRITICAL",
       "match_count": 5,
@@ -479,6 +812,79 @@
       "analysis_method": "none"
     },
     {
+      "filename": "3ad48bae18b7ea8e7ffe3608b6eeaa4673b6ff47e9e6a21def774eecba66364a",
+      "sha256": "3ad48bae18b7ea8e7ffe3608b6eeaa4673b6ff47e9e6a21def774eecba66364a",
+      "md5": "59b98f52977620c5e3356981226afc7a",
+      "file_size_bytes": 124180,
+      "file_type": "ELF 32-bit executable",
+      "classified": true,
+      "families": [
+        "Downloader",
+        "Rootkit",
+        "Mirai"
+      ],
+      "severity": "CRITICAL",
+      "match_count": 3,
+      "matches": [
+        {
+          "rule": "heuristic_mirai",
+          "family": "Mirai",
+          "description": "Mirai botnet binary",
+          "tags": [
+            "Mirai",
+            "heuristic"
+          ],
+          "meta": {
+            "description": "Mirai botnet binary",
+            "author": "THIR-heuristic",
+            "severity": "HIGH"
+          },
+          "strings_matched": [
+            "/bin/busybox"
+          ],
+          "match_type": "heuristic"
+        },
+        {
+          "rule": "heuristic_downloader",
+          "family": "Downloader",
+          "description": "Shell/script downloader",
+          "tags": [
+            "Downloader",
+            "heuristic"
+          ],
+          "meta": {
+            "description": "Shell/script downloader",
+            "author": "THIR-heuristic",
+            "severity": "LOW"
+          },
+          "strings_matched": [
+            "wget http",
+            "/tmp/"
+          ],
+          "match_type": "heuristic"
+        },
+        {
+          "rule": "heuristic_rootkit",
+          "family": "Rootkit",
+          "description": "Rootkit/hiding tool",
+          "tags": [
+            "Rootkit",
+            "heuristic"
+          ],
+          "meta": {
+            "description": "Rootkit/hiding tool",
+            "author": "THIR-heuristic",
+            "severity": "CRITICAL"
+          },
+          "strings_matched": [
+            "/proc/"
+          ],
+          "match_type": "heuristic"
+        }
+      ],
+      "analysis_method": "heuristic"
+    },
+    {
       "filename": "59c29436755b0778e968d49feeae20ed65f5fa5e35f9f7965b8ed93420db91e5",
       "sha256": "59c29436755b0778e968d49feeae20ed65f5fa5e35f9f7965b8ed93420db91e5",
       "md5": "aaa5098c9caafccf15362b017825c64b",
@@ -513,6 +919,60 @@
       "analysis_method": "heuristic"
     },
     {
+      "filename": "64b8416c418c265ee1a7999470d9f688ad8204c1d85341e270e23649ee21e11b",
+      "sha256": "64b8416c418c265ee1a7999470d9f688ad8204c1d85341e270e23649ee21e11b",
+      "md5": "f806197c8011c7bee0eee752b42d9128",
+      "file_size_bytes": 29000,
+      "file_type": "Text/Script",
+      "classified": true,
+      "families": [
+        "Downloader",
+        "Gafgyt"
+      ],
+      "severity": "HIGH",
+      "match_count": 2,
+      "matches": [
+        {
+          "rule": "heuristic_gafgyt",
+          "family": "Gafgyt",
+          "description": "Gafgyt/BASHLITE IoT malware",
+          "tags": [
+            "Gafgyt",
+            "heuristic"
+          ],
+          "meta": {
+            "description": "Gafgyt/BASHLITE IoT malware",
+            "author": "THIR-heuristic",
+            "severity": "HIGH"
+          },
+          "strings_matched": [
+            "SCANNER"
+          ],
+          "match_type": "heuristic"
+        },
+        {
+          "rule": "heuristic_downloader",
+          "family": "Downloader",
+          "description": "Shell/script downloader",
+          "tags": [
+            "Downloader",
+            "heuristic"
+          ],
+          "meta": {
+            "description": "Shell/script downloader",
+            "author": "THIR-heuristic",
+            "severity": "LOW"
+          },
+          "strings_matched": [
+            "/tmp/",
+            "chmod +x"
+          ],
+          "match_type": "heuristic"
+        }
+      ],
+      "analysis_method": "heuristic"
+    },
+    {
       "filename": "75737a0d2987fb60d7a1f17ff2a7122132545e84a327e3a5372be51500a3be12",
       "sha256": "75737a0d2987fb60d7a1f17ff2a7122132545e84a327e3a5372be51500a3be12",
       "md5": "deed4c27aae90c32840458c1c9668976",
@@ -520,11 +980,11 @@
       "file_type": "ELF 64-bit executable",
       "classified": true,
       "families": [
-        "Gafgyt",
-        "Mushtik",
-        "Downloader",
         "XMRig",
-        "Rootkit"
+        "Gafgyt",
+        "Downloader",
+        "Rootkit",
+        "Mushtik"
       ],
       "severity": "CRITICAL",
       "match_count": 5,
@@ -700,12 +1160,12 @@
       "file_type": "ELF 64-bit executable",
       "classified": true,
       "families": [
-        "Gafgyt",
-        "Mushtik",
-        "Downloader",
-        "Sora",
         "XMRig",
-        "Rootkit"
+        "Gafgyt",
+        "Downloader",
+        "Rootkit",
+        "Mushtik",
+        "Sora"
       ],
       "severity": "CRITICAL",
       "match_count": 6,
@@ -825,6 +1285,146 @@
       "analysis_method": "heuristic"
     },
     {
+      "filename": "88d028a54a136782982817d1d93c89b075b7f04897b0c0681311add7c8712eb6",
+      "sha256": "88d028a54a136782982817d1d93c89b075b7f04897b0c0681311add7c8712eb6",
+      "md5": "c3406825be3171f85be5992c232114e1",
+      "file_size_bytes": 142759,
+      "file_type": "ELF 64-bit executable",
+      "classified": true,
+      "families": [
+        "Downloader",
+        "Rootkit",
+        "Mirai"
+      ],
+      "severity": "CRITICAL",
+      "match_count": 3,
+      "matches": [
+        {
+          "rule": "heuristic_mirai",
+          "family": "Mirai",
+          "description": "Mirai botnet binary",
+          "tags": [
+            "Mirai",
+            "heuristic"
+          ],
+          "meta": {
+            "description": "Mirai botnet binary",
+            "author": "THIR-heuristic",
+            "severity": "HIGH"
+          },
+          "strings_matched": [
+            "/bin/busybox"
+          ],
+          "match_type": "heuristic"
+        },
+        {
+          "rule": "heuristic_downloader",
+          "family": "Downloader",
+          "description": "Shell/script downloader",
+          "tags": [
+            "Downloader",
+            "heuristic"
+          ],
+          "meta": {
+            "description": "Shell/script downloader",
+            "author": "THIR-heuristic",
+            "severity": "LOW"
+          },
+          "strings_matched": [
+            "wget http",
+            "/tmp/"
+          ],
+          "match_type": "heuristic"
+        },
+        {
+          "rule": "heuristic_rootkit",
+          "family": "Rootkit",
+          "description": "Rootkit/hiding tool",
+          "tags": [
+            "Rootkit",
+            "heuristic"
+          ],
+          "meta": {
+            "description": "Rootkit/hiding tool",
+            "author": "THIR-heuristic",
+            "severity": "CRITICAL"
+          },
+          "strings_matched": [
+            "/proc/"
+          ],
+          "match_type": "heuristic"
+        }
+      ],
+      "analysis_method": "heuristic"
+    },
+    {
+      "filename": "97a1e6f817d44a4f8b07fdebaf9357786742096c470eb5d78e789b6bb53979bb",
+      "sha256": "97a1e6f817d44a4f8b07fdebaf9357786742096c470eb5d78e789b6bb53979bb",
+      "md5": "69929f64fa1f641de2b60925753db0b1",
+      "file_size_bytes": 196608,
+      "file_type": "ELF 64-bit executable",
+      "classified": false,
+      "families": [],
+      "severity": "UNKNOWN",
+      "match_count": 0,
+      "matches": [],
+      "analysis_method": "none"
+    },
+    {
+      "filename": "b1633346a694467b99d9596fe36d0cc88ff1f82f8e86f1c53d3218de1839a43e",
+      "sha256": "b1633346a694467b99d9596fe36d0cc88ff1f82f8e86f1c53d3218de1839a43e",
+      "md5": "645122d25d2bc30a04a09e8d77b93cd9",
+      "file_size_bytes": 29619,
+      "file_type": "Text/Script",
+      "classified": true,
+      "families": [
+        "Downloader",
+        "Gafgyt"
+      ],
+      "severity": "HIGH",
+      "match_count": 2,
+      "matches": [
+        {
+          "rule": "heuristic_gafgyt",
+          "family": "Gafgyt",
+          "description": "Gafgyt/BASHLITE IoT malware",
+          "tags": [
+            "Gafgyt",
+            "heuristic"
+          ],
+          "meta": {
+            "description": "Gafgyt/BASHLITE IoT malware",
+            "author": "THIR-heuristic",
+            "severity": "HIGH"
+          },
+          "strings_matched": [
+            "SCANNER"
+          ],
+          "match_type": "heuristic"
+        },
+        {
+          "rule": "heuristic_downloader",
+          "family": "Downloader",
+          "description": "Shell/script downloader",
+          "tags": [
+            "Downloader",
+            "heuristic"
+          ],
+          "meta": {
+            "description": "Shell/script downloader",
+            "author": "THIR-heuristic",
+            "severity": "LOW"
+          },
+          "strings_matched": [
+            "/tmp/",
+            "chmod +x"
+          ],
+          "match_type": "heuristic"
+        }
+      ],
+      "analysis_method": "heuristic"
+    },
+    {
       "filename": "b1e4374da060cb4bf9ff872f3e060486d9cd400519e0b2823f61670d64148ab4",
       "sha256": "b1e4374da060cb4bf9ff872f3e060486d9cd400519e0b2823f61670d64148ab4",
       "md5": "ee4a6e5bf98f1863670702ea15488ef2",
@@ -832,11 +1432,11 @@
       "file_type": "ELF 64-bit executable",
       "classified": true,
       "families": [
-        "Gafgyt",
-        "Mushtik",
-        "Downloader",
         "XMRig",
-        "Rootkit"
+        "Gafgyt",
+        "Downloader",
+        "Rootkit",
+        "Mushtik"
       ],
       "severity": "CRITICAL",
       "match_count": 5,
@@ -945,11 +1545,11 @@
       "file_type": "ELF 64-bit executable",
       "classified": true,
       "families": [
-        "CoinMiner",
-        "Gafgyt",
-        "Mushtik",
         "XMRig",
-        "Rootkit"
+        "Gafgyt",
+        "CoinMiner",
+        "Rootkit",
+        "Mushtik"
       ],
       "severity": "CRITICAL",
       "match_count": 5,
@@ -1055,6 +1655,113 @@
       "analysis_method": "heuristic"
     },
     {
+      "filename": "c8545034cd4fe71eeadb24dacddc5da95c4311c7112c299f1325801f3e06f928",
+      "sha256": "c8545034cd4fe71eeadb24dacddc5da95c4311c7112c299f1325801f3e06f928",
+      "md5": "6c533f0ae1236042ce2ac05e81719feb",
+      "file_size_bytes": 132596,
+      "file_type": "ELF 32-bit executable",
+      "classified": true,
+      "families": [
+        "Downloader",
+        "Rootkit",
+        "Mirai"
+      ],
+      "severity": "CRITICAL",
+      "match_count": 3,
+      "matches": [
+        {
+          "rule": "heuristic_mirai",
+          "family": "Mirai",
+          "description": "Mirai botnet binary",
+          "tags": [
+            "Mirai",
+            "heuristic"
+          ],
+          "meta": {
+            "description": "Mirai botnet binary",
+            "author": "THIR-heuristic",
+            "severity": "HIGH"
+          },
+          "strings_matched": [
+            "/bin/busybox"
+          ],
+          "match_type": "heuristic"
+        },
+        {
+          "rule": "heuristic_downloader",
+          "family": "Downloader",
+          "description": "Shell/script downloader",
+          "tags": [
+            "Downloader",
+            "heuristic"
+          ],
+          "meta": {
+            "description": "Shell/script downloader",
+            "author": "THIR-heuristic",
+            "severity": "LOW"
+          },
+          "strings_matched": [
+            "wget http",
+            "/tmp/"
+          ],
+          "match_type": "heuristic"
+        },
+        {
+          "rule": "heuristic_rootkit",
+          "family": "Rootkit",
+          "description": "Rootkit/hiding tool",
+          "tags": [
+            "Rootkit",
+            "heuristic"
+          ],
+          "meta": {
+            "description": "Rootkit/hiding tool",
+            "author": "THIR-heuristic",
+            "severity": "CRITICAL"
+          },
+          "strings_matched": [
+            "/proc/"
+          ],
+          "match_type": "heuristic"
+        }
+      ],
+      "analysis_method": "heuristic"
+    },
+    {
+      "filename": "ce3cb467257e402122e4ab5f3f40fefcbdb4a662664659672a38967ee8aaaad0",
+      "sha256": "ce3cb467257e402122e4ab5f3f40fefcbdb4a662664659672a38967ee8aaaad0",
+      "md5": "f7a29871ecd6bed29292f6ea331de555",
+      "file_size_bytes": 1966080,
+      "file_type": "ELF 64-bit executable",
+      "classified": true,
+      "families": [
+        "Rootkit"
+      ],
+      "severity": "CRITICAL",
+      "match_count": 1,
+      "matches": [
+        {
+          "rule": "heuristic_rootkit",
+          "family": "Rootkit",
+          "description": "Rootkit/hiding tool",
+          "tags": [
+            "Rootkit",
+            "heuristic"
+          ],
+          "meta": {
+            "description": "Rootkit/hiding tool",
+            "author": "THIR-heuristic",
+            "severity": "CRITICAL"
+          },
+          "strings_matched": [
+            "/proc/"
+          ],
+          "match_type": "heuristic"
+        }
+      ],
+      "analysis_method": "heuristic"
+    },
+    {
       "filename": "d46555af1173d22f07c37ef9c1e0e74fd68db022f2b6fb3ab5388d2c5bc6a98e",
       "sha256": "d46555af1173d22f07c37ef9c1e0e74fd68db022f2b6fb3ab5388d2c5bc6a98e",
       "md5": "397ff5e54194072e6d8a44a0d8cc1b27",
@@ -1130,9 +1837,9 @@
       "file_type": "Text/Script",
       "classified": true,
       "families": [
+        "Downloader",
         "Gafgyt",
-        "Tsunami",
-        "Downloader"
+        "Tsunami"
       ],
       "severity": "CRITICAL",
       "match_count": 3,
@@ -1207,6 +1914,40 @@
       "match_count": 0,
       "matches": [],
       "analysis_method": "none"
+    },
+    {
+      "filename": "f200744b6900aeb0a27df08c71fc28a7f07b0aee21e844beca214eb8c4ab58dd",
+      "sha256": "f200744b6900aeb0a27df08c71fc28a7f07b0aee21e844beca214eb8c4ab58dd",
+      "md5": "0894ce23995f6395c3bff3fe0728d33a",
+      "file_size_bytes": 884736,
+      "file_type": "ELF 64-bit executable",
+      "classified": true,
+      "families": [
+        "Rootkit"
+      ],
+      "severity": "CRITICAL",
+      "match_count": 1,
+      "matches": [
+        {
+          "rule": "heuristic_rootkit",
+          "family": "Rootkit",
+          "description": "Rootkit/hiding tool",
+          "tags": [
+            "Rootkit",
+            "heuristic"
+          ],
+          "meta": {
+            "description": "Rootkit/hiding tool",
+            "author": "THIR-heuristic",
+            "severity": "CRITICAL"
+          },
+          "strings_matched": [
+            "/proc/"
+          ],
+          "match_type": "heuristic"
+        }
+      ],
+      "analysis_method": "heuristic"
     }
   ]
 }
