@@ -303,6 +303,54 @@ def check_campaign_alerts(cmd_clusters: dict) -> list:
     return alerts
 
 
+def check_failover_alerts(failover_events) -> list:
+    """Alert on HAProxy VM1 failover events (Tool 39 output).
+
+    Tool 39 (periodic failover auditor) covers TWO independent HAProxy
+    backends — cowrie_backend (SSH) and telnet_backend — confirmed against
+    the live haproxy.cfg on VM2. These are separate failover states (SSH
+    can fail over while telnet stays healthy, or vice versa), so Tool 39
+    writes a LIST of 0-2 event objects, one per backend that currently has
+    something to report — not a single object. Mirrors how every other
+    check_* function in this file already iterates a collection; this one
+    originally assumed a single-event shape before Tool 39 was extended to
+    cover both backends, and was updated to match.
+
+    load_json_safe() returns {} for a missing/corrupt file (not a list),
+    so this defensively treats anything that isn't a list as "no events"
+    rather than crashing — same missing-file tolerance every other check_*
+    function gets via load_json_safe's own {} default.
+    """
+    alerts = []
+    if not isinstance(failover_events, list):
+        return alerts
+
+    for event in failover_events:
+        if not isinstance(event, dict):
+            continue
+        event_type = event.get("event_type", "")
+        if not event_type:
+            continue
+
+        severity = event.get("severity", "MEDIUM")
+        detail = event.get("detail", "")
+        backend = event.get("backend", "?")
+        haproxy_status = event.get("haproxy_vm1_status", "?")
+        node_state = event.get("vm1_node_state", "?")
+        lag_note = event.get("detection_lag_note", "")
+
+        alerts.append({
+            "type": event_type,
+            "severity": severity,
+            "title": f"VM1 Failover Event ({backend}): {event_type.replace('_', ' ').title()}",
+            "detail": (f"{detail} (HAProxy: {haproxy_status}, VM1 node check: {node_state}) "
+                       f"{lag_note}".strip()),
+            "key_detail": event_type,
+            "data": event,
+        })
+    return alerts
+
+
 # ── Notification senders ─────────────────────────────────────────────────────
 
 def send_slack(webhook_url: str, alerts: list, dry_run: bool = False) -> int:
@@ -428,6 +476,8 @@ def main():
     parser.add_argument("--asn-clusters",     default="data/asn_clusters.json")
     parser.add_argument("--ir-cases",         default="data/ir_cases.json")
     parser.add_argument("--command-clusters", default="data/command_clusters.json")
+    parser.add_argument("--failover-events",  default="data/failover_events.json",
+                         help="Tool 39 output — HAProxy VM1 failover correlation events.")
     parser.add_argument("--alert-history",    default="data/alert_history.json")
     parser.add_argument("--prune-days", type=int, default=0,
                         help="Delete alert_history entries with last_fired older than N days (0 = disabled)")
@@ -455,6 +505,7 @@ def main():
     asn_data      = load_json_safe(args.asn_clusters)
     cmd_clusters  = load_json_safe(args.command_clusters)
     ir_cases_raw  = load_json_safe(args.ir_cases)
+    failover_data = load_json_safe(args.failover_events)
     ir_cases      = ir_cases_raw if isinstance(ir_cases_raw, list) else ir_cases_raw.get("cases", [])
 
     # Load history
@@ -472,6 +523,7 @@ def main():
     raw_alerts.extend(check_asn_alerts(asn_data, asn_history))
     raw_alerts.extend(check_tunnel_alerts(ir_cases))
     raw_alerts.extend(check_campaign_alerts(cmd_clusters))
+    raw_alerts.extend(check_failover_alerts(failover_data))
 
     print(f"[Tool37] Raw alerts: {len(raw_alerts)}")
 
