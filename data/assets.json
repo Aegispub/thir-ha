@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-22T04:50:41.469445177Z",
+  "generated_at": "2026-06-22T09:44:58.207808353Z",
   "nist_control": "ID.AM-1",
   "nist_function": "IDENTIFY",
   "description": "Physical devices and systems within the THIR honeypot infrastructure are inventoried. Updated hourly by Tool 05.",
-  "total_assets": 1,
-  "assets_online": 1,
+  "total_assets": 2,
+  "assets_online": 2,
   "assets_offline": 0,
   "assets": [
     {
@@ -18,8 +18,24 @@
       "platform": "Oracle Cloud VM.Standard.E2.1.Micro (Always Free)",
       "status": "UP",
       "first_seen": "2026-06-08T05:55:04.840439889Z",
-      "last_seen": "2026-06-22T04:50:41.46944135Z",
-      "last_checked": "2026-06-22T04:50:41.46944135Z",
+      "last_seen": "2026-06-22T09:44:58.207794908Z",
+      "last_checked": "2026-06-22T09:44:58.207794908Z",
+      "nist_control": "ID.AM-1",
+      "nist_function": "IDENTIFY"
+    },
+    {
+      "asset_id": "thir-honeypot-10.0.0.53-2222",
+      "hostname": "10.0.0.53",
+      "ip_address": "10.0.0.53",
+      "port": 2222,
+      "role": "Cowrie SSH Honeypot · Sensor Node (Oracle VM1, private VCN)",
+      "classification": "INTERNAL",
+      "owner": "aegispub — THIR Project",
+      "platform": "Oracle Cloud VM.Standard.E2.1.Micro (Always Free)",
+      "status": "UP",
+      "first_seen": "2026-06-22T09:44:58.207804696Z",
+      "last_seen": "2026-06-22T09:44:58.207804696Z",
+      "last_checked": "2026-06-22T09:44:58.207804696Z",
       "nist_control": "ID.AM-1",
       "nist_function": "IDENTIFY"
     }

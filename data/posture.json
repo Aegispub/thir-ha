@@ -1,15 +1,20 @@
 {
-  "generated_at": "2026-06-22T04:50:41.469104242Z",
+  "generated_at": "2026-06-22T09:44:58.207435517Z",
   "services": [
     {
       "address": "150.230.174.199:2222",
       "status": "UP",
-      "checked_at": "2026-06-22T04:50:41.401011105Z"
+      "checked_at": "2026-06-22T09:44:55.402003951Z"
+    },
+    {
+      "address": "10.0.0.53:2222",
+      "status": "UP",
+      "checked_at": "2026-06-22T09:44:55.470408823Z"
     }
   ],
   "summary": {
-    "total": 1,
-    "up": 1,
+    "total": 2,
+    "up": 2,
     "down": 0,
     "overall": "HEALTHY"
   },
@@ -18,13 +23,13 @@
       "id": "CIS-1",
       "name": "Asset Inventory",
       "status": "ACTIVE",
-      "evidence": "assets.json updated every pipeline run by Tool 05"
+      "evidence": "assets.json updated every pipeline run by Tool 05 — covers VM2 directly and VM1 via SSH relay"
     },
     {
       "id": "CIS-2",
       "name": "Software Inventory",
       "status": "MONITORING",
-      "evidence": "data/tool_manifest.json auto-generated from pipeline.yml each run"
+      "evidence": "data/tool_manifest.json auto-generated from pipeline.yml each run — tracks all active tools, languages, and I/O paths"
     },
     {
       "id": "CIS-3",
