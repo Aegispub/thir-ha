@@ -45,6 +45,8 @@ import (
 	"fmt"
 	"net"
 	"os"
+	"os/exec"
+	"strconv"
 	"strings"
 	"time"
 )
@@ -59,6 +61,13 @@ var (
 	timeoutSec  int
 	verboseMode bool
 	jsonMode    bool
+
+	// v3 ADDITIONS (DEBT-4 — VM1 visibility via SSH relay through VM2)
+	sshHost   string // VM2 public IP/host — the jump host
+	sshUser   string // SSH user on VM2, default "ubuntu"
+	sshPort   int    // VM2 admin SSH port, default 22222
+	sshKey    string // path to private key file for VM2 SSH
+	vm1Target string // "10.0.0.53:2222" — host:port to check FROM VM2's side
 )
 
 // ServiceCheckResult stores the result of a single service check.
@@ -143,6 +152,13 @@ func init() {
 	flag.BoolVar(&verboseMode, "v", false, "Enable verbose output (shorthand).")
 	flag.BoolVar(&jsonMode, "json", false, "Write JSON output for THIR pipeline (posture dashboard).")
 
+	// v3 — VM1 visibility via SSH relay through VM2 (closes DEBT-4)
+	flag.StringVar(&sshHost, "ssh-host", "", "VM2 public IP/host to SSH through, to reach VM1's private VCN IP. Leave empty to skip the VM1 check entirely.")
+	flag.StringVar(&sshUser, "ssh-user", "ubuntu", "SSH user for the VM2 jump host.")
+	flag.IntVar(&sshPort, "ssh-port", 22222, "SSH port on VM2 (admin port — NOT 22, which is Cowrie).")
+	flag.StringVar(&sshKey, "ssh-key", "", "Path to private key file for VM2 SSH access.")
+	flag.StringVar(&vm1Target, "vm1-target", "", "host:port to check FROM VM2's side over the private VCN, e.g. 10.0.0.53:2222. Requires --ssh-host and --ssh-key.")
+
 	flag.Usage = func() {
 		fmt.Fprintf(os.Stderr, "Usage of %s:\n", os.Args[0])
 		fmt.Fprintf(os.Stderr, "  Monitors network services. Writes posture + asset inventory for THIR pipeline.\n")
@@ -179,7 +195,108 @@ func checkService(address string, timeout time.Duration) ServiceCheckResult {
 	}
 }
 
-// loadServicesFromFile reads host:port pairs from a file.
+// checkServiceViaSSH checks a host:port that is only reachable from inside
+// the Oracle VCN (e.g. VM1's private IP) by SSHing into a jump host (VM2,
+// which IS on the VCN) and running a remote TCP-dial one-liner there.
+//
+// This exists because GitHub Actions runners have no route to Oracle's
+// private VCN (10.0.0.0/24) — they can only reach VM2's public IP directly.
+// VM1 is checked BY VM2, not by the runner, using the same internal network
+// path the rsync pull already relies on (Master Transition Doc Part 4.7).
+//
+// Deliberately minimal: a single `timeout N bash -c '</dev/tcp/...'` remote
+// command, mirroring the bash TCP-check idiom already used elsewhere in this
+// pipeline (e.g. the VCN connectivity checks in the baseline inventory) —
+// no new dependency, no Go SSH library, just exec.Command("ssh", ...).
+func checkServiceViaSSH(jumpHost, jumpUser string, jumpPort int, keyPath, target string, timeout time.Duration) ServiceCheckResult {
+	checkedAt := time.Now().UTC()
+	address := target // reported address is the VM1-side target, not the jump host
+
+	if verboseMode {
+		fmt.Fprintf(os.Stderr, "[INFO] Checking service via SSH relay: %s (through %s@%s:%d)\n", target, jumpUser, jumpHost, jumpPort)
+	}
+
+	tcpHost, tcpPort, err := net.SplitHostPort(target)
+	if err != nil {
+		return ServiceCheckResult{
+			Address:   address,
+			Status:    "DOWN",
+			ErrorMsg:  fmt.Sprintf("invalid --vm1-target %q: %v", target, err),
+			CheckedAt: checkedAt,
+		}
+	}
+
+	timeoutSecs := int(timeout.Seconds())
+	if timeoutSecs < 1 {
+		timeoutSecs = 1
+	}
+	remoteCmd := fmt.Sprintf(
+		"timeout %d bash -c 'echo > /dev/tcp/%s/%s' 2>/dev/null && echo UP || echo DOWN",
+		timeoutSecs, tcpHost, tcpPort,
+	)
+
+	args := []string{
+		"-i", keyPath,
+		"-p", strconv.Itoa(jumpPort),
+		"-o", "StrictHostKeyChecking=no",
+		"-o", fmt.Sprintf("ConnectTimeout=%d", timeoutSecs+5),
+		"-o", "BatchMode=yes",
+		fmt.Sprintf("%s@%s", jumpUser, jumpHost),
+		remoteCmd,
+	}
+
+	cmd := exec.Command("ssh", args...)
+	// Hard ceiling so a hung jump-host SSH session can't stall the whole
+	// pipeline step beyond the per-check timeout plus connection overhead.
+	cmdDone := make(chan error, 1)
+	var outBuf, errBuf strings.Builder
+	cmd.Stdout = &outBuf
+	cmd.Stderr = &errBuf
+
+	if err := cmd.Start(); err != nil {
+		return ServiceCheckResult{
+			Address:   address,
+			Status:    "DOWN",
+			ErrorMsg:  fmt.Sprintf("failed to start ssh relay: %v", err),
+			CheckedAt: checkedAt,
+		}
+	}
+	go func() { cmdDone <- cmd.Wait() }()
+
+	select {
+	case err := <-cmdDone:
+		out := strings.TrimSpace(outBuf.String())
+		if err != nil {
+			// ssh itself failed (jump host unreachable, auth failure, etc.)
+			// — distinct from the remote check legitimately reporting DOWN.
+			return ServiceCheckResult{
+				Address:   address,
+				Status:    "DOWN",
+				ErrorMsg:  fmt.Sprintf("ssh relay failed: %v (stderr: %s)", err, strings.TrimSpace(errBuf.String())),
+				CheckedAt: checkedAt,
+			}
+		}
+		if out == "UP" {
+			return ServiceCheckResult{Address: address, Status: "UP", CheckedAt: checkedAt}
+		}
+		return ServiceCheckResult{
+			Address:   address,
+			Status:    "DOWN",
+			ErrorMsg:  "remote TCP dial from VM2 to VM1 target failed (port closed or VM1 unreachable)",
+			CheckedAt: checkedAt,
+		}
+	case <-time.After(timeout + 10*time.Second):
+		_ = cmd.Process.Kill()
+		return ServiceCheckResult{
+			Address:   address,
+			Status:    "DOWN",
+			ErrorMsg:  "ssh relay timed out (jump host may be unreachable)",
+			CheckedAt: checkedAt,
+		}
+	}
+}
+
+
 func loadServicesFromFile(filePath string) ([]string, error) {
 	file, err := os.Open(filePath)
 	if err != nil {
@@ -227,8 +344,8 @@ func buildCISControls(overallStatus string) []CISControl {
     planned := "PLANNED"
 
     controls := []CISControl{
-        {ID: "CIS-1",  Name: "Asset Inventory",          Status: active,     Evidence: "assets.json updated every pipeline run by Tool 05"},
-        {ID: "CIS-2",  Name: "Software Inventory",       Status: monitoring, Evidence: "data/tool_manifest.json auto-generated from pipeline.yml each run"},
+        {ID: "CIS-1",  Name: "Asset Inventory",          Status: active,     Evidence: "assets.json updated every pipeline run by Tool 05 — covers VM2 directly and VM1 via SSH relay"},
+        {ID: "CIS-2",  Name: "Software Inventory",       Status: monitoring, Evidence: "data/tool_manifest.json auto-generated from pipeline.yml each run — tracks all active tools, languages, and I/O paths"},
         {ID: "CIS-3",  Name: "Data Protection",          Status: active,     Evidence: "R2 archive encrypted at rest — thirha-raw-archive"},
         {ID: "CIS-4",  Name: "Secure Configuration",     Status: active,     Evidence: "haproxy.cfg, cowrie.cfg, VCN rules in config/"},
         {ID: "CIS-5",  Name: "Account Management",       Status: active,     Evidence: "Two key pairs, dedicated cowrie user, no shared credentials"},
@@ -314,7 +431,12 @@ func loadExistingAssets(filePath string) map[string]AssetRecord {
 
 // buildAssetRecord constructs an AssetRecord from a ServiceCheckResult.
 // Preserves first_seen from existing record if available.
-func buildAssetRecord(result ServiceCheckResult, existing map[string]AssetRecord) AssetRecord {
+//
+// v3: role/classification/platform are now parameters, not hardcoded —
+// VM2 (public, HAProxy/pipeline brain) and VM1 (private, sensor node,
+// only reachable via the VM2 SSH relay) are different assets with
+// different roles and must not share VM2's hardcoded label.
+func buildAssetRecord(result ServiceCheckResult, existing map[string]AssetRecord, role, classification, platform string) AssetRecord {
 	// Parse host and port from result.Address ("ip:port")
 	h, p, err := net.SplitHostPort(result.Address)
 	if err != nil {
@@ -354,10 +476,10 @@ func buildAssetRecord(result ServiceCheckResult, existing map[string]AssetRecord
 		Hostname:       h,
 		IPAddress:      h,
 		Port:           portNum,
-		Role:           "HAProxy Load Balancer · Pipeline Brain (Oracle VM2)",
-		Classification: "PUBLIC",
+		Role:           role,
+		Classification: classification,
 		Owner:          "aegispub — THIR Project",
-		Platform:       "Oracle Cloud VM.Standard.E2.1.Micro (Always Free)",
+		Platform:       platform,
 		Status:         result.Status,
 		FirstSeen:      firstSeen,
 		LastSeen:       lastSeen,
@@ -368,14 +490,30 @@ func buildAssetRecord(result ServiceCheckResult, existing map[string]AssetRecord
 }
 
 // writeAssetsJSON builds and writes data/assets.json. Covers NIST ID.AM-1.
-func writeAssetsJSON(results []ServiceCheckResult, filePath string) error {
+// AssetMeta carries the per-result labelling that buildAssetRecord needs.
+// Passed explicitly by the caller (main) rather than inferred from the
+// address (e.g. "private IP => VM1") — inference here would silently
+// mislabel any future third asset that doesn't fit the VM1/VM2 pattern.
+type AssetMeta struct {
+	Role           string
+	Classification string
+	Platform       string
+}
+
+// writeAssetsJSON builds and writes data/assets.json. Covers NIST ID.AM-1.
+//
+// v3: results and meta are parallel slices — meta[i] describes results[i].
+// This is what allows VM1 (sensor, INTERNAL, checked via SSH relay) and
+// VM2 (brain, PUBLIC, checked directly) to coexist in the same file with
+// correct, distinct labels instead of VM2's role being applied to both.
+func writeAssetsJSON(results []ServiceCheckResult, meta []AssetMeta, filePath string) error {
 	existing := loadExistingAssets(filePath)
 
 	var assets []AssetRecord
 	online, offline := 0, 0
 
-	for _, r := range results {
-		asset := buildAssetRecord(r, existing)
+	for i, r := range results {
+		asset := buildAssetRecord(r, existing, meta[i].Role, meta[i].Classification, meta[i].Platform)
 		assets = append(assets, asset)
 		if asset.Status == "UP" {
 			online++
@@ -453,6 +591,30 @@ func main() {
 		allResults = append(allResults, <-results)
 	}
 
+	// Every entry in allResults so far came from a direct dial — all VM2
+	// (or whatever --host/--input pointed at). Track that for the meta
+	// slice below before VM1's SSH-relayed result (if any) gets appended.
+	directResultCount := len(allResults)
+
+	// ── v3: VM1 check via SSH relay through VM2 (closes DEBT-4) ───────
+	// Only runs if --vm1-target is set. VM1's private VCN IP is not
+	// reachable from the GitHub Actions runner directly, so this check
+	// is performed BY VM2 (the jump host), not by the runner — see
+	// checkServiceViaSSH for the full rationale.
+	vm1Checked := false
+	if vm1Target != "" {
+		if sshHost == "" || sshKey == "" {
+			fmt.Fprintln(os.Stderr, "[WARN] --vm1-target given without --ssh-host/--ssh-key — skipping VM1 check")
+		} else {
+			vm1Result := checkServiceViaSSH(sshHost, sshUser, sshPort, sshKey, vm1Target, timeout)
+			allResults = append(allResults, vm1Result)
+			vm1Checked = true
+			if verboseMode {
+				fmt.Fprintf(os.Stderr, "[INFO] VM1 (%s) status: %s\n", vm1Target, vm1Result.Status)
+			}
+		}
+	}
+
 	// ── Write posture.json (DE.CM-1) ──────────────────────────────────
 	output := os.Stdout
 	if outputFile != "" {
@@ -479,7 +641,27 @@ func main() {
 
 	// ── Write assets.json (ID.AM-1) ───────────────────────────────────
 	if assetsFile != "" {
-		if err := writeAssetsJSON(allResults, assetsFile); err != nil {
+		// Build per-result metadata: direct-dial results are labelled as
+		// the brain node (today this is always VM2 in pipeline.yml usage);
+		// the SSH-relayed result, if present, is labelled as the sensor
+		// node (VM1) since it's a fundamentally different role/exposure.
+		meta := make([]AssetMeta, len(allResults))
+		for i := 0; i < directResultCount; i++ {
+			meta[i] = AssetMeta{
+				Role:           "HAProxy Load Balancer · Pipeline Brain (Oracle VM2)",
+				Classification: "PUBLIC",
+				Platform:       "Oracle Cloud VM.Standard.E2.1.Micro (Always Free)",
+			}
+		}
+		if vm1Checked {
+			meta[len(allResults)-1] = AssetMeta{
+				Role:           "Cowrie SSH Honeypot · Sensor Node (Oracle VM1, private VCN)",
+				Classification: "INTERNAL",
+				Platform:       "Oracle Cloud VM.Standard.E2.1.Micro (Always Free)",
+			}
+		}
+
+		if err := writeAssetsJSON(allResults, meta, assetsFile); err != nil {
 			fmt.Fprintln(os.Stderr, err)
 			os.Exit(1)
 		}
