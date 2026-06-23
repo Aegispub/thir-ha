@@ -8,7 +8,7 @@
 | Supersedes | v2.0 (May 2026) — corrected private IPs, HAProxy backup ports, telnet backend, iptables restore, cloudflared status |
 | Architecture | Oracle Cloud Always Free — 2× VM.Standard.E2.1.Micro |
 | Replaces | `docs/runbook_rc_rp_1.md` (AWS EC2 single node) |
-| Owner | Joy Dane |
+| Owner | Aegispub |
 | Classification | Internal — THIR Project |
 | Live dashboard | thirha.aegispub.com |
 
