@@ -56,6 +56,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from statistics import median
 from typing import Any, Dict, List, Optional, Tuple
+import ipaddress
 
 TOOL_VERSION = "00.1.0"
 
@@ -254,7 +255,20 @@ def extract_sessions(files: List[Path], verbose: bool) -> Tuple[List[Dict], int]
         except (OSError, gzip.BadGzipFile):
             continue
 
+    # --- VCN internal IP exclusion — filters HAProxy health check sessions ---
+    VCN_INTERNAL = ipaddress.ip_network("10.0.0.0/24")
+
+    def _ip_in_vcn(raw: str) -> bool:
+        try:
+            return ipaddress.ip_address(raw.strip()) in VCN_INTERNAL
+        except ValueError:
+            return False
+    # -------------------------------------------------------------------------
+
     for session_id, events in sessions_raw.items():
+        _src = next((e.get("src_ip", "") for e in events if e.get("src_ip")), "")
+        if _src and _ip_in_vcn(_src):
+            continue
         events_sorted = sorted(events, key=lambda e: e.get("timestamp", ""))
         safe_sid = sanitise_session_id(session_id)
 
