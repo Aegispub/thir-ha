@@ -1,38 +1,38 @@
 {
-  "generated_at": "2026-06-20T05:53:32Z",
+  "generated_at": "2026-06-24T02:25:30Z",
   "corpus_name": "aws-2026-03-07-onwards",
   "ir_cases": {
-    "total_sessions": 340036,
+    "total_sessions": 361224,
     "severity_breakdown": {
-      "critical": 12027,
-      "high": 141886,
+      "critical": 12173,
+      "high": 159583,
       "medium": 0,
-      "low": 186123
+      "low": 189468
     }
   },
   "credentials": {
-    "total_attempts": 200695,
-    "unique_username_password_pairs": 57720,
-    "unique_usernames": 5080,
-    "unique_passwords": 47492,
-    "successful_auth_count": 153913,
+    "total_attempts": 219200,
+    "unique_username_password_pairs": 57978,
+    "unique_usernames": 5147,
+    "unique_passwords": 47632,
+    "successful_auth_count": 171756,
     "credential_diversity_index": "high"
   },
   "ssh_fingerprints": {
-    "unique_hassh_values": 89,
+    "unique_hassh_values": 90,
     "known_client_families_identified": 5,
-    "sessions_without_kex": 126017,
-    "botnet_signature_matches": 58
+    "sessions_without_kex": 128555,
+    "botnet_signature_matches": 59
   },
   "threat_ips": {
-    "unique_source_ips": 17198,
+    "unique_source_ips": 17528,
     "enriched": false,
     "note": "geo/ASN/abuse-score enrichment not performed by the historical processor \u2014 --skip-enrich is permanent"
   },
   "command_clusters": {
-    "total_clusters": 142,
+    "total_clusters": 143,
     "campaign_clusters": 24,
     "singleton_clusters": 85,
-    "largest_cluster_session_count": 127666
+    "largest_cluster_session_count": 145194
   }
 }

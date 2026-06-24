@@ -1,12 +1,12 @@
 {
   "corpus_name": "aws-2026-03-07-onwards",
-  "generated_at": "2026-06-20T05:53:05Z",
+  "generated_at": "2026-06-24T02:24:57Z",
   "date_range": {
     "start": "2026-03-07",
-    "end": "2026-06-19"
+    "end": "2026-06-23"
   },
-  "total_sessions": 340036,
-  "total_unique_ips": 17198,
+  "total_sessions": 361224,
+  "total_unique_ips": 17528,
   "total_unique_countries": 0,
   "sessions_per_day": [
     {
@@ -428,32 +428,48 @@
     {
       "date": "2026-06-19",
       "sessions": 1991
+    },
+    {
+      "date": "2026-06-20",
+      "sessions": 576
+    },
+    {
+      "date": "2026-06-21",
+      "sessions": 640
+    },
+    {
+      "date": "2026-06-22",
+      "sessions": 18833
+    },
+    {
+      "date": "2026-06-23",
+      "sessions": 1139
     }
   ],
-  "daily_median": 1505,
+  "daily_median": 1434,
   "anomaly_days": [
     {
       "date": "2026-03-17",
       "sessions": 23893,
-      "vs_median": "16x",
+      "vs_median": "17x",
       "note": "anomalous volume \u2014 investigate"
     },
     {
       "date": "2026-04-19",
       "sessions": 20277,
-      "vs_median": "13x",
+      "vs_median": "14x",
       "note": "anomalous volume \u2014 investigate"
     },
     {
       "date": "2026-04-20",
       "sessions": 38696,
-      "vs_median": "26x",
+      "vs_median": "27x",
       "note": "anomalous volume \u2014 investigate"
     },
     {
       "date": "2026-04-22",
       "sessions": 9434,
-      "vs_median": "6x",
+      "vs_median": "7x",
       "note": "anomalous volume \u2014 investigate"
     },
     {
@@ -465,7 +481,7 @@
     {
       "date": "2026-05-01",
       "sessions": 11201,
-      "vs_median": "7x",
+      "vs_median": "8x",
       "note": "anomalous volume \u2014 investigate"
     },
     {
@@ -477,13 +493,19 @@
     {
       "date": "2026-05-04",
       "sessions": 15668,
-      "vs_median": "10x",
+      "vs_median": "11x",
       "note": "anomalous volume \u2014 investigate"
     },
     {
       "date": "2026-05-12",
       "sessions": 6950,
       "vs_median": "5x",
+      "note": "anomalous volume \u2014 investigate"
+    },
+    {
+      "date": "2026-05-17",
+      "sessions": 4382,
+      "vs_median": "3x",
       "note": "anomalous volume \u2014 investigate"
     },
     {
@@ -507,7 +529,13 @@
     {
       "date": "2026-06-11",
       "sessions": 10843,
-      "vs_median": "7x",
+      "vs_median": "8x",
+      "note": "anomalous volume \u2014 investigate"
+    },
+    {
+      "date": "2026-06-22",
+      "sessions": 18833,
+      "vs_median": "13x",
       "note": "anomalous volume \u2014 investigate"
     }
   ],
@@ -529,6 +557,10 @@
       "session_count": 22445
     },
     {
+      "ip": "47.243.146.136",
+      "session_count": 17530
+    },
+    {
       "ip": "178.18.241.121",
       "session_count": 10449
     },
@@ -547,42 +579,38 @@
     {
       "ip": "107.182.234.69",
       "session_count": 4640
-    },
-    {
-      "ip": "160.250.202.248",
-      "session_count": 4016
     }
   ],
   "top_credential_pairs": [
     {
       "username": "345gs5662d34",
       "password": "345gs5662d34",
-      "count": 11204
+      "count": 11337
     },
     {
       "username": "root",
       "password": "3245gs5662d34",
-      "count": 11191
+      "count": 11323
     },
     {
       "username": "GET / HTTP/1.1",
       "password": "Host: 13.235.92.17:23",
-      "count": 279
+      "count": 284
     },
     {
       "username": "admin",
       "password": "admin",
-      "count": 252
+      "count": 257
     },
     {
       "username": "Accept-Encoding: gzip",
       "password": "",
-      "count": 207
+      "count": 208
     },
     {
       "username": "root",
       "password": "admin",
-      "count": 164
+      "count": 165
     },
     {
       "username": "root",
@@ -602,37 +630,37 @@
     {
       "username": "*1",
       "password": "$4",
-      "count": 106
+      "count": 109
     },
     {
       "username": "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36",
       "password": "Accept-Encoding: gzip",
-      "count": 100
+      "count": 103
     },
     {
       "username": "root",
       "password": "123456",
-      "count": 98
+      "count": 99
     },
     {
       "username": "root",
       "password": "ubuntu",
-      "count": 92
+      "count": 93
     },
     {
       "username": "root",
       "password": "password",
-      "count": 84
+      "count": 85
+    },
+    {
+      "username": "orangepi",
+      "password": "orangepi",
+      "count": 73
     },
     {
       "username": "root",
       "password": "fjbdfdjkdsfs541544@@",
       "count": 73
-    },
-    {
-      "username": "orangepi",
-      "password": "orangepi",
-      "count": 72
     },
     {
       "username": "user",
@@ -658,23 +686,23 @@
   "ttp_frequency": [
     {
       "ttp": "T1078",
-      "count": 153913
+      "count": 171756
     },
     {
       "ttp": "T1059",
-      "count": 141756
+      "count": 159434
     },
     {
       "ttp": "T1105",
-      "count": 12072
+      "count": 12218
     },
     {
       "ttp": "T1098.004",
-      "count": 12004
+      "count": 12150
     },
     {
       "ttp": "T1053",
-      "count": 750
+      "count": 762
     },
     {
       "ttp": "T1222",
