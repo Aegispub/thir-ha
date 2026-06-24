@@ -451,9 +451,20 @@ def main() -> None:
     sessions = read_cowrie_logs(files)
 
     # Build IR case per session
-    cases = [build_ir_case(sid, events) for sid, events in sessions.items()]
+    #cases = [build_ir_case(sid, events) for sid, events in sessions.items()]
 
-    # Sort by first_seen chronologically (sort_log_entries logic preserved)
+    VCN_INTERNAL = ipaddress.ip_network("10.0.0.0/24")
+    cases = [
+        build_ir_case(sid, events)
+        for sid, events in sessions.items()
+        if not any(
+            _ip_in_vcn(e.get("src_ip", ""), VCN_INTERNAL)
+            for e in events
+            if e.get("src_ip")
+        )
+    ]
+
+  # Sort by first_seen chronologically (sort_log_entries logic preserved)
     cases.sort(key=lambda c: c.get("first_seen", ""))
 
     log_info(f"Built {len(cases)} IR case(s)")
