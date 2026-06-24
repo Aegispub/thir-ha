@@ -286,6 +286,12 @@ def read_cowrie_logs(files: List[str]) -> Dict[str, List[Dict]]:
 # IR case assembly
 # -----------------------------
 
+def _ip_in_vcn(raw: str, network: ipaddress.IPv4Network) -> bool:
+    try:
+        return ipaddress.ip_address(raw.strip()) in network
+    except ValueError:
+        return False
+      
 def build_ir_case(session_id: str, events: List[Dict]) -> Dict[str, Any]:
     """
     Assemble one IR case dict from all events in a session.
