@@ -177,6 +177,29 @@ jobs:
             -v
 
       # ----------------------------------------------------------------
+      # 4.c Tool 40 — failover notifier
+      #    Reads data/failover_events.json (Tool 39 output).
+      #    Deduplicates against alert_history.json via failover40_ namespace.
+      #    Fires Slack/email/dry-run via ALERT_CHANNEL — same secrets as Tool 37.
+      #    Writes data/failover_notifications.json (accumulates permanently).
+      #    continue-on-error: true — notification failure must never block pipeline.
+      # ----------------------------------------------------------------
+      - name: Tool 40 — failover notifier
+        continue-on-error: true
+        timeout-minutes: 2
+        env:
+          ALERT_CHANNEL:     ${{ secrets.ALERT_CHANNEL }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SMTP_HOST:         ${{ secrets.SMTP_HOST }}
+          SMTP_PORT:         ${{ secrets.SMTP_PORT }}
+          SMTP_USER:         ${{ secrets.SMTP_USER }}
+          SMTP_PASS:         ${{ secrets.SMTP_PASS }}
+          ALERT_FROM_EMAIL:  ${{ secrets.ALERT_EMAIL_FROM }}
+          ALERT_TO_EMAIL:    ${{ secrets.ALERT_EMAIL_TO }}
+        run: |
+          python tools/40_failover_notifier.py
+
+      # ----------------------------------------------------------------
       # 5. Pre-flight — verify VM2 reachable via SSH on port 22222
       #    IMPORTANT: Uses port 22222 — the real VM2 management port.
       #    Port 22 on this VM2 redirects to Cowrie honeypot via iptables.
