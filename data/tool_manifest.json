@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-25T03:57:20Z",
+  "generated_at": "2026-06-25T07:52:07Z",
   "source": "pipeline.yml",
-  "tool_count": 16,
+  "tool_count": 17,
   "tools": [
     {
       "tool": "tools/05_network_monitor_live.go",
@@ -12,6 +12,11 @@
       "tool": "tools/39_failover_auditor_live.go",
       "language": "Go",
       "description": "import ("
+    },
+    {
+      "tool": "tools/40_failover_notifier.py",
+      "language": "Python",
+      "description": "THIR Tool 40 \u2014 Failover Notifier"
     },
     {
       "tool": "tools/26_incident_timeline_live.py",
