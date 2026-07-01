@@ -1,12 +1,12 @@
 {
   "corpus_name": "aws-2026-03-07-onwards",
-  "processed_at": "2026-06-24T02:25:30Z",
+  "processed_at": "2026-07-01T07:12:50Z",
   "log_dir": "/tmp/aws-logs/",
   "date_range": {
     "start": "2026-03-07",
-    "end": "2026-06-23"
+    "end": "2026-06-30"
   },
-  "files_processed": 109,
+  "files_processed": 116,
   "files_processed_list": [
     "2026-03/",
     "2026-03/cowrie.json.2026-03-07.gz",
@@ -120,11 +120,18 @@
     "2026-06/cowrie.json.2026-06-20.gz",
     "2026-06/cowrie.json.2026-06-21.gz",
     "2026-06/cowrie.json.2026-06-22.gz",
-    "2026-06/cowrie.json.2026-06-23.gz"
+    "2026-06/cowrie.json.2026-06-23.gz",
+    "2026-06/cowrie.json.2026-06-24.gz",
+    "2026-06/cowrie.json.2026-06-25.gz",
+    "2026-06/cowrie.json.2026-06-26.gz",
+    "2026-06/cowrie.json.2026-06-27.gz",
+    "2026-06/cowrie.json.2026-06-28.gz",
+    "2026-06/cowrie.json.2026-06-29.gz",
+    "2026-06/cowrie.json.2026-06-30.gz"
   ],
   "lines_skipped": 0,
-  "sessions_extracted": 361224,
-  "unique_ips": 17528,
+  "sessions_extracted": 386599,
+  "unique_ips": 18055,
   "enriched": false,
   "tool_version": "00.1.0",
   "anomaly_days": [
@@ -142,7 +149,9 @@
     "2026-06-09",
     "2026-06-10",
     "2026-06-11",
-    "2026-06-22"
+    "2026-06-22",
+    "2026-06-24",
+    "2026-06-25"
   ],
   "full_record_archive": "/tmp/aws_full_records.json",
   "eof_status": "active"

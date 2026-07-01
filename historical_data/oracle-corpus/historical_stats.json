@@ -1,12 +1,12 @@
 {
   "corpus_name": "oracle-2026-06-08-onwards",
-  "generated_at": "2026-06-24T02:26:59Z",
+  "generated_at": "2026-07-01T07:14:48Z",
   "date_range": {
     "start": "2026-06-07",
-    "end": "2026-06-23"
+    "end": "2026-06-30"
   },
-  "total_sessions": 80631,
-  "total_unique_ips": 2818,
+  "total_sessions": 122508,
+  "total_unique_ips": 3758,
   "total_unique_countries": 0,
   "sessions_per_day": [
     {
@@ -76,181 +76,217 @@
     {
       "date": "2026-06-23",
       "sessions": 23184
+    },
+    {
+      "date": "2026-06-24",
+      "sessions": 4911
+    },
+    {
+      "date": "2026-06-25",
+      "sessions": 5933
+    },
+    {
+      "date": "2026-06-26",
+      "sessions": 6229
+    },
+    {
+      "date": "2026-06-27",
+      "sessions": 8012
+    },
+    {
+      "date": "2026-06-28",
+      "sessions": 5848
+    },
+    {
+      "date": "2026-06-29",
+      "sessions": 8527
+    },
+    {
+      "date": "2026-06-30",
+      "sessions": 2417
     }
   ],
-  "daily_median": 2994,
+  "daily_median": 4757.0,
   "anomaly_days": [
     {
       "date": "2026-06-23",
       "sessions": 23184,
-      "vs_median": "8x",
+      "vs_median": "5x",
       "note": "anomalous volume \u2014 investigate"
     }
   ],
   "top_source_ips": [
     {
+      "ip": "209.99.185.59",
+      "session_count": 23075
+    },
+    {
       "ip": "45.198.224.92",
-      "session_count": 15191
+      "session_count": 15215
     },
     {
       "ip": "138.68.100.228",
       "session_count": 8458
     },
     {
-      "ip": "209.99.185.59",
-      "session_count": 5766
-    },
-    {
       "ip": "185.242.3.195",
-      "session_count": 3577
+      "session_count": 3637
     },
     {
       "ip": "154.16.146.65",
       "session_count": 3478
     },
     {
+      "ip": "176.65.132.24",
+      "session_count": 2286
+    },
+    {
+      "ip": "45.156.87.254",
+      "session_count": 2286
+    },
+    {
       "ip": "143.198.150.219",
       "session_count": 2044
     },
     {
+      "ip": "157.230.42.17",
+      "session_count": 1648
+    },
+    {
       "ip": "176.65.132.129",
       "session_count": 1562
-    },
-    {
-      "ip": "176.65.132.24",
-      "session_count": 1524
-    },
-    {
-      "ip": "45.156.87.166",
-      "session_count": 1523
-    },
-    {
-      "ip": "176.65.139.250",
-      "session_count": 1498
     }
   ],
   "top_credential_pairs": [
     {
       "username": "root",
       "password": "LeitboGi0ro",
-      "count": 732
+      "count": 969
     },
     {
       "username": "admin",
       "password": "admin",
-      "count": 522
+      "count": 768
     },
     {
       "username": "root",
       "password": "123@@@",
-      "count": 519
+      "count": 709
     },
     {
       "username": "root",
       "password": "smo@@kkklss",
-      "count": 378
+      "count": 544
+    },
+    {
+      "username": "345gs5662d34",
+      "password": "345gs5662d34",
+      "count": 324
+    },
+    {
+      "username": "root",
+      "password": "3245gs5662d34",
+      "count": 218
     },
     {
       "username": "root",
       "password": "",
-      "count": 177
+      "count": 197
     },
     {
       "username": "root",
       "password": "admin",
-      "count": 94
+      "count": 144
     },
     {
       "username": "root",
       "password": "root",
-      "count": 91
-    },
-    {
-      "username": "ubuntu",
-      "password": "ubuntu",
-      "count": 90
-    },
-    {
-      "username": "GET / HTTP/1.1",
-      "password": "Host: 129.80.119.236:23",
-      "count": 85
-    },
-    {
-      "username": "root",
-      "password": "password",
-      "count": 79
+      "count": 143
     },
     {
       "username": "root",
       "password": "123456",
-      "count": 64
+      "count": 129
     },
     {
-      "username": "user",
-      "password": "user",
-      "count": 64
-    },
-    {
-      "username": "root",
-      "password": "\ufeff------fuck------",
-      "count": 63
+      "username": "admin",
+      "password": "",
+      "count": 127
     },
     {
       "username": "root",
-      "password": "ubuntu",
-      "count": 61
+      "password": "password",
+      "count": 125
     },
     {
-      "username": "node",
-      "password": "node",
-      "count": 59
+      "username": "GET / HTTP/1.1",
+      "password": "Host: 129.80.119.236:23",
+      "count": 123
     },
     {
       "username": "root",
       "password": "12345",
-      "count": 59
+      "count": 117
     },
     {
-      "username": "test",
-      "password": "test",
-      "count": 59
+      "username": "ubuntu",
+      "password": "ubuntu",
+      "count": 116
     },
     {
       "username": "root",
       "password": "1234",
-      "count": 56
+      "count": 111
     },
     {
       "username": "root",
-      "password": "111111",
-      "count": 56
+      "password": "\ufeff------fuck------",
+      "count": 110
+    },
+    {
+      "username": "root",
+      "password": "123456789",
+      "count": 102
     },
     {
       "username": "root",
       "password": "123",
-      "count": 56
+      "count": 102
+    },
+    {
+      "username": "root",
+      "password": "12345678",
+      "count": 98
     }
   ],
   "ttp_frequency": [
     {
       "ttp": "T1078",
-      "count": 52633
+      "count": 80048
     },
     {
       "ttp": "T1059",
-      "count": 50385
+      "count": 76578
     },
     {
       "ttp": "T1105",
-      "count": 258
-    },
-    {
-      "ttp": "T1222",
-      "count": 14
+      "count": 518
     },
     {
       "ttp": "T1098.004",
-      "count": 9
+      "count": 196
+    },
+    {
+      "ttp": "T1070",
+      "count": 20
+    },
+    {
+      "ttp": "T1222",
+      "count": 18
+    },
+    {
+      "ttp": "T1053",
+      "count": 2
     }
   ]
 }

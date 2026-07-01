@@ -1,12 +1,12 @@
 {
   "corpus_name": "aws-2026-03-07-onwards",
-  "generated_at": "2026-06-24T02:24:57Z",
+  "generated_at": "2026-07-01T07:12:17Z",
   "date_range": {
     "start": "2026-03-07",
-    "end": "2026-06-23"
+    "end": "2026-06-30"
   },
-  "total_sessions": 361224,
-  "total_unique_ips": 17528,
+  "total_sessions": 386599,
+  "total_unique_ips": 18055,
   "total_unique_countries": 0,
   "sessions_per_day": [
     {
@@ -444,9 +444,37 @@
     {
       "date": "2026-06-23",
       "sessions": 1139
+    },
+    {
+      "date": "2026-06-24",
+      "sessions": 13537
+    },
+    {
+      "date": "2026-06-25",
+      "sessions": 7257
+    },
+    {
+      "date": "2026-06-26",
+      "sessions": 1444
+    },
+    {
+      "date": "2026-06-27",
+      "sessions": 844
+    },
+    {
+      "date": "2026-06-28",
+      "sessions": 860
+    },
+    {
+      "date": "2026-06-29",
+      "sessions": 610
+    },
+    {
+      "date": "2026-06-30",
+      "sessions": 823
     }
   ],
-  "daily_median": 1434,
+  "daily_median": 1400.0,
   "anomaly_days": [
     {
       "date": "2026-03-17",
@@ -463,7 +491,7 @@
     {
       "date": "2026-04-20",
       "sessions": 38696,
-      "vs_median": "27x",
+      "vs_median": "28x",
       "note": "anomalous volume \u2014 investigate"
     },
     {
@@ -523,7 +551,7 @@
     {
       "date": "2026-06-10",
       "sessions": 24863,
-      "vs_median": "17x",
+      "vs_median": "18x",
       "note": "anomalous volume \u2014 investigate"
     },
     {
@@ -536,6 +564,18 @@
       "date": "2026-06-22",
       "sessions": 18833,
       "vs_median": "13x",
+      "note": "anomalous volume \u2014 investigate"
+    },
+    {
+      "date": "2026-06-24",
+      "sessions": 13537,
+      "vs_median": "10x",
+      "note": "anomalous volume \u2014 investigate"
+    },
+    {
+      "date": "2026-06-25",
+      "sessions": 7257,
+      "vs_median": "5x",
       "note": "anomalous volume \u2014 investigate"
     }
   ],
@@ -557,6 +597,10 @@
       "session_count": 22445
     },
     {
+      "ip": "81.177.139.211",
+      "session_count": 18423
+    },
+    {
       "ip": "47.243.146.136",
       "session_count": 17530
     },
@@ -575,52 +619,48 @@
     {
       "ip": "157.245.56.194",
       "session_count": 4790
-    },
-    {
-      "ip": "107.182.234.69",
-      "session_count": 4640
     }
   ],
   "top_credential_pairs": [
     {
       "username": "345gs5662d34",
       "password": "345gs5662d34",
-      "count": 11337
+      "count": 11574
     },
     {
       "username": "root",
       "password": "3245gs5662d34",
-      "count": 11323
+      "count": 11558
     },
     {
       "username": "GET / HTTP/1.1",
       "password": "Host: 13.235.92.17:23",
-      "count": 284
+      "count": 291
     },
     {
       "username": "admin",
       "password": "admin",
-      "count": 257
+      "count": 261
     },
     {
       "username": "Accept-Encoding: gzip",
       "password": "",
-      "count": 208
+      "count": 212
     },
     {
       "username": "root",
       "password": "admin",
-      "count": 165
+      "count": 175
     },
     {
       "username": "root",
       "password": "root",
-      "count": 157
+      "count": 162
     },
     {
       "username": "root",
       "password": "",
-      "count": 146
+      "count": 160
     },
     {
       "username": "User-Agent: visionheight.com/scan Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Chrome/126.0.0.0 Safari/537.36",
@@ -630,42 +670,42 @@
     {
       "username": "*1",
       "password": "$4",
-      "count": 109
+      "count": 115
     },
     {
       "username": "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36",
       "password": "Accept-Encoding: gzip",
-      "count": 103
+      "count": 109
     },
     {
       "username": "root",
       "password": "123456",
-      "count": 99
+      "count": 102
     },
     {
       "username": "root",
       "password": "ubuntu",
-      "count": 93
+      "count": 95
     },
     {
       "username": "root",
       "password": "password",
-      "count": 85
+      "count": 86
+    },
+    {
+      "username": "user",
+      "password": "user",
+      "count": 75
     },
     {
       "username": "orangepi",
       "password": "orangepi",
-      "count": 73
+      "count": 74
     },
     {
       "username": "root",
       "password": "fjbdfdjkdsfs541544@@",
       "count": 73
-    },
-    {
-      "username": "user",
-      "password": "user",
-      "count": 72
     },
     {
       "username": "support",
@@ -686,23 +726,23 @@
   "ttp_frequency": [
     {
       "ttp": "T1078",
-      "count": 171756
+      "count": 191974
     },
     {
       "ttp": "T1059",
-      "count": 159434
+      "count": 179361
     },
     {
       "ttp": "T1105",
-      "count": 12218
+      "count": 12476
     },
     {
       "ttp": "T1098.004",
-      "count": 12150
+      "count": 12408
     },
     {
       "ttp": "T1053",
-      "count": 762
+      "count": 785
     },
     {
       "ttp": "T1222",
