@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-07-23T19:23:54.758694+00:00",
-  "total_sessions_with_commands": 56,
-  "total_clusters": 4,
+  "generated_at": "2026-07-23T21:07:50.660704+00:00",
+  "total_sessions_with_commands": 89,
+  "total_clusters": 3,
   "campaign_clusters": 2,
-  "singleton_clusters": 1,
+  "singleton_clusters": 0,
   "highest_severity": "HIGH",
   "active_campaigns": [
     {
       "cluster_id": "CLU-001",
       "name": "Recon Loader Script",
       "severity": "MEDIUM",
-      "session_count": 14,
+      "session_count": 2,
       "unique_ip_count": 1,
       "ttps": [
         "T1082",
@@ -23,8 +23,8 @@
       "cluster_id": "CLU-002",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 6,
-      "unique_ip_count": 6,
+      "session_count": 2,
+      "unique_ip_count": 2,
       "ttps": [
         "T1021.004",
         "T1078",
@@ -67,9 +67,9 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 14,
+      "session_count": 2,
       "unique_ips": [
-        "92.118.39.49"
+        "80.94.92.234"
       ],
       "unique_ip_count": 1,
       "sequence_hash": "d2ac04915390abe8",
@@ -104,116 +104,20 @@
       ],
       "members": [
         {
-          "session_id": "IR-4e7e1c6043b7",
-          "src_ip": "92.118.39.49",
+          "session_id": "IR-e179d4ab3f0b",
+          "src_ip": "80.94.92.234",
           "country": "RO",
-          "isp": "DMZHOST",
+          "isp": "TECHOFF SRV LIMITED",
           "command_count": 9,
-          "timestamp": "2026-07-23T17:25:41.646202Z"
+          "timestamp": "2026-07-23T20:10:09.755424Z"
         },
         {
-          "session_id": "IR-36dcddb64460",
-          "src_ip": "92.118.39.49",
+          "session_id": "IR-d189f576a18b",
+          "src_ip": "80.94.92.234",
           "country": "RO",
-          "isp": "DMZHOST",
+          "isp": "TECHOFF SRV LIMITED",
           "command_count": 9,
-          "timestamp": "2026-07-23T17:28:13.379405Z"
-        },
-        {
-          "session_id": "IR-713acc355a0d",
-          "src_ip": "92.118.39.49",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-07-23T17:30:52.919692Z"
-        },
-        {
-          "session_id": "IR-351145d3d3b0",
-          "src_ip": "92.118.39.49",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-07-23T17:33:30.994941Z"
-        },
-        {
-          "session_id": "IR-2b173c86086e",
-          "src_ip": "92.118.39.49",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-07-23T17:36:07.596561Z"
-        },
-        {
-          "session_id": "IR-dfc912f81ba8",
-          "src_ip": "92.118.39.49",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-07-23T17:41:14.950194Z"
-        },
-        {
-          "session_id": "IR-908d9c05b8e4",
-          "src_ip": "92.118.39.49",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-07-23T17:43:47.445005Z"
-        },
-        {
-          "session_id": "IR-227f21a90c3a",
-          "src_ip": "92.118.39.49",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-07-23T17:46:18.276034Z"
-        },
-        {
-          "session_id": "IR-498482401928",
-          "src_ip": "92.118.39.49",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-07-23T17:48:42.849493Z"
-        },
-        {
-          "session_id": "IR-34002cbd3625",
-          "src_ip": "92.118.39.49",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-07-23T17:51:13.476776Z"
-        },
-        {
-          "session_id": "IR-336be8052e1b",
-          "src_ip": "92.118.39.49",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-07-23T17:53:51.157220Z"
-        },
-        {
-          "session_id": "IR-b7bc19e9cacb",
-          "src_ip": "92.118.39.49",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-07-23T17:56:25.679555Z"
-        },
-        {
-          "session_id": "IR-70462ad72631",
-          "src_ip": "92.118.39.49",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-07-23T17:58:59.302765Z"
-        },
-        {
-          "session_id": "IR-eb079d9869b1",
-          "src_ip": "92.118.39.49",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-07-23T18:01:30.917687Z"
+          "timestamp": "2026-07-23T20:16:00.315732Z"
         }
       ]
     },
@@ -237,16 +141,12 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 6,
+      "session_count": 2,
       "unique_ips": [
-        "157.20.37.254",
-        "35.207.202.141",
-        "103.56.115.187",
-        "138.197.164.175",
-        "80.15.193.156",
-        "120.28.109.188"
+        "181.47.9.103",
+        "122.175.18.235"
       ],
-      "unique_ip_count": 6,
+      "unique_ip_count": 2,
       "sequence_hash": "98af0db988d5971c",
       "ttps": [
         {
@@ -276,52 +176,20 @@
       ],
       "members": [
         {
-          "session_id": "IR-72c48e89417c",
-          "src_ip": "138.197.164.175",
-          "country": "CA",
-          "isp": "DigitalOcean, LLC",
-          "command_count": 2,
-          "timestamp": "2026-07-23T16:55:55.449166Z"
-        },
-        {
-          "session_id": "IR-3b73f0ad2c6c",
-          "src_ip": "120.28.109.188",
-          "country": "PH",
-          "isp": "Globe Telecom/Innove Communication",
-          "command_count": 2,
-          "timestamp": "2026-07-23T17:25:37.164492Z"
-        },
-        {
-          "session_id": "IR-83c6ad901e12",
-          "src_ip": "103.56.115.187",
-          "country": "HK",
-          "isp": "Cloudie Limited",
-          "command_count": 2,
-          "timestamp": "2026-07-23T17:25:41.211945Z"
-        },
-        {
-          "session_id": "IR-5dad93e17934",
-          "src_ip": "157.20.37.254",
-          "country": "ID",
-          "isp": "PT Ekarta Java Buana",
-          "command_count": 2,
-          "timestamp": "2026-07-23T17:37:18.511183Z"
-        },
-        {
-          "session_id": "IR-40760c66e525",
-          "src_ip": "80.15.193.156",
-          "country": "FR",
-          "isp": "LNAUB657 Aubervilliers",
-          "command_count": 2,
-          "timestamp": "2026-07-23T17:42:51.179099Z"
-        },
-        {
-          "session_id": "IR-c05a57768660",
-          "src_ip": "35.207.202.141",
+          "session_id": "IR-eb9f4ef692b6",
+          "src_ip": "122.175.18.235",
           "country": "IN",
-          "isp": "Google LLC",
+          "isp": "ABTS (Hyderabad),",
           "command_count": 2,
-          "timestamp": "2026-07-23T18:25:57.534760Z"
+          "timestamp": "2026-07-23T19:16:04.955914Z"
+        },
+        {
+          "session_id": "IR-58e484f2842d",
+          "src_ip": "181.47.9.103",
+          "country": "AR",
+          "isp": "Telecentro S.A. - Clientes Residenciales",
+          "command_count": 2,
+          "timestamp": "2026-07-23T19:19:58.326355Z"
         }
       ]
     },
@@ -332,12 +200,12 @@
       "campaign_severity": null,
       "campaign_description": null,
       "matched_campaigns": [],
-      "session_count": 35,
+      "session_count": 85,
       "unique_ips": [
-        "2.57.122.238"
+        "77.239.124.246"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "876deb10d4cf5b5c",
+      "sequence_hash": "7ab552f01de999cb",
       "ttps": [
         {
           "id": "T1082",
@@ -345,321 +213,688 @@
         }
       ],
       "representative_commands": [
-        "/bin/./uname -s -v -n -r -m"
+        "uname -s -v -n -r -m"
       ],
       "members": [
         {
-          "session_id": "IR-feac625b73bd",
-          "src_ip": "2.57.122.238",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "session_id": "IR-655a75266874",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T17:01:17.842774Z"
+          "timestamp": "2026-07-23T20:47:15.941898Z"
         },
         {
-          "session_id": "IR-30311c63c939",
-          "src_ip": "2.57.122.238",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "session_id": "IR-621fbe734d03",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T17:02:58.845766Z"
+          "timestamp": "2026-07-23T20:47:21.558131Z"
         },
         {
-          "session_id": "IR-f00040cf975a",
-          "src_ip": "2.57.122.238",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "session_id": "IR-b437fcd4d18b",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T17:04:40.020298Z"
+          "timestamp": "2026-07-23T20:47:27.328594Z"
         },
         {
-          "session_id": "IR-5a0cb301fd67",
-          "src_ip": "2.57.122.238",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "session_id": "IR-0d7bc0ef85c2",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T17:06:17.832518Z"
+          "timestamp": "2026-07-23T20:47:33.015021Z"
         },
         {
-          "session_id": "IR-475cca545d62",
-          "src_ip": "2.57.122.238",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "session_id": "IR-788b34ee91ef",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T17:07:52.172294Z"
+          "timestamp": "2026-07-23T20:47:38.462278Z"
         },
         {
-          "session_id": "IR-ed64b3776782",
-          "src_ip": "2.57.122.238",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "session_id": "IR-c6ff9ac78b82",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T17:09:22.678077Z"
+          "timestamp": "2026-07-23T20:47:44.101855Z"
         },
         {
-          "session_id": "IR-3f31103f2426",
-          "src_ip": "2.57.122.238",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "session_id": "IR-2dcc50ff0f54",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T17:10:53.904123Z"
+          "timestamp": "2026-07-23T20:47:49.373687Z"
         },
         {
-          "session_id": "IR-cb6197aadff9",
-          "src_ip": "2.57.122.238",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "session_id": "IR-72aac9af4b78",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T17:12:29.700636Z"
+          "timestamp": "2026-07-23T20:47:54.902054Z"
         },
         {
-          "session_id": "IR-2ad064f42156",
-          "src_ip": "2.57.122.238",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "session_id": "IR-d2bf070696d8",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T17:14:05.426540Z"
+          "timestamp": "2026-07-23T20:48:00.285860Z"
         },
         {
-          "session_id": "IR-4c0c79d1ebb9",
-          "src_ip": "2.57.122.238",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "session_id": "IR-b17c4eb98eee",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T17:15:43.594426Z"
+          "timestamp": "2026-07-23T20:48:05.993607Z"
         },
         {
-          "session_id": "IR-b04d67b26a6a",
-          "src_ip": "2.57.122.238",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "session_id": "IR-2395e3ef4b46",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T17:17:24.034552Z"
+          "timestamp": "2026-07-23T20:48:11.652117Z"
         },
         {
-          "session_id": "IR-babd9745aa06",
-          "src_ip": "2.57.122.238",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "session_id": "IR-afb229db3759",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T17:19:08.541465Z"
+          "timestamp": "2026-07-23T20:48:17.192487Z"
         },
         {
-          "session_id": "IR-d5c0d79695d9",
-          "src_ip": "2.57.122.238",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "session_id": "IR-96b3f1fcbdee",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T17:20:45.268589Z"
+          "timestamp": "2026-07-23T20:48:23.017425Z"
         },
         {
-          "session_id": "IR-82e320c5170c",
-          "src_ip": "2.57.122.238",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "session_id": "IR-4c4ad584f763",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T17:22:17.655568Z"
+          "timestamp": "2026-07-23T20:48:28.353029Z"
         },
         {
-          "session_id": "IR-9cc0ef3e06d6",
-          "src_ip": "2.57.122.238",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "session_id": "IR-e91ced31902a",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T17:23:52.071464Z"
+          "timestamp": "2026-07-23T20:48:33.732427Z"
         },
         {
-          "session_id": "IR-fa96f0a6a7c7",
-          "src_ip": "2.57.122.238",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "session_id": "IR-5eed51bf46d2",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T17:25:29.215526Z"
+          "timestamp": "2026-07-23T20:48:39.281196Z"
         },
         {
-          "session_id": "IR-2a7ad114475b",
-          "src_ip": "2.57.122.238",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "session_id": "IR-c80864f25d09",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T17:27:05.387211Z"
+          "timestamp": "2026-07-23T20:48:44.783689Z"
         },
         {
-          "session_id": "IR-91bfe15bd3e6",
-          "src_ip": "2.57.122.238",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "session_id": "IR-657b5d10cd54",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T17:28:39.269941Z"
+          "timestamp": "2026-07-23T20:48:50.397306Z"
         },
         {
-          "session_id": "IR-abf7797576b3",
-          "src_ip": "2.57.122.238",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "session_id": "IR-ed666176d9f8",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T17:30:20.071873Z"
+          "timestamp": "2026-07-23T20:48:55.721167Z"
         },
         {
-          "session_id": "IR-4e97888d14bd",
-          "src_ip": "2.57.122.238",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "session_id": "IR-2f9bb656a8cb",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T17:32:04.636589Z"
+          "timestamp": "2026-07-23T20:49:00.981790Z"
         },
         {
-          "session_id": "IR-a6abb568f3a2",
-          "src_ip": "2.57.122.238",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "session_id": "IR-469f2f05cb72",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T17:33:45.584986Z"
+          "timestamp": "2026-07-23T20:49:06.774918Z"
         },
         {
-          "session_id": "IR-efab60d65346",
-          "src_ip": "2.57.122.238",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "session_id": "IR-93851d627b6e",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T17:35:19.234648Z"
+          "timestamp": "2026-07-23T20:49:12.523862Z"
         },
         {
-          "session_id": "IR-303d12f0c2bb",
-          "src_ip": "2.57.122.238",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "session_id": "IR-63b7e26fb9ce",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T17:36:55.742891Z"
+          "timestamp": "2026-07-23T20:49:17.841598Z"
         },
         {
-          "session_id": "IR-166272e1271d",
-          "src_ip": "2.57.122.238",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "session_id": "IR-42a71992bbc2",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T17:38:34.079437Z"
+          "timestamp": "2026-07-23T20:49:23.760541Z"
         },
         {
-          "session_id": "IR-48bc28b3cce9",
-          "src_ip": "2.57.122.238",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "session_id": "IR-08426560b4be",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T17:40:11.248423Z"
+          "timestamp": "2026-07-23T20:49:29.103666Z"
         },
         {
-          "session_id": "IR-cd6d9810f7a2",
-          "src_ip": "2.57.122.238",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "session_id": "IR-dea4f1ea9f9b",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T17:41:45.912820Z"
+          "timestamp": "2026-07-23T20:49:34.864870Z"
         },
         {
-          "session_id": "IR-6086154afc68",
-          "src_ip": "2.57.122.238",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "session_id": "IR-2fccdd0a9c4a",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T17:43:24.179787Z"
+          "timestamp": "2026-07-23T20:49:40.743398Z"
         },
         {
-          "session_id": "IR-6aea2943f462",
-          "src_ip": "2.57.122.238",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "session_id": "IR-d96b3f875edd",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T17:45:09.476530Z"
+          "timestamp": "2026-07-23T20:49:46.192260Z"
         },
         {
-          "session_id": "IR-118e62a7e657",
-          "src_ip": "2.57.122.238",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "session_id": "IR-7b879a30212c",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T17:46:50.350132Z"
+          "timestamp": "2026-07-23T20:49:52.235241Z"
         },
         {
-          "session_id": "IR-1e4c0ee4ae32",
-          "src_ip": "2.57.122.238",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "session_id": "IR-55663912a9d6",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T17:48:28.691638Z"
+          "timestamp": "2026-07-23T20:49:57.718595Z"
         },
         {
-          "session_id": "IR-83147be941c9",
-          "src_ip": "2.57.122.238",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "session_id": "IR-a5adad4da4b8",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T17:50:06.946108Z"
+          "timestamp": "2026-07-23T20:50:03.475396Z"
         },
         {
-          "session_id": "IR-d95c6f8ae094",
-          "src_ip": "2.57.122.238",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "session_id": "IR-8adcb15b62ed",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T17:51:45.343678Z"
+          "timestamp": "2026-07-23T20:50:09.212189Z"
         },
         {
-          "session_id": "IR-edf74116d33e",
-          "src_ip": "2.57.122.238",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "session_id": "IR-02cfcb196221",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T17:53:22.351294Z"
+          "timestamp": "2026-07-23T20:50:15.268842Z"
         },
         {
-          "session_id": "IR-281121784738",
-          "src_ip": "2.57.122.238",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "session_id": "IR-d4d1c18914a0",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T17:54:59.428204Z"
+          "timestamp": "2026-07-23T20:50:20.729216Z"
         },
         {
-          "session_id": "IR-fa8e59d30ed7",
-          "src_ip": "2.57.122.238",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "session_id": "IR-9252c5bb0397",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T17:56:39.600875Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-004",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "120.52.18.124"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "c32b4937ce8564ea",
-      "ttps": [
+          "timestamp": "2026-07-23T20:50:26.274805Z"
+        },
         {
-          "id": "T1021.004",
-          "name": "Remote Services: SSH"
-        }
-      ],
-      "representative_commands": [
-        "cd ~; chattr -ia .ssh; lockr -ia .ssh"
-      ],
-      "members": [
-        {
-          "session_id": "IR-0868c99a7a54",
-          "src_ip": "120.52.18.124",
-          "country": "CN",
-          "isp": "CHINA UNICOM CLOUD DATA COMPANY LIMITED",
+          "session_id": "IR-edabdb885d55",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
           "command_count": 1,
-          "timestamp": "2026-07-23T18:40:53.115858Z"
+          "timestamp": "2026-07-23T20:50:31.834703Z"
+        },
+        {
+          "session_id": "IR-88a8f3a70e4b",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:50:37.708292Z"
+        },
+        {
+          "session_id": "IR-d8914e2da2e7",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:50:43.146511Z"
+        },
+        {
+          "session_id": "IR-476d1bf205ae",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:50:48.666218Z"
+        },
+        {
+          "session_id": "IR-f054ada45238",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:50:54.121722Z"
+        },
+        {
+          "session_id": "IR-00e2a38ddfe3",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:50:59.329148Z"
+        },
+        {
+          "session_id": "IR-a57c89c9db06",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:51:04.686816Z"
+        },
+        {
+          "session_id": "IR-a511ea2fc96a",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:51:10.246501Z"
+        },
+        {
+          "session_id": "IR-54bebf54e877",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:51:15.656632Z"
+        },
+        {
+          "session_id": "IR-38ae7bf5df8b",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:51:21.084081Z"
+        },
+        {
+          "session_id": "IR-db10f699fd48",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:51:26.730031Z"
+        },
+        {
+          "session_id": "IR-24e5f7bb2bd7",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:51:32.025456Z"
+        },
+        {
+          "session_id": "IR-22588f3d6f32",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:51:37.324556Z"
+        },
+        {
+          "session_id": "IR-dccda55f8262",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:51:42.634446Z"
+        },
+        {
+          "session_id": "IR-720a86a16a84",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:51:48.306072Z"
+        },
+        {
+          "session_id": "IR-9fa37e9ac7c5",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:51:53.987929Z"
+        },
+        {
+          "session_id": "IR-29d8df17f2a4",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:51:59.646580Z"
+        },
+        {
+          "session_id": "IR-b7b59f6833f5",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:52:05.171105Z"
+        },
+        {
+          "session_id": "IR-23d0ffbd99b5",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:52:10.892497Z"
+        },
+        {
+          "session_id": "IR-edbcb9a82a18",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:52:16.091886Z"
+        },
+        {
+          "session_id": "IR-1d81e9b3bbb8",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:52:21.582202Z"
+        },
+        {
+          "session_id": "IR-185abcee6e91",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:52:27.318715Z"
+        },
+        {
+          "session_id": "IR-7cd7bee8abfa",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:52:32.690959Z"
+        },
+        {
+          "session_id": "IR-eb435d2ae721",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:52:38.051391Z"
+        },
+        {
+          "session_id": "IR-151a5657976e",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:52:43.741065Z"
+        },
+        {
+          "session_id": "IR-c578e09f04fc",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:52:49.175676Z"
+        },
+        {
+          "session_id": "IR-039231163440",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:52:54.627574Z"
+        },
+        {
+          "session_id": "IR-2d6f7fd3c12e",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:52:59.945578Z"
+        },
+        {
+          "session_id": "IR-7b6787fa7a32",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:53:05.346049Z"
+        },
+        {
+          "session_id": "IR-6ec923912b19",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:53:10.536206Z"
+        },
+        {
+          "session_id": "IR-3d643697a4fe",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:53:15.866127Z"
+        },
+        {
+          "session_id": "IR-f057b889e20f",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:53:21.269423Z"
+        },
+        {
+          "session_id": "IR-083f111e9068",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:53:26.700119Z"
+        },
+        {
+          "session_id": "IR-15ba9fbce9d6",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:53:31.732460Z"
+        },
+        {
+          "session_id": "IR-72a41f04cf5f",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:53:37.040751Z"
+        },
+        {
+          "session_id": "IR-45eed3970e0e",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:53:42.103098Z"
+        },
+        {
+          "session_id": "IR-3378eb3109fc",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:53:47.278814Z"
+        },
+        {
+          "session_id": "IR-4ee9dd6c8b4a",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:53:52.317180Z"
+        },
+        {
+          "session_id": "IR-b623d8ecdabe",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:53:57.541659Z"
+        },
+        {
+          "session_id": "IR-b10474b0ded9",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:54:02.532737Z"
+        },
+        {
+          "session_id": "IR-97b87b82aaba",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:54:08.051414Z"
+        },
+        {
+          "session_id": "IR-23e41eb08ed7",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:54:13.506884Z"
+        },
+        {
+          "session_id": "IR-71ac8513e9ef",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:54:19.483222Z"
+        },
+        {
+          "session_id": "IR-67a345d195fb",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:54:25.486849Z"
+        },
+        {
+          "session_id": "IR-891c5432e00d",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:54:31.122868Z"
+        },
+        {
+          "session_id": "IR-46ad8a07be70",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:54:36.760591Z"
+        },
+        {
+          "session_id": "IR-83782b0b8f52",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:54:42.648127Z"
+        },
+        {
+          "session_id": "IR-00ad9ffb5e2a",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:54:48.164807Z"
+        },
+        {
+          "session_id": "IR-1e78ddb2fd85",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:54:53.645424Z"
+        },
+        {
+          "session_id": "IR-dd9a36a1c84e",
+          "src_ip": "77.239.124.246",
+          "country": "NL",
+          "isp": "Ace Data Centers II, LLC",
+          "command_count": 1,
+          "timestamp": "2026-07-23T20:54:59.223488Z"
         }
       ]
     }
