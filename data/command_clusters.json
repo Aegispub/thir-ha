@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-08-08T12:55:15.095298+00:00",
-  "total_sessions_with_commands": 9,
+  "generated_at": "2026-08-08T14:34:59.119164+00:00",
+  "total_sessions_with_commands": 6,
   "total_clusters": 4,
   "campaign_clusters": 1,
-  "singleton_clusters": 1,
+  "singleton_clusters": 3,
   "highest_severity": "HIGH",
   "active_campaigns": [
     {
-      "cluster_id": "CLU-001",
+      "cluster_id": "CLU-003",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 4,
-      "unique_ip_count": 4,
+      "session_count": 1,
+      "unique_ip_count": 1,
       "ttps": [
         "T1021.004",
         "T1078",
@@ -24,6 +24,71 @@
   "clusters": [
     {
       "cluster_id": "CLU-001",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "165.245.211.148"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "e707cc0f441aefd0",
+      "ttps": [],
+      "representative_commands": [
+        "From: <sip:nm@nm>;tag=root",
+        "To: <sip:nm2@nm2>",
+        "Call-ID: 50000",
+        "CSeq: 42 OPTIONS",
+        "Max-Forwards: 70",
+        "Content-Length: 0",
+        "Contact: <sip:nm@nm>",
+        "Accept: application/sdp"
+      ],
+      "members": [
+        {
+          "session_id": "IR-36febb97e524",
+          "src_ip": "165.245.211.148",
+          "country": "DE",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 8,
+          "timestamp": "2026-08-08T12:42:04.722032Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-002",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "165.245.241.157"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "8b18193af0e7b662",
+      "ttps": [],
+      "representative_commands": [
+        "User-Agent: Mozilla/5.0 (compatible; Odin; https://docs.getodin.com/)",
+        "Accept: */*",
+        "Accept-Encoding: gzip"
+      ],
+      "members": [
+        {
+          "session_id": "IR-95fd439186ed",
+          "src_ip": "165.245.241.157",
+          "country": "DE",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 3,
+          "timestamp": "2026-08-08T12:42:12.400147Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-003",
       "is_campaign": true,
       "campaign_name": "mdrfckr SSH Key Injection",
       "campaign_severity": "HIGH",
@@ -42,14 +107,11 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 4,
+      "session_count": 1,
       "unique_ips": [
-        "165.232.164.223",
-        "172.190.24.225",
-        "54.38.180.48",
-        "95.255.158.96"
+        "98.70.50.166"
       ],
-      "unique_ip_count": 4,
+      "unique_ip_count": 1,
       "sequence_hash": "98af0db988d5971c",
       "ttps": [
         {
@@ -79,114 +141,12 @@
       ],
       "members": [
         {
-          "session_id": "IR-89e2589dc0c7",
-          "src_ip": "165.232.164.223",
-          "country": "SG",
-          "isp": "DigitalOcean, LLC",
+          "session_id": "IR-98f1d482c64a",
+          "src_ip": "98.70.50.166",
+          "country": "IN",
+          "isp": "Microsoft Corporation",
           "command_count": 2,
-          "timestamp": "2026-08-08T09:13:14.543886Z"
-        },
-        {
-          "session_id": "IR-360d427a3886",
-          "src_ip": "95.255.158.96",
-          "country": "IT",
-          "isp": "Telecom Italia S.p.A.",
-          "command_count": 2,
-          "timestamp": "2026-08-08T09:15:46.782771Z"
-        },
-        {
-          "session_id": "IR-50fbe59a6eb1",
-          "src_ip": "54.38.180.48",
-          "country": "FR",
-          "isp": "OVH SAS",
-          "command_count": 2,
-          "timestamp": "2026-08-08T10:40:10.805968Z"
-        },
-        {
-          "session_id": "IR-7bdf0320dbc6",
-          "src_ip": "172.190.24.225",
-          "country": "US",
-          "isp": "Microsoft Limited",
-          "command_count": 2,
-          "timestamp": "2026-08-08T10:44:07.286155Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-002",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 2,
-      "unique_ips": [
-        "125.227.156.55"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "9349758a99945d64",
-      "ttps": [
-        {
-          "id": "T1140",
-          "name": "Deobfuscate/Decode Files"
-        }
-      ],
-      "representative_commands": [
-        "cd /tmp && chmod +x 8R5cdKpU && bash -c ./8R5cdKpU",
-        "./8R5cdKpU"
-      ],
-      "members": [
-        {
-          "session_id": "IR-97b06bc28225",
-          "src_ip": "125.227.156.55",
-          "country": "TW",
-          "isp": "Chunghwa Telecom Data Communication Business Group",
-          "command_count": 2,
-          "timestamp": "2026-08-08T09:51:59.900160Z"
-        },
-        {
-          "session_id": "IR-ec42c651d557",
-          "src_ip": "125.227.156.55",
-          "country": "TW",
-          "isp": "Chunghwa Telecom Data Communication Business Group",
-          "command_count": 2,
-          "timestamp": "2026-08-08T09:52:00.099952Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-003",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 2,
-      "unique_ips": [
-        "125.227.156.55"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "aeaccbfb03a058f8",
-      "ttps": [],
-      "representative_commands": [
-        "scp -t /tmp/8R5cdKpU"
-      ],
-      "members": [
-        {
-          "session_id": "IR-76fa5e742aa5",
-          "src_ip": "125.227.156.55",
-          "country": "TW",
-          "isp": "Chunghwa Telecom Data Communication Business Group",
-          "command_count": 1,
-          "timestamp": "2026-08-08T09:51:56.216324Z"
-        },
-        {
-          "session_id": "IR-07265a43a145",
-          "src_ip": "125.227.156.55",
-          "country": "TW",
-          "isp": "Chunghwa Telecom Data Communication Business Group",
-          "command_count": 1,
-          "timestamp": "2026-08-08T09:51:56.305092Z"
+          "timestamp": "2026-08-08T10:58:13.608170Z"
         }
       ]
     },
@@ -197,29 +157,41 @@
       "campaign_severity": null,
       "campaign_description": null,
       "matched_campaigns": [],
-      "session_count": 1,
+      "session_count": 3,
       "unique_ips": [
-        "111.42.60.82"
+        "165.22.80.11"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "6fa4c8ac58e7a1d9",
-      "ttps": [
-        {
-          "id": "T1082",
-          "name": "System Information Discovery"
-        }
-      ],
+      "sequence_hash": "9a9a7473e4472399",
+      "ttps": [],
       "representative_commands": [
-        "uname -s -m"
+        "User-Agent: Go-http-client/1.1",
+        "Connection: close"
       ],
       "members": [
         {
-          "session_id": "IR-f8d173293cbc",
-          "src_ip": "111.42.60.82",
-          "country": "CN",
-          "isp": "China Mobile Communications Corporation",
-          "command_count": 1,
-          "timestamp": "2026-08-08T10:29:00.462392Z"
+          "session_id": "IR-ad802a6094bc",
+          "src_ip": "165.22.80.11",
+          "country": "DE",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 2,
+          "timestamp": "2026-08-08T12:42:13.055119Z"
+        },
+        {
+          "session_id": "IR-8d56a2058bc4",
+          "src_ip": "165.22.80.11",
+          "country": "DE",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 2,
+          "timestamp": "2026-08-08T12:42:13.952266Z"
+        },
+        {
+          "session_id": "IR-83033378edf4",
+          "src_ip": "165.22.80.11",
+          "country": "DE",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 2,
+          "timestamp": "2026-08-08T12:42:14.679360Z"
         }
       ]
     }
