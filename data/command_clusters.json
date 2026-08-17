@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-17T03:03:05.760013+00:00",
-  "total_sessions_with_commands": 31,
-  "total_clusters": 6,
+  "generated_at": "2026-08-17T04:46:11.215585+00:00",
+  "total_sessions_with_commands": 39,
+  "total_clusters": 7,
   "campaign_clusters": 2,
-  "singleton_clusters": 3,
+  "singleton_clusters": 4,
   "highest_severity": "HIGH",
   "active_campaigns": [
     {
@@ -406,7 +406,83 @@
       "campaign_severity": null,
       "campaign_description": null,
       "matched_campaigns": [],
-      "session_count": 6,
+      "session_count": 7,
+      "unique_ips": [
+        "45.142.193.164"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "b55d713e4cae43f9",
+      "ttps": [],
+      "representative_commands": [
+        "echo xsec"
+      ],
+      "members": [
+        {
+          "session_id": "IR-d76d131318a0",
+          "src_ip": "45.142.193.164",
+          "country": "NL",
+          "isp": "Limited Network LTD",
+          "command_count": 1,
+          "timestamp": "2026-08-17T00:01:09.959928Z"
+        },
+        {
+          "session_id": "IR-9880af836493",
+          "src_ip": "45.142.193.164",
+          "country": "NL",
+          "isp": "Limited Network LTD",
+          "command_count": 1,
+          "timestamp": "2026-08-17T00:18:38.187363Z"
+        },
+        {
+          "session_id": "IR-9c23a65f0f00",
+          "src_ip": "45.142.193.164",
+          "country": "NL",
+          "isp": "Limited Network LTD",
+          "command_count": 1,
+          "timestamp": "2026-08-17T00:36:15.768765Z"
+        },
+        {
+          "session_id": "IR-2a409c3f68fb",
+          "src_ip": "45.142.193.164",
+          "country": "NL",
+          "isp": "Limited Network LTD",
+          "command_count": 1,
+          "timestamp": "2026-08-17T00:53:54.091975Z"
+        },
+        {
+          "session_id": "IR-add931bbf239",
+          "src_ip": "45.142.193.164",
+          "country": "NL",
+          "isp": "Limited Network LTD",
+          "command_count": 1,
+          "timestamp": "2026-08-17T01:11:30.565565Z"
+        },
+        {
+          "session_id": "IR-796e27f1c0c2",
+          "src_ip": "45.142.193.164",
+          "country": "NL",
+          "isp": "Limited Network LTD",
+          "command_count": 1,
+          "timestamp": "2026-08-17T01:46:47.462026Z"
+        },
+        {
+          "session_id": "IR-368ebd101102",
+          "src_ip": "45.142.193.164",
+          "country": "NL",
+          "isp": "Limited Network LTD",
+          "command_count": 1,
+          "timestamp": "2026-08-17T02:04:13.894265Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-006",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 9,
       "unique_ips": [
         "217.165.22.192"
       ],
@@ -422,6 +498,30 @@
         "uname -s -v -n -r -m"
       ],
       "members": [
+        {
+          "session_id": "IR-e8d5d0e79d73",
+          "src_ip": "217.165.22.192",
+          "country": "AE",
+          "isp": "Emirates Telecommunications Corporation",
+          "command_count": 1,
+          "timestamp": "2026-08-17T00:13:46.243456Z"
+        },
+        {
+          "session_id": "IR-2362c93337ef",
+          "src_ip": "217.165.22.192",
+          "country": "AE",
+          "isp": "Emirates Telecommunications Corporation",
+          "command_count": 1,
+          "timestamp": "2026-08-17T00:32:52.304489Z"
+        },
+        {
+          "session_id": "IR-b9e0a115b3c1",
+          "src_ip": "217.165.22.192",
+          "country": "AE",
+          "isp": "Emirates Telecommunications Corporation",
+          "command_count": 1,
+          "timestamp": "2026-08-17T00:51:58.688771Z"
+        },
         {
           "session_id": "IR-3485c60900c4",
           "src_ip": "217.165.22.192",
@@ -473,46 +573,35 @@
       ]
     },
     {
-      "cluster_id": "CLU-006",
+      "cluster_id": "CLU-007",
       "is_campaign": false,
       "campaign_name": null,
       "campaign_severity": null,
       "campaign_description": null,
       "matched_campaigns": [],
-      "session_count": 3,
+      "session_count": 1,
       "unique_ips": [
-        "45.142.193.164"
+        "130.12.180.51"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "b55d713e4cae43f9",
-      "ttps": [],
+      "sequence_hash": "ccd29aff2c593ed4",
+      "ttps": [
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        }
+      ],
       "representative_commands": [
-        "echo xsec"
+        "uname -a; echo -e \"\\x61\\x75\\x74\\x68\\x5F\\x6F\\x6B\\x0A\"; cd /tmp || cd /var/tmp || cd /dev/shm; echo '-----BEGIN OPENSSH PRIVATE KEY-----; b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW; QyNTUxOQAAACDveEt+JtIVZGBVIbVkHvdkvQqdMiafu5/IMOvelH/yxgAAAJAt8FDRLfBQ; 0QAAAAtzc2gtZWQyNTUxOQAAACDveEt+JtIVZGBVIbVkHvdkvQqdMiafu5/IMOvelH/yxg; AAAEAr1wl+3JHkjA3ZtPtjd8bAtLVFo13eZ12Aw2QnFXC/ie94S34m0hVkYFUhtWQe92S9; Cp0yJp+7n8gw696Uf/LGAAAACGRsckBzZnRwAQIDBAU=; -----END OPENSSH PRIVATE KEY-----' > key.p"
       ],
       "members": [
         {
-          "session_id": "IR-add931bbf239",
-          "src_ip": "45.142.193.164",
-          "country": "NL",
-          "isp": "Limited Network LTD",
+          "session_id": "IR-fd09b53e5b49",
+          "src_ip": "130.12.180.51",
+          "country": "DE",
+          "isp": "Virtualine Technologies",
           "command_count": 1,
-          "timestamp": "2026-08-17T01:11:30.565565Z"
-        },
-        {
-          "session_id": "IR-796e27f1c0c2",
-          "src_ip": "45.142.193.164",
-          "country": "NL",
-          "isp": "Limited Network LTD",
-          "command_count": 1,
-          "timestamp": "2026-08-17T01:46:47.462026Z"
-        },
-        {
-          "session_id": "IR-368ebd101102",
-          "src_ip": "45.142.193.164",
-          "country": "NL",
-          "isp": "Limited Network LTD",
-          "command_count": 1,
-          "timestamp": "2026-08-17T02:04:13.894265Z"
+          "timestamp": "2026-08-17T00:14:46.470588Z"
         }
       ]
     }
