@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-19T03:00:35.830872+00:00",
-  "total_sessions_with_commands": 204,
-  "total_clusters": 5,
+  "generated_at": "2026-08-19T04:40:38.398774+00:00",
+  "total_sessions_with_commands": 216,
+  "total_clusters": 6,
   "campaign_clusters": 1,
   "singleton_clusters": 2,
   "highest_severity": "HIGH",
@@ -10,8 +10,8 @@
       "cluster_id": "CLU-002",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 5,
-      "unique_ip_count": 5,
+      "session_count": 6,
+      "unique_ip_count": 6,
       "ttps": [
         "T1021.004",
         "T1078",
@@ -91,15 +91,16 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 5,
+      "session_count": 6,
       "unique_ips": [
-        "119.96.173.169",
-        "221.162.218.85",
-        "34.88.29.206",
         "103.59.163.134",
-        "50.6.228.111"
+        "119.96.173.169",
+        "50.6.228.111",
+        "34.88.29.206",
+        "221.162.218.85",
+        "123.58.213.128"
       ],
-      "unique_ip_count": 5,
+      "unique_ip_count": 6,
       "sequence_hash": "98af0db988d5971c",
       "ttps": [
         {
@@ -128,6 +129,14 @@
         "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~"
       ],
       "members": [
+        {
+          "session_id": "IR-9c6be589418e",
+          "src_ip": "123.58.213.128",
+          "country": "HK",
+          "isp": "UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+          "command_count": 2,
+          "timestamp": "2026-08-19T00:28:59.174491Z"
+        },
         {
           "session_id": "IR-61e441febc66",
           "src_ip": "103.59.163.134",
@@ -211,7 +220,7 @@
       "campaign_severity": null,
       "campaign_description": null,
       "matched_campaigns": [],
-      "session_count": 21,
+      "session_count": 30,
       "unique_ips": [
         "85.158.145.129"
       ],
@@ -227,6 +236,78 @@
         "uname -a"
       ],
       "members": [
+        {
+          "session_id": "IR-b05fae7b3138",
+          "src_ip": "85.158.145.129",
+          "country": "NL",
+          "isp": "cukman-kresimir",
+          "command_count": 1,
+          "timestamp": "2026-08-19T00:02:41.447809Z"
+        },
+        {
+          "session_id": "IR-9764cf904294",
+          "src_ip": "85.158.145.129",
+          "country": "NL",
+          "isp": "cukman-kresimir",
+          "command_count": 1,
+          "timestamp": "2026-08-19T00:08:35.598026Z"
+        },
+        {
+          "session_id": "IR-41db8bbcd2a1",
+          "src_ip": "85.158.145.129",
+          "country": "NL",
+          "isp": "cukman-kresimir",
+          "command_count": 1,
+          "timestamp": "2026-08-19T00:14:29.840642Z"
+        },
+        {
+          "session_id": "IR-a4037ac06556",
+          "src_ip": "85.158.145.129",
+          "country": "NL",
+          "isp": "cukman-kresimir",
+          "command_count": 1,
+          "timestamp": "2026-08-19T00:20:23.957222Z"
+        },
+        {
+          "session_id": "IR-29c83b5d1a4b",
+          "src_ip": "85.158.145.129",
+          "country": "NL",
+          "isp": "cukman-kresimir",
+          "command_count": 1,
+          "timestamp": "2026-08-19T00:26:18.065272Z"
+        },
+        {
+          "session_id": "IR-973da008a168",
+          "src_ip": "85.158.145.129",
+          "country": "NL",
+          "isp": "cukman-kresimir",
+          "command_count": 1,
+          "timestamp": "2026-08-19T00:32:12.657822Z"
+        },
+        {
+          "session_id": "IR-c39e82d66edd",
+          "src_ip": "85.158.145.129",
+          "country": "NL",
+          "isp": "cukman-kresimir",
+          "command_count": 1,
+          "timestamp": "2026-08-19T00:38:07.303437Z"
+        },
+        {
+          "session_id": "IR-670db1fcdc11",
+          "src_ip": "85.158.145.129",
+          "country": "NL",
+          "isp": "cukman-kresimir",
+          "command_count": 1,
+          "timestamp": "2026-08-19T00:44:01.728191Z"
+        },
+        {
+          "session_id": "IR-bb9dd1fe321e",
+          "src_ip": "85.158.145.129",
+          "country": "NL",
+          "isp": "cukman-kresimir",
+          "command_count": 1,
+          "timestamp": "2026-08-19T00:49:56.403605Z"
+        },
         {
           "session_id": "IR-a6e7d335ad61",
           "src_ip": "85.158.145.129",
@@ -399,6 +480,48 @@
     },
     {
       "cluster_id": "CLU-005",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 2,
+      "unique_ips": [
+        "154.219.119.240",
+        "182.92.241.215"
+      ],
+      "unique_ip_count": 2,
+      "sequence_hash": "6fa4c8ac58e7a1d9",
+      "ttps": [
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        }
+      ],
+      "representative_commands": [
+        "uname -s -m"
+      ],
+      "members": [
+        {
+          "session_id": "IR-544013347575",
+          "src_ip": "154.219.119.240",
+          "country": "HK",
+          "isp": "vape",
+          "command_count": 1,
+          "timestamp": "2026-08-19T00:09:31.845984Z"
+        },
+        {
+          "session_id": "IR-1e01c78d20d8",
+          "src_ip": "182.92.241.215",
+          "country": "CN",
+          "isp": "Aliyun Computing Co., LTD",
+          "command_count": 1,
+          "timestamp": "2026-08-19T00:26:05.606487Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-006",
       "is_campaign": false,
       "campaign_name": null,
       "campaign_severity": null,
