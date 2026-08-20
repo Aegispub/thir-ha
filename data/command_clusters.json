@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-08-20T12:55:11.853802+00:00",
-  "total_sessions_with_commands": 28,
-  "total_clusters": 4,
+  "generated_at": "2026-08-20T14:40:03.729329+00:00",
+  "total_sessions_with_commands": 6,
+  "total_clusters": 5,
   "campaign_clusters": 1,
-  "singleton_clusters": 3,
+  "singleton_clusters": 4,
   "highest_severity": "HIGH",
   "active_campaigns": [
     {
       "cluster_id": "CLU-003",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 1,
-      "unique_ip_count": 1,
+      "session_count": 2,
+      "unique_ip_count": 2,
       "ttps": [
         "T1021.004",
         "T1078",
@@ -31,24 +31,24 @@
       "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "66.228.53.4"
+        "45.79.207.71"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "0084449e5825fe2e",
+      "sequence_hash": "381901b5c7799c06",
       "ttps": [],
       "representative_commands": [
-        "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
         "Accept: */*",
-        "Accept-Encoding: gzip"
+        "Accept-Encoding: gzip",
+        "User-Agent: Mozilla/5.0 zgrab/0.x"
       ],
       "members": [
         {
-          "session_id": "IR-043c86771e3f",
-          "src_ip": "66.228.53.4",
+          "session_id": "IR-33e9ef5164ea",
+          "src_ip": "45.79.207.71",
           "country": "US",
           "isp": "Linode",
           "command_count": 3,
-          "timestamp": "2026-08-20T10:27:14.960474Z"
+          "timestamp": "2026-08-20T11:35:27.518757Z"
         }
       ]
     },
@@ -61,24 +61,24 @@
       "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "216.218.206.66"
+        "172.234.217.129"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "0f316faef8284367",
+      "sequence_hash": "0084449e5825fe2e",
       "ttps": [],
       "representative_commands": [
-        "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 OPR/120.0.0.0",
+        "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
         "Accept: */*",
         "Accept-Encoding: gzip"
       ],
       "members": [
         {
-          "session_id": "IR-e06a7866dd95",
-          "src_ip": "216.218.206.66",
+          "session_id": "IR-5dcf4551d675",
+          "src_ip": "172.234.217.129",
           "country": "US",
-          "isp": "The Shadowserver Foundation, Inc.",
+          "isp": "Linode",
           "command_count": 3,
-          "timestamp": "2026-08-20T10:47:32.478889Z"
+          "timestamp": "2026-08-20T11:36:32.965271Z"
         }
       ]
     },
@@ -102,11 +102,12 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 1,
+      "session_count": 2,
       "unique_ips": [
-        "189.167.213.64"
+        "83.235.16.111",
+        "182.118.64.225"
       ],
-      "unique_ip_count": 1,
+      "unique_ip_count": 2,
       "sequence_hash": "98af0db988d5971c",
       "ttps": [
         {
@@ -136,12 +137,20 @@
       ],
       "members": [
         {
-          "session_id": "IR-bea77c4f6ac8",
-          "src_ip": "189.167.213.64",
-          "country": "MX",
-          "isp": "Gesti\u00f3n de direccionamiento UniNet",
+          "session_id": "IR-ff9795675ada",
+          "src_ip": "83.235.16.111",
+          "country": "GR",
+          "isp": "Ote SA (Hellenic Telecommunications Organisation)",
           "command_count": 2,
-          "timestamp": "2026-08-20T10:18:05.527531Z"
+          "timestamp": "2026-08-20T11:23:20.632899Z"
+        },
+        {
+          "session_id": "IR-4c1adf800f2a",
+          "src_ip": "182.118.64.225",
+          "country": "CN",
+          "isp": "China Unicom Henan province network",
+          "command_count": 2,
+          "timestamp": "2026-08-20T11:33:38.895845Z"
         }
       ]
     },
@@ -152,216 +161,63 @@
       "campaign_severity": null,
       "campaign_description": null,
       "matched_campaigns": [],
-      "session_count": 25,
+      "session_count": 1,
       "unique_ips": [
-        "217.60.240.161"
+        "162.216.150.230"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "7d4a1f6964afd31e",
-      "ttps": [],
+      "sequence_hash": "49efc5eb7bb5604b",
+      "ttps": [
+        {
+          "id": "T1083",
+          "name": "File & Directory Discovery"
+        }
+      ],
       "representative_commands": [
-        "echo SHELL_TEST"
+        "User-Agent: Hello from Palo Alto Networks, find out more about our scans in https://docs-cortex.paloaltonetworks.com/r/1/Cortex-Xpanse/Scanning-activity",
+        "Accept-Encoding: gzip"
       ],
       "members": [
         {
-          "session_id": "IR-089ae176af67",
-          "src_ip": "217.60.240.161",
-          "country": "DE",
-          "isp": "Awas.ovh - Germany, Frankfurt",
-          "command_count": 1,
-          "timestamp": "2026-08-20T08:56:55.467757Z"
-        },
+          "session_id": "IR-efa3d2171b32",
+          "src_ip": "162.216.150.230",
+          "country": "US",
+          "isp": "Google LLC",
+          "command_count": 2,
+          "timestamp": "2026-08-20T12:09:46.980515Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-005",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "34.155.85.143"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "6fa4c8ac58e7a1d9",
+      "ttps": [
         {
-          "session_id": "IR-d4ac82b8f4c0",
-          "src_ip": "217.60.240.161",
-          "country": "DE",
-          "isp": "Awas.ovh - Germany, Frankfurt",
-          "command_count": 1,
-          "timestamp": "2026-08-20T08:56:56.977558Z"
-        },
+          "id": "T1082",
+          "name": "System Information Discovery"
+        }
+      ],
+      "representative_commands": [
+        "uname -s -m"
+      ],
+      "members": [
         {
-          "session_id": "IR-a009ec2ca10a",
-          "src_ip": "217.60.240.161",
-          "country": "DE",
-          "isp": "Awas.ovh - Germany, Frankfurt",
+          "session_id": "IR-cfb288c3f690",
+          "src_ip": "34.155.85.143",
+          "country": "FR",
+          "isp": "Google LLC",
           "command_count": 1,
-          "timestamp": "2026-08-20T08:56:58.549445Z"
-        },
-        {
-          "session_id": "IR-39493a94f83e",
-          "src_ip": "217.60.240.161",
-          "country": "DE",
-          "isp": "Awas.ovh - Germany, Frankfurt",
-          "command_count": 1,
-          "timestamp": "2026-08-20T08:56:59.965160Z"
-        },
-        {
-          "session_id": "IR-9fa53c13910e",
-          "src_ip": "217.60.240.161",
-          "country": "DE",
-          "isp": "Awas.ovh - Germany, Frankfurt",
-          "command_count": 1,
-          "timestamp": "2026-08-20T08:57:02.002192Z"
-        },
-        {
-          "session_id": "IR-a7cfdd6aa9a4",
-          "src_ip": "217.60.240.161",
-          "country": "DE",
-          "isp": "Awas.ovh - Germany, Frankfurt",
-          "command_count": 1,
-          "timestamp": "2026-08-20T08:57:04.841801Z"
-        },
-        {
-          "session_id": "IR-f30418f0066c",
-          "src_ip": "217.60.240.161",
-          "country": "DE",
-          "isp": "Awas.ovh - Germany, Frankfurt",
-          "command_count": 1,
-          "timestamp": "2026-08-20T08:57:06.756116Z"
-        },
-        {
-          "session_id": "IR-213a293e7a4c",
-          "src_ip": "217.60.240.161",
-          "country": "DE",
-          "isp": "Awas.ovh - Germany, Frankfurt",
-          "command_count": 1,
-          "timestamp": "2026-08-20T08:57:09.298476Z"
-        },
-        {
-          "session_id": "IR-b522e16cd805",
-          "src_ip": "217.60.240.161",
-          "country": "DE",
-          "isp": "Awas.ovh - Germany, Frankfurt",
-          "command_count": 1,
-          "timestamp": "2026-08-20T08:57:11.162740Z"
-        },
-        {
-          "session_id": "IR-8d7fc2cba8cc",
-          "src_ip": "217.60.240.161",
-          "country": "DE",
-          "isp": "Awas.ovh - Germany, Frankfurt",
-          "command_count": 1,
-          "timestamp": "2026-08-20T08:57:12.653187Z"
-        },
-        {
-          "session_id": "IR-46fcacabf6d2",
-          "src_ip": "217.60.240.161",
-          "country": "DE",
-          "isp": "Awas.ovh - Germany, Frankfurt",
-          "command_count": 1,
-          "timestamp": "2026-08-20T08:57:14.343144Z"
-        },
-        {
-          "session_id": "IR-521da2914f69",
-          "src_ip": "217.60.240.161",
-          "country": "DE",
-          "isp": "Awas.ovh - Germany, Frankfurt",
-          "command_count": 1,
-          "timestamp": "2026-08-20T08:57:15.673935Z"
-        },
-        {
-          "session_id": "IR-3f44f86e43b5",
-          "src_ip": "217.60.240.161",
-          "country": "DE",
-          "isp": "Awas.ovh - Germany, Frankfurt",
-          "command_count": 1,
-          "timestamp": "2026-08-20T08:57:17.266853Z"
-        },
-        {
-          "session_id": "IR-55f14ad4fc46",
-          "src_ip": "217.60.240.161",
-          "country": "DE",
-          "isp": "Awas.ovh - Germany, Frankfurt",
-          "command_count": 1,
-          "timestamp": "2026-08-20T08:57:18.859633Z"
-        },
-        {
-          "session_id": "IR-88278d45b2d1",
-          "src_ip": "217.60.240.161",
-          "country": "DE",
-          "isp": "Awas.ovh - Germany, Frankfurt",
-          "command_count": 1,
-          "timestamp": "2026-08-20T08:57:20.150313Z"
-        },
-        {
-          "session_id": "IR-90e0c7367d09",
-          "src_ip": "217.60.240.161",
-          "country": "DE",
-          "isp": "Awas.ovh - Germany, Frankfurt",
-          "command_count": 1,
-          "timestamp": "2026-08-20T08:57:21.673030Z"
-        },
-        {
-          "session_id": "IR-419762439db6",
-          "src_ip": "217.60.240.161",
-          "country": "DE",
-          "isp": "Awas.ovh - Germany, Frankfurt",
-          "command_count": 1,
-          "timestamp": "2026-08-20T08:57:23.070169Z"
-        },
-        {
-          "session_id": "IR-f02d006a4eca",
-          "src_ip": "217.60.240.161",
-          "country": "DE",
-          "isp": "Awas.ovh - Germany, Frankfurt",
-          "command_count": 1,
-          "timestamp": "2026-08-20T08:57:24.262520Z"
-        },
-        {
-          "session_id": "IR-f787c8fa1ace",
-          "src_ip": "217.60.240.161",
-          "country": "DE",
-          "isp": "Awas.ovh - Germany, Frankfurt",
-          "command_count": 1,
-          "timestamp": "2026-08-20T08:57:25.763448Z"
-        },
-        {
-          "session_id": "IR-8ff9a35f0493",
-          "src_ip": "217.60.240.161",
-          "country": "DE",
-          "isp": "Awas.ovh - Germany, Frankfurt",
-          "command_count": 1,
-          "timestamp": "2026-08-20T08:57:26.960107Z"
-        },
-        {
-          "session_id": "IR-a7b05b3e4165",
-          "src_ip": "217.60.240.161",
-          "country": "DE",
-          "isp": "Awas.ovh - Germany, Frankfurt",
-          "command_count": 1,
-          "timestamp": "2026-08-20T08:57:28.363052Z"
-        },
-        {
-          "session_id": "IR-316db40e7256",
-          "src_ip": "217.60.240.161",
-          "country": "DE",
-          "isp": "Awas.ovh - Germany, Frankfurt",
-          "command_count": 1,
-          "timestamp": "2026-08-20T08:57:29.750516Z"
-        },
-        {
-          "session_id": "IR-9bce8e98fcb0",
-          "src_ip": "217.60.240.161",
-          "country": "DE",
-          "isp": "Awas.ovh - Germany, Frankfurt",
-          "command_count": 1,
-          "timestamp": "2026-08-20T08:57:30.951542Z"
-        },
-        {
-          "session_id": "IR-c4655d8780da",
-          "src_ip": "217.60.240.161",
-          "country": "DE",
-          "isp": "Awas.ovh - Germany, Frankfurt",
-          "command_count": 1,
-          "timestamp": "2026-08-20T08:57:32.464156Z"
-        },
-        {
-          "session_id": "IR-0858f12d91c1",
-          "src_ip": "217.60.240.161",
-          "country": "DE",
-          "isp": "Awas.ovh - Germany, Frankfurt",
-          "command_count": 1,
-          "timestamp": "2026-08-20T08:57:33.837967Z"
+          "timestamp": "2026-08-20T12:06:23.422472Z"
         }
       ]
     }
