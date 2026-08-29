@@ -100,6 +100,88 @@ type ThreatIPReport struct {
 	IPs         []IOC  `json:"ips"`
 }
 
+// CorpusEntry represents the subset of Tool 43's enriched_corpus.json
+// fields relevant to deciding whether an IP needs re-enrichment. Only
+// the fields this tool actually reads are declared -- extra fields in
+// the real corpus (session_count, ttps_observed, etc.) are ignored by
+// Go's json.Unmarshal, not an error.
+type CorpusEntry struct {
+	AbuseScore       int    `json:"abuse_score"`
+	Country          string `json:"country"`
+	ISP              string `json:"isp"`
+	Org              string `json:"org"`
+	IsTor            bool   `json:"is_tor"`
+	IsProxy          bool   `json:"is_proxy"`
+	IsVPN            bool   `json:"is_vpn"`
+	OTXPulses        int    `json:"otx_pulses"`
+	EnrichedAt       string `json:"enriched_at"`
+	EnrichmentTTLDays int   `json:"enrichment_ttl_days"`
+}
+
+// loadEnrichedCorpus reads Tool 43's data/enriched_corpus.json (this tool
+// never writes to it -- read-only, matching the isolation contract
+// documented in enriched_corpus.yml). A missing or unreadable corpus file
+// degrades gracefully to an empty map, meaning every IP is treated as
+// needing enrichment -- correct behaviour for a first-ever run before the
+// corpus workflow has produced anything yet.
+func loadEnrichedCorpus(path string) map[string]CorpusEntry {
+	corpus := make(map[string]CorpusEntry)
+
+	data, err := os.ReadFile(path)
+	if err != nil {
+		logInfo("No enriched corpus found at %s -- all IPs will be enriched (cache disabled or first run)", path)
+		return corpus
+	}
+
+	if err := json.Unmarshal(data, &corpus); err != nil {
+		logWarning("Could not parse enriched corpus at %s: %v -- proceeding without cache", path, err)
+		return make(map[string]CorpusEntry)
+	}
+
+	logInfo("Loaded enriched corpus from %s (%d known IPs)", path, len(corpus))
+	return corpus
+}
+
+// isCacheFresh reports whether a corpus entry's enrichment is still
+// within its TTL window, meaning AbuseIPDB/ipinfo.io/OTX should NOT be
+// called again for this IP. Mirrors the exact TTL logic already
+// implemented in tools/43_enriched_corpus.py's needs_reenrichment() --
+// same cutoff computation, same "missing enriched_at means treat as
+// stale" default, kept independently here since this is Go and that is
+// Python, but the semantics are identical by design.
+func isCacheFresh(entry CorpusEntry, now time.Time) bool {
+	if entry.EnrichedAt == "" {
+		return false
+	}
+	enrichedAt, err := time.Parse(time.RFC3339, entry.EnrichedAt)
+	if err != nil {
+		return false
+	}
+	ttlDays := entry.EnrichmentTTLDays
+	if ttlDays <= 0 {
+		ttlDays = 30 // matches TTL_DAYS_DEFAULT in tools/43_enriched_corpus.py
+	}
+	ageDays := now.Sub(enrichedAt).Hours() / 24.0
+	return ageDays < float64(ttlDays)
+}
+
+// applyCachedValues copies a corpus entry's reputation fields onto an
+// IOC, used when a cache hit means the API calls are skipped entirely
+// for this run. LastSeen is still updated to "now" -- this tool's own
+// run is a legitimate observation of the IP even when the underlying
+// reputation data is reused from cache.
+func applyCachedValues(ioc IOC, entry CorpusEntry) IOC {
+	ioc.AbuseScore = entry.AbuseScore
+	ioc.Country = entry.Country
+	ioc.ISP = entry.ISP
+	ioc.Org = entry.Org
+	ioc.IsTor = entry.IsTor
+	ioc.IsProxy = entry.IsProxy
+	ioc.IsVPN = entry.IsVPN
+	ioc.OTXPulses = entry.OTXPulses
+	return ioc
+}
+
 // AbuseIPDB API response shapes (only fields we use)
 type abuseIPDBResponse struct {
 	Data struct {
@@ -369,19 +451,37 @@ func enrichOTX(ioc IOC, apiKey string, client *http.Client) IOC {
 // enrichAll enriches all IOCs concurrently via goroutines.
 // Uses same goroutine+channel pattern as 05_network_monitor_live.go.
 // 50ms stagger between launches to respect AbuseIPDB rate limits.
-func enrichAll(iocs []IOC, abuseKey, otxKey string) []IOC {
+func enrichAll(iocs []IOC, abuseKey, otxKey string, corpus map[string]CorpusEntry) []IOC {
 	client := &http.Client{Timeout: 8 * time.Second}
 	results := make(chan IOC, len(iocs))
 	var wg sync.WaitGroup
+	now := time.Now().UTC()
+
+	var cacheHits, freshEnrichments int
+	var statsMu sync.Mutex
 
 	for _, ioc := range iocs {
 		wg.Add(1)
 		go func(i IOC) {
 			defer wg.Done()
+
+			if entry, known := corpus[i.Indicator]; known && isCacheFresh(entry, now) {
+				i = applyCachedValues(i, entry)
+				i.LastSeen = now.Format(time.RFC3339)
+				statsMu.Lock()
+				cacheHits++
+				statsMu.Unlock()
+				results <- i
+				return
+			}
+
 			i = enrichIP(i, abuseKey, client)
 			i = enrichASN(i, client)
 			i = enrichOTX(i, otxKey, client)
-			i.LastSeen = time.Now().UTC().Format(time.RFC3339)
+			i.LastSeen = now.Format(time.RFC3339)
+			statsMu.Lock()
+			freshEnrichments++
+			statsMu.Unlock()
 			results <- i
 		}(ioc)
 		time.Sleep(50 * time.Millisecond) // respect AbuseIPDB 1000/day free tier
@@ -397,6 +497,8 @@ func enrichAll(iocs []IOC, abuseKey, otxKey string) []IOC {
 	for ioc := range results {
 		enriched = append(enriched, ioc)
 	}
+
+	logInfo("Enrichment complete — cache hits: %d, fresh API enrichments: %d", cacheHits, freshEnrichments)
 	return enriched
 }
 
@@ -431,6 +533,10 @@ func writeEnrichedJSON(iocs []IOC, outputPath string) error {
 func main() {
 	inputFile := flag.String("input", "", "Path to plain-text attacker IP list (one IP per line)")
 	outputFile := flag.String("output", "data/threat_ips.json", "Path to write enriched threat IPs JSON")
+	corpusFile := flag.String("corpus", "data/enriched_corpus.json",
+		"Path to Tool 43's enriched_corpus.json, used as a TTL-based cache to skip "+
+			"AbuseIPDB/ipinfo.io/OTX calls for IPs enriched within their TTL window. "+
+			"Pass an empty string to disable caching entirely.")
 	flag.BoolVar(&verbose, "verbose", false, "Enable verbose output")
 	flag.BoolVar(&verbose, "v", false, "Enable verbose output (shorthand)")
 	flag.Parse()
@@ -465,9 +571,23 @@ func main() {
 	unique := consolidateIOCs(rawIOCs)
 	logInfo("Total unique IPs after deduplication: %d", len(unique))
 
+	// Load Tool 43's enriched corpus as a TTL cache. Read-only -- this
+	// tool never writes to enriched_corpus.json (owned exclusively by
+	// Tool 43 / enriched_corpus.yml). Runs 15 minutes AFTER this tool in
+	// the real schedule (pipeline.yml at :00, enriched_corpus.yml at
+	// :15), so on every run after the first, the corpus reflects the
+	// PREVIOUS cycle's enrichment -- current-cycle IPs are always at
+	// least one cycle "behind" the freshest corpus write, which is fine:
+	// the TTL window is days, not hours, so a few hours of staleness in
+	// the cache-check itself has no practical effect on correctness.
+	corpus := make(map[string]CorpusEntry)
+	if *corpusFile != "" {
+		corpus = loadEnrichedCorpus(*corpusFile)
+	}
+
 	// Enrich concurrently
 	logInfo("Enriching %d unique IP(s)...", len(unique))
-	enriched := enrichAll(unique, abuseKey, otxKey)
+	enriched := enrichAll(unique, abuseKey, otxKey, corpus)
 	logInfo("Enrichment complete")
 
 	// Write JSON output

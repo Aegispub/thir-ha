@@ -1,0 +1,352 @@
+# .github/workflows/enriched_corpus.yml
+#
+# THIR ENRICHED CORPUS BUILDER
+#
+# Runs every 2 hours, offset +15 minutes from pipeline.yml (0 */2 vs
+# 15 */2), so it always starts after pipeline.yml's data/*.json commit
+# has landed. Reads pipeline.yml's outputs as INPUTS ONLY -- never
+# writes back to data/ir_cases.json, data/threat_ips.json, or any other
+# file pipeline.yml owns. See tools/43-50_*.py docstrings and
+# THIR_HA_Enriched_Pipeline_Review_v1 Section 8 for the full isolation
+# contract this workflow follows.
+#
+# Six corpora, six tools, one shared R2 helper (tools/r2_archive_helper.py):
+#   Tool 43 — Actor Corpus         (data/enriched_corpus.json)
+#   Tool 44 — Campaign Corpus      (data/campaign_corpus.json)
+#   Tool 47 — Credential Corpus    (data/credential_corpus.json)
+#   Tool 48 — Fingerprint Corpus   (data/fingerprint_corpus.json)
+#   Tool 49 — Malware Corpus       (data/malware_corpus.json — PERMANENT,
+#                                    never pruned, see Tool 49's own
+#                                    prune_malware_corpus() docstring)
+#   Tool 50 — Infrastructure Corpus (data/infrastructure_corpus.json)
+#
+# MONTHLY TRIGGER — SENTINEL PATTERN, NOT DATE/HOUR CHECK
+# ---------------------------------------------------------------------
+# pipeline.yml's own Tool 32 rollup logic (see its "Sentinel-based
+# rollup" step) documents that an exact HOUR-of-day check was tried
+# first for triggering monthly work, and was REJECTED: it raced with
+# the bi-hourly run and, combined with continue-on-error swallowing
+# failures, silently left multi-week gaps with no retry. This workflow
+# was originally built with an hour/minute-window check (a softer
+# version of the same anti-pattern) before that history was found and
+# this section was rewritten to match pipeline.yml's proven approach
+# exactly:
+#   - On the 1st of the month: write data/.corpus_monthly_pending
+#   - Every run: check for the sentinel; if present, do R2 archival +
+#     prune for all six corpora
+#   - After success: delete the sentinel
+#   - If it fails: sentinel persists, next run (2h later) retries
+#     automatically -- no missed months, no manual intervention needed
+#
+# R2 archival reuses the EXACT rclone config, gzip, copyto-with-retries,
+# and lsf-verify pattern already proven in historical_processor.yml's
+# Oracle corpus upload block -- same r2-oracle remote, same
+# thirha-raw-archive bucket, same ORACLE_R2_* secrets. No new remote,
+# no new bucket, no new secrets. Only folder/filename patterns differ
+# per corpus (see Section 6 of the design doc's R2 structure table).
+#
+# PRUNING — mirrors tools/37_alerts_live.py's prune_alert_history()
+# ---------------------------------------------------------------------
+# On the same monthly sentinel trigger, each corpus tool (except Tool
+# 49, which is permanent-retention by design) is invoked with
+# --prune-days 180, deleting entries whose staleness field is older
+# than 180 days -- identical cutoff, identical delete-based mechanics,
+# same default window as Tool 37's alert_history pruning, so an actor
+# and its associated alert history age out on comparable timelines.
+#
+# This workflow is fully independent of pipeline.yml and
+# historical_processor.yml. A failure here has zero impact on the live
+# dashboard, the SOC handover report, or any pipeline.yml output.
+
+name: THIR Enriched Corpus Builder
+
+permissions:
+  contents: write
+
+on:
+  schedule:
+    - cron: '15 */2 * * *'
+  workflow_dispatch:
+    inputs:
+      force_monthly:
+        description: 'Force this run to also do R2 archival + prune (manual testing of the monthly path)'
+        required: false
+        default: 'false'
+
+jobs:
+  build-enriched-corpus:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Determine run mode — write/check monthly sentinel
+        id: run_mode
+        run: |
+          CURRENT_MONTH=$(date -u +%Y-%m)
+          DAY_OF_MONTH=$(date -u +%d)
+          FORCE="${{ github.event.inputs.force_monthly }}"
+          LAST_ARCHIVED_MONTH=""
+          if [ -f "data/.corpus_last_archived_month" ]; then
+            LAST_ARCHIVED_MONTH=$(cat data/.corpus_last_archived_month)
+          fi
+
+          echo "[run_mode] Current month: ${CURRENT_MONTH}, Day: ${DAY_OF_MONTH}, Last archived: ${LAST_ARCHIVED_MONTH:-none}"
+
+          # Only write the sentinel on a genuine month TRANSITION -- i.e. it
+          # is the 1st AND this month has not already been archived. This
+          # is the fix for a real cost issue found during review: the
+          # earlier version (matching pipeline.yml's Tool 32 pattern
+          # exactly) re-wrote the sentinel on every 2h run throughout the
+          # 1st, causing R2 archival + prune to re-fire ~12 times that day
+          # instead of once. Tool 32's own payload (a markdown report
+          # rollup) is cheap enough that repetition doesn't matter -- this
+          # workflow's payload (six R2 network round-trips + git-side
+          # deletion) is not, so it needs the stricter once-per-month
+          # guarantee that comparing against a persisted last-archived
+          # marker provides. The sentinel-retry-on-failure property from
+          # the original design (see file header) is preserved: if
+          # archival fails partway through, data/.corpus_monthly_pending
+          # stays present because the "clear sentinel" step never runs,
+          # and LAST_ARCHIVED_MONTH is never updated -- so the very next
+          # run (2h later, still on the 1st, or even into the 2nd if the
+          # failure persists) will correctly retry, since the condition
+          # below is "sentinel present OR (day=01 AND month not yet
+          # archived)", not a narrow same-day-only window.
+          if [ "$DAY_OF_MONTH" = "01" ] && [ "$CURRENT_MONTH" != "$LAST_ARCHIVED_MONTH" ]; then
+            echo "[run_mode] 1st of month, ${CURRENT_MONTH} not yet archived — writing monthly sentinel"
+            touch data/.corpus_monthly_pending
+          fi
+
+          if [ "$FORCE" = "true" ]; then
+            echo "[run_mode] Manual force_monthly=true — running R2 archival + prune this run"
+            echo "do_monthly=true" >> "$GITHUB_OUTPUT"
+          elif [ -f "data/.corpus_monthly_pending" ]; then
+            echo "[run_mode] Monthly sentinel present — running R2 archival + prune this run"
+            echo "do_monthly=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "[run_mode] Normal 2h run — vault commit only"
+            echo "do_monthly=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Install rclone
+        if: steps.run_mode.outputs.do_monthly == 'true'
+        run: curl https://rclone.org/install.sh | sudo bash
+
+      - name: Configure rclone for R2 — Oracle corpus
+        if: steps.run_mode.outputs.do_monthly == 'true'
+        env:
+          ORACLE_R2_ACCOUNT_ID: ${{ secrets.ORACLE_R2_ACCOUNT_ID }}
+          ORACLE_R2_ACCESS_KEY: ${{ secrets.ORACLE_R2_ACCESS_KEY }}
+          ORACLE_R2_SECRET_KEY: ${{ secrets.ORACLE_R2_SECRET_KEY }}
+        run: |
+          mkdir -p ~/.config/rclone
+          cat > ~/.config/rclone/rclone.conf << EOF
+          [r2-oracle]
+          type = s3
+          provider = Cloudflare
+          access_key_id = ${ORACLE_R2_ACCESS_KEY}
+          secret_access_key = ${ORACLE_R2_SECRET_KEY}
+          endpoint = https://${ORACLE_R2_ACCOUNT_ID}.r2.cloudflarestorage.com
+          no_check_bucket = true
+          EOF
+
+      - name: Tool 43 — Actor Corpus
+        run: |
+          mkdir -p enriched-data
+          if [ "${{ steps.run_mode.outputs.do_monthly }}" = "true" ]; then
+            python3 tools/43_enriched_corpus.py data enriched-data --prune-days 180
+          else
+            python3 tools/43_enriched_corpus.py data enriched-data
+          fi
+
+      - name: Tool 43 — R2 archive (monthly only)
+        if: steps.run_mode.outputs.do_monthly == 'true'
+        run: python3 tools/43_enriched_corpus.py data enriched-data --archive-to-r2
+
+      - name: Tool 44 — Campaign Corpus
+        run: |
+          mkdir -p campaign-corpus
+          if [ "${{ steps.run_mode.outputs.do_monthly }}" = "true" ]; then
+            python3 tools/44_campaign_corpus.py data campaign-corpus --prune-days 180
+          else
+            python3 tools/44_campaign_corpus.py data campaign-corpus
+          fi
+
+      - name: Tool 44 — R2 archive (monthly only)
+        if: steps.run_mode.outputs.do_monthly == 'true'
+        run: python3 tools/44_campaign_corpus.py data campaign-corpus --archive-to-r2
+
+      - name: Tool 47 — Credential Corpus
+        run: |
+          mkdir -p credential-corpus
+          if [ "${{ steps.run_mode.outputs.do_monthly }}" = "true" ]; then
+            python3 tools/47_credential_corpus.py data credential-corpus --prune-days 180
+          else
+            python3 tools/47_credential_corpus.py data credential-corpus
+          fi
+
+      - name: Tool 47 — R2 archive (monthly only)
+        if: steps.run_mode.outputs.do_monthly == 'true'
+        run: python3 tools/47_credential_corpus.py data credential-corpus --archive-to-r2
+
+      - name: Tool 48 — Fingerprint Corpus
+        run: |
+          mkdir -p fingerprint-corpus
+          if [ "${{ steps.run_mode.outputs.do_monthly }}" = "true" ]; then
+            python3 tools/48_fingerprint_corpus.py data fingerprint-corpus --prune-days 180
+          else
+            python3 tools/48_fingerprint_corpus.py data fingerprint-corpus
+          fi
+
+      - name: Tool 48 — R2 archive (monthly only)
+        if: steps.run_mode.outputs.do_monthly == 'true'
+        run: python3 tools/48_fingerprint_corpus.py data fingerprint-corpus --archive-to-r2
+
+      # Tool 49 is NEVER invoked with --prune-days -- permanent-retention
+      # by design (SHA256 vault). Still gets its monthly R2 snapshot;
+      # only the git-side deletion step is skipped.
+      - name: Tool 49 — Malware Corpus
+        run: |
+          mkdir -p malware-corpus
+          python3 tools/49_malware_corpus.py data malware-corpus
+
+      - name: Tool 49 — R2 archive (monthly only)
+        if: steps.run_mode.outputs.do_monthly == 'true'
+        run: python3 tools/49_malware_corpus.py data malware-corpus --archive-to-r2
+
+      - name: Tool 50 — Infrastructure Corpus
+        run: |
+          mkdir -p infrastructure-corpus
+          if [ "${{ steps.run_mode.outputs.do_monthly }}" = "true" ]; then
+            python3 tools/50_infrastructure_corpus.py data infrastructure-corpus --prune-days 180
+          else
+            python3 tools/50_infrastructure_corpus.py data infrastructure-corpus
+          fi
+
+      - name: Tool 50 — R2 archive (monthly only)
+        if: steps.run_mode.outputs.do_monthly == 'true'
+        run: python3 tools/50_infrastructure_corpus.py data infrastructure-corpus --archive-to-r2
+
+      # ------------------------------------------------------------
+      # Enriched-corpus tool manifest — same self-generating pattern
+      # already used by pipeline.yml (see its own "Generate
+      # tool_manifest.json" step). That step explicitly scans ONLY
+      # pipeline.yml's own tool invocations, by design ("Always in
+      # sync with what actually runs" -- but only within that one
+      # file). Since these six corpus tools run from a separate
+      # workflow, pipeline.yml's manifest step structurally cannot see
+      # them -- confirmed: data/tool_manifest.json's tool_count never
+      # includes Tools 43/44/47/48/49/50, and CIS-2's dashboard
+      # evidence claims that file "tracks all active tools", which
+      # became a stale claim the moment this workflow started running
+      # tools outside pipeline.yml. Writing a SEPARATE manifest file
+      # here (not merging into pipeline.yml's file, which this
+      # workflow must never write to per the ownership boundary
+      # documented throughout this file) is the fix -- Tool 05 or the
+      # dashboard can read both files rather than one file silently
+      # under-reporting.
+      # ------------------------------------------------------------
+      - name: Generate tool_manifest_enriched.json
+        continue-on-error: true
+        run: |
+          python3 - << 'PYEOF'
+          import re, json
+          from datetime import datetime, timezone
+
+          with open(".github/workflows/enriched_corpus.yml") as f:
+              content = f.read()
+
+          pattern = re.compile(
+              r'python3 (tools/[\w.]+\.py)'
+          )
+          manifest = []
+          seen = set()
+          for m in pattern.finditer(content):
+              path = m.group(1)
+              if path in seen:
+                  continue
+              seen.add(path)
+              desc = ""
+              try:
+                  with open(path) as tf:
+                      for line in tf:
+                          line = line.strip()
+                          if line and not line.startswith(("#!", "package", "/*", '"""', "//")):
+                              desc = line.lstrip('"#/ ').strip()
+                              break
+              except FileNotFoundError:
+                  desc = "(file not found)"
+              manifest.append({"tool": path, "language": "Python", "description": desc})
+
+          out = {
+              "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+              "source": "enriched_corpus.yml",
+              "tool_count": len(manifest),
+              "tools": manifest,
+          }
+          with open("data/tool_manifest_enriched.json", "w") as f:
+              json.dump(out, f, indent=2)
+          print(f"[ToolManifest] Wrote {len(manifest)} tool entries to data/tool_manifest_enriched.json")
+          PYEOF
+
+      # Cleared only if every step above succeeded -- GitHub Actions
+      # steps default to failing the job on non-zero exit, so reaching
+      # this step means all prior R2/prune steps returned 0. Mirrors
+      # pipeline.yml's Tool 32 sentinel-clear pattern: success removes
+      # the sentinel, failure leaves it in place for the next run to
+      # retry automatically.
+      - name: Clear monthly sentinel on success
+        if: steps.run_mode.outputs.do_monthly == 'true'
+        run: |
+          rm -f data/.corpus_monthly_pending
+          date -u +%Y-%m > data/.corpus_last_archived_month
+          echo "[run_mode] Monthly archival + prune succeeded — sentinel cleared, $(cat data/.corpus_last_archived_month) recorded as archived"
+
+      # Never touches data/ir_cases.json, data/threat_ips.json,
+      # data/credentials.json, data/ssh_fingerprints.json,
+      # data/command_clusters.json, data/asn_clusters.json,
+      # data/malware_report.json, data/yara_matches.json,
+      # data/alert_history.json, data/stats.json, reports/, or
+      # historical_data/ -- all owned by pipeline.yml or
+      # historical_processor.yml respectively.
+      - name: Commit enriched corpus data
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add \
+            data/enriched_corpus.json \
+            data/campaign_corpus.json \
+            data/credential_corpus.json \
+            data/fingerprint_corpus.json \
+            data/malware_corpus.json \
+            data/infrastructure_corpus.json \
+            data/.corpus_monthly_pending \
+            data/.corpus_last_archived_month \
+            data/tool_manifest_enriched.json \
+            enriched-data/ \
+            campaign-corpus/ \
+            credential-corpus/ \
+            fingerprint-corpus/ \
+            malware-corpus/ \
+            infrastructure-corpus/ \
+            2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No changes to enriched corpus data — nothing to commit"
+          else
+            TIMESTAMP=$(date -u '+%Y-%m-%dT%H:%M:%SZ')
+            ACTOR_COUNT=$(python3 -c "import json; d=json.load(open('data/enriched_corpus.json')); print(len(d))" 2>/dev/null || echo "?")
+            SUFFIX=""
+            if [ "${{ steps.run_mode.outputs.do_monthly }}" = "true" ]; then
+              SUFFIX=" [monthly archival + prune]"
+            fi
+            git commit -m "auto: enriched corpus update ${TIMESTAMP} (${ACTOR_COUNT} actors tracked)${SUFFIX}"
+            git push
+          fi
