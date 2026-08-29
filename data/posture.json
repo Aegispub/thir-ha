@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-29T03:34:13.836519969Z",
+  "generated_at": "2026-08-29T10:55:29.622372632Z",
   "services": [
     {
       "address": "150.230.174.199:2222",
       "status": "UP",
-      "checked_at": "2026-08-29T03:34:10.796084966Z"
+      "checked_at": "2026-08-29T10:55:26.625127968Z"
     },
     {
       "address": "10.0.0.53:2222",
       "status": "UP",
-      "checked_at": "2026-08-29T03:34:10.847601328Z"
+      "checked_at": "2026-08-29T10:55:26.689987102Z"
     }
   ],
   "summary": {
@@ -29,7 +29,7 @@
       "id": "CIS-2",
       "name": "Software Inventory",
       "status": "MONITORING",
-      "evidence": "data/tool_manifest.json auto-generated from pipeline.yml each run — tracks all active tools, languages, and I/O paths"
+      "evidence": "data/tool_manifest.json (pipeline.yml tools) + data/tool_manifest_enriched.json (enriched_corpus.yml tools) — both auto-generated each run, together tracking all active tools across both workflows, languages, and I/O paths"
     },
     {
       "id": "CIS-3",

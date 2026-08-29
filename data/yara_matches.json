@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-08-29T03:36:21.436595+00:00",
+  "generated_at": "2026-08-29T10:58:19.787384+00:00",
   "downloads_dir": "/tmp/cowrie-downloads",
   "downloads_found": true,
-  "files_scanned": 28,
-  "files_skipped": 21,
-  "files_classified": 19,
+  "files_scanned": 29,
+  "files_skipped": 20,
+  "files_classified": 20,
   "yara_available": false,
   "analysis_method": "heuristic",
   "families_detected": [
     {
       "family": "Downloader",
-      "count": 15
+      "count": 16
     },
     {
       "family": "Rootkit",
@@ -25,11 +25,11 @@
       "count": 3
     },
     {
-      "family": "XMRig",
+      "family": "Mushtik",
       "count": 2
     },
     {
-      "family": "Mushtik",
+      "family": "XMRig",
       "count": 2
     }
   ],
@@ -37,7 +37,7 @@
     "HIGH": 2,
     "UNKNOWN": 9,
     "CRITICAL": 10,
-    "LOW": 7
+    "LOW": 8
   },
   "critical_samples": [
     {
@@ -79,8 +79,8 @@
       "sha256": "09591253a95411d60c2b0d5384924aa7cafbceec1467c951c6bbb1655d748f0b",
       "families": [
         "Downloader",
-        "Rootkit",
-        "Mirai"
+        "Mirai",
+        "Rootkit"
       ],
       "severity": "CRITICAL"
     },
@@ -88,10 +88,10 @@
       "filename": "11707e3902992c8e20e19de09cbc78381e43234c4560a706a031fe01ce7e96fb",
       "sha256": "11707e3902992c8e20e19de09cbc78381e43234c4560a706a031fe01ce7e96fb",
       "families": [
-        "Downloader",
-        "XMRig",
-        "Rootkit",
         "Mushtik",
+        "Downloader",
+        "Rootkit",
+        "XMRig",
         "Gafgyt"
       ],
       "severity": "CRITICAL"
@@ -109,10 +109,10 @@
       "filename": "1bd3745a4f9043ead807d7777669b0dbf5b56985e5b3dd9d7cff8384154ea4a8",
       "sha256": "1bd3745a4f9043ead807d7777669b0dbf5b56985e5b3dd9d7cff8384154ea4a8",
       "families": [
-        "Downloader",
-        "XMRig",
-        "Rootkit",
         "Mushtik",
+        "Downloader",
+        "Rootkit",
+        "XMRig",
         "Gafgyt"
       ],
       "severity": "CRITICAL"
@@ -131,8 +131,8 @@
       "sha256": "1e7c134cf160b486708c40c21f671cd6f53c7578a8047a4eb22f668476e0c4c4",
       "families": [
         "Downloader",
-        "Rootkit",
-        "Mirai"
+        "Mirai",
+        "Rootkit"
       ],
       "severity": "CRITICAL"
     },
@@ -232,10 +232,6 @@
     },
     {
       "filename": "20260807-060110-c733cc2a6a9b-0-redir__home_uuid_1_00000000_0000_0000_0000_000000000000",
-      "reason": "empty file"
-    },
-    {
-      "filename": "20260821-001551-338449f07075-0-redir__home_20230724T164419",
       "reason": "empty file"
     }
   ],
@@ -552,8 +548,8 @@
       "classified": true,
       "families": [
         "Downloader",
-        "Rootkit",
-        "Mirai"
+        "Mirai",
+        "Rootkit"
       ],
       "severity": "CRITICAL",
       "match_count": 3,
@@ -710,10 +706,10 @@
       "file_type": "ELF 64-bit executable",
       "classified": true,
       "families": [
-        "Downloader",
-        "XMRig",
-        "Rootkit",
         "Mushtik",
+        "Downloader",
+        "Rootkit",
+        "XMRig",
         "Gafgyt"
       ],
       "severity": "CRITICAL",
@@ -1000,6 +996,40 @@
       "analysis_method": "heuristic"
     },
     {
+      "filename": "1bc1c784057dc4e36fcc913fe03b1f0cae8474063b486ae3443b9ef8bced9548",
+      "sha256": "1bc1c784057dc4e36fcc913fe03b1f0cae8474063b486ae3443b9ef8bced9548",
+      "md5": "2c76270662913b620e8b05e309b93737",
+      "file_size_bytes": 1608,
+      "file_type": "Shell script",
+      "classified": true,
+      "families": [
+        "Downloader"
+      ],
+      "severity": "LOW",
+      "match_count": 1,
+      "matches": [
+        {
+          "rule": "heuristic_downloader",
+          "family": "Downloader",
+          "description": "Shell/script downloader",
+          "tags": [
+            "Downloader",
+            "heuristic"
+          ],
+          "meta": {
+            "description": "Shell/script downloader",
+            "author": "THIR-heuristic",
+            "severity": "LOW"
+          },
+          "strings_matched": [
+            "wget http"
+          ],
+          "match_type": "heuristic"
+        }
+      ],
+      "analysis_method": "heuristic"
+    },
+    {
       "filename": "1bd3745a4f9043ead807d7777669b0dbf5b56985e5b3dd9d7cff8384154ea4a8",
       "sha256": "1bd3745a4f9043ead807d7777669b0dbf5b56985e5b3dd9d7cff8384154ea4a8",
       "md5": "19cb85db85565e19840d5e6214abb198",
@@ -1007,10 +1037,10 @@
       "file_type": "ELF 64-bit executable",
       "classified": true,
       "families": [
-        "Downloader",
-        "XMRig",
-        "Rootkit",
         "Mushtik",
+        "Downloader",
+        "Rootkit",
+        "XMRig",
         "Gafgyt"
       ],
       "severity": "CRITICAL",
@@ -1175,8 +1205,8 @@
       "classified": true,
       "families": [
         "Downloader",
-        "Rootkit",
-        "Mirai"
+        "Mirai",
+        "Rootkit"
       ],
       "severity": "CRITICAL",
       "match_count": 3,
