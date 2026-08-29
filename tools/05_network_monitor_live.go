@@ -345,7 +345,7 @@ func buildCISControls(overallStatus string) []CISControl {
 
     controls := []CISControl{
         {ID: "CIS-1",  Name: "Asset Inventory",          Status: active,     Evidence: "assets.json updated every pipeline run by Tool 05 — covers VM2 directly and VM1 via SSH relay"},
-        {ID: "CIS-2",  Name: "Software Inventory",       Status: monitoring, Evidence: "data/tool_manifest.json auto-generated from pipeline.yml each run — tracks all active tools, languages, and I/O paths"},
+        {ID: "CIS-2",  Name: "Software Inventory",       Status: monitoring, Evidence: "data/tool_manifest.json (pipeline.yml tools) + data/tool_manifest_enriched.json (enriched_corpus.yml tools) — both auto-generated each run, together tracking all active tools across both workflows, languages, and I/O paths"},
         {ID: "CIS-3",  Name: "Data Protection",          Status: active,     Evidence: "R2 archive encrypted at rest — thirha-raw-archive"},
         {ID: "CIS-4",  Name: "Secure Configuration",     Status: active,     Evidence: "haproxy.cfg, cowrie.cfg, VCN rules in config/"},
         {ID: "CIS-5",  Name: "Account Management",       Status: active,     Evidence: "Two key pairs, dedicated cowrie user, no shared credentials"},

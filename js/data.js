@@ -178,8 +178,8 @@ const TOOLS_DATA = [
   },
   {
     name: 'Report Lifecycle Manager', langs: ['py'],
-    desc: 'Tiered report retention: saves daily SOC reports, rolls up weekly summaries on Monday, generates monthly archives on the 1st. Tracks peak session/IP/threat high-water marks in stats.json. Prunes reports beyond 6-month retention.',
-    domain: 'Reporting & Retention', lines: 410,
+    desc: 'Tiered report retention: saves daily SOC reports, rolls up weekly summaries on Monday, monthly archives on the 1st (deferred automatically until the previous month\'s final ISO week has itself been rolled up), and fiscal-year summaries (April-March) every April 1. Tracks peak session/IP/threat high-water marks in stats.json. Each tier is consumption-pruned into the next rather than deleted outright.',
+    domain: 'Reporting & Retention', lines: 1002,
   },
   // ── Phase 2 — Intelligence layer ────────────────────────────────────────────
   {
@@ -223,6 +223,60 @@ const TOOLS_DATA = [
     desc: 'Monitors all pipeline JSON outputs each run. Fires on HIGH/CRITICAL malware, new successful-auth IPs, first-seen ASN clusters, TCP tunnel attempts, and active campaigns. Deduplicates with per-severity windows. Supports Slack webhook and SMTP. Output: data/alert_history.json.',
     domain: 'Alerting',
     lines: 510,
+  },
+  // ── Phase 3 — Enriched corpus (cross-run accumulation) ─────────────────────
+  // Runs in a separate workflow (enriched_corpus.yml, +15min offset from the
+  // main pipeline), reading pipeline.yml's per-run outputs as read-only
+  // inputs and merging them into permanent, cross-run state. See
+  // docs/enriched_corpus_schema_reconciliation.md for the full design.
+  {
+    name: 'Enriched Corpus Builder — Actor',
+    langs: ['py'],
+    desc: 'Merges each run\'s ir_cases.json and threat_ips.json into a permanent per-IP vault — cross-run first/last seen, session counts, TTP unions. Also the TTL cache Tool 27 reads to skip redundant AbuseIPDB/OTX/ipinfo.io calls. Output: data/enriched_corpus.json.',
+    domain: 'Threat Intelligence',
+    lines: 432,
+  },
+  {
+    name: 'Campaign Corpus Builder',
+    langs: ['py'],
+    desc: 'Accumulates command_clusters.json across runs, tracked by sequence_hash — a campaign\'s stable identity across pipeline cycles. Tracks active/ended status and cumulative IP participation. Output: data/campaign_corpus.json.',
+    domain: 'Campaign Detection',
+    lines: 282,
+  },
+  {
+    name: 'Credential Corpus Builder',
+    langs: ['py'],
+    desc: 'Accumulates credential pairs across runs, keyed by SHA256(username|password). Tracks spray pattern evolution and successful-auth events over time, independent of any single run\'s window. Output: data/credential_corpus.json.',
+    domain: 'Credential Intelligence',
+    lines: 274,
+  },
+  {
+    name: 'Fingerprint Corpus Builder',
+    langs: ['py'],
+    desc: 'Accumulates SSH HASSH fingerprints across runs with exact session-level deduplication. Tracks which attacker tooling is persistently active versus one-off. Output: data/fingerprint_corpus.json.',
+    domain: 'Attacker Attribution',
+    lines: 265,
+  },
+  {
+    name: 'Malware Corpus Builder',
+    langs: ['py'],
+    desc: 'Permanent SHA256-keyed vault of every malware sample ever analyzed — never pruned, by design, for future cross-referencing against new VirusTotal submissions or public IOC feeds. Also the cache Tool 31 reads to skip redundant VirusTotal calls for known hashes. Output: data/malware_corpus.json.',
+    domain: 'Malware Analysis',
+    lines: 303,
+  },
+  {
+    name: 'Infrastructure Corpus Builder',
+    langs: ['py'],
+    desc: 'Accumulates ASN clustering data across runs — persistently hostile hosting providers versus one-off appearances. Cross-references the Actor Corpus for confirmed Tor/VPN/proxy activity per ASN. Output: data/infrastructure_corpus.json.',
+    domain: 'Infrastructure Analysis',
+    lines: 310,
+  },
+  {
+    name: 'R2 Archive Helper',
+    langs: ['py'],
+    desc: 'Shared module (not an independently scheduled tool) used by all six corpus builders above for monthly Cloudflare R2 archival — gzip, upload-with-retry, and list-based upload verification, reusing the same rclone remote and bucket as the historical corpus processor.',
+    domain: 'Data Retention',
+    lines: 169,
   },
 ];
 
@@ -273,7 +327,7 @@ const POSTURE_CONTROLS = [
   // Runbook: documented Oracle HA rebuild procedure (THIR_HA_Runbooks_v2.docx) — version-controlled in docs/
   { id: 'RC.RP-1',  name: 'Recovery Planning',              status: 'active',     tool: 'Runbook' },
 
-  // Planned: YARA rule scanning for downloaded samples
+  // Tool 33 — yara_classifier_live.py: YARA rule scanning for downloaded samples
   { id: 'DE.CM-5',  name: 'YARA Rule Matching',             status: 'active',     tool: 'Tool 33' },
 
   // Tool 34: credential pair extraction + successful auth flagging

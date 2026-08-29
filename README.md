@@ -74,16 +74,45 @@ VM2 local copy  → /opt/thir/logs/cowrie.json
 │  Tool 32  → Save daily + peak stats      → reports/daily/    │
 │  Tool 07  → Data integrity check         → (exit code)       │
 │                                                              │
-│  ── Monday 00:05 UTC ──────────────────────────────────── │
+│  ── Monday (sentinel-triggered) ──────────────────────────── │
 │  Tool 32 --rollup weekly                 → reports/weekly/   │
 │                                                              │
-│  ── 1st of month 00:10 UTC ────────────────────────────── │
+│  ── 1st of month (sentinel, deferred until prior month's   │
+│     final ISO week is rolled up) ─────────────────────────  │
 │  Tool 32 --rollup monthly                → reports/monthly/  │
+│                                                              │
+│  ── April 1 (fixed fiscal-year boundary) ─────────────────  │
+│  Tool 32 --rollup monthly (yearly step)  → reports/yearly/   │
 │                                                              │
 └──────────────────────────────────────────────────────────────┘
         │  git push data/ + reports/
         ▼
 GitHub Pages → thirha.aegispub.com
+```
+
+```
+┌──────────────────────────────────────────────────────────────┐
+│         GitHub Actions — Enriched Corpus Workflow             │
+│         (.github/workflows/enriched_corpus.yml)                │
+│         Independent workflow — offset +15min from pipeline    │
+│                                                              │
+│  ── Every 2 hours (15 */2) ─────────────────────────────── │
+│  Tool 43 → Actor Corpus          → data/enriched_corpus.json │
+│  Tool 44 → Campaign Corpus       → data/campaign_corpus.json │
+│  Tool 47 → Credential Corpus     → data/credential_corpus.json│
+│  Tool 48 → Fingerprint Corpus    → data/fingerprint_corpus.json│
+│  Tool 49 → Malware Corpus        → data/malware_corpus.json  │
+│  Tool 50 → Infrastructure Corpus → data/infrastructure_corpus.json│
+│                                                              │
+│  ── 1st of month (once, via persisted marker) ──────────── │
+│  R2 archive (all six, via r2_archive_helper.py)               │
+│  Prune entries >180 days (all except Tool 49 — permanent)     │
+│                                                              │
+└──────────────────────────────────────────────────────────────┘
+        │  git push data/*_corpus.json (never touches pipeline.yml's files)
+        ▼
+Read by Tool 27 (AbuseIPDB/OTX cache) and Tool 31 (VirusTotal cache)
+on their NEXT run — see docs/enriched_corpus_schema_reconciliation.md
 ```
 
 ### HA Stack
@@ -112,7 +141,7 @@ GitHub Pages → thirha.aegispub.com
 | 30 | `30_metric_exporter_live.go` | Go | Aggregates all pipeline outputs → dashboard stats |
 | 30b | `30b_asn_clustering_live.go` | Go | Groups attacker IPs by ASN; tags Tor/VPN/proxy infrastructure |
 | 31 | `31_malware_analyzer_live.py` | Python | Magic bytes, hashes, suspicious strings, optional VirusTotal |
-| 32 | `32_report_lifecycle.py` | Python | Daily save, weekly/monthly rollup, peak stats, 6-month retention |
+| 32 | `32_report_lifecycle.py` | Python | Daily save, weekly/monthly/yearly (fiscal Apr-Mar) rollup, peak stats, consumption-pruned at every tier |
 | 33 | `33_yara_classifier_live.py` | Python | YARA rule matching on downloaded malware; heuristic fallback |
 | 34 | `34_credential_extractor_live.py` | Python | Extracts attacker username/password pairs; top credentials analysis |
 | 35 | `35_ssh_fingerprint_live.py` | Python | HASSH fingerprints, client family mapping, botnet KEX detection |
@@ -127,6 +156,24 @@ GitHub Pages → thirha.aegispub.com
 | 38 | `38_rsync_collector.py` | Python | Structured log pull VM1→VM2 via private VCN; replaces shell cron script |
 | 39 | `39_node_healthcheck.go` | Go | Direct VM1 health checks (10.0.0.53); writes `data/node_health.json` |
 | 40 | `40_failover_notifier.py` | Python | Alerts when HAProxy shifts traffic between backends |
+
+### Enriched Corpus Tools (thir-ha only — cross-run accumulation)
+
+Six tools that accumulate permanent, cross-run state from the live pipeline's outputs, running in a separate workflow (`.github/workflows/enriched_corpus.yml`) offset 15 minutes after the main pipeline. Unlike the tools above, which each produce output scoped to a single 2h run, these six read that per-run output and merge it into a growing vault — see `docs/enriched_corpus_schema_reconciliation.md` for the full field-level design and `docs/enriched_corpus_build_plan.md` for build rationale.
+
+| # | Tool | Language | Role |
+|---|---|---|---|
+| 43 | `43_enriched_corpus.py` | Python | Actor Corpus — per-IP cross-run memory (first/last seen, session count, TTP union); also the TTL cache Tool 27 reads to skip redundant AbuseIPDB/OTX calls |
+| 44 | `44_campaign_corpus.py` | Python | Campaign Corpus — cross-run campaign tracking keyed by `sequence_hash`, with active/ended status |
+| 47 | `47_credential_corpus.py` | Python | Credential Corpus — cross-run credential pair accumulation, keyed by SHA256(username\|password) |
+| 48 | `48_fingerprint_corpus.py` | Python | Fingerprint Corpus — cross-run HASSH tracking, exact session dedup via `sessions[]` |
+| 49 | `49_malware_corpus.py` | Python | Malware Corpus — permanent SHA256 sample vault; never pruned by design; also the cache Tool 31 reads to skip redundant VirusTotal calls |
+| 50 | `50_infrastructure_corpus.py` | Python | Infrastructure Corpus — cross-run ASN tracking; cross-references Tool 43's output for Tor/VPN/proxy confirmation |
+| — | `r2_archive_helper.py` | Python | Shared module (not a numbered pipeline tool) — gzip + verified R2 upload, reused by all six corpus tools above |
+
+**Retention:** each corpus vault (`data/*_corpus.json`) is permanent in git — never wholesale overwritten. On the 1st of each calendar month (once, via a persisted `last-archived-month` marker rather than a same-day repeat trigger), each corpus is snapshotted to Cloudflare R2 (`thirha-raw-archive`, same bucket and `r2-oracle` remote as the historical corpus above) and entries older than 180 days are pruned from the git vault — except Tool 49's malware corpus, which is permanent-retention by design (a SHA256 hash vault has no useful "too old" concept for future cross-referencing).
+
+**API cost reduction:** Tools 27 and 31 were both modified to check these corpora before making external API calls — Tool 27 against Tool 43's output (AbuseIPDB, ipinfo.io, and OTX, all skipped on a TTL-fresh cache hit), Tool 31 against Tool 49's output (VirusTotal, skipped permanently once a SHA256 has a cached result). Both changes are backward compatible: with no corpus file present, both tools behave exactly as before.
 
 ### HTTP Honeypot Tools (planned — pending Tool 41 deployment)
 
@@ -150,8 +197,11 @@ The pipeline uses watermark-based incremental fetching. After each successful ru
 | Tier | Trigger | Output | Retention |
 |---|---|---|---|
 | Daily | Every pipeline run | `reports/daily/soc_YYYY-MM-DD.md` | 5–7 days |
-| Weekly | Monday 00:05 UTC | `reports/weekly/soc_week_YYYY-WNN.md` | 3–4 weeks |
-| Monthly | 1st of month 00:10 UTC | `reports/monthly/soc_YYYY-MM.md` | 6 months |
+| Weekly | Monday (sentinel-triggered, no fixed hour) | `reports/weekly/soc_week_YYYY-WNN.md` | 3–4 weeks (consumption-pruned by Monthly) |
+| Monthly | 1st of month — deferred until the previous month's final ISO week has itself been rolled up (see below) | `reports/monthly/soc_YYYY-MM.md` | Consumption-pruned by Yearly, not age-pruned |
+| Yearly | April 1 (fixed fiscal-year boundary, no jurisdiction-specific meaning) | `reports/yearly/soc_FY<start>-<end>.md` | Permanent |
+
+Monthly rollup will not run before its actual prerequisite exists: if the previous month's last few days fall in an ISO week extending into the following month (true for December every year), monthly rollup defers automatically and retries on the next scheduled run rather than producing a short month or racing weekly's own rollup of that same week. The original 6-month monthly retention cap was an AWS free-tier credit-expiry workaround; since the Oracle HA migration there is no equivalent time constraint, so monthly reports are retained until rolled into a yearly summary instead of being deleted outright.
 
 Peak stats (peak sessions, unique IPs, confirmed threats) are tracked as high-water marks in `data/stats.json` — only updated when the current run beats the existing peak, never reset by a quieter run.
 

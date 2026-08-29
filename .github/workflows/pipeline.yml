@@ -766,21 +766,20 @@ jobs:
             touch data/.rollup_weekly_pending
           fi
 
-          # Execute rollup if sentinel exists — monthly takes priority
-          if [ -f "data/.rollup_monthly_pending" ]; then
-            echo "[Tool 32] Monthly sentinel found — triggering MONTHLY rollup"
-            python tools/32_report_lifecycle.py \
-              --rollup monthly \
-              --stats data/stats.json \
-              --verbose
-            if [ $? -eq 0 ]; then
-              rm data/.rollup_monthly_pending
-              echo "[Tool 32] Monthly rollup succeeded — sentinel cleared"
-            else
-              echo "[Tool 32] Monthly rollup failed — sentinel retained for retry"
-            fi
-
-          elif [ -f "data/.rollup_weekly_pending" ]; then
+          # Execute rollup if sentinel exists — WEEKLY runs first now.
+          # Previously monthly ran first unconditionally on any day both
+          # sentinels were set (the 1st landing on a Monday, ~15% of
+          # months -- e.g. 2026-06-01). That starved weekly entirely for
+          # that cycle via the old if/elif exclusivity. Now: always
+          # attempt weekly first if its sentinel is present, THEN attempt
+          # monthly. rollup_monthly() itself also independently refuses
+          # to run until its actual prerequisite (the previous month's
+          # final ISO week) has been rolled up -- see
+          # _last_iso_week_rollup_ready() in 32_report_lifecycle.py --
+          # so even running monthly second in the same cycle is safe: if
+          # weekly just wrote that final week's file moments ago, the
+          # gate correctly sees it as ready.
+          if [ -f "data/.rollup_weekly_pending" ]; then
             echo "[Tool 32] Weekly sentinel found — triggering WEEKLY rollup"
             python tools/32_report_lifecycle.py \
               --rollup weekly \
@@ -792,8 +791,26 @@ jobs:
             else
               echo "[Tool 32] Weekly rollup failed — sentinel retained for retry"
             fi
+          fi
 
-          else
+          if [ -f "data/.rollup_monthly_pending" ]; then
+            echo "[Tool 32] Monthly sentinel found — triggering MONTHLY rollup"
+            python tools/32_report_lifecycle.py \
+              --rollup monthly \
+              --stats data/stats.json \
+              --verbose
+            MONTHLY_EXIT=$?
+            if [ $MONTHLY_EXIT -eq 0 ]; then
+              rm data/.rollup_monthly_pending
+              echo "[Tool 32] Monthly rollup succeeded (or was a no-op already-done/no-data case) — sentinel cleared"
+            elif [ $MONTHLY_EXIT -eq 3 ]; then
+              echo "[Tool 32] Monthly rollup deferred — previous month's final week not yet rolled up — sentinel retained, will retry next run"
+            else
+              echo "[Tool 32] Monthly rollup failed — sentinel retained for retry"
+            fi
+          fi
+
+          if [ ! -f "data/.rollup_weekly_pending" ] && [ ! -f "data/.rollup_monthly_pending" ]; then
             echo "[Tool 32] No sentinel found — skipping rollup this run"
           fi
 
@@ -887,7 +904,24 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/ reports/
+          # Explicitly exclude enriched-corpus vault files from this wildcard
+          # add. data/ is staged in full for pipeline.yml's own outputs, but
+          # data/enriched_corpus.json, data/campaign_corpus.json, etc. are
+          # owned and committed exclusively by enriched_corpus.yml (separate
+          # workflow, +15min offset). Without this exclusion, a timing overlap
+          # between the two workflows could cause pipeline.yml to commit
+          # corpus files under its own commit message -- not data-corrupting
+          # (both workflows write the same correct content), but misleading
+          # attribution and a violation of the "never touches" ownership
+          # boundary documented in enriched_corpus.yml and the enriched
+          # pipeline design doc (Section 8.3).
+          git add data/ reports/ \
+            -- ':!data/enriched_corpus.json' \
+               ':!data/campaign_corpus.json' \
+               ':!data/credential_corpus.json' \
+               ':!data/fingerprint_corpus.json' \
+               ':!data/malware_corpus.json' \
+               ':!data/infrastructure_corpus.json'
           if git diff --staged --quiet; then
             echo "No changes — nothing to commit"
           else

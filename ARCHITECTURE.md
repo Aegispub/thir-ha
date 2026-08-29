@@ -235,6 +235,22 @@ The current rsync mechanism is a shell script (`/home/ubuntu/rsync_from_vm1.sh`)
 
 When Tool 38 is deployed, the shell cron job is retired. Tool 38 runs as a VM2 cron job at the same `:55` schedule.
 
+### Enriched Corpus — Cross-Run State (Tools 43, 44, 47–50)
+
+Every tool above produces output scoped to a single pipeline run — `data/ir_cases.json`, `data/threat_ips.json`, etc. are fully regenerated each 2h cycle and carry no memory of prior runs. The enriched corpus tools exist to answer a different class of question that none of the above can: *has this IP/campaign/credential/fingerprint/sample/ASN been seen before, and what is its complete history across all runs?*
+
+This is implemented as a **separate, isolated GitHub Actions workflow** (`enriched_corpus.yml`), not additional steps inside `pipeline.yml`, for two reasons:
+- **Isolation** — a failure in corpus accumulation must never block or corrupt the live dashboard pipeline. The corpus workflow reads `pipeline.yml`'s outputs as inputs only and never writes to any file `pipeline.yml` owns.
+- **Timing** — it runs 15 minutes after `pipeline.yml` (`15 */2 * * *` vs `0 */2 * * *`), guaranteeing it always reads that cycle's committed data rather than racing against an in-progress `pipeline.yml` run.
+
+**The accumulation problem these tools solve is not trivial.** `data/ir_cases.json`, `command_clusters.json`, and the other per-run outputs each have their own field-level quirks — some fields named `first_seen`/`last_seen` are genuinely per-run values that look cross-run but aren't (a documented trap in the Infrastructure Corpus specifically, where `asn_clusters.json`'s own `first_seen`/`last_seen` can be seconds apart, not the accumulated window the field name implies). See `docs/enriched_corpus_schema_reconciliation.md` for the full field-by-field mapping between what each source file actually contains and what each corpus tool derives from it.
+
+**API cost reduction is a direct downstream benefit, not the primary design goal.** Tool 27 (IP enrichment: AbuseIPDB, ipinfo.io, OTX) and Tool 31 (VirusTotal) both call external APIs on every run, previously with no memory of prior calls — meaning the same IP could be re-queried against AbuseIPDB's 1,000/day free-tier limit dozens of times a week for no new information. Both tools now check the corpus before calling out: Tool 27 against Tool 43's per-IP TTL (30 days default, 7 days for CRITICAL — score ≥80 or Tor), Tool 31 against Tool 49's permanent SHA256 vault (a hash's VirusTotal verdict does not need re-checking once known). Both checks are read-only and fail open — if the corpus file is missing, both tools fall back to their original always-enrich behaviour.
+
+**Retention** differs meaningfully from every other tool in this system. Five of the six corpora prune entries older than 180 days from git (matching the existing `alert_history.json` retention window in Tool 37) after a monthly R2 snapshot confirms the data is durably archived. The sixth — Tool 49's malware corpus — is deliberately exempt from pruning: a SHA256 hash vault has no natural "too old to matter" point, since its value is in permanent cross-referencing against future VirusTotal submissions or public IOC feeds.
+
+See `docs/enriched_corpus_build_plan.md` for the build-risk classification across all six corpora and why Actor Corpus (Tool 43) was treated as the highest-risk, build-first target.
+
 ---
 
 ## Resource Profile
