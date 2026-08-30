@@ -1,7 +1,7 @@
 {
   "98af0db988d5971c": {
     "sequence_hash": "98af0db988d5971c",
-    "cluster_id_last_seen_as": "CLU-006",
+    "cluster_id_last_seen_as": "CLU-005",
     "is_campaign": true,
     "campaign_name": "mdrfckr SSH Key Injection",
     "campaign_severity": "HIGH",
@@ -42,11 +42,14 @@
         "name": "T1105"
       }
     ],
-    "session_count": 32,
+    "session_count": 43,
     "unique_ips_ever": [
+      "101.126.71.100",
       "102.88.137.80",
       "103.146.159.173",
       "103.159.54.61",
+      "103.160.213.140",
+      "103.167.89.222",
       "103.91.246.101",
       "104.199.176.250",
       "106.12.240.38",
@@ -59,12 +62,17 @@
       "155.94.155.107",
       "156.236.73.11",
       "157.15.67.253",
+      "159.65.2.17",
       "167.233.74.87",
       "171.25.158.74",
       "172.160.227.37",
       "180.93.172.213",
+      "185.138.89.72",
       "185.180.109.243",
+      "186.158.183.66",
       "188.121.120.61",
+      "188.20.244.19",
+      "20.157.117.15",
       "20.71.254.235",
       "222.110.147.58",
       "36.64.131.68",
@@ -73,11 +81,14 @@
       "51.77.213.203",
       "52.233.193.61",
       "54.36.99.29",
+      "65.181.127.40",
+      "66.116.234.172",
+      "88.147.30.59",
       "94.132.0.254"
     ],
-    "unique_ip_count_ever": 30,
+    "unique_ip_count_ever": 41,
     "first_seen": "2026-08-30T03:20:37.640961+00:00",
-    "last_seen": "2026-08-30T14:51:51.429778+00:00",
+    "last_seen": "2026-08-30T19:18:44.464598+00:00",
     "status": "active"
   },
   "6fa4c8ac58e7a1d9": {
@@ -189,21 +200,22 @@
   },
   "758d61f26a444483": {
     "sequence_hash": "758d61f26a444483",
-    "cluster_id_last_seen_as": "CLU-009",
+    "cluster_id_last_seen_as": "CLU-007",
     "is_campaign": false,
     "campaign_name": null,
     "campaign_severity": null,
     "campaign_description": null,
     "matched_campaigns": [],
     "ttps": [],
-    "session_count": 2,
+    "session_count": 3,
     "unique_ips_ever": [
+      "157.245.241.15",
       "35.205.213.88",
       "35.205.86.202"
     ],
-    "unique_ip_count_ever": 2,
+    "unique_ip_count_ever": 3,
     "first_seen": "2026-08-30T08:17:41.881082+00:00",
-    "last_seen": "2026-08-30T14:51:51.429778+00:00",
+    "last_seen": "2026-08-30T19:18:44.464598+00:00",
     "status": "active"
   },
   "b53e1626ea248419": {
@@ -329,13 +341,14 @@
         "name": "T1083"
       }
     ],
-    "session_count": 206,
+    "session_count": 282,
     "unique_ips_ever": [
-      "195.178.110.217"
+      "195.178.110.217",
+      "92.118.39.71"
     ],
-    "unique_ip_count_ever": 1,
+    "unique_ip_count_ever": 2,
     "first_seen": "2026-08-30T14:51:51.429778+00:00",
-    "last_seen": "2026-08-30T14:51:51.429778+00:00",
+    "last_seen": "2026-08-30T19:18:44.464598+00:00",
     "status": "active"
   },
   "486c3a8fd7f1236c": {
@@ -465,6 +478,112 @@
     "unique_ip_count_ever": 1,
     "first_seen": "2026-08-30T14:51:51.429778+00:00",
     "last_seen": "2026-08-30T14:51:51.429778+00:00",
+    "status": "active"
+  },
+  "73eedc72ab2b1951": {
+    "sequence_hash": "73eedc72ab2b1951",
+    "cluster_id_last_seen_as": "CLU-001",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [
+      {
+        "id": "T1082",
+        "name": "System Information Discovery"
+      }
+    ],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "157.245.241.15"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-08-30T19:18:44.464598+00:00",
+    "last_seen": "2026-08-30T19:18:44.464598+00:00",
+    "status": "active"
+  },
+  "97710e3b4807d21d": {
+    "sequence_hash": "97710e3b4807d21d",
+    "cluster_id_last_seen_as": "CLU-003",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "222.129.37.110"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-08-30T19:18:44.464598+00:00",
+    "last_seen": "2026-08-30T19:18:44.464598+00:00",
+    "status": "active"
+  },
+  "a2aa3ec2673f6861": {
+    "sequence_hash": "a2aa3ec2673f6861",
+    "cluster_id_last_seen_as": "CLU-004",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "157.245.241.15"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-08-30T19:18:44.464598+00:00",
+    "last_seen": "2026-08-30T19:18:44.464598+00:00",
+    "status": "active"
+  },
+  "876deb10d4cf5b5c": {
+    "sequence_hash": "876deb10d4cf5b5c",
+    "cluster_id_last_seen_as": "CLU-006",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [
+      {
+        "id": "T1082",
+        "name": "System Information Discovery"
+      }
+    ],
+    "session_count": 86,
+    "unique_ips_ever": [
+      "2.57.122.238",
+      "2.57.122.53"
+    ],
+    "unique_ip_count_ever": 2,
+    "first_seen": "2026-08-30T19:18:44.464598+00:00",
+    "last_seen": "2026-08-30T19:18:44.464598+00:00",
+    "status": "active"
+  },
+  "ce810d21e5e52f01": {
+    "sequence_hash": "ce810d21e5e52f01",
+    "cluster_id_last_seen_as": "CLU-008",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [
+      {
+        "id": "T1592",
+        "name": "Gather Victim Host Info"
+      }
+    ],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "20.193.153.215"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-08-30T19:18:44.464598+00:00",
+    "last_seen": "2026-08-30T19:18:44.464598+00:00",
     "status": "active"
   }
 }
