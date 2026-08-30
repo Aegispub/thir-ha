@@ -317,10 +317,32 @@ jobs:
       # data/alert_history.json, data/stats.json, reports/, or
       # historical_data/ -- all owned by pipeline.yml or
       # historical_processor.yml respectively.
+      #
+      # BUGFIX (2026-08-30) — root cause of every prior run silently
+      # reporting "nothing to commit": data/.corpus_monthly_pending and
+      # data/.corpus_last_archived_month are ONLY written on the
+      # do_monthly=true path (the sentinel step above is itself gated
+      # on that condition). On every normal 2h run those two paths do
+      # not exist on disk. `git add a b c` where even one pathspec is
+      # missing exits non-zero and stages NOTHING -- not just the
+      # missing file, the entire invocation -- and the old
+      # `2>/dev/null || true` suffix silently swallowed that fatal
+      # error every single time, which is why zero commits from this
+      # workflow ever landed. Confirmed by direct reproduction:
+      #   git add real.json missing.json
+      #   -> fatal: pathspec 'missing.json' did not match any files
+      #   -> real.json left untracked despite existing on disk
+      # Fix: stage the two sentinel files conditionally, only when
+      # they actually exist this run. Diagnostics added below and the
+      # error mask removed so any future staging failure is loud
+      # instead of silent.
       - name: Commit enriched corpus data
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Files guaranteed to exist every run (all six tools write
+          # unconditionally above, regardless of do_monthly).
           git add \
             data/enriched_corpus.json \
             data/campaign_corpus.json \
@@ -328,16 +350,27 @@ jobs:
             data/fingerprint_corpus.json \
             data/malware_corpus.json \
             data/infrastructure_corpus.json \
-            data/.corpus_monthly_pending \
-            data/.corpus_last_archived_month \
             data/tool_manifest_enriched.json \
             enriched-data/ \
             campaign-corpus/ \
             credential-corpus/ \
             fingerprint-corpus/ \
             malware-corpus/ \
-            infrastructure-corpus/ \
-            2>/dev/null || true
+            infrastructure-corpus/
+
+          # Sentinel files only exist on the do_monthly=true path --
+          # stage each individually and only if present, so a missing
+          # pathspec here can never poison the add above.
+          [ -f data/.corpus_monthly_pending ]     && git add data/.corpus_monthly_pending
+          [ -f data/.corpus_last_archived_month ] && git add data/.corpus_last_archived_month
+
+          echo "===== GIT STATUS (post-add) ====="
+          git status --short
+          echo "===== STAGED FILES ====="
+          git diff --cached --name-status
+          echo "===== STAGED DIFF STAT ====="
+          git diff --cached --stat
+
           if git diff --cached --quiet; then
             echo "No changes to enriched corpus data — nothing to commit"
           else
