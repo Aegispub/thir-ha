@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-08-30T03:20:37.776019+00:00",
+  "total_unique_hassh": 17,
+  "new_this_run": 17,
+  "updated_this_run": 0,
+  "client_families": [
+    {
+      "family": "Go SSH scanner",
+      "count": 7
+    },
+    {
+      "family": "libssh",
+      "count": 6
+    },
+    {
+      "family": "OpenSSH",
+      "count": 1
+    },
+    {
+      "family": "Paramiko (Python)",
+      "count": 1
+    },
+    {
+      "family": "Unknown",
+      "count": 1
+    },
+    {
+      "family": "PuTTY",
+      "count": 1
+    }
+  ],
+  "known_botnet_signatures": [
+    "Mirai/variant",
+    "Modern SSH client"
+  ],
+  "note": "HASSH hash values are not displayed here -- see design doc Section 7. Full records in data/fingerprint_corpus.json."
+}
