@@ -1,7 +1,7 @@
 {
   "98af0db988d5971c": {
     "sequence_hash": "98af0db988d5971c",
-    "cluster_id_last_seen_as": "CLU-004",
+    "cluster_id_last_seen_as": "CLU-003",
     "is_campaign": true,
     "campaign_name": "mdrfckr SSH Key Injection",
     "campaign_severity": "HIGH",
@@ -42,7 +42,7 @@
         "name": "T1105"
       }
     ],
-    "session_count": 53,
+    "session_count": 63,
     "unique_ips_ever": [
       "101.126.71.100",
       "102.88.137.80",
@@ -50,6 +50,7 @@
       "103.159.54.61",
       "103.160.213.140",
       "103.167.89.222",
+      "103.72.56.174",
       "103.91.246.101",
       "104.199.176.250",
       "106.12.240.38",
@@ -58,6 +59,7 @@
       "114.141.59.195",
       "121.31.210.125",
       "125.31.2.160",
+      "134.209.120.216",
       "143.110.241.64",
       "154.83.17.239",
       "154.83.196.237",
@@ -65,8 +67,11 @@
       "156.236.73.11",
       "157.15.67.253",
       "159.65.2.17",
+      "163.7.4.169",
+      "163.7.8.79",
       "167.233.196.216",
       "167.233.74.87",
+      "168.205.190.150",
       "171.25.158.74",
       "172.105.37.77",
       "172.160.227.37",
@@ -83,6 +88,7 @@
       "218.78.132.164",
       "222.110.147.58",
       "34.123.134.194",
+      "35.234.136.205",
       "36.64.131.68",
       "41.242.115.83",
       "46.24.47.94",
@@ -90,20 +96,23 @@
       "51.77.213.203",
       "52.233.193.61",
       "54.36.99.29",
+      "54.38.241.200",
       "58.224.62.29",
       "65.181.127.40",
       "66.116.234.172",
+      "80.102.218.187",
+      "81.192.46.36",
       "88.147.30.59",
       "94.132.0.254"
     ],
-    "unique_ip_count_ever": 51,
+    "unique_ip_count_ever": 60,
     "first_seen": "2026-08-30T03:20:37.640961+00:00",
-    "last_seen": "2026-08-30T22:43:41.693829+00:00",
+    "last_seen": "2026-08-31T05:31:50.244303+00:00",
     "status": "active"
   },
   "6fa4c8ac58e7a1d9": {
     "sequence_hash": "6fa4c8ac58e7a1d9",
-    "cluster_id_last_seen_as": "CLU-006",
+    "cluster_id_last_seen_as": "CLU-005",
     "is_campaign": false,
     "campaign_name": null,
     "campaign_severity": null,
@@ -115,18 +124,20 @@
         "name": "System Information Discovery"
       }
     ],
-    "session_count": 6,
+    "session_count": 8,
     "unique_ips_ever": [
       "117.50.176.93",
       "14.17.59.195",
+      "151.3.149.45",
       "182.92.242.181",
       "218.24.85.3",
+      "43.106.49.126",
       "43.248.139.2",
       "95.182.83.99"
     ],
-    "unique_ip_count_ever": 6,
+    "unique_ip_count_ever": 8,
     "first_seen": "2026-08-30T03:20:37.640961+00:00",
-    "last_seen": "2026-08-30T22:43:41.693829+00:00",
+    "last_seen": "2026-08-31T05:31:50.244303+00:00",
     "status": "active"
   },
   "ccd29aff2c593ed4": {
@@ -420,7 +431,7 @@
   },
   "49efc5eb7bb5604b": {
     "sequence_hash": "49efc5eb7bb5604b",
-    "cluster_id_last_seen_as": "CLU-008",
+    "cluster_id_last_seen_as": "CLU-004",
     "is_campaign": false,
     "campaign_name": null,
     "campaign_severity": null,
@@ -432,13 +443,14 @@
         "name": "File & Directory Discovery"
       }
     ],
-    "session_count": 1,
+    "session_count": 2,
     "unique_ips_ever": [
-      "147.185.133.179"
+      "147.185.133.179",
+      "162.216.150.143"
     ],
-    "unique_ip_count_ever": 1,
+    "unique_ip_count_ever": 2,
     "first_seen": "2026-08-30T14:51:51.429778+00:00",
-    "last_seen": "2026-08-30T14:51:51.429778+00:00",
+    "last_seen": "2026-08-31T05:31:50.244303+00:00",
     "status": "active"
   },
   "560104d0f634867a": {
@@ -536,21 +548,22 @@
   },
   "a2aa3ec2673f6861": {
     "sequence_hash": "a2aa3ec2673f6861",
-    "cluster_id_last_seen_as": "CLU-003",
+    "cluster_id_last_seen_as": "CLU-002",
     "is_campaign": false,
     "campaign_name": null,
     "campaign_severity": null,
     "campaign_description": null,
     "matched_campaigns": [],
     "ttps": [],
-    "session_count": 2,
+    "session_count": 3,
     "unique_ips_ever": [
       "157.245.241.15",
-      "216.226.77.30"
+      "216.226.77.30",
+      "71.6.134.232"
     ],
-    "unique_ip_count_ever": 2,
+    "unique_ip_count_ever": 3,
     "first_seen": "2026-08-30T19:18:44.464598+00:00",
-    "last_seen": "2026-08-30T22:43:41.693829+00:00",
+    "last_seen": "2026-08-31T05:31:50.244303+00:00",
     "status": "active"
   },
   "876deb10d4cf5b5c": {
@@ -602,7 +615,7 @@
   },
   "b22d8a9b7acdaba5": {
     "sequence_hash": "b22d8a9b7acdaba5",
-    "cluster_id_last_seen_as": "CLU-002",
+    "cluster_id_last_seen_as": "CLU-001",
     "is_campaign": true,
     "campaign_name": "Mirai/IoT Botnet",
     "campaign_severity": "HIGH",
@@ -648,7 +661,7 @@
     ],
     "unique_ip_count_ever": 1,
     "first_seen": "2026-08-30T22:43:41.693829+00:00",
-    "last_seen": "2026-08-30T22:43:41.693829+00:00",
+    "last_seen": "2026-08-31T05:31:50.244303+00:00",
     "status": "active"
   },
   "7ab552f01de999cb": {
@@ -672,6 +685,29 @@
     "unique_ip_count_ever": 1,
     "first_seen": "2026-08-30T22:43:41.693829+00:00",
     "last_seen": "2026-08-30T22:43:41.693829+00:00",
+    "status": "active"
+  },
+  "c32b4937ce8564ea": {
+    "sequence_hash": "c32b4937ce8564ea",
+    "cluster_id_last_seen_as": "CLU-006",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [
+      {
+        "id": "T1021.004",
+        "name": "Remote Services: SSH"
+      }
+    ],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "182.61.33.68"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-08-31T05:31:50.244303+00:00",
+    "last_seen": "2026-08-31T05:31:50.244303+00:00",
     "status": "active"
   }
 }
