@@ -1,7 +1,7 @@
 {
   "98af0db988d5971c": {
     "sequence_hash": "98af0db988d5971c",
-    "cluster_id_last_seen_as": "CLU-008",
+    "cluster_id_last_seen_as": "CLU-004",
     "is_campaign": true,
     "campaign_name": "mdrfckr SSH Key Injection",
     "campaign_severity": "HIGH",
@@ -42,7 +42,7 @@
         "name": "T1105"
       }
     ],
-    "session_count": 95,
+    "session_count": 104,
     "unique_ips_ever": [
       "101.126.71.100",
       "102.88.137.80",
@@ -57,9 +57,12 @@
       "104.199.176.250",
       "106.12.240.38",
       "107.155.56.52",
+      "107.180.88.176",
       "112.120.171.95",
+      "113.161.79.218",
       "113.171.81.144",
       "114.141.59.195",
+      "117.72.212.5",
       "118.178.226.121",
       "121.31.210.125",
       "125.31.2.160",
@@ -102,12 +105,15 @@
       "195.66.89.124",
       "196.0.3.188",
       "20.157.117.15",
+      "20.204.81.42",
       "20.71.254.235",
       "200.46.212.206",
       "202.152.201.166",
       "210.79.191.205",
       "211.253.31.30",
       "211.56.131.199",
+      "211.56.131.202",
+      "216.45.50.44",
       "217.160.205.196",
       "218.78.132.164",
       "222.110.147.58",
@@ -115,8 +121,11 @@
       "35.210.61.208",
       "35.234.136.205",
       "36.64.131.68",
+      "40.125.42.10",
       "41.242.115.83",
       "42.1.65.123",
+      "43.130.90.166",
+      "43.165.190.208",
       "45.177.147.146",
       "46.24.47.94",
       "49.207.241.187",
@@ -135,9 +144,9 @@
       "94.132.0.254",
       "95.58.255.251"
     ],
-    "unique_ip_count_ever": 90,
+    "unique_ip_count_ever": 99,
     "first_seen": "2026-08-30T03:20:37.640961+00:00",
-    "last_seen": "2026-08-31T20:03:28.402274+00:00",
+    "last_seen": "2026-08-31T23:50:13.140978+00:00",
     "status": "active"
   },
   "6fa4c8ac58e7a1d9": {
@@ -426,14 +435,15 @@
     "campaign_description": null,
     "matched_campaigns": [],
     "ttps": [],
-    "session_count": 15,
+    "session_count": 19,
     "unique_ips_ever": [
+      "112.168.171.175",
       "14.47.200.242",
       "59.11.42.221"
     ],
-    "unique_ip_count_ever": 2,
+    "unique_ip_count_ever": 3,
     "first_seen": "2026-08-30T14:51:51.429778+00:00",
-    "last_seen": "2026-08-31T20:03:28.402274+00:00",
+    "last_seen": "2026-08-31T23:50:13.140978+00:00",
     "status": "active"
   },
   "e8182948ac6f4b19": {
@@ -445,14 +455,15 @@
     "campaign_description": null,
     "matched_campaigns": [],
     "ttps": [],
-    "session_count": 5,
+    "session_count": 11,
     "unique_ips_ever": [
+      "112.168.171.175",
       "14.47.200.242",
       "59.11.42.221"
     ],
-    "unique_ip_count_ever": 2,
+    "unique_ip_count_ever": 3,
     "first_seen": "2026-08-30T14:51:51.429778+00:00",
-    "last_seen": "2026-08-31T20:03:28.402274+00:00",
+    "last_seen": "2026-08-31T23:50:13.140978+00:00",
     "status": "active"
   },
   "c7d3b8ed2b854825": {
@@ -735,7 +746,7 @@
   },
   "c32b4937ce8564ea": {
     "sequence_hash": "c32b4937ce8564ea",
-    "cluster_id_last_seen_as": "CLU-006",
+    "cluster_id_last_seen_as": "CLU-008",
     "is_campaign": false,
     "campaign_name": null,
     "campaign_severity": null,
@@ -747,13 +758,14 @@
         "name": "Remote Services: SSH"
       }
     ],
-    "session_count": 1,
+    "session_count": 2,
     "unique_ips_ever": [
+      "153.99.92.11",
       "182.61.33.68"
     ],
-    "unique_ip_count_ever": 1,
+    "unique_ip_count_ever": 2,
     "first_seen": "2026-08-31T05:31:50.244303+00:00",
-    "last_seen": "2026-08-31T05:31:50.244303+00:00",
+    "last_seen": "2026-08-31T23:50:13.140978+00:00",
     "status": "active"
   },
   "13eec2df4cfe69c6": {
@@ -978,7 +990,7 @@
   },
   "21b8cd9500bba9f3": {
     "sequence_hash": "21b8cd9500bba9f3",
-    "cluster_id_last_seen_as": "CLU-014",
+    "cluster_id_last_seen_as": "CLU-006",
     "is_campaign": false,
     "campaign_name": null,
     "campaign_severity": null,
@@ -991,7 +1003,71 @@
     ],
     "unique_ip_count_ever": 1,
     "first_seen": "2026-08-31T20:03:28.402274+00:00",
-    "last_seen": "2026-08-31T20:03:28.402274+00:00",
+    "last_seen": "2026-08-31T23:50:13.140978+00:00",
+    "status": "active"
+  },
+  "d2af147dd3fa2817": {
+    "sequence_hash": "d2af147dd3fa2817",
+    "cluster_id_last_seen_as": "CLU-001",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [
+      {
+        "id": "T1105",
+        "name": "Ingress Tool Transfer"
+      }
+    ],
+    "session_count": 2,
+    "unique_ips_ever": [
+      "165.1.75.106"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-08-31T23:50:13.140978+00:00",
+    "last_seen": "2026-08-31T23:50:13.140978+00:00",
+    "status": "active"
+  },
+  "5dbc2dba6c33377a": {
+    "sequence_hash": "5dbc2dba6c33377a",
+    "cluster_id_last_seen_as": "CLU-005",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [
+      {
+        "id": "T1105",
+        "name": "Ingress Tool Transfer"
+      }
+    ],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "47.88.93.201"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-08-31T23:50:13.140978+00:00",
+    "last_seen": "2026-08-31T23:50:13.140978+00:00",
+    "status": "active"
+  },
+  "e97166b54500da3a": {
+    "sequence_hash": "e97166b54500da3a",
+    "cluster_id_last_seen_as": "CLU-007",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "62.16.15.110"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-08-31T23:50:13.140978+00:00",
+    "last_seen": "2026-08-31T23:50:13.140978+00:00",
     "status": "active"
   }
 }
