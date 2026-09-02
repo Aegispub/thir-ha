@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-02T03:42:03.449319+00:00",
+  "generated_at": "2026-09-02T08:37:05.282442+00:00",
   "downloads_dir": "/tmp/cowrie-downloads",
   "downloads_found": true,
-  "files_scanned": 29,
-  "files_skipped": 20,
-  "files_classified": 20,
+  "files_scanned": 30,
+  "files_skipped": 19,
+  "files_classified": 21,
   "yara_available": false,
   "analysis_method": "heuristic",
   "families_detected": [
@@ -14,7 +14,7 @@
     },
     {
       "family": "Rootkit",
-      "count": 10
+      "count": 11
     },
     {
       "family": "Gafgyt",
@@ -25,18 +25,18 @@
       "count": 3
     },
     {
-      "family": "Mushtik",
+      "family": "XMRig",
       "count": 2
     },
     {
-      "family": "XMRig",
+      "family": "Mushtik",
       "count": 2
     }
   ],
   "severity_summary": {
     "HIGH": 2,
     "UNKNOWN": 9,
-    "CRITICAL": 10,
+    "CRITICAL": 11,
     "LOW": 8
   },
   "critical_samples": [
@@ -53,8 +53,8 @@
       "filename": "0136e2f3dda2e48ca15b2bab1027095ca15fb573294e3904a53e6913dfc62ab6",
       "sha256": "0136e2f3dda2e48ca15b2bab1027095ca15fb573294e3904a53e6913dfc62ab6",
       "families": [
-        "Rootkit",
-        "Downloader"
+        "Downloader",
+        "Rootkit"
       ],
       "severity": "CRITICAL"
     },
@@ -78,9 +78,9 @@
       "filename": "09591253a95411d60c2b0d5384924aa7cafbceec1467c951c6bbb1655d748f0b",
       "sha256": "09591253a95411d60c2b0d5384924aa7cafbceec1467c951c6bbb1655d748f0b",
       "families": [
-        "Rootkit",
         "Downloader",
-        "Mirai"
+        "Mirai",
+        "Rootkit"
       ],
       "severity": "CRITICAL"
     },
@@ -88,10 +88,10 @@
       "filename": "11707e3902992c8e20e19de09cbc78381e43234c4560a706a031fe01ce7e96fb",
       "sha256": "11707e3902992c8e20e19de09cbc78381e43234c4560a706a031fe01ce7e96fb",
       "families": [
-        "Rootkit",
-        "Mushtik",
         "XMRig",
+        "Rootkit",
         "Gafgyt",
+        "Mushtik",
         "Downloader"
       ],
       "severity": "CRITICAL"
@@ -109,11 +109,19 @@
       "filename": "1bd3745a4f9043ead807d7777669b0dbf5b56985e5b3dd9d7cff8384154ea4a8",
       "sha256": "1bd3745a4f9043ead807d7777669b0dbf5b56985e5b3dd9d7cff8384154ea4a8",
       "families": [
-        "Rootkit",
-        "Mushtik",
         "XMRig",
+        "Rootkit",
         "Gafgyt",
+        "Mushtik",
         "Downloader"
+      ],
+      "severity": "CRITICAL"
+    },
+    {
+      "filename": "1d64be0ba1bd9924c3e29ae460db9407e4e33afeb864c9e39377ae4a87fa09db",
+      "sha256": "1d64be0ba1bd9924c3e29ae460db9407e4e33afeb864c9e39377ae4a87fa09db",
+      "families": [
+        "Rootkit"
       ],
       "severity": "CRITICAL"
     },
@@ -121,8 +129,8 @@
       "filename": "1e70b63472772e3f5092ffe9c3573470e73590e6ab6d93fdcede1d368a5fd72d",
       "sha256": "1e70b63472772e3f5092ffe9c3573470e73590e6ab6d93fdcede1d368a5fd72d",
       "families": [
-        "Rootkit",
-        "Downloader"
+        "Downloader",
+        "Rootkit"
       ],
       "severity": "CRITICAL"
     },
@@ -130,9 +138,9 @@
       "filename": "1e7c134cf160b486708c40c21f671cd6f53c7578a8047a4eb22f668476e0c4c4",
       "sha256": "1e7c134cf160b486708c40c21f671cd6f53c7578a8047a4eb22f668476e0c4c4",
       "families": [
-        "Rootkit",
         "Downloader",
-        "Mirai"
+        "Mirai",
+        "Rootkit"
       ],
       "severity": "CRITICAL"
     },
@@ -229,10 +237,6 @@
     {
       "filename": "20260807-060110-c733cc2a6a9b-0-redir__home_MSMQ_poc",
       "reason": "empty file"
-    },
-    {
-      "filename": "20260807-060110-c733cc2a6a9b-0-redir__home_uuid_1_00000000_0000_0000_0000_000000000000",
-      "reason": "empty file"
     }
   ],
   "results": [
@@ -311,8 +315,8 @@
       "file_type": "ELF 32-bit executable",
       "classified": true,
       "families": [
-        "Rootkit",
-        "Downloader"
+        "Downloader",
+        "Rootkit"
       ],
       "severity": "CRITICAL",
       "match_count": 2,
@@ -547,9 +551,9 @@
       "file_type": "ELF 32-bit executable",
       "classified": true,
       "families": [
-        "Rootkit",
         "Downloader",
-        "Mirai"
+        "Mirai",
+        "Rootkit"
       ],
       "severity": "CRITICAL",
       "match_count": 3,
@@ -706,10 +710,10 @@
       "file_type": "ELF 64-bit executable",
       "classified": true,
       "families": [
-        "Rootkit",
-        "Mushtik",
         "XMRig",
+        "Rootkit",
         "Gafgyt",
+        "Mushtik",
         "Downloader"
       ],
       "severity": "CRITICAL",
@@ -1037,10 +1041,10 @@
       "file_type": "ELF 64-bit executable",
       "classified": true,
       "families": [
-        "Rootkit",
-        "Mushtik",
         "XMRig",
+        "Rootkit",
         "Gafgyt",
+        "Mushtik",
         "Downloader"
       ],
       "severity": "CRITICAL",
@@ -1143,6 +1147,40 @@
       "analysis_method": "heuristic"
     },
     {
+      "filename": "1d64be0ba1bd9924c3e29ae460db9407e4e33afeb864c9e39377ae4a87fa09db",
+      "sha256": "1d64be0ba1bd9924c3e29ae460db9407e4e33afeb864c9e39377ae4a87fa09db",
+      "md5": "5ea444f1102f6217dad69dd026292f17",
+      "file_size_bytes": 1835,
+      "file_type": "Shell script",
+      "classified": true,
+      "families": [
+        "Rootkit"
+      ],
+      "severity": "CRITICAL",
+      "match_count": 1,
+      "matches": [
+        {
+          "rule": "heuristic_rootkit",
+          "family": "Rootkit",
+          "description": "Rootkit/hiding tool",
+          "tags": [
+            "Rootkit",
+            "heuristic"
+          ],
+          "meta": {
+            "description": "Rootkit/hiding tool",
+            "author": "THIR-heuristic",
+            "severity": "CRITICAL"
+          },
+          "strings_matched": [
+            "/proc/"
+          ],
+          "match_type": "heuristic"
+        }
+      ],
+      "analysis_method": "heuristic"
+    },
+    {
       "filename": "1e70b63472772e3f5092ffe9c3573470e73590e6ab6d93fdcede1d368a5fd72d",
       "sha256": "1e70b63472772e3f5092ffe9c3573470e73590e6ab6d93fdcede1d368a5fd72d",
       "md5": "224b41af1717915304b30540473b8db2",
@@ -1150,8 +1188,8 @@
       "file_type": "Shell script",
       "classified": true,
       "families": [
-        "Rootkit",
-        "Downloader"
+        "Downloader",
+        "Rootkit"
       ],
       "severity": "CRITICAL",
       "match_count": 2,
@@ -1204,9 +1242,9 @@
       "file_type": "ELF 64-bit executable",
       "classified": true,
       "families": [
-        "Rootkit",
         "Downloader",
-        "Mirai"
+        "Mirai",
+        "Rootkit"
       ],
       "severity": "CRITICAL",
       "match_count": 3,
