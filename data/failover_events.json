@@ -1,6 +1,6 @@
 [
   {
-    "generated_at": "2026-09-07T09:06:39.583757065Z",
+    "generated_at": "2026-09-07T15:37:17.455812673Z",
     "backend": "cowrie_backend",
     "haproxy_vm1_status": "DOWN",
     "vm1_node_state": "SERVICE_DOWN",
@@ -11,7 +11,7 @@
     "detection_lag_note": "Checked on the 2h pipeline cadence, not real-time. A failover that starts and resolves between runs may be missed or only visible after the fact (HA Runbooks RB-04: HAProxy itself detects/fails over in 30-60s — this tool does not run that fast)."
   },
   {
-    "generated_at": "2026-09-07T09:06:45.583842621Z",
+    "generated_at": "2026-09-07T15:37:22.955971447Z",
     "backend": "telnet_backend",
     "haproxy_vm1_status": "DOWN",
     "vm1_node_state": "SERVICE_DOWN",
