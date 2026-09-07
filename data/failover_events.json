@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "generated_at": "2026-09-07T09:06:39.583757065Z",
+    "backend": "cowrie_backend",
+    "haproxy_vm1_status": "DOWN",
+    "vm1_node_state": "SERVICE_DOWN",
+    "correlated": true,
+    "event_type": "failover_confirmed_service_down_cowrie_backend",
+    "severity": "HIGH",
+    "detail": "HAProxy (cowrie_backend) shifted traffic away from VM1. VM1 host is reachable (admin SSH up) but the cowrie_backend service itself is down — service-level failure, not a host/network failure.",
+    "detection_lag_note": "Checked on the 2h pipeline cadence, not real-time. A failover that starts and resolves between runs may be missed or only visible after the fact (HA Runbooks RB-04: HAProxy itself detects/fails over in 30-60s — this tool does not run that fast)."
+  },
+  {
+    "generated_at": "2026-09-07T09:06:45.583842621Z",
+    "backend": "telnet_backend",
+    "haproxy_vm1_status": "DOWN",
+    "vm1_node_state": "SERVICE_DOWN",
+    "correlated": true,
+    "event_type": "failover_confirmed_service_down_telnet_backend",
+    "severity": "HIGH",
+    "detail": "HAProxy (telnet_backend) shifted traffic away from VM1. VM1 host is reachable (admin SSH up) but the telnet_backend service itself is down — service-level failure, not a host/network failure.",
+    "detection_lag_note": "Checked on the 2h pipeline cadence, not real-time. A failover that starts and resolves between runs may be missed or only visible after the fact (HA Runbooks RB-04: HAProxy itself detects/fails over in 30-60s — this tool does not run that fast)."
+  }
+]
