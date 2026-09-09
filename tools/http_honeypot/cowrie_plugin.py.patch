@@ -1,0 +1,72 @@
+# THIR — HTTP Honeypot Plugin
+# cowrie_plugin.py.patch
+#
+# Status:   FINAL — all values confirmed from source read June 29 2026
+# Applies:  src/twisted/plugins/cowrie_plugin.py
+#
+# Three changes to cowrie_plugin.py:
+#
+#   CHANGE 1 — top-level import (after existing cowrie.telnet.factory import)
+#     import cowrie.http.factory
+#
+#   CHANGE 2 — __init__() reads enableHTTP from config
+#     Matches the pattern for self.enableSSH and self.enableTelnet.
+#     Add after the self.enableTelnet block:
+#       self.enableHTTP: bool = CowrieConfig.getboolean(
+#           "http", "enabled", fallback=False
+#       )
+#
+#   CHANGE 3 — pool_ready() wires HTTP factory at end of method
+#     Add after the closing lines of the Telnet block.
+#     See pool_ready_addition.py for the exact indented block.
+#
+# Note on the startup validation in makeService():
+#   if not self.enableTelnet and not self.enableSSH and not self.pool_only:
+#       print("ERROR: You must at least enable SSH or Telnet...")
+#       sys.exit(1)
+#   HTTP is not included in this check — intentional. HTTP is always
+#   deployed alongside SSH in THIR's configuration, so this check is
+#   never a problem. If HTTP-only deployment is ever needed, this check
+#   would need a third condition: and not self.enableHTTP.
+#   Not required for current THIR deployment.
+#
+# ── Apply instructions ────────────────────────────────────────────────────
+#
+# This patch file shows the three changes as inline descriptions because
+# the exact line numbers of cowrie_plugin.py on VM1 are not known without
+# reading the file. Apply manually on July 8:
+#
+#   1. Open: nano src/twisted/plugins/cowrie_plugin.py
+#
+#   2. Find the import block near the top. After:
+#        import cowrie.telnet.factory
+#      Add:
+#        import cowrie.http.factory
+#
+#   3. Find __init__() method. After the self.enableTelnet block:
+#        self.enableTelnet: bool = CowrieConfig.getboolean(
+#            "telnet", "enabled", fallback=False
+#        )
+#      Add:
+#        self.enableHTTP: bool = CowrieConfig.getboolean(
+#            "http", "enabled", fallback=False
+#        )
+#
+#   4. Find pool_ready() method. Add at the very end, after the Telnet block:
+#        if self.enableHTTP:
+#            f = cowrie.http.factory.HTTPHoneypotFactory()
+#            f.tac = self
+#            listen_endpoints = get_endpoints_from_section(CowrieConfig, "http", 8080)
+#            create_endpoint_services(reactor, self.topService, listen_endpoints, f)
+#
+# ── Verify after Cowrie restart ──────────────────────────────────────────
+#
+#   sudo -u cowrie bin/cowrie restart
+#   ss -tlnp | grep ':8080'
+#   # Expect: 0.0.0.0:8080 (twistd)
+#   # If not listening: check cowrie.cfg [http] enabled = true
+#   #   and grep for 'enableHTTP' in cowrie_plugin.py to confirm edit landed
+#
+# ── Rollback ─────────────────────────────────────────────────────────────
+#   Revert the three manual edits and restart Cowrie.
+#   Port 8080 disappears from ss -tlnp output.

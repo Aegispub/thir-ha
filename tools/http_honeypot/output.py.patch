@@ -1,0 +1,65 @@
+# THIR — HTTP Honeypot Plugin
+# output.py.patch
+#
+# Status:   FINAL — confirmed from source read June 29 2026
+# Applies:  src/cowrie/core/output.py
+# What:     Adds HTTP session protocol assignment in emit()
+#
+# WHY THIS IS A MANUAL EDIT, NOT patch -p1:
+#   The hunk context below shows the exact code block to edit.
+#   Line numbers in output.py may shift between Cowrie versions,
+#   so a line-numbered unified diff would fail silently if the
+#   file has grown. Apply by finding the code block in nano and
+#   adding the one line marked with ← ADD.
+#
+# Confirmed from source read:
+#   emit() sets ev["protocol"] based on sessionno prefix:
+#     S → "ssh"
+#     T → "telnet"
+#     else → "unknown"
+#   HTTP sessions use prefix "H" — without this patch they are logged
+#   as protocol="unknown" in cowrie.json instead of protocol="http".
+#   The session itself is tracked correctly (sessionno="H<n>" goes through
+#   branch 1 in emit()), but the protocol field in every written event
+#   would be "unknown" without this one-line addition.
+#
+# Note: the HTTP plugin already passes protocol="http" in logDispatch kwargs,
+# but emit() overwrites it with the prefix-based assignment at the bottom.
+# This patch prevents that overwrite for H-prefixed sessions.
+#
+# ── HOW TO APPLY on VM1 and VM2 ─────────────────────────────────────────
+#
+#   cd /home/cowrie/cowrie
+#   sudo -u cowrie nano src/cowrie/core/output.py
+#
+#   Search for this block (it is near the bottom of emit()):
+#
+#       if sessionno[0] == "S":
+#           ev["protocol"] = "ssh"
+#       elif sessionno[0] == "T":
+#           ev["protocol"] = "telnet"
+#       else:
+#           ev["protocol"] = "unknown"
+#
+#   Change it to:
+#
+#       if sessionno[0] == "S":
+#           ev["protocol"] = "ssh"
+#       elif sessionno[0] == "T":
+#           ev["protocol"] = "telnet"
+#       elif sessionno[0] == "H":          ← ADD THIS LINE
+#           ev["protocol"] = "http"        ← ADD THIS LINE
+#       else:
+#           ev["protocol"] = "unknown"
+#
+# ── VERIFY after saving ──────────────────────────────────────────────────
+#
+#   grep -A 2 '"H"' src/cowrie/core/output.py
+#   # Expect:
+#   # elif sessionno[0] == "H":
+#   #     ev["protocol"] = "http"
+#
+# ── ROLLBACK ─────────────────────────────────────────────────────────────
+#   Remove the two elif lines added above. Restart Cowrie.
+#   HTTP events will then appear as protocol="unknown" in cowrie.json.
+

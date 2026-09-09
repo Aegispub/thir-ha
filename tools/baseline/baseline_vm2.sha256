@@ -1,0 +1,42 @@
+# THIR Baseline — VM2 (thir-pipeline-vm2)
+# Format: sha256sum --check baseline_vm2.sha256
+#
+# LOCKED_AFTER_DEPLOY — fill in on July 8 after VM2 plugin deployment confirmed:
+#   cd /home/cowrie/cowrie
+#   sha256sum \
+#     src/cowrie/http/__init__.py \
+#     src/cowrie/http/factory.py \
+#     src/cowrie/http/honeypot.py \
+#     src/twisted/plugins/cowrie_plugin.py \
+#     src/cowrie/core/output.py \
+#   >> /path/to/baseline_vm2.sha256
+#
+# Note: VM2 cowrie.cfg hash differs from VM1 — port 81 vs 8080.
+#
+# Last confirmed: June 29 2026
+
+# ── Cowrie configuration (VM2 variant — port 81, localhost only) ──────────
+25e5dd55a38a2e7cc9501c67cea0353333a231366a685ee6dc0ecec0cb6e7909  /home/cowrie/cowrie/etc/cowrie.cfg
+
+# ── HAProxy configuration ─────────────────────────────────────────────────
+6160bc94ccfea91349a34685ab18735eac9b7c0ef1e6dfc55b4b43a32da070e7  /etc/haproxy/haproxy.cfg
+
+# ── R2 sync script ────────────────────────────────────────────────────────
+2ff89861f299f9f7bf1d7456be97cc781a63a246fa501154c86c6c513b2d89c2  /home/ubuntu/sync_to_r2.sh
+
+# ── HTTP plugin files — LOCKED_AFTER_DEPLOY (fill in on July 8) ──────────
+# LOCKED_AFTER_DEPLOY  /home/cowrie/cowrie/src/cowrie/http/__init__.py
+# LOCKED_AFTER_DEPLOY  /home/cowrie/cowrie/src/cowrie/http/factory.py
+# LOCKED_AFTER_DEPLOY  /home/cowrie/cowrie/src/cowrie/http/honeypot.py
+
+# ── Patched Cowrie core files — LOCKED_AFTER_DEPLOY (fill in on July 8) ─
+# LOCKED_AFTER_DEPLOY  /home/cowrie/cowrie/src/twisted/plugins/cowrie_plugin.py
+# LOCKED_AFTER_DEPLOY  /home/cowrie/cowrie/src/cowrie/core/output.py
+
+# ── Rsync script ──────────────────────────────────────────────────────────
+# Generate and lock:
+#   sha256sum /home/ubuntu/rsync_from_vm1.sh >> baseline_vm2.sha256
+# LOCKED_AFTER_DEPLOY  /home/ubuntu/rsync_from_vm1.sh
+
+# ── Virtualenv dependency manifest ────────────────────────────────────────
+# LOCKED_AFTER_DEPLOY  /home/cowrie/cowrie/requirements.txt

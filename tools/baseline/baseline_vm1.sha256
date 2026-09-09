@@ -1,0 +1,42 @@
+# THIR Baseline — VM1 (thir-honeypot-vm1)
+# Format: sha256sum --check baseline_vm1.sha256
+#
+# LOCKED_AFTER_DEPLOY — fill these in on July 8 after deployment is confirmed working:
+#   cd /home/cowrie/cowrie
+#   sha256sum \
+#     src/cowrie/http/__init__.py \
+#     src/cowrie/http/factory.py \
+#     src/cowrie/http/honeypot.py \
+#     src/twisted/plugins/cowrie_plugin.py \
+#     src/cowrie/core/output.py \
+#   >> /path/to/baseline_vm1.sha256
+#
+# Confirmed locked hashes — do not change without deliberate review.
+#
+# Run with:
+#   sha256sum --check /path/to/baseline_vm1.sha256
+# Or from the Cowrie directory:
+#   sha256sum --check /path/to/baseline_vm1.sha256 2>&1 | grep -E 'FAILED|WARNING|OK'
+#
+# Last confirmed: June 29 2026
+
+# ── Cowrie configuration ──────────────────────────────────────────────────
+547d2336b0e2508f44c195790296f1a81c6446b8d7a09aadef42f2db1374e419  /home/cowrie/cowrie/etc/cowrie.cfg
+
+# ── Network rules ─────────────────────────────────────────────────────────
+2f209d6dca9ca5a799042784644bad88059ef1d772635487891d26792a3fafee  /etc/iptables/rules.v4
+
+# ── HTTP plugin files — LOCKED_AFTER_DEPLOY (fill in on July 8) ──────────
+# LOCKED_AFTER_DEPLOY  /home/cowrie/cowrie/src/cowrie/http/__init__.py
+# LOCKED_AFTER_DEPLOY  /home/cowrie/cowrie/src/cowrie/http/factory.py
+# LOCKED_AFTER_DEPLOY  /home/cowrie/cowrie/src/cowrie/http/honeypot.py
+
+# ── Patched Cowrie core files — LOCKED_AFTER_DEPLOY (fill in on July 8) ─
+# LOCKED_AFTER_DEPLOY  /home/cowrie/cowrie/src/twisted/plugins/cowrie_plugin.py
+# LOCKED_AFTER_DEPLOY  /home/cowrie/cowrie/src/cowrie/core/output.py
+
+# ── Virtualenv dependency manifest ────────────────────────────────────────
+# Lock this after confirming virtualenv is stable post-deployment.
+# Generate with:
+#   sha256sum /home/cowrie/cowrie/requirements.txt >> baseline_vm1.sha256
+# LOCKED_AFTER_DEPLOY  /home/cowrie/cowrie/requirements.txt
