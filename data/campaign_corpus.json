@@ -1,7 +1,7 @@
 {
   "98af0db988d5971c": {
     "sequence_hash": "98af0db988d5971c",
-    "cluster_id_last_seen_as": "CLU-003",
+    "cluster_id_last_seen_as": "CLU-004",
     "is_campaign": true,
     "campaign_name": "mdrfckr SSH Key Injection",
     "campaign_severity": "HIGH",
@@ -42,7 +42,7 @@
         "name": "T1105"
       }
     ],
-    "session_count": 464,
+    "session_count": 466,
     "unique_ips_ever": [
       "101.126.64.76",
       "101.126.71.100",
@@ -120,6 +120,7 @@
       "115.190.197.74",
       "115.68.226.19",
       "115.74.7.119",
+      "116.109.216.74",
       "116.203.18.194",
       "116.228.233.93",
       "116.255.159.152",
@@ -250,6 +251,7 @@
       "181.188.176.242",
       "181.228.80.171",
       "181.62.56.67",
+      "182.171.90.17",
       "182.253.156.184",
       "182.253.221.210",
       "182.44.6.221",
@@ -437,9 +439,9 @@
       "95.172.142.52",
       "95.58.255.251"
     ],
-    "unique_ip_count_ever": 392,
+    "unique_ip_count_ever": 394,
     "first_seen": "2026-08-30T03:20:37.640961+00:00",
-    "last_seen": "2026-09-10T04:46:11.333698+00:00",
+    "last_seen": "2026-09-10T11:16:58.552248+00:00",
     "status": "active"
   },
   "6fa4c8ac58e7a1d9": {
@@ -532,7 +534,7 @@
   },
   "4c607d78896f7ae1": {
     "sequence_hash": "4c607d78896f7ae1",
-    "cluster_id_last_seen_as": "CLU-002",
+    "cluster_id_last_seen_as": "CLU-001",
     "is_campaign": false,
     "campaign_name": null,
     "campaign_severity": null,
@@ -560,7 +562,7 @@
         "name": "Credential Dumping"
       }
     ],
-    "session_count": 18,
+    "session_count": 19,
     "unique_ips_ever": [
       "103.118.29.32",
       "110.40.174.11",
@@ -572,6 +574,7 @@
       "185.132.43.9",
       "196.190.92.28",
       "2.29.16.86",
+      "39.109.116.214",
       "47.237.183.136",
       "47.250.219.144",
       "47.80.68.74",
@@ -581,23 +584,24 @@
       "85.239.149.72",
       "94.183.227.204"
     ],
-    "unique_ip_count_ever": 18,
+    "unique_ip_count_ever": 19,
     "first_seen": "2026-08-30T08:17:41.881082+00:00",
-    "last_seen": "2026-09-09T20:54:46.807387+00:00",
+    "last_seen": "2026-09-10T11:16:58.552248+00:00",
     "status": "active"
   },
   "6c2b02475f4c7e7e": {
     "sequence_hash": "6c2b02475f4c7e7e",
-    "cluster_id_last_seen_as": "CLU-004",
+    "cluster_id_last_seen_as": "CLU-005",
     "is_campaign": false,
     "campaign_name": null,
     "campaign_severity": null,
     "campaign_description": null,
     "matched_campaigns": [],
     "ttps": [],
-    "session_count": 31,
+    "session_count": 33,
     "unique_ips_ever": [
       "104.155.40.94",
+      "104.199.97.116",
       "130.211.88.97",
       "207.175.153.57",
       "34.140.164.138",
@@ -606,6 +610,7 @@
       "34.22.162.219",
       "34.34.185.242",
       "34.38.114.132",
+      "34.38.129.112",
       "34.38.138.175",
       "34.38.142.199",
       "34.38.210.101",
@@ -629,23 +634,24 @@
       "35.205.213.88",
       "35.205.86.202"
     ],
-    "unique_ip_count_ever": 31,
+    "unique_ip_count_ever": 33,
     "first_seen": "2026-08-30T08:17:41.881082+00:00",
-    "last_seen": "2026-09-09T11:20:16.409681+00:00",
+    "last_seen": "2026-09-10T11:16:58.552248+00:00",
     "status": "active"
   },
   "758d61f26a444483": {
     "sequence_hash": "758d61f26a444483",
-    "cluster_id_last_seen_as": "CLU-008",
+    "cluster_id_last_seen_as": "CLU-009",
     "is_campaign": false,
     "campaign_name": null,
     "campaign_severity": null,
     "campaign_description": null,
     "matched_campaigns": [],
     "ttps": [],
-    "session_count": 32,
+    "session_count": 34,
     "unique_ips_ever": [
       "104.155.40.94",
+      "104.199.97.116",
       "130.211.88.97",
       "157.245.241.15",
       "207.175.153.57",
@@ -655,6 +661,7 @@
       "34.22.162.219",
       "34.34.185.242",
       "34.38.114.132",
+      "34.38.129.112",
       "34.38.138.175",
       "34.38.142.199",
       "34.38.210.101",
@@ -678,9 +685,9 @@
       "35.205.213.88",
       "35.205.86.202"
     ],
-    "unique_ip_count_ever": 32,
+    "unique_ip_count_ever": 34,
     "first_seen": "2026-08-30T08:17:41.881082+00:00",
-    "last_seen": "2026-09-09T11:20:16.409681+00:00",
+    "last_seen": "2026-09-10T11:16:58.552248+00:00",
     "status": "active"
   },
   "b53e1626ea248419": {
@@ -1164,7 +1171,7 @@
         "name": "System Information Discovery"
       }
     ],
-    "session_count": 6809,
+    "session_count": 7776,
     "unique_ips_ever": [
       "109.160.32.10",
       "109.160.32.107",
@@ -1172,6 +1179,7 @@
       "109.160.32.112",
       "109.160.32.118",
       "109.160.32.18",
+      "109.160.32.27",
       "109.160.32.65",
       "109.160.32.75",
       "109.160.32.80",
@@ -1187,9 +1195,9 @@
       "91.92.47.232",
       "91.92.47.35"
     ],
-    "unique_ip_count_ever": 20,
+    "unique_ip_count_ever": 21,
     "first_seen": "2026-08-30T22:43:41.693829+00:00",
-    "last_seen": "2026-09-10T04:46:11.333698+00:00",
+    "last_seen": "2026-09-10T11:16:58.552248+00:00",
     "status": "active"
   },
   "c32b4937ce8564ea": {
@@ -1475,7 +1483,7 @@
   },
   "d2af147dd3fa2817": {
     "sequence_hash": "d2af147dd3fa2817",
-    "cluster_id_last_seen_as": "CLU-001",
+    "cluster_id_last_seen_as": "CLU-003",
     "is_campaign": false,
     "campaign_name": null,
     "campaign_severity": null,
@@ -1495,7 +1503,7 @@
     ],
     "unique_ip_count_ever": 3,
     "first_seen": "2026-08-31T23:50:13.140978+00:00",
-    "last_seen": "2026-09-10T04:46:11.333698+00:00",
+    "last_seen": "2026-09-10T11:16:58.552248+00:00",
     "status": "active"
   },
   "5dbc2dba6c33377a": {
@@ -1524,23 +1532,24 @@
   },
   "e97166b54500da3a": {
     "sequence_hash": "e97166b54500da3a",
-    "cluster_id_last_seen_as": "CLU-010",
+    "cluster_id_last_seen_as": "CLU-008",
     "is_campaign": false,
     "campaign_name": null,
     "campaign_severity": null,
     "campaign_description": null,
     "matched_campaigns": [],
     "ttps": [],
-    "session_count": 4,
+    "session_count": 5,
     "unique_ips_ever": [
       "185.43.238.24",
       "188.191.23.138",
+      "213.55.241.5",
       "31.43.49.88",
       "62.16.15.110"
     ],
-    "unique_ip_count_ever": 4,
+    "unique_ip_count_ever": 5,
     "first_seen": "2026-08-31T23:50:13.140978+00:00",
-    "last_seen": "2026-09-08T11:16:42.316510+00:00",
+    "last_seen": "2026-09-10T11:16:58.552248+00:00",
     "status": "active"
   },
   "c74cbeb6eac6dc54": {
@@ -2086,7 +2095,7 @@
   },
   "2cbee8b05d8e48f5": {
     "sequence_hash": "2cbee8b05d8e48f5",
-    "cluster_id_last_seen_as": "CLU-004",
+    "cluster_id_last_seen_as": "CLU-007",
     "is_campaign": true,
     "campaign_name": "Recon Loader Script",
     "campaign_severity": "MEDIUM",
@@ -2135,10 +2144,11 @@
         "name": "T1083"
       }
     ],
-    "session_count": 484,
+    "session_count": 572,
     "unique_ips_ever": [
       "193.32.162.84",
       "195.178.110.217",
+      "195.178.110.227",
       "2.57.122.150",
       "2.57.122.209",
       "80.94.92.179",
@@ -2149,9 +2159,9 @@
       "92.118.39.50",
       "92.118.39.71"
     ],
-    "unique_ip_count_ever": 11,
+    "unique_ip_count_ever": 12,
     "first_seen": "2026-09-06T10:54:08.784260+00:00",
-    "last_seen": "2026-09-10T04:46:11.333698+00:00",
+    "last_seen": "2026-09-10T11:16:58.552248+00:00",
     "status": "active"
   },
   "99044cc10c082edf": {
@@ -2746,6 +2756,33 @@
     "unique_ip_count_ever": 1,
     "first_seen": "2026-09-10T04:46:11.333698+00:00",
     "last_seen": "2026-09-10T04:46:11.333698+00:00",
+    "status": "active"
+  },
+  "c237995e681c5bdb": {
+    "sequence_hash": "c237995e681c5bdb",
+    "cluster_id_last_seen_as": "CLU-002",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [
+      {
+        "id": "T1082",
+        "name": "System Information Discovery"
+      },
+      {
+        "id": "T1592",
+        "name": "Gather Victim Host Info"
+      }
+    ],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "46.101.150.214"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-09-10T11:16:58.552248+00:00",
+    "last_seen": "2026-09-10T11:16:58.552248+00:00",
     "status": "active"
   }
 }
