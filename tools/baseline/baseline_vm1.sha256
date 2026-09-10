@@ -1,42 +1,20 @@
 # THIR Baseline — VM1 (thir-honeypot-vm1)
 # Format: sha256sum --check baseline_vm1.sha256
 #
-# LOCKED_AFTER_DEPLOY — fill these in on July 8 after deployment is confirmed working:
-#   cd /home/cowrie/cowrie
-#   sha256sum \
-#     src/cowrie/http/__init__.py \
-#     src/cowrie/http/factory.py \
-#     src/cowrie/http/honeypot.py \
-#     src/twisted/plugins/cowrie_plugin.py \
-#     src/cowrie/core/output.py \
-#   >> /path/to/baseline_vm1.sha256
-#
 # Confirmed locked hashes — do not change without deliberate review.
 #
 # Run with:
-#   sha256sum --check /path/to/baseline_vm1.sha256
-# Or from the Cowrie directory:
-#   sha256sum --check /path/to/baseline_vm1.sha256 2>&1 | grep -E 'FAILED|WARNING|OK'
+#   sha256sum --check /home/cowrie/cowrie/tools/baseline_vm1.sha256
 #
-# Last confirmed: June 29 2026
-
-# ── Cowrie configuration ──────────────────────────────────────────────────
-547d2336b0e2508f44c195790296f1a81c6446b8d7a09aadef42f2db1374e419  /home/cowrie/cowrie/etc/cowrie.cfg
-
-# ── Network rules ─────────────────────────────────────────────────────────
+# HTTP honeypot plugin deployment locked: 2026-09-10
+# Cowrie configuration
+65ad4233660daa531a5b54e8a620651dccadc226a046fe4a4a9dcd72cdec084c  /home/cowrie/cowrie/etc/cowrie.cfg
+# Network rules
 2f209d6dca9ca5a799042784644bad88059ef1d772635487891d26792a3fafee  /etc/iptables/rules.v4
-
-# ── HTTP plugin files — LOCKED_AFTER_DEPLOY (fill in on July 8) ──────────
-# LOCKED_AFTER_DEPLOY  /home/cowrie/cowrie/src/cowrie/http/__init__.py
-# LOCKED_AFTER_DEPLOY  /home/cowrie/cowrie/src/cowrie/http/factory.py
-# LOCKED_AFTER_DEPLOY  /home/cowrie/cowrie/src/cowrie/http/honeypot.py
-
-# ── Patched Cowrie core files — LOCKED_AFTER_DEPLOY (fill in on July 8) ─
-# LOCKED_AFTER_DEPLOY  /home/cowrie/cowrie/src/twisted/plugins/cowrie_plugin.py
-# LOCKED_AFTER_DEPLOY  /home/cowrie/cowrie/src/cowrie/core/output.py
-
-# ── Virtualenv dependency manifest ────────────────────────────────────────
-# Lock this after confirming virtualenv is stable post-deployment.
-# Generate with:
-#   sha256sum /home/cowrie/cowrie/requirements.txt >> baseline_vm1.sha256
-# LOCKED_AFTER_DEPLOY  /home/cowrie/cowrie/requirements.txt
+# HTTP plugin files
+e81735c32e9d03258ea70a63f891cfc91bcc40ac2f30d3bcd6be2bfbc5d22cd8  /home/cowrie/cowrie/src/cowrie/http/__init__.py
+bf67411a7a54eee436cbcd8d4f7368014b4f0149b0c44b9a21e149f9af48a62c  /home/cowrie/cowrie/src/cowrie/http/factory.py
+2921ba62b211869c462761dffcff33dbf500ae4a3b2812c0ee1f5e7bed44e4a9  /home/cowrie/cowrie/src/cowrie/http/honeypot.py
+# Patched Cowrie core files
+c407b8012d336a43948e7514152be2ecb6cf50dfd6646d520fb63582fecdf79e  /home/cowrie/cowrie/src/twisted/plugins/cowrie_plugin.py
+6566d35f68e3c7e60d844fdf105488ea3b980c23da0620db928ef5d001d8bb7a  /home/cowrie/cowrie/src/cowrie/core/output.py
