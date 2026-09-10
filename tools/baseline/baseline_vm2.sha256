@@ -13,30 +13,21 @@
 #
 # Note: VM2 cowrie.cfg hash differs from VM1 — port 81 vs 8080.
 #
-# Last confirmed: June 29 2026
-
-# ── Cowrie configuration (VM2 variant — port 81, localhost only) ──────────
-25e5dd55a38a2e7cc9501c67cea0353333a231366a685ee6dc0ecec0cb6e7909  /home/cowrie/cowrie/etc/cowrie.cfg
-
-# ── HAProxy configuration ─────────────────────────────────────────────────
-6160bc94ccfea91349a34685ab18735eac9b7c0ef1e6dfc55b4b43a32da070e7  /etc/haproxy/haproxy.cfg
-
-# ── R2 sync script ────────────────────────────────────────────────────────
-2ff89861f299f9f7bf1d7456be97cc781a63a246fa501154c86c6c513b2d89c2  /home/ubuntu/sync_to_r2.sh
-
-# ── HTTP plugin files — LOCKED_AFTER_DEPLOY (fill in on July 8) ──────────
-# LOCKED_AFTER_DEPLOY  /home/cowrie/cowrie/src/cowrie/http/__init__.py
-# LOCKED_AFTER_DEPLOY  /home/cowrie/cowrie/src/cowrie/http/factory.py
-# LOCKED_AFTER_DEPLOY  /home/cowrie/cowrie/src/cowrie/http/honeypot.py
-
-# ── Patched Cowrie core files — LOCKED_AFTER_DEPLOY (fill in on July 8) ─
-# LOCKED_AFTER_DEPLOY  /home/cowrie/cowrie/src/twisted/plugins/cowrie_plugin.py
-# LOCKED_AFTER_DEPLOY  /home/cowrie/cowrie/src/cowrie/core/output.py
-
-# ── Rsync script ──────────────────────────────────────────────────────────
-# Generate and lock:
-#   sha256sum /home/ubuntu/rsync_from_vm1.sh >> baseline_vm2.sha256
-# LOCKED_AFTER_DEPLOY  /home/ubuntu/rsync_from_vm1.sh
-
-# ── Virtualenv dependency manifest ────────────────────────────────────────
-# LOCKED_AFTER_DEPLOY  /home/cowrie/cowrie/requirements.txt
+# HTTP honeypot plugin deployment locked: 2026-09-10
+# Cowrie configuration
+d9be01ff8348602959497d5c7002658d1ca0c1b4fb730a3877bf6f8b5bb4dfb6  /home/cowrie/cowrie/etc/cowrie.cfg
+# Network rules
+2f209d6dca9ca5a799042784644bad88059ef1d772635487891d26792a3fafee  /etc/iptables/rules.v4
+# HTTP plugin files
+e81735c32e9d03258ea70a63f891cfc91bcc40ac2f30d3bcd6be2bfbc5d22cd8  /home/cowrie/cowrie/src/cowrie/http/__init__.py
+bf67411a7a54eee436cbcd8d4f7368014b4f0149b0c44b9a21e149f9af48a62c  /home/cowrie/cowrie/src/cowrie/http/factory.py
+2921ba62b211869c462761dffcff33dbf500ae4a3b2812c0ee1f5e7bed44e4a9  /home/cowrie/cowrie/src/cowrie/http/honeypot.py
+# Patched Cowrie core files
+9d5652d8afadcc112c43e59a80b0bfebd05af103f6c47dfa52219cc383b81ace  /home/cowrie/cowrie/src/twisted/plugins/cowrie_plugin.py
+6566d35f68e3c7e60d844fdf105488ea3b980c23da0620db928ef5d001d8bb7a  /home/cowrie/cowrie/src/cowrie/core/output.py
+# Virtualenv dependency manifest
+a21f5f15a75204c45f9439a17388d5cb85a4ae2cb6a87aecd8af63880a024257  /home/cowrie/cowrie/requirements.txt
+# HAProxy configuration
+d8d9a10b7160e3e3c36592df3eb218e35d185370e1a441a5e40248c7a63f8d4d  /etc/haproxy/haproxy.cfg
+# R2 sync script
+b768a5c68cdecd2d74e33a5f0b3cd8438e94254fd116b2e8da12f20556dc58b5  /home/ubuntu/sync_to_r2.sh
