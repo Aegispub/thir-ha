@@ -1228,7 +1228,7 @@
   },
   "7ab552f01de999cb": {
     "sequence_hash": "7ab552f01de999cb",
-    "cluster_id_last_seen_as": "CLU-010",
+    "cluster_id_last_seen_as": "CLU-001",
     "is_campaign": false,
     "campaign_name": null,
     "campaign_severity": null,
@@ -1240,7 +1240,7 @@
         "name": "System Information Discovery"
       }
     ],
-    "session_count": 11479,
+    "session_count": 11878,
     "unique_ips_ever": [
       "109.160.32.10",
       "109.160.32.106",
@@ -1253,6 +1253,7 @@
       "109.160.32.18",
       "109.160.32.22",
       "109.160.32.27",
+      "109.160.32.32",
       "109.160.32.33",
       "109.160.32.34",
       "109.160.32.64",
@@ -1272,9 +1273,9 @@
       "91.92.47.232",
       "91.92.47.35"
     ],
-    "unique_ip_count_ever": 29,
+    "unique_ip_count_ever": 30,
     "first_seen": "2026-08-30T22:43:41.693829+00:00",
-    "last_seen": "2026-09-11T16:26:52.772238+00:00",
+    "last_seen": "2026-09-12T00:17:11.410667+00:00",
     "status": "active"
   },
   "c32b4937ce8564ea": {
@@ -3132,6 +3133,53 @@
     "unique_ip_count_ever": 1,
     "first_seen": "2026-09-11T16:26:52.772238+00:00",
     "last_seen": "2026-09-11T16:26:52.772238+00:00",
+    "status": "active"
+  },
+  "aaa3d10acc34e198": {
+    "sequence_hash": "aaa3d10acc34e198",
+    "cluster_id_last_seen_as": "CLU-002",
+    "is_campaign": true,
+    "campaign_name": "Mirai/IoT Botnet",
+    "campaign_severity": "HIGH",
+    "campaign_description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
+    "matched_campaigns": [
+      {
+        "name": "Mirai/IoT Botnet",
+        "ttps": [
+          "T1105",
+          "T1059.004"
+        ],
+        "severity": "HIGH",
+        "description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
+        "pattern_hits": 1,
+        "pattern_total": 3
+      }
+    ],
+    "ttps": [
+      {
+        "id": "T1105",
+        "name": "Ingress Tool Transfer"
+      },
+      {
+        "id": "T1070",
+        "name": "Indicator Removal"
+      },
+      {
+        "id": "T1140",
+        "name": "Deobfuscate/Decode Files"
+      },
+      {
+        "id": "T1059.004",
+        "name": "T1059.004"
+      }
+    ],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "94.154.43.69"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-09-12T00:17:11.410667+00:00",
+    "last_seen": "2026-09-12T00:17:11.410667+00:00",
     "status": "active"
   }
 }
