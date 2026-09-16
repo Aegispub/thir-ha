@@ -1630,9 +1630,9 @@
   },
   "176.53.159.196": {
     "first_seen": "2026-08-29T18:57:59.947143+00:00",
-    "last_seen": "2026-09-15T20:14:53.828220+00:00",
-    "session_count": 288,
-    "login_success_count": 288,
+    "last_seen": "2026-09-15T22:08:32.987050+00:00",
+    "session_count": 290,
+    "login_success_count": 290,
     "last_session_severity": "HIGH",
     "ttps_observed": [
       "T1078",
@@ -1687,7 +1687,9 @@
       "IR-cb9583cae7c0": "2026-09-15T16:34:12.563284Z",
       "IR-cdd4f799ea35": "2026-09-15T18:01:21.745183Z",
       "IR-8092705bc830": "2026-09-15T18:54:27.550197Z",
-      "IR-974b4c314baa": "2026-09-15T20:14:53.828220Z"
+      "IR-974b4c314baa": "2026-09-15T20:14:53.828220Z",
+      "IR-16e794e05c09": "2026-09-15T21:11:09.727292Z",
+      "IR-0b9554b9a1cb": "2026-09-15T22:08:32.987050Z"
     }
   },
   "180.100.217.164": {
@@ -10800,9 +10802,9 @@
   },
   "77.90.185.20": {
     "first_seen": "2026-08-30T07:40:50.424116+00:00",
-    "last_seen": "2026-09-12T14:01:31.010917+00:00",
-    "session_count": 18,
-    "login_success_count": 18,
+    "last_seen": "2026-09-15T22:50:58.498693+00:00",
+    "session_count": 20,
+    "login_success_count": 20,
     "last_session_severity": "HIGH",
     "ttps_observed": [
       "T1021.004",
@@ -10826,10 +10828,8 @@
     "enriched_at": "2026-09-09T11:20:16.239003+00:00",
     "enrichment_ttl_days": 7,
     "_seen_case_ids": {
-      "IR-827d0ca7c896": "2026-09-11T16:32:09.008189Z",
-      "IR-1194c74fc28d": "2026-09-11T16:32:50.120358Z",
-      "IR-ddd4c06338f4": "2026-09-12T14:00:55.996176Z",
-      "IR-2b1ed34961cf": "2026-09-12T14:01:31.010917Z"
+      "IR-3b11b3e0db73": "2026-09-15T22:50:55.757010Z",
+      "IR-b7d5f76beb73": "2026-09-15T22:50:58.498693Z"
     }
   },
   "78.187.9.111": {
@@ -24489,8 +24489,8 @@
   },
   "45.79.207.71": {
     "first_seen": "2026-08-31T03:52:41.173914+00:00",
-    "last_seen": "2026-09-09T01:39:25.515111+00:00",
-    "session_count": 6,
+    "last_seen": "2026-09-15T21:35:55.746382+00:00",
+    "session_count": 7,
     "login_success_count": 0,
     "last_session_severity": "LOW",
     "ttps_observed": [],
@@ -24498,18 +24498,17 @@
     "malware_downloaded": false,
     "abuse_score": 100,
     "country": "US",
-    "asn": "AS63949",
+    "asn": "",
     "isp": "Linode",
     "org": "AS63949 Akamai Connected Cloud",
     "is_tor": false,
     "is_proxy": false,
     "is_vpn": false,
     "otx_pulses": 50,
-    "enriched_at": "2026-09-09T00:13:03.262048+00:00",
+    "enriched_at": "2026-09-16T00:18:02.190087+00:00",
     "enrichment_ttl_days": 7,
     "_seen_case_ids": {
-      "IR-633feaf9c4ca": "2026-09-08T19:51:17.659091Z",
-      "IR-97f58546626f": "2026-09-09T01:39:25.515111Z"
+      "IR-5c023e117fcc": "2026-09-15T21:35:55.746382Z"
     }
   },
   "45.79.5.11": {
@@ -71035,8 +71034,8 @@
   },
   "31.128.168.124": {
     "first_seen": "2026-08-31T13:26:57.192298+00:00",
-    "last_seen": "2026-08-31T13:36:15.975154+00:00",
-    "session_count": 3,
+    "last_seen": "2026-09-15T21:55:39.684449+00:00",
+    "session_count": 7,
     "login_success_count": 0,
     "last_session_severity": "LOW",
     "ttps_observed": [],
@@ -71045,18 +71044,19 @@
     "abuse_score": 100,
     "country": "UA",
     "asn": "AS35614",
-    "isp": "Therecom Ltd",
+    "isp": "NOVALINE",
     "org": "AS35614 Therecom Ltd",
     "is_tor": false,
     "is_proxy": false,
     "is_vpn": false,
-    "otx_pulses": 2,
-    "enriched_at": "2026-08-31T20:03:28.217810+00:00",
+    "otx_pulses": 3,
+    "enriched_at": "2026-09-16T00:18:02.190087+00:00",
     "enrichment_ttl_days": 7,
     "_seen_case_ids": {
-      "IR-973cff99513c": "2026-08-31T13:26:57.194140Z",
-      "IR-83a20d21096f": "2026-08-31T13:26:57.194806Z",
-      "IR-ac5ceaef7428": "2026-08-31T13:36:15.975154Z"
+      "IR-69ed8e44afa5": "2026-09-15T21:54:49.186831Z",
+      "IR-b5599812f036": "2026-09-15T21:54:49.189110Z",
+      "IR-410b2593fcfc": "2026-09-15T21:55:39.683402Z",
+      "IR-82ac3672d982": "2026-09-15T21:55:39.684449Z"
     }
   },
   "31.210.211.27": {
@@ -73014,10 +73014,10 @@
   },
   "153.99.92.11": {
     "first_seen": "2026-08-31T20:16:29.680238+00:00",
-    "last_seen": "2026-08-31T20:21:31.076764+00:00",
-    "session_count": 1,
+    "last_seen": "2026-09-15T21:50:42.355276+00:00",
+    "session_count": 2,
     "login_success_count": 1,
-    "last_session_severity": "HIGH",
+    "last_session_severity": "LOW",
     "ttps_observed": [
       "T1021.004",
       "T1078",
@@ -73034,10 +73034,10 @@
     "is_proxy": false,
     "is_vpn": false,
     "otx_pulses": 50,
-    "enriched_at": "2026-08-31T23:50:12.888830+00:00",
+    "enriched_at": "2026-09-16T00:18:02.190087+00:00",
     "enrichment_ttl_days": 7,
     "_seen_case_ids": {
-      "IR-7d5fa9e2a41a": "2026-08-31T20:21:31.076764Z"
+      "IR-6e29871acc8c": "2026-09-15T21:50:42.355276Z"
     }
   },
   "170.150.173.87": {
@@ -73518,8 +73518,8 @@
   },
   "205.210.31.29": {
     "first_seen": "2026-08-31T20:09:05.101702+00:00",
-    "last_seen": "2026-08-31T20:09:05.317588+00:00",
-    "session_count": 1,
+    "last_seen": "2026-09-15T21:30:29.564399+00:00",
+    "session_count": 2,
     "login_success_count": 0,
     "last_session_severity": "LOW",
     "ttps_observed": [],
@@ -73537,7 +73537,7 @@
     "enriched_at": "2026-08-31T23:50:12.888830+00:00",
     "enrichment_ttl_days": 30,
     "_seen_case_ids": {
-      "IR-00dada14fd24": "2026-08-31T20:09:05.317588Z"
+      "IR-a794549de45b": "2026-09-15T21:30:29.564399Z"
     }
   },
   "211.56.131.202": {
@@ -82524,8 +82524,8 @@
   },
   "193.32.162.84": {
     "first_seen": "2026-09-02T00:00:17.780795+00:00",
-    "last_seen": "2026-09-15T20:53:55.766577+00:00",
-    "session_count": 499,
+    "last_seen": "2026-09-15T20:55:55.397754+00:00",
+    "session_count": 500,
     "login_success_count": 476,
     "last_session_severity": "LOW",
     "ttps_observed": [
@@ -82557,7 +82557,8 @@
       "IR-490b672540bb": "2026-09-15T20:48:31.502479Z",
       "IR-c8f44c0d7b74": "2026-09-15T20:51:26.280108Z",
       "IR-96f1ef45b0dd": "2026-09-15T20:53:27.201447Z",
-      "IR-4c6a0e55bf99": "2026-09-15T20:53:55.766577Z"
+      "IR-4c6a0e55bf99": "2026-09-15T20:53:55.766577Z",
+      "IR-46be332e67b0": "2026-09-15T20:55:55.397754Z"
     }
   },
   "193.56.149.119": {
@@ -91203,9 +91204,9 @@
   },
   "171.25.158.87": {
     "first_seen": "2026-09-03T08:08:06.340763+00:00",
-    "last_seen": "2026-09-03T08:08:10.477710+00:00",
-    "session_count": 3,
-    "login_success_count": 3,
+    "last_seen": "2026-09-15T20:57:41.278083+00:00",
+    "session_count": 6,
+    "login_success_count": 6,
     "last_session_severity": "HIGH",
     "ttps_observed": [
       "T1021.004",
@@ -91223,13 +91224,13 @@
     "is_tor": false,
     "is_proxy": false,
     "is_vpn": false,
-    "otx_pulses": 29,
-    "enriched_at": "2026-09-03T16:24:50.317671+00:00",
+    "otx_pulses": 31,
+    "enriched_at": "2026-09-16T00:18:02.190087+00:00",
     "enrichment_ttl_days": 7,
     "_seen_case_ids": {
-      "IR-5395a89cfe0d": "2026-09-03T08:08:10.476809Z",
-      "IR-5c3e8f430d7e": "2026-09-03T08:08:09.628499Z",
-      "IR-df92018e2d88": "2026-09-03T08:08:10.477710Z"
+      "IR-5ceca7564f97": "2026-09-15T20:57:41.278083Z",
+      "IR-e160602e4f88": "2026-09-15T20:57:40.431682Z",
+      "IR-28f211259043": "2026-09-15T20:57:41.276739Z"
     }
   },
   "172.185.24.228": {
@@ -96903,7 +96904,7 @@
   },
   "220.250.52.89": {
     "first_seen": "2026-09-04T04:00:59.743978+00:00",
-    "last_seen": "2026-09-15T20:53:21.596303+00:00",
+    "last_seen": "2026-09-15T20:55:21.337286+00:00",
     "session_count": 4,
     "login_success_count": 2,
     "last_session_severity": "LOW",
@@ -96927,7 +96928,7 @@
     "enriched_at": "2026-09-15T21:19:12.334122+00:00",
     "enrichment_ttl_days": 7,
     "_seen_case_ids": {
-      "IR-7e8edccd7702": "2026-09-15T20:53:21.596303Z"
+      "IR-7e8edccd7702": "2026-09-15T20:55:21.337286Z"
     }
   },
   "31.134.74.196": {
@@ -99832,7 +99833,7 @@
   },
   "139.159.142.7": {
     "first_seen": "2026-09-04T16:53:14.967015+00:00",
-    "last_seen": "2026-09-15T20:54:02.446275+00:00",
+    "last_seen": "2026-09-15T20:56:02.211363+00:00",
     "session_count": 2,
     "login_success_count": 0,
     "last_session_severity": "LOW",
@@ -99853,7 +99854,7 @@
     "enriched_at": "2026-09-15T21:19:12.334122+00:00",
     "enrichment_ttl_days": 7,
     "_seen_case_ids": {
-      "IR-05067bb3820c": "2026-09-15T20:54:02.446275Z"
+      "IR-05067bb3820c": "2026-09-15T20:56:02.211363Z"
     }
   },
   "153.51.231.20": {
@@ -102348,9 +102349,9 @@
   },
   "77.90.185.17": {
     "first_seen": "2026-09-04T19:44:53.893427+00:00",
-    "last_seen": "2026-09-15T19:41:33.607250+00:00",
-    "session_count": 165,
-    "login_success_count": 165,
+    "last_seen": "2026-09-15T22:30:41.708626+00:00",
+    "session_count": 166,
+    "login_success_count": 166,
     "last_session_severity": "HIGH",
     "ttps_observed": [
       "T1078",
@@ -102412,7 +102413,8 @@
       "IR-269ddae44fcc": "2026-09-15T18:22:52.217931Z",
       "IR-b8686d0d796c": "2026-09-15T18:35:32.421407Z",
       "IR-b8e8581ae9ba": "2026-09-15T19:38:42.305636Z",
-      "IR-237a31ac751e": "2026-09-15T19:41:33.607250Z"
+      "IR-237a31ac751e": "2026-09-15T19:41:33.607250Z",
+      "IR-fff706a24229": "2026-09-15T22:30:41.708626Z"
     }
   },
   "78.180.33.198": {
@@ -117960,10 +117962,10 @@
   },
   "94.154.43.69": {
     "first_seen": "2026-09-06T12:56:19.056580+00:00",
-    "last_seen": "2026-09-15T20:25:16.615639+00:00",
-    "session_count": 23,
-    "login_success_count": 11,
-    "last_session_severity": "LOW",
+    "last_seen": "2026-09-15T21:33:06.966982+00:00",
+    "session_count": 25,
+    "login_success_count": 13,
+    "last_session_severity": "HIGH",
     "ttps_observed": [
       "T1059.004",
       "T1078",
@@ -117990,7 +117992,9 @@
       "IR-b280bd52d8c4": "2026-09-15T06:58:10.183291Z",
       "IR-75fb6946933a": "2026-09-15T06:58:21.043352Z",
       "IR-f040bc74a890": "2026-09-15T06:58:45.056167Z",
-      "IR-9a7470862fb0": "2026-09-15T20:25:16.615639Z"
+      "IR-9a7470862fb0": "2026-09-15T20:25:16.615639Z",
+      "IR-29787b98fc46": "2026-09-15T21:32:41.913738Z",
+      "IR-03a6a53dae9e": "2026-09-15T21:33:06.966982Z"
     }
   },
   "101.126.157.138": {
@@ -176637,8 +176641,8 @@
   },
   "104.194.10.16": {
     "first_seen": "2026-09-14T01:52:45.824982+00:00",
-    "last_seen": "2026-09-15T18:51:53.205049+00:00",
-    "session_count": 22,
+    "last_seen": "2026-09-15T22:45:03.748466+00:00",
+    "session_count": 25,
     "login_success_count": 0,
     "last_session_severity": "LOW",
     "ttps_observed": [],
@@ -176677,7 +176681,10 @@
       "IR-4cdf7e5de9a1": "2026-09-15T14:06:17.812013Z",
       "IR-b79449c619c4": "2026-09-15T14:54:36.920175Z",
       "IR-15b0098c210a": "2026-09-15T18:30:00.525348Z",
-      "IR-ef19e07da4a4": "2026-09-15T18:51:53.205049Z"
+      "IR-ef19e07da4a4": "2026-09-15T18:51:53.205049Z",
+      "IR-bb23c58f4723": "2026-09-15T22:11:04.337196Z",
+      "IR-572001d131bf": "2026-09-15T22:44:00.164358Z",
+      "IR-3b029ab5eb7d": "2026-09-15T22:45:03.748466Z"
     }
   },
   "106.120.205.138": {
@@ -198028,7 +198035,7 @@
   },
   "217.25.82.113": {
     "first_seen": "2026-09-15T20:54:20.288140+00:00",
-    "last_seen": "2026-09-15T20:54:20.288140+00:00",
+    "last_seen": "2026-09-15T20:56:20.289161+00:00",
     "session_count": 1,
     "login_success_count": 0,
     "last_session_severity": "LOW",
@@ -198047,7 +198054,7 @@
     "enriched_at": "2026-09-15T21:19:12.334122+00:00",
     "enrichment_ttl_days": 7,
     "_seen_case_ids": {
-      "IR-9870c2ce2dd9": "2026-09-15T20:54:20.288140Z"
+      "IR-9870c2ce2dd9": "2026-09-15T20:56:20.289161Z"
     }
   },
   "218.4.247.234": {
@@ -198592,6 +198599,485 @@
       "IR-81aff71eb664": "2026-09-15T15:31:35.538961Z",
       "IR-1ec1d685f9b9": "2026-09-15T15:33:54.293970Z",
       "IR-a2aa22bae6ff": "2026-09-15T15:33:54.294958Z"
+    }
+  },
+  "112.46.212.23": {
+    "first_seen": "2026-09-15T22:50:06.832185+00:00",
+    "last_seen": "2026-09-15T22:50:23.132644+00:00",
+    "session_count": 1,
+    "login_success_count": 0,
+    "last_session_severity": "LOW",
+    "ttps_observed": [],
+    "commands_observed": false,
+    "malware_downloaded": false,
+    "abuse_score": 47,
+    "country": "CN",
+    "asn": "AS9808",
+    "isp": "China Mobile Communications Corporation",
+    "org": "AS9808 China Mobile Communications Group Co., Ltd.",
+    "is_tor": false,
+    "is_proxy": false,
+    "is_vpn": false,
+    "otx_pulses": 4,
+    "enriched_at": "2026-09-16T00:18:02.190087+00:00",
+    "enrichment_ttl_days": 30,
+    "_seen_case_ids": {
+      "IR-0b377e81f986": "2026-09-15T22:50:23.132644Z"
+    }
+  },
+  "119.92.70.82": {
+    "first_seen": "2026-09-15T22:09:10.399974+00:00",
+    "last_seen": "2026-09-15T22:09:17.820201+00:00",
+    "session_count": 3,
+    "login_success_count": 3,
+    "last_session_severity": "HIGH",
+    "ttps_observed": [
+      "T1021.004",
+      "T1078",
+      "T1105",
+      "T1592"
+    ],
+    "commands_observed": true,
+    "malware_downloaded": true,
+    "abuse_score": 100,
+    "country": "PH",
+    "asn": "AS9299",
+    "isp": "IPG",
+    "org": "AS9299 Philippine Long Distance Telephone Company",
+    "is_tor": false,
+    "is_proxy": false,
+    "is_vpn": false,
+    "otx_pulses": 50,
+    "enriched_at": "2026-09-16T00:18:02.190087+00:00",
+    "enrichment_ttl_days": 7,
+    "_seen_case_ids": {
+      "IR-99cb7dac07b1": "2026-09-15T22:09:17.820201Z",
+      "IR-323007c62b0d": "2026-09-15T22:09:16.108469Z",
+      "IR-a64bd3dc5777": "2026-09-15T22:09:17.817941Z"
+    }
+  },
+  "147.185.132.195": {
+    "first_seen": "2026-09-15T22:27:31.137236+00:00",
+    "last_seen": "2026-09-15T22:27:46.964756+00:00",
+    "session_count": 1,
+    "login_success_count": 0,
+    "last_session_severity": "LOW",
+    "ttps_observed": [
+      "T1592"
+    ],
+    "commands_observed": false,
+    "malware_downloaded": false,
+    "abuse_score": 0,
+    "country": "US",
+    "asn": "AS396982",
+    "isp": "Palo Alto Networks, Inc",
+    "org": "AS396982 Google LLC",
+    "is_tor": false,
+    "is_proxy": false,
+    "is_vpn": false,
+    "otx_pulses": 50,
+    "enriched_at": "2026-09-16T00:18:02.190087+00:00",
+    "enrichment_ttl_days": 30,
+    "_seen_case_ids": {
+      "IR-a0c9c29b6c84": "2026-09-15T22:27:46.964756Z"
+    }
+  },
+  "177.71.91.181": {
+    "first_seen": "2026-09-15T22:45:32.733235+00:00",
+    "last_seen": "2026-09-15T22:46:09.325468+00:00",
+    "session_count": 2,
+    "login_success_count": 0,
+    "last_session_severity": "LOW",
+    "ttps_observed": [],
+    "commands_observed": false,
+    "malware_downloaded": false,
+    "abuse_score": 60,
+    "country": "BR",
+    "asn": "AS263604",
+    "isp": "Hilton C. Bender Eireli",
+    "org": "AS263604 Hilton C. Bender Eireli",
+    "is_tor": false,
+    "is_proxy": false,
+    "is_vpn": false,
+    "otx_pulses": 0,
+    "enriched_at": "2026-09-16T00:18:02.190087+00:00",
+    "enrichment_ttl_days": 30,
+    "_seen_case_ids": {
+      "IR-23c501c407ba": "2026-09-15T22:45:32.734779Z",
+      "IR-82ad8af547bb": "2026-09-15T22:46:09.325468Z"
+    }
+  },
+  "181.25.21.78": {
+    "first_seen": "2026-09-15T22:30:05.171141+00:00",
+    "last_seen": "2026-09-15T22:30:34.916550+00:00",
+    "session_count": 4,
+    "login_success_count": 0,
+    "last_session_severity": "LOW",
+    "ttps_observed": [],
+    "commands_observed": false,
+    "malware_downloaded": false,
+    "abuse_score": 0,
+    "country": "AR",
+    "asn": "AS22927",
+    "isp": "Telefonica de Argentina",
+    "org": "AS22927 Telefonica de Argentina",
+    "is_tor": false,
+    "is_proxy": false,
+    "is_vpn": false,
+    "otx_pulses": 0,
+    "enriched_at": "2026-09-16T00:18:02.190087+00:00",
+    "enrichment_ttl_days": 30,
+    "_seen_case_ids": {
+      "IR-d1e4d7abaf5e": "2026-09-15T22:30:05.174489Z",
+      "IR-10ec309c4008": "2026-09-15T22:30:05.175539Z",
+      "IR-323762d11b64": "2026-09-15T22:30:34.915662Z",
+      "IR-3bf4d514af31": "2026-09-15T22:30:34.916550Z"
+    }
+  },
+  "192.42.116.114": {
+    "first_seen": "2026-09-15T21:46:18.123912+00:00",
+    "last_seen": "2026-09-15T21:46:41.549201+00:00",
+    "session_count": 1,
+    "login_success_count": 1,
+    "last_session_severity": "HIGH",
+    "ttps_observed": [
+      "T1078",
+      "T1110.001",
+      "T1592"
+    ],
+    "commands_observed": false,
+    "malware_downloaded": false,
+    "abuse_score": 100,
+    "country": "NL",
+    "asn": "AS215125",
+    "isp": "TOR EXIT AND MORE",
+    "org": "AS215125 Church of Cyberology",
+    "is_tor": false,
+    "is_proxy": false,
+    "is_vpn": false,
+    "otx_pulses": 50,
+    "enriched_at": "2026-09-16T00:18:02.190087+00:00",
+    "enrichment_ttl_days": 7,
+    "_seen_case_ids": {
+      "IR-dc8978eaf57a": "2026-09-15T21:46:41.549201Z"
+    }
+  },
+  "201.221.105.71": {
+    "first_seen": "2026-09-15T21:09:06.934443+00:00",
+    "last_seen": "2026-09-15T21:14:41.630252+00:00",
+    "session_count": 2,
+    "login_success_count": 0,
+    "last_session_severity": "LOW",
+    "ttps_observed": [],
+    "commands_observed": false,
+    "malware_downloaded": false,
+    "abuse_score": 100,
+    "country": "AR",
+    "asn": "AS10617",
+    "isp": "Sinectis S.A.",
+    "org": "AS10617 SION S.A",
+    "is_tor": false,
+    "is_proxy": false,
+    "is_vpn": false,
+    "otx_pulses": 0,
+    "enriched_at": "2026-09-16T00:18:02.190087+00:00",
+    "enrichment_ttl_days": 7,
+    "_seen_case_ids": {
+      "IR-fe597f5b7607": "2026-09-15T21:09:06.935922Z",
+      "IR-f5bdea603dc5": "2026-09-15T21:14:41.630252Z"
+    }
+  },
+  "205.210.31.44": {
+    "first_seen": "2026-09-15T21:36:35.453559+00:00",
+    "last_seen": "2026-09-15T21:36:35.615358+00:00",
+    "session_count": 1,
+    "login_success_count": 0,
+    "last_session_severity": "LOW",
+    "ttps_observed": [],
+    "commands_observed": false,
+    "malware_downloaded": false,
+    "abuse_score": 0,
+    "country": "US",
+    "asn": "AS396982",
+    "isp": "Palo Alto Networks, Inc",
+    "org": "AS396982 Google LLC",
+    "is_tor": false,
+    "is_proxy": false,
+    "is_vpn": false,
+    "otx_pulses": 50,
+    "enriched_at": "2026-09-16T00:18:02.190087+00:00",
+    "enrichment_ttl_days": 30,
+    "_seen_case_ids": {
+      "IR-5149c7b9e300": "2026-09-15T21:36:35.615358Z"
+    }
+  },
+  "216.244.224.193": {
+    "first_seen": "2026-09-15T22:21:40.669201+00:00",
+    "last_seen": "2026-09-15T22:21:40.673831+00:00",
+    "session_count": 1,
+    "login_success_count": 0,
+    "last_session_severity": "LOW",
+    "ttps_observed": [],
+    "commands_observed": false,
+    "malware_downloaded": false,
+    "abuse_score": 100,
+    "country": "AR",
+    "asn": "AS10617",
+    "isp": "Sinectis S.A.",
+    "org": "AS10617 SION S.A",
+    "is_tor": false,
+    "is_proxy": false,
+    "is_vpn": false,
+    "otx_pulses": 1,
+    "enriched_at": "2026-09-16T00:18:02.190087+00:00",
+    "enrichment_ttl_days": 7,
+    "_seen_case_ids": {
+      "IR-2d247ed9aadf": "2026-09-15T22:21:40.673831Z"
+    }
+  },
+  "217.196.163.48": {
+    "first_seen": "2026-09-15T21:19:16.710224+00:00",
+    "last_seen": "2026-09-15T21:19:22.430201+00:00",
+    "session_count": 2,
+    "login_success_count": 0,
+    "last_session_severity": "LOW",
+    "ttps_observed": [],
+    "commands_observed": false,
+    "malware_downloaded": false,
+    "abuse_score": 57,
+    "country": "UA",
+    "asn": "AS16223",
+    "isp": "MAXNET TELECOM, LTD",
+    "org": "AS16223 MAXNET TELECOM, LTD",
+    "is_tor": false,
+    "is_proxy": false,
+    "is_vpn": false,
+    "otx_pulses": 1,
+    "enriched_at": "2026-09-16T00:18:02.190087+00:00",
+    "enrichment_ttl_days": 30,
+    "_seen_case_ids": {
+      "IR-fa5162e3c67a": "2026-09-15T21:19:16.711865Z",
+      "IR-20e4cb899783": "2026-09-15T21:19:22.430201Z"
+    }
+  },
+  "222.191.180.117": {
+    "first_seen": "2026-09-15T21:04:41.419094+00:00",
+    "last_seen": "2026-09-15T21:05:00.344407+00:00",
+    "session_count": 2,
+    "login_success_count": 2,
+    "last_session_severity": "HIGH",
+    "ttps_observed": [
+      "T1021.004",
+      "T1078",
+      "T1105",
+      "T1592"
+    ],
+    "commands_observed": true,
+    "malware_downloaded": true,
+    "abuse_score": 100,
+    "country": "CN",
+    "asn": "AS4134",
+    "isp": "CHINANET jiangsu province network",
+    "org": "AS4134 CHINANET BACKBONE",
+    "is_tor": false,
+    "is_proxy": false,
+    "is_vpn": false,
+    "otx_pulses": 1,
+    "enriched_at": "2026-09-16T00:18:02.190087+00:00",
+    "enrichment_ttl_days": 7,
+    "_seen_case_ids": {
+      "IR-7413b3873abf": "2026-09-15T21:05:00.344407Z",
+      "IR-8edd5959547c": "2026-09-15T21:04:46.329660Z"
+    }
+  },
+  "36.66.16.233": {
+    "first_seen": "2026-09-15T21:50:48.744756+00:00",
+    "last_seen": "2026-09-15T21:50:56.677586+00:00",
+    "session_count": 3,
+    "login_success_count": 3,
+    "last_session_severity": "HIGH",
+    "ttps_observed": [
+      "T1021.004",
+      "T1078",
+      "T1105",
+      "T1592"
+    ],
+    "commands_observed": true,
+    "malware_downloaded": true,
+    "abuse_score": 100,
+    "country": "ID",
+    "asn": "AS7713",
+    "isp": "PT TELKOM INDONESIA Menara Multimedia Lt.7 Jl. Kebon sirih No.12 JAKARTA",
+    "org": "AS7713 PT Telekomunikasi Indonesia",
+    "is_tor": false,
+    "is_proxy": false,
+    "is_vpn": false,
+    "otx_pulses": 50,
+    "enriched_at": "2026-09-16T00:18:02.190087+00:00",
+    "enrichment_ttl_days": 7,
+    "_seen_case_ids": {
+      "IR-3a80e53abcec": "2026-09-15T21:50:56.671204Z",
+      "IR-8ddb6e80cf42": "2026-09-15T21:50:54.748513Z",
+      "IR-dc8a08ea5d04": "2026-09-15T21:50:56.677586Z"
+    }
+  },
+  "40.80.204.121": {
+    "first_seen": "2026-09-15T22:45:41.418270+00:00",
+    "last_seen": "2026-09-15T22:46:01.421588+00:00",
+    "session_count": 2,
+    "login_success_count": 0,
+    "last_session_severity": "LOW",
+    "ttps_observed": [
+      "T1592"
+    ],
+    "commands_observed": false,
+    "malware_downloaded": false,
+    "abuse_score": 100,
+    "country": "US",
+    "asn": "AS8075",
+    "isp": "Microsoft Corporation",
+    "org": "AS8075 Microsoft Corporation",
+    "is_tor": false,
+    "is_proxy": false,
+    "is_vpn": false,
+    "otx_pulses": 1,
+    "enriched_at": "2026-09-16T00:18:02.190087+00:00",
+    "enrichment_ttl_days": 7,
+    "_seen_case_ids": {
+      "IR-6fabc1202f66": "2026-09-15T22:46:01.386584Z",
+      "IR-fd918a664f4b": "2026-09-15T22:46:01.421588Z"
+    }
+  },
+  "43.128.3.201": {
+    "first_seen": "2026-09-15T21:47:05.680303+00:00",
+    "last_seen": "2026-09-15T21:47:12.268366+00:00",
+    "session_count": 3,
+    "login_success_count": 3,
+    "last_session_severity": "HIGH",
+    "ttps_observed": [
+      "T1021.004",
+      "T1078",
+      "T1105",
+      "T1592"
+    ],
+    "commands_observed": true,
+    "malware_downloaded": true,
+    "abuse_score": 100,
+    "country": "HK",
+    "asn": "AS132203",
+    "isp": "Asia Pacific Network Information Center, Pty. Ltd.",
+    "org": "AS132203 Tencent Building, Kejizhongyi Avenue",
+    "is_tor": false,
+    "is_proxy": false,
+    "is_vpn": false,
+    "otx_pulses": 28,
+    "enriched_at": "2026-09-16T00:18:02.190087+00:00",
+    "enrichment_ttl_days": 7,
+    "_seen_case_ids": {
+      "IR-9e058d803f13": "2026-09-15T21:47:12.261567Z",
+      "IR-b7dcc1cc50c4": "2026-09-15T21:47:10.672112Z",
+      "IR-9a5a7e312be4": "2026-09-15T21:47:12.268366Z"
+    }
+  },
+  "46.53.210.26": {
+    "first_seen": "2026-09-15T21:04:58.978435+00:00",
+    "last_seen": "2026-09-15T21:04:58.979946+00:00",
+    "session_count": 1,
+    "login_success_count": 0,
+    "last_session_severity": "LOW",
+    "ttps_observed": [],
+    "commands_observed": false,
+    "malware_downloaded": false,
+    "abuse_score": 100,
+    "country": "BY",
+    "asn": "AS42772",
+    "isp": "A1 network",
+    "org": "AS42772 Unitary enterprise A1",
+    "is_tor": false,
+    "is_proxy": false,
+    "is_vpn": false,
+    "otx_pulses": 1,
+    "enriched_at": "2026-09-16T00:18:02.190087+00:00",
+    "enrichment_ttl_days": 7,
+    "_seen_case_ids": {
+      "IR-0a124ab889b3": "2026-09-15T21:04:58.979946Z"
+    }
+  },
+  "64.227.90.185": {
+    "first_seen": "2026-09-15T21:02:47.778646+00:00",
+    "last_seen": "2026-09-15T21:02:50.887527+00:00",
+    "session_count": 3,
+    "login_success_count": 0,
+    "last_session_severity": "LOW",
+    "ttps_observed": [
+      "T1592"
+    ],
+    "commands_observed": false,
+    "malware_downloaded": false,
+    "abuse_score": 100,
+    "country": "US",
+    "asn": "AS14061",
+    "isp": "DigitalOcean, LLC",
+    "org": "AS14061 DigitalOcean, LLC",
+    "is_tor": false,
+    "is_proxy": false,
+    "is_vpn": false,
+    "otx_pulses": 0,
+    "enriched_at": "2026-09-16T00:18:02.190087+00:00",
+    "enrichment_ttl_days": 7,
+    "_seen_case_ids": {
+      "IR-a4eb8d9b0ab1": "2026-09-15T21:02:48.154349Z",
+      "IR-c5bd4d3feaa0": "2026-09-15T21:02:49.757015Z",
+      "IR-4a08bd01a838": "2026-09-15T21:02:50.887527Z"
+    }
+  },
+  "94.178.222.97": {
+    "first_seen": "2026-09-15T20:58:33.687013+00:00",
+    "last_seen": "2026-09-15T20:58:51.031914+00:00",
+    "session_count": 2,
+    "login_success_count": 0,
+    "last_session_severity": "LOW",
+    "ttps_observed": [],
+    "commands_observed": false,
+    "malware_downloaded": false,
+    "abuse_score": 100,
+    "country": "UA",
+    "asn": "AS6849",
+    "isp": "JSC Ukrtelecom",
+    "org": "AS6849 JSC \"Ukrtelecom\"",
+    "is_tor": false,
+    "is_proxy": false,
+    "is_vpn": false,
+    "otx_pulses": 2,
+    "enriched_at": "2026-09-16T00:18:02.190087+00:00",
+    "enrichment_ttl_days": 7,
+    "_seen_case_ids": {
+      "IR-62ee8d48b9c9": "2026-09-15T20:58:33.688489Z",
+      "IR-66090e95c0ba": "2026-09-15T20:58:51.031914Z"
+    }
+  },
+  "95.174.107.234": {
+    "first_seen": "2026-09-15T22:32:16.316949+00:00",
+    "last_seen": "2026-09-15T22:32:29.479980+00:00",
+    "session_count": 1,
+    "login_success_count": 0,
+    "last_session_severity": "LOW",
+    "ttps_observed": [],
+    "commands_observed": false,
+    "malware_downloaded": false,
+    "abuse_score": 82,
+    "country": "RU",
+    "asn": "AS60246",
+    "isp": "Consumer Internet Cooperative PG-19",
+    "org": "AS60246 Consumer Internet Cooperative PG-19",
+    "is_tor": false,
+    "is_proxy": false,
+    "is_vpn": false,
+    "otx_pulses": 2,
+    "enriched_at": "2026-09-16T00:18:02.190087+00:00",
+    "enrichment_ttl_days": 7,
+    "_seen_case_ids": {
+      "IR-aff99b735d83": "2026-09-15T22:32:29.479980Z"
     }
   }
 }
