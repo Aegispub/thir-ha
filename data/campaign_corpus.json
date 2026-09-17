@@ -1,7 +1,7 @@
 {
   "98af0db988d5971c": {
     "sequence_hash": "98af0db988d5971c",
-    "cluster_id_last_seen_as": "CLU-008",
+    "cluster_id_last_seen_as": "CLU-002",
     "is_campaign": true,
     "campaign_name": "mdrfckr SSH Key Injection",
     "campaign_severity": "HIGH",
@@ -42,11 +42,12 @@
         "name": "T1105"
       }
     ],
-    "session_count": 715,
+    "session_count": 721,
     "unique_ips_ever": [
       "101.126.24.71",
       "101.126.64.76",
       "101.126.71.100",
+      "101.32.240.31",
       "101.42.41.164",
       "101.47.156.170",
       "101.47.156.21",
@@ -264,6 +265,7 @@
       "158.51.126.147",
       "159.65.2.17",
       "160.251.101.169",
+      "160.99.13.185",
       "161.132.54.218",
       "161.248.202.88",
       "161.35.179.218",
@@ -405,6 +407,7 @@
       "202.165.22.102",
       "202.165.26.42",
       "202.79.29.108",
+      "203.121.40.210",
       "203.135.42.52",
       "203.150.107.87",
       "203.170.192.251",
@@ -592,6 +595,7 @@
       "88.147.30.59",
       "88.249.195.23",
       "91.107.158.47",
+      "91.134.133.184",
       "91.144.158.231",
       "91.185.75.244",
       "92.112.127.220",
@@ -604,9 +608,9 @@
       "97.74.236.4",
       "98.70.48.241"
     ],
-    "unique_ip_count_ever": 559,
+    "unique_ip_count_ever": 563,
     "first_seen": "2026-08-30T03:20:37.640961+00:00",
-    "last_seen": "2026-09-17T13:25:54.173955+00:00",
+    "last_seen": "2026-09-17T18:12:00.718216+00:00",
     "status": "active"
   },
   "6fa4c8ac58e7a1d9": {
@@ -1412,7 +1416,7 @@
   },
   "7ab552f01de999cb": {
     "sequence_hash": "7ab552f01de999cb",
-    "cluster_id_last_seen_as": "CLU-013",
+    "cluster_id_last_seen_as": "CLU-004",
     "is_campaign": false,
     "campaign_name": null,
     "campaign_severity": null,
@@ -1424,7 +1428,7 @@
         "name": "System Information Discovery"
       }
     ],
-    "session_count": 30617,
+    "session_count": 32049,
     "unique_ips_ever": [
       "109.160.32.10",
       "109.160.32.101",
@@ -1448,6 +1452,7 @@
       "109.160.32.32",
       "109.160.32.33",
       "109.160.32.34",
+      "109.160.32.40",
       "109.160.32.47",
       "109.160.32.49",
       "109.160.32.62",
@@ -1473,9 +1478,9 @@
       "91.92.47.232",
       "91.92.47.35"
     ],
-    "unique_ip_count_ever": 46,
+    "unique_ip_count_ever": 47,
     "first_seen": "2026-08-30T22:43:41.693829+00:00",
-    "last_seen": "2026-09-17T13:25:54.173955+00:00",
+    "last_seen": "2026-09-17T18:12:00.718216+00:00",
     "status": "active"
   },
   "c32b4937ce8564ea": {
@@ -1633,25 +1638,26 @@
   },
   "75264fc05d188f70": {
     "sequence_hash": "75264fc05d188f70",
-    "cluster_id_last_seen_as": "CLU-006",
+    "cluster_id_last_seen_as": "CLU-003",
     "is_campaign": false,
     "campaign_name": null,
     "campaign_severity": null,
     "campaign_description": null,
     "matched_campaigns": [],
     "ttps": [],
-    "session_count": 6,
+    "session_count": 7,
     "unique_ips_ever": [
       "101.36.97.80",
       "152.32.159.180",
+      "152.32.206.64",
       "152.32.245.44",
       "165.154.11.210",
       "165.154.172.108",
       "165.154.182.72"
     ],
-    "unique_ip_count_ever": 6,
+    "unique_ip_count_ever": 7,
     "first_seen": "2026-08-31T13:45:55.498131+00:00",
-    "last_seen": "2026-09-15T11:42:10.866691+00:00",
+    "last_seen": "2026-09-17T18:12:00.718216+00:00",
     "status": "active"
   },
   "e8be2a33d35f6395": {
@@ -2106,7 +2112,7 @@
     "unique_ip_count_ever": 1,
     "first_seen": "2026-09-03T16:24:50.447936+00:00",
     "last_seen": "2026-09-03T16:24:50.447936+00:00",
-    "status": "active"
+    "status": "ended"
   },
   "ed09b6f9ce479463": {
     "sequence_hash": "ed09b6f9ce479463",
@@ -4021,7 +4027,7 @@
   },
   "4554fbfd643052ce": {
     "sequence_hash": "4554fbfd643052ce",
-    "cluster_id_last_seen_as": "CLU-010",
+    "cluster_id_last_seen_as": "CLU-001",
     "is_campaign": true,
     "campaign_name": "Mirai/IoT Botnet",
     "campaign_severity": "HIGH",
@@ -4063,7 +4069,7 @@
     ],
     "unique_ip_count_ever": 1,
     "first_seen": "2026-09-16T13:29:10.117984+00:00",
-    "last_seen": "2026-09-17T13:25:54.173955+00:00",
+    "last_seen": "2026-09-17T18:12:00.718216+00:00",
     "status": "active"
   },
   "4d35bbf08741da33": {
