@@ -229,6 +229,7 @@
       "205.210.31.225",
       "205.210.31.226",
       "205.210.31.23",
+      "205.210.31.232",
       "205.210.31.233",
       "205.210.31.234",
       "205.210.31.236",
@@ -374,8 +375,8 @@
       "35.241.150.194",
       "35.241.194.188"
     ],
-    "unique_ip_count_ever": 355,
-    "avg_abuse_score_ever": 28.96,
+    "unique_ip_count_ever": 356,
+    "avg_abuse_score_ever": 28.89,
     "max_abuse_score_ever": 100,
     "risk_tier_current": "LOW",
     "tags_current": [
@@ -388,8 +389,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-08-29T23:57:42+00:00",
-    "last_seen_ever": "2026-09-19T10:33:48+00:00",
-    "_avg_score_weight": 388
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 389
   },
   "AS4134": {
     "asn": "AS4134",
@@ -467,6 +468,7 @@
       "118.183.180.108",
       "119.120.42.179",
       "121.11.96.13",
+      "121.13.161.31",
       "121.14.34.219",
       "121.15.140.235",
       "121.227.152.171",
@@ -587,13 +589,11 @@
       "61.184.128.210",
       "61.185.30.170"
     ],
-    "unique_ip_count_ever": 145,
-    "avg_abuse_score_ever": 93.49,
+    "unique_ip_count_ever": 146,
+    "avg_abuse_score_ever": 93.09,
     "max_abuse_score_ever": 100,
-    "risk_tier_current": "HIGH",
-    "tags_current": [
-      "high-abuse"
-    ],
+    "risk_tier_current": "LOW",
+    "tags_current": [],
     "tor_count_current": 0,
     "vpn_count_current": 0,
     "proxy_count_current": 0,
@@ -601,8 +601,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-08-29T23:57:42+00:00",
-    "last_seen_ever": "2026-09-19T10:33:48+00:00",
-    "_avg_score_weight": 174
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 175
   },
   "AS398324": {
     "asn": "AS398324",
@@ -1012,7 +1012,7 @@
       "97.107.138.81"
     ],
     "unique_ip_count_ever": 115,
-    "avg_abuse_score_ever": 92.79,
+    "avg_abuse_score_ever": 92.87,
     "max_abuse_score_ever": 100,
     "risk_tier_current": "HIGH",
     "tags_current": [
@@ -1026,8 +1026,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-08-29T23:57:42+00:00",
-    "last_seen_ever": "2026-09-19T10:33:48+00:00",
-    "_avg_score_weight": 181
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 183
   },
   "AS4766": {
     "asn": "AS4766",
@@ -1268,10 +1268,12 @@
       "61.53.99.122"
     ],
     "unique_ip_count_ever": 81,
-    "avg_abuse_score_ever": 90.06,
+    "avg_abuse_score_ever": 90.16,
     "max_abuse_score_ever": 100,
-    "risk_tier_current": "MEDIUM",
-    "tags_current": [],
+    "risk_tier_current": "HIGH",
+    "tags_current": [
+      "high-abuse"
+    ],
     "tor_count_current": 0,
     "vpn_count_current": 0,
     "proxy_count_current": 0,
@@ -1279,8 +1281,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-08-29T23:57:42+00:00",
-    "last_seen_ever": "2026-09-19T10:33:48+00:00",
-    "_avg_score_weight": 102
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 103
   },
   "AS17421": {
     "asn": "AS17421",
@@ -1634,6 +1636,8 @@
     "asn": "AS16276",
     "asn_name": "OVH SAS",
     "isps": [
+      "HGC Global Communications Limited",
+      "OVH Australia PTY LTD",
       "OVH GmbH",
       "OVH Hosting, Inc.",
       "OVH Ltd",
@@ -1641,8 +1645,9 @@
       "OVH Sp. z o. o.",
       "OVH Srl"
     ],
-    "top_country": "CA",
+    "top_country": "FR",
     "countries_seen": [
+      "AU",
       "CA",
       "DE",
       "FR",
@@ -1657,10 +1662,13 @@
       "141.95.54.130",
       "146.59.32.16",
       "149.202.50.58",
+      "155.117.5.172",
       "37.187.35.26",
       "37.59.111.144",
       "46.105.31.171",
+      "51.161.153.48",
       "51.195.149.120",
+      "51.210.97.205",
       "51.222.86.241",
       "51.68.151.167",
       "51.68.34.131",
@@ -1681,8 +1689,8 @@
       "79.137.76.231",
       "91.134.133.184"
     ],
-    "unique_ip_count_ever": 29,
-    "avg_abuse_score_ever": 98.26,
+    "unique_ip_count_ever": 32,
+    "avg_abuse_score_ever": 98.39,
     "max_abuse_score_ever": 100,
     "risk_tier_current": "HIGH",
     "tags_current": [
@@ -1696,8 +1704,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-08-29T23:57:42+00:00",
-    "last_seen_ever": "2026-09-19T04:28:27+00:00",
-    "_avg_score_weight": 38
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 41
   },
   "AS8075": {
     "asn": "AS8075",
@@ -1706,7 +1714,7 @@
       "Microsoft Corporation",
       "Microsoft Limited"
     ],
-    "top_country": "SG",
+    "top_country": "IN",
     "countries_seen": [
       "AU",
       "CA",
@@ -1765,6 +1773,7 @@
       "20.40.220.103",
       "20.40.253.27",
       "20.42.98.163",
+      "20.51.210.76",
       "20.55.77.88",
       "20.55.91.214",
       "20.64.98.28",
@@ -1826,8 +1835,8 @@
       "98.70.48.241",
       "98.71.8.129"
     ],
-    "unique_ip_count_ever": 105,
-    "avg_abuse_score_ever": 94.71,
+    "unique_ip_count_ever": 106,
+    "avg_abuse_score_ever": 94.8,
     "max_abuse_score_ever": 100,
     "risk_tier_current": "HIGH",
     "tags_current": [
@@ -1840,8 +1849,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-08-29T23:57:42+00:00",
-    "last_seen_ever": "2026-09-19T10:33:48+00:00",
-    "_avg_score_weight": 118
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 120
   },
   "AS135377": {
     "asn": "AS135377",
@@ -2576,7 +2585,7 @@
       "The Constant Company, LLC.",
       "Vultr Holdings, LLC"
     ],
-    "top_country": "GB",
+    "top_country": "US",
     "countries_seen": [
       "DE",
       "FR",
@@ -2595,7 +2604,7 @@
       "45.77.61.56"
     ],
     "unique_ip_count_ever": 9,
-    "avg_abuse_score_ever": 95.59,
+    "avg_abuse_score_ever": 95.83,
     "max_abuse_score_ever": 100,
     "risk_tier_current": "HIGH",
     "tags_current": [
@@ -2608,8 +2617,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-08-29T23:57:42+00:00",
-    "last_seen_ever": "2026-09-16T22:44:59+00:00",
-    "_avg_score_weight": 17
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 18
   },
   "AS5410": {
     "asn": "AS5410",
@@ -2887,7 +2896,7 @@
       "Digital Ocean, Inc.",
       "DigitalOcean, LLC"
     ],
-    "top_country": "US",
+    "top_country": "DE",
     "countries_seen": [
       "AU",
       "CA",
@@ -2902,6 +2911,7 @@
       "104.131.166.106",
       "104.131.37.35",
       "104.236.68.24",
+      "104.248.158.38",
       "104.248.160.169",
       "104.248.83.99",
       "134.199.231.26",
@@ -2942,6 +2952,7 @@
       "159.223.174.116",
       "159.223.217.240",
       "159.65.2.17",
+      "159.89.17.75",
       "159.89.30.37",
       "159.89.92.100",
       "161.35.179.218",
@@ -2951,6 +2962,7 @@
       "161.35.236.15",
       "162.243.147.237",
       "164.90.233.142",
+      "164.90.234.144",
       "164.92.127.223",
       "164.92.148.118",
       "164.92.199.84",
@@ -2988,6 +3000,7 @@
       "207.154.252.87",
       "209.38.120.71",
       "209.38.244.51",
+      "209.38.246.31",
       "209.38.69.12",
       "209.38.69.20",
       "209.38.99.2",
@@ -2996,6 +3009,7 @@
       "64.225.30.2",
       "64.225.45.127",
       "64.225.72.42",
+      "64.226.120.54",
       "64.226.73.91",
       "64.226.91.58",
       "64.227.115.180",
@@ -3009,10 +3023,11 @@
       "67.205.146.133",
       "68.183.105.175",
       "68.183.234.194",
-      "68.183.68.177"
+      "68.183.68.177",
+      "68.183.73.169"
     ],
-    "unique_ip_count_ever": 111,
-    "avg_abuse_score_ever": 81.64,
+    "unique_ip_count_ever": 117,
+    "avg_abuse_score_ever": 82.51,
     "max_abuse_score_ever": 100,
     "risk_tier_current": "HIGH",
     "tags_current": [
@@ -3025,8 +3040,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-08-29T23:57:42+00:00",
-    "last_seen_ever": "2026-09-18T20:38:39+00:00",
-    "_avg_score_weight": 120
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 126
   },
   "AS6167": {
     "asn": "AS6167",
@@ -3459,6 +3474,7 @@
       "24.4.210.135",
       "50.187.155.130",
       "50.188.204.213",
+      "50.199.81.66",
       "50.79.90.237",
       "68.51.53.90",
       "69.140.158.108",
@@ -3494,8 +3510,8 @@
       "76.30.253.234",
       "98.52.228.88"
     ],
-    "unique_ip_count_ever": 46,
-    "avg_abuse_score_ever": 91.68,
+    "unique_ip_count_ever": 47,
+    "avg_abuse_score_ever": 91.85,
     "max_abuse_score_ever": 100,
     "risk_tier_current": "HIGH",
     "tags_current": [
@@ -3508,8 +3524,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-08-29T23:57:42+00:00",
-    "last_seen_ever": "2026-09-18T16:05:25+00:00",
-    "_avg_score_weight": 48
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 49
   },
   "AS11014": {
     "asn": "AS11014",
@@ -5050,6 +5066,7 @@
       "114.38.200.161",
       "114.40.169.97",
       "122.117.141.251",
+      "122.117.158.229",
       "125.227.91.167",
       "125.228.154.55",
       "125.229.188.231",
@@ -5062,8 +5079,8 @@
       "59.125.252.50",
       "60.251.229.144"
     ],
-    "unique_ip_count_ever": 18,
-    "avg_abuse_score_ever": 83.48,
+    "unique_ip_count_ever": 19,
+    "avg_abuse_score_ever": 84.23,
     "max_abuse_score_ever": 100,
     "risk_tier_current": "HIGH",
     "tags_current": [
@@ -5076,8 +5093,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-08-29T23:57:42+00:00",
-    "last_seen_ever": "2026-09-17T21:06:14+00:00",
-    "_avg_score_weight": 21
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 22
   },
   "AS142403": {
     "asn": "AS142403",
@@ -5366,11 +5383,12 @@
       "180.76.243.197",
       "180.76.52.146",
       "180.76.57.66",
+      "180.76.57.94",
       "180.76.61.232",
       "182.61.20.116",
       "182.61.33.68"
     ],
-    "unique_ip_count_ever": 52,
+    "unique_ip_count_ever": 53,
     "avg_abuse_score_ever": 99.88,
     "max_abuse_score_ever": 100,
     "risk_tier_current": "HIGH",
@@ -5384,8 +5402,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-08-29T23:57:42+00:00",
-    "last_seen_ever": "2026-09-18T10:50:29+00:00",
-    "_avg_score_weight": 63
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 64
   },
   "AS270268": {
     "asn": "AS270268",
@@ -5466,6 +5484,7 @@
     "asn_name": "",
     "isps": [
       "'Ch' area end users network",
+      "1Cent Host",
       "ABTS-MUMBAI",
       "ACEVILLE PTE.LTD.",
       "AIS Fibre",
@@ -5633,6 +5652,7 @@
       "Link Egypt",
       "Linode",
       "Linode, LLC",
+      "Load.me sp. z o. o.",
       "MMO VIET NAM SOFTWARE COMPANY LIMITED",
       "MOACK",
       "MTN Nigeria",
@@ -6214,6 +6234,7 @@
       "205.210.31.85",
       "206.183.111.36",
       "207.154.230.149",
+      "207.46.224.80",
       "208.109.244.195",
       "208.109.39.19",
       "209.38.69.12",
@@ -6224,6 +6245,7 @@
       "211.23.109.116",
       "211.53.58.10",
       "211.91.62.222",
+      "212.110.153.51",
       "212.64.201.210",
       "213.101.138.172",
       "213.149.216.10",
@@ -6357,6 +6379,7 @@
       "50.116.55.166",
       "51.158.205.203",
       "51.75.253.68",
+      "51.75.27.218",
       "54.36.99.29",
       "58.209.234.84",
       "58.218.178.134",
@@ -6475,6 +6498,7 @@
       "77.90.185.16",
       "77.90.185.17",
       "77.90.185.20",
+      "77.91.66.32",
       "78.187.9.53",
       "78.192.21.78",
       "8.152.209.0",
@@ -6557,8 +6581,8 @@
       "98.70.48.241",
       "99.121.112.251"
     ],
-    "unique_ip_count_ever": 718,
-    "avg_abuse_score_ever": 94.37,
+    "unique_ip_count_ever": 722,
+    "avg_abuse_score_ever": 94.42,
     "max_abuse_score_ever": 100,
     "risk_tier_current": "HIGH",
     "tags_current": [
@@ -6572,8 +6596,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-08-30T05:11:40+00:00",
-    "last_seen_ever": "2026-09-19T10:33:48+00:00",
-    "_avg_score_weight": 2091
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 2116
   },
   "AS4760": {
     "asn": "AS4760",
@@ -7711,8 +7735,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-08-30T05:11:40+00:00",
-    "last_seen_ever": "2026-09-18T16:05:25+00:00",
-    "_avg_score_weight": 31
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 32
   },
   "AS56041": {
     "asn": "AS56041",
@@ -8777,15 +8801,14 @@
     "unique_ips_ever": [
       "165.165.111.225",
       "165.165.112.40",
+      "165.165.117.86",
       "165.165.231.222"
     ],
-    "unique_ip_count_ever": 3,
-    "avg_abuse_score_ever": 69.5,
+    "unique_ip_count_ever": 4,
+    "avg_abuse_score_ever": 55.8,
     "max_abuse_score_ever": 100,
-    "risk_tier_current": "HIGH",
-    "tags_current": [
-      "high-abuse"
-    ],
+    "risk_tier_current": "LOW",
+    "tags_current": [],
     "tor_count_current": 0,
     "vpn_count_current": 0,
     "proxy_count_current": 0,
@@ -8793,8 +8816,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-08-30T11:33:07+00:00",
-    "last_seen_ever": "2026-09-18T10:50:29+00:00",
-    "_avg_score_weight": 4
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 5
   },
   "AS9318": {
     "asn": "AS9318",
@@ -8820,10 +8843,11 @@
       "219.250.188.143",
       "58.224.62.29",
       "58.226.255.240",
-      "58.229.253.119"
+      "58.229.253.119",
+      "61.254.10.138"
     ],
-    "unique_ip_count_ever": 13,
-    "avg_abuse_score_ever": 94.2,
+    "unique_ip_count_ever": 14,
+    "avg_abuse_score_ever": 94.56,
     "max_abuse_score_ever": 100,
     "risk_tier_current": "HIGH",
     "tags_current": [
@@ -8836,8 +8860,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-08-30T11:33:07+00:00",
-    "last_seen_ever": "2026-09-16T22:44:59+00:00",
-    "_avg_score_weight": 15
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 16
   },
   "AS27747": {
     "asn": "AS27747",
@@ -9043,6 +9067,7 @@
       "198.163.193.147",
       "198.163.193.89",
       "198.163.195.119",
+      "213.230.127.104",
       "213.230.64.246",
       "213.230.78.46",
       "213.230.86.12",
@@ -9060,13 +9085,14 @@
       "213.230.93.69",
       "84.54.70.116",
       "84.54.70.53",
+      "84.54.70.66",
       "84.54.71.157",
       "84.54.71.28",
       "84.54.73.201",
       "84.54.73.45"
     ],
-    "unique_ip_count_ever": 31,
-    "avg_abuse_score_ever": 91.65,
+    "unique_ip_count_ever": 33,
+    "avg_abuse_score_ever": 92.16,
     "max_abuse_score_ever": 100,
     "risk_tier_current": "HIGH",
     "tags_current": [
@@ -9079,8 +9105,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-08-30T11:33:07+00:00",
-    "last_seen_ever": "2026-09-18T04:31:45+00:00",
-    "_avg_score_weight": 31
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 33
   },
   "AS29465": {
     "asn": "AS29465",
@@ -9476,6 +9502,7 @@
       "181.111.13.27",
       "181.12.213.54",
       "181.12.70.115",
+      "181.14.129.188",
       "181.164.214.85",
       "181.166.184.84",
       "181.170.105.168",
@@ -9508,13 +9535,11 @@
       "190.30.112.79",
       "200.89.159.59"
     ],
-    "unique_ip_count_ever": 39,
-    "avg_abuse_score_ever": 58.84,
+    "unique_ip_count_ever": 40,
+    "avg_abuse_score_ever": 57.5,
     "max_abuse_score_ever": 100,
-    "risk_tier_current": "HIGH",
-    "tags_current": [
-      "high-abuse"
-    ],
+    "risk_tier_current": "LOW",
+    "tags_current": [],
     "tor_count_current": 0,
     "vpn_count_current": 0,
     "proxy_count_current": 0,
@@ -9522,8 +9547,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-08-30T11:33:07+00:00",
-    "last_seen_ever": "2026-09-17T21:06:14+00:00",
-    "_avg_score_weight": 40
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 41
   },
   "AS9674": {
     "asn": "AS9674",
@@ -10675,6 +10700,7 @@
     "asn": "AS58466",
     "asn_name": "CHINANET Guangdong province network",
     "isps": [
+      "Guangzhou LanDong Information technology co., LTD",
       "Shanghai UCloud Information Technology Company Limited"
     ],
     "top_country": "CN",
@@ -10683,9 +10709,10 @@
     ],
     "unique_ips_ever": [
       "106.75.153.103",
-      "42.240.164.208"
+      "42.240.164.208",
+      "45.116.35.149"
     ],
-    "unique_ip_count_ever": 2,
+    "unique_ip_count_ever": 3,
     "avg_abuse_score_ever": 100.0,
     "max_abuse_score_ever": 100,
     "risk_tier_current": "HIGH",
@@ -10699,8 +10726,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-08-30T16:20:20+00:00",
-    "last_seen_ever": "2026-08-31T00:17:21+00:00",
-    "_avg_score_weight": 2
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 3
   },
   "AS3302": {
     "asn": "AS3302",
@@ -10932,16 +10959,18 @@
       "14.103.159.154",
       "14.103.18.5",
       "14.103.41.249",
+      "14.103.50.32",
       "14.103.75.9",
       "14.103.83.214",
       "14.103.86.183",
       "180.184.178.165",
       "180.184.183.66",
+      "218.78.46.81",
       "218.78.63.123",
       "61.171.100.124"
     ],
-    "unique_ip_count_ever": 32,
-    "avg_abuse_score_ever": 98.03,
+    "unique_ip_count_ever": 34,
+    "avg_abuse_score_ever": 98.14,
     "max_abuse_score_ever": 100,
     "risk_tier_current": "HIGH",
     "tags_current": [
@@ -10954,8 +10983,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-08-30T16:20:20+00:00",
-    "last_seen_ever": "2026-09-19T04:28:27+00:00",
-    "_avg_score_weight": 34
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 36
   },
   "AS35612": {
     "asn": "AS35612",
@@ -11411,12 +11440,13 @@
       "171.244.40.247",
       "171.254.93.44",
       "27.71.237.12",
+      "27.71.27.209",
       "27.75.204.195",
       "27.75.97.145",
       "27.79.5.21"
     ],
-    "unique_ip_count_ever": 22,
-    "avg_abuse_score_ever": 68.82,
+    "unique_ip_count_ever": 23,
+    "avg_abuse_score_ever": 69.93,
     "max_abuse_score_ever": 100,
     "risk_tier_current": "HIGH",
     "tags_current": [
@@ -11429,8 +11459,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-08-30T16:20:20+00:00",
-    "last_seen_ever": "2026-09-18T23:59:34+00:00",
-    "_avg_score_weight": 27
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 28
   },
   "AS36454": {
     "asn": "AS36454",
@@ -12566,10 +12596,12 @@
       "39.36.50.82",
       "39.37.254.13",
       "39.44.18.126",
-      "39.58.50.72"
+      "39.48.41.52",
+      "39.58.50.72",
+      "39.59.96.154"
     ],
-    "unique_ip_count_ever": 12,
-    "avg_abuse_score_ever": 19.41,
+    "unique_ip_count_ever": 14,
+    "avg_abuse_score_ever": 16.64,
     "max_abuse_score_ever": 100,
     "risk_tier_current": "LOW",
     "tags_current": [],
@@ -12580,8 +12612,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-08-30T20:46:40+00:00",
-    "last_seen_ever": "2026-09-19T04:28:27+00:00",
-    "_avg_score_weight": 12
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 14
   },
   "AS136052": {
     "asn": "AS136052",
@@ -14010,7 +14042,7 @@
       "Infrawatch Limited",
       "Internet Utilities Europe and Asia Limited"
     ],
-    "top_country": "GB",
+    "top_country": "DE",
     "countries_seen": [
       "DE",
       "GB",
@@ -14081,6 +14113,7 @@
       "5.252.83.58",
       "69.5.169.104",
       "69.5.169.105",
+      "69.5.169.135",
       "69.5.169.169",
       "69.5.169.187",
       "69.5.169.195",
@@ -14108,8 +14141,8 @@
       "89.37.172.142",
       "89.37.172.143"
     ],
-    "unique_ip_count_ever": 90,
-    "avg_abuse_score_ever": 99.52,
+    "unique_ip_count_ever": 91,
+    "avg_abuse_score_ever": 99.53,
     "max_abuse_score_ever": 100,
     "risk_tier_current": "HIGH",
     "tags_current": [
@@ -14122,8 +14155,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-08-31T08:21:44+00:00",
-    "last_seen_ever": "2026-09-18T20:38:39+00:00",
-    "_avg_score_weight": 96
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 98
   },
   "AS393406": {
     "asn": "AS393406",
@@ -15115,13 +15148,14 @@
       "187.189.110.72",
       "187.189.146.248",
       "187.189.15.244",
+      "187.189.88.53",
       "187.189.90.102",
       "187.190.164.225",
       "187.190.39.83",
       "189.203.105.255"
     ],
-    "unique_ip_count_ever": 9,
-    "avg_abuse_score_ever": 39.56,
+    "unique_ip_count_ever": 10,
+    "avg_abuse_score_ever": 36.1,
     "max_abuse_score_ever": 100,
     "risk_tier_current": "LOW",
     "tags_current": [],
@@ -15132,8 +15166,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-08-31T08:21:44+00:00",
-    "last_seen_ever": "2026-09-15T16:35:20+00:00",
-    "_avg_score_weight": 9
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 10
   },
   "AS10029": {
     "asn": "AS10029",
@@ -15748,6 +15782,8 @@
       "91.196.152.159",
       "91.196.152.161",
       "91.196.152.165",
+      "91.196.152.179",
+      "91.196.152.183",
       "91.196.152.226",
       "91.196.152.40",
       "91.196.152.66",
@@ -15787,7 +15823,7 @@
       "94.231.206.33",
       "94.231.206.34"
     ],
-    "unique_ip_count_ever": 61,
+    "unique_ip_count_ever": 63,
     "avg_abuse_score_ever": 0.0,
     "max_abuse_score_ever": 0,
     "risk_tier_current": "LOW",
@@ -15799,8 +15835,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-08-31T17:27:55+00:00",
-    "last_seen_ever": "2026-09-18T23:59:34+00:00",
-    "_avg_score_weight": 64
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 66
   },
   "AS6697": {
     "asn": "AS6697",
@@ -16904,8 +16940,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-08-31T17:27:55+00:00",
-    "last_seen_ever": "2026-08-31T17:27:55+00:00",
-    "_avg_score_weight": 1
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 2
   },
   "AS263703": {
     "asn": "AS263703",
@@ -18420,21 +18456,23 @@
     "asn_name": "High Speed For Internet Services L.L.C",
     "isps": [
       "Enflow B.V.",
+      "High Speed",
       "hiperonline iletisim hizmetleri san. tic. ltd. sti."
     ],
-    "top_country": "NL",
+    "top_country": "TR",
     "countries_seen": [
       "NL",
       "TR"
     ],
     "unique_ips_ever": [
       "193.33.157.68",
-      "195.62.50.26"
+      "195.62.50.26",
+      "201.4.69.61"
     ],
-    "unique_ip_count_ever": 2,
-    "avg_abuse_score_ever": 65.5,
+    "unique_ip_count_ever": 3,
+    "avg_abuse_score_ever": 69.33,
     "max_abuse_score_ever": 100,
-    "risk_tier_current": "LOW",
+    "risk_tier_current": "MEDIUM",
     "tags_current": [],
     "tor_count_current": 0,
     "vpn_count_current": 0,
@@ -18443,8 +18481,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-09-01T11:21:24+00:00",
-    "last_seen_ever": "2026-09-03T08:43:56+00:00",
-    "_avg_score_weight": 2
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 3
   },
   "AS52045": {
     "asn": "AS52045",
@@ -18489,13 +18527,14 @@
       "176.202.185.195",
       "37.211.213.229",
       "37.211.38.167",
+      "78.100.230.4",
       "78.101.137.201",
       "89.211.151.35"
     ],
-    "unique_ip_count_ever": 5,
-    "avg_abuse_score_ever": 56.2,
+    "unique_ip_count_ever": 6,
+    "avg_abuse_score_ever": 58.17,
     "max_abuse_score_ever": 100,
-    "risk_tier_current": "LOW",
+    "risk_tier_current": "MEDIUM",
     "tags_current": [],
     "tor_count_current": 0,
     "vpn_count_current": 0,
@@ -18504,8 +18543,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-09-01T11:21:24+00:00",
-    "last_seen_ever": "2026-09-17T16:33:55+00:00",
-    "_avg_score_weight": 5
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 6
   },
   "AS262909": {
     "asn": "AS262909",
@@ -19008,9 +19047,10 @@
     ],
     "unique_ips_ever": [
       "188.191.69.40",
+      "91.245.106.18",
       "91.245.113.7"
     ],
-    "unique_ip_count_ever": 2,
+    "unique_ip_count_ever": 3,
     "avg_abuse_score_ever": 100.0,
     "max_abuse_score_ever": 100,
     "risk_tier_current": "HIGH",
@@ -19024,8 +19064,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-09-01T16:18:18+00:00",
-    "last_seen_ever": "2026-09-01T20:47:18+00:00",
-    "_avg_score_weight": 2
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 3
   },
   "AS63526": {
     "asn": "AS63526",
@@ -19271,14 +19311,15 @@
       "109.123.244.43",
       "156.67.26.28",
       "157.173.101.159",
+      "161.97.149.177",
       "173.212.223.184",
       "173.212.237.217",
       "207.180.229.234",
       "207.180.233.98",
       "75.119.149.212"
     ],
-    "unique_ip_count_ever": 8,
-    "avg_abuse_score_ever": 94.0,
+    "unique_ip_count_ever": 9,
+    "avg_abuse_score_ever": 94.67,
     "max_abuse_score_ever": 100,
     "risk_tier_current": "HIGH",
     "tags_current": [
@@ -19291,8 +19332,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-09-01T20:47:18+00:00",
-    "last_seen_ever": "2026-09-18T23:59:34+00:00",
-    "_avg_score_weight": 8
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 9
   },
   "AS49434": {
     "asn": "AS49434",
@@ -23727,11 +23768,12 @@
       "DO"
     ],
     "unique_ips_ever": [
+      "148.103.245.22",
       "181.36.22.43"
     ],
-    "unique_ip_count_ever": 1,
-    "avg_abuse_score_ever": 58.0,
-    "max_abuse_score_ever": 58,
+    "unique_ip_count_ever": 2,
+    "avg_abuse_score_ever": 60.5,
+    "max_abuse_score_ever": 63,
     "risk_tier_current": "MEDIUM",
     "tags_current": [],
     "tor_count_current": 0,
@@ -23741,8 +23783,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-09-03T19:11:41+00:00",
-    "last_seen_ever": "2026-09-03T19:11:41+00:00",
-    "_avg_score_weight": 1
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 2
   },
   "AS39891": {
     "asn": "AS39891",
@@ -25359,9 +25401,10 @@
     ],
     "unique_ips_ever": [
       "217.113.13.132",
+      "217.113.13.23",
       "45.159.74.181"
     ],
-    "unique_ip_count_ever": 2,
+    "unique_ip_count_ever": 3,
     "avg_abuse_score_ever": 100.0,
     "max_abuse_score_ever": 100,
     "risk_tier_current": "HIGH",
@@ -25375,8 +25418,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-09-04T14:05:25+00:00",
-    "last_seen_ever": "2026-09-13T14:11:10+00:00",
-    "_avg_score_weight": 2
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 3
   },
   "AS265817": {
     "asn": "AS265817",
@@ -26355,9 +26398,10 @@
       "KE"
     ],
     "unique_ips_ever": [
-      "197.232.80.95"
+      "197.232.80.95",
+      "41.215.133.245"
     ],
-    "unique_ip_count_ever": 1,
+    "unique_ip_count_ever": 2,
     "avg_abuse_score_ever": 100.0,
     "max_abuse_score_ever": 100,
     "risk_tier_current": "HIGH",
@@ -26371,8 +26415,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-09-04T22:13:58+00:00",
-    "last_seen_ever": "2026-09-04T22:13:58+00:00",
-    "_avg_score_weight": 1
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 2
   },
   "AS135223": {
     "asn": "AS135223",
@@ -28292,18 +28336,20 @@
     "asn": "AS2856",
     "asn_name": "British Telecommunications Limited",
     "isps": [
-      "BT Infrastructure Layer"
+      "BT Infrastructure Layer",
+      "EE Limited"
     ],
     "top_country": "GB",
     "countries_seen": [
       "GB"
     ],
     "unique_ips_ever": [
+      "31.94.29.53",
       "86.163.93.64",
       "86.172.231.183"
     ],
-    "unique_ip_count_ever": 2,
-    "avg_abuse_score_ever": 50.0,
+    "unique_ip_count_ever": 3,
+    "avg_abuse_score_ever": 44.67,
     "max_abuse_score_ever": 100,
     "risk_tier_current": "LOW",
     "tags_current": [],
@@ -28314,8 +28360,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-09-05T23:38:20+00:00",
-    "last_seen_ever": "2026-09-14T12:14:13+00:00",
-    "_avg_score_weight": 2
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 3
   },
   "AS41786": {
     "asn": "AS41786",
@@ -29069,18 +29115,20 @@
     "asn": "AS133774",
     "asn_name": "Fuzhou",
     "isps": [
-      "CHINANET FUJIAN PROVINCE NETWORK"
+      "CHINANET FUJIAN PROVINCE NETWORK",
+      "CHINANET Fujian province network"
     ],
     "top_country": "CN",
     "countries_seen": [
       "CN"
     ],
     "unique_ips_ever": [
+      "121.204.171.142",
       "27.150.188.148",
       "27.155.103.100",
       "27.155.120.131"
     ],
-    "unique_ip_count_ever": 3,
+    "unique_ip_count_ever": 4,
     "avg_abuse_score_ever": 100.0,
     "max_abuse_score_ever": 100,
     "risk_tier_current": "HIGH",
@@ -29094,8 +29142,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-09-06T08:29:28+00:00",
-    "last_seen_ever": "2026-09-19T10:33:48+00:00",
-    "_avg_score_weight": 3
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 4
   },
   "AS52571": {
     "asn": "AS52571",
@@ -31297,11 +31345,12 @@
       "AR"
     ],
     "unique_ips_ever": [
+      "168.90.162.30",
       "170.78.110.179"
     ],
-    "unique_ip_count_ever": 1,
-    "avg_abuse_score_ever": 15.0,
-    "max_abuse_score_ever": 15,
+    "unique_ip_count_ever": 2,
+    "avg_abuse_score_ever": 28.0,
+    "max_abuse_score_ever": 41,
     "risk_tier_current": "LOW",
     "tags_current": [],
     "tor_count_current": 0,
@@ -31311,8 +31360,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-09-08T14:15:29+00:00",
-    "last_seen_ever": "2026-09-08T14:15:29+00:00",
-    "_avg_score_weight": 1
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 2
   },
   "AS51077": {
     "asn": "AS51077",
@@ -31652,6 +31701,7 @@
     "asn": "AS139220",
     "asn_name": "Sichuan Chuanxn IDC",
     "isps": [
+      "CHINANET FUJIAN PROVINCE NETWORK",
       "CHINANET Guangdong province network"
     ],
     "top_country": "CN",
@@ -31659,9 +31709,10 @@
       "CN"
     ],
     "unique_ips_ever": [
-      "203.25.208.110"
+      "203.25.208.110",
+      "203.55.221.42"
     ],
-    "unique_ip_count_ever": 1,
+    "unique_ip_count_ever": 2,
     "avg_abuse_score_ever": 100.0,
     "max_abuse_score_ever": 100,
     "risk_tier_current": "HIGH",
@@ -31675,8 +31726,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-09-08T14:15:29+00:00",
-    "last_seen_ever": "2026-09-08T14:15:29+00:00",
-    "_avg_score_weight": 1
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 2
   },
   "AS210457": {
     "asn": "AS210457",
@@ -36499,9 +36550,10 @@
       "US"
     ],
     "unique_ips_ever": [
-      "67.253.120.55"
+      "67.253.120.55",
+      "76.179.233.18"
     ],
-    "unique_ip_count_ever": 1,
+    "unique_ip_count_ever": 2,
     "avg_abuse_score_ever": 100.0,
     "max_abuse_score_ever": 100,
     "risk_tier_current": "HIGH",
@@ -36515,8 +36567,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-09-13T03:58:54+00:00",
-    "last_seen_ever": "2026-09-13T03:58:54+00:00",
-    "_avg_score_weight": 2
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 3
   },
   "AS49870": {
     "asn": "AS49870",
@@ -36999,6 +37051,7 @@
     "asn": "AS8796",
     "asn_name": "FASTNET DATA INC",
     "isps": [
+      "Ace Data Centers, Inc.",
       "CrystalClear Solutions LLC"
     ],
     "top_country": "US",
@@ -37006,9 +37059,10 @@
       "US"
     ],
     "unique_ips_ever": [
-      "23.185.200.28"
+      "23.185.200.28",
+      "50.114.172.201"
     ],
-    "unique_ip_count_ever": 1,
+    "unique_ip_count_ever": 2,
     "avg_abuse_score_ever": 100.0,
     "max_abuse_score_ever": 100,
     "risk_tier_current": "HIGH",
@@ -37022,8 +37076,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-09-13T14:11:10+00:00",
-    "last_seen_ever": "2026-09-13T14:11:10+00:00",
-    "_avg_score_weight": 1
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 2
   },
   "AS208314": {
     "asn": "AS208314",
@@ -37742,9 +37796,10 @@
     ],
     "unique_ips_ever": [
       "116.110.21.251",
-      "116.110.217.246"
+      "116.110.217.246",
+      "116.110.220.232"
     ],
-    "unique_ip_count_ever": 2,
+    "unique_ip_count_ever": 3,
     "avg_abuse_score_ever": 100.0,
     "max_abuse_score_ever": 100,
     "risk_tier_current": "HIGH",
@@ -37758,8 +37813,8 @@
     "vpn_confirmed_via_enriched_corpus": 0,
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-09-13T18:38:01+00:00",
-    "last_seen_ever": "2026-09-13T18:38:01+00:00",
-    "_avg_score_weight": 2
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 3
   },
   "AS133296": {
     "asn": "AS133296",
@@ -44550,6 +44605,388 @@
     "proxy_confirmed_via_enriched_corpus": 0,
     "first_seen_ever": "2026-09-19T10:33:48+00:00",
     "last_seen_ever": "2026-09-19T10:33:48+00:00",
+    "_avg_score_weight": 1
+  },
+  "AS12764": {
+    "asn": "AS12764",
+    "asn_name": "AKNET Ltd.",
+    "isps": [
+      "AKNET Ltd."
+    ],
+    "top_country": "KG",
+    "countries_seen": [
+      "KG"
+    ],
+    "unique_ips_ever": [
+      "31.186.53.245"
+    ],
+    "unique_ip_count_ever": 1,
+    "avg_abuse_score_ever": 65.0,
+    "max_abuse_score_ever": 65,
+    "risk_tier_current": "MEDIUM",
+    "tags_current": [],
+    "tor_count_current": 0,
+    "vpn_count_current": 0,
+    "proxy_count_current": 0,
+    "tor_confirmed_via_enriched_corpus": 0,
+    "vpn_confirmed_via_enriched_corpus": 0,
+    "proxy_confirmed_via_enriched_corpus": 0,
+    "first_seen_ever": "2026-09-19T15:37:58+00:00",
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 1
+  },
+  "AS12403": {
+    "asn": "AS12403",
+    "asn_name": "Telecommunication company FEONET+ LLC",
+    "isps": [
+      "CRELCOM LLC"
+    ],
+    "top_country": "RU",
+    "countries_seen": [
+      "RU"
+    ],
+    "unique_ips_ever": [
+      "185.100.102.14"
+    ],
+    "unique_ip_count_ever": 1,
+    "avg_abuse_score_ever": 0.0,
+    "max_abuse_score_ever": 0,
+    "risk_tier_current": "LOW",
+    "tags_current": [],
+    "tor_count_current": 0,
+    "vpn_count_current": 0,
+    "proxy_count_current": 0,
+    "tor_confirmed_via_enriched_corpus": 0,
+    "vpn_confirmed_via_enriched_corpus": 0,
+    "proxy_confirmed_via_enriched_corpus": 0,
+    "first_seen_ever": "2026-09-19T15:37:58+00:00",
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 1
+  },
+  "AS264631": {
+    "asn": "AS264631",
+    "asn_name": "RED PARAGUAYA DE TELECOMUNICACIONES SA",
+    "isps": [
+      "RED PARAGUAYA DE TELECOMUNICACIONES SA"
+    ],
+    "top_country": "PY",
+    "countries_seen": [
+      "PY"
+    ],
+    "unique_ips_ever": [
+      "45.235.123.66"
+    ],
+    "unique_ip_count_ever": 1,
+    "avg_abuse_score_ever": 27.0,
+    "max_abuse_score_ever": 27,
+    "risk_tier_current": "LOW",
+    "tags_current": [],
+    "tor_count_current": 0,
+    "vpn_count_current": 0,
+    "proxy_count_current": 0,
+    "tor_confirmed_via_enriched_corpus": 0,
+    "vpn_confirmed_via_enriched_corpus": 0,
+    "proxy_confirmed_via_enriched_corpus": 0,
+    "first_seen_ever": "2026-09-19T15:37:58+00:00",
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 1
+  },
+  "AS52495": {
+    "asn": "AS52495",
+    "asn_name": "Cotel Ltda.",
+    "isps": [
+      "Cotel Ltda."
+    ],
+    "top_country": "BO",
+    "countries_seen": [
+      "BO"
+    ],
+    "unique_ips_ever": [
+      "190.109.227.122"
+    ],
+    "unique_ip_count_ever": 1,
+    "avg_abuse_score_ever": 100.0,
+    "max_abuse_score_ever": 100,
+    "risk_tier_current": "HIGH",
+    "tags_current": [
+      "high-abuse"
+    ],
+    "tor_count_current": 0,
+    "vpn_count_current": 0,
+    "proxy_count_current": 0,
+    "tor_confirmed_via_enriched_corpus": 0,
+    "vpn_confirmed_via_enriched_corpus": 0,
+    "proxy_confirmed_via_enriched_corpus": 0,
+    "first_seen_ever": "2026-09-19T15:37:58+00:00",
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 1
+  },
+  "AS150706": {
+    "asn": "AS150706",
+    "asn_name": "Hong Kong Zhengxing Technology Co., Ltd.",
+    "isps": [
+      "Changlian Network Technology  co.,Limited"
+    ],
+    "top_country": "HK",
+    "countries_seen": [
+      "HK"
+    ],
+    "unique_ips_ever": [
+      "156.236.110.234"
+    ],
+    "unique_ip_count_ever": 1,
+    "avg_abuse_score_ever": 100.0,
+    "max_abuse_score_ever": 100,
+    "risk_tier_current": "HIGH",
+    "tags_current": [
+      "high-abuse"
+    ],
+    "tor_count_current": 0,
+    "vpn_count_current": 0,
+    "proxy_count_current": 0,
+    "tor_confirmed_via_enriched_corpus": 0,
+    "vpn_confirmed_via_enriched_corpus": 0,
+    "proxy_confirmed_via_enriched_corpus": 0,
+    "first_seen_ever": "2026-09-19T15:37:58+00:00",
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 1
+  },
+  "AS264439": {
+    "asn": "AS264439",
+    "asn_name": "OuriNet TELECOM",
+    "isps": [
+      "OuriNet TELECOM"
+    ],
+    "top_country": "BR",
+    "countries_seen": [
+      "BR"
+    ],
+    "unique_ips_ever": [
+      "131.221.236.23"
+    ],
+    "unique_ip_count_ever": 1,
+    "avg_abuse_score_ever": 100.0,
+    "max_abuse_score_ever": 100,
+    "risk_tier_current": "HIGH",
+    "tags_current": [
+      "high-abuse"
+    ],
+    "tor_count_current": 0,
+    "vpn_count_current": 0,
+    "proxy_count_current": 0,
+    "tor_confirmed_via_enriched_corpus": 0,
+    "vpn_confirmed_via_enriched_corpus": 0,
+    "proxy_confirmed_via_enriched_corpus": 0,
+    "first_seen_ever": "2026-09-19T15:37:58+00:00",
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 1
+  },
+  "AS197540": {
+    "asn": "AS197540",
+    "asn_name": "netcup GmbH",
+    "isps": [
+      "Anexia Holding GmbH"
+    ],
+    "top_country": "DE",
+    "countries_seen": [
+      "DE"
+    ],
+    "unique_ips_ever": [
+      "152.53.185.81"
+    ],
+    "unique_ip_count_ever": 1,
+    "avg_abuse_score_ever": 100.0,
+    "max_abuse_score_ever": 100,
+    "risk_tier_current": "HIGH",
+    "tags_current": [
+      "high-abuse"
+    ],
+    "tor_count_current": 0,
+    "vpn_count_current": 0,
+    "proxy_count_current": 0,
+    "tor_confirmed_via_enriched_corpus": 0,
+    "vpn_confirmed_via_enriched_corpus": 0,
+    "proxy_confirmed_via_enriched_corpus": 0,
+    "first_seen_ever": "2026-09-19T15:37:58+00:00",
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 1
+  },
+  "AS216473": {
+    "asn": "AS216473",
+    "asn_name": "Bashinskii Vadim Ruslanovich",
+    "isps": [
+      "Bashinskii Vadim Ruslanovich"
+    ],
+    "top_country": "FI",
+    "countries_seen": [
+      "FI"
+    ],
+    "unique_ips_ever": [
+      "80.66.83.43"
+    ],
+    "unique_ip_count_ever": 1,
+    "avg_abuse_score_ever": 100.0,
+    "max_abuse_score_ever": 100,
+    "risk_tier_current": "HIGH",
+    "tags_current": [
+      "high-abuse"
+    ],
+    "tor_count_current": 0,
+    "vpn_count_current": 0,
+    "proxy_count_current": 0,
+    "tor_confirmed_via_enriched_corpus": 0,
+    "vpn_confirmed_via_enriched_corpus": 0,
+    "proxy_confirmed_via_enriched_corpus": 0,
+    "first_seen_ever": "2026-09-19T15:37:58+00:00",
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 1
+  },
+  "AS51570": {
+    "asn": "AS51570",
+    "asn_name": "JSC ER-Telecom Holding",
+    "isps": [
+      "CJSC ER-Telecom Holding Saint-Petersburg branch"
+    ],
+    "top_country": "RU",
+    "countries_seen": [
+      "RU"
+    ],
+    "unique_ips_ever": [
+      "84.22.216.7"
+    ],
+    "unique_ip_count_ever": 1,
+    "avg_abuse_score_ever": 49.0,
+    "max_abuse_score_ever": 49,
+    "risk_tier_current": "LOW",
+    "tags_current": [],
+    "tor_count_current": 0,
+    "vpn_count_current": 0,
+    "proxy_count_current": 0,
+    "tor_confirmed_via_enriched_corpus": 0,
+    "vpn_confirmed_via_enriched_corpus": 0,
+    "proxy_confirmed_via_enriched_corpus": 0,
+    "first_seen_ever": "2026-09-19T15:37:58+00:00",
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 1
+  },
+  "AS48239": {
+    "asn": "AS48239",
+    "asn_name": "Scientific-Production Enterprise Information Technologies Ltd",
+    "isps": [
+      "Scientific-Production Enterprise Information Technologies Ltd"
+    ],
+    "top_country": "UA",
+    "countries_seen": [
+      "UA"
+    ],
+    "unique_ips_ever": [
+      "212.90.60.176"
+    ],
+    "unique_ip_count_ever": 1,
+    "avg_abuse_score_ever": 100.0,
+    "max_abuse_score_ever": 100,
+    "risk_tier_current": "HIGH",
+    "tags_current": [
+      "high-abuse"
+    ],
+    "tor_count_current": 0,
+    "vpn_count_current": 0,
+    "proxy_count_current": 0,
+    "tor_confirmed_via_enriched_corpus": 0,
+    "vpn_confirmed_via_enriched_corpus": 0,
+    "proxy_confirmed_via_enriched_corpus": 0,
+    "first_seen_ever": "2026-09-19T15:37:58+00:00",
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 1
+  },
+  "AS932": {
+    "asn": "AS932",
+    "asn_name": "XNNET LLC",
+    "isps": [
+      "XNNET LLC"
+    ],
+    "top_country": "HK",
+    "countries_seen": [
+      "HK"
+    ],
+    "unique_ips_ever": [
+      "38.147.184.227"
+    ],
+    "unique_ip_count_ever": 1,
+    "avg_abuse_score_ever": 100.0,
+    "max_abuse_score_ever": 100,
+    "risk_tier_current": "HIGH",
+    "tags_current": [
+      "high-abuse"
+    ],
+    "tor_count_current": 0,
+    "vpn_count_current": 0,
+    "proxy_count_current": 0,
+    "tor_confirmed_via_enriched_corpus": 0,
+    "vpn_confirmed_via_enriched_corpus": 0,
+    "proxy_confirmed_via_enriched_corpus": 0,
+    "first_seen_ever": "2026-09-19T15:37:58+00:00",
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 1
+  },
+  "AS23752": {
+    "asn": "AS23752",
+    "asn_name": "Nepal Telecommunications Corporation, Internet Services,",
+    "isps": [
+      "Nepal Telecommunications Corporation"
+    ],
+    "top_country": "NP",
+    "countries_seen": [
+      "NP"
+    ],
+    "unique_ips_ever": [
+      "202.70.78.237"
+    ],
+    "unique_ip_count_ever": 1,
+    "avg_abuse_score_ever": 100.0,
+    "max_abuse_score_ever": 100,
+    "risk_tier_current": "HIGH",
+    "tags_current": [
+      "high-abuse"
+    ],
+    "tor_count_current": 0,
+    "vpn_count_current": 0,
+    "proxy_count_current": 0,
+    "tor_confirmed_via_enriched_corpus": 0,
+    "vpn_confirmed_via_enriched_corpus": 0,
+    "proxy_confirmed_via_enriched_corpus": 0,
+    "first_seen_ever": "2026-09-19T15:37:58+00:00",
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
+    "_avg_score_weight": 1
+  },
+  "AS9129": {
+    "asn": "AS9129",
+    "asn_name": "MTN SA",
+    "isps": [
+      "MTN Business Kenya"
+    ],
+    "top_country": "KE",
+    "countries_seen": [
+      "KE"
+    ],
+    "unique_ips_ever": [
+      "217.199.144.44"
+    ],
+    "unique_ip_count_ever": 1,
+    "avg_abuse_score_ever": 100.0,
+    "max_abuse_score_ever": 100,
+    "risk_tier_current": "HIGH",
+    "tags_current": [
+      "high-abuse"
+    ],
+    "tor_count_current": 0,
+    "vpn_count_current": 0,
+    "proxy_count_current": 0,
+    "tor_confirmed_via_enriched_corpus": 0,
+    "vpn_confirmed_via_enriched_corpus": 0,
+    "proxy_confirmed_via_enriched_corpus": 0,
+    "first_seen_ever": "2026-09-19T15:37:58+00:00",
+    "last_seen_ever": "2026-09-19T15:37:58+00:00",
     "_avg_score_weight": 1
   }
 }
