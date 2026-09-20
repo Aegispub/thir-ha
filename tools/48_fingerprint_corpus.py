@@ -144,6 +144,27 @@ def build_fingerprint_corpus(fingerprints, existing_corpus, now):
         else:
             unchanged_count += 1
 
+    # Whole-corpus _seen_sessions prune -- same fix and same rationale as
+    # tools/43_enriched_corpus.py's build_actor_corpus(): the in-loop
+    # cutoff prune above only ever visits HASSH values present in this
+    # run's ssh_fingerprints.json (the `for fp in fingerprints:` loop).
+    # A HASSH that stops appearing keeps its _seen_sessions dict forever,
+    # unpruned. Confirmed against the committed corpus: 66% of HASSH
+    # records were unreachable by the in-loop prune, 53.6% of all
+    # _seen_sessions entries were already stale beyond the 2-day window.
+    # Size-only change -- same key name, same {session_id: timestamp}
+    # shape. No other tool opens fingerprint_corpus.json (confirmed via
+    # repo-wide grep), so there is no external reader to consider here.
+    cutoff = now.timestamp() - (DEDUP_WINDOW_DAYS * 86400)
+    for hassh, entry in existing_corpus.items():
+        seen = entry.get("_seen_sessions")
+        if not seen:
+            continue
+        entry["_seen_sessions"] = {
+            sid: ts for sid, ts in seen.items()
+            if parse_ts(ts).timestamp() >= cutoff
+        }
+
     stats = {
         "total_fingerprints_in_corpus": len(existing_corpus),
         "new_this_run": new_count,
