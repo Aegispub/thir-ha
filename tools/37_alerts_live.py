@@ -103,6 +103,84 @@ def prune_alert_history(history: dict, max_age_days: int = 180) -> int:
     return len(stale_keys)
 
 
+def prune_seen_success_ips(cred_history: dict, max_age_days: int = 7) -> int:
+    """Remove seen_success_ips entries older than max_age_days.
+
+    check_credential_alerts() treats an IP as "new" once its recorded
+    timestamp is older than 7 days (see the `< 7 * 86400` freshness check
+    below), but nothing ever deleted the entry once that window passed --
+    it just sat there forever, still readable, still correctly ignored by
+    the freshness check, but bloating the file indefinitely. This mirrors
+    prune_alert_history()'s delete-by-staleness pattern, but on
+    seen_success_ips's own 7-day design window rather than the unrelated
+    180-day alerts window. Must be called unconditionally every run, not
+    behind the monthly --prune-days gate -- see call site.
+    """
+    cutoff = datetime.now(timezone.utc) - timedelta(days=max_age_days)
+    seen_ips = cred_history.get("seen_success_ips", {})
+    stale_keys = []
+    for ip, last_seen_str in seen_ips.items():
+        try:
+            last_seen = datetime.fromisoformat(last_seen_str)
+            if last_seen.tzinfo is None:
+                last_seen = last_seen.replace(tzinfo=timezone.utc)
+            if last_seen < cutoff:
+                stale_keys.append(ip)
+        except Exception:
+            continue
+    for ip in stale_keys:
+        del seen_ips[ip]
+    return len(stale_keys)
+
+
+def prune_seen_asns(asn_history: dict, max_age_days: int = 180) -> int:
+    """Remove seen_asns entries older than max_age_days.
+
+    seen_asns was originally a bare set/list of ASN strings with no
+    per-entry timestamp at all -- check_asn_alerts() only recorded THAT an
+    ASN had been seen, never WHEN, so there was no age to prune by and no
+    delete path could exist. This is the "slightly larger correct diff"
+    referenced in the PR description: seen_asns is upgraded in-place from
+    {asn, ...} (set/list) to {asn: first_seen_iso, ...} (dict), the same
+    shape seen_success_ips already uses. Existing entries with no
+    timestamp (pre-upgrade data) are treated as seen "now" on first
+    encounter, so they age out naturally on the next boundary rather than
+    being deleted immediately or treated as ancient. 180 days matches the
+    existing entry-level corpus conventions (Tool 43/48's
+    prune_actor_corpus / prune_fingerprint_corpus 180-day default) since,
+    unlike the 7-day credential window, there is no pre-existing design
+    intent documented for ASN staleness -- see docs/bloat_audit_open_questions.md.
+    Must be called unconditionally every run, same reasoning as
+    prune_seen_success_ips.
+    """
+    cutoff = datetime.now(timezone.utc) - timedelta(days=max_age_days)
+    now_iso = datetime.now(timezone.utc).isoformat()
+    seen_asns = asn_history.get("seen_asns", {})
+
+    # Upgrade legacy shape (list/set of bare ASN strings) to
+    # {asn: first_seen_iso}. Every legacy entry is stamped "now" rather
+    # than deleted or backdated -- we have no record of when it was
+    # actually first seen, so "now" is the only non-destructive choice.
+    if isinstance(seen_asns, (list, set)):
+        seen_asns = {asn: now_iso for asn in seen_asns}
+
+    stale_keys = []
+    for asn, first_seen_str in seen_asns.items():
+        try:
+            first_seen = datetime.fromisoformat(first_seen_str)
+            if first_seen.tzinfo is None:
+                first_seen = first_seen.replace(tzinfo=timezone.utc)
+            if first_seen < cutoff:
+                stale_keys.append(asn)
+        except Exception:
+            continue
+    for asn in stale_keys:
+        del seen_asns[asn]
+
+    asn_history["seen_asns"] = seen_asns
+    return len(stale_keys)
+
+
 def alert_key(alert_type: str, detail: str) -> str:
     """Compute a deduplication key."""
     raw = f"{alert_type}:{detail}"
@@ -165,7 +243,12 @@ def check_malware_alerts(malware_data: dict, yara_data: dict) -> list:
     for result in yara_data.get("results", []):
         if result.get("severity") in ("HIGH", "CRITICAL") and result.get("classified"):
             fname = result.get("filename", "unknown")
-            families = ", ".join(result.get("families", ["unknown"]))
+            # sorted() so two runs reporting the same family SET in a
+            # different order produce the same title / key_detail, and
+            # therefore the same alert_key hash -- unsorted joins here
+            # were the actual bug: 1,580 "unique" alert titles collapsed
+            # to 10 real alert types once order was normalised.
+            families = ", ".join(sorted(result.get("families", ["unknown"])))
             sev = result.get("severity", "HIGH")
             alerts.append({
                 "type": "yara_match",
@@ -222,9 +305,13 @@ def check_credential_alerts(cred_data: dict, cred_history: dict) -> list:
 def check_asn_alerts(asn_data: dict, asn_history: dict) -> list:
     """Alert on new ASN clusters appearing for the first time."""
     alerts = []
-    seen_asns = asn_history.get("seen_asns", set())
-    if isinstance(seen_asns, list):
-        seen_asns = set(seen_asns)
+    now_iso = datetime.now(timezone.utc).isoformat()
+    seen_asns = asn_history.get("seen_asns", {})
+    # Upgrade legacy shape (bare set/list of ASN strings, no timestamp) --
+    # same upgrade prune_seen_asns() performs, done here too so a fresh
+    # run that hasn't gone through pruning yet still reads correctly.
+    if isinstance(seen_asns, (list, set)):
+        seen_asns = {asn: now_iso for asn in seen_asns}
 
     for cluster in asn_data.get("clusters", []):
         asn = cluster.get("asn", "")
@@ -244,9 +331,9 @@ def check_asn_alerts(asn_data: dict, asn_history: dict) -> list:
                 "key_detail": asn,
                 "data": cluster,
             })
-            seen_asns.add(asn)
+            seen_asns[asn] = now_iso
 
-    asn_history["seen_asns"] = list(seen_asns)
+    asn_history["seen_asns"] = seen_asns
     return alerts
 
 
@@ -512,6 +599,23 @@ def main():
     history = load_alert_history(args.alert_history)
     cred_history = history.setdefault("credential_ips", {})
     asn_history  = history.setdefault("asn_seen", {})
+
+    # Unconditional prunes -- these run every invocation (every 2h via
+    # pipeline.yml), NOT gated behind --prune-days / the monthly
+    # .rollup_monthly_pending sentinel below. seen_success_ips has a
+    # 7-day design window and seen_asns a 180-day one; both are
+    # unrelated to the alerts dict's 180-day *monthly* cadence, so
+    # reusing that gate would leave stale entries live for up to ~30
+    # days after this fix merges -- long enough to keep silently
+    # suppressing genuine new-auth-success alerts. See
+    # docs/bloat_audit_open_questions.md for the reasoning.
+    cred_pruned = prune_seen_success_ips(cred_history)
+    if cred_pruned:
+        print(f"[Tool37] Pruned {cred_pruned} stale seen_success_ips entries (>7 days)")
+    asn_pruned = prune_seen_asns(asn_history)
+    if asn_pruned:
+        print(f"[Tool37] Pruned {asn_pruned} stale seen_asns entries (>180 days)")
+
     if args.prune_days > 0:
             pruned = prune_alert_history(history, args.prune_days)
             print(f"[Tool37] Pruned {pruned} alert_history entries older than {args.prune_days} days") 
