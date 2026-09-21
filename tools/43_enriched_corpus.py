@@ -262,6 +262,31 @@ def build_actor_corpus(ir_cases, threat_ips, existing_corpus, now):
         elif session_count > prior_running_session_count:
             updated_ip_count += 1
 
+    # Whole-corpus _seen_case_ids prune -- runs over EVERY entry in
+    # existing_corpus, not just the IPs visited in the loop above
+    # (cases_by_ip / threat_ip_map, i.e. this run's ir_cases.json /
+    # threat_ips.json delta). The in-loop cutoff prune a few lines up
+    # only ever touches IPs present in the current run's delta -- an IP
+    # that stops reappearing keeps its _seen_case_ids dict forever,
+    # unpruned, until the entry itself ages out via the unrelated
+    # 180-day prune_actor_corpus path. Confirmed against the committed
+    # corpus: 97.9% of IPs were unreachable by the in-loop prune. This
+    # pass fixes that by visiting every corpus key, every run,
+    # regardless of whether it appeared in today's delta. Size-only
+    # change -- same key name, same {case_id: timestamp} shape, so
+    # Tool 27's TTL cache read and Tool 50's is_tor/is_vpn/is_proxy
+    # cross-reference (the only two real external readers of this file)
+    # are unaffected; neither touches _seen_case_ids.
+    cutoff = now.timestamp() - (DEDUP_WINDOW_DAYS * 86400)
+    for ip, entry in existing_corpus.items():
+        seen = entry.get("_seen_case_ids")
+        if not seen:
+            continue
+        entry["_seen_case_ids"] = {
+            cid: ts for cid, ts in seen.items()
+            if parse_ts(ts).timestamp() >= cutoff
+        }
+
     stats = {
         "total_ips_in_corpus": len(existing_corpus),
         "new_ips_this_run": new_ip_count,
