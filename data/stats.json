@@ -1,43 +1,43 @@
 {
-  "generated_at": "2026-09-25T04:09:40Z",
-  "total_attacks": 266,
-  "unique_ips": 74,
-  "confirmed_threats": 236,
-  "false_positives": 30,
-  "fp_rate": 0.1128,
-  "high_severity": 169,
+  "generated_at": "2026-09-25T11:28:26Z",
+  "total_attacks": 1446,
+  "unique_ips": 152,
+  "confirmed_threats": 1404,
+  "false_positives": 42,
+  "fp_rate": 0.029,
+  "high_severity": 1162,
   "medium_severity": 0,
-  "low_severity": 97,
-  "total_ttps": 9,
+  "low_severity": 284,
+  "total_ttps": 11,
   "top_ttps": [
     {
-      "ttp": "T1078",
-      "count": 169
+      "ttp": "T1592",
+      "count": 1194
     },
     {
-      "ttp": "T1592",
-      "count": 164
+      "ttp": "T1078",
+      "count": 1162
     },
     {
       "ttp": "T1059.004",
-      "count": 57
-    },
-    {
-      "ttp": "T1222.002",
-      "count": 56
+      "count": 87
     },
     {
       "ttp": "T1083",
-      "count": 56
+      "count": 81
+    },
+    {
+      "ttp": "T1222.002",
+      "count": 76
     }
   ],
   "honeypot_status": "HEALTHY",
   "integrity_status": "OK",
-  "unique_countries": 29,
-  "peak_sessions": 266,
+  "unique_countries": 36,
+  "peak_sessions": 1446,
   "peak_date": "2026-09-25",
-  "peak_unique_ips": 74,
+  "peak_unique_ips": 152,
   "peak_ip_date": "2026-09-25",
-  "peak_confirmed_threats": 236,
+  "peak_confirmed_threats": 1404,
   "peak_threats_date": "2026-09-25"
 }
