@@ -67,10 +67,12 @@ import sys
 import json
 import argparse
 import glob
+import hashlib
 import ipaddress  # P2: IP validation
 import os         # P3: path constraint
 import re
 from datetime import datetime, timezone
+from collections import defaultdict
 from typing import List, Dict, Optional, Any
 
 
@@ -215,6 +217,185 @@ def calculate_severity(case: Dict) -> str:
     if case.get("commands"):
         return "MEDIUM"
     return "LOW"
+
+
+# -----------------------------
+# F5 — SSH per-IP consolidation (Q-16 Shape 3)
+# -----------------------------
+#
+# Problem: a single scanner IP can produce thousands of near-identical
+# successful-login sessions (e.g. CLU-002: repeated `uname -s -v -n -r -m`
+# probes). Tool 28's group_cases_for_report() cannot consolidate these —
+# its is_groupable() predicate excludes any case with login_success=True
+# (see docs/bloat_audit_open_questions.md Q-16). Consolidating at Tool 26's
+# write time, before ir_cases.json is produced, fixes both the file-size
+# bloat and Tool 28's per-case render bloat as a side effect.
+#
+# GROUP_WINDOW_MINUTES is Tool 28's own constant, imported by value at
+# module load — not re-declared — so the two consolidators cannot drift
+# apart if the window is ever tuned. Tool 28 defines it as a plain
+# module-level int (tools/28_soc_handover_live.py:68), so this constant
+# is duplicated here rather than imported directly: Tool 26 has no runtime
+# dependency on Tool 28's module (neither tool imports the other, and
+# 28_soc_handover_live.py is not on a stable import path from here). If
+# Tool 28's value ever changes, update this constant to match — see
+# docs/bloat_audit_open_questions.md Q-16 for the cross-reference.
+GROUP_WINDOW_MINUTES = 120
+
+# How many raw case_ids to retain on a consolidated case, for traceability.
+# Keeping the full list would defeat the purpose of consolidating.
+SESSION_IDS_SAMPLE_SIZE = 10
+
+
+def _bucket_key(ts_str: str) -> int:
+    """
+    Stable time-window bucket for a timestamp, anchored to the Unix epoch
+    rather than to the earliest timestamp in the current batch. Fixed-epoch
+    anchoring is deliberate: it keeps bucket boundaries — and therefore
+    generated case_ids — identical across separate pipeline runs on
+    overlapping data, whereas anchoring to "earliest case in this batch"
+    would shift every boundary as older cases age out of each run's input.
+    """
+    dt = datetime.strptime(ts_str, "%Y-%m-%dT%H:%M:%S.%fZ") if "." in ts_str \
+        else datetime.strptime(ts_str, "%Y-%m-%dT%H:%M:%SZ")
+    epoch = datetime(1970, 1, 1)
+    total_minutes = int((dt - epoch).total_seconds() // 60)
+    return total_minutes // GROUP_WINDOW_MINUTES
+
+
+def _signature(case: Dict) -> tuple:
+    """Grouping key: same src_ip, same login_success state, same exact
+    (order-independent) set of commands = same flood pattern."""
+    cmds = case.get("commands") or []
+    return (
+        case.get("src_ip", ""),
+        bool(case.get("login_success", False)),
+        tuple(sorted(cmds)),
+    )
+
+
+def _stable_case_id(signature: tuple, bucket: int) -> str:
+    """
+    Deterministic case_id for a consolidated case — same signature + same
+    time bucket always yields the same id, so re-running the pipeline on
+    the same input reproduces the same case_id rather than a fresh UUID
+    each time. Follows the repo's existing case_id convention
+    (`IR-<hex>`, see build_ir_case() and the module docstring's example
+    output) rather than inventing a new prefix.
+    """
+    payload = json.dumps(
+        {"src_ip": signature[0], "login_success": signature[1],
+         "commands": list(signature[2]), "bucket": bucket},
+        sort_keys=True,
+    )
+    digest = hashlib.sha256(payload.encode("utf-8")).hexdigest()[:12]
+    return f"IR-{digest}"
+
+
+def consolidate_by_signature(cases: List[Dict]) -> List[Dict]:
+    """
+    Collapse repetitive successful-login cases sharing the same src_ip,
+    login outcome, and exact command set within the same GROUP_WINDOW_MINUTES
+    bucket into a single representative case.
+
+    Every case in the output carries session_count (default 1 for cases
+    that did not group with anything). Consolidated cases additionally
+    carry session_ids_sample — the first SESSION_IDS_SAMPLE_SIZE raw
+    case_ids by first_seen, for traceability back to individual sessions.
+
+    Representative selection (Q-20): the representative is the earliest
+    case in the group BY DEFAULT, but a case carrying a cowrie.client.kex
+    event is preferred over a case that lacks one, even if the KEX-bearing
+    case is not the earliest by timestamp. Without this preference, a group
+    whose earliest-arriving session never completed its KEX handshake
+    would silently drop the group's only captured SSH fingerprint, even
+    though every member of the group negotiated the identical fingerprint
+    (confirmed empirically — see Q-20 in docs/bloat_audit_open_questions.md
+    for the trace showing every affected group had exactly one distinct
+    HASSH value shared across all members, i.e. this is a
+    representative-SELECTION defect, not a case of genuinely different
+    clients being merged). This preference does not change which cases
+    group together and costs zero byte-savings — it only changes which
+    single case within an already-decided group is kept as the survivor.
+    case_id/bucket are still computed from the group's true earliest
+    timestamp regardless of which case is chosen as representative, so
+    case_id stability across runs is unaffected by this preference.
+
+    Severity is deliberately NOT recomputed or aggregated across a group —
+    the representative case's existing severity (already computed by
+    calculate_severity() before this function runs) is kept as-is. This
+    matches Tool 43's last_session_severity design (most-recent, not
+    aggregate) and was confirmed safe in Q-03's risk-iii trace: no current
+    consumer reads severity expecting it to reflect a group's worst or
+    combined value.
+
+    Idempotent: running this function twice on its own output is a no-op.
+    A consolidated case's signature is identical to itself, so on a second
+    pass it forms a group of size 1 and its existing session_count is kept
+    unchanged (not reset to 1) via dict.setdefault.
+    """
+    if not cases:
+        return cases
+
+    groups: Dict[tuple, List[Dict]] = defaultdict(list)
+    for case in cases:
+        ts = case.get("first_seen", "")
+        if not ts:
+            # No usable timestamp — cannot bucket, pass through ungrouped
+            # under its own case_id so it never collides with a real group.
+            groups[("__no_timestamp__", case.get("case_id"))].append(case)
+            continue
+        try:
+            bucket = _bucket_key(ts)
+        except ValueError:
+            groups[("__unparseable_timestamp__", case.get("case_id"))].append(case)
+            continue
+        key = _signature(case) + (bucket,)
+        groups[key].append(case)
+
+    consolidated: List[Dict] = []
+    for group in groups.values():
+        if len(group) == 1:
+            single = dict(group[0])
+            single.setdefault("session_count", 1)
+            consolidated.append(single)
+            continue
+
+        group_sorted = sorted(group, key=lambda c: c.get("first_seen", ""))
+
+        # Q-20 fix: prefer a representative that actually carries a
+        # cowrie.client.kex event over the raw earliest-by-timestamp case.
+        # Root cause (confirmed against the live corpus, not assumed): in a
+        # tight connection burst, the fastest-connecting session is often
+        # the one whose KEX negotiation was never captured (disconnected
+        # before completing, or logged out of order) -- so picking strictly
+        # by timestamp systematically discards the fingerprint data every
+        # OTHER member of the group actually has. Verified against the
+        # current snapshot: every group affected by this bug had exactly
+        # one distinct HASSH value shared across all its members (i.e. this
+        # is a representative-selection defect, not a case of genuinely
+        # different clients being merged) -- so preferring a KEX-bearing
+        # member changes which case survives, not which cases group
+        # together, and costs zero byte-savings.
+        kex_bearing = [
+            c for c in group_sorted
+            if any(e.get("eventid") == "cowrie.client.kex" for e in c.get("timeline", []))
+        ]
+        rep = dict(kex_bearing[0]) if kex_bearing else dict(group_sorted[0])
+
+        sig = _signature(rep)
+        bucket = _bucket_key(group_sorted[0].get("first_seen", ""))
+        rep["case_id"] = _stable_case_id(sig, bucket)
+        rep["session_count"] = len(group)
+        rep["session_ids_sample"] = [
+            c.get("case_id") for c in group_sorted[:SESSION_IDS_SAMPLE_SIZE]
+        ]
+        # severity intentionally left as rep's own pre-existing value —
+        # see docstring above and Q-03 risk-iii.
+
+        consolidated.append(rep)
+
+    return consolidated
 
 
 # -----------------------------
@@ -474,6 +655,17 @@ def main() -> None:
     cases.sort(key=lambda c: c.get("first_seen", ""))
 
     log_info(f"Built {len(cases)} IR case(s)")
+
+    # F5 (Q-16 Shape 3): collapse repetitive successful-login floods
+    # (e.g. CLU-002-style scanner sessions) at write time, before the
+    # JSON is produced. See consolidate_by_signature() above.
+    pre_consolidation_count = len(cases)
+    cases = consolidate_by_signature(cases)
+    if len(cases) != pre_consolidation_count:
+        log_info(
+            f"F5 consolidation: {pre_consolidation_count} case(s) -> "
+            f"{len(cases)} case(s) after signature/time-window grouping"
+        )
 
     # Write JSON output (replaces output_csv)
     output_ir_cases_json(cases, args.output)

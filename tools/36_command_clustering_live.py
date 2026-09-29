@@ -186,6 +186,15 @@ def extract_command_sessions(cases: list, ip_lookup: dict = None) -> list:
                 "commands": commands,
                 "command_count": len(commands),
                 "timestamp": ts_first or case.get("timestamp", ""),
+                # Q-21: carry F5's per-case session_count through extraction.
+                # Without this, cl["members"] entries never have the field,
+                # and any later `m.get("session_count", 1)` at clustering
+                # time is a silent no-op that always returns the default —
+                # confirmed by reading this function before writing the fix,
+                # not assumed from the field's presence elsewhere in the
+                # pipeline. Absent on pre-F5 cases, so .get(..., 1) below
+                # still gives the pre-F5 answer (1 per raw session).
+                "session_count": case.get("session_count", 1),
             })
 
     return sessions
@@ -347,7 +356,7 @@ def build_output(clusters: list, total_sessions: int) -> dict:
             "campaign_severity": cl["campaign_severity"],
             "campaign_description": cl["campaign_description"],
             "matched_campaigns": cl["matched_campaigns"],
-            "session_count": len(cl["members"]),
+            "session_count": sum(m.get("session_count", 1) for m in cl["members"]),
             "unique_ips": unique_ips,
             "unique_ip_count": len(unique_ips),
             "sequence_hash": cl["sequence_hash"],
