@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-29T08:27:50Z",
+  "generated_at": "2026-09-29T12:05:45Z",
   "source": "enriched_corpus.yml",
-  "tool_count": 6,
+  "tool_count": 7,
   "tools": [
     {
       "tool": "tools/43_enriched_corpus.py",
@@ -32,6 +32,11 @@
       "tool": "tools/50_infrastructure_corpus.py",
       "language": "Python",
       "description": "Tool 50 \u2014 Infrastructure Corpus Builder"
+    },
+    {
+      "tool": "tools/51_attacker_profiles.py",
+      "language": "Python",
+      "description": "Tool 51 -- Attacker Profiles"
     }
   ]
 }
