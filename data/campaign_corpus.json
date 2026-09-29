@@ -1,7 +1,7 @@
 {
   "98af0db988d5971c": {
     "sequence_hash": "98af0db988d5971c",
-    "cluster_id_last_seen_as": "CLU-005",
+    "cluster_id_last_seen_as": "CLU-003",
     "is_campaign": true,
     "campaign_name": "mdrfckr SSH Key Injection",
     "campaign_severity": "HIGH",
@@ -1156,7 +1156,7 @@
     ],
     "unique_ip_count_ever": 1109,
     "first_seen": "2026-08-30T03:20:37.640961+00:00",
-    "last_seen": "2026-09-28T20:32:46.976834+00:00",
+    "last_seen": "2026-09-29T01:55:43.172266+00:00",
     "status": "active"
   },
   "6fa4c8ac58e7a1d9": {
@@ -1744,7 +1744,7 @@
   },
   "49efc5eb7bb5604b": {
     "sequence_hash": "49efc5eb7bb5604b",
-    "cluster_id_last_seen_as": "CLU-012",
+    "cluster_id_last_seen_as": "CLU-004",
     "is_campaign": false,
     "campaign_name": null,
     "campaign_severity": null,
@@ -1756,7 +1756,7 @@
         "name": "File & Directory Discovery"
       }
     ],
-    "session_count": 25,
+    "session_count": 26,
     "unique_ips_ever": [
       "147.185.132.154",
       "147.185.132.214",
@@ -1766,6 +1766,7 @@
       "147.185.133.179",
       "147.185.133.189",
       "147.185.133.195",
+      "147.185.133.239",
       "147.185.133.48",
       "162.216.149.16",
       "162.216.149.223",
@@ -1784,9 +1785,9 @@
       "35.203.211.29",
       "35.203.211.65"
     ],
-    "unique_ip_count_ever": 25,
+    "unique_ip_count_ever": 26,
     "first_seen": "2026-08-30T14:51:51.429778+00:00",
-    "last_seen": "2026-09-28T13:50:51.770030+00:00",
+    "last_seen": "2026-09-29T01:55:43.172266+00:00",
     "status": "active"
   },
   "560104d0f634867a": {
@@ -3911,7 +3912,7 @@
   },
   "4ed226bcbb7ec342": {
     "sequence_hash": "4ed226bcbb7ec342",
-    "cluster_id_last_seen_as": "CLU-001",
+    "cluster_id_last_seen_as": "CLU-002",
     "is_campaign": true,
     "campaign_name": "Recon Loader Script",
     "campaign_severity": "MEDIUM",
@@ -3981,7 +3982,7 @@
     ],
     "unique_ip_count_ever": 16,
     "first_seen": "2026-09-10T20:50:28.920527+00:00",
-    "last_seen": "2026-09-28T20:32:46.976834+00:00",
+    "last_seen": "2026-09-29T01:55:43.172266+00:00",
     "status": "active"
   },
   "9a9a7473e4472399": {
@@ -4496,7 +4497,7 @@
     "unique_ip_count_ever": 2,
     "first_seen": "2026-09-14T23:07:08.426473+00:00",
     "last_seen": "2026-09-14T23:07:08.426473+00:00",
-    "status": "active"
+    "status": "ended"
   },
   "ef936d8b423a9294": {
     "sequence_hash": "ef936d8b423a9294",
@@ -6746,6 +6747,55 @@
     "unique_ip_count_ever": 1,
     "first_seen": "2026-09-28T13:50:51.770030+00:00",
     "last_seen": "2026-09-28T13:50:51.770030+00:00",
+    "status": "active"
+  },
+  "65848f80ad794545": {
+    "sequence_hash": "65848f80ad794545",
+    "cluster_id_last_seen_as": "CLU-001",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [
+      {
+        "id": "T1083",
+        "name": "File & Directory Discovery"
+      },
+      {
+        "id": "T1082",
+        "name": "System Information Discovery"
+      },
+      {
+        "id": "T1592",
+        "name": "Gather Victim Host Info"
+      }
+    ],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "213.111.149.80"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-09-29T01:55:43.172266+00:00",
+    "last_seen": "2026-09-29T01:55:43.172266+00:00",
+    "status": "active"
+  },
+  "e596899f114b5162": {
+    "sequence_hash": "e596899f114b5162",
+    "cluster_id_last_seen_as": "CLU-005",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "213.111.149.80"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-09-29T01:55:43.172266+00:00",
+    "last_seen": "2026-09-29T01:55:43.172266+00:00",
     "status": "active"
   }
 }
