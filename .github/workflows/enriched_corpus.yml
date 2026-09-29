@@ -235,6 +235,9 @@ jobs:
         if: steps.run_mode.outputs.do_monthly == 'true'
         run: python3 tools/50_infrastructure_corpus.py data infrastructure-corpus --archive-to-r2
 
+      - name: Tool 51 — Attacker Profiles
+        run: python3 tools/51_attacker_profiles.py
+
       # ------------------------------------------------------------
       # Enriched-corpus tool manifest — same self-generating pattern
       # already used by pipeline.yml (see its own "Generate
@@ -350,6 +353,7 @@ jobs:
             data/fingerprint_corpus.json \
             data/malware_corpus.json \
             data/infrastructure_corpus.json \
+            data/attacker_profiles.json \
             data/tool_manifest_enriched.json \
             enriched-data/ \
             campaign-corpus/ \
