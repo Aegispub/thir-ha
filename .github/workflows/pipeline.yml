@@ -47,7 +47,7 @@ name: THIR Live Pipeline
 
 on:
   schedule:
-    - cron: '0 */2 * * *'    # every 2 hours — normal pipeline run
+    - cron: '0 */12 * * *'    # every 12 hours — normal pipeline run
   workflow_dispatch:          # manual trigger from Actions tab
 
 # Prevent overlapping runs if previous hour's job is still running
