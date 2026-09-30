@@ -1,7 +1,7 @@
 {
   "98af0db988d5971c": {
     "sequence_hash": "98af0db988d5971c",
-    "cluster_id_last_seen_as": "CLU-003",
+    "cluster_id_last_seen_as": "CLU-002",
     "is_campaign": true,
     "campaign_name": "mdrfckr SSH Key Injection",
     "campaign_severity": "HIGH",
@@ -42,7 +42,7 @@
         "name": "T1105"
       }
     ],
-    "session_count": 1673,
+    "session_count": 1674,
     "unique_ips_ever": [
       "1.162.248.139",
       "1.222.42.237",
@@ -782,6 +782,7 @@
       "203.212.9.248",
       "206.42.8.243",
       "207.154.230.149",
+      "207.166.168.11",
       "207.180.229.234",
       "207.180.233.98",
       "209.141.43.146",
@@ -1172,9 +1173,9 @@
       "98.70.50.166",
       "98.71.8.129"
     ],
-    "unique_ip_count_ever": 1127,
+    "unique_ip_count_ever": 1128,
     "first_seen": "2026-08-30T03:20:37.640961+00:00",
-    "last_seen": "2026-09-29T12:05:44.531419+00:00",
+    "last_seen": "2026-09-30T05:47:32.182841+00:00",
     "status": "active"
   },
   "6fa4c8ac58e7a1d9": {
@@ -3484,7 +3485,7 @@
   },
   "28ba533b0f3c4df6": {
     "sequence_hash": "28ba533b0f3c4df6",
-    "cluster_id_last_seen_as": "CLU-009",
+    "cluster_id_last_seen_as": "CLU-004",
     "is_campaign": false,
     "campaign_name": null,
     "campaign_severity": null,
@@ -3506,7 +3507,7 @@
     ],
     "unique_ip_count_ever": 5,
     "first_seen": "2026-09-07T04:38:02.978392+00:00",
-    "last_seen": "2026-09-28T20:32:46.976834+00:00",
+    "last_seen": "2026-09-30T05:47:32.182841+00:00",
     "status": "active"
   },
   "389a47ac191192fe": {
@@ -4623,7 +4624,7 @@
     "unique_ip_count_ever": 1,
     "first_seen": "2026-09-15T16:57:22.204057+00:00",
     "last_seen": "2026-09-15T16:57:22.204057+00:00",
-    "status": "active"
+    "status": "ended"
   },
   "8c7c440ebdf31c62": {
     "sequence_hash": "8c7c440ebdf31c62",
@@ -6919,6 +6920,96 @@
     "unique_ip_count_ever": 2,
     "first_seen": "2026-09-29T12:05:44.531419+00:00",
     "last_seen": "2026-09-29T12:05:44.531419+00:00",
+    "status": "active"
+  },
+  "7722c53d59c19ffb": {
+    "sequence_hash": "7722c53d59c19ffb",
+    "cluster_id_last_seen_as": "CLU-001",
+    "is_campaign": true,
+    "campaign_name": "mdrfckr SSH Key Injection",
+    "campaign_severity": "HIGH",
+    "campaign_description": "Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.",
+    "matched_campaigns": [
+      {
+        "name": "mdrfckr SSH Key Injection",
+        "ttps": [
+          "T1021.004",
+          "T1078",
+          "T1105"
+        ],
+        "severity": "HIGH",
+        "description": "Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.",
+        "pattern_hits": 3,
+        "pattern_total": 3
+      }
+    ],
+    "ttps": [
+      {
+        "id": "T1021.004",
+        "name": "Remote Services: SSH"
+      },
+      {
+        "id": "T1078",
+        "name": "Valid Accounts"
+      },
+      {
+        "id": "T1083",
+        "name": "File & Directory Discovery"
+      },
+      {
+        "id": "T1082",
+        "name": "System Information Discovery"
+      },
+      {
+        "id": "T1592",
+        "name": "Gather Victim Host Info"
+      },
+      {
+        "id": "T1070",
+        "name": "Indicator Removal"
+      },
+      {
+        "id": "T1140",
+        "name": "Deobfuscate/Decode Files"
+      },
+      {
+        "id": "T1547",
+        "name": "Boot/Logon Autostart"
+      },
+      {
+        "id": "T1489",
+        "name": "Service Stop"
+      },
+      {
+        "id": "T1105",
+        "name": "T1105"
+      }
+    ],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "118.145.238.60"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-09-30T05:47:32.182841+00:00",
+    "last_seen": "2026-09-30T05:47:32.182841+00:00",
+    "status": "active"
+  },
+  "7d10fced96b38c84": {
+    "sequence_hash": "7d10fced96b38c84",
+    "cluster_id_last_seen_as": "CLU-003",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 3,
+    "unique_ips_ever": [
+      "45.198.224.141"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-09-30T05:47:32.182841+00:00",
+    "last_seen": "2026-09-30T05:47:32.182841+00:00",
     "status": "active"
   }
 }
