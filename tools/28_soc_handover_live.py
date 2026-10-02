@@ -69,6 +69,12 @@ GROUP_WINDOW_MINUTES = 120   # max gap between sessions to stay in same group
 GROUP_MIN_SESSIONS   = 2     # need at least this many sessions to group
 GROUP_MEDIUM_THRESH  = 10    # sessions ≥ this → MEDIUM severity on the group
 
+# Report-size caps (bloat control — report-only, source JSON is never touched)
+MAX_PRIORITY_FULL     = 25   # full-detail priority case blocks per report
+MAX_TIMELINE_ROWS     = 15   # timeline rows shown per priority case
+MAX_SUCCESS_PAIRS     = 20   # successful auth pairs listed in credential section
+MAX_PRIORITY_COMPACT  = 100  # rows in the compact overflow table
+
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Defang helpers  (report-only — source JSON is never touched)
@@ -293,7 +299,7 @@ def group_cases_for_report(cases):
         # Find which bucket this case belongs to (last open bucket for this IP
         # that is within the time window)
         placed = False
-        for bkey in reversed(bucket_order):
+        for bkey in bucket_order[-1:]:
             if not bkey.startswith(ip + "::"):
                 continue
             last_case = buckets[bkey][-1]
@@ -494,10 +500,12 @@ def render_priority_case(case, malware_index, L):
         ln()
         ln("| Time (UTC) | Event |")
         ln("|---|---|")
-        for e in timeline:
+        for e in timeline[:MAX_TIMELINE_ROWS]:
             ts  = fmt_ts(e.get("timestamp", "?"), 19)
             evt = defang(e.get("event", "?"))
             ln(f"| `{ts}` | `{evt}` |")
+        if len(timeline) > MAX_TIMELINE_ROWS:
+            ln(f"| … | _{len(timeline) - MAX_TIMELINE_ROWS} more event(s) — see ir_cases.json_ |")
         ln()
 
     # Recommended actions — defang IP in action items
@@ -713,9 +721,11 @@ def build_report(ir, threats, fp, stats, malware, creds=None, ssh_fps=None, cmd_
             ln()
             ln("| Username | Password | Source IP | Timestamp |")
             ln("|---|---|---|---|")
-            for sp in success_pairs:
+            for sp in success_pairs[:MAX_SUCCESS_PAIRS]:
                 ln(f"| `{sp.get('username','?')}` | `{sp.get('password','?')}` | "
                    f"`{sp.get('src_ip','?')}` | {sp.get('timestamp','?')[:19]} |")
+            if len(success_pairs) > MAX_SUCCESS_PAIRS:
+                ln(f"_… {len(success_pairs) - MAX_SUCCESS_PAIRS} more successful pair(s) in credentials.json_")
             ln()
 
     # ── 🖥 SSH Fingerprint Intelligence (Tool 35) ─────────────────────────────
@@ -871,8 +881,23 @@ def build_report(ir, threats, fp, stats, malware, creds=None, ssh_fps=None, cmd_
         ln("_No priority cases this shift. All confirmed sessions were credential scans only._")
         ln()
     else:
-        for case in priority_cases:
+        for case in priority_cases[:MAX_PRIORITY_FULL]:
             render_priority_case(case, malware_index, L)
+        overflow = priority_cases[MAX_PRIORITY_FULL:]
+        if overflow:
+            ln(f"### Additional priority cases ({len(overflow)}) — compact view")
+            ln()
+            ln("| Case | Severity | Source IP | First Seen | Auth | Cmds | DL | TTPs |")
+            ln("|---|---|---|---|---|---|---|---|")
+            for c in overflow[:MAX_PRIORITY_COMPACT]:
+                ln(f"| {c.get('case_id','?')} | {c.get('severity','LOW')} | "
+                   f"`{defang_ip(c.get('src_ip','?'))}` | {fmt_ts(c.get('first_seen'))} | "
+                   f"{'Y' if c.get('login_success') else 'N'} | "
+                   f"{len(c.get('commands') or [])} | {len(c.get('downloads') or [])} | "
+                   f"`{' · '.join((c.get('ttps') or [])[:3])}` |")
+            if len(overflow) > MAX_PRIORITY_COMPACT:
+                ln(f"_… {len(overflow) - MAX_PRIORITY_COMPACT} more priority case(s) in ir_cases.json_")
+            ln()
 
     # ── Reconnaissance activity (grouped) ─────────────────────────────────────
     ln("---")

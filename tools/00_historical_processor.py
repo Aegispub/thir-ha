@@ -69,6 +69,17 @@ def log_info(msg: str, verbose: bool = True) -> None:
         print(f"[Tool00] {msg}", file=sys.stderr)
 
 
+def log_mem(label: str, verbose: bool = True) -> None:
+    if not verbose:
+        return
+    try:
+        with open("/proc/self/status") as f:
+            rss = next(l.split()[1] for l in f if l.startswith("VmRSS"))
+        print(f"[Tool00] MEM {label}: {int(rss)//1024} MB RSS", file=sys.stderr)
+    except Exception:
+        pass
+
+
 def log_warn(msg: str) -> None:
     print(f"[Tool00] WARNING: {msg}", file=sys.stderr)
 
@@ -669,20 +680,36 @@ def extract_command_sessions(cases: List[Dict]) -> List[Dict]:
 
 def cluster_sessions(sessions: List[Dict], threshold: float = 0.7) -> List[Dict]:
     clusters: List[Dict] = []
+    seed_sets: List[frozenset] = []          # precomputed once per cluster
+    placed_by_hash: Dict[str, int] = {}      # identical sequence -> cluster idx
     for sess in sessions:
-        placed = False
-        for cl in clusters:
-            if jaccard(sess["commands"], cl["seed_commands"]) >= threshold:
-                cl["members"].append(sess)
-                placed = True
+        h = sequence_hash(sess["commands"])
+        idx = placed_by_hash.get(h)
+        if idx is not None:                  # same normalised sequence seen before
+            clusters[idx]["members"].append(sess)
+            continue
+        sset = frozenset(normalize_command(c) for c in sess["commands"])
+        la = len(sset)
+        idx = None
+        for i, bset in enumerate(seed_sets):
+            lb = len(bset)
+            lo, hi = (la, lb) if la < lb else (lb, la)
+            if hi and lo / hi < threshold:   # jaccard can't reach threshold
+                continue
+            if len(sset & bset) / len(sset | bset) >= threshold:
+                idx = i
                 break
-        if not placed:
+        if idx is None:
+            idx = len(clusters)
             clusters.append({
-                "cluster_id": f"CLU-{len(clusters)+1:03d}",
+                "cluster_id": f"CLU-{idx+1:03d}",
                 "seed_commands": sess["commands"],
-                "members": [sess],
-                "sequence_hash": sequence_hash(sess["commands"]),
+                "members": [],
+                "sequence_hash": h,
             })
+            seed_sets.append(sset)
+        clusters[idx]["members"].append(sess)
+        placed_by_hash[h] = idx
     for cl in clusters:
         all_cmds = [c for m in cl["members"] for c in m["commands"]]
         cl["ttps"] = detect_cluster_ttps(all_cmds)
@@ -986,7 +1013,9 @@ def main() -> None:
     log_info("Clustering commands...", verbose)
     cmd_sessions = extract_command_sessions(cases)
     clusters = cluster_sessions(cmd_sessions, threshold=0.7)
+    log_mem("after clustering", verbose)
     command_clusters = build_clusters_output(clusters, len(cmd_sessions))
+    log_mem("after cluster output", verbose)
 
     # ---- Phase 6 (depends on everything above) ----
     log_info("Aggregating corpus-wide stats...", verbose)
@@ -995,6 +1024,7 @@ def main() -> None:
         for t in c.get("ttps", []):
             ttp_counter[t] += 1
     stats = build_stats(cases, credentials, ttp_counter)
+    log_mem("after stats", verbose)
 
     # ---- Output: full records (for R2 upload by the calling workflow) ----
     full_records_path = Path(args.full_records_out) if args.full_records_out \
