@@ -429,6 +429,78 @@ def aggregate_credentials(all_attempts: List[Dict], success_pairs: List[Dict]) -
         "success_pairs": success_pairs[:_CRED_TOP_N],
     }
 
+
+class CredentialAccumulator:
+    """Incremental equivalent of aggregate_credentials(): consumes one file's
+    attempts at a time so the full corpus-wide attempt list is never held in
+    memory. Counters are filled in the same order the old list was iterated,
+    so tie-breaking in the top-N sorts — and therefore the output — is
+    identical to aggregate_credentials() on the concatenated list."""
+
+    def __init__(self) -> None:
+        self.username_counts: Dict[str, int] = defaultdict(int)
+        self.password_counts: Dict[str, int] = defaultdict(int)
+        self.pair_counts: Dict[Tuple[str, str], int] = defaultdict(int)
+        self.total_attempts = 0
+        self.success_total = 0
+        self.success_head: List[Dict] = []
+
+    def add_file(self, attempts: List[Dict], successes: List[Dict]) -> None:
+        for a in attempts:
+            self.username_counts[a["username"]] += 1
+            self.password_counts[a["password"]] += 1
+            self.pair_counts[(a["username"], a["password"])] += 1
+        self.total_attempts += len(attempts)
+        self.success_total += len(successes)
+        room = _CRED_TOP_N - len(self.success_head)
+        if room > 0:
+            self.success_head.extend(successes[:room])
+
+    def result(self) -> Dict:
+        top_usernames = sorted(self.username_counts.items(), key=lambda kv: -kv[1])[:_CRED_TOP_N]
+        top_passwords = sorted(self.password_counts.items(), key=lambda kv: -kv[1])[:_CRED_TOP_N]
+        top_pairs = sorted(self.pair_counts.items(), key=lambda kv: -kv[1])[:_CRED_TOP_N]
+        return {
+            "total_attempts": self.total_attempts,
+            "unique_pairs": len(self.pair_counts),
+            "unique_usernames": len(self.username_counts),
+            "unique_passwords": len(self.password_counts),
+            "top_usernames": [{"username": u, "count": c} for u, c in top_usernames],
+            "top_passwords": [{"password": p, "count": c} for p, c in top_passwords],
+            "top_pairs": [{"username": u, "password": p, "count": c} for (u, p), c in top_pairs],
+            "total_successful_logins": self.success_total,
+            "success_pairs": self.success_head[:_CRED_TOP_N],
+        }
+
+
+def write_full_records(path: Path, corpus_name: str, cases: List[Dict]) -> None:
+    """Write the full-record archive one case at a time.
+
+    Output is byte-identical to
+        path.write_text(json.dumps({"generated_at": ..., "corpus_name": ...,
+                                     "total_cases": N, "cases": cases}, indent=2))
+    but never builds the whole corpus as one in-memory string/chunk list.
+    Safe re-indent: json.dumps escapes newlines inside strings, so every raw
+    newline in a case's dump is structural."""
+    header = [
+        ("generated_at", datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")),
+        ("corpus_name", corpus_name),
+        ("total_cases", len(cases)),
+    ]
+    with open(path, "w", encoding="utf-8", newline="\n") as fh:
+        fh.write("{\n")
+        for key, val in header:
+            fh.write(f"  {json.dumps(key)}: {json.dumps(val)},\n")
+        if not cases:
+            fh.write('  "cases": []\n}')
+            return
+        fh.write('  "cases": [\n')
+        last = len(cases) - 1
+        for i, case in enumerate(cases):
+            fh.write("    " + json.dumps(case, indent=2).replace("\n", "\n    "))
+            fh.write(",\n" if i < last else "\n")
+        fh.write("  ]\n}")
+
 # ──────────────────────────────────────────────────────────────────────────
 # Phase 4 — HASSH fingerprinting (Tool 35 logic — operates on in-memory cases)
 # ──────────────────────────────────────────────────────────────────────────
@@ -991,13 +1063,12 @@ def main() -> None:
 
     # ---- Phase 3 ----
     log_info("Extracting credentials...", verbose)
-    all_attempts: List[Dict] = []
-    success_pairs: List[Dict] = []
+    cred_acc = CredentialAccumulator()
     for path in files:
         a, s = parse_credentials_from_file(path)
-        all_attempts.extend(a)
-        success_pairs.extend(s)
-    credentials = aggregate_credentials(all_attempts, success_pairs)
+        cred_acc.add_file(a, s)
+    credentials = cred_acc.result()
+    log_mem("after credentials", verbose)
 
     # ---- Phase 5 (threat_ips — no enrichment, ever) ----
     log_info("Building threat_ips index (--skip-enrich, no API calls)...", verbose)
@@ -1029,13 +1100,8 @@ def main() -> None:
     # ---- Output: full records (for R2 upload by the calling workflow) ----
     full_records_path = Path(args.full_records_out) if args.full_records_out \
         else output_dir / ".full_records_tmp.json"
-    full_payload = {
-        "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "corpus_name": args.corpus_name,
-        "total_cases": len(cases),
-        "cases": cases,
-    }
-    full_records_path.write_text(json.dumps(full_payload, indent=2))
+    write_full_records(full_records_path, args.corpus_name, cases)
+    log_mem("after full-record write", verbose)
     log_info(f"Wrote full (un-truncated) case records to {full_records_path} "
              f"— upload this to R2 live-archives/, then it can be deleted locally")
 
