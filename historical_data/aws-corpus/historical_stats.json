@@ -1,12 +1,12 @@
 {
   "corpus_name": "aws-2026-03-07-onwards",
-  "generated_at": "2026-07-01T07:12:17Z",
+  "generated_at": "2026-10-02T10:43:10Z",
   "date_range": {
     "start": "2026-03-07",
-    "end": "2026-06-30"
+    "end": "2026-07-11"
   },
-  "total_sessions": 386599,
-  "total_unique_ips": 18055,
+  "total_sessions": 425060,
+  "total_unique_ips": 19076,
   "total_unique_countries": 0,
   "sessions_per_day": [
     {
@@ -472,20 +472,64 @@
     {
       "date": "2026-06-30",
       "sessions": 823
+    },
+    {
+      "date": "2026-07-01",
+      "sessions": 597
+    },
+    {
+      "date": "2026-07-02",
+      "sessions": 737
+    },
+    {
+      "date": "2026-07-03",
+      "sessions": 10474
+    },
+    {
+      "date": "2026-07-04",
+      "sessions": 1902
+    },
+    {
+      "date": "2026-07-05",
+      "sessions": 1167
+    },
+    {
+      "date": "2026-07-06",
+      "sessions": 732
+    },
+    {
+      "date": "2026-07-07",
+      "sessions": 16497
+    },
+    {
+      "date": "2026-07-08",
+      "sessions": 1317
+    },
+    {
+      "date": "2026-07-09",
+      "sessions": 854
+    },
+    {
+      "date": "2026-07-10",
+      "sessions": 1035
+    },
+    {
+      "date": "2026-07-11",
+      "sessions": 3149
     }
   ],
-  "daily_median": 1400.0,
+  "daily_median": 1365,
   "anomaly_days": [
     {
       "date": "2026-03-17",
       "sessions": 23893,
-      "vs_median": "17x",
+      "vs_median": "18x",
       "note": "anomalous volume \u2014 investigate"
     },
     {
       "date": "2026-04-19",
       "sessions": 20277,
-      "vs_median": "14x",
+      "vs_median": "15x",
       "note": "anomalous volume \u2014 investigate"
     },
     {
@@ -545,7 +589,7 @@
     {
       "date": "2026-06-09",
       "sessions": 6298,
-      "vs_median": "4x",
+      "vs_median": "5x",
       "note": "anomalous volume \u2014 investigate"
     },
     {
@@ -563,7 +607,7 @@
     {
       "date": "2026-06-22",
       "sessions": 18833,
-      "vs_median": "13x",
+      "vs_median": "14x",
       "note": "anomalous volume \u2014 investigate"
     },
     {
@@ -576,6 +620,18 @@
       "date": "2026-06-25",
       "sessions": 7257,
       "vs_median": "5x",
+      "note": "anomalous volume \u2014 investigate"
+    },
+    {
+      "date": "2026-07-03",
+      "sessions": 10474,
+      "vs_median": "8x",
+      "note": "anomalous volume \u2014 investigate"
+    },
+    {
+      "date": "2026-07-07",
+      "sessions": 16497,
+      "vs_median": "12x",
       "note": "anomalous volume \u2014 investigate"
     }
   ],
@@ -605,62 +661,72 @@
       "session_count": 17530
     },
     {
+      "ip": "159.223.173.157",
+      "session_count": 15721
+    },
+    {
       "ip": "178.18.241.121",
       "session_count": 10449
     },
     {
+      "ip": "101.201.76.235",
+      "session_count": 9248
+    },
+    {
       "ip": "195.33.199.59",
       "session_count": 8137
-    },
-    {
-      "ip": "8.210.45.187",
-      "session_count": 8027
-    },
-    {
-      "ip": "157.245.56.194",
-      "session_count": 4790
     }
   ],
   "top_credential_pairs": [
     {
       "username": "345gs5662d34",
       "password": "345gs5662d34",
-      "count": 11574
+      "count": 12100
     },
     {
       "username": "root",
       "password": "3245gs5662d34",
-      "count": 11558
+      "count": 12075
     },
     {
       "username": "GET / HTTP/1.1",
       "password": "Host: 13.235.92.17:23",
-      "count": 291
+      "count": 311
     },
     {
       "username": "admin",
       "password": "admin",
-      "count": 261
+      "count": 272
     },
     {
       "username": "Accept-Encoding: gzip",
       "password": "",
-      "count": 212
+      "count": 214
     },
     {
       "username": "root",
       "password": "admin",
-      "count": 175
+      "count": 195
     },
     {
       "username": "root",
       "password": "root",
-      "count": 162
+      "count": 177
     },
     {
       "username": "root",
       "password": "",
-      "count": 160
+      "count": 170
+    },
+    {
+      "username": "*1",
+      "password": "$4",
+      "count": 131
+    },
+    {
+      "username": "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36",
+      "password": "Accept-Encoding: gzip",
+      "count": 124
     },
     {
       "username": "User-Agent: visionheight.com/scan Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Chrome/126.0.0.0 Safari/537.36",
@@ -668,34 +734,29 @@
       "count": 116
     },
     {
-      "username": "*1",
-      "password": "$4",
-      "count": 115
-    },
-    {
-      "username": "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36",
-      "password": "Accept-Encoding: gzip",
+      "username": "root",
+      "password": "123456",
       "count": 109
     },
     {
       "username": "root",
-      "password": "123456",
-      "count": 102
-    },
-    {
-      "username": "root",
       "password": "ubuntu",
-      "count": 95
+      "count": 98
     },
     {
       "username": "root",
       "password": "password",
+      "count": 91
+    },
+    {
+      "username": "admin",
+      "password": "",
       "count": 86
     },
     {
       "username": "user",
       "password": "user",
-      "count": 75
+      "count": 81
     },
     {
       "username": "orangepi",
@@ -710,43 +771,38 @@
     {
       "username": "support",
       "password": "support",
-      "count": 68
+      "count": 70
     },
     {
       "username": "root",
       "password": "fjbdfdjkdsfs541544AA@@",
       "count": 68
-    },
-    {
-      "username": "root",
-      "password": "toor",
-      "count": 64
     }
   ],
   "ttp_frequency": [
     {
       "ttp": "T1078",
-      "count": 191974
+      "count": 218601
     },
     {
       "ttp": "T1059",
-      "count": 179361
+      "count": 205386
     },
     {
       "ttp": "T1105",
-      "count": 12476
+      "count": 13350
     },
     {
       "ttp": "T1098.004",
-      "count": 12408
+      "count": 12967
     },
     {
       "ttp": "T1053",
-      "count": 785
+      "count": 821
     },
     {
       "ttp": "T1222",
-      "count": 38
+      "count": 56
     }
   ]
 }
