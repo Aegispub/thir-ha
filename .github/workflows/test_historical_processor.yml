@@ -1,0 +1,99 @@
+# .github/workflows/test_historical_processor.yml
+#
+# ALL testing for the historical processor lives here. historical_processor.yml
+# only processes; it never validates itself.
+#
+# Needs no R2 credentials, no network beyond package install, and never touches
+# historical_data/ in the repo: every test works on synthetic logs in a temp dir.
+#
+#   static       compile Tool 00; assert the production workflow's safety
+#                invariants (side-effect order, dry-run, secrets, bash syntax)
+#   equivalence  incremental run == full run, byte for byte, after every step
+#                of three schedules, plus guard behaviour
+#   spill        --spill-dir == in-memory output, and far lower peak memory
+#   regression   the repo's existing tests (tests/test_*.py)
+#
+# A red run here is the gate before changing tools/00_historical_processor.py
+# or historical_processor.yml.
+
+name: Test Historical Processor
+
+on:
+  pull_request:
+    paths:
+      - 'tools/00_historical_processor.py'
+      - 'tests/historical/**'
+      - '.github/workflows/historical_processor.yml'
+      - '.github/workflows/test_historical_processor.yml'
+  push:
+    branches: [oracle-ha]
+    paths:
+      - 'tools/00_historical_processor.py'
+      - 'tests/historical/**'
+      - '.github/workflows/historical_processor.yml'
+      - '.github/workflows/test_historical_processor.yml'
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+concurrency:
+  group: test-historical-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  static:
+    name: static checks
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install PyYAML (test tooling only)
+        run: python3 -m pip install --quiet pyyaml
+      - name: Tool 00 compiles
+        run: python3 -m py_compile tools/00_historical_processor.py
+      - name: Workflow invariants
+        run: python3 tests/historical/test_workflow_historical.py
+
+  equivalence:
+    name: incremental == full
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Incremental equivalence and guards
+        run: python3 tests/historical/test_tool00_incremental.py
+
+  spill:
+    name: spill equivalence and memory
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Spill equivalence and peak memory
+        run: python3 tests/historical/test_tool00_spill.py
+
+  regression:
+    name: existing regression tests
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run tests/test_*.py
+        run: |
+          for f in tests/test_*.py; do
+            echo "== $f"
+            python3 "$f" || exit 1
+          done
