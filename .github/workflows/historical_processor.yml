@@ -2,53 +2,114 @@
 #
 # THIR HISTORICAL PROCESSOR
 #
-# Runs quarterly. Downloads any new rotated log files from both R2
-# archive buckets (thir-raw-archive = AWS corpus, thirha-raw-archive =
-# Oracle corpus), processes them via Tool 00, and commits
-# historical_data/ as a permanent baseline.
+# Re-derives the permanent historical baseline for each corpus from the raw
+# Cowrie logs archived in R2, and keeps it current INCREMENTALLY:
+#   - Only log files that are new since the last run (plus one provisional
+#     file and one file of context) are downloaded and parsed.
+#   - Per-file shards + case fragments live in R2 under
+#         <bucket>/live-archives/<corpus>-corpus/state/
+#     and are folded together every run, so every output is identical to a
+#     full pass over all logs (verified by tests/test_tool00_incremental.py,
+#     run by test_historical_processor.yml).
 #
-# Design decisions locked this session (see THIR_Decisions_and_Tool00_Spec_v2.md,
-# Tool00_Workflow_Design_v3.md, historical_ir_cases_index_design.md,
-# r2_bucket_structure_final_v2.md):
-#   - Purpose: portfolio/credibility, durable even if all VMs are retired
-#   - Schedule: quarterly cron, both corpora, fully automatic, no manual step needed
-#   - historical_ir_cases.json committed to the repo is an ID-only INDEX
-#     (case_id, src_ip, first_seen, severity, source_file) — full records
-#     are archived to each corpus's own R2 bucket under live-archives/
-#     and never committed to git, keeping repo growth in single-digit MB
-#     even at multi-year horizons
-#   - --skip-enrich always — Tool 00 never calls AbuseIPDB/OTX, zero shared
-#     quota risk with the live 2-hour pipeline, zero API secrets needed here
-#   - Each corpus has its OWN R2 bucket and its OWN rclone remote/token —
-#     these are NOT interchangeable account-wide keys
-#   - Each corpus has its own .EOF marker — once a bucket's file listing is
-#     unchanged from the previous run, that corpus is marked complete and
-#     skipped on all future runs until the marker is manually removed
-#   - Representation is corpus_metadata.json only — no SUMMARY.md, no
-#     soc_handover.md section, no dashboard wiring in this phase
+# What gets archived is unchanged:
+#   R2   <bucket>/live-archives/<corpus>-corpus/historical_ir_cases_full_<date>.json.gz
+#        (cumulative, same layout as before, re-assembled from stored fragments)
+#   git  historical_data/<corpus>-corpus/{corpus_highlights,historical_stats,corpus_metadata}.json
 #
-# This workflow is fully independent of pipeline.yml. It never reads or
-# writes data/ or reports/, and cannot regress the live 2-hour pipeline.
-# It is also independent of any VM being alive — only the two R2 buckets
-# need to exist for this to keep running.
+# Order of side effects (so a failure at any point is safe to re-run):
+#   1. process   2. upload + verify archive   3. commit + push git outputs
+#   4. upload + verify state  (manifest last — it is the watermark)
+#
+# Corpora run one after the other (max-parallel: 1) so their git pushes never
+# race; each corpus has its own R2 bucket, token and state.
+#
+# Independent of pipeline.yml and enriched_corpus.yml: never reads or writes
+# data/ or reports/. No VM needs to be alive; only the R2 buckets.
+#
+# All testing lives in test_historical_processor.yml, not here.
 
 name: THIR Historical Processor
 
-permissions:
-  contents: write   # required to git push historical_data/ commits.
-                     # Scoped to this workflow only -- does not change
-                     # the repo-wide default, and does not affect
-                     # pipeline.yml's own permissions.
-
 on:
   schedule:
-    - cron: '0 3 1 1,4,7,10 *'   # 03:00 UTC, 1st of Jan/Apr/Jul/Oct — quarterly
-  workflow_dispatch: {}            # manual trigger always available for ad-hoc runs
+    - cron: '0 3 1 1,4,7,10 *'      # 03:00 UTC, 1st of Jan/Apr/Jul/Oct
+  workflow_dispatch:
+    inputs:
+      corpus:
+        description: 'Which corpus to process'
+        type: choice
+        options: [both, oracle, aws]
+        default: both
+      rebuild_state:
+        description: 'Ignore saved state and rebuild from every raw log (full pass)'
+        type: boolean
+        default: false
+      dry_run:
+        description: 'Process only: no R2 uploads, no git commit, no state upload'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write      # git push of historical_data/ only; scoped to this workflow
+
+concurrency:
+  group: thir-historical-processor
+  cancel-in-progress: false
+
+env:
+  TOOL: tools/00_historical_processor.py
 
 jobs:
-  process-historical:
-    runs-on: ubuntu-latest
-    timeout-minutes: 180
+  # ------------------------------------------------------------------
+  plan:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    outputs:
+      matrix: ${{ steps.m.outputs.matrix }}
+    steps:
+      - id: m
+        shell: bash
+        env:
+          CHOICE: ${{ inputs.corpus }}
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, os
+          corpora = [
+              {"corpus": "aws",    "bucket": "thir-raw-archive",
+               "corpus_name": "aws-2026-03-07-onwards"},
+              {"corpus": "oracle", "bucket": "thirha-raw-archive",
+               "corpus_name": "oracle-2026-06-08-onwards"},
+          ]
+          choice = os.environ.get("CHOICE") or "both"
+          sel = corpora if choice == "both" else [c for c in corpora if c["corpus"] == choice]
+          print("matrix=" + json.dumps({"include": sel}))
+          PY
+
+  # ------------------------------------------------------------------
+  process:
+    name: process (${{ matrix.corpus }})
+    needs: plan
+    runs-on: ubuntu-24.04
+    timeout-minutes: 150
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    defaults:
+      run:
+        shell: bash
+    env:
+      CORPUS: ${{ matrix.corpus }}
+      BUCKET: ${{ matrix.bucket }}
+      CORPUS_NAME: ${{ matrix.corpus_name }}
+      OUT_DIR: historical_data/${{ matrix.corpus }}-corpus
+      ARCHIVE_PREFIX: live-archives/${{ matrix.corpus }}-corpus
+      R2_ACCOUNT_ID: ${{ matrix.corpus == 'aws' && secrets.AWS_R2_ACCOUNT_ID || secrets.ORACLE_R2_ACCOUNT_ID }}
+      R2_ACCESS_KEY: ${{ matrix.corpus == 'aws' && secrets.AWS_R2_ACCESS_KEY || secrets.ORACLE_R2_ACCESS_KEY }}
+      R2_SECRET_KEY: ${{ matrix.corpus == 'aws' && secrets.AWS_R2_SECRET_KEY || secrets.ORACLE_R2_SECRET_KEY }}
+      REBUILD: ${{ inputs.rebuild_state == true }}
+      DRY_RUN: ${{ inputs.dry_run == true }}
 
     steps:
       - name: Checkout
@@ -60,181 +121,226 @@ jobs:
           python-version: '3.11'
 
       - name: Install rclone
-        run: curl https://rclone.org/install.sh | sudo bash
+        run: curl -fsSL https://rclone.org/install.sh | sudo bash
 
-      # ------------------------------------------------------------
-      # rclone config — TWO separate remotes, TWO separate bucket-
-      # scoped tokens. thir-raw-archive and thirha-raw-archive are
-      # not the same account-wide key — each was created as its own
-      # "Object Read & Write -> [single bucket]" token. Do not
-      # collapse these into one [r2] block.
-      # ------------------------------------------------------------
-      - name: Configure rclone for R2 — both corpora
-        env:
-          AWS_R2_ACCOUNT_ID:    ${{ secrets.AWS_R2_ACCOUNT_ID }}
-          AWS_R2_ACCESS_KEY:    ${{ secrets.AWS_R2_ACCESS_KEY }}
-          AWS_R2_SECRET_KEY:    ${{ secrets.AWS_R2_SECRET_KEY }}
-          ORACLE_R2_ACCOUNT_ID: ${{ secrets.ORACLE_R2_ACCOUNT_ID }}
-          ORACLE_R2_ACCESS_KEY: ${{ secrets.ORACLE_R2_ACCESS_KEY }}
-          ORACLE_R2_SECRET_KEY: ${{ secrets.ORACLE_R2_SECRET_KEY }}
+      # One remote per job. Each bucket has its own bucket-scoped token
+      # (AWS_R2_* for thir-raw-archive, ORACLE_R2_* for thirha-raw-archive);
+      # they are not interchangeable.
+      - name: Configure rclone (${{ matrix.corpus }} bucket)
         run: |
           mkdir -p ~/.config/rclone
-          cat > ~/.config/rclone/rclone.conf << EOF
-          [r2-aws]
+          umask 077
+          cat > ~/.config/rclone/rclone.conf <<EOF
+          [r2]
           type = s3
           provider = Cloudflare
-          access_key_id = ${AWS_R2_ACCESS_KEY}
-          secret_access_key = ${AWS_R2_SECRET_KEY}
-          endpoint = https://${AWS_R2_ACCOUNT_ID}.r2.cloudflarestorage.com
-          no_check_bucket = true
-
-          [r2-oracle]
-          type = s3
-          provider = Cloudflare
-          access_key_id = ${ORACLE_R2_ACCESS_KEY}
-          secret_access_key = ${ORACLE_R2_SECRET_KEY}
-          endpoint = https://${ORACLE_R2_ACCOUNT_ID}.r2.cloudflarestorage.com
+          access_key_id = ${R2_ACCESS_KEY}
+          secret_access_key = ${R2_SECRET_KEY}
+          endpoint = https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com
           no_check_bucket = true
           EOF
 
-      # ==============================================================
-      # AWS corpus — thir-raw-archive
-      # ==============================================================
-
-      - name: Check AWS corpus EOF status
-        id: aws_eof
+      - name: List raw logs in R2
         run: |
-          if [ -f "historical_data/aws-corpus/.EOF" ]; then
-            echo "is_eof=true" >> "$GITHUB_OUTPUT"
-            echo "[AWS] EOF marker present — skipping this corpus"
-          else
-            echo "is_eof=false" >> "$GITHUB_OUTPUT"
+          rclone lsf "r2:${BUCKET}/cowrie-json/" --recursive --files-only > /tmp/listing.txt
+          LOGS=$(grep -cE 'cowrie\.json\.[0-9]{4}-[0-9]{2}-[0-9]{2}(\.gz)?$' /tmp/listing.txt || true)
+          echo "log files in r2:${BUCKET}/cowrie-json/ : ${LOGS}"
+          if [ "${LOGS}" -eq 0 ]; then
+            echo "::error::no cowrie.json.YYYY-MM-DD[.gz] files found in r2:${BUCKET}/cowrie-json/"
+            exit 1
           fi
 
-      - name: Download AWS corpus delta
-        if: steps.aws_eof.outputs.is_eof == 'false'
+      - name: Fetch saved state from R2
         run: |
-          mkdir -p /tmp/aws-logs
-          rclone copy r2-aws:thir-raw-archive/cowrie-json/ /tmp/aws-logs/ -v
-          rclone lsf r2-aws:thir-raw-archive/cowrie-json/ --recursive > /tmp/aws_current_listing.txt
-          echo "Files found in thir-raw-archive:"
-          wc -l < /tmp/aws_current_listing.txt
-
-      - name: Run Tool 00 — AWS corpus
-        if: steps.aws_eof.outputs.is_eof == 'false'
-        run: |
-          mkdir -p historical_data/aws-corpus
-          python3 tools/00_historical_processor.py \
-            --log-dir /tmp/aws-logs/ \
-            --output-dir historical_data/aws-corpus/ \
-            --corpus-name aws-2026-03-07-onwards \
-            --current-listing /tmp/aws_current_listing.txt \
-            --check-eof \
-            --full-records-out /tmp/aws_full_records.json \
-            --verbose
-
-      - name: Upload AWS full-record archive to R2
-        if: steps.aws_eof.outputs.is_eof == 'false'
-        run: |
-          if [ -f /tmp/aws_full_records.json ]; then
-            gzip -k /tmp/aws_full_records.json
-            DATE=$(date -u +%Y-%m-%d)
-            FILENAME="historical_ir_cases_full_${DATE}.json.gz"
-            DEST_PATH="thir-raw-archive/live-archives/aws-corpus"
-
-            rclone copyto /tmp/aws_full_records.json.gz \
-              "r2-aws:${DEST_PATH}/${FILENAME}" \
-              --retries 5 \
-              --low-level-retries 10
-
-            # Verify the object actually landed — rclone's exit code alone
-            # is not sufficient proof; confirm it by re-listing the bucket.
-            if rclone lsf "r2-aws:${DEST_PATH}" | grep -Fxq "$FILENAME"; then
-              echo "Verified AWS full-record archive uploaded: ${FILENAME}"
-            else
-              echo "ERROR: ${FILENAME} not found in r2-aws:${DEST_PATH} after upload — failing this step"
-              exit 1
-            fi
+          mkdir -p /tmp/state
+          if [ "${REBUILD}" = "true" ]; then
+            echo "rebuild_state requested — ignoring saved state, every raw log will be processed"
           else
-            echo "No full-records file produced this run (EOF reached during this run) — nothing to upload"
+            rclone copy "r2:${BUCKET}/${ARCHIVE_PREFIX}/state/" /tmp/state/ --transfers 8 --retries 5 \
+              || echo "::warning::could not read saved state — treating as a first run (full pass)"
           fi
+          echo "state files: $(find /tmp/state -type f | wc -l)"
 
-      # ==============================================================
-      # Oracle corpus — thirha-raw-archive
-      # ==============================================================
-
-      - name: Check Oracle corpus EOF status
-        id: oracle_eof
+      # Decide which raw logs are needed: new files + the provisional newest
+      # file of the previous run + one file of context before it.
+      - name: Plan which raw logs to download
+        id: plan
         run: |
-          if [ -f "historical_data/oracle-corpus/.EOF" ]; then
-            echo "is_eof=true" >> "$GITHUB_OUTPUT"
-            echo "[Oracle] EOF marker present — skipping this corpus"
-          else
-            echo "is_eof=false" >> "$GITHUB_OUTPUT"
+          python3 - <<'PY'
+          import json, os, re
+          pat = re.compile(r"cowrie\.json\.(\d{4}-\d{2}-\d{2})(\.gz)?$")
+          by = {}
+          for line in open("/tmp/listing.txt"):
+              line = line.strip()
+              base = line.rsplit("/", 1)[-1]
+              if line and pat.search(base):
+                  by[base] = line
+          names = sorted(by, key=lambda n: pat.search(n).group(1))
+          manifest = {}
+          mp = "/tmp/state/manifest.json"
+          if os.environ.get("REBUILD") != "true" and os.path.exists(mp):
+              manifest = json.load(open(mp))["files"]
+          new = [n for n in names if n not in manifest]
+          prov = [n for n in names if n in manifest and not manifest[n].get("final")]
+          out = os.environ["GITHUB_OUTPUT"]
+          if not new:
+              needed = []
+          else:
+              p = sorted(prov + new)
+              i = names.index(p[0])
+              needed = ([names[i - 1]] if i > 0 else []) + p
+          with open("/tmp/needed.txt", "w") as f:
+              f.write("".join(by[n] + "\n" for n in needed))
+          with open(out, "a") as f:
+              f.write(f"has_new={'true' if new else 'false'}\n")
+              f.write(f"new_count={len(new)}\n")
+              f.write(f"needed_count={len(needed)}\n")
+              f.write(f"total_count={len(names)}\n")
+          print(f"in bucket: {len(names)}  already in state: {len(manifest)}  "
+                f"new: {len(new)}  provisional: {len(prov)}  to download: {len(needed)}")
+          PY
+
+      - name: Download needed raw logs
+        if: steps.plan.outputs.has_new == 'true'
+        run: |
+          mkdir -p /tmp/logs
+          rclone copy "r2:${BUCKET}/cowrie-json/" /tmp/logs/ --files-from /tmp/needed.txt \
+            --transfers 8 --retries 5 --stats 30s -v
+          GOT=$(find /tmp/logs -type f | wc -l)
+          WANT=$(wc -l < /tmp/needed.txt)
+          echo "downloaded ${GOT} of ${WANT} files"
+          if [ "${GOT}" -ne "${WANT}" ]; then
+            echo "::error::download incomplete (${GOT}/${WANT})"
+            exit 1
           fi
+          df -h /tmp | tail -1
 
-      - name: Download Oracle corpus delta
-        if: steps.oracle_eof.outputs.is_eof == 'false'
+      - name: Run Tool 00
+        id: tool
+        if: steps.plan.outputs.has_new == 'true'
+        timeout-minutes: 120
         run: |
-          mkdir -p /tmp/oracle-logs
-          rclone copy r2-oracle:thirha-raw-archive/cowrie-json/ /tmp/oracle-logs/ -v
-          rclone lsf r2-oracle:thirha-raw-archive/cowrie-json/ --recursive > /tmp/oracle_current_listing.txt
-          echo "Files found in thirha-raw-archive:"
-          wc -l < /tmp/oracle_current_listing.txt
+          mkdir -p "${OUT_DIR}"
+          python3 "${TOOL}" \
+            --log-dir /tmp/logs/ \
+            --output-dir "${OUT_DIR}/" \
+            --corpus-name "${CORPUS_NAME}" \
+            --current-listing /tmp/listing.txt \
+            --full-records-out "/tmp/${CORPUS}_full_records.json" \
+            --incremental --state-dir /tmp/state \
+            --spill-dir /tmp/spill \
+            --verbose 2>&1 | tee /tmp/tool00.log
+          echo "--- disk after processing"
+          df -h /tmp | tail -1
+          for f in corpus_highlights.json historical_stats.json corpus_metadata.json; do
+            test -s "${OUT_DIR}/${f}" || { echo "::error::missing output ${f}"; exit 1; }
+          done
+          test -s "/tmp/${CORPUS}_full_records.json" \
+            || { echo "::error::missing full-record archive"; exit 1; }
 
-      - name: Run Tool 00 — Oracle corpus
-        if: steps.oracle_eof.outputs.is_eof == 'false'
+      # Cumulative archive: same filename pattern and content layout as before.
+      - name: Upload full-record archive to R2
+        if: steps.plan.outputs.has_new == 'true' && inputs.dry_run != true
         run: |
-          mkdir -p historical_data/oracle-corpus
-          python3 tools/00_historical_processor.py \
-            --log-dir /tmp/oracle-logs/ \
-            --output-dir historical_data/oracle-corpus/ \
-            --corpus-name oracle-2026-06-08-onwards \
-            --current-listing /tmp/oracle_current_listing.txt \
-            --check-eof \
-            --full-records-out /tmp/oracle_full_records.json \
-            --verbose
-
-      - name: Upload Oracle full-record archive to R2
-        if: steps.oracle_eof.outputs.is_eof == 'false'
-        run: |
-          if [ -f /tmp/oracle_full_records.json ]; then
-            gzip -k /tmp/oracle_full_records.json
-            DATE=$(date -u +%Y-%m-%d)
-            FILENAME="historical_ir_cases_full_${DATE}.json.gz"
-            DEST_PATH="thirha-raw-archive/live-archives/oracle-corpus"
-
-            rclone copyto /tmp/oracle_full_records.json.gz \
-              "r2-oracle:${DEST_PATH}/${FILENAME}" \
-              --retries 5 \
-              --low-level-retries 10
-
-            # Verify the object actually landed — rclone's exit code alone
-            # is not sufficient proof; confirm it by re-listing the bucket.
-            if rclone lsf "r2-oracle:${DEST_PATH}" | grep -Fxq "$FILENAME"; then
-              echo "Verified Oracle full-record archive uploaded: ${FILENAME}"
-            else
-              echo "ERROR: ${FILENAME} not found in r2-oracle:${DEST_PATH} after upload — failing this step"
-              exit 1
-            fi
-          else
-            echo "No full-records file produced this run (EOF reached during this run) — nothing to upload"
+          SRC="/tmp/${CORPUS}_full_records.json"
+          gzip -f "${SRC}"
+          NAME="historical_ir_cases_full_$(date -u +%Y-%m-%d).json.gz"
+          DEST="${BUCKET}/${ARCHIVE_PREFIX}"
+          rclone copyto "${SRC}.gz" "r2:${DEST}/${NAME}" --retries 5 --low-level-retries 10
+          # rclone's exit code alone is not proof — confirm name and size remotely
+          REMOTE_SIZE=$(rclone lsf "r2:${DEST}" --format "ps" --separator "|" | grep -F "${NAME}|" | cut -d'|' -f2 || true)
+          LOCAL_SIZE=$(stat -c %s "${SRC}.gz")
+          if [ -z "${REMOTE_SIZE}" ] || [ "${REMOTE_SIZE}" != "${LOCAL_SIZE}" ]; then
+            echo "::error::archive verification failed (remote='${REMOTE_SIZE}' local='${LOCAL_SIZE}')"
+            exit 1
           fi
+          echo "verified: ${NAME} (${LOCAL_SIZE} bytes)"
 
-      # ==============================================================
-      # Commit — historical_data/ index files + corpus_metadata.json +
-      # .EOF markers (if written this run). Full records never reach
-      # git; they go to R2 only, per the index design.
-      # ==============================================================
-
-      - name: Commit historical_data/
+      - name: Commit and push historical_data
+        if: steps.plan.outputs.has_new == 'true' && inputs.dry_run != true
         run: |
           git config user.name  "THIR Historical Processor"
           git config user.email "actions@github.com"
-          git add historical_data/
+          git add "${OUT_DIR}"
           if git diff --cached --quiet; then
-            echo "No changes to historical_data/ — nothing to commit"
-          else
-            git commit -m "Historical processor run — $(date -u +%Y-%m-%d)"
-            git push
+            echo "no changes to ${OUT_DIR} — nothing to commit"
+            exit 0
           fi
+          git commit -m "Historical processor (${CORPUS}) — $(date -u +%Y-%m-%d)"
+          # Other workflows push to this branch too: rebase and retry.
+          for i in 1 2 3 4; do
+            git fetch --depth=50 origin "${GITHUB_REF_NAME}"
+            if git rebase "origin/${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}"; then
+              exit 0
+            fi
+            git rebase --abort 2>/dev/null || true
+            echo "push attempt ${i} failed — retrying"
+            sleep $((i * 15))
+          done
+          echo "::error::could not push after 4 attempts"
+          exit 1
+
+      # State goes last, manifest last of all: it is the watermark, so any
+      # earlier failure just means the next run redoes the same files.
+      - name: Upload state to R2
+        if: steps.plan.outputs.has_new == 'true' && inputs.dry_run != true
+        run: |
+          DEST="r2:${BUCKET}/${ARCHIVE_PREFIX}/state/"
+          rclone copy /tmp/state/ "${DEST}" --exclude "manifest.json" --exclude "spill/**" \
+            --exclude "*.tmp" --transfers 8 --retries 5
+          rclone copy /tmp/state/manifest.json "${DEST}" --retries 5
+          LOCAL=$(find /tmp/state -type f ! -path '/tmp/state/spill/*' ! -name '*.tmp' | wc -l)
+          REMOTE=$(rclone lsf "${DEST}" --recursive --files-only | wc -l)
+          echo "state files: local=${LOCAL} remote=${REMOTE}"
+          if [ "${REMOTE}" -lt "${LOCAL}" ]; then
+            echo "::error::state upload incomplete"
+            exit 1
+          fi
+
+      - name: Job summary
+        if: always()
+        run: |
+          {
+            echo "### Historical processor — ${CORPUS}"
+            echo
+            echo "| | |"
+            echo "|---|---|"
+            echo "| logs in bucket | ${{ steps.plan.outputs.total_count }} |"
+            echo "| new logs | ${{ steps.plan.outputs.new_count }} |"
+            echo "| downloaded (new + provisional + context) | ${{ steps.plan.outputs.needed_count }} |"
+            echo "| rebuild_state | ${REBUILD} |"
+            echo "| dry_run | ${DRY_RUN} |"
+            if [ -f "${OUT_DIR}/corpus_metadata.json" ] && [ "${{ steps.plan.outputs.has_new }}" = "true" ]; then
+              python3 - <<'PY'
+          import json, os
+          d = os.environ["OUT_DIR"]
+          m = json.load(open(f"{d}/corpus_metadata.json"))
+          h = json.load(open(f"{d}/corpus_highlights.json"))
+          print(f"| sessions (whole corpus) | {m['sessions_extracted']} |")
+          print(f"| unique IPs | {m['unique_ips']} |")
+          print(f"| date range | {m['date_range']['start']} → {m['date_range']['end']} |")
+          print(f"| command clusters | {h['command_clusters']['total_clusters']} |")
+          print(f"| anomaly days | {len(m['anomaly_days'])} |")
+          PY
+            else
+              echo "| result | nothing to process |"
+            fi
+            if [ -f /tmp/tool00.log ]; then
+              echo
+              echo "<details><summary>Memory</summary>"
+              echo
+              echo '```'
+              grep -E "MEM " /tmp/tool00.log || true
+              echo '```'
+              echo "</details>"
+            fi
+          } >> "${GITHUB_STEP_SUMMARY}"
+
+      - name: Keep Tool 00 log
+        if: always() && steps.plan.outputs.has_new == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: tool00-log-${{ matrix.corpus }}
+          path: /tmp/tool00.log
+          retention-days: 14
+          if-no-files-found: ignore
