@@ -38,10 +38,13 @@ Handles the full tiered retention lifecycle for SOC reports:
               credit-expiry workaround, removed post-Oracle-migration --
               no time limit applies now)
 
-  YEARLY  → Triggered from the end of MONTHLY above, every run -- but
-              only actually executes on April 1 UTC (fixed fiscal-year
-              boundary, no jurisdiction-specific significance, just a
-              consistent annual default). Rolls up whatever monthly
+  YEARLY  → Triggered from MONTHLY above whenever the March monthly
+              report is written (or is found already present) -- i.e. as
+              soon as the fiscal year's last month exists, whatever the
+              calendar date (the monthly rollup itself can be deferred
+              past April 1 until the last ISO week of March is rolled
+              up). Fiscal-year boundary is fixed, no jurisdiction-specific
+              significance, just a consistent annual default. Rolls up whatever monthly
               reports fall in the fiscal year that just ended (previous
               April 1 → March 31), even if fewer than 12 exist --
               labeled honestly as an incomplete year rather than
@@ -514,8 +517,9 @@ def rollup_monthly(verbose=False):
     NOT age-pruned. The original 6-month age-based prune (_prune_old_monthlies,
     kept below but no longer called) was an AWS free-tier credit-expiry
     workaround with no equivalent constraint on Oracle Cloud's Always Free
-    tier. In its place: on April 1 each year (fixed fiscal-year boundary,
-    no special significance beyond consistency), all monthly reports
+    tier. In its place: once each year, when the March monthly report is
+    produced (fixed fiscal-year boundary, no special significance beyond
+    consistency), all monthly reports
     falling in the fiscal year that just ended are rolled into one yearly
     report and deleted -- same consumption-based pattern already used at
     every other tier (daily→weekly→monthly), extended one level up rather
@@ -538,6 +542,8 @@ def rollup_monthly(verbose=False):
 
     if os.path.exists(dest):
         log(f"Monthly report {dest} already exists — skipping", "WARN", True)
+        if last_month.month == 3:
+            rollup_yearly(verbose=verbose, fy_start_year=last_month.year - 1)
         return "already_exists"
 
     # Collect weekly files that fall within the previous month
@@ -651,8 +657,10 @@ def rollup_monthly(verbose=False):
         except Exception as e:
             log(f"Could not delete {fpath}: {e}", "WARN", True)
 
-    # Fiscal-year (April-March) yearly rollup -- checked every monthly run;
-    # only actually fires when today is April 1 UTC. This replaces the old
+    # Fiscal-year (April-March) yearly rollup -- driven by its prerequisite
+    # (the March monthly report just written), NOT by the calendar date: the
+    # monthly rollup is deferred until the last ISO week of March is rolled
+    # up, which on most years is after April 1. This replaces the old
     # age-based 6-month prune (see docstring above and
     # _prune_old_monthlies()'s own docstring for why that was removed).
     # April-March is a fixed default with no special significance beyond
@@ -660,9 +668,10 @@ def rollup_monthly(verbose=False):
     # particular jurisdiction's actual fiscal calendar. See
     # rollup_yearly()'s own docstring for gap-tolerance behaviour: THIR's
     # first fiscal year (2025-04 to 2026-03) will only have ONE real month
-    # of data (2026-03, THIR's actual go-live) when it closes on 2026-04-01,
-    # and that is rolled up and labeled as incomplete rather than withheld.
-    rollup_yearly(verbose=verbose)
+    # of data (2026-03, THIR's actual go-live) when it closes, and that is
+    # rolled up and labeled as incomplete rather than withheld.
+    if last_month.month == 3:
+        rollup_yearly(verbose=verbose, fy_start_year=last_month.year - 1)
 
     log(f"Monthly rollup complete — {len(weekly_files)} weekly reports → {dest}", "INFO", True)
     return "success"
@@ -670,18 +679,24 @@ def rollup_monthly(verbose=False):
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Yearly rollup — consumption-based, triggered by FIXED FISCAL CALENDAR
-# (April 1), not monthly report count. Runs automatically at the end of
-# rollup_monthly() above; only actually produces a report on April 1 UTC.
-# No separate cron/sentinel needed -- monthly already runs every 1st of
-# month, so checking today's date there is sufficient.
+# (April 1 - March 31), not monthly report count. Runs automatically from
+# rollup_monthly() above right after the March monthly report is written
+# (or found already present), passing the fiscal year explicitly. No
+# separate cron/sentinel needed. Idempotent: skips if the yearly exists.
+# Standalone call with no fy_start_year: only acts during April 1-7 UTC,
+# for the fiscal year that just ended. One-off catch-up for an older
+# year: rollup_yearly(verbose=True, fy_start_year=2025)  # FY2025-26
 # ─────────────────────────────────────────────────────────────────────────────
 
-def rollup_yearly(verbose=False):
+def rollup_yearly(verbose=False, fy_start_year=None):
     """
     Fiscal-year (April-March) consumption-based yearly rollup. Triggered
-    from rollup_monthly() every run; only actually produces a report when
-    today is April 1 UTC AND at least one monthly report exists for the
-    fiscal year that just ended (previous April 1 -> March 31).
+    from rollup_monthly() when the March monthly is written/found, with
+    fy_start_year = the year the fiscal year began (March 2027 closes
+    FY2026-27, so fy_start_year=2026). Produces a report only if at least
+    one monthly report exists in that fiscal year (April 1 -> March 31).
+    With fy_start_year=None (standalone call) it only acts during April
+    1-7 UTC, for the fiscal year that just ended.
 
     Fixed April-March was chosen as the default with no special
     significance attached beyond "a fixed, predictable annual boundary" --
@@ -703,14 +718,16 @@ def rollup_yearly(verbose=False):
     """
     today = datetime.now(timezone.utc).date()
 
-    if today.month != 4 or today.day != 1:
-        log(f"Yearly rollup: today ({today}) is not April 1 UTC — not due", "INFO", verbose)
-        return
+    if fy_start_year is None:
+        # standalone/manual call: only inside the first week of April
+        if today.month != 4 or today.day > 7:
+            log(f"Yearly rollup: today ({today}) is outside April 1-7 — not due", "INFO", verbose)
+            return
+        fy_start_year = today.year - 1
 
-    # Fiscal year that just ended: previous April 1 -> March 31 (today)
-    fy_end_year   = today.year - 1
-    fy_start      = date(fy_end_year, 4, 1)
-    fy_end        = date(fy_end_year + 1, 3, 31)
+    # Fiscal year being closed: April 1 of fy_start_year -> March 31 of the next year
+    fy_start      = date(fy_start_year, 4, 1)
+    fy_end        = date(fy_start_year + 1, 3, 31)
     fy_label      = f"FY{fy_start.year}-{str(fy_end.year)[2:]}"   # e.g. "FY2026-27"
 
     dest = os.path.join(REPORTS_YEARLY, f"soc_{fy_label}.md")
