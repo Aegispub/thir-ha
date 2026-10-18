@@ -1,52 +1,52 @@
 {
-  "generated_at": "2026-10-18T04:53:31.846323+00:00",
-  "total_campaigns": 200,
-  "active_campaigns": 80,
-  "ended_campaigns": 120,
-  "new_this_run": 0,
+  "generated_at": "2026-10-18T16:02:31.342479+00:00",
+  "total_campaigns": 202,
+  "active_campaigns": 81,
+  "ended_campaigns": 121,
+  "new_this_run": 2,
   "reactivated_this_run": 0,
-  "largest_campaign_ip_count": 1575,
+  "largest_campaign_ip_count": 1592,
   "largest_campaign_name": "mdrfckr SSH Key Injection",
   "top_ttp_ids": [
     {
       "ttp": "T1105",
-      "count": 88
+      "count": 89
     },
     {
       "ttp": "T1082",
-      "count": 82
+      "count": 83
     },
     {
       "ttp": "T1140",
-      "count": 78
+      "count": 79
     },
     {
       "ttp": "T1592",
-      "count": 65
+      "count": 66
     },
     {
       "ttp": "T1070",
-      "count": 58
+      "count": 59
     },
     {
       "ttp": "T1083",
-      "count": 57
+      "count": 58
     },
     {
       "ttp": "T1078",
-      "count": 55
+      "count": 56
     },
     {
       "ttp": "T1021.004",
-      "count": 48
+      "count": 49
     },
     {
       "ttp": "T1547",
-      "count": 45
+      "count": 46
     },
     {
       "ttp": "T1489",
-      "count": 26
+      "count": 27
     }
   ],
   "note": "session_count accumulation uses an IP-set-growth proxy, not individual session_id tracking, because command_clusters.json does not enumerate session IDs per cluster (unlike ssh_fingerprints.json). See tool docstring."
