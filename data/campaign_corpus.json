@@ -1,7 +1,7 @@
 {
   "98af0db988d5971c": {
     "sequence_hash": "98af0db988d5971c",
-    "cluster_id_last_seen_as": "CLU-014",
+    "cluster_id_last_seen_as": "CLU-005",
     "is_campaign": true,
     "campaign_name": "mdrfckr SSH Key Injection",
     "campaign_severity": "HIGH",
@@ -1816,7 +1816,7 @@
     ],
     "unique_ip_count_ever": 1769,
     "first_seen": "2026-08-30T03:20:37.640961+00:00",
-    "last_seen": "2026-10-24T16:09:06.472385+00:00",
+    "last_seen": "2026-10-25T05:02:46.133185+00:00",
     "status": "active"
   },
   "6fa4c8ac58e7a1d9": {
@@ -2519,7 +2519,7 @@
   },
   "486c3a8fd7f1236c": {
     "sequence_hash": "486c3a8fd7f1236c",
-    "cluster_id_last_seen_as": "CLU-006",
+    "cluster_id_last_seen_as": "CLU-003",
     "is_campaign": false,
     "campaign_name": null,
     "campaign_severity": null,
@@ -2542,12 +2542,12 @@
     ],
     "unique_ip_count_ever": 11,
     "first_seen": "2026-08-30T14:51:51.429778+00:00",
-    "last_seen": "2026-10-24T16:09:06.472385+00:00",
+    "last_seen": "2026-10-25T05:02:46.133185+00:00",
     "status": "active"
   },
   "e8182948ac6f4b19": {
     "sequence_hash": "e8182948ac6f4b19",
-    "cluster_id_last_seen_as": "CLU-009",
+    "cluster_id_last_seen_as": "CLU-004",
     "is_campaign": false,
     "campaign_name": null,
     "campaign_severity": null,
@@ -2570,7 +2570,7 @@
     ],
     "unique_ip_count_ever": 11,
     "first_seen": "2026-08-30T14:51:51.429778+00:00",
-    "last_seen": "2026-10-24T16:09:06.472385+00:00",
+    "last_seen": "2026-10-25T05:02:46.133185+00:00",
     "status": "active"
   },
   "c7d3b8ed2b854825": {
@@ -2781,7 +2781,7 @@
   },
   "876deb10d4cf5b5c": {
     "sequence_hash": "876deb10d4cf5b5c",
-    "cluster_id_last_seen_as": "CLU-023",
+    "cluster_id_last_seen_as": "CLU-006",
     "is_campaign": false,
     "campaign_name": null,
     "campaign_severity": null,
@@ -2838,7 +2838,7 @@
     ],
     "unique_ip_count_ever": 40,
     "first_seen": "2026-08-30T19:18:44.464598+00:00",
-    "last_seen": "2026-10-24T16:09:06.472385+00:00",
+    "last_seen": "2026-10-25T05:02:46.133185+00:00",
     "status": "active"
   },
   "ce810d21e5e52f01": {
@@ -2917,7 +2917,7 @@
   },
   "7ab552f01de999cb": {
     "sequence_hash": "7ab552f01de999cb",
-    "cluster_id_last_seen_as": "CLU-016",
+    "cluster_id_last_seen_as": "CLU-007",
     "is_campaign": false,
     "campaign_name": null,
     "campaign_severity": null,
@@ -3050,7 +3050,7 @@
     ],
     "unique_ip_count_ever": 116,
     "first_seen": "2026-08-30T22:43:41.693829+00:00",
-    "last_seen": "2026-10-23T17:20:31.503175+00:00",
+    "last_seen": "2026-10-25T05:02:46.133185+00:00",
     "status": "active"
   },
   "c32b4937ce8564ea": {
@@ -9373,7 +9373,7 @@
     "unique_ip_count_ever": 2,
     "first_seen": "2026-10-09T18:26:58.992899+00:00",
     "last_seen": "2026-10-10T17:24:53.762231+00:00",
-    "status": "active"
+    "status": "ended"
   },
   "c8c889df14978ab1": {
     "sequence_hash": "c8c889df14978ab1",
@@ -9550,7 +9550,7 @@
     "unique_ip_count_ever": 1,
     "first_seen": "2026-10-10T17:24:53.762231+00:00",
     "last_seen": "2026-10-10T17:24:53.762231+00:00",
-    "status": "active"
+    "status": "ended"
   },
   "30701b9932feb09a": {
     "sequence_hash": "30701b9932feb09a",
@@ -11038,6 +11038,52 @@
     "unique_ip_count_ever": 1,
     "first_seen": "2026-10-24T16:09:06.472385+00:00",
     "last_seen": "2026-10-24T16:09:06.472385+00:00",
+    "status": "active"
+  },
+  "12f0b4e78644891f": {
+    "sequence_hash": "12f0b4e78644891f",
+    "cluster_id_last_seen_as": "CLU-001",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [
+      {
+        "id": "T1140",
+        "name": "Deobfuscate/Decode Files"
+      }
+    ],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "2.57.122.150"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-10-25T05:02:46.133185+00:00",
+    "last_seen": "2026-10-25T05:02:46.133185+00:00",
+    "status": "active"
+  },
+  "e05d3942ba53f040": {
+    "sequence_hash": "e05d3942ba53f040",
+    "cluster_id_last_seen_as": "CLU-002",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [
+      {
+        "id": "T1140",
+        "name": "Deobfuscate/Decode Files"
+      }
+    ],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "2.57.122.150"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-10-25T05:02:46.133185+00:00",
+    "last_seen": "2026-10-25T05:02:46.133185+00:00",
     "status": "active"
   }
 }
