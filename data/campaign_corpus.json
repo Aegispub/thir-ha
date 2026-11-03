@@ -3588,7 +3588,7 @@
   },
   "c32b4937ce8564ea": {
     "sequence_hash": "c32b4937ce8564ea",
-    "cluster_id_last_seen_as": "CLU-107",
+    "cluster_id_last_seen_as": "CLU-019",
     "is_campaign": false,
     "campaign_name": null,
     "campaign_severity": null,
@@ -3600,7 +3600,7 @@
         "name": "Remote Services: SSH"
       }
     ],
-    "session_count": 202,
+    "session_count": 203,
     "unique_ips_ever": [
       "101.126.11.137",
       "101.126.155.86",
@@ -3739,6 +3739,7 @@
       "222.219.131.47",
       "223.93.164.218",
       "27.128.240.75",
+      "27.17.30.150",
       "36.133.214.135",
       "36.137.180.219",
       "36.137.249.148",
@@ -3758,9 +3759,9 @@
       "85.198.19.239",
       "95.38.177.52"
     ],
-    "unique_ip_count_ever": 155,
+    "unique_ip_count_ever": 156,
     "first_seen": "2026-08-31T05:31:50.244303+00:00",
-    "last_seen": "2026-11-02T21:51:10.352128+00:00",
+    "last_seen": "2026-11-03T07:04:20.227600+00:00",
     "status": "active"
   },
   "13eec2df4cfe69c6": {
@@ -4217,7 +4218,7 @@
   },
   "c74cbeb6eac6dc54": {
     "sequence_hash": "c74cbeb6eac6dc54",
-    "cluster_id_last_seen_as": "CLU-061",
+    "cluster_id_last_seen_as": "CLU-014",
     "is_campaign": false,
     "campaign_name": null,
     "campaign_severity": null,
@@ -4237,7 +4238,7 @@
         "name": "Gather Victim Host Info"
       }
     ],
-    "session_count": 27,
+    "session_count": 28,
     "unique_ips_ever": [
       "103.170.215.118",
       "109.63.177.113",
@@ -4255,6 +4256,7 @@
       "220.76.68.23",
       "220.85.210.200",
       "221.160.80.33",
+      "223.134.89.104",
       "31.208.174.22",
       "37.148.102.18",
       "5.187.97.40",
@@ -4267,9 +4269,9 @@
       "87.68.46.172",
       "88.201.246.243"
     ],
-    "unique_ip_count_ever": 27,
+    "unique_ip_count_ever": 28,
     "first_seen": "2026-09-01T11:37:18.220420+00:00",
-    "last_seen": "2026-10-26T18:46:28.751412+00:00",
+    "last_seen": "2026-11-03T07:04:20.227600+00:00",
     "status": "active"
   },
   "5f4996571ca1651f": {
@@ -8522,21 +8524,22 @@
   },
   "e596899f114b5162": {
     "sequence_hash": "e596899f114b5162",
-    "cluster_id_last_seen_as": "CLU-005",
+    "cluster_id_last_seen_as": "CLU-018",
     "is_campaign": false,
     "campaign_name": null,
     "campaign_severity": null,
     "campaign_description": null,
     "matched_campaigns": [],
     "ttps": [],
-    "session_count": 1,
+    "session_count": 3,
     "unique_ips_ever": [
+      "181.214.136.86",
       "213.111.149.80"
     ],
-    "unique_ip_count_ever": 1,
+    "unique_ip_count_ever": 2,
     "first_seen": "2026-09-29T01:55:43.172266+00:00",
-    "last_seen": "2026-09-29T01:55:43.172266+00:00",
-    "status": "ended"
+    "last_seen": "2026-11-03T07:04:20.227600+00:00",
+    "status": "active"
   },
   "35a8c4bb0f782a86": {
     "sequence_hash": "35a8c4bb0f782a86",
@@ -11054,7 +11057,7 @@
   },
   "c18432ff9e42b126": {
     "sequence_hash": "c18432ff9e42b126",
-    "cluster_id_last_seen_as": "CLU-008",
+    "cluster_id_last_seen_as": "CLU-016",
     "is_campaign": false,
     "campaign_name": null,
     "campaign_severity": null,
@@ -11066,13 +11069,14 @@
         "name": "System Information Discovery"
       }
     ],
-    "session_count": 2,
+    "session_count": 3,
     "unique_ips_ever": [
-      "64.34.94.207"
+      "64.34.94.207",
+      "72.46.87.247"
     ],
-    "unique_ip_count_ever": 1,
+    "unique_ip_count_ever": 2,
     "first_seen": "2026-10-20T17:24:40.271639+00:00",
-    "last_seen": "2026-10-20T17:24:40.271639+00:00",
+    "last_seen": "2026-11-03T07:04:20.227600+00:00",
     "status": "active"
   },
   "d4025fd01ca01686": {
@@ -24765,6 +24769,355 @@
     "unique_ip_count_ever": 1,
     "first_seen": "2026-11-02T21:51:10.352128+00:00",
     "last_seen": "2026-11-02T21:51:10.352128+00:00",
+    "status": "active"
+  },
+  "ec4ae19d67d61e20": {
+    "sequence_hash": "ec4ae19d67d61e20",
+    "cluster_id_last_seen_as": "CLU-001",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [
+      {
+        "id": "T1140",
+        "name": "Deobfuscate/Decode Files"
+      }
+    ],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "80.94.92.179"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-03T07:04:20.227600+00:00",
+    "last_seen": "2026-11-03T07:04:20.227600+00:00",
+    "status": "active"
+  },
+  "eaf59623ea8106b2": {
+    "sequence_hash": "eaf59623ea8106b2",
+    "cluster_id_last_seen_as": "CLU-002",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [
+      {
+        "id": "T1140",
+        "name": "Deobfuscate/Decode Files"
+      }
+    ],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "80.94.92.179"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-03T07:04:20.227600+00:00",
+    "last_seen": "2026-11-03T07:04:20.227600+00:00",
+    "status": "active"
+  },
+  "f1d77fba24b5811e": {
+    "sequence_hash": "f1d77fba24b5811e",
+    "cluster_id_last_seen_as": "CLU-003",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [
+      {
+        "id": "T1140",
+        "name": "Deobfuscate/Decode Files"
+      }
+    ],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "80.94.92.179"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-03T07:04:20.227600+00:00",
+    "last_seen": "2026-11-03T07:04:20.227600+00:00",
+    "status": "active"
+  },
+  "6e1d8eabca6a84c4": {
+    "sequence_hash": "6e1d8eabca6a84c4",
+    "cluster_id_last_seen_as": "CLU-004",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [
+      {
+        "id": "T1140",
+        "name": "Deobfuscate/Decode Files"
+      }
+    ],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "80.94.92.179"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-03T07:04:20.227600+00:00",
+    "last_seen": "2026-11-03T07:04:20.227600+00:00",
+    "status": "active"
+  },
+  "031bb621defba821": {
+    "sequence_hash": "031bb621defba821",
+    "cluster_id_last_seen_as": "CLU-005",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [
+      {
+        "id": "T1140",
+        "name": "Deobfuscate/Decode Files"
+      }
+    ],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "80.94.92.179"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-03T07:04:20.227600+00:00",
+    "last_seen": "2026-11-03T07:04:20.227600+00:00",
+    "status": "active"
+  },
+  "9f2905eb9ca1a3db": {
+    "sequence_hash": "9f2905eb9ca1a3db",
+    "cluster_id_last_seen_as": "CLU-006",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [
+      {
+        "id": "T1140",
+        "name": "Deobfuscate/Decode Files"
+      }
+    ],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "80.94.92.179"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-03T07:04:20.227600+00:00",
+    "last_seen": "2026-11-03T07:04:20.227600+00:00",
+    "status": "active"
+  },
+  "e1edf8cb67f3e79c": {
+    "sequence_hash": "e1edf8cb67f3e79c",
+    "cluster_id_last_seen_as": "CLU-007",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [
+      {
+        "id": "T1140",
+        "name": "Deobfuscate/Decode Files"
+      }
+    ],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "80.94.92.179"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-03T07:04:20.227600+00:00",
+    "last_seen": "2026-11-03T07:04:20.227600+00:00",
+    "status": "active"
+  },
+  "23c6dc66904dcdda": {
+    "sequence_hash": "23c6dc66904dcdda",
+    "cluster_id_last_seen_as": "CLU-008",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [
+      {
+        "id": "T1140",
+        "name": "Deobfuscate/Decode Files"
+      }
+    ],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "80.94.92.179"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-03T07:04:20.227600+00:00",
+    "last_seen": "2026-11-03T07:04:20.227600+00:00",
+    "status": "active"
+  },
+  "76b2360cacbaba23": {
+    "sequence_hash": "76b2360cacbaba23",
+    "cluster_id_last_seen_as": "CLU-009",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [
+      {
+        "id": "T1140",
+        "name": "Deobfuscate/Decode Files"
+      }
+    ],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "80.94.92.179"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-03T07:04:20.227600+00:00",
+    "last_seen": "2026-11-03T07:04:20.227600+00:00",
+    "status": "active"
+  },
+  "eea982ead2b5f0a4": {
+    "sequence_hash": "eea982ead2b5f0a4",
+    "cluster_id_last_seen_as": "CLU-010",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [
+      {
+        "id": "T1140",
+        "name": "Deobfuscate/Decode Files"
+      }
+    ],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "80.94.92.179"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-03T07:04:20.227600+00:00",
+    "last_seen": "2026-11-03T07:04:20.227600+00:00",
+    "status": "active"
+  },
+  "ada4070b609d0646": {
+    "sequence_hash": "ada4070b609d0646",
+    "cluster_id_last_seen_as": "CLU-011",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [
+      {
+        "id": "T1140",
+        "name": "Deobfuscate/Decode Files"
+      }
+    ],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "80.94.92.179"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-03T07:04:20.227600+00:00",
+    "last_seen": "2026-11-03T07:04:20.227600+00:00",
+    "status": "active"
+  },
+  "6361a040853e1745": {
+    "sequence_hash": "6361a040853e1745",
+    "cluster_id_last_seen_as": "CLU-012",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [
+      {
+        "id": "T1083",
+        "name": "File & Directory Discovery"
+      }
+    ],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "181.214.136.86"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-03T07:04:20.227600+00:00",
+    "last_seen": "2026-11-03T07:04:20.227600+00:00",
+    "status": "active"
+  },
+  "49742c452073bd8d": {
+    "sequence_hash": "49742c452073bd8d",
+    "cluster_id_last_seen_as": "CLU-013",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [
+      {
+        "id": "T1083",
+        "name": "File & Directory Discovery"
+      }
+    ],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "181.214.136.86"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-03T07:04:20.227600+00:00",
+    "last_seen": "2026-11-03T07:04:20.227600+00:00",
+    "status": "active"
+  },
+  "f902bb96ae17fc81": {
+    "sequence_hash": "f902bb96ae17fc81",
+    "cluster_id_last_seen_as": "CLU-015",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [
+      {
+        "id": "T1082",
+        "name": "System Information Discovery"
+      },
+      {
+        "id": "T1592",
+        "name": "Gather Victim Host Info"
+      }
+    ],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "181.214.136.86"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-03T07:04:20.227600+00:00",
+    "last_seen": "2026-11-03T07:04:20.227600+00:00",
+    "status": "active"
+  },
+  "ef293be5d51f00a3": {
+    "sequence_hash": "ef293be5d51f00a3",
+    "cluster_id_last_seen_as": "CLU-017",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [
+      {
+        "id": "T1083",
+        "name": "File & Directory Discovery"
+      }
+    ],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "181.214.136.86"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-03T07:04:20.227600+00:00",
+    "last_seen": "2026-11-03T07:04:20.227600+00:00",
     "status": "active"
   }
 }
