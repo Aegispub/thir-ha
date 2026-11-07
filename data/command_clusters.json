@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-11-07T03:37:54.755518+00:00",
-  "total_sessions_with_commands": 19,
-  "total_clusters": 10,
+  "generated_at": "2026-11-07T17:08:18.604518+00:00",
+  "total_sessions_with_commands": 115,
+  "total_clusters": 68,
   "campaign_clusters": 1,
-  "singleton_clusters": 7,
+  "singleton_clusters": 59,
   "highest_severity": "HIGH",
   "active_campaigns": [
     {
-      "cluster_id": "CLU-008",
+      "cluster_id": "CLU-060",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 12,
-      "unique_ip_count": 8,
+      "session_count": 75,
+      "unique_ip_count": 29,
       "ttps": [
         "T1021.004",
         "T1078",
@@ -34,7 +34,7 @@
         "195.178.110.227"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "70e3b4a82c8418a1",
+      "sequence_hash": "f92b1bbd14ae5a38",
       "ttps": [
         {
           "id": "T1140",
@@ -42,25 +42,25 @@
         }
       ],
       "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_ae19b8094922df756a9477ac1ad4e96c_small_control'\"'\"' '\"'\"'check_ae19b8094922df756a9477ac1ad4e96c'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_ae19b8094922df756a9477ac1ad4e96c_small_control' 'check_ae19b8094922df756a9477ac1ad4e96c'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_ae19b8094922df756a9477ac1ad4e96c_small_math'\"'\"' \"$((702*537+47))\"'",
-        "(702*537+47",
-        "printf '\\n%s|%s\\n' 'check_ae19b8094922df756a9477ac1ad4e96c_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_ae19b8094922df756a9477ac1ad4e96c_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_ae19b8094922df756a9477ac1ad4e96c_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_ae19b8094922df756a9477ac1ad4e96c_arg1'\"'\"' '\"'\"'check_ae19b8094922df756a9477ac1ad4e96c_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_ae19b8094922df756a9477ac1ad4e96c_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_ae19b8094922df756a9477ac1ad4e96c_arg1' 'check_ae19b8094922df756a9477ac1ad4e96c_arg2'; printf '\\n%s|%s\\n' 'check_ae19b8094922df756a9477ac1ad4e96c_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_ae19b8094922df756a9477ac1ad4e96c() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_ae19b8094922df756a9477ac1ad4e96c_small_function'\"'\"' \"$1|$#\"; }; f_check_ae19b8094922df756a9477ac1ad4e96c '\"'\"'check_ae19b8094922df756a9477ac1ad4e96c_function_value'\"'\"''"
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_c2281f25295ec58cf3459117b7df7743_small_control'\"'\"' '\"'\"'check_c2281f25295ec58cf3459117b7df7743'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_c2281f25295ec58cf3459117b7df7743_small_control' 'check_c2281f25295ec58cf3459117b7df7743'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_c2281f25295ec58cf3459117b7df7743_small_math'\"'\"' \"$((852*46+41))\"'",
+        "(852*46+41",
+        "printf '\\n%s|%s\\n' 'check_c2281f25295ec58cf3459117b7df7743_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_c2281f25295ec58cf3459117b7df7743_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_c2281f25295ec58cf3459117b7df7743_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_c2281f25295ec58cf3459117b7df7743_arg1'\"'\"' '\"'\"'check_c2281f25295ec58cf3459117b7df7743_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_c2281f25295ec58cf3459117b7df7743_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_c2281f25295ec58cf3459117b7df7743_arg1' 'check_c2281f25295ec58cf3459117b7df7743_arg2'; printf '\\n%s|%s\\n' 'check_c2281f25295ec58cf3459117b7df7743_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_c2281f25295ec58cf3459117b7df7743() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_c2281f25295ec58cf3459117b7df7743_small_function'\"'\"' \"$1|$#\"; }; f_check_c2281f25295ec58cf3459117b7df7743 '\"'\"'check_c2281f25295ec58cf3459117b7df7743_function_value'\"'\"''"
       ],
       "members": [
         {
-          "session_id": "IR-5461c6780f83",
+          "session_id": "IR-e80136a409b5",
           "src_ip": "195.178.110.227",
           "country": "NL",
           "isp": "TECHOFF SRV LIMITED",
           "command_count": 44,
-          "timestamp": "2026-11-07T02:46:40.886230Z"
+          "timestamp": "2026-11-07T02:55:29.971056Z"
         }
       ]
     },
@@ -76,7 +76,7 @@
         "195.178.110.227"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "37d9ed1d723aea17",
+      "sequence_hash": "81cbdf3548d6f53e",
       "ttps": [
         {
           "id": "T1140",
@@ -84,25 +84,25 @@
         }
       ],
       "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8f04eaa44a20a37cf53e6de157ea7fc1_small_control'\"'\"' '\"'\"'check_8f04eaa44a20a37cf53e6de157ea7fc1'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_8f04eaa44a20a37cf53e6de157ea7fc1_small_control' 'check_8f04eaa44a20a37cf53e6de157ea7fc1'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8f04eaa44a20a37cf53e6de157ea7fc1_small_math'\"'\"' \"$((721*609+44))\"'",
-        "(721*609+44",
-        "printf '\\n%s|%s\\n' 'check_8f04eaa44a20a37cf53e6de157ea7fc1_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8f04eaa44a20a37cf53e6de157ea7fc1_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_8f04eaa44a20a37cf53e6de157ea7fc1_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_8f04eaa44a20a37cf53e6de157ea7fc1_arg1'\"'\"' '\"'\"'check_8f04eaa44a20a37cf53e6de157ea7fc1_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8f04eaa44a20a37cf53e6de157ea7fc1_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_8f04eaa44a20a37cf53e6de157ea7fc1_arg1' 'check_8f04eaa44a20a37cf53e6de157ea7fc1_arg2'; printf '\\n%s|%s\\n' 'check_8f04eaa44a20a37cf53e6de157ea7fc1_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_8f04eaa44a20a37cf53e6de157ea7fc1() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8f04eaa44a20a37cf53e6de157ea7fc1_small_function'\"'\"' \"$1|$#\"; }; f_check_8f04eaa44a20a37cf53e6de157ea7fc1 '\"'\"'check_8f04eaa44a20a37cf53e6de157ea7fc1_function_value'\"'\"''"
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_fc761f477a4187e4615fd0838a3693aa_small_control'\"'\"' '\"'\"'check_fc761f477a4187e4615fd0838a3693aa'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_fc761f477a4187e4615fd0838a3693aa_small_control' 'check_fc761f477a4187e4615fd0838a3693aa'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_fc761f477a4187e4615fd0838a3693aa_small_math'\"'\"' \"$((823*80+29))\"'",
+        "(823*80+29",
+        "printf '\\n%s|%s\\n' 'check_fc761f477a4187e4615fd0838a3693aa_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_fc761f477a4187e4615fd0838a3693aa_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_fc761f477a4187e4615fd0838a3693aa_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_fc761f477a4187e4615fd0838a3693aa_arg1'\"'\"' '\"'\"'check_fc761f477a4187e4615fd0838a3693aa_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_fc761f477a4187e4615fd0838a3693aa_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_fc761f477a4187e4615fd0838a3693aa_arg1' 'check_fc761f477a4187e4615fd0838a3693aa_arg2'; printf '\\n%s|%s\\n' 'check_fc761f477a4187e4615fd0838a3693aa_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_fc761f477a4187e4615fd0838a3693aa() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_fc761f477a4187e4615fd0838a3693aa_small_function'\"'\"' \"$1|$#\"; }; f_check_fc761f477a4187e4615fd0838a3693aa '\"'\"'check_fc761f477a4187e4615fd0838a3693aa_function_value'\"'\"''"
       ],
       "members": [
         {
-          "session_id": "IR-1e7f0f491f5c",
+          "session_id": "IR-52e112141105",
           "src_ip": "195.178.110.227",
           "country": "NL",
           "isp": "TECHOFF SRV LIMITED",
           "command_count": 44,
-          "timestamp": "2026-11-07T02:48:27.288082Z"
+          "timestamp": "2026-11-07T02:59:08.062651Z"
         }
       ]
     },
@@ -115,10 +115,10 @@
       "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "195.178.110.227"
+        "195.178.110.217"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "e79cdfa195f762d8",
+      "sequence_hash": "b89ccbe2b06fdb29",
       "ttps": [
         {
           "id": "T1140",
@@ -126,25 +126,25 @@
         }
       ],
       "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_a7bf5e5c7164c226b84b46a343bea685_small_control'\"'\"' '\"'\"'check_a7bf5e5c7164c226b84b46a343bea685'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_a7bf5e5c7164c226b84b46a343bea685_small_control' 'check_a7bf5e5c7164c226b84b46a343bea685'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_a7bf5e5c7164c226b84b46a343bea685_small_math'\"'\"' \"$((73*373+70))\"'",
-        "(73*373+70",
-        "printf '\\n%s|%s\\n' 'check_a7bf5e5c7164c226b84b46a343bea685_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_a7bf5e5c7164c226b84b46a343bea685_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_a7bf5e5c7164c226b84b46a343bea685_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_a7bf5e5c7164c226b84b46a343bea685_arg1'\"'\"' '\"'\"'check_a7bf5e5c7164c226b84b46a343bea685_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_a7bf5e5c7164c226b84b46a343bea685_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_a7bf5e5c7164c226b84b46a343bea685_arg1' 'check_a7bf5e5c7164c226b84b46a343bea685_arg2'; printf '\\n%s|%s\\n' 'check_a7bf5e5c7164c226b84b46a343bea685_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_a7bf5e5c7164c226b84b46a343bea685() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_a7bf5e5c7164c226b84b46a343bea685_small_function'\"'\"' \"$1|$#\"; }; f_check_a7bf5e5c7164c226b84b46a343bea685 '\"'\"'check_a7bf5e5c7164c226b84b46a343bea685_function_value'\"'\"''"
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_c8a8b65102c79fa57c0f560bd220aee8_small_control'\"'\"' '\"'\"'check_c8a8b65102c79fa57c0f560bd220aee8'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_c8a8b65102c79fa57c0f560bd220aee8_small_control' 'check_c8a8b65102c79fa57c0f560bd220aee8'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_c8a8b65102c79fa57c0f560bd220aee8_small_math'\"'\"' \"$((522*97+56))\"'",
+        "(522*97+56",
+        "printf '\\n%s|%s\\n' 'check_c8a8b65102c79fa57c0f560bd220aee8_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_c8a8b65102c79fa57c0f560bd220aee8_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_c8a8b65102c79fa57c0f560bd220aee8_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_c8a8b65102c79fa57c0f560bd220aee8_arg1'\"'\"' '\"'\"'check_c8a8b65102c79fa57c0f560bd220aee8_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_c8a8b65102c79fa57c0f560bd220aee8_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_c8a8b65102c79fa57c0f560bd220aee8_arg1' 'check_c8a8b65102c79fa57c0f560bd220aee8_arg2'; printf '\\n%s|%s\\n' 'check_c8a8b65102c79fa57c0f560bd220aee8_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_c8a8b65102c79fa57c0f560bd220aee8() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_c8a8b65102c79fa57c0f560bd220aee8_small_function'\"'\"' \"$1|$#\"; }; f_check_c8a8b65102c79fa57c0f560bd220aee8 '\"'\"'check_c8a8b65102c79fa57c0f560bd220aee8_function_value'\"'\"''"
       ],
       "members": [
         {
-          "session_id": "IR-638d8c492b02",
-          "src_ip": "195.178.110.227",
+          "session_id": "IR-50808a31d3d0",
+          "src_ip": "195.178.110.217",
           "country": "NL",
           "isp": "TECHOFF SRV LIMITED",
           "command_count": 44,
-          "timestamp": "2026-11-07T02:50:17.768743Z"
+          "timestamp": "2026-11-07T05:13:05.115019Z"
         }
       ]
     },
@@ -157,10 +157,10 @@
       "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "195.178.110.227"
+        "195.178.110.217"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "d11caf808f76b77a",
+      "sequence_hash": "eee46002a7addab7",
       "ttps": [
         {
           "id": "T1140",
@@ -168,25 +168,25 @@
         }
       ],
       "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f6653af5aa2ee704f6e4ce374d231aff_small_control'\"'\"' '\"'\"'check_f6653af5aa2ee704f6e4ce374d231aff'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_f6653af5aa2ee704f6e4ce374d231aff_small_control' 'check_f6653af5aa2ee704f6e4ce374d231aff'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f6653af5aa2ee704f6e4ce374d231aff_small_math'\"'\"' \"$((267*229+28))\"'",
-        "(267*229+28",
-        "printf '\\n%s|%s\\n' 'check_f6653af5aa2ee704f6e4ce374d231aff_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f6653af5aa2ee704f6e4ce374d231aff_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_f6653af5aa2ee704f6e4ce374d231aff_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_f6653af5aa2ee704f6e4ce374d231aff_arg1'\"'\"' '\"'\"'check_f6653af5aa2ee704f6e4ce374d231aff_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f6653af5aa2ee704f6e4ce374d231aff_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_f6653af5aa2ee704f6e4ce374d231aff_arg1' 'check_f6653af5aa2ee704f6e4ce374d231aff_arg2'; printf '\\n%s|%s\\n' 'check_f6653af5aa2ee704f6e4ce374d231aff_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_f6653af5aa2ee704f6e4ce374d231aff() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f6653af5aa2ee704f6e4ce374d231aff_small_function'\"'\"' \"$1|$#\"; }; f_check_f6653af5aa2ee704f6e4ce374d231aff '\"'\"'check_f6653af5aa2ee704f6e4ce374d231aff_function_value'\"'\"''"
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_d3c811f61701150006ca0c2203d3dd46_small_control'\"'\"' '\"'\"'check_d3c811f61701150006ca0c2203d3dd46'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_d3c811f61701150006ca0c2203d3dd46_small_control' 'check_d3c811f61701150006ca0c2203d3dd46'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_d3c811f61701150006ca0c2203d3dd46_small_math'\"'\"' \"$((379*635+91))\"'",
+        "(379*635+91",
+        "printf '\\n%s|%s\\n' 'check_d3c811f61701150006ca0c2203d3dd46_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_d3c811f61701150006ca0c2203d3dd46_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_d3c811f61701150006ca0c2203d3dd46_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_d3c811f61701150006ca0c2203d3dd46_arg1'\"'\"' '\"'\"'check_d3c811f61701150006ca0c2203d3dd46_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_d3c811f61701150006ca0c2203d3dd46_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_d3c811f61701150006ca0c2203d3dd46_arg1' 'check_d3c811f61701150006ca0c2203d3dd46_arg2'; printf '\\n%s|%s\\n' 'check_d3c811f61701150006ca0c2203d3dd46_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_d3c811f61701150006ca0c2203d3dd46() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_d3c811f61701150006ca0c2203d3dd46_small_function'\"'\"' \"$1|$#\"; }; f_check_d3c811f61701150006ca0c2203d3dd46 '\"'\"'check_d3c811f61701150006ca0c2203d3dd46_function_value'\"'\"''"
       ],
       "members": [
         {
-          "session_id": "IR-41811bf14305",
-          "src_ip": "195.178.110.227",
+          "session_id": "IR-79fc9541c6d1",
+          "src_ip": "195.178.110.217",
           "country": "NL",
           "isp": "TECHOFF SRV LIMITED",
           "command_count": 44,
-          "timestamp": "2026-11-07T02:52:03.717953Z"
+          "timestamp": "2026-11-07T05:15:01.709702Z"
         }
       ]
     },
@@ -199,10 +199,10 @@
       "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "195.178.110.227"
+        "195.178.110.217"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "9846336f2242a5de",
+      "sequence_hash": "b3ef41e3204d38b0",
       "ttps": [
         {
           "id": "T1140",
@@ -210,25 +210,25 @@
         }
       ],
       "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_af40a2a9d46fce9d4f8bf4ff56251c61_small_control'\"'\"' '\"'\"'check_af40a2a9d46fce9d4f8bf4ff56251c61'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_af40a2a9d46fce9d4f8bf4ff56251c61_small_control' 'check_af40a2a9d46fce9d4f8bf4ff56251c61'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_af40a2a9d46fce9d4f8bf4ff56251c61_small_math'\"'\"' \"$((997*20+51))\"'",
-        "(997*20+51",
-        "printf '\\n%s|%s\\n' 'check_af40a2a9d46fce9d4f8bf4ff56251c61_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_af40a2a9d46fce9d4f8bf4ff56251c61_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_af40a2a9d46fce9d4f8bf4ff56251c61_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_af40a2a9d46fce9d4f8bf4ff56251c61_arg1'\"'\"' '\"'\"'check_af40a2a9d46fce9d4f8bf4ff56251c61_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_af40a2a9d46fce9d4f8bf4ff56251c61_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_af40a2a9d46fce9d4f8bf4ff56251c61_arg1' 'check_af40a2a9d46fce9d4f8bf4ff56251c61_arg2'; printf '\\n%s|%s\\n' 'check_af40a2a9d46fce9d4f8bf4ff56251c61_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_af40a2a9d46fce9d4f8bf4ff56251c61() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_af40a2a9d46fce9d4f8bf4ff56251c61_small_function'\"'\"' \"$1|$#\"; }; f_check_af40a2a9d46fce9d4f8bf4ff56251c61 '\"'\"'check_af40a2a9d46fce9d4f8bf4ff56251c61_function_value'\"'\"''"
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_fc6dd12df51fe193cefbf47fc464b42d_small_control'\"'\"' '\"'\"'check_fc6dd12df51fe193cefbf47fc464b42d'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_fc6dd12df51fe193cefbf47fc464b42d_small_control' 'check_fc6dd12df51fe193cefbf47fc464b42d'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_fc6dd12df51fe193cefbf47fc464b42d_small_math'\"'\"' \"$((814*36+20))\"'",
+        "(814*36+20",
+        "printf '\\n%s|%s\\n' 'check_fc6dd12df51fe193cefbf47fc464b42d_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_fc6dd12df51fe193cefbf47fc464b42d_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_fc6dd12df51fe193cefbf47fc464b42d_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_fc6dd12df51fe193cefbf47fc464b42d_arg1'\"'\"' '\"'\"'check_fc6dd12df51fe193cefbf47fc464b42d_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_fc6dd12df51fe193cefbf47fc464b42d_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_fc6dd12df51fe193cefbf47fc464b42d_arg1' 'check_fc6dd12df51fe193cefbf47fc464b42d_arg2'; printf '\\n%s|%s\\n' 'check_fc6dd12df51fe193cefbf47fc464b42d_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_fc6dd12df51fe193cefbf47fc464b42d() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_fc6dd12df51fe193cefbf47fc464b42d_small_function'\"'\"' \"$1|$#\"; }; f_check_fc6dd12df51fe193cefbf47fc464b42d '\"'\"'check_fc6dd12df51fe193cefbf47fc464b42d_function_value'\"'\"''"
       ],
       "members": [
         {
-          "session_id": "IR-71c31b0a945e",
-          "src_ip": "195.178.110.227",
+          "session_id": "IR-bd1bbb7a400c",
+          "src_ip": "195.178.110.217",
           "country": "NL",
           "isp": "TECHOFF SRV LIMITED",
           "command_count": 44,
-          "timestamp": "2026-11-07T02:53:46.914435Z"
+          "timestamp": "2026-11-07T05:16:53.585886Z"
         }
       ]
     },
@@ -239,31 +239,38 @@
       "campaign_severity": null,
       "campaign_description": null,
       "matched_campaigns": [],
-      "session_count": 3,
+      "session_count": 1,
       "unique_ips": [
-        "172.234.143.92"
+        "195.178.110.217"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "e707cc0f441aefd0",
-      "ttps": [],
+      "sequence_hash": "7d6ac9de2bdcc2be",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
       "representative_commands": [
-        "From: <sip:nm@nm>;tag=root",
-        "To: <sip:nm2@nm2>",
-        "Call-ID: 50000",
-        "CSeq: 42 OPTIONS",
-        "Max-Forwards: 70",
-        "Content-Length: 0",
-        "Contact: <sip:nm@nm>",
-        "Accept: application/sdp"
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_64258b6a6695620a9b2f6cd4e7fad4a0_small_control'\"'\"' '\"'\"'check_64258b6a6695620a9b2f6cd4e7fad4a0'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_64258b6a6695620a9b2f6cd4e7fad4a0_small_control' 'check_64258b6a6695620a9b2f6cd4e7fad4a0'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_64258b6a6695620a9b2f6cd4e7fad4a0_small_math'\"'\"' \"$((713*15+30))\"'",
+        "(713*15+30",
+        "printf '\\n%s|%s\\n' 'check_64258b6a6695620a9b2f6cd4e7fad4a0_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_64258b6a6695620a9b2f6cd4e7fad4a0_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_64258b6a6695620a9b2f6cd4e7fad4a0_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_64258b6a6695620a9b2f6cd4e7fad4a0_arg1'\"'\"' '\"'\"'check_64258b6a6695620a9b2f6cd4e7fad4a0_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_64258b6a6695620a9b2f6cd4e7fad4a0_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_64258b6a6695620a9b2f6cd4e7fad4a0_arg1' 'check_64258b6a6695620a9b2f6cd4e7fad4a0_arg2'; printf '\\n%s|%s\\n' 'check_64258b6a6695620a9b2f6cd4e7fad4a0_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_64258b6a6695620a9b2f6cd4e7fad4a0() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_64258b6a6695620a9b2f6cd4e7fad4a0_small_function'\"'\"' \"$1|$#\"; }; f_check_64258b6a6695620a9b2f6cd4e7fad4a0 '\"'\"'check_64258b6a6695620a9b2f6cd4e7fad4a0_function_value'\"'\"''"
       ],
       "members": [
         {
-          "session_id": "IR-3731ba2f0d7d",
-          "src_ip": "172.234.143.92",
-          "country": "US",
-          "isp": "Linode",
-          "command_count": 8,
-          "timestamp": "2026-11-07T00:29:33.520535Z"
+          "session_id": "IR-7eb1a0fe326c",
+          "src_ip": "195.178.110.217",
+          "country": "NL",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T05:18:46.561419Z"
         }
       ]
     },
@@ -274,13 +281,2072 @@
       "campaign_severity": null,
       "campaign_description": null,
       "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.209"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "a7a5a136a4644f57",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8ecec61369222dc7cb99ef6229784719_small_control'\"'\"' '\"'\"'check_8ecec61369222dc7cb99ef6229784719'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_8ecec61369222dc7cb99ef6229784719_small_control' 'check_8ecec61369222dc7cb99ef6229784719'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8ecec61369222dc7cb99ef6229784719_small_math'\"'\"' \"$((667*167+87))\"'",
+        "(667*167+87",
+        "printf '\\n%s|%s\\n' 'check_8ecec61369222dc7cb99ef6229784719_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8ecec61369222dc7cb99ef6229784719_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_8ecec61369222dc7cb99ef6229784719_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_8ecec61369222dc7cb99ef6229784719_arg1'\"'\"' '\"'\"'check_8ecec61369222dc7cb99ef6229784719_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8ecec61369222dc7cb99ef6229784719_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_8ecec61369222dc7cb99ef6229784719_arg1' 'check_8ecec61369222dc7cb99ef6229784719_arg2'; printf '\\n%s|%s\\n' 'check_8ecec61369222dc7cb99ef6229784719_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_8ecec61369222dc7cb99ef6229784719() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8ecec61369222dc7cb99ef6229784719_small_function'\"'\"' \"$1|$#\"; }; f_check_8ecec61369222dc7cb99ef6229784719 '\"'\"'check_8ecec61369222dc7cb99ef6229784719_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-0814907ddcef",
+          "src_ip": "2.57.122.209",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T07:59:33.765908Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-008",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.209"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "f8cf897044bdea7a",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_c40fbff24ab13ce7860c041f00b80590_small_control'\"'\"' '\"'\"'check_c40fbff24ab13ce7860c041f00b80590'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_c40fbff24ab13ce7860c041f00b80590_small_control' 'check_c40fbff24ab13ce7860c041f00b80590'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_c40fbff24ab13ce7860c041f00b80590_small_math'\"'\"' \"$((342*580+43))\"'",
+        "(342*580+43",
+        "printf '\\n%s|%s\\n' 'check_c40fbff24ab13ce7860c041f00b80590_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_c40fbff24ab13ce7860c041f00b80590_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_c40fbff24ab13ce7860c041f00b80590_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_c40fbff24ab13ce7860c041f00b80590_arg1'\"'\"' '\"'\"'check_c40fbff24ab13ce7860c041f00b80590_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_c40fbff24ab13ce7860c041f00b80590_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_c40fbff24ab13ce7860c041f00b80590_arg1' 'check_c40fbff24ab13ce7860c041f00b80590_arg2'; printf '\\n%s|%s\\n' 'check_c40fbff24ab13ce7860c041f00b80590_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_c40fbff24ab13ce7860c041f00b80590() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_c40fbff24ab13ce7860c041f00b80590_small_function'\"'\"' \"$1|$#\"; }; f_check_c40fbff24ab13ce7860c041f00b80590 '\"'\"'check_c40fbff24ab13ce7860c041f00b80590_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-71154ce6f5ab",
+          "src_ip": "2.57.122.209",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T08:01:58.447570Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-009",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.209"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "08f81bd6a1ec42ad",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_a3a0cf60163b5fb327529759355214a1_small_control'\"'\"' '\"'\"'check_a3a0cf60163b5fb327529759355214a1'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_a3a0cf60163b5fb327529759355214a1_small_control' 'check_a3a0cf60163b5fb327529759355214a1'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_a3a0cf60163b5fb327529759355214a1_small_math'\"'\"' \"$((15*566+82))\"'",
+        "(15*566+82",
+        "printf '\\n%s|%s\\n' 'check_a3a0cf60163b5fb327529759355214a1_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_a3a0cf60163b5fb327529759355214a1_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_a3a0cf60163b5fb327529759355214a1_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_a3a0cf60163b5fb327529759355214a1_arg1'\"'\"' '\"'\"'check_a3a0cf60163b5fb327529759355214a1_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_a3a0cf60163b5fb327529759355214a1_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_a3a0cf60163b5fb327529759355214a1_arg1' 'check_a3a0cf60163b5fb327529759355214a1_arg2'; printf '\\n%s|%s\\n' 'check_a3a0cf60163b5fb327529759355214a1_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_a3a0cf60163b5fb327529759355214a1() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_a3a0cf60163b5fb327529759355214a1_small_function'\"'\"' \"$1|$#\"; }; f_check_a3a0cf60163b5fb327529759355214a1 '\"'\"'check_a3a0cf60163b5fb327529759355214a1_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-9cd9cc572256",
+          "src_ip": "2.57.122.209",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T08:04:21.496161Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-010",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.209"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "18647edff2bed30e",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_76041bca58dc36d3f2e530787fdb33db_small_control'\"'\"' '\"'\"'check_76041bca58dc36d3f2e530787fdb33db'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_76041bca58dc36d3f2e530787fdb33db_small_control' 'check_76041bca58dc36d3f2e530787fdb33db'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_76041bca58dc36d3f2e530787fdb33db_small_math'\"'\"' \"$((303*178+46))\"'",
+        "(303*178+46",
+        "printf '\\n%s|%s\\n' 'check_76041bca58dc36d3f2e530787fdb33db_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_76041bca58dc36d3f2e530787fdb33db_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_76041bca58dc36d3f2e530787fdb33db_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_76041bca58dc36d3f2e530787fdb33db_arg1'\"'\"' '\"'\"'check_76041bca58dc36d3f2e530787fdb33db_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_76041bca58dc36d3f2e530787fdb33db_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_76041bca58dc36d3f2e530787fdb33db_arg1' 'check_76041bca58dc36d3f2e530787fdb33db_arg2'; printf '\\n%s|%s\\n' 'check_76041bca58dc36d3f2e530787fdb33db_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_76041bca58dc36d3f2e530787fdb33db() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_76041bca58dc36d3f2e530787fdb33db_small_function'\"'\"' \"$1|$#\"; }; f_check_76041bca58dc36d3f2e530787fdb33db '\"'\"'check_76041bca58dc36d3f2e530787fdb33db_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-9cd1a1b3def9",
+          "src_ip": "2.57.122.209",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T08:06:41.830354Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-011",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.209"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "39b4799e2697f7f6",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f61f9a86302f7547c915af8e21dcf35b_small_control'\"'\"' '\"'\"'check_f61f9a86302f7547c915af8e21dcf35b'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_f61f9a86302f7547c915af8e21dcf35b_small_control' 'check_f61f9a86302f7547c915af8e21dcf35b'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f61f9a86302f7547c915af8e21dcf35b_small_math'\"'\"' \"$((197*910+55))\"'",
+        "(197*910+55",
+        "printf '\\n%s|%s\\n' 'check_f61f9a86302f7547c915af8e21dcf35b_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f61f9a86302f7547c915af8e21dcf35b_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_f61f9a86302f7547c915af8e21dcf35b_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_f61f9a86302f7547c915af8e21dcf35b_arg1'\"'\"' '\"'\"'check_f61f9a86302f7547c915af8e21dcf35b_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f61f9a86302f7547c915af8e21dcf35b_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_f61f9a86302f7547c915af8e21dcf35b_arg1' 'check_f61f9a86302f7547c915af8e21dcf35b_arg2'; printf '\\n%s|%s\\n' 'check_f61f9a86302f7547c915af8e21dcf35b_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_f61f9a86302f7547c915af8e21dcf35b() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f61f9a86302f7547c915af8e21dcf35b_small_function'\"'\"' \"$1|$#\"; }; f_check_f61f9a86302f7547c915af8e21dcf35b '\"'\"'check_f61f9a86302f7547c915af8e21dcf35b_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-efe274c35bc2",
+          "src_ip": "2.57.122.209",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T08:09:03.747269Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-012",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.209"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "5f11fcf69737b8cc",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_3ac5f6e260bf266e5f38bf502493a11f_small_control'\"'\"' '\"'\"'check_3ac5f6e260bf266e5f38bf502493a11f'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_3ac5f6e260bf266e5f38bf502493a11f_small_control' 'check_3ac5f6e260bf266e5f38bf502493a11f'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_3ac5f6e260bf266e5f38bf502493a11f_small_math'\"'\"' \"$((91*770+11))\"'",
+        "(91*770+11",
+        "printf '\\n%s|%s\\n' 'check_3ac5f6e260bf266e5f38bf502493a11f_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_3ac5f6e260bf266e5f38bf502493a11f_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_3ac5f6e260bf266e5f38bf502493a11f_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_3ac5f6e260bf266e5f38bf502493a11f_arg1'\"'\"' '\"'\"'check_3ac5f6e260bf266e5f38bf502493a11f_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_3ac5f6e260bf266e5f38bf502493a11f_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_3ac5f6e260bf266e5f38bf502493a11f_arg1' 'check_3ac5f6e260bf266e5f38bf502493a11f_arg2'; printf '\\n%s|%s\\n' 'check_3ac5f6e260bf266e5f38bf502493a11f_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_3ac5f6e260bf266e5f38bf502493a11f() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_3ac5f6e260bf266e5f38bf502493a11f_small_function'\"'\"' \"$1|$#\"; }; f_check_3ac5f6e260bf266e5f38bf502493a11f '\"'\"'check_3ac5f6e260bf266e5f38bf502493a11f_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-c22a4e9317e9",
+          "src_ip": "2.57.122.209",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T08:11:21.755216Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-013",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.209"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "d705362e0baf11e9",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_cfd752ff84e1d3ac156d10fcf7790e3c_small_control'\"'\"' '\"'\"'check_cfd752ff84e1d3ac156d10fcf7790e3c'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_cfd752ff84e1d3ac156d10fcf7790e3c_small_control' 'check_cfd752ff84e1d3ac156d10fcf7790e3c'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_cfd752ff84e1d3ac156d10fcf7790e3c_small_math'\"'\"' \"$((367*437+52))\"'",
+        "(367*437+52",
+        "printf '\\n%s|%s\\n' 'check_cfd752ff84e1d3ac156d10fcf7790e3c_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_cfd752ff84e1d3ac156d10fcf7790e3c_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_cfd752ff84e1d3ac156d10fcf7790e3c_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_cfd752ff84e1d3ac156d10fcf7790e3c_arg1'\"'\"' '\"'\"'check_cfd752ff84e1d3ac156d10fcf7790e3c_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_cfd752ff84e1d3ac156d10fcf7790e3c_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_cfd752ff84e1d3ac156d10fcf7790e3c_arg1' 'check_cfd752ff84e1d3ac156d10fcf7790e3c_arg2'; printf '\\n%s|%s\\n' 'check_cfd752ff84e1d3ac156d10fcf7790e3c_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_cfd752ff84e1d3ac156d10fcf7790e3c() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_cfd752ff84e1d3ac156d10fcf7790e3c_small_function'\"'\"' \"$1|$#\"; }; f_check_cfd752ff84e1d3ac156d10fcf7790e3c '\"'\"'check_cfd752ff84e1d3ac156d10fcf7790e3c_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-8f9f5dd2f6cb",
+          "src_ip": "2.57.122.209",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T08:13:42.212776Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-014",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.209"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "d0c6731a6c60bbfd",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_4fb8c5e763582039bdcf4868edcf9600_small_control'\"'\"' '\"'\"'check_4fb8c5e763582039bdcf4868edcf9600'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_4fb8c5e763582039bdcf4868edcf9600_small_control' 'check_4fb8c5e763582039bdcf4868edcf9600'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_4fb8c5e763582039bdcf4868edcf9600_small_math'\"'\"' \"$((469*123+39))\"'",
+        "(469*123+39",
+        "printf '\\n%s|%s\\n' 'check_4fb8c5e763582039bdcf4868edcf9600_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_4fb8c5e763582039bdcf4868edcf9600_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_4fb8c5e763582039bdcf4868edcf9600_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_4fb8c5e763582039bdcf4868edcf9600_arg1'\"'\"' '\"'\"'check_4fb8c5e763582039bdcf4868edcf9600_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_4fb8c5e763582039bdcf4868edcf9600_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_4fb8c5e763582039bdcf4868edcf9600_arg1' 'check_4fb8c5e763582039bdcf4868edcf9600_arg2'; printf '\\n%s|%s\\n' 'check_4fb8c5e763582039bdcf4868edcf9600_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_4fb8c5e763582039bdcf4868edcf9600() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_4fb8c5e763582039bdcf4868edcf9600_small_function'\"'\"' \"$1|$#\"; }; f_check_4fb8c5e763582039bdcf4868edcf9600 '\"'\"'check_4fb8c5e763582039bdcf4868edcf9600_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-e198df75a1bc",
+          "src_ip": "2.57.122.209",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T08:18:21.597576Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-015",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.209"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "49cade5576f517cd",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_c04070672f1079bf751914f2a48be527_small_control'\"'\"' '\"'\"'check_c04070672f1079bf751914f2a48be527'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_c04070672f1079bf751914f2a48be527_small_control' 'check_c04070672f1079bf751914f2a48be527'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_c04070672f1079bf751914f2a48be527_small_math'\"'\"' \"$((364*37+38))\"'",
+        "(364*37+38",
+        "printf '\\n%s|%s\\n' 'check_c04070672f1079bf751914f2a48be527_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_c04070672f1079bf751914f2a48be527_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_c04070672f1079bf751914f2a48be527_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_c04070672f1079bf751914f2a48be527_arg1'\"'\"' '\"'\"'check_c04070672f1079bf751914f2a48be527_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_c04070672f1079bf751914f2a48be527_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_c04070672f1079bf751914f2a48be527_arg1' 'check_c04070672f1079bf751914f2a48be527_arg2'; printf '\\n%s|%s\\n' 'check_c04070672f1079bf751914f2a48be527_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_c04070672f1079bf751914f2a48be527() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_c04070672f1079bf751914f2a48be527_small_function'\"'\"' \"$1|$#\"; }; f_check_c04070672f1079bf751914f2a48be527 '\"'\"'check_c04070672f1079bf751914f2a48be527_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-4abc2a62dc1a",
+          "src_ip": "2.57.122.209",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T08:20:46.850782Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-016",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.209"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "fc83f428f8432d9d",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_2e53adab23c730e41587fe752fff4f12_small_control'\"'\"' '\"'\"'check_2e53adab23c730e41587fe752fff4f12'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_2e53adab23c730e41587fe752fff4f12_small_control' 'check_2e53adab23c730e41587fe752fff4f12'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_2e53adab23c730e41587fe752fff4f12_small_math'\"'\"' \"$((893*856+26))\"'",
+        "(893*856+26",
+        "printf '\\n%s|%s\\n' 'check_2e53adab23c730e41587fe752fff4f12_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_2e53adab23c730e41587fe752fff4f12_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_2e53adab23c730e41587fe752fff4f12_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_2e53adab23c730e41587fe752fff4f12_arg1'\"'\"' '\"'\"'check_2e53adab23c730e41587fe752fff4f12_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_2e53adab23c730e41587fe752fff4f12_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_2e53adab23c730e41587fe752fff4f12_arg1' 'check_2e53adab23c730e41587fe752fff4f12_arg2'; printf '\\n%s|%s\\n' 'check_2e53adab23c730e41587fe752fff4f12_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_2e53adab23c730e41587fe752fff4f12() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_2e53adab23c730e41587fe752fff4f12_small_function'\"'\"' \"$1|$#\"; }; f_check_2e53adab23c730e41587fe752fff4f12 '\"'\"'check_2e53adab23c730e41587fe752fff4f12_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-7e86c81ee365",
+          "src_ip": "2.57.122.209",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T08:23:09.412295Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-017",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.209"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "401343b7f82ef77d",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_0cf011e4ec3ed6ec7620bcf024b30f4b_small_control'\"'\"' '\"'\"'check_0cf011e4ec3ed6ec7620bcf024b30f4b'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_0cf011e4ec3ed6ec7620bcf024b30f4b_small_control' 'check_0cf011e4ec3ed6ec7620bcf024b30f4b'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_0cf011e4ec3ed6ec7620bcf024b30f4b_small_math'\"'\"' \"$((322*617+15))\"'",
+        "(322*617+15",
+        "printf '\\n%s|%s\\n' 'check_0cf011e4ec3ed6ec7620bcf024b30f4b_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_0cf011e4ec3ed6ec7620bcf024b30f4b_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_0cf011e4ec3ed6ec7620bcf024b30f4b_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_0cf011e4ec3ed6ec7620bcf024b30f4b_arg1'\"'\"' '\"'\"'check_0cf011e4ec3ed6ec7620bcf024b30f4b_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_0cf011e4ec3ed6ec7620bcf024b30f4b_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_0cf011e4ec3ed6ec7620bcf024b30f4b_arg1' 'check_0cf011e4ec3ed6ec7620bcf024b30f4b_arg2'; printf '\\n%s|%s\\n' 'check_0cf011e4ec3ed6ec7620bcf024b30f4b_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_0cf011e4ec3ed6ec7620bcf024b30f4b() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_0cf011e4ec3ed6ec7620bcf024b30f4b_small_function'\"'\"' \"$1|$#\"; }; f_check_0cf011e4ec3ed6ec7620bcf024b30f4b '\"'\"'check_0cf011e4ec3ed6ec7620bcf024b30f4b_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-f3ea09e06096",
+          "src_ip": "2.57.122.209",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T08:25:33.777916Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-018",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.209"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "acaada4919e5e5df",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_7faae555f0eb573c6292912cb5aa63ab_small_control'\"'\"' '\"'\"'check_7faae555f0eb573c6292912cb5aa63ab'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_7faae555f0eb573c6292912cb5aa63ab_small_control' 'check_7faae555f0eb573c6292912cb5aa63ab'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_7faae555f0eb573c6292912cb5aa63ab_small_math'\"'\"' \"$((779*241+91))\"'",
+        "(779*241+91",
+        "printf '\\n%s|%s\\n' 'check_7faae555f0eb573c6292912cb5aa63ab_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_7faae555f0eb573c6292912cb5aa63ab_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_7faae555f0eb573c6292912cb5aa63ab_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_7faae555f0eb573c6292912cb5aa63ab_arg1'\"'\"' '\"'\"'check_7faae555f0eb573c6292912cb5aa63ab_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_7faae555f0eb573c6292912cb5aa63ab_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_7faae555f0eb573c6292912cb5aa63ab_arg1' 'check_7faae555f0eb573c6292912cb5aa63ab_arg2'; printf '\\n%s|%s\\n' 'check_7faae555f0eb573c6292912cb5aa63ab_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_7faae555f0eb573c6292912cb5aa63ab() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_7faae555f0eb573c6292912cb5aa63ab_small_function'\"'\"' \"$1|$#\"; }; f_check_7faae555f0eb573c6292912cb5aa63ab '\"'\"'check_7faae555f0eb573c6292912cb5aa63ab_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-2a88d57ed1df",
+          "src_ip": "2.57.122.209",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T08:27:56.662993Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-019",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.209"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "5438a203c8cdeb47",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_48ef2865b574fe68db8a620c43e5e86b_small_control'\"'\"' '\"'\"'check_48ef2865b574fe68db8a620c43e5e86b'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_48ef2865b574fe68db8a620c43e5e86b_small_control' 'check_48ef2865b574fe68db8a620c43e5e86b'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_48ef2865b574fe68db8a620c43e5e86b_small_math'\"'\"' \"$((726*432+48))\"'",
+        "(726*432+48",
+        "printf '\\n%s|%s\\n' 'check_48ef2865b574fe68db8a620c43e5e86b_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_48ef2865b574fe68db8a620c43e5e86b_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_48ef2865b574fe68db8a620c43e5e86b_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_48ef2865b574fe68db8a620c43e5e86b_arg1'\"'\"' '\"'\"'check_48ef2865b574fe68db8a620c43e5e86b_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_48ef2865b574fe68db8a620c43e5e86b_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_48ef2865b574fe68db8a620c43e5e86b_arg1' 'check_48ef2865b574fe68db8a620c43e5e86b_arg2'; printf '\\n%s|%s\\n' 'check_48ef2865b574fe68db8a620c43e5e86b_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_48ef2865b574fe68db8a620c43e5e86b() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_48ef2865b574fe68db8a620c43e5e86b_small_function'\"'\"' \"$1|$#\"; }; f_check_48ef2865b574fe68db8a620c43e5e86b '\"'\"'check_48ef2865b574fe68db8a620c43e5e86b_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-ddebbf334b28",
+          "src_ip": "2.57.122.209",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T08:30:20.831064Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-020",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.209"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "23fe984bdae95b18",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_db5787c99fc1b07b9f92fc675d55078e_small_control'\"'\"' '\"'\"'check_db5787c99fc1b07b9f92fc675d55078e'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_db5787c99fc1b07b9f92fc675d55078e_small_control' 'check_db5787c99fc1b07b9f92fc675d55078e'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_db5787c99fc1b07b9f92fc675d55078e_small_math'\"'\"' \"$((320*77+86))\"'",
+        "(320*77+86",
+        "printf '\\n%s|%s\\n' 'check_db5787c99fc1b07b9f92fc675d55078e_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_db5787c99fc1b07b9f92fc675d55078e_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_db5787c99fc1b07b9f92fc675d55078e_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_db5787c99fc1b07b9f92fc675d55078e_arg1'\"'\"' '\"'\"'check_db5787c99fc1b07b9f92fc675d55078e_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_db5787c99fc1b07b9f92fc675d55078e_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_db5787c99fc1b07b9f92fc675d55078e_arg1' 'check_db5787c99fc1b07b9f92fc675d55078e_arg2'; printf '\\n%s|%s\\n' 'check_db5787c99fc1b07b9f92fc675d55078e_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_db5787c99fc1b07b9f92fc675d55078e() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_db5787c99fc1b07b9f92fc675d55078e_small_function'\"'\"' \"$1|$#\"; }; f_check_db5787c99fc1b07b9f92fc675d55078e '\"'\"'check_db5787c99fc1b07b9f92fc675d55078e_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-13b54d239630",
+          "src_ip": "2.57.122.209",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T08:32:44.391690Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-021",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.209"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "890ab0bc5f7d2c80",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_168dcf2bd449d20368745dabf40c9b4c_small_control'\"'\"' '\"'\"'check_168dcf2bd449d20368745dabf40c9b4c'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_168dcf2bd449d20368745dabf40c9b4c_small_control' 'check_168dcf2bd449d20368745dabf40c9b4c'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_168dcf2bd449d20368745dabf40c9b4c_small_math'\"'\"' \"$((789*513+51))\"'",
+        "(789*513+51",
+        "printf '\\n%s|%s\\n' 'check_168dcf2bd449d20368745dabf40c9b4c_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_168dcf2bd449d20368745dabf40c9b4c_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_168dcf2bd449d20368745dabf40c9b4c_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_168dcf2bd449d20368745dabf40c9b4c_arg1'\"'\"' '\"'\"'check_168dcf2bd449d20368745dabf40c9b4c_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_168dcf2bd449d20368745dabf40c9b4c_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_168dcf2bd449d20368745dabf40c9b4c_arg1' 'check_168dcf2bd449d20368745dabf40c9b4c_arg2'; printf '\\n%s|%s\\n' 'check_168dcf2bd449d20368745dabf40c9b4c_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_168dcf2bd449d20368745dabf40c9b4c() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_168dcf2bd449d20368745dabf40c9b4c_small_function'\"'\"' \"$1|$#\"; }; f_check_168dcf2bd449d20368745dabf40c9b4c '\"'\"'check_168dcf2bd449d20368745dabf40c9b4c_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-11a5944c728f",
+          "src_ip": "2.57.122.209",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T08:35:04.196302Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-022",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.209"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "7ec7ae6ff20bd8f8",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_00ecc41eb15af785a91de92a3a1b9c48_small_control'\"'\"' '\"'\"'check_00ecc41eb15af785a91de92a3a1b9c48'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_00ecc41eb15af785a91de92a3a1b9c48_small_control' 'check_00ecc41eb15af785a91de92a3a1b9c48'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_00ecc41eb15af785a91de92a3a1b9c48_small_math'\"'\"' \"$((237*657+43))\"'",
+        "(237*657+43",
+        "printf '\\n%s|%s\\n' 'check_00ecc41eb15af785a91de92a3a1b9c48_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_00ecc41eb15af785a91de92a3a1b9c48_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_00ecc41eb15af785a91de92a3a1b9c48_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_00ecc41eb15af785a91de92a3a1b9c48_arg1'\"'\"' '\"'\"'check_00ecc41eb15af785a91de92a3a1b9c48_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_00ecc41eb15af785a91de92a3a1b9c48_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_00ecc41eb15af785a91de92a3a1b9c48_arg1' 'check_00ecc41eb15af785a91de92a3a1b9c48_arg2'; printf '\\n%s|%s\\n' 'check_00ecc41eb15af785a91de92a3a1b9c48_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_00ecc41eb15af785a91de92a3a1b9c48() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_00ecc41eb15af785a91de92a3a1b9c48_small_function'\"'\"' \"$1|$#\"; }; f_check_00ecc41eb15af785a91de92a3a1b9c48 '\"'\"'check_00ecc41eb15af785a91de92a3a1b9c48_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-0113f994d633",
+          "src_ip": "2.57.122.209",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T08:37:22.402173Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-023",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.209"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "96acd47960f9d6c3",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_736f209807bc13c6ae27344c12142870_small_control'\"'\"' '\"'\"'check_736f209807bc13c6ae27344c12142870'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_736f209807bc13c6ae27344c12142870_small_control' 'check_736f209807bc13c6ae27344c12142870'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_736f209807bc13c6ae27344c12142870_small_math'\"'\"' \"$((639*417+64))\"'",
+        "(639*417+64",
+        "printf '\\n%s|%s\\n' 'check_736f209807bc13c6ae27344c12142870_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_736f209807bc13c6ae27344c12142870_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_736f209807bc13c6ae27344c12142870_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_736f209807bc13c6ae27344c12142870_arg1'\"'\"' '\"'\"'check_736f209807bc13c6ae27344c12142870_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_736f209807bc13c6ae27344c12142870_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_736f209807bc13c6ae27344c12142870_arg1' 'check_736f209807bc13c6ae27344c12142870_arg2'; printf '\\n%s|%s\\n' 'check_736f209807bc13c6ae27344c12142870_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_736f209807bc13c6ae27344c12142870() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_736f209807bc13c6ae27344c12142870_small_function'\"'\"' \"$1|$#\"; }; f_check_736f209807bc13c6ae27344c12142870 '\"'\"'check_736f209807bc13c6ae27344c12142870_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-ae27536c8c34",
+          "src_ip": "2.57.122.209",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T08:39:39.063724Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-024",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.209"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "2220f4fa98176e0f",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8e08fe1a48d6b9a30ec3e257b9853ddb_small_control'\"'\"' '\"'\"'check_8e08fe1a48d6b9a30ec3e257b9853ddb'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_8e08fe1a48d6b9a30ec3e257b9853ddb_small_control' 'check_8e08fe1a48d6b9a30ec3e257b9853ddb'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8e08fe1a48d6b9a30ec3e257b9853ddb_small_math'\"'\"' \"$((469*636+83))\"'",
+        "(469*636+83",
+        "printf '\\n%s|%s\\n' 'check_8e08fe1a48d6b9a30ec3e257b9853ddb_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8e08fe1a48d6b9a30ec3e257b9853ddb_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_8e08fe1a48d6b9a30ec3e257b9853ddb_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_8e08fe1a48d6b9a30ec3e257b9853ddb_arg1'\"'\"' '\"'\"'check_8e08fe1a48d6b9a30ec3e257b9853ddb_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8e08fe1a48d6b9a30ec3e257b9853ddb_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_8e08fe1a48d6b9a30ec3e257b9853ddb_arg1' 'check_8e08fe1a48d6b9a30ec3e257b9853ddb_arg2'; printf '\\n%s|%s\\n' 'check_8e08fe1a48d6b9a30ec3e257b9853ddb_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_8e08fe1a48d6b9a30ec3e257b9853ddb() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8e08fe1a48d6b9a30ec3e257b9853ddb_small_function'\"'\"' \"$1|$#\"; }; f_check_8e08fe1a48d6b9a30ec3e257b9853ddb '\"'\"'check_8e08fe1a48d6b9a30ec3e257b9853ddb_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-88699d3ee4fb",
+          "src_ip": "2.57.122.209",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T08:42:00.162246Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-025",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.209"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "5e5e32ce49345227",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_16e513daa01843454fa1e3558dd17509_small_control'\"'\"' '\"'\"'check_16e513daa01843454fa1e3558dd17509'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_16e513daa01843454fa1e3558dd17509_small_control' 'check_16e513daa01843454fa1e3558dd17509'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_16e513daa01843454fa1e3558dd17509_small_math'\"'\"' \"$((877*128+42))\"'",
+        "(877*128+42",
+        "printf '\\n%s|%s\\n' 'check_16e513daa01843454fa1e3558dd17509_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_16e513daa01843454fa1e3558dd17509_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_16e513daa01843454fa1e3558dd17509_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_16e513daa01843454fa1e3558dd17509_arg1'\"'\"' '\"'\"'check_16e513daa01843454fa1e3558dd17509_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_16e513daa01843454fa1e3558dd17509_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_16e513daa01843454fa1e3558dd17509_arg1' 'check_16e513daa01843454fa1e3558dd17509_arg2'; printf '\\n%s|%s\\n' 'check_16e513daa01843454fa1e3558dd17509_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_16e513daa01843454fa1e3558dd17509() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_16e513daa01843454fa1e3558dd17509_small_function'\"'\"' \"$1|$#\"; }; f_check_16e513daa01843454fa1e3558dd17509 '\"'\"'check_16e513daa01843454fa1e3558dd17509_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-2c31c9e58b3d",
+          "src_ip": "2.57.122.209",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T08:44:25.039766Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-026",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.209"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "b5970a81a2e8204a",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_5b859916f6a15b6a79c1d24fb23bf64d_small_control'\"'\"' '\"'\"'check_5b859916f6a15b6a79c1d24fb23bf64d'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_5b859916f6a15b6a79c1d24fb23bf64d_small_control' 'check_5b859916f6a15b6a79c1d24fb23bf64d'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_5b859916f6a15b6a79c1d24fb23bf64d_small_math'\"'\"' \"$((499*542+53))\"'",
+        "(499*542+53",
+        "printf '\\n%s|%s\\n' 'check_5b859916f6a15b6a79c1d24fb23bf64d_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_5b859916f6a15b6a79c1d24fb23bf64d_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_5b859916f6a15b6a79c1d24fb23bf64d_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_5b859916f6a15b6a79c1d24fb23bf64d_arg1'\"'\"' '\"'\"'check_5b859916f6a15b6a79c1d24fb23bf64d_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_5b859916f6a15b6a79c1d24fb23bf64d_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_5b859916f6a15b6a79c1d24fb23bf64d_arg1' 'check_5b859916f6a15b6a79c1d24fb23bf64d_arg2'; printf '\\n%s|%s\\n' 'check_5b859916f6a15b6a79c1d24fb23bf64d_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_5b859916f6a15b6a79c1d24fb23bf64d() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_5b859916f6a15b6a79c1d24fb23bf64d_small_function'\"'\"' \"$1|$#\"; }; f_check_5b859916f6a15b6a79c1d24fb23bf64d '\"'\"'check_5b859916f6a15b6a79c1d24fb23bf64d_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-2a65b39d82d8",
+          "src_ip": "2.57.122.209",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T08:46:49.332956Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-027",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.209"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "0bff8124ecc14966",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_d4b870859d476c9585e979b2d051f8f4_small_control'\"'\"' '\"'\"'check_d4b870859d476c9585e979b2d051f8f4'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_d4b870859d476c9585e979b2d051f8f4_small_control' 'check_d4b870859d476c9585e979b2d051f8f4'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_d4b870859d476c9585e979b2d051f8f4_small_math'\"'\"' \"$((619*67+40))\"'",
+        "(619*67+40",
+        "printf '\\n%s|%s\\n' 'check_d4b870859d476c9585e979b2d051f8f4_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_d4b870859d476c9585e979b2d051f8f4_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_d4b870859d476c9585e979b2d051f8f4_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_d4b870859d476c9585e979b2d051f8f4_arg1'\"'\"' '\"'\"'check_d4b870859d476c9585e979b2d051f8f4_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_d4b870859d476c9585e979b2d051f8f4_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_d4b870859d476c9585e979b2d051f8f4_arg1' 'check_d4b870859d476c9585e979b2d051f8f4_arg2'; printf '\\n%s|%s\\n' 'check_d4b870859d476c9585e979b2d051f8f4_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_d4b870859d476c9585e979b2d051f8f4() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_d4b870859d476c9585e979b2d051f8f4_small_function'\"'\"' \"$1|$#\"; }; f_check_d4b870859d476c9585e979b2d051f8f4 '\"'\"'check_d4b870859d476c9585e979b2d051f8f4_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-a19f65d076c0",
+          "src_ip": "2.57.122.209",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T08:49:11.579967Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-028",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.209"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "267a227b9934af9e",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_45159e512aabfcbb63f08f33d57a614f_small_control'\"'\"' '\"'\"'check_45159e512aabfcbb63f08f33d57a614f'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_45159e512aabfcbb63f08f33d57a614f_small_control' 'check_45159e512aabfcbb63f08f33d57a614f'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_45159e512aabfcbb63f08f33d57a614f_small_math'\"'\"' \"$((737*890+32))\"'",
+        "(737*890+32",
+        "printf '\\n%s|%s\\n' 'check_45159e512aabfcbb63f08f33d57a614f_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_45159e512aabfcbb63f08f33d57a614f_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_45159e512aabfcbb63f08f33d57a614f_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_45159e512aabfcbb63f08f33d57a614f_arg1'\"'\"' '\"'\"'check_45159e512aabfcbb63f08f33d57a614f_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_45159e512aabfcbb63f08f33d57a614f_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_45159e512aabfcbb63f08f33d57a614f_arg1' 'check_45159e512aabfcbb63f08f33d57a614f_arg2'; printf '\\n%s|%s\\n' 'check_45159e512aabfcbb63f08f33d57a614f_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_45159e512aabfcbb63f08f33d57a614f() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_45159e512aabfcbb63f08f33d57a614f_small_function'\"'\"' \"$1|$#\"; }; f_check_45159e512aabfcbb63f08f33d57a614f '\"'\"'check_45159e512aabfcbb63f08f33d57a614f_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-09ca07cde28d",
+          "src_ip": "2.57.122.209",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T08:51:35.016308Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-029",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.209"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "6b0a1b9cfc37ba31",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_e4da14c69b4fb3b4c15910b5b5c7072a_small_control'\"'\"' '\"'\"'check_e4da14c69b4fb3b4c15910b5b5c7072a'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_e4da14c69b4fb3b4c15910b5b5c7072a_small_control' 'check_e4da14c69b4fb3b4c15910b5b5c7072a'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_e4da14c69b4fb3b4c15910b5b5c7072a_small_math'\"'\"' \"$((761*364+96))\"'",
+        "(761*364+96",
+        "printf '\\n%s|%s\\n' 'check_e4da14c69b4fb3b4c15910b5b5c7072a_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_e4da14c69b4fb3b4c15910b5b5c7072a_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_e4da14c69b4fb3b4c15910b5b5c7072a_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_e4da14c69b4fb3b4c15910b5b5c7072a_arg1'\"'\"' '\"'\"'check_e4da14c69b4fb3b4c15910b5b5c7072a_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_e4da14c69b4fb3b4c15910b5b5c7072a_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_e4da14c69b4fb3b4c15910b5b5c7072a_arg1' 'check_e4da14c69b4fb3b4c15910b5b5c7072a_arg2'; printf '\\n%s|%s\\n' 'check_e4da14c69b4fb3b4c15910b5b5c7072a_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_e4da14c69b4fb3b4c15910b5b5c7072a() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_e4da14c69b4fb3b4c15910b5b5c7072a_small_function'\"'\"' \"$1|$#\"; }; f_check_e4da14c69b4fb3b4c15910b5b5c7072a '\"'\"'check_e4da14c69b4fb3b4c15910b5b5c7072a_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-64c88a49b5e9",
+          "src_ip": "2.57.122.209",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T08:53:56.925345Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-030",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.209"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "a4f6d8c8da079449",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_4f260fd6263451f6b7471538a3c32064_small_control'\"'\"' '\"'\"'check_4f260fd6263451f6b7471538a3c32064'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_4f260fd6263451f6b7471538a3c32064_small_control' 'check_4f260fd6263451f6b7471538a3c32064'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_4f260fd6263451f6b7471538a3c32064_small_math'\"'\"' \"$((323*91+87))\"'",
+        "(323*91+87",
+        "printf '\\n%s|%s\\n' 'check_4f260fd6263451f6b7471538a3c32064_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_4f260fd6263451f6b7471538a3c32064_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_4f260fd6263451f6b7471538a3c32064_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_4f260fd6263451f6b7471538a3c32064_arg1'\"'\"' '\"'\"'check_4f260fd6263451f6b7471538a3c32064_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_4f260fd6263451f6b7471538a3c32064_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_4f260fd6263451f6b7471538a3c32064_arg1' 'check_4f260fd6263451f6b7471538a3c32064_arg2'; printf '\\n%s|%s\\n' 'check_4f260fd6263451f6b7471538a3c32064_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_4f260fd6263451f6b7471538a3c32064() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_4f260fd6263451f6b7471538a3c32064_small_function'\"'\"' \"$1|$#\"; }; f_check_4f260fd6263451f6b7471538a3c32064 '\"'\"'check_4f260fd6263451f6b7471538a3c32064_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-166de7f25b97",
+          "src_ip": "2.57.122.209",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T08:56:15.484296Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-031",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.209"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "0b7d12af20dd0e25",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_21b85e99f68d09bb9f79efdb3f82a80b_small_control'\"'\"' '\"'\"'check_21b85e99f68d09bb9f79efdb3f82a80b'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_21b85e99f68d09bb9f79efdb3f82a80b_small_control' 'check_21b85e99f68d09bb9f79efdb3f82a80b'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_21b85e99f68d09bb9f79efdb3f82a80b_small_math'\"'\"' \"$((657*434+97))\"'",
+        "(657*434+97",
+        "printf '\\n%s|%s\\n' 'check_21b85e99f68d09bb9f79efdb3f82a80b_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_21b85e99f68d09bb9f79efdb3f82a80b_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_21b85e99f68d09bb9f79efdb3f82a80b_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_21b85e99f68d09bb9f79efdb3f82a80b_arg1'\"'\"' '\"'\"'check_21b85e99f68d09bb9f79efdb3f82a80b_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_21b85e99f68d09bb9f79efdb3f82a80b_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_21b85e99f68d09bb9f79efdb3f82a80b_arg1' 'check_21b85e99f68d09bb9f79efdb3f82a80b_arg2'; printf '\\n%s|%s\\n' 'check_21b85e99f68d09bb9f79efdb3f82a80b_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_21b85e99f68d09bb9f79efdb3f82a80b() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_21b85e99f68d09bb9f79efdb3f82a80b_small_function'\"'\"' \"$1|$#\"; }; f_check_21b85e99f68d09bb9f79efdb3f82a80b '\"'\"'check_21b85e99f68d09bb9f79efdb3f82a80b_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-03270ff84a35",
+          "src_ip": "2.57.122.209",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T08:58:35.868085Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-032",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.209"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "7e3abca1b4f715ea",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_302dd3d381031cd37cb49c6ac10523fd_small_control'\"'\"' '\"'\"'check_302dd3d381031cd37cb49c6ac10523fd'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_302dd3d381031cd37cb49c6ac10523fd_small_control' 'check_302dd3d381031cd37cb49c6ac10523fd'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_302dd3d381031cd37cb49c6ac10523fd_small_math'\"'\"' \"$((370*714+15))\"'",
+        "(370*714+15",
+        "printf '\\n%s|%s\\n' 'check_302dd3d381031cd37cb49c6ac10523fd_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_302dd3d381031cd37cb49c6ac10523fd_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_302dd3d381031cd37cb49c6ac10523fd_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_302dd3d381031cd37cb49c6ac10523fd_arg1'\"'\"' '\"'\"'check_302dd3d381031cd37cb49c6ac10523fd_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_302dd3d381031cd37cb49c6ac10523fd_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_302dd3d381031cd37cb49c6ac10523fd_arg1' 'check_302dd3d381031cd37cb49c6ac10523fd_arg2'; printf '\\n%s|%s\\n' 'check_302dd3d381031cd37cb49c6ac10523fd_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_302dd3d381031cd37cb49c6ac10523fd() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_302dd3d381031cd37cb49c6ac10523fd_small_function'\"'\"' \"$1|$#\"; }; f_check_302dd3d381031cd37cb49c6ac10523fd '\"'\"'check_302dd3d381031cd37cb49c6ac10523fd_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-2bbf5d126846",
+          "src_ip": "2.57.122.209",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T09:00:47.205288Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-033",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.168"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "a76427d9dd66cc0d",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_7e256607aee248e69a67aabdc2518ed0_small_control'\"'\"' '\"'\"'check_7e256607aee248e69a67aabdc2518ed0'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_7e256607aee248e69a67aabdc2518ed0_small_control' 'check_7e256607aee248e69a67aabdc2518ed0'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_7e256607aee248e69a67aabdc2518ed0_small_math'\"'\"' \"$((390*354+90))\"'",
+        "(390*354+90",
+        "printf '\\n%s|%s\\n' 'check_7e256607aee248e69a67aabdc2518ed0_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_7e256607aee248e69a67aabdc2518ed0_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_7e256607aee248e69a67aabdc2518ed0_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_7e256607aee248e69a67aabdc2518ed0_arg1'\"'\"' '\"'\"'check_7e256607aee248e69a67aabdc2518ed0_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_7e256607aee248e69a67aabdc2518ed0_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_7e256607aee248e69a67aabdc2518ed0_arg1' 'check_7e256607aee248e69a67aabdc2518ed0_arg2'; printf '\\n%s|%s\\n' 'check_7e256607aee248e69a67aabdc2518ed0_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_7e256607aee248e69a67aabdc2518ed0() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_7e256607aee248e69a67aabdc2518ed0_small_function'\"'\"' \"$1|$#\"; }; f_check_7e256607aee248e69a67aabdc2518ed0 '\"'\"'check_7e256607aee248e69a67aabdc2518ed0_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-06beff6dcdfd",
+          "src_ip": "2.57.122.168",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T10:19:29.523756Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-034",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.168"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "74bc011edf4656fe",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_b1e68baaac8d889027f5748b4b978fc2_small_control'\"'\"' '\"'\"'check_b1e68baaac8d889027f5748b4b978fc2'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_b1e68baaac8d889027f5748b4b978fc2_small_control' 'check_b1e68baaac8d889027f5748b4b978fc2'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_b1e68baaac8d889027f5748b4b978fc2_small_math'\"'\"' \"$((678*79+50))\"'",
+        "(678*79+50",
+        "printf '\\n%s|%s\\n' 'check_b1e68baaac8d889027f5748b4b978fc2_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_b1e68baaac8d889027f5748b4b978fc2_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_b1e68baaac8d889027f5748b4b978fc2_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_b1e68baaac8d889027f5748b4b978fc2_arg1'\"'\"' '\"'\"'check_b1e68baaac8d889027f5748b4b978fc2_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_b1e68baaac8d889027f5748b4b978fc2_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_b1e68baaac8d889027f5748b4b978fc2_arg1' 'check_b1e68baaac8d889027f5748b4b978fc2_arg2'; printf '\\n%s|%s\\n' 'check_b1e68baaac8d889027f5748b4b978fc2_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_b1e68baaac8d889027f5748b4b978fc2() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_b1e68baaac8d889027f5748b4b978fc2_small_function'\"'\"' \"$1|$#\"; }; f_check_b1e68baaac8d889027f5748b4b978fc2 '\"'\"'check_b1e68baaac8d889027f5748b4b978fc2_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-23d1fd7452a3",
+          "src_ip": "2.57.122.168",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T10:21:50.090724Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-035",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.168"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "b6e2c2f7461e73de",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_81af2065df03235921df29a639557cbf_small_control'\"'\"' '\"'\"'check_81af2065df03235921df29a639557cbf'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_81af2065df03235921df29a639557cbf_small_control' 'check_81af2065df03235921df29a639557cbf'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_81af2065df03235921df29a639557cbf_small_math'\"'\"' \"$((299*366+26))\"'",
+        "(299*366+26",
+        "printf '\\n%s|%s\\n' 'check_81af2065df03235921df29a639557cbf_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_81af2065df03235921df29a639557cbf_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_81af2065df03235921df29a639557cbf_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_81af2065df03235921df29a639557cbf_arg1'\"'\"' '\"'\"'check_81af2065df03235921df29a639557cbf_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_81af2065df03235921df29a639557cbf_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_81af2065df03235921df29a639557cbf_arg1' 'check_81af2065df03235921df29a639557cbf_arg2'; printf '\\n%s|%s\\n' 'check_81af2065df03235921df29a639557cbf_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_81af2065df03235921df29a639557cbf() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_81af2065df03235921df29a639557cbf_small_function'\"'\"' \"$1|$#\"; }; f_check_81af2065df03235921df29a639557cbf '\"'\"'check_81af2065df03235921df29a639557cbf_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-d5417c04e76b",
+          "src_ip": "2.57.122.168",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T10:24:05.061765Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-036",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.168"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "d07c2f4cda08a79d",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_7457c4e45de171f325c2d6f9c3a05bb6_small_control'\"'\"' '\"'\"'check_7457c4e45de171f325c2d6f9c3a05bb6'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_7457c4e45de171f325c2d6f9c3a05bb6_small_control' 'check_7457c4e45de171f325c2d6f9c3a05bb6'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_7457c4e45de171f325c2d6f9c3a05bb6_small_math'\"'\"' \"$((871*855+5))\"'",
+        "(871*855+5",
+        "printf '\\n%s|%s\\n' 'check_7457c4e45de171f325c2d6f9c3a05bb6_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_7457c4e45de171f325c2d6f9c3a05bb6_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_7457c4e45de171f325c2d6f9c3a05bb6_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_7457c4e45de171f325c2d6f9c3a05bb6_arg1'\"'\"' '\"'\"'check_7457c4e45de171f325c2d6f9c3a05bb6_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_7457c4e45de171f325c2d6f9c3a05bb6_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_7457c4e45de171f325c2d6f9c3a05bb6_arg1' 'check_7457c4e45de171f325c2d6f9c3a05bb6_arg2'; printf '\\n%s|%s\\n' 'check_7457c4e45de171f325c2d6f9c3a05bb6_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_7457c4e45de171f325c2d6f9c3a05bb6() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_7457c4e45de171f325c2d6f9c3a05bb6_small_function'\"'\"' \"$1|$#\"; }; f_check_7457c4e45de171f325c2d6f9c3a05bb6 '\"'\"'check_7457c4e45de171f325c2d6f9c3a05bb6_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-c4714460ab27",
+          "src_ip": "2.57.122.168",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T10:26:21.363889Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-037",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.168"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "991a830d6430cf33",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_0b02f530808f596af199ac69ffee3811_small_control'\"'\"' '\"'\"'check_0b02f530808f596af199ac69ffee3811'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_0b02f530808f596af199ac69ffee3811_small_control' 'check_0b02f530808f596af199ac69ffee3811'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_0b02f530808f596af199ac69ffee3811_small_math'\"'\"' \"$((825*336+6))\"'",
+        "(825*336+6",
+        "printf '\\n%s|%s\\n' 'check_0b02f530808f596af199ac69ffee3811_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_0b02f530808f596af199ac69ffee3811_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_0b02f530808f596af199ac69ffee3811_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_0b02f530808f596af199ac69ffee3811_arg1'\"'\"' '\"'\"'check_0b02f530808f596af199ac69ffee3811_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_0b02f530808f596af199ac69ffee3811_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_0b02f530808f596af199ac69ffee3811_arg1' 'check_0b02f530808f596af199ac69ffee3811_arg2'; printf '\\n%s|%s\\n' 'check_0b02f530808f596af199ac69ffee3811_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_0b02f530808f596af199ac69ffee3811() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_0b02f530808f596af199ac69ffee3811_small_function'\"'\"' \"$1|$#\"; }; f_check_0b02f530808f596af199ac69ffee3811 '\"'\"'check_0b02f530808f596af199ac69ffee3811_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-424f77a4090c",
+          "src_ip": "2.57.122.168",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T10:28:32.831327Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-038",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.168"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "b865fb2c2f98cbd3",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_1bbab0d596f02943ae1b2003a13fe893_small_control'\"'\"' '\"'\"'check_1bbab0d596f02943ae1b2003a13fe893'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_1bbab0d596f02943ae1b2003a13fe893_small_control' 'check_1bbab0d596f02943ae1b2003a13fe893'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_1bbab0d596f02943ae1b2003a13fe893_small_math'\"'\"' \"$((120*675+18))\"'",
+        "(120*675+18",
+        "printf '\\n%s|%s\\n' 'check_1bbab0d596f02943ae1b2003a13fe893_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_1bbab0d596f02943ae1b2003a13fe893_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_1bbab0d596f02943ae1b2003a13fe893_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_1bbab0d596f02943ae1b2003a13fe893_arg1'\"'\"' '\"'\"'check_1bbab0d596f02943ae1b2003a13fe893_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_1bbab0d596f02943ae1b2003a13fe893_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_1bbab0d596f02943ae1b2003a13fe893_arg1' 'check_1bbab0d596f02943ae1b2003a13fe893_arg2'; printf '\\n%s|%s\\n' 'check_1bbab0d596f02943ae1b2003a13fe893_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_1bbab0d596f02943ae1b2003a13fe893() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_1bbab0d596f02943ae1b2003a13fe893_small_function'\"'\"' \"$1|$#\"; }; f_check_1bbab0d596f02943ae1b2003a13fe893 '\"'\"'check_1bbab0d596f02943ae1b2003a13fe893_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-6ff520df05aa",
+          "src_ip": "2.57.122.168",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T10:30:45.512080Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-039",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.168"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "3d7f81018ccab39a",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_9a5c65ddcc8d1e7458a785b48fb46a33_small_control'\"'\"' '\"'\"'check_9a5c65ddcc8d1e7458a785b48fb46a33'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_9a5c65ddcc8d1e7458a785b48fb46a33_small_control' 'check_9a5c65ddcc8d1e7458a785b48fb46a33'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_9a5c65ddcc8d1e7458a785b48fb46a33_small_math'\"'\"' \"$((634*312+38))\"'",
+        "(634*312+38",
+        "printf '\\n%s|%s\\n' 'check_9a5c65ddcc8d1e7458a785b48fb46a33_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_9a5c65ddcc8d1e7458a785b48fb46a33_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_9a5c65ddcc8d1e7458a785b48fb46a33_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_9a5c65ddcc8d1e7458a785b48fb46a33_arg1'\"'\"' '\"'\"'check_9a5c65ddcc8d1e7458a785b48fb46a33_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_9a5c65ddcc8d1e7458a785b48fb46a33_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_9a5c65ddcc8d1e7458a785b48fb46a33_arg1' 'check_9a5c65ddcc8d1e7458a785b48fb46a33_arg2'; printf '\\n%s|%s\\n' 'check_9a5c65ddcc8d1e7458a785b48fb46a33_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_9a5c65ddcc8d1e7458a785b48fb46a33() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_9a5c65ddcc8d1e7458a785b48fb46a33_small_function'\"'\"' \"$1|$#\"; }; f_check_9a5c65ddcc8d1e7458a785b48fb46a33 '\"'\"'check_9a5c65ddcc8d1e7458a785b48fb46a33_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-8155342605b5",
+          "src_ip": "2.57.122.168",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T10:32:58.643147Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-040",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.168"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "6d260b79be964453",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_69b4d0c3a0acadef4d3e98420924b1ec_small_control'\"'\"' '\"'\"'check_69b4d0c3a0acadef4d3e98420924b1ec'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_69b4d0c3a0acadef4d3e98420924b1ec_small_control' 'check_69b4d0c3a0acadef4d3e98420924b1ec'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_69b4d0c3a0acadef4d3e98420924b1ec_small_math'\"'\"' \"$((142*921+95))\"'",
+        "(142*921+95",
+        "printf '\\n%s|%s\\n' 'check_69b4d0c3a0acadef4d3e98420924b1ec_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_69b4d0c3a0acadef4d3e98420924b1ec_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_69b4d0c3a0acadef4d3e98420924b1ec_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_69b4d0c3a0acadef4d3e98420924b1ec_arg1'\"'\"' '\"'\"'check_69b4d0c3a0acadef4d3e98420924b1ec_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_69b4d0c3a0acadef4d3e98420924b1ec_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_69b4d0c3a0acadef4d3e98420924b1ec_arg1' 'check_69b4d0c3a0acadef4d3e98420924b1ec_arg2'; printf '\\n%s|%s\\n' 'check_69b4d0c3a0acadef4d3e98420924b1ec_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_69b4d0c3a0acadef4d3e98420924b1ec() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_69b4d0c3a0acadef4d3e98420924b1ec_small_function'\"'\"' \"$1|$#\"; }; f_check_69b4d0c3a0acadef4d3e98420924b1ec '\"'\"'check_69b4d0c3a0acadef4d3e98420924b1ec_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-b46a6d0ccbda",
+          "src_ip": "2.57.122.168",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T10:35:08.986295Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-041",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.168"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "b85477745bc65205",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_7e899fe095001ec5e3adc86e6abcf892_small_control'\"'\"' '\"'\"'check_7e899fe095001ec5e3adc86e6abcf892'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_7e899fe095001ec5e3adc86e6abcf892_small_control' 'check_7e899fe095001ec5e3adc86e6abcf892'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_7e899fe095001ec5e3adc86e6abcf892_small_math'\"'\"' \"$((490*298+93))\"'",
+        "(490*298+93",
+        "printf '\\n%s|%s\\n' 'check_7e899fe095001ec5e3adc86e6abcf892_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_7e899fe095001ec5e3adc86e6abcf892_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_7e899fe095001ec5e3adc86e6abcf892_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_7e899fe095001ec5e3adc86e6abcf892_arg1'\"'\"' '\"'\"'check_7e899fe095001ec5e3adc86e6abcf892_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_7e899fe095001ec5e3adc86e6abcf892_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_7e899fe095001ec5e3adc86e6abcf892_arg1' 'check_7e899fe095001ec5e3adc86e6abcf892_arg2'; printf '\\n%s|%s\\n' 'check_7e899fe095001ec5e3adc86e6abcf892_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_7e899fe095001ec5e3adc86e6abcf892() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_7e899fe095001ec5e3adc86e6abcf892_small_function'\"'\"' \"$1|$#\"; }; f_check_7e899fe095001ec5e3adc86e6abcf892 '\"'\"'check_7e899fe095001ec5e3adc86e6abcf892_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-156b74765017",
+          "src_ip": "2.57.122.168",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T10:37:18.603166Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-042",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.168"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "5f32609373d0a348",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_3397da899e11bec36513fb4cc71ea00e_small_control'\"'\"' '\"'\"'check_3397da899e11bec36513fb4cc71ea00e'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_3397da899e11bec36513fb4cc71ea00e_small_control' 'check_3397da899e11bec36513fb4cc71ea00e'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_3397da899e11bec36513fb4cc71ea00e_small_math'\"'\"' \"$((247*450+16))\"'",
+        "(247*450+16",
+        "printf '\\n%s|%s\\n' 'check_3397da899e11bec36513fb4cc71ea00e_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_3397da899e11bec36513fb4cc71ea00e_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_3397da899e11bec36513fb4cc71ea00e_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_3397da899e11bec36513fb4cc71ea00e_arg1'\"'\"' '\"'\"'check_3397da899e11bec36513fb4cc71ea00e_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_3397da899e11bec36513fb4cc71ea00e_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_3397da899e11bec36513fb4cc71ea00e_arg1' 'check_3397da899e11bec36513fb4cc71ea00e_arg2'; printf '\\n%s|%s\\n' 'check_3397da899e11bec36513fb4cc71ea00e_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_3397da899e11bec36513fb4cc71ea00e() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_3397da899e11bec36513fb4cc71ea00e_small_function'\"'\"' \"$1|$#\"; }; f_check_3397da899e11bec36513fb4cc71ea00e '\"'\"'check_3397da899e11bec36513fb4cc71ea00e_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-91b3dd7a7e6f",
+          "src_ip": "2.57.122.168",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T10:39:27.048390Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-043",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.168"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "dce5b2dc5d3b3dee",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f43f31802c7297d5968dc6c8216239aa_small_control'\"'\"' '\"'\"'check_f43f31802c7297d5968dc6c8216239aa'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_f43f31802c7297d5968dc6c8216239aa_small_control' 'check_f43f31802c7297d5968dc6c8216239aa'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f43f31802c7297d5968dc6c8216239aa_small_math'\"'\"' \"$((714*781+60))\"'",
+        "(714*781+60",
+        "printf '\\n%s|%s\\n' 'check_f43f31802c7297d5968dc6c8216239aa_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f43f31802c7297d5968dc6c8216239aa_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_f43f31802c7297d5968dc6c8216239aa_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_f43f31802c7297d5968dc6c8216239aa_arg1'\"'\"' '\"'\"'check_f43f31802c7297d5968dc6c8216239aa_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f43f31802c7297d5968dc6c8216239aa_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_f43f31802c7297d5968dc6c8216239aa_arg1' 'check_f43f31802c7297d5968dc6c8216239aa_arg2'; printf '\\n%s|%s\\n' 'check_f43f31802c7297d5968dc6c8216239aa_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_f43f31802c7297d5968dc6c8216239aa() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f43f31802c7297d5968dc6c8216239aa_small_function'\"'\"' \"$1|$#\"; }; f_check_f43f31802c7297d5968dc6c8216239aa '\"'\"'check_f43f31802c7297d5968dc6c8216239aa_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-eaf120d89c93",
+          "src_ip": "2.57.122.168",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T10:41:36.381202Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-044",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.168"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "31fd421ec168f693",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_87d3cc9937fa29c18ada7854ccb4668e_small_control'\"'\"' '\"'\"'check_87d3cc9937fa29c18ada7854ccb4668e'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_87d3cc9937fa29c18ada7854ccb4668e_small_control' 'check_87d3cc9937fa29c18ada7854ccb4668e'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_87d3cc9937fa29c18ada7854ccb4668e_small_math'\"'\"' \"$((874*846+46))\"'",
+        "(874*846+46",
+        "printf '\\n%s|%s\\n' 'check_87d3cc9937fa29c18ada7854ccb4668e_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_87d3cc9937fa29c18ada7854ccb4668e_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_87d3cc9937fa29c18ada7854ccb4668e_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_87d3cc9937fa29c18ada7854ccb4668e_arg1'\"'\"' '\"'\"'check_87d3cc9937fa29c18ada7854ccb4668e_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_87d3cc9937fa29c18ada7854ccb4668e_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_87d3cc9937fa29c18ada7854ccb4668e_arg1' 'check_87d3cc9937fa29c18ada7854ccb4668e_arg2'; printf '\\n%s|%s\\n' 'check_87d3cc9937fa29c18ada7854ccb4668e_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_87d3cc9937fa29c18ada7854ccb4668e() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_87d3cc9937fa29c18ada7854ccb4668e_small_function'\"'\"' \"$1|$#\"; }; f_check_87d3cc9937fa29c18ada7854ccb4668e '\"'\"'check_87d3cc9937fa29c18ada7854ccb4668e_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-bcbb8a9c8d35",
+          "src_ip": "2.57.122.168",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T10:43:46.582282Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-045",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.168"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "ff6347985838fbbb",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_6a1f379ea41dd74fd24bc6de62ad615d_small_control'\"'\"' '\"'\"'check_6a1f379ea41dd74fd24bc6de62ad615d'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_6a1f379ea41dd74fd24bc6de62ad615d_small_control' 'check_6a1f379ea41dd74fd24bc6de62ad615d'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_6a1f379ea41dd74fd24bc6de62ad615d_small_math'\"'\"' \"$((249*365+8))\"'",
+        "(249*365+8",
+        "printf '\\n%s|%s\\n' 'check_6a1f379ea41dd74fd24bc6de62ad615d_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_6a1f379ea41dd74fd24bc6de62ad615d_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_6a1f379ea41dd74fd24bc6de62ad615d_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_6a1f379ea41dd74fd24bc6de62ad615d_arg1'\"'\"' '\"'\"'check_6a1f379ea41dd74fd24bc6de62ad615d_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_6a1f379ea41dd74fd24bc6de62ad615d_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_6a1f379ea41dd74fd24bc6de62ad615d_arg1' 'check_6a1f379ea41dd74fd24bc6de62ad615d_arg2'; printf '\\n%s|%s\\n' 'check_6a1f379ea41dd74fd24bc6de62ad615d_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_6a1f379ea41dd74fd24bc6de62ad615d() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_6a1f379ea41dd74fd24bc6de62ad615d_small_function'\"'\"' \"$1|$#\"; }; f_check_6a1f379ea41dd74fd24bc6de62ad615d '\"'\"'check_6a1f379ea41dd74fd24bc6de62ad615d_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-0d3bbf804b6e",
+          "src_ip": "2.57.122.168",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T10:45:55.481486Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-046",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.168"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "c4c06d05a8962603",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_7ad62d97743b45fbcff7d6af13afb6c2_small_control'\"'\"' '\"'\"'check_7ad62d97743b45fbcff7d6af13afb6c2'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_7ad62d97743b45fbcff7d6af13afb6c2_small_control' 'check_7ad62d97743b45fbcff7d6af13afb6c2'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_7ad62d97743b45fbcff7d6af13afb6c2_small_math'\"'\"' \"$((540*771+19))\"'",
+        "(540*771+19",
+        "printf '\\n%s|%s\\n' 'check_7ad62d97743b45fbcff7d6af13afb6c2_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_7ad62d97743b45fbcff7d6af13afb6c2_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_7ad62d97743b45fbcff7d6af13afb6c2_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_7ad62d97743b45fbcff7d6af13afb6c2_arg1'\"'\"' '\"'\"'check_7ad62d97743b45fbcff7d6af13afb6c2_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_7ad62d97743b45fbcff7d6af13afb6c2_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_7ad62d97743b45fbcff7d6af13afb6c2_arg1' 'check_7ad62d97743b45fbcff7d6af13afb6c2_arg2'; printf '\\n%s|%s\\n' 'check_7ad62d97743b45fbcff7d6af13afb6c2_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_7ad62d97743b45fbcff7d6af13afb6c2() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_7ad62d97743b45fbcff7d6af13afb6c2_small_function'\"'\"' \"$1|$#\"; }; f_check_7ad62d97743b45fbcff7d6af13afb6c2 '\"'\"'check_7ad62d97743b45fbcff7d6af13afb6c2_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-7d2d2747ad9c",
+          "src_ip": "2.57.122.168",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T10:48:01.567071Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-047",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.168"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "7ba4611e9a299ef3",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8e3a9b19d7900a2b96702c765f36dd42_small_control'\"'\"' '\"'\"'check_8e3a9b19d7900a2b96702c765f36dd42'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_8e3a9b19d7900a2b96702c765f36dd42_small_control' 'check_8e3a9b19d7900a2b96702c765f36dd42'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8e3a9b19d7900a2b96702c765f36dd42_small_math'\"'\"' \"$((519*66+36))\"'",
+        "(519*66+36",
+        "printf '\\n%s|%s\\n' 'check_8e3a9b19d7900a2b96702c765f36dd42_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8e3a9b19d7900a2b96702c765f36dd42_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_8e3a9b19d7900a2b96702c765f36dd42_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_8e3a9b19d7900a2b96702c765f36dd42_arg1'\"'\"' '\"'\"'check_8e3a9b19d7900a2b96702c765f36dd42_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8e3a9b19d7900a2b96702c765f36dd42_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_8e3a9b19d7900a2b96702c765f36dd42_arg1' 'check_8e3a9b19d7900a2b96702c765f36dd42_arg2'; printf '\\n%s|%s\\n' 'check_8e3a9b19d7900a2b96702c765f36dd42_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_8e3a9b19d7900a2b96702c765f36dd42() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8e3a9b19d7900a2b96702c765f36dd42_small_function'\"'\"' \"$1|$#\"; }; f_check_8e3a9b19d7900a2b96702c765f36dd42 '\"'\"'check_8e3a9b19d7900a2b96702c765f36dd42_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-49310488c6fd",
+          "src_ip": "2.57.122.168",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T10:50:07.451355Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-048",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.168"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "ad9a9920c34a19f1",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_44e2a9ae265bb1e7134b447a535b1d23_small_control'\"'\"' '\"'\"'check_44e2a9ae265bb1e7134b447a535b1d23'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_44e2a9ae265bb1e7134b447a535b1d23_small_control' 'check_44e2a9ae265bb1e7134b447a535b1d23'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_44e2a9ae265bb1e7134b447a535b1d23_small_math'\"'\"' \"$((686*826+78))\"'",
+        "(686*826+78",
+        "printf '\\n%s|%s\\n' 'check_44e2a9ae265bb1e7134b447a535b1d23_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_44e2a9ae265bb1e7134b447a535b1d23_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_44e2a9ae265bb1e7134b447a535b1d23_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_44e2a9ae265bb1e7134b447a535b1d23_arg1'\"'\"' '\"'\"'check_44e2a9ae265bb1e7134b447a535b1d23_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_44e2a9ae265bb1e7134b447a535b1d23_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_44e2a9ae265bb1e7134b447a535b1d23_arg1' 'check_44e2a9ae265bb1e7134b447a535b1d23_arg2'; printf '\\n%s|%s\\n' 'check_44e2a9ae265bb1e7134b447a535b1d23_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_44e2a9ae265bb1e7134b447a535b1d23() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_44e2a9ae265bb1e7134b447a535b1d23_small_function'\"'\"' \"$1|$#\"; }; f_check_44e2a9ae265bb1e7134b447a535b1d23 '\"'\"'check_44e2a9ae265bb1e7134b447a535b1d23_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-a47c9a512e89",
+          "src_ip": "2.57.122.168",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T10:54:21.428825Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-049",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.168"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "137b3ceed62eda62",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_75ea2753b4a4e131dc1001a7b27f31dc_small_control'\"'\"' '\"'\"'check_75ea2753b4a4e131dc1001a7b27f31dc'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_75ea2753b4a4e131dc1001a7b27f31dc_small_control' 'check_75ea2753b4a4e131dc1001a7b27f31dc'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_75ea2753b4a4e131dc1001a7b27f31dc_small_math'\"'\"' \"$((277*158+20))\"'",
+        "(277*158+20",
+        "printf '\\n%s|%s\\n' 'check_75ea2753b4a4e131dc1001a7b27f31dc_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_75ea2753b4a4e131dc1001a7b27f31dc_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_75ea2753b4a4e131dc1001a7b27f31dc_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_75ea2753b4a4e131dc1001a7b27f31dc_arg1'\"'\"' '\"'\"'check_75ea2753b4a4e131dc1001a7b27f31dc_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_75ea2753b4a4e131dc1001a7b27f31dc_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_75ea2753b4a4e131dc1001a7b27f31dc_arg1' 'check_75ea2753b4a4e131dc1001a7b27f31dc_arg2'; printf '\\n%s|%s\\n' 'check_75ea2753b4a4e131dc1001a7b27f31dc_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_75ea2753b4a4e131dc1001a7b27f31dc() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_75ea2753b4a4e131dc1001a7b27f31dc_small_function'\"'\"' \"$1|$#\"; }; f_check_75ea2753b4a4e131dc1001a7b27f31dc '\"'\"'check_75ea2753b4a4e131dc1001a7b27f31dc_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-e85745d3e089",
+          "src_ip": "2.57.122.168",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T10:56:29.313776Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-050",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.168"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "78ccdfc644182e6b",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_6501f7fe27fb0b95cb97094f8a54beb8_small_control'\"'\"' '\"'\"'check_6501f7fe27fb0b95cb97094f8a54beb8'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_6501f7fe27fb0b95cb97094f8a54beb8_small_control' 'check_6501f7fe27fb0b95cb97094f8a54beb8'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_6501f7fe27fb0b95cb97094f8a54beb8_small_math'\"'\"' \"$((933*63+56))\"'",
+        "(933*63+56",
+        "printf '\\n%s|%s\\n' 'check_6501f7fe27fb0b95cb97094f8a54beb8_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_6501f7fe27fb0b95cb97094f8a54beb8_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_6501f7fe27fb0b95cb97094f8a54beb8_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_6501f7fe27fb0b95cb97094f8a54beb8_arg1'\"'\"' '\"'\"'check_6501f7fe27fb0b95cb97094f8a54beb8_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_6501f7fe27fb0b95cb97094f8a54beb8_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_6501f7fe27fb0b95cb97094f8a54beb8_arg1' 'check_6501f7fe27fb0b95cb97094f8a54beb8_arg2'; printf '\\n%s|%s\\n' 'check_6501f7fe27fb0b95cb97094f8a54beb8_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_6501f7fe27fb0b95cb97094f8a54beb8() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_6501f7fe27fb0b95cb97094f8a54beb8_small_function'\"'\"' \"$1|$#\"; }; f_check_6501f7fe27fb0b95cb97094f8a54beb8 '\"'\"'check_6501f7fe27fb0b95cb97094f8a54beb8_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-c692ab0240ce",
+          "src_ip": "2.57.122.168",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T10:58:38.228987Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-051",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.168"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "4fc0f000f0d7d94b",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_b0d5ecd1b4aea6f0e6470bf5958d026b_small_control'\"'\"' '\"'\"'check_b0d5ecd1b4aea6f0e6470bf5958d026b'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_b0d5ecd1b4aea6f0e6470bf5958d026b_small_control' 'check_b0d5ecd1b4aea6f0e6470bf5958d026b'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_b0d5ecd1b4aea6f0e6470bf5958d026b_small_math'\"'\"' \"$((405*175+68))\"'",
+        "(405*175+68",
+        "printf '\\n%s|%s\\n' 'check_b0d5ecd1b4aea6f0e6470bf5958d026b_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_b0d5ecd1b4aea6f0e6470bf5958d026b_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_b0d5ecd1b4aea6f0e6470bf5958d026b_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_b0d5ecd1b4aea6f0e6470bf5958d026b_arg1'\"'\"' '\"'\"'check_b0d5ecd1b4aea6f0e6470bf5958d026b_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_b0d5ecd1b4aea6f0e6470bf5958d026b_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_b0d5ecd1b4aea6f0e6470bf5958d026b_arg1' 'check_b0d5ecd1b4aea6f0e6470bf5958d026b_arg2'; printf '\\n%s|%s\\n' 'check_b0d5ecd1b4aea6f0e6470bf5958d026b_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_b0d5ecd1b4aea6f0e6470bf5958d026b() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_b0d5ecd1b4aea6f0e6470bf5958d026b_small_function'\"'\"' \"$1|$#\"; }; f_check_b0d5ecd1b4aea6f0e6470bf5958d026b '\"'\"'check_b0d5ecd1b4aea6f0e6470bf5958d026b_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-835a8f48ef4d",
+          "src_ip": "2.57.122.168",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T11:00:50.102775Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-052",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.168"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "52c1c35a8c974c26",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_71be5ee88a6c62e0d108986d20ce199d_small_control'\"'\"' '\"'\"'check_71be5ee88a6c62e0d108986d20ce199d'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_71be5ee88a6c62e0d108986d20ce199d_small_control' 'check_71be5ee88a6c62e0d108986d20ce199d'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_71be5ee88a6c62e0d108986d20ce199d_small_math'\"'\"' \"$((206*513+19))\"'",
+        "(206*513+19",
+        "printf '\\n%s|%s\\n' 'check_71be5ee88a6c62e0d108986d20ce199d_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_71be5ee88a6c62e0d108986d20ce199d_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_71be5ee88a6c62e0d108986d20ce199d_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_71be5ee88a6c62e0d108986d20ce199d_arg1'\"'\"' '\"'\"'check_71be5ee88a6c62e0d108986d20ce199d_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_71be5ee88a6c62e0d108986d20ce199d_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_71be5ee88a6c62e0d108986d20ce199d_arg1' 'check_71be5ee88a6c62e0d108986d20ce199d_arg2'; printf '\\n%s|%s\\n' 'check_71be5ee88a6c62e0d108986d20ce199d_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_71be5ee88a6c62e0d108986d20ce199d() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_71be5ee88a6c62e0d108986d20ce199d_small_function'\"'\"' \"$1|$#\"; }; f_check_71be5ee88a6c62e0d108986d20ce199d '\"'\"'check_71be5ee88a6c62e0d108986d20ce199d_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-94654ba065e1",
+          "src_ip": "2.57.122.168",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T11:03:00.236557Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-053",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "2.57.122.168"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "a0555829e8647994",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_18ab52c9cac7dacd16bfa8336b1008b7_small_control'\"'\"' '\"'\"'check_18ab52c9cac7dacd16bfa8336b1008b7'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_18ab52c9cac7dacd16bfa8336b1008b7_small_control' 'check_18ab52c9cac7dacd16bfa8336b1008b7'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_18ab52c9cac7dacd16bfa8336b1008b7_small_math'\"'\"' \"$((334*383+11))\"'",
+        "(334*383+11",
+        "printf '\\n%s|%s\\n' 'check_18ab52c9cac7dacd16bfa8336b1008b7_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_18ab52c9cac7dacd16bfa8336b1008b7_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_18ab52c9cac7dacd16bfa8336b1008b7_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_18ab52c9cac7dacd16bfa8336b1008b7_arg1'\"'\"' '\"'\"'check_18ab52c9cac7dacd16bfa8336b1008b7_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_18ab52c9cac7dacd16bfa8336b1008b7_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_18ab52c9cac7dacd16bfa8336b1008b7_arg1' 'check_18ab52c9cac7dacd16bfa8336b1008b7_arg2'; printf '\\n%s|%s\\n' 'check_18ab52c9cac7dacd16bfa8336b1008b7_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_18ab52c9cac7dacd16bfa8336b1008b7() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_18ab52c9cac7dacd16bfa8336b1008b7_small_function'\"'\"' \"$1|$#\"; }; f_check_18ab52c9cac7dacd16bfa8336b1008b7 '\"'\"'check_18ab52c9cac7dacd16bfa8336b1008b7_function_value'\"'\"''"
+      ],
+      "members": [
+        {
+          "session_id": "IR-c721625e5669",
+          "src_ip": "2.57.122.168",
+          "country": "RO",
+          "isp": "TECHOFF SRV LIMITED",
+          "command_count": 44,
+          "timestamp": "2026-11-07T11:04:59.897085Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-054",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "157.254.222.237"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "1e54f3384b81345d",
+      "ttps": [
+        {
+          "id": "T1059.004",
+          "name": "Unix Shell"
+        },
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        },
+        {
+          "id": "T1592",
+          "name": "Gather Victim Host Info"
+        }
+      ],
+      "representative_commands": [
+        "/bin/bash -c 'echo H=$(hostname); echo D=$(date +%s); echo M=$(cat /proc/mounts 2>/dev/null|wc -l)'",
+        "hostname",
+        "date +%s",
+        "cat /proc/mounts 2 > /dev/null | wc -l",
+        "echo H=nas-storage-01; echo D=Sat Nov 07 05:55:14 UTC 2026; echo M="
+      ],
+      "members": [
+        {
+          "session_id": "IR-130ed3773b5b",
+          "src_ip": "157.254.222.237",
+          "country": "GB",
+          "isp": "Eximia Holdings Limited",
+          "command_count": 5,
+          "timestamp": "2026-11-07T05:55:12.336981Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-055",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "157.254.222.237"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "65c42b3ea91cc620",
+      "ttps": [
+        {
+          "id": "T1059.004",
+          "name": "Unix Shell"
+        },
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        }
+      ],
+      "representative_commands": [
+        "/bin/bash -c 'echo H=$(hostname); echo A=$(uname -m); echo D=$(date +%s)'",
+        "hostname",
+        "uname -m",
+        "date +%s",
+        "echo H=nas-storage-01; echo A=armv7l; echo D=Sat Nov 07 06:20:27 UTC 2026"
+      ],
+      "members": [
+        {
+          "session_id": "IR-df0209b2af99",
+          "src_ip": "157.254.222.237",
+          "country": "GB",
+          "isp": "Eximia Holdings Limited",
+          "command_count": 5,
+          "timestamp": "2026-11-07T06:20:26.265298Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-056",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
       "session_count": 3,
       "unique_ips": [
-        "138.124.124.212",
-        "150.241.96.65",
-        "2.26.255.47"
+        "147.45.77.223",
+        "45.137.81.177"
       ],
-      "unique_ip_count": 3,
+      "unique_ip_count": 2,
       "sequence_hash": "bf1c9b4a861be0d0",
       "ttps": [],
       "representative_commands": [
@@ -291,33 +2357,115 @@
       ],
       "members": [
         {
-          "session_id": "IR-ed952f32e3ec",
-          "src_ip": "2.26.255.47",
-          "country": "PL",
-          "isp": "NODE HOST LIMITED",
+          "session_id": "IR-aeb52be209cb",
+          "src_ip": "45.137.81.177",
+          "country": "FI",
+          "isp": "RapidSeedbox Ltd",
           "command_count": 4,
-          "timestamp": "2026-11-07T01:29:34.947490Z"
+          "timestamp": "2026-11-07T09:54:40.149339Z"
         },
         {
-          "session_id": "IR-e69fd80e2d60",
-          "src_ip": "150.241.96.65",
-          "country": "DE",
-          "isp": "Frankfurt, Germany",
-          "command_count": 4,
-          "timestamp": "2026-11-07T01:31:47.902464Z"
-        },
-        {
-          "session_id": "IR-f83dfcb17c16",
-          "src_ip": "138.124.124.212",
+          "session_id": "IR-be674290cc29",
+          "src_ip": "147.45.77.223",
           "country": "FI",
           "isp": "AEZA GROUP LLC",
           "command_count": 4,
-          "timestamp": "2026-11-07T01:32:43.151716Z"
+          "timestamp": "2026-11-07T09:57:36.339789Z"
         }
       ]
     },
     {
-      "cluster_id": "CLU-008",
+      "cluster_id": "CLU-057",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "45.79.207.181"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "381901b5c7799c06",
+      "ttps": [],
+      "representative_commands": [
+        "Accept: */*",
+        "Accept-Encoding: gzip",
+        "User-Agent: Mozilla/5.0 zgrab/0.x"
+      ],
+      "members": [
+        {
+          "session_id": "IR-ab839fed7a30",
+          "src_ip": "45.79.207.181",
+          "country": "US",
+          "isp": "Linode",
+          "command_count": 3,
+          "timestamp": "2026-11-07T07:39:04.613395Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-058",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "172.105.128.12"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "0084449e5825fe2e",
+      "ttps": [],
+      "representative_commands": [
+        "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+        "Accept: */*",
+        "Accept-Encoding: gzip"
+      ],
+      "members": [
+        {
+          "session_id": "IR-e06c077e6476",
+          "src_ip": "172.105.128.12",
+          "country": "US",
+          "isp": "Linode",
+          "command_count": 3,
+          "timestamp": "2026-11-07T07:39:27.031650Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-059",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "65.49.1.172"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "a2aa3ec2673f6861",
+      "ttps": [],
+      "representative_commands": [
+        "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+        "Accept: */*",
+        "Accept-Encoding: gzip"
+      ],
+      "members": [
+        {
+          "session_id": "IR-bae26515630f",
+          "src_ip": "65.49.1.172",
+          "country": "US",
+          "isp": "The Shadowserver Foundation, Inc.",
+          "command_count": 3,
+          "timestamp": "2026-11-07T12:10:17.212273Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-060",
       "is_campaign": true,
       "campaign_name": "mdrfckr SSH Key Injection",
       "campaign_severity": "HIGH",
@@ -336,18 +2484,39 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 12,
+      "session_count": 75,
       "unique_ips": [
-        "50.6.192.84",
-        "210.183.21.53",
-        "113.171.81.144",
-        "103.69.96.120",
-        "14.103.107.214",
-        "186.96.158.180",
-        "190.85.11.150",
-        "116.153.81.58"
+        "14.103.117.86",
+        "218.206.136.24",
+        "95.188.91.101",
+        "162.248.100.97",
+        "154.51.59.118",
+        "103.189.89.196",
+        "179.113.74.39",
+        "52.140.76.154",
+        "185.143.197.45",
+        "119.96.159.237",
+        "154.70.102.114",
+        "69.6.207.8",
+        "49.248.250.122",
+        "45.78.194.242",
+        "180.76.103.111",
+        "60.199.224.2",
+        "182.74.206.194",
+        "113.31.115.157",
+        "4.246.204.51",
+        "201.124.171.198",
+        "45.126.43.245",
+        "153.56.178.91",
+        "4.224.40.94",
+        "117.247.23.131",
+        "92.207.4.157",
+        "211.178.247.182",
+        "120.92.112.77",
+        "202.145.0.61",
+        "41.93.28.12"
       ],
-      "unique_ip_count": 8,
+      "unique_ip_count": 29,
       "sequence_hash": "98af0db988d5971c",
       "ttps": [
         {
@@ -377,73 +2546,312 @@
       ],
       "members": [
         {
-          "session_id": "IR-086edac98f80",
-          "src_ip": "116.153.81.58",
+          "session_id": "IR-1a8ba95d5115",
+          "src_ip": "41.93.28.12",
+          "country": "TZ",
+          "isp": "Education_Research_services",
+          "command_count": 2,
+          "timestamp": "2026-11-07T03:49:09.922659Z"
+        },
+        {
+          "session_id": "IR-981db5d312b5",
+          "src_ip": "180.76.103.111",
           "country": "CN",
-          "isp": "China United Network Communications Corporation Limited",
+          "isp": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
           "command_count": 2,
-          "timestamp": "2026-11-07T00:51:58.494865Z"
+          "timestamp": "2026-11-07T05:59:36.768974Z"
         },
         {
-          "session_id": "IR-9f580726966b",
-          "src_ip": "113.171.81.144",
-          "country": "VN",
-          "isp": "Vietnam Posts and Telecommunications Group",
+          "session_id": "IR-2226f3200203",
+          "src_ip": "154.70.102.114",
+          "country": "CM",
+          "isp": "DataCenter Douala",
           "command_count": 2,
-          "timestamp": "2026-11-07T01:19:05.685046Z"
+          "timestamp": "2026-11-07T06:31:14.493671Z"
         },
         {
-          "session_id": "IR-0ab1ca937e91",
-          "src_ip": "186.96.158.180",
+          "session_id": "IR-9492798bca85",
+          "src_ip": "92.207.4.157",
+          "country": "GB",
+          "isp": "Gamma Telecom Limited",
+          "command_count": 2,
+          "timestamp": "2026-11-07T06:37:31.891064Z"
+        },
+        {
+          "session_id": "IR-414f5c83a328",
+          "src_ip": "45.78.194.242",
+          "country": "SG",
+          "isp": "BYTEPLUS",
+          "command_count": 2,
+          "timestamp": "2026-11-07T06:41:26.738308Z"
+        },
+        {
+          "session_id": "IR-a4c680ed9102",
+          "src_ip": "162.248.100.97",
+          "country": "US",
+          "isp": "GALAXYGATE, LLC",
+          "command_count": 2,
+          "timestamp": "2026-11-07T06:54:41.886093Z"
+        },
+        {
+          "session_id": "IR-53e36e65d464",
+          "src_ip": "103.189.89.196",
+          "country": "IN",
+          "isp": "Mind Over Matter Solutions PTE LTD",
+          "command_count": 2,
+          "timestamp": "2026-11-07T07:08:09.118068Z"
+        },
+        {
+          "session_id": "IR-fbd7a0ecb818",
+          "src_ip": "4.246.204.51",
+          "country": "US",
+          "isp": "Microsoft Corporation",
+          "command_count": 2,
+          "timestamp": "2026-11-07T07:26:11.333091Z"
+        },
+        {
+          "session_id": "IR-1c0836966bf4",
+          "src_ip": "201.124.171.198",
           "country": "MX",
-          "isp": "TOTAL PLAY TELECOMUNICACIONES, S.A.P.I. DE C.V.",
+          "isp": "Gesti\u00f3n de direccionamiento UniNet",
           "command_count": 2,
-          "timestamp": "2026-11-07T02:10:49.511964Z"
+          "timestamp": "2026-11-07T08:08:22.872789Z"
         },
         {
-          "session_id": "IR-5c7a984543cc",
-          "src_ip": "210.183.21.53",
-          "country": "KR",
-          "isp": "Korea Telecom",
+          "session_id": "IR-dfab45acbdbb",
+          "src_ip": "218.206.136.24",
+          "country": "CN",
+          "isp": "China Mobile Communications Corporation - jiangsu",
           "command_count": 2,
-          "timestamp": "2026-11-07T02:21:40.629686Z"
+          "timestamp": "2026-11-07T08:12:10.653670Z"
         },
         {
-          "session_id": "IR-8f645b1fdcf8",
-          "src_ip": "14.103.107.214",
+          "session_id": "IR-ffcc9762aa02",
+          "src_ip": "117.247.23.131",
+          "country": "IN",
+          "isp": "Broadband Multiplay Project, O/o DGM BB, NOC BSNL Bangalore",
+          "command_count": 2,
+          "timestamp": "2026-11-07T08:23:53.060985Z"
+        },
+        {
+          "session_id": "IR-62b2c0cd1ce3",
+          "src_ip": "119.96.159.237",
+          "country": "CN",
+          "isp": "CHINANET Hubei province network",
+          "command_count": 2,
+          "timestamp": "2026-11-07T08:25:02.570249Z"
+        },
+        {
+          "session_id": "IR-01f6d90b2bb1",
+          "src_ip": "60.199.224.2",
+          "country": "TW",
+          "isp": "TAIWANMOBILE-NET",
+          "command_count": 2,
+          "timestamp": "2026-11-07T08:25:17.551728Z"
+        },
+        {
+          "session_id": "IR-f5dd20735792",
+          "src_ip": "49.248.250.122",
+          "country": "IN",
+          "isp": "Tata Teleservices (Maharashtra) Ltd",
+          "command_count": 2,
+          "timestamp": "2026-11-07T08:33:10.729676Z"
+        },
+        {
+          "session_id": "IR-0ea453f684ed",
+          "src_ip": "182.74.206.194",
+          "country": "IN",
+          "isp": "BHARTI-AIRTEL",
+          "command_count": 2,
+          "timestamp": "2026-11-07T08:33:18.759178Z"
+        },
+        {
+          "session_id": "IR-230848db096b",
+          "src_ip": "154.51.59.118",
+          "country": "HK",
+          "isp": "Cogent Communications, LLC",
+          "command_count": 2,
+          "timestamp": "2026-11-07T08:47:37.745179Z"
+        },
+        {
+          "session_id": "IR-49a4ba508ce5",
+          "src_ip": "113.31.115.157",
+          "country": "CN",
+          "isp": "Shanghai UCloud Information Technology Company Limited",
+          "command_count": 2,
+          "timestamp": "2026-11-07T09:13:53.420400Z"
+        },
+        {
+          "session_id": "IR-67e29d91fbab",
+          "src_ip": "202.145.0.61",
+          "country": "ID",
+          "isp": "PT UNINET Media Sakti",
+          "command_count": 2,
+          "timestamp": "2026-11-07T10:35:48.445539Z"
+        },
+        {
+          "session_id": "IR-b9bde3e5e7da",
+          "src_ip": "14.103.117.86",
           "country": "CN",
           "isp": "Beijing Volcano Engine Technology Co., Ltd.",
           "command_count": 2,
-          "timestamp": "2026-11-07T02:35:53.419157Z"
+          "timestamp": "2026-11-07T10:39:43.097069Z"
         },
         {
-          "session_id": "IR-b80e1ba537af",
-          "src_ip": "190.85.11.150",
-          "country": "CO",
-          "isp": "Telmex Colombia S.A.",
+          "session_id": "IR-9d076f90fe83",
+          "src_ip": "4.224.40.94",
+          "country": "IN",
+          "isp": "Microsoft Corporation",
           "command_count": 2,
-          "timestamp": "2026-11-07T02:39:14.677911Z"
+          "timestamp": "2026-11-07T10:42:09.789645Z"
         },
         {
-          "session_id": "IR-67b130d14ef9",
-          "src_ip": "50.6.192.84",
-          "country": "US",
+          "session_id": "IR-d45c9423e1cc",
+          "src_ip": "45.126.43.245",
+          "country": "ID",
+          "isp": "PT Awan Data Teknologi",
+          "command_count": 2,
+          "timestamp": "2026-11-07T10:53:48.147974Z"
+        },
+        {
+          "session_id": "IR-fd17366047be",
+          "src_ip": "179.113.74.39",
+          "country": "BR",
+          "isp": "TELEF\u00d4NICA BRASIL S.A",
+          "command_count": 2,
+          "timestamp": "2026-11-07T11:23:15.448159Z"
+        },
+        {
+          "session_id": "IR-c4cb52e6f313",
+          "src_ip": "120.92.112.77",
+          "country": "CN",
+          "isp": "Beijing Kingsoft Cloud Internet Technology Co., Ltd.",
+          "command_count": 2,
+          "timestamp": "2026-11-07T13:41:16.377053Z"
+        },
+        {
+          "session_id": "IR-139a4bcdfbef",
+          "src_ip": "69.6.207.8",
+          "country": "MX",
           "isp": "Newfold Digital, Inc.",
           "command_count": 2,
-          "timestamp": "2026-11-07T02:39:45.706089Z"
+          "timestamp": "2026-11-07T13:54:42.901075Z"
         },
         {
-          "session_id": "IR-409f5b107a8a",
-          "src_ip": "103.69.96.120",
-          "country": "VN",
-          "isp": "VN CLOUD ONE MEMBER COMPANY LIMITED",
+          "session_id": "IR-6b0514288e71",
+          "src_ip": "120.92.112.77",
+          "country": "CN",
+          "isp": "Beijing Kingsoft Cloud Internet Technology Co., Ltd.",
           "command_count": 2,
-          "timestamp": "2026-11-07T02:48:27.855089Z"
+          "timestamp": "2026-11-07T14:01:40.184020Z"
+        },
+        {
+          "session_id": "IR-90a0159de2be",
+          "src_ip": "211.178.247.182",
+          "country": "KR",
+          "isp": "SK Broadband Co Ltd",
+          "command_count": 2,
+          "timestamp": "2026-11-07T15:26:20.873931Z"
+        },
+        {
+          "session_id": "IR-86abcaa596b1",
+          "src_ip": "95.188.91.101",
+          "country": "RU",
+          "isp": "OJSC Rostelecom",
+          "command_count": 2,
+          "timestamp": "2026-11-07T15:27:26.076802Z"
+        },
+        {
+          "session_id": "IR-e3cb104aea01",
+          "src_ip": "218.206.136.24",
+          "country": "CN",
+          "isp": "China Mobile Communications Corporation - jiangsu",
+          "command_count": 2,
+          "timestamp": "2026-11-07T15:29:51.063408Z"
+        },
+        {
+          "session_id": "IR-fc425d096272",
+          "src_ip": "153.56.178.91",
+          "country": "NL",
+          "isp": "Serverio technologijos MB",
+          "command_count": 2,
+          "timestamp": "2026-11-07T15:31:32.089231Z"
+        },
+        {
+          "session_id": "IR-3b996bc6caa6",
+          "src_ip": "52.140.76.154",
+          "country": "IN",
+          "isp": "Microsoft Corporation",
+          "command_count": 2,
+          "timestamp": "2026-11-07T15:38:25.879022Z"
+        },
+        {
+          "session_id": "IR-6f6e54473c80",
+          "src_ip": "185.143.197.45",
+          "country": "AZ",
+          "isp": "AzInTelecom LLC",
+          "command_count": 2,
+          "timestamp": "2026-11-07T15:59:38.735561Z"
+        },
+        {
+          "session_id": "IR-4093d0cf45b5",
+          "src_ip": "95.188.91.101",
+          "country": "RU",
+          "isp": "OJSC Rostelecom",
+          "command_count": 2,
+          "timestamp": "2026-11-07T16:01:03.550528Z"
         }
       ]
     },
     {
-      "cluster_id": "CLU-009",
+      "cluster_id": "CLU-061",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 3,
+      "unique_ips": [
+        "35.210.236.4",
+        "35.210.132.201",
+        "35.206.185.160"
+      ],
+      "unique_ip_count": 3,
+      "sequence_hash": "6c2b02475f4c7e7e",
+      "ttps": [],
+      "representative_commands": [
+        "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36",
+        "Accept-Encoding: gzip"
+      ],
+      "members": [
+        {
+          "session_id": "IR-592c995fdd08",
+          "src_ip": "35.210.236.4",
+          "country": "BE",
+          "isp": "Google LLC",
+          "command_count": 2,
+          "timestamp": "2026-11-07T05:36:38.978394Z"
+        },
+        {
+          "session_id": "IR-a797d471ac14",
+          "src_ip": "35.210.132.201",
+          "country": "BE",
+          "isp": "Google LLC",
+          "command_count": 2,
+          "timestamp": "2026-11-07T06:07:42.745085Z"
+        },
+        {
+          "session_id": "IR-305347f10c8b",
+          "src_ip": "35.206.185.160",
+          "country": "BE",
+          "isp": "Google LLC",
+          "command_count": 2,
+          "timestamp": "2026-11-07T06:47:35.211311Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-062",
       "is_campaign": false,
       "campaign_name": null,
       "campaign_severity": null,
@@ -451,7 +2859,7 @@
       "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "162.216.149.118"
+        "35.203.211.106"
       ],
       "unique_ip_count": 1,
       "sequence_hash": "49efc5eb7bb5604b",
@@ -467,27 +2875,31 @@
       ],
       "members": [
         {
-          "session_id": "IR-270872e64c7d",
-          "src_ip": "162.216.149.118",
-          "country": "US",
+          "session_id": "IR-ebf802fdaee9",
+          "src_ip": "35.203.211.106",
+          "country": "GB",
           "isp": "Google LLC",
           "command_count": 2,
-          "timestamp": "2026-11-07T01:20:27.313763Z"
+          "timestamp": "2026-11-07T05:58:04.422736Z"
         }
       ]
     },
     {
-      "cluster_id": "CLU-010",
+      "cluster_id": "CLU-063",
       "is_campaign": false,
       "campaign_name": null,
       "campaign_severity": null,
       "campaign_description": null,
       "matched_campaigns": [],
-      "session_count": 1,
+      "session_count": 5,
       "unique_ips": [
-        "106.13.107.35"
+        "115.191.23.138",
+        "115.201.71.24",
+        "95.188.91.101",
+        "120.92.112.77",
+        "45.116.35.149"
       ],
-      "unique_ip_count": 1,
+      "unique_ip_count": 5,
       "sequence_hash": "c32b4937ce8564ea",
       "ttps": [
         {
@@ -500,12 +2912,275 @@
       ],
       "members": [
         {
-          "session_id": "IR-697c56d5fa0a",
-          "src_ip": "106.13.107.35",
+          "session_id": "IR-49783e7ee517",
+          "src_ip": "45.116.35.149",
           "country": "CN",
-          "isp": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
+          "isp": "Guangzhou LanDong Information technology co., LTD",
           "command_count": 1,
-          "timestamp": "2026-11-07T02:02:42.978336Z"
+          "timestamp": "2026-11-07T03:44:16.704159Z"
+        },
+        {
+          "session_id": "IR-138949392004",
+          "src_ip": "115.191.23.138",
+          "country": "CN",
+          "isp": "Beijing Volcano Engine Technology Co., Ltd.",
+          "command_count": 1,
+          "timestamp": "2026-11-07T09:24:24.359813Z"
+        },
+        {
+          "session_id": "IR-d6ecd2022ba3",
+          "src_ip": "120.92.112.77",
+          "country": "CN",
+          "isp": "Beijing Kingsoft Cloud Internet Technology Co., Ltd.",
+          "command_count": 1,
+          "timestamp": "2026-11-07T13:45:17.801891Z"
+        },
+        {
+          "session_id": "IR-8c49cf49dbc5",
+          "src_ip": "115.201.71.24",
+          "country": "CN",
+          "isp": "CHINANET-ZJ Taizhou node network",
+          "command_count": 1,
+          "timestamp": "2026-11-07T14:54:25.563160Z"
+        },
+        {
+          "session_id": "IR-14f9339a8d3d",
+          "src_ip": "95.188.91.101",
+          "country": "RU",
+          "isp": "OJSC Rostelecom",
+          "command_count": 1,
+          "timestamp": "2026-11-07T15:36:11.469614Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-064",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 3,
+      "unique_ips": [
+        "35.210.236.4",
+        "35.210.132.201",
+        "35.206.185.160"
+      ],
+      "unique_ip_count": 3,
+      "sequence_hash": "758d61f26a444483",
+      "ttps": [],
+      "representative_commands": [
+        "PING"
+      ],
+      "members": [
+        {
+          "session_id": "IR-213770af5627",
+          "src_ip": "35.210.236.4",
+          "country": "BE",
+          "isp": "Google LLC",
+          "command_count": 1,
+          "timestamp": "2026-11-07T05:36:48.016931Z"
+        },
+        {
+          "session_id": "IR-8c99353d008f",
+          "src_ip": "35.210.132.201",
+          "country": "BE",
+          "isp": "Google LLC",
+          "command_count": 1,
+          "timestamp": "2026-11-07T06:07:56.759127Z"
+        },
+        {
+          "session_id": "IR-c22ed941bd61",
+          "src_ip": "35.206.185.160",
+          "country": "BE",
+          "isp": "Google LLC",
+          "command_count": 1,
+          "timestamp": "2026-11-07T06:47:49.790265Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-065",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 2391,
+      "unique_ips": [
+        "23.132.164.185",
+        "109.160.32.172",
+        "109.160.32.173"
+      ],
+      "unique_ip_count": 3,
+      "sequence_hash": "7ab552f01de999cb",
+      "ttps": [
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        }
+      ],
+      "representative_commands": [
+        "uname -s -v -n -r -m"
+      ],
+      "members": [
+        {
+          "session_id": "IR-79b9e567c12f",
+          "src_ip": "109.160.32.172",
+          "country": "NL",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-11-07T05:43:01.422924Z"
+        },
+        {
+          "session_id": "IR-7c677f8062c6",
+          "src_ip": "109.160.32.172",
+          "country": "NL",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-11-07T06:00:00.526943Z"
+        },
+        {
+          "session_id": "IR-f954e2780ad7",
+          "src_ip": "109.160.32.172",
+          "country": "NL",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-11-07T08:00:03.477320Z"
+        },
+        {
+          "session_id": "IR-200d16610036",
+          "src_ip": "109.160.32.173",
+          "country": "NL",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-11-07T11:32:30.521345Z"
+        },
+        {
+          "session_id": "IR-1344b6897fcd",
+          "src_ip": "109.160.32.173",
+          "country": "NL",
+          "isp": "Global Communication Net Plc",
+          "command_count": 1,
+          "timestamp": "2026-11-07T12:00:03.045269Z"
+        },
+        {
+          "session_id": "IR-6ab0f437966f",
+          "src_ip": "23.132.164.185",
+          "country": "DE",
+          "isp": "10GIG.HOST",
+          "command_count": 1,
+          "timestamp": "2026-11-07T13:27:32.362516Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-066",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 100,
+      "unique_ips": [
+        "157.254.222.237"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "e8fc47f5f8cfbeb0",
+      "ttps": [
+        {
+          "id": "T1105",
+          "name": "Ingress Tool Transfer"
+        }
+      ],
+      "representative_commands": [
+        "wget \"https://aws-yup-distr-04.gaijinent.com/wt_launcher_linux_1.0.3.50.tar.gz?distr=gi5yqwek3\""
+      ],
+      "members": [
+        {
+          "session_id": "IR-a17f1a5c7128",
+          "src_ip": "157.254.222.237",
+          "country": "GB",
+          "isp": "Eximia Holdings Limited",
+          "command_count": 1,
+          "timestamp": "2026-11-07T07:04:35.952769Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-067",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 2,
+      "unique_ips": [
+        "45.184.48.247"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "f25297859cf0a70a",
+      "ttps": [],
+      "representative_commands": [
+        "whoami"
+      ],
+      "members": [
+        {
+          "session_id": "IR-2868a3796574",
+          "src_ip": "45.184.48.247",
+          "country": "BR",
+          "isp": "GIACOMETTI & GIACOMETTI LTDA ME",
+          "command_count": 1,
+          "timestamp": "2026-11-07T08:02:06.099075Z"
+        },
+        {
+          "session_id": "IR-dc0cbb8f7789",
+          "src_ip": "45.184.48.247",
+          "country": "BR",
+          "isp": "GIACOMETTI & GIACOMETTI LTDA ME",
+          "command_count": 1,
+          "timestamp": "2026-11-07T13:02:37.106970Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-068",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 121,
+      "unique_ips": [
+        "179.43.153.10"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "876deb10d4cf5b5c",
+      "ttps": [
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        }
+      ],
+      "representative_commands": [
+        "/bin/./uname -s -v -n -r -m"
+      ],
+      "members": [
+        {
+          "session_id": "IR-d9c81c9b6e98",
+          "src_ip": "179.43.153.10",
+          "country": "CH",
+          "isp": "PRIVATE LAYER INC",
+          "command_count": 1,
+          "timestamp": "2026-11-07T14:10:03.999009Z"
+        },
+        {
+          "session_id": "IR-6c5f39ad5e48",
+          "src_ip": "179.43.153.10",
+          "country": "CH",
+          "isp": "PRIVATE LAYER INC",
+          "command_count": 1,
+          "timestamp": "2026-11-07T16:01:24.262447Z"
         }
       ]
     }
