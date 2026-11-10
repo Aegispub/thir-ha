@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-11-09T22:36:29.148280+00:00",
-  "total_campaigns": 1230,
-  "active_campaigns": 926,
+  "generated_at": "2026-11-10T07:35:36.170349+00:00",
+  "total_campaigns": 1258,
+  "active_campaigns": 954,
   "ended_campaigns": 304,
-  "new_this_run": 43,
+  "new_this_run": 28,
   "reactivated_this_run": 0,
-  "largest_campaign_ip_count": 2304,
+  "largest_campaign_ip_count": 2305,
   "largest_campaign_name": "mdrfckr SSH Key Injection",
   "top_ttp_ids": [
     {
       "ttp": "T1140",
-      "count": 1008
+      "count": 1034
     },
     {
       "ttp": "T1105",
-      "count": 132
+      "count": 133
     },
     {
       "ttp": "T1082",
@@ -46,7 +46,7 @@
     },
     {
       "ttp": "T1059.004",
-      "count": 39
+      "count": 40
     }
   ],
   "note": "session_count accumulation uses an IP-set-growth proxy, not individual session_id tracking, because command_clusters.json does not enumerate session IDs per cluster (unlike ssh_fingerprints.json). See tool docstring."
