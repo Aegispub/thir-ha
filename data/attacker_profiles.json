@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T19:53:59.943560+00:00",
+  "generated_at": "2026-11-11T06:53:57.440402+00:00",
   "thresholds": {
     "credential_replay_min_unique_ips": 50,
     "fingerprint_concentration_min_sessions": 10000,
@@ -7,7 +7,7 @@
   },
   "credential_replay": {
     "description": "Q-18 -- credential pairs replayed from an unusually large set of distinct source IPs",
-    "flagged_count": 9,
+    "flagged_count": 10,
     "entries": [
       {
         "corpus_key": "4d079997befabf38d41e4c47cd884a516e28c82a2203f826ecf18bacd222ec1b",
@@ -34,9 +34,9 @@
         "username": "admin",
         "password": "admin",
         "unique_source_ips": 395,
-        "total_success_events": 804,
+        "total_success_events": 809,
         "first_seen": "2026-08-30T14:51:51.555984+00:00",
-        "last_seen": "2026-11-10T07:35:36.266469+00:00",
+        "last_seen": "2026-11-11T06:53:56.972077+00:00",
         "note": "395 distinct source IPs successfully authenticated with this credential pair -- consistent with credential stuffing or botnet replay of a known-valid credential, not organic independent discovery."
       },
       {
@@ -44,9 +44,9 @@
         "username": "support",
         "password": "support",
         "unique_source_ips": 242,
-        "total_success_events": 767,
+        "total_success_events": 769,
         "first_seen": "2026-08-30T03:20:37.711864+00:00",
-        "last_seen": "2026-11-10T19:53:59.499995+00:00",
+        "last_seen": "2026-11-11T06:53:56.972077+00:00",
         "note": "242 distinct source IPs successfully authenticated with this credential pair -- consistent with credential stuffing or botnet replay of a known-valid credential, not organic independent discovery."
       },
       {
@@ -73,11 +73,11 @@
         "corpus_key": "b6eadb3fd04c6dc6ee9b5b73b1a112718cd3bee376a2647c1d56c98f97bca78d",
         "username": "root",
         "password": "admin",
-        "unique_source_ips": 120,
-        "total_success_events": 276,
+        "unique_source_ips": 121,
+        "total_success_events": 282,
         "first_seen": "2026-09-02T00:11:59.133446+00:00",
-        "last_seen": "2026-11-10T19:53:59.499995+00:00",
-        "note": "120 distinct source IPs successfully authenticated with this credential pair -- consistent with credential stuffing or botnet replay of a known-valid credential, not organic independent discovery."
+        "last_seen": "2026-11-11T06:53:56.972077+00:00",
+        "note": "121 distinct source IPs successfully authenticated with this credential pair -- consistent with credential stuffing or botnet replay of a known-valid credential, not organic independent discovery."
       },
       {
         "corpus_key": "fb8f1728889e8f882df9b45b723b1eb8c4a7cb5c9104579d1d6c9d08237c8710",
@@ -88,6 +88,16 @@
         "first_seen": "2026-11-04T06:48:05.227648+00:00",
         "last_seen": "2026-11-10T19:53:59.499995+00:00",
         "note": "108 distinct source IPs successfully authenticated with this credential pair -- consistent with credential stuffing or botnet replay of a known-valid credential, not organic independent discovery."
+      },
+      {
+        "corpus_key": "e393c1d0458f85729b92dcbd86204f7ef2cf8a9ed21a6bf1c6dbf3c020822cfc",
+        "username": "root",
+        "password": "1234",
+        "unique_source_ips": 52,
+        "total_success_events": 105,
+        "first_seen": "2026-09-02T11:16:15.102936+00:00",
+        "last_seen": "2026-11-11T06:53:56.972077+00:00",
+        "note": "52 distinct source IPs successfully authenticated with this credential pair -- consistent with credential stuffing or botnet replay of a known-valid credential, not organic independent discovery."
       },
       {
         "corpus_key": "0c6cb34f3bfd042a3ea97c7cffc744ce7f540e486755ad1bfe4b58678d40ceb6",
