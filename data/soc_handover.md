@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-11-15 |
-| **Generated At** | 2026-11-15T03:44:06Z |
-| **Shift Time** | 03:44 UTC |
+| **Generated At** | 2026-11-15T18:13:37Z |
+| **Shift Time** | 18:13 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · Oracle Cloud HA · Port 2222 |
 
@@ -14,14 +14,14 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **106** |
-| Confirmed Threats | **95** |
-| False Positives Filtered | **11** (10.4%) |
-| Unique Attacker IPs | **82** |
-| Countries of Origin | **29** |
-| High Severity Cases | **70** |
+| Total Sessions Captured | **605** |
+| Confirmed Threats | **548** |
+| False Positives Filtered | **57** (9.4%) |
+| Unique Attacker IPs | **319** |
+| Countries of Origin | **53** |
+| High Severity Cases | **418** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **36** |
+| Low Severity Cases | **187** |
 | Malware Samples Analyzed | **9** HIGH · **26** MED · 0 empty upload attempt(s) |
 
 ---
@@ -30,67 +30,67 @@
 
 | Metric | Value |
 |---|---|
-| Total Auth Attempts | **303** |
-| Unique Credential Pairs | **189** |
-| Unique Usernames | **91** |
-| Unique Passwords | **166** |
-| Successful Auth Pairs | **243** |
+| Total Auth Attempts | **2095** |
+| Unique Credential Pairs | **1444** |
+| Unique Usernames | **461** |
+| Unique Passwords | **1000** |
+| Successful Auth Pairs | **1832** |
 
 **Top Usernames:**
 
 | Username | Attempts |
 |---|---|
-| `root` | 108 |
-| `operator` | 19 |
-| `rootssssss23424123123` | 16 |
-| `admin` | 15 |
-| `support` | 12 |
+| `root` | 736 |
+| `admin` | 148 |
+| `support` | 62 |
+| `ubuntu` | 49 |
+| `guest` | 38 |
 
 **Top Passwords:**
 
 | Password | Attempts |
 |---|---|
-| `rootssssss23424123123` | 16 |
-| `root3245gs5662d34111111111` | 16 |
-| `admin` | 12 |
-| `root` | 8 |
-| `ubnt` | 6 |
+| `123456` | 95 |
+| `admin` | 70 |
+| `root` | 58 |
+| `123` | 49 |
+| `1234` | 40 |
 
 **Top Credential Pairs:**
 
 | Username | Password | Attempts |
 |---|---|---|
-| `rootssssss23424123123` | `rootssssss23424123123` | 16 |
-| `root` | `root3245gs5662d34111111111` | 14 |
-| `admin` | `admin` | 11 |
-| `root` | `root` | 7 |
-| `ubnt` | `ubnt` | 6 |
+| `admin` | `admin` | 44 |
+| `root` | `root` | 42 |
+| `rootssssss23424123123` | `rootssssss23424123123` | 32 |
+| `root` | `root3245gs5662d34111111111` | 28 |
+| `support` | `support` | 27 |
 
 **⚠️ Successful Auth Pairs (Priority — cross-reference with IR cases):**
 
 | Username | Password | Source IP | Timestamp |
 |---|---|---|---|
-| `admin` | `admin` | `77.239.124.252` | 2026-11-15T00:00:45 |
-| `operator` | `987654321` | `10.0.0.73` | 2026-11-15T00:00:58 |
-| `support` | `supportAtlanta` | `10.0.0.73` | 2026-11-15T00:01:00 |
-| `squid` | `squid` | `80.94.95.118` | 2026-11-15T00:01:03 |
-| `ubnt` | `ubnt` | `80.94.95.118` | 2026-11-15T00:01:21 |
-| `manager` | `friend` | `10.0.0.73` | 2026-11-15T00:01:23 |
-| `ubnt` | `ubnt` | `10.0.0.73` | 2026-11-15T00:01:30 |
-| `ernest` | `ernest123` | `10.0.0.73` | 2026-11-15T00:02:38 |
-| `manager` | `friend` | `80.94.95.118` | 2026-11-15T00:03:20 |
-| `admin` | `adminrouter` | `10.0.0.73` | 2026-11-15T00:03:29 |
-| `support` | `supportAtlanta` | `77.90.185.29` | 2026-11-15T00:04:00 |
-| `support` | `supportAtlanta` | `138.226.239.233` | 2026-11-15T00:04:11 |
-| `chester` | `chester123` | `10.0.0.73` | 2026-11-15T00:07:16 |
-| `supervisor` | `159753` | `106.247.22.181` | 2026-11-15T00:09:56 |
-| `vernon` | `vernon123` | `10.0.0.73` | 2026-11-15T00:12:39 |
-| `support` | `support` | `10.0.0.73` | 2026-11-15T00:14:23 |
-| `operator` | `passwd` | `65.20.149.26` | 2026-11-15T00:15:26 |
-| `operator` | `passwd` | `217.148.51.196` | 2026-11-15T00:15:34 |
-| `admin` | `admin` | `195.178.110.78` | 2026-11-15T00:17:52 |
-| `wallace` | `wallace123` | `10.0.0.73` | 2026-11-15T00:18:42 |
-_… 223 more successful pair(s) in credentials.json_
+| `deploy` | `deploy` | `109.160.32.116` | 2026-11-15T02:55:06 |
+| `web` | `1` | `109.160.32.116` | 2026-11-15T02:55:11 |
+| `ubnt` | `ubnt` | `10.0.0.73` | 2026-11-15T02:55:11 |
+| `orange` | `orange` | `109.160.32.116` | 2026-11-15T02:55:15 |
+| `ls` | `qwe123!@` | `109.160.32.116` | 2026-11-15T02:55:20 |
+| `root` | `admin` | `10.0.0.73` | 2026-11-15T02:55:22 |
+| `manager` | `friend` | `10.0.0.73` | 2026-11-15T02:55:24 |
+| `root` | `admin1` | `109.160.32.116` | 2026-11-15T02:55:25 |
+| `ftpuser1` | `123456` | `109.160.32.116` | 2026-11-15T02:55:30 |
+| `cheryl` | `cheryl` | `109.160.32.116` | 2026-11-15T02:55:35 |
+| `admin1` | `123123` | `109.160.32.116` | 2026-11-15T02:55:40 |
+| `root` | `linevps` | `109.160.32.116` | 2026-11-15T02:55:44 |
+| `user10` | `user10` | `109.160.32.116` | 2026-11-15T02:55:49 |
+| `oracle` | `oracle123` | `109.160.32.116` | 2026-11-15T02:55:54 |
+| `user1` | `pass123` | `109.160.32.116` | 2026-11-15T02:56:00 |
+| `almalinux` | `almalinux` | `109.160.32.116` | 2026-11-15T02:56:05 |
+| `ubnt` | `ubnt` | `80.94.95.118` | 2026-11-15T02:56:08 |
+| `root` | `Wu889318!` | `109.160.32.116` | 2026-11-15T02:56:10 |
+| `root` | `qwertyuiop1` | `109.160.32.116` | 2026-11-15T02:56:15 |
+| `runner` | `1234` | `109.160.32.116` | 2026-11-15T02:56:20 |
+_… 1812 more successful pair(s) in credentials.json_
 
 ---
 
@@ -98,42 +98,42 @@ _… 223 more successful pair(s) in credentials.json_
 
 | Metric | Value |
 |---|---|
-| Total Sessions Parsed | **106** |
-| Sessions with Fingerprint | **15** |
-| Unique HASSH Fingerprints | **15** |
+| Total Sessions Parsed | **605** |
+| Sessions with Fingerprint | **27** |
+| Unique HASSH Fingerprints | **27** |
 
 **Client Family Distribution:**
 
 | Client Family | Sessions |
 |---|---|
-| OpenSSH | 37 |
-| libssh | 14 |
-| Go SSH scanner | 13 |
-| Unknown | 4 |
-| PuTTY | 1 |
+| Go SSH scanner | 221 |
+| OpenSSH | 156 |
+| libssh | 32 |
+| Unknown | 8 |
+| PuTTY | 3 |
 
 **⚠️ Botnet/Scanner KEX Signatures Detected:**
 
 | HASSH | Signature | Sessions | IPs |
 |---|---|---|---|
-| `acaa53e0a7d7...` | Mirai/variant | 37 | 36 |
-| `f555226df196...` | Mirai/variant | 12 | 6 |
-| `7d01d047ace6...` | Mirai/variant | 4 | 4 |
-| `14b2ddda386a...` | Mirai/variant | 2 | 1 |
-| `98f63c4d9c87...` | Generic scanner | 2 | 2 |
+| `acaa53e0a7d7...` | Mirai/variant | 145 | 136 |
+| `2ec37a7cc8da...` | Mirai/variant | 118 | 3 |
+| `16443846184e...` | Generic scanner | 43 | 4 |
+| `f555226df196...` | Mirai/variant | 28 | 15 |
+| `7d01d047ace6...` | Mirai/variant | 24 | 4 |
 
 **Top Fingerprints:**
 
 | HASSH | Client | Sessions | IPs | Botnet Sig |
 |---|---|---|---|---|
-| `acaa53e0a7d7...` | OpenSSH | 37 | 36 | Mirai/variant |
-| `f555226df196...` | libssh | 12 | 6 | Mirai/variant |
-| `7d01d047ace6...` | Go SSH scanner | 4 | 4 | Mirai/variant |
-| `14b2ddda386a...` | libssh | 2 | 1 | Mirai/variant |
-| `98f63c4d9c87...` | Go SSH scanner | 2 | 2 | Generic scanner |
-| `95420f9d932d...` | Unknown | 2 | 2 | — |
-| `2ec37a7cc8da...` | Go SSH scanner | 2 | 1 | Mirai/variant |
-| `eff4c24daffc...` | Go SSH scanner | 1 | 1 | Modern SSH client |
+| `acaa53e0a7d7...` | OpenSSH | 145 | 136 | Mirai/variant |
+| `2ec37a7cc8da...` | Go SSH scanner | 118 | 3 | Mirai/variant |
+| `16443846184e...` | Go SSH scanner | 43 | 4 | Generic scanner |
+| `f555226df196...` | libssh | 28 | 15 | Mirai/variant |
+| `7d01d047ace6...` | Go SSH scanner | 24 | 4 | Mirai/variant |
+| `0a07365cc01f...` | Go SSH scanner | 11 | 6 | Generic scanner |
+| `eff4c24daffc...` | Go SSH scanner | 8 | 1 | Modern SSH client |
+| `95420f9d932d...` | OpenSSH | 5 | 5 | — |
 
 ---
 
@@ -141,15 +141,62 @@ _… 223 more successful pair(s) in credentials.json_
 
 | Metric | Value |
 |---|---|
-| Total Command Clusters | **7** |
-| Campaign Clusters | **1** |
+| Total Command Clusters | **140** |
+| Campaign Clusters | **4** |
 | Highest Severity | **HIGH** |
 
 **Active Campaigns:**
 
 | Campaign | Severity | Sessions | IPs | TTPs |
 |---|---|---|---|---|
-| **mdrfckr SSH Key Injection** | 🔴 HIGH | 12 | 6 | `T1021.004, T1078, T1070, T1140` |
+| **Mirai/IoT Botnet** | 🔴 HIGH | 1 | 1 | `T1059.004, T1082, T1592, T1140` |
+| **Mirai/IoT Botnet** | 🔴 HIGH | 3 | 1 | `T1105, T1083, T1140, T1059.004` |
+| **mdrfckr SSH Key Injection** | 🔴 HIGH | 25 | 14 | `T1021.004, T1078, T1070, T1140` |
+| **Mirai/IoT Botnet** | 🔴 HIGH | 3 | 1 | `T1105, T1140, T1059.004` |
+
+**🔴 HIGH · Mirai/IoT Botnet**
+
+> Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.
+
+Representative commands:
+```
+echo SHELL_TEST
+```
+```
+cat /proc/cpuinfo
+```
+```
+uname -m
+```
+```
+dd if=/bin/busybox bs=1 count=40 2>/dev/null | od -A n -t x1 | tr -d ' \n' || dd if=/bin/sh bs=1 count=40 2>/dev/null | od -A n -t x1 | tr -d ' \n'
+```
+```
+file /bin/busybox 2>/dev/null || file /bin/sh 2>/dev/null
+```
+Source IPs: `180.93.193.100`
+
+**🔴 HIGH · Mirai/IoT Botnet**
+
+> Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.
+
+Representative commands:
+```
+enable
+```
+```
+linuxshell
+```
+```
+system
+```
+```
+sh
+```
+```
+ls /home; /bin/busybox BOTNET
+```
+Source IPs: `160.119.66.206`
 
 **🔴 HIGH · mdrfckr SSH Key Injection**
 
@@ -162,7 +209,7 @@ cd ~; chattr -ia .ssh; lockr -ia .ssh
 ```
 cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~
 ```
-Source IPs: `209.99.185.195`, `35.234.136.205`, `203.192.232.180`, `102.88.137.145`, `172.172.186.3`, `189.147.225.19`
+Source IPs: `50.6.201.228`, `118.107.139.224`, `103.78.1.160`, `122.168.123.73`, `115.191.38.87`, `117.50.44.85`
 
 ---
 
@@ -170,67 +217,72 @@ Source IPs: `209.99.185.195`, `35.234.136.205`, `203.192.232.180`, `102.88.137.1
 
 | Metric | Value |
 |---|---|
-| Total IPs Analysed | **82** |
-| Unique ASNs | **50** |
-| High-Risk ASNs | **49** |
+| Total IPs Analysed | **319** |
+| Unique ASNs | **145** |
+| High-Risk ASNs | **129** |
 | Anon Infrastructure ASNs | **0** |
 
 **Top Attack ASNs:**
 
 | ASN | Provider | IPs | Risk |
 |---|---|---|---|
-| `AS0` |  | 23 | HIGH |
-| `AS396982` | Google LLC | 4 | HIGH |
-| `AS22773` | Cox Communications Inc. | 3 | HIGH |
-| `AS6939` | Hurricane Electric LLC | 2 | HIGH |
-| `AS4837` | CHINA UNICOM China169 Backbone | 2 | HIGH |
-| `AS4766` | Korea Telecom | 2 | HIGH |
-| `AS4134` | CHINANET BACKBONE | 2 | HIGH |
-| `AS8075` | Microsoft Corporation | 2 | HIGH |
+| `AS0` |  | 76 | HIGH |
+| `AS4766` | Korea Telecom | 16 | HIGH |
+| `AS22773` | Cox Communications Inc. | 12 | HIGH |
+| `AS4134` | CHINANET BACKBONE | 8 | HIGH |
+| `AS15169` | Google LLC | 7 | HIGH |
+| `AS8075` | Microsoft Corporation | 5 | HIGH |
+| `AS396982` | Google LLC | 5 | LOW |
+| `AS18881` | TELEFÔNICA BRASIL S.A | 5 | HIGH |
 
 ---
 
 ---
 
-## 🚨 Priority Cases — Immediate Attention (67)
+## 🚨 Priority Cases — Immediate Attention (409)
 
 > Cases with auth success, command execution, or file downloads.
 > Each requires individual review. Never grouped.
 
-### 🔴 HIGH · IR-a619dfd7aa14
+### 🔴 HIGH · IR-eef0a8aadf24
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `77.239.124[.]252` |
-| **First Seen** | 2026-11-15 00:00 |
-| **Last Seen** | 2026-11-15 00:00 |
-| **Session Duration** | 2s |
+| **Source IP** | `109.160.32[.]116` |
+| **First Seen** | 2026-11-15 02:55 |
+| **Last Seen** | 2026-11-15 02:55 |
+| **Session Duration** | 1s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 |
+| **Commands Executed** | `uname -s -v -n -r -m` |
+| **TTPs (MITRE)** | T1078 · T1592 |
 
 **Attack Timeline:**
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-11-15 00:00:44` | `cowrie.session.connect` |
-| `2026-11-15 00:00:45` | `cowrie.login.success` |
-| `2026-11-15 00:00:45` | `cowrie.session.params` |
-| `2026-11-15 00:00:46` | `cowrie.log.closed` |
-| `2026-11-15 00:00:46` | `cowrie.session.closed` |
+| `2026-11-15 02:55:05` | `cowrie.session.connect` |
+| `2026-11-15 02:55:05` | `cowrie.client.version` |
+| `2026-11-15 02:55:05` | `cowrie.client.kex` |
+| `2026-11-15 02:55:06` | `cowrie.login.success` |
+| `2026-11-15 02:55:07` | `cowrie.session.params` |
+| `2026-11-15 02:55:07` | `cowrie.command.input` |
+| `2026-11-15 02:55:07` | `cowrie.log.closed` |
+| `2026-11-15 02:55:07` | `cowrie.session.closed` |
 
 **Recommended Actions:**
-- [ ] Submit `77.239.124[.]252` to AbuseIPDB if not already reported
-- [ ] Block `77.239.124[.]252` at perimeter firewall / security group
+- [ ] Submit `109.160.32[.]116` to AbuseIPDB if not already reported
+- [ ] Block `109.160.32[.]116` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-5de3655e21e8
+### 🔴 HIGH · IR-963be259916e
 
 | Field | Detail |
 |---|---|
 | **Source IP** | `80.94.95[.]118` |
-| **First Seen** | 2026-11-15 00:01 |
-| **Last Seen** | 2026-11-15 00:01 |
+| **First Seen** | 2026-11-15 02:56 |
+| **Last Seen** | 2026-11-15 02:56 |
 | **Session Duration** | 2s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -241,14 +293,14 @@ Source IPs: `209.99.185.195`, `35.234.136.205`, `203.192.232.180`, `102.88.137.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-11-15 00:01:02` | `cowrie.session.connect` |
-| `2026-11-15 00:01:02` | `cowrie.client.version` |
-| `2026-11-15 00:01:02` | `cowrie.client.kex` |
-| `2026-11-15 00:01:03` | `cowrie.login.success` |
-| `2026-11-15 00:01:04` | `cowrie.direct-tcpip.request` |
-| `2026-11-15 00:01:04` | `cowrie.direct-tcpip.ja4` |
-| `2026-11-15 00:01:04` | `cowrie.direct-tcpip.data` |
-| `2026-11-15 00:01:04` | `cowrie.session.closed` |
+| `2026-11-15 02:56:06` | `cowrie.session.connect` |
+| `2026-11-15 02:56:06` | `cowrie.client.version` |
+| `2026-11-15 02:56:07` | `cowrie.client.kex` |
+| `2026-11-15 02:56:08` | `cowrie.login.success` |
+| `2026-11-15 02:56:08` | `cowrie.direct-tcpip.request` |
+| `2026-11-15 02:56:08` | `cowrie.direct-tcpip.ja4` |
+| `2026-11-15 02:56:08` | `cowrie.direct-tcpip.data` |
+| `2026-11-15 02:56:08` | `cowrie.session.closed` |
 
 **Recommended Actions:**
 - [ ] Submit `80.94.95[.]118` to AbuseIPDB if not already reported
@@ -257,46 +309,13 @@ Source IPs: `209.99.185.195`, `35.234.136.205`, `203.192.232.180`, `102.88.137.1
 - [ ] Confirm tunnel target is not internal infrastructure
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-c2cd41c81ca2
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `77.90.185[.]29` |
-| **First Seen** | 2026-11-15 00:03 |
-| **Last Seen** | 2026-11-15 00:04 |
-| **Session Duration** | 0s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-11-15 00:03:59` | `cowrie.session.connect` |
-| `2026-11-15 00:03:59` | `cowrie.client.version` |
-| `2026-11-15 00:03:59` | `cowrie.client.kex` |
-| `2026-11-15 00:04:00` | `cowrie.login.success` |
-| `2026-11-15 00:04:00` | `cowrie.direct-tcpip.request` |
-| `2026-11-15 00:04:00` | `cowrie.direct-tcpip.ja4` |
-| `2026-11-15 00:04:00` | `cowrie.direct-tcpip.data` |
-| `2026-11-15 00:04:00` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.90.185[.]29` to AbuseIPDB if not already reported
-- [ ] Block `77.90.185[.]29` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-feecc61c5c83
+### 🔴 HIGH · IR-448fdc6200f8
 
 | Field | Detail |
 |---|---|
 | **Source IP** | `138.226.239[.]233` |
-| **First Seen** | 2026-11-15 00:04 |
-| **Last Seen** | 2026-11-15 00:04 |
+| **First Seen** | 2026-11-15 02:56 |
+| **Last Seen** | 2026-11-15 02:56 |
 | **Session Duration** | 0s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -307,14 +326,14 @@ Source IPs: `209.99.185.195`, `35.234.136.205`, `203.192.232.180`, `102.88.137.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-11-15 00:04:11` | `cowrie.session.connect` |
-| `2026-11-15 00:04:11` | `cowrie.client.version` |
-| `2026-11-15 00:04:11` | `cowrie.client.kex` |
-| `2026-11-15 00:04:11` | `cowrie.login.success` |
-| `2026-11-15 00:04:11` | `cowrie.direct-tcpip.request` |
-| `2026-11-15 00:04:11` | `cowrie.direct-tcpip.ja4` |
-| `2026-11-15 00:04:11` | `cowrie.direct-tcpip.data` |
-| `2026-11-15 00:04:11` | `cowrie.session.closed` |
+| `2026-11-15 02:56:21` | `cowrie.session.connect` |
+| `2026-11-15 02:56:21` | `cowrie.client.version` |
+| `2026-11-15 02:56:21` | `cowrie.client.kex` |
+| `2026-11-15 02:56:21` | `cowrie.login.success` |
+| `2026-11-15 02:56:21` | `cowrie.direct-tcpip.request` |
+| `2026-11-15 02:56:22` | `cowrie.direct-tcpip.ja4` |
+| `2026-11-15 02:56:22` | `cowrie.direct-tcpip.data` |
+| `2026-11-15 02:56:22` | `cowrie.session.closed` |
 
 **Recommended Actions:**
 - [ ] Submit `138.226.239[.]233` to AbuseIPDB if not already reported
@@ -323,13 +342,233 @@ Source IPs: `209.99.185.195`, `35.234.136.205`, `203.192.232.180`, `102.88.137.1
 - [ ] Confirm tunnel target is not internal infrastructure
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-30581734765e
+### 🔴 HIGH · IR-5f1311a522b7
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `106.247.22[.]181` |
-| **First Seen** | 2026-11-15 00:09 |
-| **Last Seen** | 2026-11-15 00:10 |
+| **Source IP** | `2.57.122[.]168` |
+| **First Seen** | 2026-11-15 02:56 |
+| **Last Seen** | 2026-11-15 02:56 |
+| **Session Duration** | 8s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_80b2403d55ef842d6c49d24b9bfa2af2_small_control'"'"' '"'"'check_80b2403d55ef842d6c49d24b9bfa2af2'"'"'', printf '\n%s|%s\n' 'check_80b2403d55ef842d6c49d24b9bfa2af2_small_control' 'check_80b2403d55ef842d6c49d24b9bfa2af2', sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_80b2403d55ef842d6c49d24b9bfa2af2_small_math'"'"' "$((46*590+64))"', (46*590+64, printf '\n%s|%s\n' 'check_80b2403d55ef842d6c49d24b9bfa2af2_small_math' ")"` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-11-15 02:56:38` | `cowrie.session.connect` |
+| `2026-11-15 02:56:38` | `cowrie.client.version` |
+| `2026-11-15 02:56:38` | `cowrie.client.kex` |
+| `2026-11-15 02:56:40` | `cowrie.login.success` |
+| `2026-11-15 02:56:42` | `cowrie.client.size` |
+| `2026-11-15 02:56:43` | `cowrie.session.params` |
+| `2026-11-15 02:56:44` | `cowrie.command.input` |
+| `2026-11-15 02:56:44` | `cowrie.command.input` |
+| `2026-11-15 02:56:44` | `cowrie.command.input` |
+| `2026-11-15 02:56:44` | `cowrie.command.input` |
+| `2026-11-15 02:56:44` | `cowrie.command.input` |
+| `2026-11-15 02:56:44` | `cowrie.command.input` |
+| `2026-11-15 02:56:44` | `cowrie.command.input` |
+| `2026-11-15 02:56:44` | `cowrie.command.input` |
+| `2026-11-15 02:56:44` | `cowrie.command.input` |
+| … | _47 more event(s) — see ir_cases.json_ |
+
+**Recommended Actions:**
+- [ ] Submit `2.57.122[.]168` to AbuseIPDB if not already reported
+- [ ] Block `2.57.122[.]168` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-b9e03364fd8c
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `77.90.185[.]29` |
+| **First Seen** | 2026-11-15 02:56 |
+| **Last Seen** | 2026-11-15 02:56 |
+| **Session Duration** | 0s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-11-15 02:56:48` | `cowrie.session.connect` |
+| `2026-11-15 02:56:48` | `cowrie.client.version` |
+| `2026-11-15 02:56:48` | `cowrie.client.kex` |
+| `2026-11-15 02:56:49` | `cowrie.login.success` |
+| `2026-11-15 02:56:49` | `cowrie.direct-tcpip.request` |
+| `2026-11-15 02:56:49` | `cowrie.direct-tcpip.ja4` |
+| `2026-11-15 02:56:49` | `cowrie.direct-tcpip.data` |
+| `2026-11-15 02:56:49` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `77.90.185[.]29` to AbuseIPDB if not already reported
+- [ ] Block `77.90.185[.]29` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-b17e6388fabb
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `2.57.122[.]168` |
+| **First Seen** | 2026-11-15 02:58 |
+| **Last Seen** | 2026-11-15 02:58 |
+| **Session Duration** | 8s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_125dbd0a288f77569e2375ce45e1d910_small_control'"'"' '"'"'check_125dbd0a288f77569e2375ce45e1d910'"'"'', printf '\n%s|%s\n' 'check_125dbd0a288f77569e2375ce45e1d910_small_control' 'check_125dbd0a288f77569e2375ce45e1d910', sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_125dbd0a288f77569e2375ce45e1d910_small_math'"'"' "$((714*827+46))"', (714*827+46, printf '\n%s|%s\n' 'check_125dbd0a288f77569e2375ce45e1d910_small_math' ")"` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-11-15 02:58:29` | `cowrie.session.connect` |
+| `2026-11-15 02:58:29` | `cowrie.client.version` |
+| `2026-11-15 02:58:29` | `cowrie.client.kex` |
+| `2026-11-15 02:58:32` | `cowrie.login.success` |
+| `2026-11-15 02:58:34` | `cowrie.client.size` |
+| `2026-11-15 02:58:34` | `cowrie.session.params` |
+| `2026-11-15 02:58:35` | `cowrie.command.input` |
+| `2026-11-15 02:58:35` | `cowrie.command.input` |
+| `2026-11-15 02:58:35` | `cowrie.command.input` |
+| `2026-11-15 02:58:35` | `cowrie.command.input` |
+| `2026-11-15 02:58:35` | `cowrie.command.input` |
+| `2026-11-15 02:58:35` | `cowrie.command.input` |
+| `2026-11-15 02:58:35` | `cowrie.command.input` |
+| `2026-11-15 02:58:35` | `cowrie.command.input` |
+| `2026-11-15 02:58:35` | `cowrie.command.input` |
+| … | _47 more event(s) — see ir_cases.json_ |
+
+**Recommended Actions:**
+- [ ] Submit `2.57.122[.]168` to AbuseIPDB if not already reported
+- [ ] Block `2.57.122[.]168` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-8517a5784f52
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `2.57.122[.]168` |
+| **First Seen** | 2026-11-15 03:00 |
+| **Last Seen** | 2026-11-15 03:00 |
+| **Session Duration** | 8s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_41318e9521ab3db2b9056874bf9942a8_small_control'"'"' '"'"'check_41318e9521ab3db2b9056874bf9942a8'"'"'', printf '\n%s|%s\n' 'check_41318e9521ab3db2b9056874bf9942a8_small_control' 'check_41318e9521ab3db2b9056874bf9942a8', sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_41318e9521ab3db2b9056874bf9942a8_small_math'"'"' "$((738*826+6))"', (738*826+6, printf '\n%s|%s\n' 'check_41318e9521ab3db2b9056874bf9942a8_small_math' ")"` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-11-15 03:00:20` | `cowrie.session.connect` |
+| `2026-11-15 03:00:20` | `cowrie.client.version` |
+| `2026-11-15 03:00:20` | `cowrie.client.kex` |
+| `2026-11-15 03:00:22` | `cowrie.login.success` |
+| `2026-11-15 03:00:24` | `cowrie.client.size` |
+| `2026-11-15 03:00:25` | `cowrie.session.params` |
+| `2026-11-15 03:00:26` | `cowrie.command.input` |
+| `2026-11-15 03:00:26` | `cowrie.command.input` |
+| `2026-11-15 03:00:26` | `cowrie.command.input` |
+| `2026-11-15 03:00:26` | `cowrie.command.input` |
+| `2026-11-15 03:00:26` | `cowrie.command.input` |
+| `2026-11-15 03:00:26` | `cowrie.command.input` |
+| `2026-11-15 03:00:26` | `cowrie.command.input` |
+| `2026-11-15 03:00:26` | `cowrie.command.input` |
+| `2026-11-15 03:00:26` | `cowrie.command.input` |
+| … | _47 more event(s) — see ir_cases.json_ |
+
+**Recommended Actions:**
+- [ ] Submit `2.57.122[.]168` to AbuseIPDB if not already reported
+- [ ] Block `2.57.122[.]168` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-135ef448cc5b
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `77.239.124[.]252` |
+| **First Seen** | 2026-11-15 03:01 |
+| **Last Seen** | 2026-11-15 03:01 |
+| **Session Duration** | 1s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TTPs (MITRE)** | T1078 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-11-15 03:01:12` | `cowrie.session.connect` |
+| `2026-11-15 03:01:12` | `cowrie.login.success` |
+| `2026-11-15 03:01:13` | `cowrie.session.params` |
+| `2026-11-15 03:01:14` | `cowrie.log.closed` |
+| `2026-11-15 03:01:14` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `77.239.124[.]252` to AbuseIPDB if not already reported
+- [ ] Block `77.239.124[.]252` at perimeter firewall / security group
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-4ea6a2170bff
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `2.57.122[.]168` |
+| **First Seen** | 2026-11-15 03:02 |
+| **Last Seen** | 2026-11-15 03:02 |
+| **Session Duration** | 8s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_05964d2cdde2803c1a9613c5ffd8a4a4_small_control'"'"' '"'"'check_05964d2cdde2803c1a9613c5ffd8a4a4'"'"'', printf '\n%s|%s\n' 'check_05964d2cdde2803c1a9613c5ffd8a4a4_small_control' 'check_05964d2cdde2803c1a9613c5ffd8a4a4', sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_05964d2cdde2803c1a9613c5ffd8a4a4_small_math'"'"' "$((434*928+73))"', (434*928+73, printf '\n%s|%s\n' 'check_05964d2cdde2803c1a9613c5ffd8a4a4_small_math' ")"` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-11-15 03:02:10` | `cowrie.session.connect` |
+| `2026-11-15 03:02:10` | `cowrie.client.version` |
+| `2026-11-15 03:02:10` | `cowrie.client.kex` |
+| `2026-11-15 03:02:13` | `cowrie.login.success` |
+| `2026-11-15 03:02:14` | `cowrie.client.size` |
+| `2026-11-15 03:02:15` | `cowrie.session.params` |
+| `2026-11-15 03:02:16` | `cowrie.command.input` |
+| `2026-11-15 03:02:16` | `cowrie.command.input` |
+| `2026-11-15 03:02:16` | `cowrie.command.input` |
+| `2026-11-15 03:02:16` | `cowrie.command.input` |
+| `2026-11-15 03:02:16` | `cowrie.command.input` |
+| `2026-11-15 03:02:16` | `cowrie.command.input` |
+| `2026-11-15 03:02:16` | `cowrie.command.input` |
+| `2026-11-15 03:02:16` | `cowrie.command.input` |
+| `2026-11-15 03:02:16` | `cowrie.command.input` |
+| … | _47 more event(s) — see ir_cases.json_ |
+
+**Recommended Actions:**
+- [ ] Submit `2.57.122[.]168` to AbuseIPDB if not already reported
+- [ ] Block `2.57.122[.]168` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-661ebbd45876
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `103.12.197[.]122` |
+| **First Seen** | 2026-11-15 03:04 |
+| **Last Seen** | 2026-11-15 03:05 |
 | **Session Duration** | 8s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -340,85 +579,187 @@ Source IPs: `209.99.185.195`, `35.234.136.205`, `203.192.232.180`, `102.88.137.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-11-15 00:09:53` | `cowrie.session.connect` |
-| `2026-11-15 00:09:54` | `cowrie.client.version` |
-| `2026-11-15 00:09:54` | `cowrie.client.kex` |
-| `2026-11-15 00:09:56` | `cowrie.login.success` |
-| `2026-11-15 00:09:57` | `cowrie.direct-tcpip.request` |
-| `2026-11-15 00:10:02` | `cowrie.session.closed` |
+| `2026-11-15 03:04:53` | `cowrie.session.connect` |
+| `2026-11-15 03:04:54` | `cowrie.client.version` |
+| `2026-11-15 03:04:54` | `cowrie.client.kex` |
+| `2026-11-15 03:04:56` | `cowrie.login.success` |
+| `2026-11-15 03:04:56` | `cowrie.direct-tcpip.request` |
+| `2026-11-15 03:05:01` | `cowrie.session.closed` |
 
 **Recommended Actions:**
-- [ ] Submit `106.247.22[.]181` to AbuseIPDB if not already reported
-- [ ] Block `106.247.22[.]181` at perimeter firewall / security group
+- [ ] Submit `103.12.197[.]122` to AbuseIPDB if not already reported
+- [ ] Block `103.12.197[.]122` at perimeter firewall / security group
 - [ ] Investigate TCP tunnel target — port forwarding via honeypot
 - [ ] Confirm tunnel target is not internal infrastructure
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-5698e1083445
+### 🔴 HIGH · IR-9de908e0eaf8
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `65.20.149[.]26` |
-| **First Seen** | 2026-11-15 00:15 |
-| **Last Seen** | 2026-11-15 00:15 |
-| **Session Duration** | 6s |
+| **Source IP** | `2.57.122[.]168` |
+| **First Seen** | 2026-11-15 03:05 |
+| **Last Seen** | 2026-11-15 03:05 |
+| **Session Duration** | 8s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
+| **Commands Executed** | `sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_8efb5b0edd2bc55f73c87885d7a91b2d_small_control'"'"' '"'"'check_8efb5b0edd2bc55f73c87885d7a91b2d'"'"'', printf '\n%s|%s\n' 'check_8efb5b0edd2bc55f73c87885d7a91b2d_small_control' 'check_8efb5b0edd2bc55f73c87885d7a91b2d', sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_8efb5b0edd2bc55f73c87885d7a91b2d_small_math'"'"' "$((712*518+35))"', (712*518+35, printf '\n%s|%s\n' 'check_8efb5b0edd2bc55f73c87885d7a91b2d_small_math' ")"` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1592 |
 
 **Attack Timeline:**
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-11-15 00:15:25` | `cowrie.session.connect` |
-| `2026-11-15 00:15:25` | `cowrie.client.version` |
-| `2026-11-15 00:15:25` | `cowrie.client.kex` |
-| `2026-11-15 00:15:26` | `cowrie.login.success` |
-| `2026-11-15 00:15:27` | `cowrie.direct-tcpip.request` |
-| `2026-11-15 00:15:31` | `cowrie.session.closed` |
+| `2026-11-15 03:05:48` | `cowrie.session.connect` |
+| `2026-11-15 03:05:49` | `cowrie.client.version` |
+| `2026-11-15 03:05:49` | `cowrie.client.kex` |
+| `2026-11-15 03:05:51` | `cowrie.login.success` |
+| `2026-11-15 03:05:52` | `cowrie.client.size` |
+| `2026-11-15 03:05:53` | `cowrie.session.params` |
+| `2026-11-15 03:05:54` | `cowrie.command.input` |
+| `2026-11-15 03:05:54` | `cowrie.command.input` |
+| `2026-11-15 03:05:54` | `cowrie.command.input` |
+| `2026-11-15 03:05:54` | `cowrie.command.input` |
+| `2026-11-15 03:05:54` | `cowrie.command.input` |
+| `2026-11-15 03:05:54` | `cowrie.command.input` |
+| `2026-11-15 03:05:54` | `cowrie.command.input` |
+| `2026-11-15 03:05:54` | `cowrie.command.input` |
+| `2026-11-15 03:05:54` | `cowrie.command.input` |
+| … | _47 more event(s) — see ir_cases.json_ |
 
 **Recommended Actions:**
-- [ ] Submit `65.20.149[.]26` to AbuseIPDB if not already reported
-- [ ] Block `65.20.149[.]26` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Submit `2.57.122[.]168` to AbuseIPDB if not already reported
+- [ ] Block `2.57.122[.]168` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-719838636a71
+### 🔴 HIGH · IR-f7719d7d68e5
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `217.148.51[.]196` |
-| **First Seen** | 2026-11-15 00:15 |
-| **Last Seen** | 2026-11-15 00:20 |
-| **Session Duration** | 301s |
+| **Source IP** | `2.57.122[.]168` |
+| **First Seen** | 2026-11-15 03:07 |
+| **Last Seen** | 2026-11-15 03:07 |
+| **Session Duration** | 9s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 · T1592 |
+| **Commands Executed** | `sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_b91777fd750e350f81dd7a72e28d400c_small_control'"'"' '"'"'check_b91777fd750e350f81dd7a72e28d400c'"'"'', printf '\n%s|%s\n' 'check_b91777fd750e350f81dd7a72e28d400c_small_control' 'check_b91777fd750e350f81dd7a72e28d400c', sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_b91777fd750e350f81dd7a72e28d400c_small_math'"'"' "$((525*988+48))"', (525*988+48, printf '\n%s|%s\n' 'check_b91777fd750e350f81dd7a72e28d400c_small_math' ")"` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1592 |
 
 **Attack Timeline:**
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-11-15 00:15:32` | `cowrie.session.connect` |
-| `2026-11-15 00:15:33` | `cowrie.client.version` |
-| `2026-11-15 00:15:33` | `cowrie.client.kex` |
-| `2026-11-15 00:15:34` | `cowrie.login.success` |
-| `2026-11-15 00:20:34` | `cowrie.session.closed` |
+| `2026-11-15 03:07:37` | `cowrie.session.connect` |
+| `2026-11-15 03:07:37` | `cowrie.client.version` |
+| `2026-11-15 03:07:37` | `cowrie.client.kex` |
+| `2026-11-15 03:07:39` | `cowrie.login.success` |
+| `2026-11-15 03:07:41` | `cowrie.client.size` |
+| `2026-11-15 03:07:42` | `cowrie.session.params` |
+| `2026-11-15 03:07:42` | `cowrie.command.input` |
+| `2026-11-15 03:07:42` | `cowrie.command.input` |
+| `2026-11-15 03:07:42` | `cowrie.command.input` |
+| `2026-11-15 03:07:42` | `cowrie.command.input` |
+| `2026-11-15 03:07:42` | `cowrie.command.input` |
+| `2026-11-15 03:07:42` | `cowrie.command.input` |
+| `2026-11-15 03:07:42` | `cowrie.command.input` |
+| `2026-11-15 03:07:42` | `cowrie.command.input` |
+| `2026-11-15 03:07:42` | `cowrie.command.input` |
+| … | _47 more event(s) — see ir_cases.json_ |
 
 **Recommended Actions:**
-- [ ] Submit `217.148.51[.]196` to AbuseIPDB if not already reported
-- [ ] Block `217.148.51[.]196` at perimeter firewall / security group
+- [ ] Submit `2.57.122[.]168` to AbuseIPDB if not already reported
+- [ ] Block `2.57.122[.]168` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-3d905c324bb3
+### 🔴 HIGH · IR-b7ac94f16df9
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `2.57.122[.]168` |
+| **First Seen** | 2026-11-15 03:09 |
+| **Last Seen** | 2026-11-15 03:09 |
+| **Session Duration** | 7s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_9e6a733b7fa6208d6b8ce1ac61070d68_small_control'"'"' '"'"'check_9e6a733b7fa6208d6b8ce1ac61070d68'"'"'', printf '\n%s|%s\n' 'check_9e6a733b7fa6208d6b8ce1ac61070d68_small_control' 'check_9e6a733b7fa6208d6b8ce1ac61070d68', sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_9e6a733b7fa6208d6b8ce1ac61070d68_small_math'"'"' "$((675*761+9))"', (675*761+9, printf '\n%s|%s\n' 'check_9e6a733b7fa6208d6b8ce1ac61070d68_small_math' ")"` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-11-15 03:09:24` | `cowrie.session.connect` |
+| `2026-11-15 03:09:25` | `cowrie.client.version` |
+| `2026-11-15 03:09:25` | `cowrie.client.kex` |
+| `2026-11-15 03:09:26` | `cowrie.login.success` |
+| `2026-11-15 03:09:28` | `cowrie.client.size` |
+| `2026-11-15 03:09:29` | `cowrie.session.params` |
+| `2026-11-15 03:09:29` | `cowrie.command.input` |
+| `2026-11-15 03:09:29` | `cowrie.command.input` |
+| `2026-11-15 03:09:29` | `cowrie.command.input` |
+| `2026-11-15 03:09:29` | `cowrie.command.input` |
+| `2026-11-15 03:09:29` | `cowrie.command.input` |
+| `2026-11-15 03:09:29` | `cowrie.command.input` |
+| `2026-11-15 03:09:29` | `cowrie.command.input` |
+| `2026-11-15 03:09:29` | `cowrie.command.input` |
+| `2026-11-15 03:09:29` | `cowrie.command.input` |
+| … | _47 more event(s) — see ir_cases.json_ |
+
+**Recommended Actions:**
+- [ ] Submit `2.57.122[.]168` to AbuseIPDB if not already reported
+- [ ] Block `2.57.122[.]168` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-8274311a8d5b
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `2.57.122[.]168` |
+| **First Seen** | 2026-11-15 03:11 |
+| **Last Seen** | 2026-11-15 03:11 |
+| **Session Duration** | 8s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_818d1dc7d835027c5851735ec2097b6a_small_control'"'"' '"'"'check_818d1dc7d835027c5851735ec2097b6a'"'"'', printf '\n%s|%s\n' 'check_818d1dc7d835027c5851735ec2097b6a_small_control' 'check_818d1dc7d835027c5851735ec2097b6a', sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_818d1dc7d835027c5851735ec2097b6a_small_math'"'"' "$((265*687+89))"', (265*687+89, printf '\n%s|%s\n' 'check_818d1dc7d835027c5851735ec2097b6a_small_math' ")"` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-11-15 03:11:15` | `cowrie.session.connect` |
+| `2026-11-15 03:11:15` | `cowrie.client.version` |
+| `2026-11-15 03:11:16` | `cowrie.client.kex` |
+| `2026-11-15 03:11:17` | `cowrie.login.success` |
+| `2026-11-15 03:11:19` | `cowrie.client.size` |
+| `2026-11-15 03:11:20` | `cowrie.session.params` |
+| `2026-11-15 03:11:21` | `cowrie.command.input` |
+| `2026-11-15 03:11:21` | `cowrie.command.input` |
+| `2026-11-15 03:11:21` | `cowrie.command.input` |
+| `2026-11-15 03:11:21` | `cowrie.command.input` |
+| `2026-11-15 03:11:21` | `cowrie.command.input` |
+| `2026-11-15 03:11:21` | `cowrie.command.input` |
+| `2026-11-15 03:11:21` | `cowrie.command.input` |
+| `2026-11-15 03:11:21` | `cowrie.command.input` |
+| `2026-11-15 03:11:21` | `cowrie.command.input` |
+| … | _47 more event(s) — see ir_cases.json_ |
+
+**Recommended Actions:**
+- [ ] Submit `2.57.122[.]168` to AbuseIPDB if not already reported
+- [ ] Block `2.57.122[.]168` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-e452953fb827
 
 | Field | Detail |
 |---|---|
 | **Source IP** | `195.178.110[.]78` |
-| **First Seen** | 2026-11-15 00:17 |
-| **Last Seen** | 2026-11-15 00:17 |
+| **First Seen** | 2026-11-15 03:12 |
+| **Last Seen** | 2026-11-15 03:12 |
 | **Session Duration** | 0s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -428,148 +769,64 @@ Source IPs: `209.99.185.195`, `35.234.136.205`, `203.192.232.180`, `102.88.137.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-11-15 00:17:52` | `cowrie.session.connect` |
-| `2026-11-15 00:17:52` | `cowrie.login.success` |
-| `2026-11-15 00:17:53` | `cowrie.session.params` |
-| `2026-11-15 00:17:53` | `cowrie.log.closed` |
-| `2026-11-15 00:17:53` | `cowrie.session.closed` |
+| `2026-11-15 03:12:10` | `cowrie.session.connect` |
+| `2026-11-15 03:12:10` | `cowrie.login.success` |
+| `2026-11-15 03:12:11` | `cowrie.session.params` |
+| `2026-11-15 03:12:11` | `cowrie.log.closed` |
+| `2026-11-15 03:12:11` | `cowrie.session.closed` |
 
 **Recommended Actions:**
 - [ ] Submit `195.178.110[.]78` to AbuseIPDB if not already reported
 - [ ] Block `195.178.110[.]78` at perimeter firewall / security group
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-56b313f170ec
+### 🔴 HIGH · IR-8c8bf111fc6d
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `24.97.253[.]246` |
-| **First Seen** | 2026-11-15 00:19 |
-| **Last Seen** | 2026-11-15 00:24 |
-| **Session Duration** | 302s |
+| **Source IP** | `2.57.122[.]168` |
+| **First Seen** | 2026-11-15 03:13 |
+| **Last Seen** | 2026-11-15 03:13 |
+| **Session Duration** | 12s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
+| **Commands Executed** | `sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_0870bcdd9b4f5cb7b8f659144c9683f8_small_control'"'"' '"'"'check_0870bcdd9b4f5cb7b8f659144c9683f8'"'"'', printf '\n%s|%s\n' 'check_0870bcdd9b4f5cb7b8f659144c9683f8_small_control' 'check_0870bcdd9b4f5cb7b8f659144c9683f8', sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_0870bcdd9b4f5cb7b8f659144c9683f8_small_math'"'"' "$((167*782+27))"', (167*782+27, printf '\n%s|%s\n' 'check_0870bcdd9b4f5cb7b8f659144c9683f8_small_math' ")"` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1592 |
 
 **Attack Timeline:**
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-11-15 00:19:42` | `cowrie.session.connect` |
-| `2026-11-15 00:19:43` | `cowrie.client.version` |
-| `2026-11-15 00:19:43` | `cowrie.client.kex` |
-| `2026-11-15 00:19:44` | `cowrie.login.success` |
-| `2026-11-15 00:19:45` | `cowrie.direct-tcpip.request` |
-| `2026-11-15 00:24:44` | `cowrie.session.closed` |
+| `2026-11-15 03:13:09` | `cowrie.session.connect` |
+| `2026-11-15 03:13:09` | `cowrie.client.version` |
+| `2026-11-15 03:13:09` | `cowrie.client.kex` |
+| `2026-11-15 03:13:13` | `cowrie.login.success` |
+| `2026-11-15 03:13:14` | `cowrie.client.size` |
+| `2026-11-15 03:13:15` | `cowrie.session.params` |
+| `2026-11-15 03:13:15` | `cowrie.command.input` |
+| `2026-11-15 03:13:15` | `cowrie.command.input` |
+| `2026-11-15 03:13:15` | `cowrie.command.input` |
+| `2026-11-15 03:13:15` | `cowrie.command.input` |
+| `2026-11-15 03:13:15` | `cowrie.command.input` |
+| `2026-11-15 03:13:15` | `cowrie.command.input` |
+| `2026-11-15 03:13:15` | `cowrie.command.input` |
+| `2026-11-15 03:13:16` | `cowrie.command.input` |
+| `2026-11-15 03:13:16` | `cowrie.command.input` |
+| … | _47 more event(s) — see ir_cases.json_ |
 
 **Recommended Actions:**
-- [ ] Submit `24.97.253[.]246` to AbuseIPDB if not already reported
-- [ ] Block `24.97.253[.]246` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Submit `2.57.122[.]168` to AbuseIPDB if not already reported
+- [ ] Block `2.57.122[.]168` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-8579df93a1b0
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `116.232.100[.]225` |
-| **First Seen** | 2026-11-15 00:19 |
-| **Last Seen** | 2026-11-15 00:24 |
-| **Session Duration** | 303s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-11-15 00:19:55` | `cowrie.session.connect` |
-| `2026-11-15 00:19:57` | `cowrie.client.version` |
-| `2026-11-15 00:19:57` | `cowrie.client.kex` |
-| `2026-11-15 00:19:59` | `cowrie.login.success` |
-| `2026-11-15 00:20:00` | `cowrie.direct-tcpip.request` |
-| `2026-11-15 00:24:59` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `116.232.100[.]225` to AbuseIPDB if not already reported
-- [ ] Block `116.232.100[.]225` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-f691b4747912
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `72.215.46[.]191` |
-| **First Seen** | 2026-11-15 00:20 |
-| **Last Seen** | 2026-11-15 00:20 |
-| **Session Duration** | 7s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-11-15 00:20:45` | `cowrie.session.connect` |
-| `2026-11-15 00:20:46` | `cowrie.client.version` |
-| `2026-11-15 00:20:46` | `cowrie.client.kex` |
-| `2026-11-15 00:20:47` | `cowrie.login.success` |
-| `2026-11-15 00:20:48` | `cowrie.direct-tcpip.request` |
-| `2026-11-15 00:20:52` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `72.215.46[.]191` to AbuseIPDB if not already reported
-- [ ] Block `72.215.46[.]191` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-c078007886b6
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `70.116.16[.]23` |
-| **First Seen** | 2026-11-15 00:20 |
-| **Last Seen** | 2026-11-15 00:21 |
-| **Session Duration** | 7s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-11-15 00:20:53` | `cowrie.session.connect` |
-| `2026-11-15 00:20:54` | `cowrie.client.version` |
-| `2026-11-15 00:20:54` | `cowrie.client.kex` |
-| `2026-11-15 00:20:56` | `cowrie.login.success` |
-| `2026-11-15 00:20:56` | `cowrie.direct-tcpip.request` |
-| `2026-11-15 00:21:01` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `70.116.16[.]23` to AbuseIPDB if not already reported
-- [ ] Block `70.116.16[.]23` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-115d3a6dbce6
+### 🔴 HIGH · IR-024b2f325009
 
 | Field | Detail |
 |---|---|
 | **Source IP** | `176.53.159[.]196` |
-| **First Seen** | 2026-11-15 00:21 |
-| **Last Seen** | 2026-11-15 00:21 |
+| **First Seen** | 2026-11-15 03:13 |
+| **Last Seen** | 2026-11-15 03:13 |
 | **Session Duration** | 0s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -580,13 +837,13 @@ Source IPs: `209.99.185.195`, `35.234.136.205`, `203.192.232.180`, `102.88.137.1
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-11-15 00:21:31` | `cowrie.session.connect` |
-| `2026-11-15 00:21:31` | `cowrie.client.version` |
-| `2026-11-15 00:21:31` | `cowrie.client.kex` |
-| `2026-11-15 00:21:31` | `cowrie.login.success` |
-| `2026-11-15 00:21:31` | `cowrie.direct-tcpip.request` |
-| `2026-11-15 00:21:32` | `cowrie.direct-tcpip.data` |
-| `2026-11-15 00:21:32` | `cowrie.session.closed` |
+| `2026-11-15 03:13:20` | `cowrie.session.connect` |
+| `2026-11-15 03:13:20` | `cowrie.client.version` |
+| `2026-11-15 03:13:20` | `cowrie.client.kex` |
+| `2026-11-15 03:13:20` | `cowrie.login.success` |
+| `2026-11-15 03:13:21` | `cowrie.direct-tcpip.request` |
+| `2026-11-15 03:13:21` | `cowrie.direct-tcpip.data` |
+| `2026-11-15 03:13:21` | `cowrie.session.closed` |
 
 **Recommended Actions:**
 - [ ] Submit `176.53.159[.]196` to AbuseIPDB if not already reported
@@ -595,432 +852,431 @@ Source IPs: `209.99.185.195`, `35.234.136.205`, `203.192.232.180`, `102.88.137.1
 - [ ] Confirm tunnel target is not internal infrastructure
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-6db85fc789fc
+### 🔴 HIGH · IR-0d6c81d4e9c2
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `95.165.25[.]233` |
-| **First Seen** | 2026-11-15 00:26 |
-| **Last Seen** | 2026-11-15 00:26 |
-| **Session Duration** | 8s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-11-15 00:26:20` | `cowrie.session.connect` |
-| `2026-11-15 00:26:21` | `cowrie.client.version` |
-| `2026-11-15 00:26:21` | `cowrie.client.kex` |
-| `2026-11-15 00:26:23` | `cowrie.login.success` |
-| `2026-11-15 00:26:23` | `cowrie.direct-tcpip.request` |
-| `2026-11-15 00:26:28` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `95.165.25[.]233` to AbuseIPDB if not already reported
-- [ ] Block `95.165.25[.]233` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-4b172975feea
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `102.210.148[.]41` |
-| **First Seen** | 2026-11-15 00:26 |
-| **Last Seen** | 2026-11-15 00:26 |
+| **Source IP** | `2.57.122[.]168` |
+| **First Seen** | 2026-11-15 03:15 |
+| **Last Seen** | 2026-11-15 03:15 |
 | **Session Duration** | 9s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
+| **Commands Executed** | `sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_811d58f357dab8bb0a14072324c0056c_small_control'"'"' '"'"'check_811d58f357dab8bb0a14072324c0056c'"'"'', printf '\n%s|%s\n' 'check_811d58f357dab8bb0a14072324c0056c_small_control' 'check_811d58f357dab8bb0a14072324c0056c', sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_811d58f357dab8bb0a14072324c0056c_small_math'"'"' "$((153*970+74))"', (153*970+74, printf '\n%s|%s\n' 'check_811d58f357dab8bb0a14072324c0056c_small_math' ")"` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1592 |
 
 **Attack Timeline:**
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-11-15 00:26:30` | `cowrie.session.connect` |
-| `2026-11-15 00:26:31` | `cowrie.client.version` |
-| `2026-11-15 00:26:31` | `cowrie.client.kex` |
-| `2026-11-15 00:26:33` | `cowrie.login.success` |
-| `2026-11-15 00:26:34` | `cowrie.direct-tcpip.request` |
-| `2026-11-15 00:26:39` | `cowrie.session.closed` |
+| `2026-11-15 03:15:03` | `cowrie.session.connect` |
+| `2026-11-15 03:15:03` | `cowrie.client.version` |
+| `2026-11-15 03:15:03` | `cowrie.client.kex` |
+| `2026-11-15 03:15:05` | `cowrie.login.success` |
+| `2026-11-15 03:15:07` | `cowrie.client.size` |
+| `2026-11-15 03:15:07` | `cowrie.session.params` |
+| `2026-11-15 03:15:08` | `cowrie.command.input` |
+| `2026-11-15 03:15:08` | `cowrie.command.input` |
+| `2026-11-15 03:15:08` | `cowrie.command.input` |
+| `2026-11-15 03:15:08` | `cowrie.command.input` |
+| `2026-11-15 03:15:08` | `cowrie.command.input` |
+| `2026-11-15 03:15:08` | `cowrie.command.input` |
+| `2026-11-15 03:15:08` | `cowrie.command.input` |
+| `2026-11-15 03:15:08` | `cowrie.command.input` |
+| `2026-11-15 03:15:08` | `cowrie.command.input` |
+| … | _47 more event(s) — see ir_cases.json_ |
 
 **Recommended Actions:**
-- [ ] Submit `102.210.148[.]41` to AbuseIPDB if not already reported
-- [ ] Block `102.210.148[.]41` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-1d82512ae808
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `120.41.228[.]226` |
-| **First Seen** | 2026-11-15 00:31 |
-| **Last Seen** | 2026-11-15 00:31 |
-| **Session Duration** | 8s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-11-15 00:31:15` | `cowrie.session.connect` |
-| `2026-11-15 00:31:16` | `cowrie.client.version` |
-| `2026-11-15 00:31:16` | `cowrie.client.kex` |
-| `2026-11-15 00:31:18` | `cowrie.login.success` |
-| `2026-11-15 00:31:19` | `cowrie.direct-tcpip.request` |
-| `2026-11-15 00:31:23` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `120.41.228[.]226` to AbuseIPDB if not already reported
-- [ ] Block `120.41.228[.]226` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-f8ed0b01583d
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `122.160.80[.]105` |
-| **First Seen** | 2026-11-15 00:31 |
-| **Last Seen** | 2026-11-15 00:31 |
-| **Session Duration** | 8s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-11-15 00:31:24` | `cowrie.session.connect` |
-| `2026-11-15 00:31:25` | `cowrie.client.version` |
-| `2026-11-15 00:31:25` | `cowrie.client.kex` |
-| `2026-11-15 00:31:27` | `cowrie.login.success` |
-| `2026-11-15 00:31:28` | `cowrie.direct-tcpip.request` |
-| `2026-11-15 00:31:32` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `122.160.80[.]105` to AbuseIPDB if not already reported
-- [ ] Block `122.160.80[.]105` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-032ad26fa512
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `98.168.101[.]148` |
-| **First Seen** | 2026-11-15 00:31 |
-| **Last Seen** | 2026-11-15 00:32 |
-| **Session Duration** | 7s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-11-15 00:31:55` | `cowrie.session.connect` |
-| `2026-11-15 00:31:56` | `cowrie.client.version` |
-| `2026-11-15 00:31:56` | `cowrie.client.kex` |
-| `2026-11-15 00:31:58` | `cowrie.login.success` |
-| `2026-11-15 00:31:58` | `cowrie.direct-tcpip.request` |
-| `2026-11-15 00:32:03` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `98.168.101[.]148` to AbuseIPDB if not already reported
-- [ ] Block `98.168.101[.]148` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-5b05e11d7613
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `187.58.241[.]90` |
-| **First Seen** | 2026-11-15 00:39 |
-| **Last Seen** | 2026-11-15 00:39 |
-| **Session Duration** | 8s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-11-15 00:39:45` | `cowrie.session.connect` |
-| `2026-11-15 00:39:46` | `cowrie.client.version` |
-| `2026-11-15 00:39:46` | `cowrie.client.kex` |
-| `2026-11-15 00:39:48` | `cowrie.login.success` |
-| `2026-11-15 00:39:49` | `cowrie.direct-tcpip.request` |
-| `2026-11-15 00:39:54` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `187.58.241[.]90` to AbuseIPDB if not already reported
-- [ ] Block `187.58.241[.]90` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-00a568dcc3c9
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `182.60.128[.]241` |
-| **First Seen** | 2026-11-15 00:39 |
-| **Last Seen** | 2026-11-15 00:40 |
-| **Session Duration** | 8s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-11-15 00:39:55` | `cowrie.session.connect` |
-| `2026-11-15 00:39:55` | `cowrie.client.version` |
-| `2026-11-15 00:39:55` | `cowrie.client.kex` |
-| `2026-11-15 00:39:58` | `cowrie.login.success` |
-| `2026-11-15 00:39:58` | `cowrie.direct-tcpip.request` |
-| `2026-11-15 00:40:03` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `182.60.128[.]241` to AbuseIPDB if not already reported
-- [ ] Block `182.60.128[.]241` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-3f7ab9fb73ac
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `193.187.110[.]160` |
-| **First Seen** | 2026-11-15 00:46 |
-| **Last Seen** | 2026-11-15 00:46 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-11-15 00:46:37` | `cowrie.session.connect` |
-| `2026-11-15 00:46:37` | `cowrie.client.version` |
-| `2026-11-15 00:46:37` | `cowrie.client.kex` |
-| `2026-11-15 00:46:37` | `cowrie.login.success` |
-| `2026-11-15 00:46:37` | `cowrie.direct-tcpip.request` |
-| `2026-11-15 00:46:38` | `cowrie.direct-tcpip.ja4h` |
-| `2026-11-15 00:46:38` | `cowrie.direct-tcpip.data` |
-| `2026-11-15 00:46:38` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `193.187.110[.]160` to AbuseIPDB if not already reported
-- [ ] Block `193.187.110[.]160` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-079296d24f20
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `138.226.239[.]234` |
-| **First Seen** | 2026-11-15 00:54 |
-| **Last Seen** | 2026-11-15 00:54 |
-| **Session Duration** | 0s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-11-15 00:54:09` | `cowrie.session.connect` |
-| `2026-11-15 00:54:09` | `cowrie.client.version` |
-| `2026-11-15 00:54:09` | `cowrie.client.kex` |
-| `2026-11-15 00:54:10` | `cowrie.login.success` |
-| `2026-11-15 00:54:10` | `cowrie.direct-tcpip.request` |
-| `2026-11-15 00:54:10` | `cowrie.direct-tcpip.ja4` |
-| `2026-11-15 00:54:10` | `cowrie.direct-tcpip.data` |
-| `2026-11-15 00:54:10` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `138.226.239[.]234` to AbuseIPDB if not already reported
-- [ ] Block `138.226.239[.]234` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-9819a78b5f71
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `70.167.235[.]121` |
-| **First Seen** | 2026-11-15 01:09 |
-| **Last Seen** | 2026-11-15 01:09 |
-| **Session Duration** | 7s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-11-15 01:09:52` | `cowrie.session.connect` |
-| `2026-11-15 01:09:53` | `cowrie.client.version` |
-| `2026-11-15 01:09:53` | `cowrie.client.kex` |
-| `2026-11-15 01:09:54` | `cowrie.login.success` |
-| `2026-11-15 01:09:55` | `cowrie.direct-tcpip.request` |
-| `2026-11-15 01:09:59` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `70.167.235[.]121` to AbuseIPDB if not already reported
-- [ ] Block `70.167.235[.]121` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-ceb98f359b5a
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `47.143.208[.]202` |
-| **First Seen** | 2026-11-15 01:10 |
-| **Last Seen** | 2026-11-15 01:10 |
-| **Session Duration** | 7s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-11-15 01:10:00` | `cowrie.session.connect` |
-| `2026-11-15 01:10:00` | `cowrie.client.version` |
-| `2026-11-15 01:10:00` | `cowrie.client.kex` |
-| `2026-11-15 01:10:01` | `cowrie.login.success` |
-| `2026-11-15 01:10:02` | `cowrie.direct-tcpip.request` |
-| `2026-11-15 01:10:07` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `47.143.208[.]202` to AbuseIPDB if not already reported
-- [ ] Block `47.143.208[.]202` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-93f0be4e7462
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `103.164.35[.]51` |
-| **First Seen** | 2026-11-15 01:10 |
-| **Last Seen** | 2026-11-15 01:11 |
-| **Session Duration** | 13s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `uname -a` |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-11-15 01:10:47` | `cowrie.session.connect` |
-| `2026-11-15 01:10:47` | `cowrie.client.version` |
-| `2026-11-15 01:10:47` | `cowrie.client.kex` |
-| `2026-11-15 01:10:48` | `cowrie.login.success` |
-| `2026-11-15 01:10:49` | `cowrie.client.size` |
-| `2026-11-15 01:10:49` | `cowrie.session.params` |
-| `2026-11-15 01:10:59` | `cowrie.log.closed` |
-| `2026-11-15 01:11:00` | `cowrie.session.params` |
-| `2026-11-15 01:11:00` | `cowrie.command.input` |
-| `2026-11-15 01:11:01` | `cowrie.log.closed` |
-| `2026-11-15 01:11:01` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `103.164.35[.]51` to AbuseIPDB if not already reported
-- [ ] Block `103.164.35[.]51` at perimeter firewall / security group
+- [ ] Submit `2.57.122[.]168` to AbuseIPDB if not already reported
+- [ ] Block `2.57.122[.]168` at perimeter firewall / security group
 - [ ] Review commands for lateral movement indicators
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### Additional priority cases (42) — compact view
+### 🔴 HIGH · IR-c929ec6f855a
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `2.57.122[.]168` |
+| **First Seen** | 2026-11-15 03:16 |
+| **Last Seen** | 2026-11-15 03:17 |
+| **Session Duration** | 6s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_6524fd7c51e71a0f4c928d6624062837_small_control'"'"' '"'"'check_6524fd7c51e71a0f4c928d6624062837'"'"'', printf '\n%s|%s\n' 'check_6524fd7c51e71a0f4c928d6624062837_small_control' 'check_6524fd7c51e71a0f4c928d6624062837', sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_6524fd7c51e71a0f4c928d6624062837_small_math'"'"' "$((968*478+91))"', (968*478+91, printf '\n%s|%s\n' 'check_6524fd7c51e71a0f4c928d6624062837_small_math' ")"` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-11-15 03:16:58` | `cowrie.session.connect` |
+| `2026-11-15 03:16:58` | `cowrie.client.version` |
+| `2026-11-15 03:16:58` | `cowrie.client.kex` |
+| `2026-11-15 03:17:00` | `cowrie.login.success` |
+| `2026-11-15 03:17:01` | `cowrie.client.size` |
+| `2026-11-15 03:17:01` | `cowrie.session.params` |
+| `2026-11-15 03:17:02` | `cowrie.command.input` |
+| `2026-11-15 03:17:02` | `cowrie.command.input` |
+| `2026-11-15 03:17:02` | `cowrie.command.input` |
+| `2026-11-15 03:17:02` | `cowrie.command.input` |
+| `2026-11-15 03:17:02` | `cowrie.command.input` |
+| `2026-11-15 03:17:02` | `cowrie.command.input` |
+| `2026-11-15 03:17:02` | `cowrie.command.input` |
+| `2026-11-15 03:17:02` | `cowrie.command.input` |
+| `2026-11-15 03:17:02` | `cowrie.command.input` |
+| … | _47 more event(s) — see ir_cases.json_ |
+
+**Recommended Actions:**
+- [ ] Submit `2.57.122[.]168` to AbuseIPDB if not already reported
+- [ ] Block `2.57.122[.]168` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-1f012d077104
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `2.57.122[.]168` |
+| **First Seen** | 2026-11-15 03:18 |
+| **Last Seen** | 2026-11-15 03:19 |
+| **Session Duration** | 7s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_765c7074cfc50c828b4f653f87b15362_small_control'"'"' '"'"'check_765c7074cfc50c828b4f653f87b15362'"'"'', printf '\n%s|%s\n' 'check_765c7074cfc50c828b4f653f87b15362_small_control' 'check_765c7074cfc50c828b4f653f87b15362', sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_765c7074cfc50c828b4f653f87b15362_small_math'"'"' "$((391*50+37))"', (391*50+37, printf '\n%s|%s\n' 'check_765c7074cfc50c828b4f653f87b15362_small_math' ")"` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-11-15 03:18:55` | `cowrie.session.connect` |
+| `2026-11-15 03:18:55` | `cowrie.client.version` |
+| `2026-11-15 03:18:55` | `cowrie.client.kex` |
+| `2026-11-15 03:18:57` | `cowrie.login.success` |
+| `2026-11-15 03:18:58` | `cowrie.client.size` |
+| `2026-11-15 03:18:59` | `cowrie.session.params` |
+| `2026-11-15 03:18:59` | `cowrie.command.input` |
+| `2026-11-15 03:18:59` | `cowrie.command.input` |
+| `2026-11-15 03:18:59` | `cowrie.command.input` |
+| `2026-11-15 03:18:59` | `cowrie.command.input` |
+| `2026-11-15 03:18:59` | `cowrie.command.input` |
+| `2026-11-15 03:18:59` | `cowrie.command.input` |
+| `2026-11-15 03:18:59` | `cowrie.command.input` |
+| `2026-11-15 03:18:59` | `cowrie.command.input` |
+| `2026-11-15 03:18:59` | `cowrie.command.input` |
+| … | _47 more event(s) — see ir_cases.json_ |
+
+**Recommended Actions:**
+- [ ] Submit `2.57.122[.]168` to AbuseIPDB if not already reported
+- [ ] Block `2.57.122[.]168` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-5669262e0b7e
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `2.57.122[.]168` |
+| **First Seen** | 2026-11-15 03:20 |
+| **Last Seen** | 2026-11-15 03:20 |
+| **Session Duration** | 6s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_de7dab68b55c63c39d3ac5033c676922_small_control'"'"' '"'"'check_de7dab68b55c63c39d3ac5033c676922'"'"'', printf '\n%s|%s\n' 'check_de7dab68b55c63c39d3ac5033c676922_small_control' 'check_de7dab68b55c63c39d3ac5033c676922', sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_de7dab68b55c63c39d3ac5033c676922_small_math'"'"' "$((129*277+19))"', (129*277+19, printf '\n%s|%s\n' 'check_de7dab68b55c63c39d3ac5033c676922_small_math' ")"` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-11-15 03:20:51` | `cowrie.session.connect` |
+| `2026-11-15 03:20:51` | `cowrie.client.version` |
+| `2026-11-15 03:20:51` | `cowrie.client.kex` |
+| `2026-11-15 03:20:52` | `cowrie.login.success` |
+| `2026-11-15 03:20:54` | `cowrie.client.size` |
+| `2026-11-15 03:20:55` | `cowrie.session.params` |
+| `2026-11-15 03:20:55` | `cowrie.command.input` |
+| `2026-11-15 03:20:55` | `cowrie.command.input` |
+| `2026-11-15 03:20:55` | `cowrie.command.input` |
+| `2026-11-15 03:20:55` | `cowrie.command.input` |
+| `2026-11-15 03:20:55` | `cowrie.command.input` |
+| `2026-11-15 03:20:55` | `cowrie.command.input` |
+| `2026-11-15 03:20:55` | `cowrie.command.input` |
+| `2026-11-15 03:20:55` | `cowrie.command.input` |
+| `2026-11-15 03:20:55` | `cowrie.command.input` |
+| … | _47 more event(s) — see ir_cases.json_ |
+
+**Recommended Actions:**
+- [ ] Submit `2.57.122[.]168` to AbuseIPDB if not already reported
+- [ ] Block `2.57.122[.]168` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-712191d5bf2a
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `2.57.122[.]168` |
+| **First Seen** | 2026-11-15 03:22 |
+| **Last Seen** | 2026-11-15 03:22 |
+| **Session Duration** | 5s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_275ac663ef5271182602d2361053da85_small_control'"'"' '"'"'check_275ac663ef5271182602d2361053da85'"'"'', printf '\n%s|%s\n' 'check_275ac663ef5271182602d2361053da85_small_control' 'check_275ac663ef5271182602d2361053da85', sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_275ac663ef5271182602d2361053da85_small_math'"'"' "$((105*247+84))"', (105*247+84, printf '\n%s|%s\n' 'check_275ac663ef5271182602d2361053da85_small_math' ")"` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-11-15 03:22:42` | `cowrie.session.connect` |
+| `2026-11-15 03:22:42` | `cowrie.client.version` |
+| `2026-11-15 03:22:42` | `cowrie.client.kex` |
+| `2026-11-15 03:22:43` | `cowrie.login.success` |
+| `2026-11-15 03:22:44` | `cowrie.client.size` |
+| `2026-11-15 03:22:45` | `cowrie.session.params` |
+| `2026-11-15 03:22:45` | `cowrie.command.input` |
+| `2026-11-15 03:22:45` | `cowrie.command.input` |
+| `2026-11-15 03:22:45` | `cowrie.command.input` |
+| `2026-11-15 03:22:45` | `cowrie.command.input` |
+| `2026-11-15 03:22:45` | `cowrie.command.input` |
+| `2026-11-15 03:22:45` | `cowrie.command.input` |
+| `2026-11-15 03:22:45` | `cowrie.command.input` |
+| `2026-11-15 03:22:45` | `cowrie.command.input` |
+| `2026-11-15 03:22:45` | `cowrie.command.input` |
+| … | _47 more event(s) — see ir_cases.json_ |
+
+**Recommended Actions:**
+- [ ] Submit `2.57.122[.]168` to AbuseIPDB if not already reported
+- [ ] Block `2.57.122[.]168` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-c560fab6eb6a
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `2.57.122[.]168` |
+| **First Seen** | 2026-11-15 03:24 |
+| **Last Seen** | 2026-11-15 03:24 |
+| **Session Duration** | 5s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_60273683732fb99246d1e80b764342f9_small_control'"'"' '"'"'check_60273683732fb99246d1e80b764342f9'"'"'', printf '\n%s|%s\n' 'check_60273683732fb99246d1e80b764342f9_small_control' 'check_60273683732fb99246d1e80b764342f9', sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_60273683732fb99246d1e80b764342f9_small_math'"'"' "$((688*82+75))"', (688*82+75, printf '\n%s|%s\n' 'check_60273683732fb99246d1e80b764342f9_small_math' ")"` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-11-15 03:24:31` | `cowrie.session.connect` |
+| `2026-11-15 03:24:31` | `cowrie.client.version` |
+| `2026-11-15 03:24:31` | `cowrie.client.kex` |
+| `2026-11-15 03:24:32` | `cowrie.login.success` |
+| `2026-11-15 03:24:33` | `cowrie.client.size` |
+| `2026-11-15 03:24:34` | `cowrie.session.params` |
+| `2026-11-15 03:24:35` | `cowrie.command.input` |
+| `2026-11-15 03:24:35` | `cowrie.command.input` |
+| `2026-11-15 03:24:35` | `cowrie.command.input` |
+| `2026-11-15 03:24:35` | `cowrie.command.input` |
+| `2026-11-15 03:24:35` | `cowrie.command.input` |
+| `2026-11-15 03:24:35` | `cowrie.command.input` |
+| `2026-11-15 03:24:35` | `cowrie.command.input` |
+| `2026-11-15 03:24:35` | `cowrie.command.input` |
+| `2026-11-15 03:24:35` | `cowrie.command.input` |
+| … | _47 more event(s) — see ir_cases.json_ |
+
+**Recommended Actions:**
+- [ ] Submit `2.57.122[.]168` to AbuseIPDB if not already reported
+- [ ] Block `2.57.122[.]168` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-74d677e9263b
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `2.57.122[.]168` |
+| **First Seen** | 2026-11-15 03:26 |
+| **Last Seen** | 2026-11-15 03:26 |
+| **Session Duration** | 5s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_d2413f1dbf64aa38752edf9dd27354f8_small_control'"'"' '"'"'check_d2413f1dbf64aa38752edf9dd27354f8'"'"'', printf '\n%s|%s\n' 'check_d2413f1dbf64aa38752edf9dd27354f8_small_control' 'check_d2413f1dbf64aa38752edf9dd27354f8', sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_d2413f1dbf64aa38752edf9dd27354f8_small_math'"'"' "$((985*302+88))"', (985*302+88, printf '\n%s|%s\n' 'check_d2413f1dbf64aa38752edf9dd27354f8_small_math' ")"` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-11-15 03:26:23` | `cowrie.session.connect` |
+| `2026-11-15 03:26:23` | `cowrie.client.version` |
+| `2026-11-15 03:26:23` | `cowrie.client.kex` |
+| `2026-11-15 03:26:24` | `cowrie.login.success` |
+| `2026-11-15 03:26:25` | `cowrie.client.size` |
+| `2026-11-15 03:26:25` | `cowrie.session.params` |
+| `2026-11-15 03:26:26` | `cowrie.command.input` |
+| `2026-11-15 03:26:26` | `cowrie.command.input` |
+| `2026-11-15 03:26:26` | `cowrie.command.input` |
+| `2026-11-15 03:26:26` | `cowrie.command.input` |
+| `2026-11-15 03:26:26` | `cowrie.command.input` |
+| `2026-11-15 03:26:26` | `cowrie.command.input` |
+| `2026-11-15 03:26:26` | `cowrie.command.input` |
+| `2026-11-15 03:26:26` | `cowrie.command.input` |
+| `2026-11-15 03:26:26` | `cowrie.command.input` |
+| … | _47 more event(s) — see ir_cases.json_ |
+
+**Recommended Actions:**
+- [ ] Submit `2.57.122[.]168` to AbuseIPDB if not already reported
+- [ ] Block `2.57.122[.]168` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-986cb3255145
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `2.57.122[.]168` |
+| **First Seen** | 2026-11-15 03:28 |
+| **Last Seen** | 2026-11-15 03:28 |
+| **Session Duration** | 5s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_0a8c4c59f4a767b0108703d87122704a_small_control'"'"' '"'"'check_0a8c4c59f4a767b0108703d87122704a'"'"'', printf '\n%s|%s\n' 'check_0a8c4c59f4a767b0108703d87122704a_small_control' 'check_0a8c4c59f4a767b0108703d87122704a', sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_0a8c4c59f4a767b0108703d87122704a_small_math'"'"' "$((707*717+82))"', (707*717+82, printf '\n%s|%s\n' 'check_0a8c4c59f4a767b0108703d87122704a_small_math' ")"` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-11-15 03:28:13` | `cowrie.session.connect` |
+| `2026-11-15 03:28:14` | `cowrie.client.version` |
+| `2026-11-15 03:28:14` | `cowrie.client.kex` |
+| `2026-11-15 03:28:15` | `cowrie.login.success` |
+| `2026-11-15 03:28:16` | `cowrie.client.size` |
+| `2026-11-15 03:28:16` | `cowrie.session.params` |
+| `2026-11-15 03:28:16` | `cowrie.command.input` |
+| `2026-11-15 03:28:16` | `cowrie.command.input` |
+| `2026-11-15 03:28:16` | `cowrie.command.input` |
+| `2026-11-15 03:28:16` | `cowrie.command.input` |
+| `2026-11-15 03:28:16` | `cowrie.command.input` |
+| `2026-11-15 03:28:16` | `cowrie.command.input` |
+| `2026-11-15 03:28:16` | `cowrie.command.input` |
+| `2026-11-15 03:28:17` | `cowrie.command.input` |
+| `2026-11-15 03:28:17` | `cowrie.command.input` |
+| … | _47 more event(s) — see ir_cases.json_ |
+
+**Recommended Actions:**
+- [ ] Submit `2.57.122[.]168` to AbuseIPDB if not already reported
+- [ ] Block `2.57.122[.]168` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### Additional priority cases (384) — compact view
 
 | Case | Severity | Source IP | First Seen | Auth | Cmds | DL | TTPs |
 |---|---|---|---|---|---|---|---|
-| IR-0efeb301536e | HIGH | `201.86.42[.]211` | 2026-11-15 01:17 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-580f84ae8e7f | HIGH | `172.172.186[.]3` | 2026-11-15 01:17 | Y | 2 | 1 | `T1021.004 · T1078 · T1105` |
-| IR-932e7c99e5bd | HIGH | `172.172.186[.]3` | 2026-11-15 01:17 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-2da19840296f | HIGH | `191.241.142[.]217` | 2026-11-15 01:18 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-a9ded6a25ac8 | HIGH | `138.226.239[.]7` | 2026-11-15 01:21 | Y | 0 | 0 | `T1078` |
-| IR-a491ef7020f3 | HIGH | `216.232.226[.]217` | 2026-11-15 01:22 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-87a24dd37a14 | HIGH | `125.215.199[.]37` | 2026-11-15 01:22 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-46567e810726 | HIGH | `200.199.32[.]174` | 2026-11-15 01:24 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-c4785fff07e2 | HIGH | `76.129.23[.]151` | 2026-11-15 01:24 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-f402a5b6e006 | HIGH | `2.26.18[.]76` | 2026-11-15 01:32 | Y | 1 | 0 | `T1078 · T1592` |
-| IR-237cee37ab2a | HIGH | `35.234.136[.]205` | 2026-11-15 01:33 | Y | 2 | 1 | `T1021.004 · T1078 · T1105` |
-| IR-6ac26c793508 | HIGH | `35.234.136[.]205` | 2026-11-15 01:33 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-daa0a8a41ee0 | HIGH | `189.147.225[.]19` | 2026-11-15 01:36 | Y | 2 | 1 | `T1021.004 · T1078 · T1105` |
-| IR-9cede5e31f01 | HIGH | `189.147.225[.]19` | 2026-11-15 01:36 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-b4ff981a3c37 | HIGH | `209.99.185[.]195` | 2026-11-15 01:36 | Y | 2 | 1 | `T1021.004 · T1078 · T1105` |
-| IR-3afc849d039d | HIGH | `209.99.185[.]195` | 2026-11-15 01:36 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-67162b93f57b | HIGH | `188.80.88[.]85` | 2026-11-15 01:43 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-c9720f7bd456 | HIGH | `178.178.222[.]50` | 2026-11-15 01:43 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-54fe3f46fe09 | HIGH | `202.83.19[.]226` | 2026-11-15 01:50 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-bf343b64d04b | HIGH | `203.192.232[.]180` | 2026-11-15 01:53 | Y | 2 | 1 | `T1021.004 · T1078 · T1105` |
-| IR-75c55707c64d | HIGH | `203.192.232[.]180` | 2026-11-15 01:53 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-b71c9fbd3438 | HIGH | `190.14.223[.]82` | 2026-11-15 01:57 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-95111fffc0a5 | HIGH | `217.211.237[.]213` | 2026-11-15 01:57 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-a61d5f4d45fa | HIGH | `182.60.128[.]241` | 2026-11-15 02:00 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-ba494452924a | HIGH | `154.14.144[.]90` | 2026-11-15 02:00 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-fcbe675cde47 | HIGH | `195.178.110[.]78` | 2026-11-15 02:00 | Y | 0 | 0 | `T1078` |
-| IR-b26d823b89c7 | HIGH | `102.88.137[.]145` | 2026-11-15 02:10 | Y | 2 | 1 | `T1021.004 · T1078 · T1105` |
-| IR-6e04d9e56eb0 | HIGH | `102.88.137[.]145` | 2026-11-15 02:11 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-68f5675806c2 | HIGH | `193.187.110[.]160` | 2026-11-15 02:13 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-1117f85a4d2b | HIGH | `77.239.124[.]252` | 2026-11-15 02:24 | Y | 0 | 0 | `T1078` |
-| IR-e5309ea71e0f | HIGH | `58.23.76[.]234` | 2026-11-15 02:26 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-7c0e2bfa5c23 | HIGH | `14.32.244[.]233` | 2026-11-15 02:26 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-f4827957c21e | HIGH | `101.96.216[.]165` | 2026-11-15 02:29 | Y | 1 | 0 | `T1078 · T1592` |
-| IR-b68882b29013 | HIGH | `78.30.250[.]62` | 2026-11-15 02:36 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-67cee754e178 | HIGH | `85.175.226[.]94` | 2026-11-15 02:36 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-7201857dacb2 | HIGH | `103.158.138[.]179` | 2026-11-15 02:43 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-0669aab9c70f | HIGH | `176.99.110[.]229` | 2026-11-15 02:43 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-eef0a8aadf24 | HIGH | `109.160.32[.]116` | 2026-11-15 02:43 | Y | 1 | 0 | `T1078 · T1592` |
-| IR-a1892e9021d1 | HIGH | `89.189.137[.]37` | 2026-11-15 02:47 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-7a802c35cd3c | HIGH | `154.84.216[.]144` | 2026-11-15 02:48 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-0e1bad8f4181 | HIGH | `2.57.122[.]168` | 2026-11-15 02:52 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
-| IR-bb39a8abb105 | HIGH | `2.57.122[.]168` | 2026-11-15 02:54 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-7622c56480fd | HIGH | `2.57.122[.]168` | 2026-11-15 03:30 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-2f94ea855397 | HIGH | `2.57.122[.]168` | 2026-11-15 03:32 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-e721a91dbb1e | HIGH | `2.57.122[.]168` | 2026-11-15 03:34 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-0ea4173c7784 | HIGH | `2.57.122[.]168` | 2026-11-15 03:36 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-d9c2d69eacaa | HIGH | `77.53.79[.]11` | 2026-11-15 03:36 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-1bea1aadc5a5 | HIGH | `83.166.50[.]15` | 2026-11-15 03:37 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-11892f6cb040 | HIGH | `2.57.122[.]168` | 2026-11-15 03:37 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-6951a15071a3 | HIGH | `2.57.122[.]168` | 2026-11-15 03:39 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-3114c68e2dd3 | HIGH | `2.57.122[.]168` | 2026-11-15 03:41 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-c80eedba3456 | HIGH | `2.57.122[.]168` | 2026-11-15 03:43 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-11dfab37d723 | HIGH | `112.53.123[.]118` | 2026-11-15 03:44 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-7023234ac611 | HIGH | `2.57.122[.]168` | 2026-11-15 03:47 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-86c4c700a37e | HIGH | `2.57.122[.]168` | 2026-11-15 03:49 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-5268e67194e6 | HIGH | `191.7.159[.]201` | 2026-11-15 03:55 | Y | 1 | 0 | `T1078 · T1592` |
+| IR-55926d51ca6f | HIGH | `125.130.102[.]172` | 2026-11-15 03:58 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-add8c9627754 | HIGH | `1.172.102[.]101` | 2026-11-15 03:58 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-ac46d896d66a | HIGH | `109.160.32[.]116` | 2026-11-15 04:00 | Y | 1 | 0 | `T1078 · T1592` |
+| IR-12b55c6d5880 | HIGH | `191.7.159[.]201` | 2026-11-15 04:00 | Y | 1 | 0 | `T1078 · T1592` |
+| IR-4aeedbc571a4 | HIGH | `181.95.241[.]200` | 2026-11-15 04:04 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-4a31e964fff9 | HIGH | `38.186.75[.]113` | 2026-11-15 04:04 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-adc36a2a4130 | HIGH | `191.7.159[.]201` | 2026-11-15 04:07 | Y | 1 | 0 | `T1078 · T1083 · T1592` |
+| IR-ed74ca9fb987 | HIGH | `37.157.111[.]122` | 2026-11-15 04:09 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-74db13091bb2 | HIGH | `73.183.115[.]109` | 2026-11-15 04:09 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-5185946c1145 | HIGH | `195.178.110[.]78` | 2026-11-15 04:11 | Y | 0 | 0 | `T1078` |
+| IR-9e289be3b60a | HIGH | `78.128.112[.]74` | 2026-11-15 04:12 | Y | 1 | 0 | `T1078 · T1592` |
+| IR-179238ccea5d | HIGH | `191.7.159[.]201` | 2026-11-15 04:17 | Y | 1 | 0 | `T1057 · T1078 · T1083` |
+| IR-5ff73e1385b4 | HIGH | `77.239.124[.]252` | 2026-11-15 04:18 | Y | 0 | 0 | `T1078` |
+| IR-bd691d2d43ac | HIGH | `176.53.159[.]196` | 2026-11-15 04:20 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-b7a5350d4703 | HIGH | `216.232.226[.]217` | 2026-11-15 04:23 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-1146081c9503 | HIGH | `136.56.34[.]147` | 2026-11-15 04:23 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-0fb20887b370 | HIGH | `191.7.159[.]201` | 2026-11-15 04:32 | Y | 1 | 0 | `T1078 · T1592` |
+| IR-bb532df80505 | HIGH | `122.168.123[.]73` | 2026-11-15 04:42 | Y | 2 | 1 | `T1021.004 · T1078 · T1105` |
+| IR-3826694eee4d | HIGH | `122.168.123[.]73` | 2026-11-15 04:42 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-00f12474096b | HIGH | `182.70.254[.]196` | 2026-11-15 04:42 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-3ff127a0a8d7 | HIGH | `193.32.162[.]15` | 2026-11-15 04:42 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-480e6ded36b8 | HIGH | `191.7.159[.]201` | 2026-11-15 04:49 | Y | 1 | 0 | `T1078 · T1083 · T1592` |
+| IR-cb222c9a6c23 | HIGH | `217.211.237[.]213` | 2026-11-15 04:52 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-b9e79c20dd96 | HIGH | `125.69.76[.]148` | 2026-11-15 04:53 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-37cb3ee61e26 | HIGH | `195.178.110[.]26` | 2026-11-15 04:53 | Y | 1 | 0 | `T1078 · T1592` |
+| IR-3329adf70c19 | HIGH | `80.94.95[.]118` | 2026-11-15 04:59 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-01a2c76220a4 | HIGH | `138.226.239[.]233` | 2026-11-15 04:59 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-abf813e8e6e7 | HIGH | `77.90.185[.]29` | 2026-11-15 05:00 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-bb84de539b7b | HIGH | `111.70.49[.]182` | 2026-11-15 05:01 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-79b17b11b156 | HIGH | `196.188.93[.]169` | 2026-11-15 05:01 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-1084683993f2 | HIGH | `222.75.225[.]206` | 2026-11-15 05:02 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-f228b38491f7 | HIGH | `185.255.212[.]178` | 2026-11-15 05:02 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-c46228d08055 | HIGH | `70.167.235[.]132` | 2026-11-15 05:05 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-f27d3f99a652 | HIGH | `78.70.41[.]148` | 2026-11-15 05:05 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-2c9cbaf98550 | HIGH | `191.7.159[.]201` | 2026-11-15 05:08 | Y | 1 | 0 | `T1078 · T1083 · T1592` |
+| IR-1b925b2c88a9 | HIGH | `182.95.181[.]50` | 2026-11-15 05:09 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-905cd3a4dac6 | HIGH | `191.7.159[.]201` | 2026-11-15 05:27 | Y | 1 | 0 | `T1021.004 · T1078 · T1592` |
+| IR-75896b20d636 | HIGH | `220.246.47[.]169` | 2026-11-15 05:35 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-ad9317ad0eda | HIGH | `156.229.21[.]54` | 2026-11-15 05:44 | Y | 0 | 0 | `T1078` |
+| IR-c1608833b7af | HIGH | `156.229.21[.]54` | 2026-11-15 05:45 | Y | 2 | 0 | `T1078` |
+| IR-9d68be238e85 | HIGH | `191.7.159[.]201` | 2026-11-15 05:47 | Y | 1 | 0 | `T1057 · T1078 · T1083` |
+| IR-6fa08889da95 | HIGH | `117.50.44[.]85` | 2026-11-15 05:48 | Y | 2 | 1 | `T1021.004 · T1078 · T1105` |
+| IR-a4126b38f113 | HIGH | `195.178.110[.]26` | 2026-11-15 06:00 | Y | 1 | 0 | `T1078 · T1592` |
+| IR-59ee9a8d05ef | HIGH | `187.16.96[.]250` | 2026-11-15 06:02 | Y | 2 | 1 | `T1021.004 · T1078 · T1105` |
+| IR-796934705313 | HIGH | `187.16.96[.]250` | 2026-11-15 06:02 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-6c2c53b56909 | HIGH | `191.7.159[.]201` | 2026-11-15 06:07 | Y | 1 | 0 | `T1078 · T1083 · T1592` |
+| IR-fa6c0844acf8 | HIGH | `80.94.92[.]55` | 2026-11-15 06:12 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-75158cda3236 | HIGH | `201.86.46[.]145` | 2026-11-15 06:12 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-d6cbebbaab4a | HIGH | `80.94.92[.]55` | 2026-11-15 06:15 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-4cbed7fbca68 | HIGH | `77.239.124[.]252` | 2026-11-15 06:18 | Y | 0 | 0 | `T1078` |
+| IR-f23dc2124913 | HIGH | `80.94.92[.]55` | 2026-11-15 06:19 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-dcb45e000f01 | HIGH | `80.94.92[.]55` | 2026-11-15 06:22 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-afe52e772545 | HIGH | `172.184.111[.]202` | 2026-11-15 06:23 | Y | 2 | 1 | `T1021.004 · T1078 · T1105` |
+| IR-0c74042f58a0 | HIGH | `172.184.111[.]202` | 2026-11-15 06:23 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-39b1f5a02e01 | HIGH | `180.93.193[.]100` | 2026-11-15 06:24 | Y | 6 | 0 | `T1059.004 · T1078 · T1083` |
+| IR-54ac3e97feba | HIGH | `217.208.90[.]253` | 2026-11-15 06:24 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-79062afca0c6 | HIGH | `80.94.92[.]55` | 2026-11-15 06:26 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-20361e33ceea | HIGH | `191.7.159[.]201` | 2026-11-15 06:27 | Y | 1 | 0 | `T1078 · T1083 · T1592` |
+| IR-8808d66a3b3e | HIGH | `78.66.44[.]23` | 2026-11-15 06:27 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-01a8a48cfd65 | HIGH | `222.174.184[.]86` | 2026-11-15 06:27 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-6ba10f9a49ca | HIGH | `176.53.159[.]196` | 2026-11-15 06:28 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-f2058146dbb3 | HIGH | `80.94.92[.]55` | 2026-11-15 06:29 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-bcce5e6e4dd4 | HIGH | `80.94.92[.]55` | 2026-11-15 06:32 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-d296c5a748e2 | HIGH | `80.94.92[.]55` | 2026-11-15 06:38 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-568cddb6750d | HIGH | `79.162.203[.]47` | 2026-11-15 06:38 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-7732c62cd7cb | HIGH | `116.230.66[.]189` | 2026-11-15 06:39 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-503d8c25eb38 | HIGH | `80.94.92[.]55` | 2026-11-15 06:40 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-f415c8412cc8 | HIGH | `197.5.145[.]150` | 2026-11-15 06:41 | Y | 2 | 1 | `T1021.004 · T1078 · T1105` |
+| IR-c9fa9475ecce | HIGH | `197.5.145[.]150` | 2026-11-15 06:41 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-cbd066f86378 | HIGH | `80.94.92[.]55` | 2026-11-15 06:43 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-336bf26c3c65 | HIGH | `80.94.92[.]55` | 2026-11-15 06:46 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-ddfcab384f83 | HIGH | `191.7.159[.]201` | 2026-11-15 06:47 | Y | 1 | 0 | `T1021.004 · T1078 · T1592` |
+| IR-fe02f67f4a32 | HIGH | `80.94.92[.]55` | 2026-11-15 06:49 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-f28ebb1464b0 | HIGH | `14.145.200[.]69` | 2026-11-15 06:50 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-919c3be890f5 | HIGH | `78.70.41[.]148` | 2026-11-15 06:50 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-dc4cb3bec418 | HIGH | `80.94.92[.]55` | 2026-11-15 06:52 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-6fb9483b8b0c | HIGH | `80.94.92[.]55` | 2026-11-15 06:58 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-712509268267 | HIGH | `160.119.66[.]206` | 2026-11-15 07:00 | Y | 6 | 3 | `T1059.004 · T1078 · T1105` |
+| IR-33a00f9ed3e3 | HIGH | `160.119.66[.]206` | 2026-11-15 07:00 | Y | 1 | 3 | `T1059.004 · T1078 · T1105` |
+| IR-8e8185857449 | HIGH | `80.94.92[.]55` | 2026-11-15 07:01 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-4cd4694854c8 | HIGH | `138.226.239[.]234` | 2026-11-15 07:04 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-0301b2da48e9 | HIGH | `77.90.185[.]29` | 2026-11-15 07:05 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-b8980bfc2b11 | HIGH | `80.94.95[.]118` | 2026-11-15 07:06 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-c7b5884b459a | HIGH | `80.94.92[.]55` | 2026-11-15 07:06 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-99c3e6dc8c4b | HIGH | `115.191.38[.]87` | 2026-11-15 07:06 | Y | 2 | 1 | `T1021.004 · T1078 · T1105` |
+| IR-551794b4423b | HIGH | `115.191.38[.]87` | 2026-11-15 07:06 | Y | 0 | 0 | `T1078 · T1592` |
+_… 284 more priority case(s) in ir_cases.json_
 
 ---
 
@@ -1031,32 +1287,133 @@ Source IPs: `209.99.185.195`, `35.234.136.205`, `203.192.232.180`, `102.88.137.1
 
 | IP | Sessions | First Seen | Last Seen | Duration | Login Attempts | TTPs | Severity |
 |---|---|---|---|---|---|---|---|
-| `157.230.208[.]221` | **2** | 2026-11-15 00:05 | 2026-11-15 02:02 | 1m | 0 | `T1592` | 🟢 LOW |
-| `195.178.110[.]78` | **2** | 2026-11-15 00:17 | 2026-11-15 02:00 | 0m | 2 | `T1110.001` | 🟢 LOW |
-| `100.62.106[.]179` | 1 | 2026-11-15 01:19 | 2026-11-15 01:19 | 1s | 0 | `T1592` | 🟢 LOW |
-| `101.96.216[.]165` | 1 | 2026-11-15 02:29 | 2026-11-15 02:29 | 0s | 0 | `T1592` | 🟢 LOW |
-| `103.164.35[.]51` | 1 | 2026-11-15 01:02 | 2026-11-15 01:02 | 0s | 0 | `T1592` | 🟢 LOW |
-| `109.160.32[.]116` | 1 | 2026-11-15 02:43 | 2026-11-15 02:43 | 8s | 0 | `T1592` | 🟢 LOW |
-| `119.99.248[.]56` | 1 | 2026-11-15 00:08 | 2026-11-15 00:08 | 14s | 0 | `T1592` | 🟢 LOW |
-| `120.234.232[.]184` | 1 | 2026-11-15 00:22 | 2026-11-15 00:22 | 8s | 0 | `T1592` | 🟢 LOW |
-| `184.105.139[.]67` | 1 | 2026-11-15 01:33 | 2026-11-15 01:33 | 0s | 0 | `T1592` | 🟢 LOW |
-| `185.191.236[.]38` | 1 | 2026-11-15 02:05 | 2026-11-15 02:05 | 2s | 0 | `T1592` | 🟢 LOW |
-| `187.50.194[.]182` | 1 | 2026-11-15 00:02 | 2026-11-15 00:02 | 11s | 0 | `T1592` | 🟢 LOW |
-| `193.24.126[.]132` | 1 | 2026-11-15 00:56 | 2026-11-15 00:56 | 0s | 0 | `T1592` | 🟢 LOW |
-| `193.47.62[.]69` | 1 | 2026-11-15 01:04 | 2026-11-15 01:04 | 0s | 0 | `T1592` | 🟢 LOW |
-| `197.219.228[.]246` | 1 | 2026-11-15 00:05 | 2026-11-15 00:05 | 3s | 0 | `T1592` | 🟢 LOW |
-| `198.179.70[.]19` | 1 | 2026-11-15 02:38 | 2026-11-15 02:38 | 10s | 0 | `T1592` | 🟢 LOW |
-| `2.26.18[.]76` | 1 | 2026-11-15 01:32 | 2026-11-15 01:32 | 0s | 0 | `T1592` | 🟢 LOW |
-| `2.57.122[.]168` | 1 | 2026-11-15 02:42 | 2026-11-15 02:42 | 0s | 0 | `T1592` | 🟢 LOW |
-| `202.137.142[.]214` | 1 | 2026-11-15 00:32 | 2026-11-15 00:32 | 2s | 0 | `T1592` | 🟢 LOW |
-| `37.52.26[.]125` | 1 | 2026-11-15 01:51 | 2026-11-15 01:51 | 0s | 0 | `T1592` | 🟢 LOW |
-| `40.124.113[.]145` | 1 | 2026-11-15 00:13 | 2026-11-15 00:13 | 9s | 0 | `T1592` | 🟢 LOW |
-| `59.23.202[.]227` | 1 | 2026-11-15 02:36 | 2026-11-15 02:37 | 27s | 0 | `T1592` | 🟢 LOW |
-| `60.12.5[.]190` | 1 | 2026-11-15 01:21 | 2026-11-15 01:21 | 0s | 0 | `T1592` | 🟢 LOW |
-| `64.62.197[.]162` | 1 | 2026-11-15 02:00 | 2026-11-15 02:00 | 4s | 0 | `T1592` | 🟢 LOW |
-| `77.239.124[.]130` | 1 | 2026-11-15 02:32 | 2026-11-15 02:32 | 0s | 0 | `T1592` | 🟢 LOW |
-| `77.239.124[.]252` | 1 | 2026-11-15 00:00 | 2026-11-15 00:00 | 2s | 1 | `T1110.001` | 🟢 LOW |
-| `77.239.124[.]252` | 1 | 2026-11-15 02:24 | 2026-11-15 02:24 | 2s | 1 | `T1110.001` | 🟢 LOW |
+| `157.230.208[.]221` | **3** | 2026-11-15 02:55 | 2026-11-15 06:01 | 1m | 0 | `T1592` | 🟢 LOW |
+| `195.178.110[.]78` | **3** | 2026-11-15 07:14 | 2026-11-15 10:12 | 0m | 3 | `T1110.001` | 🟢 LOW |
+| `77.239.124[.]252` | **3** | 2026-11-15 12:47 | 2026-11-15 16:00 | 0m | 3 | `T1110.001` | 🟢 LOW |
+| `137.184.169[.]96` | **2** | 2026-11-15 15:56 | 2026-11-15 16:03 | 4m | 0 | `T1592` | 🟢 LOW |
+| `195.178.110[.]78` | **2** | 2026-11-15 03:12 | 2026-11-15 04:11 | 0m | 2 | `T1110.001` | 🟢 LOW |
+| `195.178.110[.]78` | **2** | 2026-11-15 15:05 | 2026-11-15 16:20 | 0m | 2 | `T1110.001` | 🟢 LOW |
+| `77.239.124[.]252` | **2** | 2026-11-15 03:01 | 2026-11-15 04:18 | 0m | 2 | `T1110.001` | 🟢 LOW |
+| `77.239.124[.]252` | **2** | 2026-11-15 06:18 | 2026-11-15 08:00 | 0m | 2 | `T1110.001` | 🟢 LOW |
+| `80.94.92[.]55` | **2** | 2026-11-15 11:54 | 2026-11-15 12:02 | 0m | 0 | `T1592` | 🟢 LOW |
+| `103.217.247[.]153` | 1 | 2026-11-15 03:24 | 2026-11-15 03:24 | 13s | 0 | `T1592` | 🟢 LOW |
+| `106.124.135[.]239` | 1 | 2026-11-15 08:33 | 2026-11-15 08:33 | 0s | 0 | `T1592` | 🟢 LOW |
+| `106.13.137[.]17` | 1 | 2026-11-15 06:57 | 2026-11-15 06:57 | 4s | 0 | `T1592` | 🟢 LOW |
+| `109.160.32[.]110` | 1 | 2026-11-15 16:41 | 2026-11-15 16:41 | 8s | 0 | `T1592` | 🟢 LOW |
+| `109.160.32[.]116` | 1 | 2026-11-15 03:09 | 2026-11-15 03:09 | 2s | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `112.28.153[.]193` | 1 | 2026-11-15 11:40 | 2026-11-15 11:42 | 120s | 0 | `T1592` | 🟢 LOW |
+| `112.45.141[.]72` | 1 | 2026-11-15 06:55 | 2026-11-15 06:55 | 14s | 0 | `T1592` | 🟢 LOW |
+| `112.53.123[.]118` | 1 | 2026-11-15 03:10 | 2026-11-15 03:10 | 0s | 0 | `T1592` | 🟢 LOW |
+| `115.42.70[.]26` | 1 | 2026-11-15 09:17 | 2026-11-15 09:17 | 15s | 0 | `T1592` | 🟢 LOW |
+| `116.147.151[.]46` | 1 | 2026-11-15 07:46 | 2026-11-15 07:48 | 120s | 0 | `T1592` | 🟢 LOW |
+| `116.59.15[.]123` | 1 | 2026-11-15 11:30 | 2026-11-15 11:30 | 10s | 0 | `T1592` | 🟢 LOW |
+| `117.72.81[.]242` | 1 | 2026-11-15 08:55 | 2026-11-15 08:57 | 120s | 0 | `T1592` | 🟢 LOW |
+| `120.26.86[.]156` | 1 | 2026-11-15 16:45 | 2026-11-15 16:45 | 0s | 0 | `T1592` | 🟢 LOW |
+| `121.167.57[.]19` | 1 | 2026-11-15 11:19 | 2026-11-15 11:19 | 12s | 0 | `T1592` | 🟢 LOW |
+| `123.163.52[.]74` | 1 | 2026-11-15 13:53 | 2026-11-15 13:53 | 49s | 0 | `T1592` | 🟢 LOW |
+| `123.57.212[.]79` | 1 | 2026-11-15 05:21 | 2026-11-15 05:21 | 2s | 0 | `T1592` | 🟢 LOW |
+| `138.226.239[.]7` | 1 | 2026-11-15 05:21 | 2026-11-15 05:21 | 0s | 0 | `T1592` | 🟢 LOW |
+| `146.120.251[.]229` | 1 | 2026-11-15 08:43 | 2026-11-15 08:44 | 12s | 0 | `T1592` | 🟢 LOW |
+| `146.168.191[.]176` | 1 | 2026-11-15 13:52 | 2026-11-15 13:52 | 10s | 0 | `T1592` | 🟢 LOW |
+| `151.237.28[.]235` | 1 | 2026-11-15 12:50 | 2026-11-15 12:50 | 28s | 0 | `T1592` | 🟢 LOW |
+| `156.229.21[.]54` | 1 | 2026-11-15 05:44 | 2026-11-15 05:44 | 0s | 0 | `T1592` | 🟢 LOW |
+| `157.230.208[.]221` | 1 | 2026-11-15 08:09 | 2026-11-15 08:09 | 32s | 0 | `T1592` | 🟢 LOW |
+| `165.22.105[.]175` | 1 | 2026-11-15 16:29 | 2026-11-15 16:31 | 120s | 0 | `T1592` | 🟢 LOW |
+| `168.195.25[.]35` | 1 | 2026-11-15 03:45 | 2026-11-15 03:46 | 33s | 0 | `T1592` | 🟢 LOW |
+| `172.235.41[.]245` | 1 | 2026-11-15 08:32 | 2026-11-15 08:32 | 0s | 0 | `T1592` | 🟢 LOW |
+| `172.245.19[.]230` | 1 | 2026-11-15 08:26 | 2026-11-15 08:26 | 0s | 0 | `T1592` | 🟢 LOW |
+| `175.203.243[.]177` | 1 | 2026-11-15 06:12 | 2026-11-15 06:13 | 16s | 0 | `T1592` | 🟢 LOW |
+| `176.32.193[.]16` | 1 | 2026-11-15 08:54 | 2026-11-15 08:54 | 0s | 0 | `T1592` | 🟢 LOW |
+| `176.37.170[.]132` | 1 | 2026-11-15 08:57 | 2026-11-15 08:58 | 13s | 0 | `T1592` | 🟢 LOW |
+| `179.0.225[.]227` | 1 | 2026-11-15 15:04 | 2026-11-15 15:04 | 13s | 0 | `T1592` | 🟢 LOW |
+| `18.116.101[.]220` | 1 | 2026-11-15 06:29 | 2026-11-15 06:29 | 0s | 0 | `T1592` | 🟢 LOW |
+| `180.93.193[.]100` | 1 | 2026-11-15 06:24 | 2026-11-15 06:24 | 0s | 0 | `T1592` | 🟢 LOW |
+| `182.92.204[.]124` | 1 | 2026-11-15 08:50 | 2026-11-15 08:50 | 0s | 0 | `T1592` | 🟢 LOW |
+| `185.159.162[.]210` | 1 | 2026-11-15 15:13 | 2026-11-15 15:13 | 0s | 0 | `T1592` | 🟢 LOW |
+| `185.177.72[.]64` | 1 | 2026-11-15 13:22 | 2026-11-15 13:22 | 0s | 0 | `T1592` | 🟢 LOW |
+| `185.41.177[.]58` | 1 | 2026-11-15 13:02 | 2026-11-15 13:02 | 34s | 0 | `T1592` | 🟢 LOW |
+| `192.248.150[.]180` | 1 | 2026-11-15 06:15 | 2026-11-15 06:15 | 0s | 0 | `T1592` | 🟢 LOW |
+| `193.32.162[.]15` | 1 | 2026-11-15 04:42 | 2026-11-15 04:42 | 0s | 0 | `T1592` | 🟢 LOW |
+| `193.32.162[.]15` | 1 | 2026-11-15 15:04 | 2026-11-15 15:04 | 0s | 0 | `T1592` | 🟢 LOW |
+| `193.47.62[.]69` | 1 | 2026-11-15 10:04 | 2026-11-15 10:04 | 0s | 0 | `T1592` | 🟢 LOW |
+| `194.164.107[.]6` | 1 | 2026-11-15 04:34 | 2026-11-15 04:34 | 0s | 0 | `T1592` | 🟢 LOW |
+| `195.178.110[.]217` | 1 | 2026-11-15 10:13 | 2026-11-15 10:13 | 2s | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `195.178.110[.]26` | 1 | 2026-11-15 04:50 | 2026-11-15 04:50 | 0s | 0 | `T1592` | 🟢 LOW |
+| `195.178.110[.]78` | 1 | 2026-11-15 12:27 | 2026-11-15 12:27 | 1s | 1 | `T1110.001` | 🟢 LOW |
+| `196.115.59[.]152` | 1 | 2026-11-15 05:30 | 2026-11-15 05:30 | 0s | 0 | `T1592` | 🟢 LOW |
+| `199.165.159[.]49` | 1 | 2026-11-15 11:38 | 2026-11-15 11:38 | 0s | 0 | `T1592` | 🟢 LOW |
+| `2.57.122[.]168` | 1 | 2026-11-15 03:03 | 2026-11-15 03:04 | 4s | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `20.29.44[.]88` | 1 | 2026-11-15 13:24 | 2026-11-15 13:25 | 9s | 0 | `T1592` | 🟢 LOW |
+| `206.189.180[.]166` | 1 | 2026-11-15 15:22 | 2026-11-15 15:22 | 0s | 0 | `T1592` | 🟢 LOW |
+| `211.105.71[.]4` | 1 | 2026-11-15 05:09 | 2026-11-15 05:09 | 21s | 0 | `T1592` | 🟢 LOW |
+| `211.185.81[.]244` | 1 | 2026-11-15 03:02 | 2026-11-15 03:03 | 15s | 0 | `T1592` | 🟢 LOW |
+| `211.185.81[.]26` | 1 | 2026-11-15 08:33 | 2026-11-15 08:33 | 28s | 0 | `T1592` | 🟢 LOW |
+| `211.193.149[.]175` | 1 | 2026-11-15 09:31 | 2026-11-15 09:31 | 23s | 0 | `T1592` | 🟢 LOW |
+| `211.227.11[.]6` | 1 | 2026-11-15 14:17 | 2026-11-15 14:17 | 19s | 0 | `T1592` | 🟢 LOW |
+| `213.207.249[.]4` | 1 | 2026-11-15 08:55 | 2026-11-15 08:57 | 120s | 0 | `T1592` | 🟢 LOW |
+| `213.230.93[.]53` | 1 | 2026-11-15 06:29 | 2026-11-15 06:29 | 0s | 0 | `T1592` | 🟢 LOW |
+| `216.226.78[.]130` | 1 | 2026-11-15 07:39 | 2026-11-15 07:39 | 0s | 0 | `T1592` | 🟢 LOW |
+| `220.121.165[.]165` | 1 | 2026-11-15 04:38 | 2026-11-15 04:38 | 8s | 0 | `T1592` | 🟢 LOW |
+| `220.77.86[.]237` | 1 | 2026-11-15 02:56 | 2026-11-15 02:57 | 29s | 0 | `T1592` | 🟢 LOW |
+| `221.120.41[.]24` | 1 | 2026-11-15 07:33 | 2026-11-15 07:33 | 14s | 0 | `T1592` | 🟢 LOW |
+| `221.156.173[.]44` | 1 | 2026-11-15 08:47 | 2026-11-15 08:47 | 20s | 0 | `T1592` | 🟢 LOW |
+| `221.156.173[.]44` | 1 | 2026-11-15 12:35 | 2026-11-15 12:36 | 22s | 0 | `T1592` | 🟢 LOW |
+| `222.222.124[.]164` | 1 | 2026-11-15 05:48 | 2026-11-15 05:50 | 107s | 0 | `T1592` | 🟢 LOW |
+| `223.107.146[.]186` | 1 | 2026-11-15 11:42 | 2026-11-15 11:44 | 120s | 0 | `T1592` | 🟢 LOW |
+| `223.166.28[.]79` | 1 | 2026-11-15 08:30 | 2026-11-15 08:30 | 0s | 0 | `T1592` | 🟢 LOW |
+| `23.132.164[.]185` | 1 | 2026-11-15 07:52 | 2026-11-15 07:52 | 0s | 0 | `T1592` | 🟢 LOW |
+| `27.24.141[.]220` | 1 | 2026-11-15 15:35 | 2026-11-15 15:35 | 31s | 0 | `T1592` | 🟢 LOW |
+| `31.184.195[.]248` | 1 | 2026-11-15 08:54 | 2026-11-15 08:54 | 0s | 0 | `T1592` | 🟢 LOW |
+| `31.43.49[.]139` | 1 | 2026-11-15 05:06 | 2026-11-15 05:06 | 13s | 0 | `T1592` | 🟢 LOW |
+| `34.1.227[.]183` | 1 | 2026-11-15 14:48 | 2026-11-15 14:48 | 0s | 0 | `T1592` | 🟢 LOW |
+| `35.210.197[.]24` | 1 | 2026-11-15 12:22 | 2026-11-15 12:22 | 0s | 0 | `T1592` | 🟢 LOW |
+| `35.210.89[.]32` | 1 | 2026-11-15 12:09 | 2026-11-15 12:09 | 0s | 0 | `T1592` | 🟢 LOW |
+| `35.214.134[.]11` | 1 | 2026-11-15 14:34 | 2026-11-15 14:34 | 0s | 0 | `T1592` | 🟢 LOW |
+| `35.214.174[.]154` | 1 | 2026-11-15 15:10 | 2026-11-15 15:10 | 0s | 0 | `T1592` | 🟢 LOW |
+| `35.214.243[.]124` | 1 | 2026-11-15 13:46 | 2026-11-15 13:46 | 2s | 0 | `T1592` | 🟢 LOW |
+| `35.214.246[.]158` | 1 | 2026-11-15 15:56 | 2026-11-15 15:57 | 2s | 0 | `T1592` | 🟢 LOW |
+| `40.124.171[.]144` | 1 | 2026-11-15 11:32 | 2026-11-15 11:33 | 10s | 0 | `T1592` | 🟢 LOW |
+| `43.103.52[.]44` | 1 | 2026-11-15 12:50 | 2026-11-15 12:50 | 0s | 0 | `T1592` | 🟢 LOW |
+| `45.148.10[.]157` | 1 | 2026-11-15 07:05 | 2026-11-15 07:05 | 0s | 0 | `T1592` | 🟢 LOW |
+| `45.148.10[.]157` | 1 | 2026-11-15 16:08 | 2026-11-15 16:08 | 0s | 0 | `T1592` | 🟢 LOW |
+| `45.172.18[.]74` | 1 | 2026-11-15 11:03 | 2026-11-15 11:03 | 0s | 0 | `T1592` | 🟢 LOW |
+| `45.77.61[.]56` | 1 | 2026-11-15 08:14 | 2026-11-15 08:14 | 0s | 0 | `T1592` | 🟢 LOW |
+| `45.9.46[.]131` | 1 | 2026-11-15 12:10 | 2026-11-15 12:10 | 0s | 0 | `T1592` | 🟢 LOW |
+| `46.201.48[.]21` | 1 | 2026-11-15 07:43 | 2026-11-15 07:43 | 0s | 0 | `T1592` | 🟢 LOW |
+| `47.113.195[.]222` | 1 | 2026-11-15 15:17 | 2026-11-15 15:17 | 3s | 0 | `T1592` | 🟢 LOW |
+| `47.36.30[.]53` | 1 | 2026-11-15 13:54 | 2026-11-15 13:54 | 14s | 0 | `T1592` | 🟢 LOW |
+| `49.124.151[.]8` | 1 | 2026-11-15 11:36 | 2026-11-15 11:36 | 0s | 0 | `T1592` | 🟢 LOW |
+| `49.124.153[.]50` | 1 | 2026-11-15 15:31 | 2026-11-15 15:31 | 0s | 0 | `T1592` | 🟢 LOW |
+| `51.158.205[.]203` | 1 | 2026-11-15 05:16 | 2026-11-15 05:16 | 0s | 0 | `T1592` | 🟢 LOW |
+| `58.84.33[.]150` | 1 | 2026-11-15 07:47 | 2026-11-15 07:47 | 0s | 0 | `T1592` | 🟢 LOW |
+| `59.6.18[.]50` | 1 | 2026-11-15 06:28 | 2026-11-15 06:28 | 16s | 0 | `T1592` | 🟢 LOW |
+| `59.92.62[.]89` | 1 | 2026-11-15 08:52 | 2026-11-15 08:52 | 4s | 0 | `T1592` | 🟢 LOW |
+| `60.167.176[.]116` | 1 | 2026-11-15 09:58 | 2026-11-15 10:00 | 120s | 0 | `T1592` | 🟢 LOW |
+| `62.108.202[.]22` | 1 | 2026-11-15 15:20 | 2026-11-15 15:20 | 27s | 0 | `T1592` | 🟢 LOW |
+| `64.62.197[.]167` | 1 | 2026-11-15 04:03 | 2026-11-15 04:03 | 2s | 0 | `T1592` | 🟢 LOW |
+| `64.62.197[.]212` | 1 | 2026-11-15 07:37 | 2026-11-15 07:37 | 2s | 0 | `T1592` | 🟢 LOW |
+| `66.132.186[.]183` | 1 | 2026-11-15 03:44 | 2026-11-15 03:44 | 2s | 0 | `T1592` | 🟢 LOW |
+| `66.132.195[.]165` | 1 | 2026-11-15 04:59 | 2026-11-15 04:59 | 15s | 0 | `T1592` | 🟢 LOW |
+| `66.132.195[.]212` | 1 | 2026-11-15 13:05 | 2026-11-15 13:05 | 0s | 0 | `T1592` | 🟢 LOW |
+| `71.71.9[.]51` | 1 | 2026-11-15 10:17 | 2026-11-15 10:18 | 14s | 0 | `T1592` | 🟢 LOW |
+| `73.50.80[.]82` | 1 | 2026-11-15 05:14 | 2026-11-15 05:14 | 0s | 0 | `T1592` | 🟢 LOW |
+| `77.239.124[.]130` | 1 | 2026-11-15 12:08 | 2026-11-15 12:08 | 0s | 0 | `T1592` | 🟢 LOW |
+| `77.239.124[.]130` | 1 | 2026-11-15 15:18 | 2026-11-15 15:18 | 0s | 0 | `T1592` | 🟢 LOW |
+| `77.239.124[.]252` | 1 | 2026-11-15 10:31 | 2026-11-15 10:32 | 1s | 1 | `T1110.001` | 🟢 LOW |
+| `77.90.185[.]14` | 1 | 2026-11-15 11:17 | 2026-11-15 11:17 | 0s | 0 | `T1592` | 🟢 LOW |
+| `77.93.8[.]6` | 1 | 2026-11-15 09:39 | 2026-11-15 09:40 | 13s | 0 | `T1592` | 🟢 LOW |
+| `78.128.112[.]74` | 1 | 2026-11-15 04:12 | 2026-11-15 04:12 | 6s | 0 | `T1592` | 🟢 LOW |
+| `78.128.112[.]74` | 1 | 2026-11-15 08:41 | 2026-11-15 08:41 | 6s | 0 | `T1592` | 🟢 LOW |
+| `78.128.112[.]74` | 1 | 2026-11-15 13:09 | 2026-11-15 13:09 | 6s | 0 | `T1592` | 🟢 LOW |
+| `78.177.162[.]148` | 1 | 2026-11-15 03:38 | 2026-11-15 03:38 | 0s | 0 | `T1592` | 🟢 LOW |
+| `80.94.92[.]55` | 1 | 2026-11-15 06:36 | 2026-11-15 06:36 | 7s | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `85.217.149[.]56` | 1 | 2026-11-15 11:13 | 2026-11-15 11:13 | 0s | 0 | `T1592` | 🟢 LOW |
+| `88.238.183[.]206` | 1 | 2026-11-15 08:12 | 2026-11-15 08:12 | 0s | 0 | `T1592` | 🟢 LOW |
+| `89.23.122[.]73` | 1 | 2026-11-15 05:12 | 2026-11-15 05:13 | 14s | 0 | `T1592` | 🟢 LOW |
+| `90.188.229[.]179` | 1 | 2026-11-15 07:01 | 2026-11-15 07:01 | 13s | 0 | `T1592` | 🟢 LOW |
+| `93.118.139[.]170` | 1 | 2026-11-15 05:05 | 2026-11-15 05:05 | 1s | 0 | `T1592` | 🟢 LOW |
+| `95.105.71[.]239` | 1 | 2026-11-15 11:45 | 2026-11-15 11:47 | 120s | 0 | `T1592` | 🟢 LOW |
+| `95.165.182[.]238` | 1 | 2026-11-15 05:09 | 2026-11-15 05:11 | 120s | 0 | `T1592` | 🟢 LOW |
 
 ---
 
@@ -1188,16 +1545,16 @@ _`1d64be0ba1bd9924c3e29ae460db9407e4e33afeb864c9e39377ae4a87fa09db` (1d64be0ba1b
 
 | IP | Country | ISP | Abuse Score | OTX Pulses |
 |---|---|---|---|---|
-| `138.226.239[.]234` | NL | Vlad Cojuhari | **100** ⚠️ | 50 |
-| `191.241.142[.]217` | AR | Paralelo 46 TV SA | **100** ⚠️ | 3 |
-| `216.232.226[.]217` | CA | TELUS-FIBRE-NVCRBC01 | **100** ⚠️ | 13 |
-| `14.32.244[.]233` | KR | Korea Telecom | **100** ⚠️ | 25 |
-| `200.199.32[.]174` | BR | V tal | **100** ⚠️ | 50 |
-| `201.86.42[.]211` | BR | TELEFÔNICA BRASIL S.A | **100** ⚠️ | 2 |
-| `72.215.46[.]191` | US | Cox Communications | **100** ⚠️ | 1 |
-| `119.99.248[.]56` | CN | CHINANET Hubei province network | **100** ⚠️ | 4 |
-| `195.178.110[.]78` | NL | TECHOFF SRV LIMITED | **100** ⚠️ | 8 |
-| `185.191.236[.]38` | CH | Fidel Ernesto Geronimo Ramirez trading as Global Business Consulting, Geronimo Ramirez | **100** ⚠️ | 50 |
+| `36.93.154[.]207` | ID | PT Telekomunikasi Indonesia | **100** ⚠️ | 50 |
+| `35.210.89[.]32` | BE | Google LLC | **100** ⚠️ | 5 |
+| `193.32.162[.]15` | RO | UNMANAGED LTD | **100** ⚠️ | 50 |
+| `90.188.229[.]179` | RU | PJSC Rostelecom | **100** ⚠️ | 3 |
+| `77.90.185[.]14` | LT | Limited Network LTD | **100** ⚠️ | 50 |
+| `120.29.143[.]194` | KR | CMB Kwangju Broadcasting | **100** ⚠️ | 21 |
+| `121.141.6[.]41` | KR | Korea Telecom | **100** ⚠️ | 2 |
+| `70.184.96[.]161` | US | Cox Communications | **100** ⚠️ | 4 |
+| `111.70.49[.]182` | TW | CHT-Mobile business Group,Chunghwa | **100** ⚠️ | 50 |
+| `49.124.151[.]8` | MY | DiGi Telecommunications Sdn Bhd | **100** ⚠️ | 17 |
 
 ---
 
@@ -1205,23 +1562,30 @@ _`1d64be0ba1bd9924c3e29ae460db9407e4e33afeb864c9e39377ae4a87fa09db` (1d64be0ba1b
 
 | TTP ID | Count |
 |---|---|
-| [T1078](https://attack.mitre.org/techniques/T1078) | 70 |
-| [T1592](https://attack.mitre.org/techniques/T1592) | 69 |
-| [T1021.004](https://attack.mitre.org/techniques/T1021/004) | 6 |
-| [T1105](https://attack.mitre.org/techniques/T1105) | 6 |
-| [T1110.001](https://attack.mitre.org/techniques/T1110/001) | 4 |
+| [T1592](https://attack.mitre.org/techniques/T1592) | 420 |
+| [T1078](https://attack.mitre.org/techniques/T1078) | 418 |
+| [T1059.004](https://attack.mitre.org/techniques/T1059/004) | 116 |
+| [T1110.001](https://attack.mitre.org/techniques/T1110/001) | 21 |
+| [T1105](https://attack.mitre.org/techniques/T1105) | 20 |
 
 ---
 
-## 🔕 False Positive Summary (11 filtered)
+## 🔕 False Positive Summary (57 filtered)
 
 | Reason | Count |
 |---|---|
-| AbuseIPDB score 0 below threshold 25 | 3 |
-| AbuseIPDB score 1 below threshold 25 | 3 |
-| AbuseIPDB score 12 below threshold 25 | 1 |
-| AbuseIPDB score 13 below threshold 25 | 1 |
-| AbuseIPDB score 16 below threshold 25 | 3 |
+| AbuseIPDB score 0 below threshold 25 | 12 |
+| AbuseIPDB score 1 below threshold 25 | 6 |
+| AbuseIPDB score 12 below threshold 25 | 5 |
+| AbuseIPDB score 15 below threshold 25 | 1 |
+| AbuseIPDB score 16 below threshold 25 | 4 |
+| AbuseIPDB score 18 below threshold 25 | 1 |
+| AbuseIPDB score 2 below threshold 25 | 1 |
+| AbuseIPDB score 21 below threshold 25 | 4 |
+| AbuseIPDB score 23 below threshold 25 | 4 |
+| AbuseIPDB score 4 below threshold 25 | 2 |
+| AbuseIPDB score 9 below threshold 25 | 1 |
+| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 16 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -1232,19 +1596,19 @@ _`1d64be0ba1bd9924c3e29ae460db9407e4e33afeb864c9e39377ae4a87fa09db` (1d64be0ba1b
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05  | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26  | Incident Timeline Generator | ✅ 106 cases |
-| Tool 34  | Credential Extractor        | ✅ 303 attempts |
-| Tool 35  | SSH Fingerprint Aggregator  | ✅ 15 fingerprints |
-| Tool 36  | Command Clustering          | ✅ 7 clusters |
-| Tool 27  | Threat Intel Feeder         | ✅ 82 IPs enriched |
-| Tool 29  | False Positive Tracker      | ✅ 11 filtered (10.4%) |
+| Tool 26  | Incident Timeline Generator | ✅ 605 cases |
+| Tool 34  | Credential Extractor        | ✅ 2095 attempts |
+| Tool 35  | SSH Fingerprint Aggregator  | ✅ 27 fingerprints |
+| Tool 36  | Command Clustering          | ✅ 140 clusters |
+| Tool 27  | Threat Intel Feeder         | ✅ 319 IPs enriched |
+| Tool 29  | False Positive Tracker      | ✅ 57 filtered (9.4%) |
 | Tool 30  | Metric Exporter             | ✅ stats.json written |
-| Tool 30b | ASN Clustering              | ✅ 50 ASNs |
+| Tool 30b | ASN Clustering              | ✅ 145 ASNs |
 | Tool 31  | Malware Analyzer            | ✅ 49 files |
 | Tool 33  | YARA Classifier             | ✅ 39 classified |
 | Tool 28  | SOC Handover Report         | ✅ This report (v2.2) |
 
-> **Report grouping:** 67 priority case(s) shown individually · 26 recon entry/entries in table (2 group(s) consolidating 4 session(s)).
+> **Report grouping:** 409 priority case(s) shown individually · 127 recon entry/entries in table (9 group(s) consolidating 21 session(s)).
 
 ---
 
@@ -1279,4 +1643,4 @@ _`1d64be0ba1bd9924c3e29ae460db9407e4e33afeb864c9e39377ae4a87fa09db` (1d64be0ba1b
 
 _Generated by THIR · Tool 28 v2.3 · SOC Handover Report Generator_  
 _Pipeline: `Aegispub/thir-ha · Oracle Cloud HA_  
-_Report time: 2026-11-15T03:44:06Z_
+_Report time: 2026-11-15T18:13:37Z_
