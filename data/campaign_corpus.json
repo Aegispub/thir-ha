@@ -1,7 +1,7 @@
 {
   "98af0db988d5971c": {
     "sequence_hash": "98af0db988d5971c",
-    "cluster_id_last_seen_as": "CLU-197",
+    "cluster_id_last_seen_as": "CLU-058",
     "is_campaign": true,
     "campaign_name": "mdrfckr SSH Key Injection",
     "campaign_severity": "HIGH",
@@ -42,7 +42,7 @@
         "name": "T1105"
       }
     ],
-    "session_count": 5112,
+    "session_count": 5131,
     "unique_ips_ever": [
       "1.162.248.139",
       "1.214.214.114",
@@ -856,6 +856,7 @@
       "150.136.214.177",
       "150.138.115.76",
       "150.139.201.247",
+      "150.187.4.193",
       "150.223.20.12",
       "150.241.244.61",
       "150.241.77.28",
@@ -2411,9 +2412,9 @@
       "98.71.8.129",
       "99.92.204.98"
     ],
-    "unique_ip_count_ever": 2366,
+    "unique_ip_count_ever": 2367,
     "first_seen": "2026-08-30T03:20:37.640961+00:00",
-    "last_seen": "2026-11-16T22:24:10.241573+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
     "status": "active"
   },
   "6fa4c8ac58e7a1d9": {
@@ -3264,7 +3265,7 @@
   },
   "486c3a8fd7f1236c": {
     "sequence_hash": "486c3a8fd7f1236c",
-    "cluster_id_last_seen_as": "CLU-193",
+    "cluster_id_last_seen_as": "CLU-054",
     "is_campaign": false,
     "campaign_name": null,
     "campaign_severity": null,
@@ -3287,12 +3288,12 @@
     ],
     "unique_ip_count_ever": 11,
     "first_seen": "2026-08-30T14:51:51.429778+00:00",
-    "last_seen": "2026-11-16T22:24:10.241573+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
     "status": "active"
   },
   "e8182948ac6f4b19": {
     "sequence_hash": "e8182948ac6f4b19",
-    "cluster_id_last_seen_as": "CLU-101",
+    "cluster_id_last_seen_as": "CLU-055",
     "is_campaign": false,
     "campaign_name": null,
     "campaign_severity": null,
@@ -3315,7 +3316,7 @@
     ],
     "unique_ip_count_ever": 11,
     "first_seen": "2026-08-30T14:51:51.429778+00:00",
-    "last_seen": "2026-11-13T19:55:28.434198+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
     "status": "active"
   },
   "c7d3b8ed2b854825": {
@@ -3689,7 +3690,7 @@
   },
   "7ab552f01de999cb": {
     "sequence_hash": "7ab552f01de999cb",
-    "cluster_id_last_seen_as": "CLU-199",
+    "cluster_id_last_seen_as": "CLU-059",
     "is_campaign": false,
     "campaign_name": null,
     "campaign_severity": null,
@@ -3844,7 +3845,7 @@
     ],
     "unique_ip_count_ever": 138,
     "first_seen": "2026-08-30T22:43:41.693829+00:00",
-    "last_seen": "2026-11-16T22:24:10.241573+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
     "status": "active"
   },
   "c32b4937ce8564ea": {
@@ -8876,7 +8877,7 @@
     "unique_ip_count_ever": 2,
     "first_seen": "2026-09-29T01:55:43.172266+00:00",
     "last_seen": "2026-11-03T07:04:20.227600+00:00",
-    "status": "active"
+    "status": "ended"
   },
   "35a8c4bb0f782a86": {
     "sequence_hash": "35a8c4bb0f782a86",
@@ -13810,7 +13811,7 @@
   },
   "05517be7b140a37f": {
     "sequence_hash": "05517be7b140a37f",
-    "cluster_id_last_seen_as": "CLU-202",
+    "cluster_id_last_seen_as": "CLU-061",
     "is_campaign": false,
     "campaign_name": null,
     "campaign_severity": null,
@@ -13823,7 +13824,7 @@
     ],
     "unique_ip_count_ever": 1,
     "first_seen": "2026-10-25T16:39:37.988588+00:00",
-    "last_seen": "2026-11-16T22:24:10.241573+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
     "status": "active"
   },
   "31eb257bfdcf3a9d": {
@@ -18895,7 +18896,7 @@
   },
   "a126844356208846": {
     "sequence_hash": "a126844356208846",
-    "cluster_id_last_seen_as": "CLU-019",
+    "cluster_id_last_seen_as": "CLU-052",
     "is_campaign": false,
     "campaign_name": null,
     "campaign_severity": null,
@@ -18915,18 +18916,19 @@
         "name": "Credential Dumping"
       }
     ],
-    "session_count": 7,
+    "session_count": 8,
     "unique_ips_ever": [
       "106.15.236.209",
       "106.75.37.123",
       "159.75.211.148",
+      "196.189.236.67",
       "43.110.31.0",
       "47.82.161.120",
       "8.163.69.40"
     ],
-    "unique_ip_count_ever": 6,
+    "unique_ip_count_ever": 7,
     "first_seen": "2026-10-29T18:35:01.563044+00:00",
-    "last_seen": "2026-11-08T17:59:39.876195+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
     "status": "active"
   },
   "b6678999db5542a6": {
@@ -25148,7 +25150,7 @@
     "unique_ip_count_ever": 1,
     "first_seen": "2026-11-03T07:04:20.227600+00:00",
     "last_seen": "2026-11-03T07:04:20.227600+00:00",
-    "status": "active"
+    "status": "ended"
   },
   "eaf59623ea8106b2": {
     "sequence_hash": "eaf59623ea8106b2",
@@ -25171,7 +25173,7 @@
     "unique_ip_count_ever": 1,
     "first_seen": "2026-11-03T07:04:20.227600+00:00",
     "last_seen": "2026-11-03T07:04:20.227600+00:00",
-    "status": "active"
+    "status": "ended"
   },
   "f1d77fba24b5811e": {
     "sequence_hash": "f1d77fba24b5811e",
@@ -25194,7 +25196,7 @@
     "unique_ip_count_ever": 1,
     "first_seen": "2026-11-03T07:04:20.227600+00:00",
     "last_seen": "2026-11-03T07:04:20.227600+00:00",
-    "status": "active"
+    "status": "ended"
   },
   "6e1d8eabca6a84c4": {
     "sequence_hash": "6e1d8eabca6a84c4",
@@ -25217,7 +25219,7 @@
     "unique_ip_count_ever": 1,
     "first_seen": "2026-11-03T07:04:20.227600+00:00",
     "last_seen": "2026-11-03T07:04:20.227600+00:00",
-    "status": "active"
+    "status": "ended"
   },
   "031bb621defba821": {
     "sequence_hash": "031bb621defba821",
@@ -25240,7 +25242,7 @@
     "unique_ip_count_ever": 1,
     "first_seen": "2026-11-03T07:04:20.227600+00:00",
     "last_seen": "2026-11-03T07:04:20.227600+00:00",
-    "status": "active"
+    "status": "ended"
   },
   "9f2905eb9ca1a3db": {
     "sequence_hash": "9f2905eb9ca1a3db",
@@ -25263,7 +25265,7 @@
     "unique_ip_count_ever": 1,
     "first_seen": "2026-11-03T07:04:20.227600+00:00",
     "last_seen": "2026-11-03T07:04:20.227600+00:00",
-    "status": "active"
+    "status": "ended"
   },
   "e1edf8cb67f3e79c": {
     "sequence_hash": "e1edf8cb67f3e79c",
@@ -25286,7 +25288,7 @@
     "unique_ip_count_ever": 1,
     "first_seen": "2026-11-03T07:04:20.227600+00:00",
     "last_seen": "2026-11-03T07:04:20.227600+00:00",
-    "status": "active"
+    "status": "ended"
   },
   "23c6dc66904dcdda": {
     "sequence_hash": "23c6dc66904dcdda",
@@ -25309,7 +25311,7 @@
     "unique_ip_count_ever": 1,
     "first_seen": "2026-11-03T07:04:20.227600+00:00",
     "last_seen": "2026-11-03T07:04:20.227600+00:00",
-    "status": "active"
+    "status": "ended"
   },
   "76b2360cacbaba23": {
     "sequence_hash": "76b2360cacbaba23",
@@ -25332,7 +25334,7 @@
     "unique_ip_count_ever": 1,
     "first_seen": "2026-11-03T07:04:20.227600+00:00",
     "last_seen": "2026-11-03T07:04:20.227600+00:00",
-    "status": "active"
+    "status": "ended"
   },
   "eea982ead2b5f0a4": {
     "sequence_hash": "eea982ead2b5f0a4",
@@ -25355,7 +25357,7 @@
     "unique_ip_count_ever": 1,
     "first_seen": "2026-11-03T07:04:20.227600+00:00",
     "last_seen": "2026-11-03T07:04:20.227600+00:00",
-    "status": "active"
+    "status": "ended"
   },
   "ada4070b609d0646": {
     "sequence_hash": "ada4070b609d0646",
@@ -25378,7 +25380,7 @@
     "unique_ip_count_ever": 1,
     "first_seen": "2026-11-03T07:04:20.227600+00:00",
     "last_seen": "2026-11-03T07:04:20.227600+00:00",
-    "status": "active"
+    "status": "ended"
   },
   "6361a040853e1745": {
     "sequence_hash": "6361a040853e1745",
@@ -25401,7 +25403,7 @@
     "unique_ip_count_ever": 1,
     "first_seen": "2026-11-03T07:04:20.227600+00:00",
     "last_seen": "2026-11-03T07:04:20.227600+00:00",
-    "status": "active"
+    "status": "ended"
   },
   "49742c452073bd8d": {
     "sequence_hash": "49742c452073bd8d",
@@ -25424,7 +25426,7 @@
     "unique_ip_count_ever": 1,
     "first_seen": "2026-11-03T07:04:20.227600+00:00",
     "last_seen": "2026-11-03T07:04:20.227600+00:00",
-    "status": "active"
+    "status": "ended"
   },
   "f902bb96ae17fc81": {
     "sequence_hash": "f902bb96ae17fc81",
@@ -25451,7 +25453,7 @@
     "unique_ip_count_ever": 1,
     "first_seen": "2026-11-03T07:04:20.227600+00:00",
     "last_seen": "2026-11-03T07:04:20.227600+00:00",
-    "status": "active"
+    "status": "ended"
   },
   "ef293be5d51f00a3": {
     "sequence_hash": "ef293be5d51f00a3",
@@ -25474,7 +25476,7 @@
     "unique_ip_count_ever": 1,
     "first_seen": "2026-11-03T07:04:20.227600+00:00",
     "last_seen": "2026-11-03T07:04:20.227600+00:00",
-    "status": "active"
+    "status": "ended"
   },
   "7ceffc106bee4ce1": {
     "sequence_hash": "7ceffc106bee4ce1",
@@ -35826,14 +35828,14 @@
   },
   "525eaacb33b1f0dd": {
     "sequence_hash": "525eaacb33b1f0dd",
-    "cluster_id_last_seen_as": "CLU-118",
+    "cluster_id_last_seen_as": "CLU-057",
     "is_campaign": false,
     "campaign_name": null,
     "campaign_severity": null,
     "campaign_description": null,
     "matched_campaigns": [],
     "ttps": [],
-    "session_count": 23,
+    "session_count": 26,
     "unique_ips_ever": [
       "34.1.227.183",
       "35.206.141.203",
@@ -35847,21 +35849,24 @@
       "35.210.197.24",
       "35.210.212.188",
       "35.210.216.203",
+      "35.210.218.50",
       "35.210.223.3",
+      "35.210.228.188",
       "35.210.231.84",
       "35.210.236.178",
       "35.210.244.127",
       "35.210.246.75",
       "35.210.70.211",
+      "35.210.71.76",
       "35.210.75.156",
       "35.210.89.32",
       "35.210.93.97",
       "35.214.134.11",
       "35.214.174.154"
     ],
-    "unique_ip_count_ever": 23,
+    "unique_ip_count_ever": 26,
     "first_seen": "2026-11-09T22:36:29.148280+00:00",
-    "last_seen": "2026-11-16T06:59:54.765038+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
     "status": "active"
   },
   "4a1177a4a89922b3": {
@@ -57471,6 +57476,1075 @@
     "unique_ip_count_ever": 1,
     "first_seen": "2026-11-16T22:24:10.241573+00:00",
     "last_seen": "2026-11-16T22:24:10.241573+00:00",
+    "status": "active"
+  },
+  "368266eff645c5c9": {
+    "sequence_hash": "368266eff645c5c9",
+    "cluster_id_last_seen_as": "CLU-001",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "afc7345fbf6099ce": {
+    "sequence_hash": "afc7345fbf6099ce",
+    "cluster_id_last_seen_as": "CLU-002",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "46972ba9178f5900": {
+    "sequence_hash": "46972ba9178f5900",
+    "cluster_id_last_seen_as": "CLU-003",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "4f1661ca6665d5d0": {
+    "sequence_hash": "4f1661ca6665d5d0",
+    "cluster_id_last_seen_as": "CLU-004",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "027bfade459b42fa": {
+    "sequence_hash": "027bfade459b42fa",
+    "cluster_id_last_seen_as": "CLU-005",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "2c6ca6826218c9fc": {
+    "sequence_hash": "2c6ca6826218c9fc",
+    "cluster_id_last_seen_as": "CLU-006",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "fd100a4d97d18b71": {
+    "sequence_hash": "fd100a4d97d18b71",
+    "cluster_id_last_seen_as": "CLU-007",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "5bea2746c95e30a6": {
+    "sequence_hash": "5bea2746c95e30a6",
+    "cluster_id_last_seen_as": "CLU-008",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "0c0b97872617cd4d": {
+    "sequence_hash": "0c0b97872617cd4d",
+    "cluster_id_last_seen_as": "CLU-009",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "565a558d56dd24dd": {
+    "sequence_hash": "565a558d56dd24dd",
+    "cluster_id_last_seen_as": "CLU-010",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "12e0bb7aac01361f": {
+    "sequence_hash": "12e0bb7aac01361f",
+    "cluster_id_last_seen_as": "CLU-011",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "ca0d6289a691cec9": {
+    "sequence_hash": "ca0d6289a691cec9",
+    "cluster_id_last_seen_as": "CLU-012",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "272526815d4af0ed": {
+    "sequence_hash": "272526815d4af0ed",
+    "cluster_id_last_seen_as": "CLU-013",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "790410992887a639": {
+    "sequence_hash": "790410992887a639",
+    "cluster_id_last_seen_as": "CLU-014",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "c88756a3529bf046": {
+    "sequence_hash": "c88756a3529bf046",
+    "cluster_id_last_seen_as": "CLU-015",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "e6c79eaa7c2faf91": {
+    "sequence_hash": "e6c79eaa7c2faf91",
+    "cluster_id_last_seen_as": "CLU-016",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "fe8ec17d20e834b9": {
+    "sequence_hash": "fe8ec17d20e834b9",
+    "cluster_id_last_seen_as": "CLU-017",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "073cb91d1816ca68": {
+    "sequence_hash": "073cb91d1816ca68",
+    "cluster_id_last_seen_as": "CLU-018",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "b5300966446a1274": {
+    "sequence_hash": "b5300966446a1274",
+    "cluster_id_last_seen_as": "CLU-019",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "7bb986a435a83e2c": {
+    "sequence_hash": "7bb986a435a83e2c",
+    "cluster_id_last_seen_as": "CLU-020",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "eb67a82d9fb69e52": {
+    "sequence_hash": "eb67a82d9fb69e52",
+    "cluster_id_last_seen_as": "CLU-021",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "e971e59dba9f8039": {
+    "sequence_hash": "e971e59dba9f8039",
+    "cluster_id_last_seen_as": "CLU-022",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "734c05ce526cea64": {
+    "sequence_hash": "734c05ce526cea64",
+    "cluster_id_last_seen_as": "CLU-023",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "c4947bbb08188f8a": {
+    "sequence_hash": "c4947bbb08188f8a",
+    "cluster_id_last_seen_as": "CLU-024",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "66fa5dc200139234": {
+    "sequence_hash": "66fa5dc200139234",
+    "cluster_id_last_seen_as": "CLU-025",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "78ef90853b00b1e1": {
+    "sequence_hash": "78ef90853b00b1e1",
+    "cluster_id_last_seen_as": "CLU-026",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "6a6413cbdf1f0ae8": {
+    "sequence_hash": "6a6413cbdf1f0ae8",
+    "cluster_id_last_seen_as": "CLU-027",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "b9fe8489d36ee74e": {
+    "sequence_hash": "b9fe8489d36ee74e",
+    "cluster_id_last_seen_as": "CLU-028",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "a1cb6a0cf07fd298": {
+    "sequence_hash": "a1cb6a0cf07fd298",
+    "cluster_id_last_seen_as": "CLU-029",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "4abc5a0b249d7d97": {
+    "sequence_hash": "4abc5a0b249d7d97",
+    "cluster_id_last_seen_as": "CLU-030",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "cb60be6c00ea50a6": {
+    "sequence_hash": "cb60be6c00ea50a6",
+    "cluster_id_last_seen_as": "CLU-031",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "20afac1feaef2297": {
+    "sequence_hash": "20afac1feaef2297",
+    "cluster_id_last_seen_as": "CLU-032",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "056d9721452921b0": {
+    "sequence_hash": "056d9721452921b0",
+    "cluster_id_last_seen_as": "CLU-033",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "c4b9bcae49b7b580": {
+    "sequence_hash": "c4b9bcae49b7b580",
+    "cluster_id_last_seen_as": "CLU-034",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "e14eabe404fba2de": {
+    "sequence_hash": "e14eabe404fba2de",
+    "cluster_id_last_seen_as": "CLU-035",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "fc6042474a1c7149": {
+    "sequence_hash": "fc6042474a1c7149",
+    "cluster_id_last_seen_as": "CLU-036",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "42b97ca9f80df949": {
+    "sequence_hash": "42b97ca9f80df949",
+    "cluster_id_last_seen_as": "CLU-037",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "48f1d3929b493333": {
+    "sequence_hash": "48f1d3929b493333",
+    "cluster_id_last_seen_as": "CLU-038",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "ecf4dd074541d896": {
+    "sequence_hash": "ecf4dd074541d896",
+    "cluster_id_last_seen_as": "CLU-039",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "64fede980da4df31": {
+    "sequence_hash": "64fede980da4df31",
+    "cluster_id_last_seen_as": "CLU-040",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "89c1565e89b69566": {
+    "sequence_hash": "89c1565e89b69566",
+    "cluster_id_last_seen_as": "CLU-041",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "a18675ce9b37f0c8": {
+    "sequence_hash": "a18675ce9b37f0c8",
+    "cluster_id_last_seen_as": "CLU-042",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "6e6ff5826dcf58f4": {
+    "sequence_hash": "6e6ff5826dcf58f4",
+    "cluster_id_last_seen_as": "CLU-043",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "a74aeb9047c4c45b": {
+    "sequence_hash": "a74aeb9047c4c45b",
+    "cluster_id_last_seen_as": "CLU-044",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "76d406615d2ec577": {
+    "sequence_hash": "76d406615d2ec577",
+    "cluster_id_last_seen_as": "CLU-045",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "3bc89f4b1da38ece": {
+    "sequence_hash": "3bc89f4b1da38ece",
+    "cluster_id_last_seen_as": "CLU-046",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "a70a6bbf04e111e1": {
+    "sequence_hash": "a70a6bbf04e111e1",
+    "cluster_id_last_seen_as": "CLU-047",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "4e84271911c61317": {
+    "sequence_hash": "4e84271911c61317",
+    "cluster_id_last_seen_as": "CLU-048",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "fa95fddd2e6676e1": {
+    "sequence_hash": "fa95fddd2e6676e1",
+    "cluster_id_last_seen_as": "CLU-049",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "94168a9522a5a467": {
+    "sequence_hash": "94168a9522a5a467",
+    "cluster_id_last_seen_as": "CLU-050",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "755eab5d4b6bb86e": {
+    "sequence_hash": "755eab5d4b6bb86e",
+    "cluster_id_last_seen_as": "CLU-051",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "195.178.110.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "d82e174a1eebfff4": {
+    "sequence_hash": "d82e174a1eebfff4",
+    "cluster_id_last_seen_as": "CLU-053",
+    "is_campaign": true,
+    "campaign_name": "Mirai/IoT Botnet",
+    "campaign_severity": "HIGH",
+    "campaign_description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
+    "matched_campaigns": [
+      {
+        "name": "Mirai/IoT Botnet",
+        "ttps": [
+          "T1105",
+          "T1059.004"
+        ],
+        "severity": "HIGH",
+        "description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
+        "pattern_hits": 2,
+        "pattern_total": 3
+      },
+      {
+        "name": "Tsunami/Kaiten Backdoor",
+        "ttps": [
+          "T1105",
+          "T1059.004",
+          "T1489"
+        ],
+        "severity": "CRITICAL",
+        "description": "Tsunami/Kaiten DDoS backdoor. Establishes persistent shell and floods.",
+        "pattern_hits": 1,
+        "pattern_total": 3
+      }
+    ],
+    "ttps": [
+      {
+        "id": "T1105",
+        "name": "Ingress Tool Transfer"
+      },
+      {
+        "id": "T1083",
+        "name": "File & Directory Discovery"
+      },
+      {
+        "id": "T1140",
+        "name": "Deobfuscate/Decode Files"
+      },
+      {
+        "id": "T1489",
+        "name": "Service Stop"
+      },
+      {
+        "id": "T1059.004",
+        "name": "T1059.004"
+      }
+    ],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "128.199.173.169"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "3ffb9cb3fecb40ce": {
+    "sequence_hash": "3ffb9cb3fecb40ce",
+    "cluster_id_last_seen_as": "CLU-056",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 16,
+    "unique_ips_ever": [
+      "216.180.246.179"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "c0a563c46a0a2537": {
+    "sequence_hash": "c0a563c46a0a2537",
+    "cluster_id_last_seen_as": "CLU-060",
+    "is_campaign": false,
+    "campaign_name": null,
+    "campaign_severity": null,
+    "campaign_description": null,
+    "matched_campaigns": [],
+    "ttps": [],
+    "session_count": 4,
+    "unique_ips_ever": [
+      "45.14.225.216"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
+    "status": "active"
+  },
+  "98254d7a70506267": {
+    "sequence_hash": "98254d7a70506267",
+    "cluster_id_last_seen_as": "CLU-062",
+    "is_campaign": true,
+    "campaign_name": "mdrfckr SSH Key Injection",
+    "campaign_severity": "HIGH",
+    "campaign_description": "Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.",
+    "matched_campaigns": [
+      {
+        "name": "mdrfckr SSH Key Injection",
+        "ttps": [
+          "T1021.004",
+          "T1078",
+          "T1105"
+        ],
+        "severity": "HIGH",
+        "description": "Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.",
+        "pattern_hits": 3,
+        "pattern_total": 3
+      }
+    ],
+    "ttps": [
+      {
+        "id": "T1021.004",
+        "name": "Remote Services: SSH"
+      },
+      {
+        "id": "T1078",
+        "name": "Valid Accounts"
+      },
+      {
+        "id": "T1070",
+        "name": "Indicator Removal"
+      },
+      {
+        "id": "T1140",
+        "name": "Deobfuscate/Decode Files"
+      },
+      {
+        "id": "T1105",
+        "name": "T1105"
+      }
+    ],
+    "session_count": 1,
+    "unique_ips_ever": [
+      "85.198.19.217"
+    ],
+    "unique_ip_count_ever": 1,
+    "first_seen": "2026-11-17T08:14:42.361897+00:00",
+    "last_seen": "2026-11-17T08:14:42.361897+00:00",
     "status": "active"
   }
 }
