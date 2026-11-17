@@ -1,227 +1,135 @@
 {
-  "generated_at": "2026-11-16T21:23:51.396390+00:00",
-  "total_sessions_parsed": 674,
-  "sessions_with_fingerprint": 26,
-  "sessions_without_kex": 186,
-  "unique_fingerprints": 26,
+  "generated_at": "2026-11-17T05:36:06.199403+00:00",
+  "total_sessions_parsed": 220,
+  "sessions_with_fingerprint": 23,
+  "sessions_without_kex": 58,
+  "unique_fingerprints": 23,
   "top_families": [
     {
       "family": "Go SSH scanner",
-      "sessions": 282
+      "sessions": 75
     },
     {
       "family": "OpenSSH",
-      "sessions": 130
+      "sessions": 56
     },
     {
       "family": "libssh",
-      "sessions": 71
+      "sessions": 24
     },
     {
       "family": "Unknown",
-      "sessions": 2
-    },
-    {
-      "family": "PuTTY",
-      "sessions": 2
+      "sessions": 4
     },
     {
       "family": "Paramiko (Python)",
+      "sessions": 2
+    },
+    {
+      "family": "AsyncSSH (Python)",
       "sessions": 1
     }
   ],
   "botnet_signals": [
     {
-      "hassh": "2ec37a7cc8daf20b10e1ad6221061ca5",
+      "hassh": "acaa53e0a7d7ac7d1255103f37901306",
       "signature": "Mirai/variant",
-      "session_count": 200,
+      "session_count": 53,
       "unique_ips": [
-        "193.32.162.84",
-        "195.178.110.232",
-        "80.94.92.55",
-        "92.118.39.75",
-        "92.118.39.77"
+        "102.210.148.41",
+        "103.146.233.154",
+        "103.147.248.44",
+        "103.158.138.179",
+        "103.230.176.152",
+        "109.173.38.135",
+        "111.70.17.214",
+        "116.86.211.61",
+        "121.131.220.156",
+        "121.178.185.141",
+        "131.161.184.46",
+        "160.154.84.192",
+        "174.68.44.195",
+        "175.213.96.102",
+        "179.184.85.167",
+        "182.75.227.178",
+        "192.136.235.68",
+        "194.103.82.72",
+        "210.1.66.154",
+        "211.223.41.90",
+        "213.212.48.179",
+        "216.16.60.51",
+        "217.208.90.253",
+        "219.248.4.146",
+        "222.98.44.218",
+        "24.45.235.179",
+        "31.208.14.62",
+        "37.28.177.141",
+        "37.28.181.9",
+        "41.44.171.62",
+        "41.72.125.86",
+        "49.124.151.53",
+        "49.124.152.225",
+        "49.206.27.37",
+        "49.207.9.39",
+        "50.80.140.207",
+        "61.184.128.210",
+        "61.2.246.139",
+        "65.20.143.19",
+        "68.10.53.9",
+        "68.225.56.110",
+        "68.225.58.228",
+        "68.225.62.218",
+        "68.225.62.86",
+        "70.183.226.20",
+        "72.215.33.91",
+        "73.183.115.109",
+        "8.243.73.199",
+        "80.223.198.246",
+        "82.162.17.177",
+        "83.254.172.36",
+        "89.233.202.252",
+        "93.164.134.141"
       ]
     },
     {
-      "hassh": "acaa53e0a7d7ac7d1255103f37901306",
+      "hassh": "2ec37a7cc8daf20b10e1ad6221061ca5",
       "signature": "Mirai/variant",
-      "session_count": 121,
+      "session_count": 52,
       "unique_ips": [
-        "101.13.1.58",
-        "102.220.45.186",
-        "103.156.18.36",
-        "103.176.160.146",
-        "103.225.15.98",
-        "103.29.185.162",
-        "104.194.37.176",
-        "109.167.40.94",
-        "111.171.125.94",
-        "112.86.156.251",
-        "113.11.34.221",
-        "113.158.205.225",
-        "116.59.10.150",
-        "116.59.13.159",
-        "116.74.91.50",
-        "117.14.51.58",
-        "117.254.119.147",
-        "118.36.222.243",
-        "119.194.33.34",
-        "119.204.122.94",
-        "121.168.83.124",
-        "121.179.93.147",
-        "122.160.165.158",
-        "122.166.253.226",
-        "122.185.44.206",
-        "125.23.204.74",
-        "14.187.221.81",
-        "14.195.191.82",
-        "14.51.12.142",
-        "14.54.22.11",
-        "152.52.240.162",
-        "160.154.84.192",
-        "171.226.12.127",
-        "174.68.45.93",
-        "175.195.73.38",
-        "176.57.76.206",
-        "176.99.110.229",
-        "177.159.150.111",
-        "177.27.76.210",
-        "178.178.194.136",
-        "178.178.222.55",
-        "178.178.222.58",
-        "178.88.130.247",
-        "181.58.70.249",
-        "182.156.35.238",
-        "182.79.218.101",
-        "182.95.12.178",
-        "183.107.76.127",
-        "183.171.60.82",
-        "185.112.148.66",
-        "185.15.61.102",
-        "186.201.240.42",
-        "186.215.107.189",
-        "186.238.242.194",
-        "186.238.89.142",
-        "187.92.28.238",
-        "188.242.28.1",
-        "189.56.0.19",
-        "191.210.73.33",
-        "196.190.180.18",
-        "197.219.228.246",
-        "197.248.159.55",
-        "201.28.234.10",
-        "201.86.71.182",
-        "208.96.233.67",
-        "209.6.226.104",
-        "211.178.165.251",
-        "211.217.132.69",
-        "211.53.58.10",
-        "216.232.226.40",
-        "218.149.228.159",
-        "218.159.144.187",
-        "218.248.19.102",
-        "218.27.205.159",
-        "221.222.160.175",
-        "223.197.146.163",
-        "24.31.36.72",
-        "24.97.253.246",
-        "31.208.252.51",
-        "37.113.113.77",
-        "38.106.158.9",
-        "45.175.20.14",
-        "45.238.2.93",
-        "46.201.247.21",
-        "46.59.109.199",
-        "49.124.142.137",
-        "49.124.147.253",
-        "49.124.152.234",
-        "49.124.152.240",
-        "60.21.100.63",
-        "61.60.216.34",
-        "62.220.104.155",
-        "65.20.143.19",
-        "65.20.189.52",
-        "65.20.216.133",
-        "65.20.251.41",
-        "68.225.149.102",
-        "68.225.62.218",
-        "68.58.224.106",
-        "70.175.182.45",
-        "70.183.233.243",
-        "70.184.126.12",
-        "74.196.184.15",
-        "80.65.90.155",
-        "81.244.240.64",
-        "82.10.54.245",
-        "83.254.172.36",
-        "83.255.211.115",
-        "85.12.248.68",
-        "89.233.202.252",
-        "91.244.113.178",
-        "96.1.40.151",
-        "96.19.180.207",
-        "98.172.187.202",
-        "98.174.37.195"
+        "195.178.110.217"
       ]
     },
     {
       "hassh": "f555226df1963d1d3c09daf865abdc9a",
       "signature": "Mirai/variant",
-      "session_count": 62,
+      "session_count": 22,
       "unique_ips": [
-        "103.37.81.243",
-        "103.84.236.242",
-        "106.51.72.246",
-        "107.180.88.176",
-        "113.161.39.122",
-        "115.190.211.57",
-        "117.205.245.50",
-        "119.28.105.117",
-        "122.114.255.230",
-        "122.172.255.85",
-        "129.121.136.199",
-        "129.121.141.205",
-        "130.131.220.95",
-        "14.224.227.189",
-        "156.235.89.153",
-        "168.205.190.245",
-        "176.106.225.115",
-        "182.237.13.208",
-        "187.141.71.166",
-        "190.181.44.194",
-        "192.81.218.246",
-        "201.249.166.171",
-        "202.145.0.18",
-        "213.154.77.61",
-        "222.220.102.32",
-        "31.76.34.47",
-        "36.139.161.140",
-        "4.240.126.25",
-        "42.193.177.165",
-        "43.165.190.208",
-        "50.6.207.102",
-        "51.195.40.26",
-        "59.98.148.5"
+        "150.187.4.193",
+        "186.121.233.2",
+        "197.44.15.210",
+        "20.184.59.236",
+        "200.175.61.207",
+        "201.17.133.138",
+        "213.230.127.104",
+        "36.92.140.209",
+        "43.133.61.254",
+        "59.144.92.154",
+        "85.198.19.217"
       ]
     },
     {
-      "hassh": "16443846184eafde36765c9bab2f4397",
+      "hassh": "0a07365cc01fa9fc82608ba4019af499",
       "signature": "Generic scanner",
-      "session_count": 28,
+      "session_count": 4,
       "unique_ips": [
-        "100.33.23.13",
-        "104.244.79.113",
-        "191.7.159.201",
-        "195.178.110.26",
-        "78.128.112.74",
-        "87.236.176.14"
+        "109.160.32.120",
+        "109.160.32.134"
       ]
     },
     {
       "hassh": "7d01d047ace68f3151ea773e1e0d4838",
       "signature": "Mirai/variant",
-      "session_count": 23,
+      "session_count": 4,
       "unique_ips": [
         "138.226.239.233",
         "138.226.239.234",
@@ -230,49 +138,37 @@
       ]
     },
     {
-      "hassh": "0a07365cc01fa9fc82608ba4019af499",
-      "signature": "Generic scanner",
-      "session_count": 9,
-      "unique_ips": [
-        "109.160.32.102",
-        "109.160.32.118",
-        "176.32.193.16",
-        "45.184.48.247",
-        "77.239.124.153"
-      ]
-    },
-    {
       "hassh": "eff4c24daffc8532c160e86e5f006e53",
       "signature": "Modern SSH client",
-      "session_count": 8,
+      "session_count": 3,
       "unique_ips": [
         "176.53.159.196"
       ]
     },
     {
-      "hassh": "084386fa7ae5039bcf6f07298a05a227",
+      "hassh": "f1e5e9d24e5e345e8745613bde22d532",
       "signature": "Mirai/variant",
       "session_count": 3,
       "unique_ips": [
-        "109.160.32.102",
-        "71.6.154.144",
-        "71.6.199.65"
+        "139.19.117.129"
       ]
     },
     {
-      "hassh": "a289c065bf37397b69226bd770e33124",
-      "signature": "Mirai/variant",
-      "session_count": 3,
-      "unique_ips": [
-        "193.32.162.15"
-      ]
-    },
-    {
-      "hassh": "03a80b21afa810682a776a7d42e5e6fb",
-      "signature": "Modern SSH client",
+      "hassh": "4e066189c3bbeec38c99b1855113733a",
+      "signature": "Generic scanner",
       "session_count": 2,
       "unique_ips": [
-        "111.238.174.6"
+        "35.206.176.149",
+        "35.210.162.204"
+      ]
+    },
+    {
+      "hassh": "dde267e50f82fcc16a7e1e7b59b8af71",
+      "signature": "Mirai/variant",
+      "session_count": 2,
+      "unique_ips": [
+        "35.206.176.149",
+        "35.210.162.204"
       ]
     },
     {
@@ -280,107 +176,32 @@
       "signature": "Mirai/variant",
       "session_count": 2,
       "unique_ips": [
-        "147.185.133.240",
-        "198.235.24.8"
-      ]
-    },
-    {
-      "hassh": "5bd26477da5440a6187bd3f1b39a429c",
-      "signature": "Mirai/variant",
-      "session_count": 2,
-      "unique_ips": [
-        "45.148.10.141",
-        "45.148.10.157"
-      ]
-    },
-    {
-      "hassh": "14b2ddda386a4d1006108ccd231b42fc",
-      "signature": "Mirai/variant",
-      "session_count": 2,
-      "unique_ips": [
-        "193.187.110.160"
-      ]
-    },
-    {
-      "hassh": "e54ef3ec27fe1fea7ab64d3fa05359fd",
-      "signature": "Generic scanner",
-      "session_count": 2,
-      "unique_ips": [
-        "20.29.52.64",
-        "24.144.111.22"
+        "147.185.133.249",
+        "198.235.24.59"
       ]
     },
     {
       "hassh": "98f63c4d9c87edbd97ed4747fa031019",
       "signature": "Generic scanner",
-      "session_count": 2,
-      "unique_ips": [
-        "120.27.122.227",
-        "152.42.246.223"
-      ]
-    },
-    {
-      "hassh": "713bd9cc935561939c02dad25af2d3de",
-      "signature": "Mirai/variant",
-      "session_count": 2,
-      "unique_ips": [
-        "102.88.137.80"
-      ]
-    },
-    {
-      "hassh": "f1e5e9d24e5e345e8745613bde22d532",
-      "signature": "Mirai/variant",
-      "session_count": 2,
-      "unique_ips": [
-        "139.19.117.129"
-      ]
-    },
-    {
-      "hassh": "6372ee6957562199b2fb773b0be1bf34",
-      "signature": "Modern SSH client",
       "session_count": 1,
       "unique_ips": [
-        "43.160.237.207"
+        "160.3.5.133"
       ]
     },
     {
-      "hassh": "bc3aee897af7d3feb9fc37b89c7d15c9",
+      "hassh": "4c94058d5e9e31659879f79fd5b46084",
+      "signature": "libssh-based",
+      "session_count": 1,
+      "unique_ips": [
+        "45.14.225.216"
+      ]
+    },
+    {
+      "hassh": "14b2ddda386a4d1006108ccd231b42fc",
       "signature": "Mirai/variant",
       "session_count": 1,
       "unique_ips": [
-        "85.217.149.15"
-      ]
-    },
-    {
-      "hassh": "e37f354a101aff5871ba233aa82b84ec",
-      "signature": "Mirai/variant",
-      "session_count": 1,
-      "unique_ips": [
-        "8.218.211.50"
-      ]
-    },
-    {
-      "hassh": "e57221504a700ba6ecfb7c89dbf0009b",
-      "signature": "Modern SSH client",
-      "session_count": 1,
-      "unique_ips": [
-        "36.134.69.15"
-      ]
-    },
-    {
-      "hassh": "f45fb203c31069bb280067b71ed92ccb",
-      "signature": "Mirai/variant",
-      "session_count": 1,
-      "unique_ips": [
-        "14.55.199.214"
-      ]
-    },
-    {
-      "hassh": "bc9e7273cde22b1209d6673b5fd10bd5",
-      "signature": "Mirai/variant",
-      "session_count": 1,
-      "unique_ips": [
-        "193.32.209.244"
+        "193.187.110.160"
       ]
     },
     {
@@ -388,7 +209,47 @@
       "signature": "Mirai/variant",
       "session_count": 1,
       "unique_ips": [
-        "66.132.195.99"
+        "66.132.172.37"
+      ]
+    },
+    {
+      "hassh": "16443846184eafde36765c9bab2f4397",
+      "signature": "Generic scanner",
+      "session_count": 1,
+      "unique_ips": [
+        "78.128.112.74"
+      ]
+    },
+    {
+      "hassh": "9052c4ab4164c78256e71143dcfc7eac",
+      "signature": "Mirai/variant",
+      "session_count": 1,
+      "unique_ips": [
+        "52.91.188.73"
+      ]
+    },
+    {
+      "hassh": "39810c8bc443678b01c3b856ad168ba9",
+      "signature": "Mirai/variant",
+      "session_count": 1,
+      "unique_ips": [
+        "85.206.170.188"
+      ]
+    },
+    {
+      "hassh": "a2de0f306611e0957be704f5b0e35a82",
+      "signature": "Mirai/variant",
+      "session_count": 1,
+      "unique_ips": [
+        "144.22.238.238"
+      ]
+    },
+    {
+      "hassh": "7216c7c473918b4f83d1139b3c70dbf9",
+      "signature": "Mirai/variant",
+      "session_count": 1,
+      "unique_ips": [
+        "64.62.197.206"
       ]
     },
     {
@@ -396,236 +257,27 @@
       "signature": "Mirai/variant",
       "session_count": 1,
       "unique_ips": [
-        "118.19.121.251"
+        "86.124.210.130"
+      ]
+    },
+    {
+      "hassh": "d1c5d296d5327da6ddb7e1367f528868",
+      "signature": "Modern SSH client",
+      "session_count": 1,
+      "unique_ips": [
+        "121.167.171.219"
+      ]
+    },
+    {
+      "hassh": "e37f354a101aff5871ba233aa82b84ec",
+      "signature": "Mirai/variant",
+      "session_count": 1,
+      "unique_ips": [
+        "39.105.56.130"
       ]
     }
   ],
   "fingerprints": [
-    {
-      "hassh": "2ec37a7cc8daf20b10e1ad6221061ca5",
-      "client_family": "Go SSH scanner",
-      "botnet_signature": "Mirai/variant",
-      "version_strings": [
-        "SSH-2.0-Go"
-      ],
-      "session_count": 200,
-      "unique_ips": [
-        "193.32.162.84",
-        "195.178.110.232",
-        "80.94.92.55",
-        "92.118.39.75",
-        "92.118.39.77"
-      ],
-      "sessions": [
-        "IR-740eff0422b9",
-        "IR-2c401e5bdd14",
-        "IR-d06070611eea",
-        "IR-32f7dbbdf4b5",
-        "IR-934ac830d5a7",
-        "IR-97ccc281861e",
-        "IR-56798947594a",
-        "IR-2a53d481202f",
-        "IR-bff17abc1e71",
-        "IR-7ace893ee0c5",
-        "IR-7f8b9baadd9c",
-        "IR-c17f8475e8fd",
-        "IR-5fc52f66e126",
-        "IR-8908e29b53d3",
-        "IR-e6f1643d3641",
-        "IR-ef13f5abff17",
-        "IR-2e12c3b7af08",
-        "IR-192a5ad859bc",
-        "IR-8e294154f806",
-        "IR-b2ca7876c942",
-        "IR-d23b67b99118",
-        "IR-28b5cb4dc423",
-        "IR-c74c3199104c",
-        "IR-4f8124e0959a",
-        "IR-4dd9ed0f0935",
-        "IR-114475256e1c",
-        "IR-23dc9c829956",
-        "IR-91f58d113dcc",
-        "IR-c6da259c346f",
-        "IR-029574ad47d3",
-        "IR-169162c9d4a8",
-        "IR-4d1631958a09",
-        "IR-bd9f4c7ca809",
-        "IR-e79a3bc691c8",
-        "IR-7755f9239fb7",
-        "IR-5b1924431ded",
-        "IR-1fb9e65ebfe1",
-        "IR-924254e2d8b5",
-        "IR-55b62be15955",
-        "IR-c84b03cdd6df",
-        "IR-5589711a3f8d",
-        "IR-58024aa7aee1",
-        "IR-cf097e4e3f30",
-        "IR-840f65a5522b",
-        "IR-6c14c903834a",
-        "IR-85e80e775b6a",
-        "IR-3a05be9766f1",
-        "IR-2ea90e4cd6b9",
-        "IR-4af33d90a869",
-        "IR-ad40b2953370",
-        "IR-7e39e0ff055d",
-        "IR-1d3b1a1e905a",
-        "IR-c4ace517ea50",
-        "IR-f2ea2402ba20",
-        "IR-58aefaadef20",
-        "IR-666caeadd705",
-        "IR-461df4dffe61",
-        "IR-c7024888840e",
-        "IR-90f4889184f2",
-        "IR-7e032d2d6860",
-        "IR-e5530cabb59f",
-        "IR-2fca8a028775",
-        "IR-39f76e8d1846",
-        "IR-80f6afd5f0b8",
-        "IR-88cfc686e1ff",
-        "IR-2f30602d8df2",
-        "IR-d71fe4dedab3",
-        "IR-1c006f26b6c9",
-        "IR-444bea171b7f",
-        "IR-6ef39387fdde",
-        "IR-841e80d53912",
-        "IR-474838e2edf6",
-        "IR-9da5d4969768",
-        "IR-d8cc3de24e70",
-        "IR-68385cad1d15",
-        "IR-7143c2b57433",
-        "IR-b936f8b4d1ad",
-        "IR-550c3c58e800",
-        "IR-313fc0bce08b",
-        "IR-124972a65a97",
-        "IR-4b08ce71b693",
-        "IR-06846847f8b1",
-        "IR-8afccf822099",
-        "IR-8708deb9a0a3",
-        "IR-c98023b7c815",
-        "IR-b3e0fbfd9ec5",
-        "IR-31390263b401",
-        "IR-db4b8e6da4ea",
-        "IR-1175121c409d",
-        "IR-eaab024bfb6f",
-        "IR-7a4e2ecab5e4",
-        "IR-3210d82556ed",
-        "IR-07b533632f9a",
-        "IR-3d497f249721",
-        "IR-84b34a29072b",
-        "IR-4d26b1464fdf",
-        "IR-4d77ebc55415",
-        "IR-7f3c09959f72",
-        "IR-203ab850afaf",
-        "IR-bcab23eccf3f",
-        "IR-6bb937366f0d",
-        "IR-9c051e247ff9",
-        "IR-03f5d0b37843",
-        "IR-a5aec44a35ce",
-        "IR-3c6982f160fd",
-        "IR-b66c2bb99941",
-        "IR-2b7c6dfd8cec",
-        "IR-8cfcdbfeb39d",
-        "IR-3875501f8076",
-        "IR-b580bfa863c7",
-        "IR-ded41dadd61c",
-        "IR-a895fdf22f95",
-        "IR-ec553514b0ab",
-        "IR-10c1ad3e2457",
-        "IR-9330d9950355",
-        "IR-fc92f2ba0b0b",
-        "IR-4d8611cbc184",
-        "IR-4aec438eb81b",
-        "IR-180fe530c135",
-        "IR-af1bbac32ed4",
-        "IR-02d777d68da2",
-        "IR-ef5667634207",
-        "IR-6821746bbd10",
-        "IR-f366d094c9ca",
-        "IR-dd4db485ca4c",
-        "IR-946bd2f010b7",
-        "IR-338b720ceddf",
-        "IR-0571825e57e2",
-        "IR-d8c817756c02",
-        "IR-4b2756b7fa9e",
-        "IR-54fb426e23b8",
-        "IR-3258fdc46bf0",
-        "IR-5effefa3b46c",
-        "IR-f9e197bd5a06",
-        "IR-b50ed2f4cb21",
-        "IR-34dddda308d4",
-        "IR-d6575c91e7a5",
-        "IR-7587519065f5",
-        "IR-56f6ed647f61",
-        "IR-bcfc3e9a2d1a",
-        "IR-09d2451ac50b",
-        "IR-19fb47868105",
-        "IR-b13568e3f024",
-        "IR-d7f56f9e8f6b",
-        "IR-31e2f5968074",
-        "IR-994ed1fe9ff4",
-        "IR-2a3981537924",
-        "IR-6dda01540ebf",
-        "IR-e31487084244",
-        "IR-e1caff5f54d6",
-        "IR-97c0a2111adb",
-        "IR-28600951de64",
-        "IR-4d16c307ba37",
-        "IR-e3e04789db34",
-        "IR-0ae85317ca85",
-        "IR-343824f9b0e3",
-        "IR-d33a782c6ec5",
-        "IR-39363a59f50b",
-        "IR-43ef8fcb3d1d",
-        "IR-62e4feaef8f3",
-        "IR-406ce83a2434",
-        "IR-aca010b1681c",
-        "IR-6f298399c1e1",
-        "IR-72b2831a8110",
-        "IR-fea79742e188",
-        "IR-35c5dcccbc1d",
-        "IR-a1933759c674",
-        "IR-7822d9f51b89",
-        "IR-1fc6d050ba59",
-        "IR-91c02a38dab8",
-        "IR-edc0afa86dd6",
-        "IR-0d3bf98f7f98",
-        "IR-791be0f90572",
-        "IR-1ac54e12adf9",
-        "IR-be51660d6656",
-        "IR-8a99edf711c6",
-        "IR-ebaac0962796",
-        "IR-4bf8b1a97cd2",
-        "IR-035889abc7e2",
-        "IR-a8272c9bea5e",
-        "IR-eac263d0ecef",
-        "IR-2a62ca5cd977",
-        "IR-cdb524f6ab00",
-        "IR-f5ecbeab84c9",
-        "IR-2047c885319e",
-        "IR-582611ed986d",
-        "IR-98431c90ea38",
-        "IR-0d3f70cb8b49",
-        "IR-2ffe3dbc4696",
-        "IR-34b5e1884559",
-        "IR-3afc13474773",
-        "IR-1473b22397fd",
-        "IR-6af4a29442ef",
-        "IR-cac420820355",
-        "IR-d7bd149bbcdf",
-        "IR-7c001223d8e3",
-        "IR-0f0510061e9b",
-        "IR-2963bc435125",
-        "IR-7300dee3afa2",
-        "IR-935fabc7027b"
-      ],
-      "kex_algs": "curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group16-sha512,diffie-hellman-group14-sha256,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,ext-info-c,kex-strict-c-v00@openssh.com",
-      "enc_algs": "aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com,arcfour256,arcfour128,arcfour,3des-cbc,aes128-cbc",
-      "mac_algs": "hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1,hmac-sha1-96",
-      "comp_algs": "none",
-      "first_seen": "2026-11-16T08:02:17.345411Z",
-      "last_seen": "2026-11-16T18:59:37.964059Z",
-      "unique_ip_count": 5
-    },
     {
       "hassh": "acaa53e0a7d7ac7d1255103f37901306",
       "client_family": "OpenSSH",
@@ -633,254 +285,197 @@
       "version_strings": [
         "SSH-2.0-OpenSSH_7.4"
       ],
-      "session_count": 121,
+      "session_count": 53,
       "unique_ips": [
-        "101.13.1.58",
-        "102.220.45.186",
-        "103.156.18.36",
-        "103.176.160.146",
-        "103.225.15.98",
-        "103.29.185.162",
-        "104.194.37.176",
-        "109.167.40.94",
-        "111.171.125.94",
-        "112.86.156.251",
-        "113.11.34.221",
-        "113.158.205.225",
-        "116.59.10.150",
-        "116.59.13.159",
-        "116.74.91.50",
-        "117.14.51.58",
-        "117.254.119.147",
-        "118.36.222.243",
-        "119.194.33.34",
-        "119.204.122.94",
-        "121.168.83.124",
-        "121.179.93.147",
-        "122.160.165.158",
-        "122.166.253.226",
-        "122.185.44.206",
-        "125.23.204.74",
-        "14.187.221.81",
-        "14.195.191.82",
-        "14.51.12.142",
-        "14.54.22.11",
-        "152.52.240.162",
+        "102.210.148.41",
+        "103.146.233.154",
+        "103.147.248.44",
+        "103.158.138.179",
+        "103.230.176.152",
+        "109.173.38.135",
+        "111.70.17.214",
+        "116.86.211.61",
+        "121.131.220.156",
+        "121.178.185.141",
+        "131.161.184.46",
         "160.154.84.192",
-        "171.226.12.127",
-        "174.68.45.93",
-        "175.195.73.38",
-        "176.57.76.206",
-        "176.99.110.229",
-        "177.159.150.111",
-        "177.27.76.210",
-        "178.178.194.136",
-        "178.178.222.55",
-        "178.178.222.58",
-        "178.88.130.247",
-        "181.58.70.249",
-        "182.156.35.238",
-        "182.79.218.101",
-        "182.95.12.178",
-        "183.107.76.127",
-        "183.171.60.82",
-        "185.112.148.66",
-        "185.15.61.102",
-        "186.201.240.42",
-        "186.215.107.189",
-        "186.238.242.194",
-        "186.238.89.142",
-        "187.92.28.238",
-        "188.242.28.1",
-        "189.56.0.19",
-        "191.210.73.33",
-        "196.190.180.18",
-        "197.219.228.246",
-        "197.248.159.55",
-        "201.28.234.10",
-        "201.86.71.182",
-        "208.96.233.67",
-        "209.6.226.104",
-        "211.178.165.251",
-        "211.217.132.69",
-        "211.53.58.10",
-        "216.232.226.40",
-        "218.149.228.159",
-        "218.159.144.187",
-        "218.248.19.102",
-        "218.27.205.159",
-        "221.222.160.175",
-        "223.197.146.163",
-        "24.31.36.72",
-        "24.97.253.246",
-        "31.208.252.51",
-        "37.113.113.77",
-        "38.106.158.9",
-        "45.175.20.14",
-        "45.238.2.93",
-        "46.201.247.21",
-        "46.59.109.199",
-        "49.124.142.137",
-        "49.124.147.253",
-        "49.124.152.234",
-        "49.124.152.240",
-        "60.21.100.63",
-        "61.60.216.34",
-        "62.220.104.155",
+        "174.68.44.195",
+        "175.213.96.102",
+        "179.184.85.167",
+        "182.75.227.178",
+        "192.136.235.68",
+        "194.103.82.72",
+        "210.1.66.154",
+        "211.223.41.90",
+        "213.212.48.179",
+        "216.16.60.51",
+        "217.208.90.253",
+        "219.248.4.146",
+        "222.98.44.218",
+        "24.45.235.179",
+        "31.208.14.62",
+        "37.28.177.141",
+        "37.28.181.9",
+        "41.44.171.62",
+        "41.72.125.86",
+        "49.124.151.53",
+        "49.124.152.225",
+        "49.206.27.37",
+        "49.207.9.39",
+        "50.80.140.207",
+        "61.184.128.210",
+        "61.2.246.139",
         "65.20.143.19",
-        "65.20.189.52",
-        "65.20.216.133",
-        "65.20.251.41",
-        "68.225.149.102",
+        "68.10.53.9",
+        "68.225.56.110",
+        "68.225.58.228",
         "68.225.62.218",
-        "68.58.224.106",
-        "70.175.182.45",
-        "70.183.233.243",
-        "70.184.126.12",
-        "74.196.184.15",
-        "80.65.90.155",
-        "81.244.240.64",
-        "82.10.54.245",
+        "68.225.62.86",
+        "70.183.226.20",
+        "72.215.33.91",
+        "73.183.115.109",
+        "8.243.73.199",
+        "80.223.198.246",
+        "82.162.17.177",
         "83.254.172.36",
-        "83.255.211.115",
-        "85.12.248.68",
         "89.233.202.252",
-        "91.244.113.178",
-        "96.1.40.151",
-        "96.19.180.207",
-        "98.172.187.202",
-        "98.174.37.195"
+        "93.164.134.141"
       ],
       "sessions": [
-        "IR-3760949c21ca",
-        "IR-791c125c3b15",
-        "IR-69631a6b1aa1",
-        "IR-1c2da6c9a88f",
-        "IR-ff37c6d2344b",
-        "IR-097a8fbaa1d1",
-        "IR-c98135ca2077",
-        "IR-7e61c44a2c44",
-        "IR-e8a1a839b191",
-        "IR-de21993b5776",
-        "IR-ffa5521e3fd9",
-        "IR-a129bb8cbe4d",
-        "IR-c06c7307afb6",
-        "IR-f521586645a4",
-        "IR-af12f4734889",
-        "IR-7189db5c6783",
-        "IR-405a02462413",
-        "IR-89eef9767c01",
-        "IR-ec5d91acd266",
-        "IR-276fdff3f638",
-        "IR-5838c4042e38",
-        "IR-23b03774ec3b",
-        "IR-9ea68fe3bf73",
-        "IR-ae894c5b364e",
-        "IR-e31c118c1731",
-        "IR-b91926ad1e79",
-        "IR-13e744d97653",
-        "IR-669898a88867",
-        "IR-116c1dfcf555",
-        "IR-608004e0c58c",
-        "IR-b1422f8fb0a1",
-        "IR-32d1d58459af",
-        "IR-73cef83e8828",
-        "IR-8d8d046ab51a",
-        "IR-c66b4ec8117e",
-        "IR-f8dc7e22fb99",
-        "IR-62cf9f048c07",
-        "IR-dfa4e7383576",
-        "IR-1b296389d050",
-        "IR-0357acb03dd2",
-        "IR-68ba3f819351",
-        "IR-202222e622ff",
-        "IR-87645e667090",
-        "IR-5f872c85f90c",
-        "IR-550826c7cfcf",
-        "IR-8c3501e1ae43",
-        "IR-420dc4bb8f28",
-        "IR-bb21d2747f2c",
-        "IR-7849b87c35a6",
-        "IR-3ec43ae9331e",
-        "IR-ccae441cb1e6",
-        "IR-5095d9defecb",
-        "IR-2908ceab4115",
-        "IR-6325492b4de0",
-        "IR-12d3221c79b5",
-        "IR-e25c32603b8a",
-        "IR-2d30e0d7df90",
-        "IR-0cb8c71131c1",
-        "IR-9f1a349f84dc",
-        "IR-b7e01c6f40ba",
-        "IR-4370326e8d23",
-        "IR-c8eef4d31b8a",
-        "IR-d5c926561bf1",
-        "IR-3849eab1e865",
-        "IR-1f9a1182a7ba",
-        "IR-4b97b237c1c0",
-        "IR-71a00f81d328",
-        "IR-222ffcb6b3c8",
-        "IR-1d58acc4b3bc",
-        "IR-b1e512376d3f",
-        "IR-b2529f2b5a6a",
-        "IR-2bc96e461028",
-        "IR-282b837929b3",
-        "IR-f3e99fd3330b",
-        "IR-e952fb229e5b",
-        "IR-969feebf23ed",
-        "IR-37d746cade2a",
-        "IR-e92e40e66615",
-        "IR-e9939e983e5d",
-        "IR-3c82164b6c58",
-        "IR-528ad6473989",
-        "IR-bb39b06f380b",
-        "IR-312b3c373b38",
-        "IR-810d9fe69b03",
-        "IR-4b59163da27f",
-        "IR-bd73faf30d1b",
-        "IR-7955240e8db1",
-        "IR-8ede2959c845",
-        "IR-0b0573465c52",
-        "IR-446793934656",
-        "IR-d057ad5a888d",
-        "IR-63f3022197e9",
-        "IR-58fc311faf18",
-        "IR-cb70318d8c6c",
-        "IR-9d2e4f2182c7",
-        "IR-8bec57bad2b8",
-        "IR-fd8f88de9a88",
-        "IR-9c4541d3eb69",
-        "IR-5f17946627da",
-        "IR-43d81db5de16",
-        "IR-6b9a8d102904",
-        "IR-461e822fe5c0",
-        "IR-3922958c34f3",
-        "IR-94a9601dc365",
-        "IR-60a11112edcb",
-        "IR-966727b9a733",
-        "IR-0a89dca367e1",
-        "IR-455f7ee7dbb8",
-        "IR-8be30782c7d5",
-        "IR-5741b9813c88",
-        "IR-f1dc1ecebb84",
-        "IR-60396700380a",
-        "IR-eff598c94193",
-        "IR-79411c4afcd2",
-        "IR-4c18819c4d95",
-        "IR-765b017aab88",
-        "IR-b0692572ed2e",
-        "IR-a05db6a0865d",
-        "IR-fec6f7491463",
-        "IR-a2e126a432aa",
-        "IR-485c4488f4b0"
+        "IR-ca8b8f275462",
+        "IR-5283e0acd8b5",
+        "IR-d0ff982dea31",
+        "IR-5253564f5127",
+        "IR-3c49a637eb2c",
+        "IR-eff7dee1a804",
+        "IR-bbc3e6869f3d",
+        "IR-baba100e63f3",
+        "IR-c24c483dc859",
+        "IR-450c3a35ad1e",
+        "IR-b467e0659c2a",
+        "IR-6bdb4d1035e8",
+        "IR-77fe9225930c",
+        "IR-32c3fdf27337",
+        "IR-b14527251be2",
+        "IR-db9ee19bdefd",
+        "IR-c80f71fb2dd2",
+        "IR-a92cbca5e8ba",
+        "IR-419986103a60",
+        "IR-dbcfa75d4797",
+        "IR-015a9cb1d381",
+        "IR-6df215d53c19",
+        "IR-159579d8ddcc",
+        "IR-e3c49811bac1",
+        "IR-b502aae10f34",
+        "IR-d2998ffe716c",
+        "IR-e2b80d94c933",
+        "IR-da08e1641fd1",
+        "IR-96c4b174aca8",
+        "IR-8b3f3b1c99c9",
+        "IR-2a6bcf049147",
+        "IR-de6fee215040",
+        "IR-5fe4767505fd",
+        "IR-0c90d385cbe8",
+        "IR-11691bd1cd47",
+        "IR-906d6de7d865",
+        "IR-2658ddabad3f",
+        "IR-026f3565f097",
+        "IR-423fb443f6f0",
+        "IR-109085d754f5",
+        "IR-3ca5e3aba907",
+        "IR-138e04a8adcc",
+        "IR-7649fd586ff3",
+        "IR-07dc6d4164a0",
+        "IR-658cdfc5be0b",
+        "IR-e7d4d6708083",
+        "IR-636e21fddf01",
+        "IR-eeed662d85df",
+        "IR-bb0bf4bce5b7",
+        "IR-9fa469aea69e",
+        "IR-bdd7cf210713",
+        "IR-8361c38e514c",
+        "IR-1df119eb47f9"
       ],
       "kex_algs": "diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,curve25519-sha256,curve25519-sha256@libssh.org,ext-info-c",
       "enc_algs": "des,3des,blowfish,none,3des-cbc,blowfish-cbc,cast128-cbc,arcfour,arcfour128,arcfour256,aes128-cbc,aes192-cbc,aes256-cbc,rijndael-cbc@lysator.liu.se,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com",
       "mac_algs": "hmac-sha1,hmac-sha1-96,hmac-sha2-256,hmac-sha2-512,hmac-md5,hmac-md5-96,hmac-ripemd160,hmac-ripemd160@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha1-96-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-md5-etm@openssh.com,hmac-md5-96-etm@openssh.com,hmac-ripemd160-etm@openssh.com,umac-64-etm@openssh.com,umac-128-etm@openssh.com",
       "comp_algs": "none,zlib@openssh.com,zlib",
-      "first_seen": "2026-11-16T07:17:06.960282Z",
-      "last_seen": "2026-11-16T20:52:39.865634Z",
-      "unique_ip_count": 115
+      "first_seen": "2026-11-17T00:11:24.786095Z",
+      "last_seen": "2026-11-17T04:54:39.482799Z",
+      "unique_ip_count": 53
+    },
+    {
+      "hassh": "2ec37a7cc8daf20b10e1ad6221061ca5",
+      "client_family": "Go SSH scanner",
+      "botnet_signature": "Mirai/variant",
+      "version_strings": [
+        "SSH-2.0-Go"
+      ],
+      "session_count": 52,
+      "unique_ips": [
+        "195.178.110.217"
+      ],
+      "sessions": [
+        "IR-8e837bc48048",
+        "IR-01f273935fec",
+        "IR-5308b431ac83",
+        "IR-500ac92d5354",
+        "IR-197123003154",
+        "IR-9cf52b62605c",
+        "IR-4b7e12713da4",
+        "IR-26033640e84d",
+        "IR-8cc16f69f7ec",
+        "IR-a6d9e4224c4f",
+        "IR-0d852eb38f23",
+        "IR-db87bb28bea1",
+        "IR-73f39d75104a",
+        "IR-c4da043f7e38",
+        "IR-93b1cf4b7c85",
+        "IR-d4b7c6f0e690",
+        "IR-da00e92dca9b",
+        "IR-029e24dcbdf9",
+        "IR-bb0aee279665",
+        "IR-761b14b6314f",
+        "IR-5f5e4cd413df",
+        "IR-3b53bdb03815",
+        "IR-07597860cfb0",
+        "IR-b1f1f11a0763",
+        "IR-493a00a951a4",
+        "IR-672b62425e74",
+        "IR-89c1c26d0844",
+        "IR-9927772385d6",
+        "IR-69b3828819d3",
+        "IR-5ad41421a181",
+        "IR-b968823987d8",
+        "IR-2929c25da36a",
+        "IR-fbe5f4e50c13",
+        "IR-6060a38d6f21",
+        "IR-141890a1ae2a",
+        "IR-18a64b1bab15",
+        "IR-e25828711ca4",
+        "IR-7a537b8fc366",
+        "IR-f847f6aa5d07",
+        "IR-c44964b4fdae",
+        "IR-5489762c6094",
+        "IR-b665a6f5feab",
+        "IR-f1dd4465fc91",
+        "IR-7431d0cadb76",
+        "IR-9bd34c35f496",
+        "IR-e840603f71f2",
+        "IR-2c6cff8c99c6",
+        "IR-469dbde0c889",
+        "IR-b797905bec23",
+        "IR-dcd4d3a296ba",
+        "IR-1779e2a23729",
+        "IR-9d59c9a25826"
+      ],
+      "kex_algs": "curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group16-sha512,diffie-hellman-group14-sha256,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,ext-info-c,kex-strict-c-v00@openssh.com",
+      "enc_algs": "aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com,arcfour256,arcfour128,arcfour,3des-cbc,aes128-cbc",
+      "mac_algs": "hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1,hmac-sha1-96",
+      "comp_algs": "none",
+      "first_seen": "2026-11-17T02:43:13.818313Z",
+      "last_seen": "2026-11-17T03:48:53.988610Z",
+      "unique_ip_count": 1
     },
     {
       "hassh": "f555226df1963d1d3c09daf865abdc9a",
@@ -889,214 +484,51 @@
       "version_strings": [
         "SSH-2.0-libssh_0.9.6"
       ],
-      "session_count": 62,
+      "session_count": 22,
       "unique_ips": [
-        "103.37.81.243",
-        "103.84.236.242",
-        "106.51.72.246",
-        "107.180.88.176",
-        "113.161.39.122",
-        "115.190.211.57",
-        "117.205.245.50",
-        "119.28.105.117",
-        "122.114.255.230",
-        "122.172.255.85",
-        "129.121.136.199",
-        "129.121.141.205",
-        "130.131.220.95",
-        "14.224.227.189",
-        "156.235.89.153",
-        "168.205.190.245",
-        "176.106.225.115",
-        "182.237.13.208",
-        "187.141.71.166",
-        "190.181.44.194",
-        "192.81.218.246",
-        "201.249.166.171",
-        "202.145.0.18",
-        "213.154.77.61",
-        "222.220.102.32",
-        "31.76.34.47",
-        "36.139.161.140",
-        "4.240.126.25",
-        "42.193.177.165",
-        "43.165.190.208",
-        "50.6.207.102",
-        "51.195.40.26",
-        "59.98.148.5"
+        "150.187.4.193",
+        "186.121.233.2",
+        "197.44.15.210",
+        "20.184.59.236",
+        "200.175.61.207",
+        "201.17.133.138",
+        "213.230.127.104",
+        "36.92.140.209",
+        "43.133.61.254",
+        "59.144.92.154",
+        "85.198.19.217"
       ],
       "sessions": [
-        "IR-924ef31e75b8",
-        "IR-3adef7d2d776",
-        "IR-5bd95a2770d2",
-        "IR-b22cc5b54e01",
-        "IR-3f7775ad7680",
-        "IR-f845bc8052fa",
-        "IR-be3cb7403fc8",
-        "IR-b86cdca4744f",
-        "IR-1209e4f1a4e1",
-        "IR-814e0ec03115",
-        "IR-479f925b3747",
-        "IR-8fcf690904a0",
-        "IR-2019f878406b",
-        "IR-d0c790581cae",
-        "IR-25a44af61b24",
-        "IR-0309a116e125",
-        "IR-65403564ffdd",
-        "IR-b5e881b55dea",
-        "IR-377b5c1263ca",
-        "IR-7d4f73dccd38",
-        "IR-1897e68c1950",
-        "IR-6f88ed7878b3",
-        "IR-bbee4f13daa2",
-        "IR-cfdb41f6aa86",
-        "IR-bb2cb0a7858c",
-        "IR-113030d4380b",
-        "IR-eb89980d4e54",
-        "IR-404520f04816",
-        "IR-892cd4280a79",
-        "IR-d3e425f5befd",
-        "IR-b7911b1fb15d",
-        "IR-05b564552b39",
-        "IR-c0409b9d0717",
-        "IR-33d561d2058e",
-        "IR-9ef0a23768f2",
-        "IR-87969d5c552f",
-        "IR-cac444b3798d",
-        "IR-bc075dd93872",
-        "IR-2785cad0020f",
-        "IR-d1fed99b8f5a",
-        "IR-4fba6c0e54ed",
-        "IR-9c9c2f199909",
-        "IR-9f60fce7fcc9",
-        "IR-23167f075bbc",
-        "IR-7f69ac8e08c8",
-        "IR-d8a22d6b98c4",
-        "IR-c59899fb209a",
-        "IR-ddc5eecb3d57",
-        "IR-34f2a27911d6",
-        "IR-32be54552087",
-        "IR-e86600e3d8c0",
-        "IR-8b29b53deba0",
-        "IR-c1ce069ddd7c",
-        "IR-c596cbc4591c",
-        "IR-12b39bfc05d2",
-        "IR-8720d2d19463",
-        "IR-e20df1486d52",
-        "IR-53f8268a2e99",
-        "IR-e25ae85452ef",
-        "IR-13c662832e44",
-        "IR-3437a2cd7ed4",
-        "IR-1ef19849a408"
+        "IR-7f4ffa37a0df",
+        "IR-b6e21666921f",
+        "IR-2bc162676eb1",
+        "IR-4466889e72d5",
+        "IR-23a6474cdbd0",
+        "IR-fdb4f2072b30",
+        "IR-40538f427896",
+        "IR-bb93064a8b01",
+        "IR-03461f2c2dd1",
+        "IR-bb82dd68dcad",
+        "IR-25d05966e12c",
+        "IR-361e988ce187",
+        "IR-eb8c2c958767",
+        "IR-bcfe584dac28",
+        "IR-bb79ee72dac6",
+        "IR-31f8584c4ee8",
+        "IR-fbfa5b3377ed",
+        "IR-41dec96a6b9c",
+        "IR-6aafd4ff0a51",
+        "IR-28f8f82d634d",
+        "IR-ca9719c1901a",
+        "IR-09930b3fa65b"
       ],
       "kex_algs": "curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,ext-info-c",
       "enc_algs": "aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr,aes256-cbc,aes192-cbc,aes128-cbc,3des-cbc",
       "mac_algs": "hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1",
       "comp_algs": "none",
-      "first_seen": "2026-11-16T07:40:57.208143Z",
-      "last_seen": "2026-11-16T20:35:23.323565Z",
-      "unique_ip_count": 33
-    },
-    {
-      "hassh": "16443846184eafde36765c9bab2f4397",
-      "client_family": "Go SSH scanner",
-      "botnet_signature": "Generic scanner",
-      "version_strings": [
-        "SSH-2.0-Go"
-      ],
-      "session_count": 28,
-      "unique_ips": [
-        "100.33.23.13",
-        "104.244.79.113",
-        "191.7.159.201",
-        "195.178.110.26",
-        "78.128.112.74",
-        "87.236.176.14"
-      ],
-      "sessions": [
-        "IR-61997063c7f7",
-        "IR-d848ab65be36",
-        "IR-44c968612ed0",
-        "IR-7d5805502eac",
-        "IR-6b1ea0257853",
-        "IR-c0c1aeac698f",
-        "IR-c9d820d4bb92",
-        "IR-96ca3a198627",
-        "IR-d3765e383d20",
-        "IR-d27acf380b52",
-        "IR-d46f5a08ea69",
-        "IR-18ea7565a0aa",
-        "IR-7681e2c21db5",
-        "IR-05a00a08948b",
-        "IR-01a2b45af8a8",
-        "IR-f40555c65a6e",
-        "IR-f35f94ec2866",
-        "IR-7833efa97d4b",
-        "IR-1a2e7fefc470",
-        "IR-c8e4d9b2826c",
-        "IR-ec864e0ac3c8",
-        "IR-0f1f477f9a85",
-        "IR-2617164e2b43",
-        "IR-ab725246bd85",
-        "IR-996dcec84b51",
-        "IR-0afc01dd5c00",
-        "IR-23c81fa42e8b",
-        "IR-27342d918b6d"
-      ],
-      "kex_algs": "mlkem768x25519-sha256,curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group14-sha256,diffie-hellman-group14-sha1,ext-info-c,kex-strict-c-v00@openssh.com",
-      "enc_algs": "aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr",
-      "mac_algs": "hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1,hmac-sha1-96",
-      "comp_algs": "none",
-      "first_seen": "2026-11-16T06:59:36.479031Z",
-      "last_seen": "2026-11-16T20:29:50.959167Z",
-      "unique_ip_count": 6
-    },
-    {
-      "hassh": "7d01d047ace68f3151ea773e1e0d4838",
-      "client_family": "Go SSH scanner",
-      "botnet_signature": "Mirai/variant",
-      "version_strings": [
-        "SSH-2.0-Go"
-      ],
-      "session_count": 23,
-      "unique_ips": [
-        "138.226.239.233",
-        "138.226.239.234",
-        "77.90.185.29",
-        "80.94.95.118"
-      ],
-      "sessions": [
-        "IR-848bc7518a2c",
-        "IR-1f20911220f4",
-        "IR-66e48d2b1c31",
-        "IR-59d127e595ad",
-        "IR-1524680c44c0",
-        "IR-5e72403b6eca",
-        "IR-8075d5528e22",
-        "IR-30a866fc87d2",
-        "IR-82670f38ceaa",
-        "IR-9588a6bd85ad",
-        "IR-25a9fca9c7a6",
-        "IR-4696ef00ddf8",
-        "IR-3d45ab210e06",
-        "IR-d38e90f98a59",
-        "IR-9631c9fa8391",
-        "IR-6cad2d0da64c",
-        "IR-48a3daa7318c",
-        "IR-5f95908c94ee",
-        "IR-0a39e7c12641",
-        "IR-ada2653b9f60",
-        "IR-231879c60289",
-        "IR-65c0c491cc39",
-        "IR-27bb0ec5b685"
-      ],
-      "kex_algs": "curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group14-sha256,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,ext-info-c,kex-strict-c-v00@openssh.com",
-      "enc_algs": "chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,3des-cbc",
-      "mac_algs": "hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1",
-      "comp_algs": "none",
-      "first_seen": "2026-11-16T08:00:48.779234Z",
-      "last_seen": "2026-11-16T20:43:00.976479Z",
-      "unique_ip_count": 4
+      "first_seen": "2026-11-17T00:07:15.408737Z",
+      "last_seen": "2026-11-17T04:54:17.539407Z",
+      "unique_ip_count": 11
     },
     {
       "hassh": "0a07365cc01fa9fc82608ba4019af499",
@@ -1105,32 +537,52 @@
       "version_strings": [
         "SSH-2.0-Go"
       ],
-      "session_count": 9,
+      "session_count": 4,
       "unique_ips": [
-        "109.160.32.102",
-        "109.160.32.118",
-        "176.32.193.16",
-        "45.184.48.247",
-        "77.239.124.153"
+        "109.160.32.120",
+        "109.160.32.134"
       ],
       "sessions": [
-        "IR-6fc3eeca2479",
-        "IR-d11f97cbf1ac",
-        "IR-83b341a30502",
-        "IR-ff7408fec38b",
-        "IR-28865c169839",
-        "IR-1f32a73bb22b",
-        "IR-8043aa18d01d",
-        "IR-a9372f16eb39",
-        "IR-7a0e635d515f"
+        "IR-ab073390cf66",
+        "IR-a44d91840ab6",
+        "IR-a70890c61375",
+        "IR-b43b4ce627b3"
       ],
       "kex_algs": "curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group14-sha256,diffie-hellman-group14-sha1,ext-info-c,kex-strict-c-v00@openssh.com",
       "enc_algs": "aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr",
       "mac_algs": "hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1,hmac-sha1-96",
       "comp_algs": "none",
-      "first_seen": "2026-11-16T06:44:13.257616Z",
-      "last_seen": "2026-11-16T15:43:33.262076Z",
-      "unique_ip_count": 5
+      "first_seen": "2026-11-17T00:00:00.595575Z",
+      "last_seen": "2026-11-17T00:27:49.901115Z",
+      "unique_ip_count": 2
+    },
+    {
+      "hassh": "7d01d047ace68f3151ea773e1e0d4838",
+      "client_family": "Go SSH scanner",
+      "botnet_signature": "Mirai/variant",
+      "version_strings": [
+        "SSH-2.0-Go"
+      ],
+      "session_count": 4,
+      "unique_ips": [
+        "138.226.239.233",
+        "138.226.239.234",
+        "77.90.185.29",
+        "80.94.95.118"
+      ],
+      "sessions": [
+        "IR-f31287ace3c9",
+        "IR-aaa0ca58d5b2",
+        "IR-7e9b42e30518",
+        "IR-b129ca485155"
+      ],
+      "kex_algs": "curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group14-sha256,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,ext-info-c,kex-strict-c-v00@openssh.com",
+      "enc_algs": "chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,3des-cbc",
+      "mac_algs": "hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1",
+      "comp_algs": "none",
+      "first_seen": "2026-11-17T00:55:23.640451Z",
+      "last_seen": "2026-11-17T00:57:49.681931Z",
+      "unique_ip_count": 4
     },
     {
       "hassh": "eff4c24daffc8532c160e86e5f006e53",
@@ -1139,26 +591,45 @@
       "version_strings": [
         "SSH-2.0-Go"
       ],
-      "session_count": 8,
+      "session_count": 3,
       "unique_ips": [
         "176.53.159.196"
       ],
       "sessions": [
-        "IR-cc871d31ec91",
-        "IR-8dea3636dd3f",
-        "IR-301da92d9f11",
-        "IR-c8c5d5311132",
-        "IR-041e4bac85cb",
-        "IR-443648e048cc",
-        "IR-bf85629c5287",
-        "IR-1b44e00916c9"
+        "IR-0013013fd3f1",
+        "IR-050754f8f2a5",
+        "IR-f35203acda64"
       ],
       "kex_algs": "curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group14-sha1,diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group1-sha1,ext-info-c,kex-strict-c-v00@openssh.com",
       "enc_algs": "aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc",
       "mac_algs": "hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1,hmac-sha1-96",
       "comp_algs": "none",
-      "first_seen": "2026-11-16T07:10:51.458518Z",
-      "last_seen": "2026-11-16T20:14:33.026984Z",
+      "first_seen": "2026-11-17T00:03:50.138826Z",
+      "last_seen": "2026-11-17T04:03:01.372423Z",
+      "unique_ip_count": 1
+    },
+    {
+      "hassh": "f1e5e9d24e5e345e8745613bde22d532",
+      "client_family": "Go SSH scanner",
+      "botnet_signature": "Mirai/variant",
+      "version_strings": [
+        "SSH-2.0-Go"
+      ],
+      "session_count": 3,
+      "unique_ips": [
+        "139.19.117.129"
+      ],
+      "sessions": [
+        "IR-25887f9b97c4",
+        "IR-c0e412dbfbfb",
+        "IR-3c175a3b7eed"
+      ],
+      "kex_algs": "curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256",
+      "enc_algs": "aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,arcfour256,arcfour128,arcfour,aes128-cbc,3des-cbc,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,arcfour256,arcfour128,arcfour,aes128-cbc,3des-cbc",
+      "mac_algs": "hmac-sha2-256,hmac-sha1,hmac-sha1-96",
+      "comp_algs": "none",
+      "first_seen": "2026-11-17T00:40:57.678171Z",
+      "last_seen": "2026-11-17T04:39:47.044489Z",
       "unique_ip_count": 1
     },
     {
@@ -1166,112 +637,76 @@
       "client_family": "OpenSSH",
       "botnet_signature": null,
       "version_strings": [
-        "\u0016\u0003\u0001\u0000{\u0001\u0000\u0000w\u0003\u0003D%1\\xe03\\x9c\u0003\\x8cf\\xdc\u0007t\u0003\\\u0007\\xfc\u0159\u0011g\u042c,j1f\f\\xa7\u03eeQz\u0000\u0000\u001a\\xc0/\\xc0+\\xc0\u0011\\xc0\u0007\\xc0\u0013\\xc0\t\\xc0\u0014\\xc0",
-        "\\xfe\u0007adminSSH-2.0-OpenSSH_7.4",
         "GET / HTTP/1.1",
         "SSH-2.0-OpenSSH_6.7p1 Raspbian-5+deb8u3",
-        "\u0016\u0003\u0001\u0001",
-        "SSH-2.0-OpenSSH"
+        "\u0016\u0003\u0001\u0005\\xc6\u0001\u0000\u0005\\xc2\u0003\u0003\\xfc\\xd3^j\\xc0\\xa2&m>Gx4E\\xad\u0011\"\u06f6pF\\x87\\x94R%8vJ\"a\\xd5[\u0005 p\u0000\u0001\\xa8n\\xed\\xca\f\\xb5\u0003z\u0015N*\\xf9\\xf2nn\u0004\u0000\\xb7V\\xae\\x90\\xac(\\xe2Ns7\\xef\u0003\u0000\u001a\\xc0+\\xc0/\\xc0,\\xc00\u0329\u0328\\xc0\t\\xc0\u0013\\xc0"
       ],
-      "session_count": 7,
+      "session_count": 3,
       "unique_ips": [
-        "112.197.2.116",
-        "172.236.228.222",
-        "172.236.228.224",
-        "184.105.247.195",
-        "187.32.178.98",
-        "199.165.159.49",
+        "162.216.150.166",
+        "65.49.20.69",
         "77.239.124.130"
       ],
       "sessions": [
-        "IR-6dcb3fbec726",
-        "IR-4bd070537937",
-        "IR-df9a53ac52ae",
-        "IR-83641c2e546b",
-        "IR-8e6590c49b31",
-        "IR-96710c4ba0ca",
-        "IR-c4412c0ddf23"
+        "IR-a2d579f02152",
+        "IR-c570a8635564",
+        "IR-ad907d942e35"
       ],
       "kex_algs": null,
       "enc_algs": null,
       "mac_algs": null,
       "comp_algs": null,
-      "first_seen": "2026-11-16T06:52:28.642102Z",
-      "last_seen": "2026-11-16T19:31:12.986235Z",
-      "unique_ip_count": 7
-    },
-    {
-      "hassh": "084386fa7ae5039bcf6f07298a05a227",
-      "client_family": "Go SSH scanner",
-      "botnet_signature": "Mirai/variant",
-      "version_strings": [
-        "SSH-2.0-Go"
-      ],
-      "session_count": 3,
-      "unique_ips": [
-        "109.160.32.102",
-        "71.6.154.144",
-        "71.6.199.65"
-      ],
-      "sessions": [
-        "IR-3d15da776f20",
-        "IR-04d0d29aeacc",
-        "IR-7ac8c95c19da"
-      ],
-      "kex_algs": "curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1",
-      "enc_algs": "aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,arcfour256,arcfour128,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,arcfour256,arcfour128",
-      "mac_algs": "hmac-sha2-256,hmac-sha1,hmac-sha1-96",
-      "comp_algs": "none",
-      "first_seen": "2026-11-16T07:24:13.815998Z",
-      "last_seen": "2026-11-16T19:43:11.783114Z",
+      "first_seen": "2026-11-17T01:39:37.198464Z",
+      "last_seen": "2026-11-17T04:39:53.546828Z",
       "unique_ip_count": 3
     },
     {
-      "hassh": "a289c065bf37397b69226bd770e33124",
+      "hassh": "4e066189c3bbeec38c99b1855113733a",
+      "client_family": "Unknown",
+      "botnet_signature": "Generic scanner",
+      "version_strings": [
+        "SSH-2.0-Fingerprintx-SSH2"
+      ],
+      "session_count": 2,
+      "unique_ips": [
+        "35.206.176.149",
+        "35.210.162.204"
+      ],
+      "sessions": [
+        "IR-1af9753efa2b",
+        "IR-5c6d227db553"
+      ],
+      "kex_algs": "curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group14-sha256,diffie-hellman-group14-sha1,ext-info-c",
+      "enc_algs": "aes128-gcm@openssh.com,chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr",
+      "mac_algs": "hmac-sha2-256-etm@openssh.com,hmac-sha2-256,hmac-sha1,hmac-sha1-96",
+      "comp_algs": "none",
+      "first_seen": "2026-11-17T02:20:55.732169Z",
+      "last_seen": "2026-11-17T04:49:20.037328Z",
+      "unique_ip_count": 2
+    },
+    {
+      "hassh": "dde267e50f82fcc16a7e1e7b59b8af71",
       "client_family": "Go SSH scanner",
       "botnet_signature": "Mirai/variant",
       "version_strings": [
         "SSH-2.0-Go"
       ],
-      "session_count": 3,
-      "unique_ips": [
-        "193.32.162.15"
-      ],
-      "sessions": [
-        "IR-766ace18d77e",
-        "IR-613a14bb4244",
-        "IR-d87453de3800"
-      ],
-      "kex_algs": "curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,ext-info-c,kex-strict-c-v00@openssh.com",
-      "enc_algs": "chacha20-poly1305@openssh.com,aes128-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc",
-      "mac_algs": "hmac-sha2-512,hmac-sha2-256,hmac-sha1",
-      "comp_algs": "none",
-      "first_seen": "2026-11-16T13:50:38.861088Z",
-      "last_seen": "2026-11-16T19:09:10.045296Z",
-      "unique_ip_count": 1
-    },
-    {
-      "hassh": "03a80b21afa810682a776a7d42e5e6fb",
-      "client_family": "libssh",
-      "botnet_signature": "Modern SSH client",
-      "version_strings": [
-        "SSH-2.0-libssh_0.11.1"
-      ],
       "session_count": 2,
       "unique_ips": [
-        "111.238.174.6"
+        "35.206.176.149",
+        "35.210.162.204"
       ],
       "sessions": [
-        "IR-d154e0f60388",
-        "IR-9d8dee263f3c"
+        "IR-ea67d23bfed1",
+        "IR-0eaaf17d271c"
       ],
-      "kex_algs": "curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256,ext-info-c,kex-strict-c-v00@openssh.com",
-      "enc_algs": "chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr",
-      "mac_algs": "hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha2-256,hmac-sha2-512",
-      "comp_algs": "none,zlib@openssh.com",
-      "first_seen": "2026-11-16T07:39:27.985018Z",
-      "last_seen": "2026-11-16T07:39:31.197024Z",
-      "unique_ip_count": 1
+      "kex_algs": "diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,curve25519-sha256@libssh.org,curve25519-sha256,ext-info-c",
+      "enc_algs": "aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,chacha20-poly1305@openssh.com,arcfour256,arcfour128,arcfour,aes128-cbc,3des-cbc",
+      "mac_algs": "hmac-sha2-256-etm@openssh.com,hmac-sha2-256,hmac-sha1,hmac-sha1-96",
+      "comp_algs": "none",
+      "first_seen": "2026-11-17T02:20:56.156299Z",
+      "last_seen": "2026-11-17T04:49:20.636816Z",
+      "unique_ip_count": 2
     },
     {
       "hassh": "dd9bcf093c355da7000132131cb36fd0",
@@ -1282,90 +717,19 @@
       ],
       "session_count": 2,
       "unique_ips": [
-        "147.185.133.240",
-        "198.235.24.8"
+        "147.185.133.249",
+        "198.235.24.59"
       ],
       "sessions": [
-        "IR-3884e554883a",
-        "IR-85b5cf847644"
+        "IR-b52b19fa08b1",
+        "IR-9b724be3f1b8"
       ],
       "kex_algs": "diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1",
       "enc_algs": "aes128-ctr,aes192-ctr,aes256-ctr,arcfour256,arcfour128,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com,aes128-cbc,3des-cbc,blowfish-cbc,cast128-cbc,aes192-cbc,aes256-cbc,arcfour,rijndael-cbc@lysator.liu.se",
       "mac_algs": "hmac-md5-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-ripemd160-etm@openssh.com,hmac-sha1-96-etm@openssh.com,hmac-md5-96-etm@openssh.com,hmac-md5,hmac-sha1,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-ripemd160,hmac-ripemd160@openssh.com,hmac-sha1-96,hmac-md5-96",
       "comp_algs": "none,zlib@openssh.com,zlib",
-      "first_seen": "2026-11-16T10:09:10.760099Z",
-      "last_seen": "2026-11-16T16:35:51.730291Z",
-      "unique_ip_count": 2
-    },
-    {
-      "hassh": "5bd26477da5440a6187bd3f1b39a429c",
-      "client_family": "PuTTY",
-      "botnet_signature": "Mirai/variant",
-      "version_strings": [
-        "SSH-2.0-PUTTY"
-      ],
-      "session_count": 2,
-      "unique_ips": [
-        "45.148.10.141",
-        "45.148.10.157"
-      ],
-      "sessions": [
-        "IR-ba9277ab7964",
-        "IR-6bcc9ace6bb7"
-      ],
-      "kex_algs": "curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,ext-info-c,kex-strict-c-v00@openssh.com",
-      "enc_algs": "chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr,aes256-cbc,rijndael-cbc@lysator.liu.se,aes192-cbc,aes128-cbc",
-      "mac_algs": "hmac-sha2-256,hmac-sha2-256-etm@openssh.com,hmac-sha2-512,hmac-sha2-512-etm@openssh.com,hmac-sha1,hmac-sha1-etm@openssh.com,hmac-sha1-96",
-      "comp_algs": "none",
-      "first_seen": "2026-11-16T10:09:43.312051Z",
-      "last_seen": "2026-11-16T13:10:39.063387Z",
-      "unique_ip_count": 2
-    },
-    {
-      "hassh": "14b2ddda386a4d1006108ccd231b42fc",
-      "client_family": "libssh",
-      "botnet_signature": "Mirai/variant",
-      "version_strings": [
-        "SSH-2.0-libssh2_1.11.0"
-      ],
-      "session_count": 2,
-      "unique_ips": [
-        "193.187.110.160"
-      ],
-      "sessions": [
-        "IR-c58afbc47356",
-        "IR-fe4388046606"
-      ],
-      "kex_algs": "curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,ext-info-c",
-      "enc_algs": "aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr,aes256-cbc,rijndael-cbc@lysator.liu.se,aes192-cbc,aes128-cbc,blowfish-cbc,arcfour128,arcfour,cast128-cbc,3des-cbc",
-      "mac_algs": "hmac-sha2-256,hmac-sha2-256-etm@openssh.com,hmac-sha2-512,hmac-sha2-512-etm@openssh.com,hmac-sha1,hmac-sha1-etm@openssh.com,hmac-sha1-96,hmac-md5,hmac-md5-96,hmac-ripemd160,hmac-ripemd160@openssh.com",
-      "comp_algs": "none",
-      "first_seen": "2026-11-16T10:23:04.574204Z",
-      "last_seen": "2026-11-16T16:51:57.544245Z",
-      "unique_ip_count": 1
-    },
-    {
-      "hassh": "e54ef3ec27fe1fea7ab64d3fa05359fd",
-      "client_family": "Go SSH scanner",
-      "botnet_signature": "Generic scanner",
-      "version_strings": [
-        "SSH-2.0-Go"
-      ],
-      "session_count": 2,
-      "unique_ips": [
-        "20.29.52.64",
-        "24.144.111.22"
-      ],
-      "sessions": [
-        "IR-b5dec10f6d40",
-        "IR-0a7921ea9b2e"
-      ],
-      "kex_algs": "curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group1-sha1,diffie-hellman-group14-sha256,diffie-hellman-group14-sha1,diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1",
-      "enc_algs": "chacha20-poly1305@openssh.com,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,arcfour256,arcfour128,arcfour,3des-cbc",
-      "mac_algs": "hmac-sha2-256-etm@openssh.com,hmac-sha2-256,hmac-sha1,hmac-sha1-96",
-      "comp_algs": "none",
-      "first_seen": "2026-11-16T11:29:12.713812Z",
-      "last_seen": "2026-11-16T17:38:04.958395Z",
+      "first_seen": "2026-11-17T02:37:19.049223Z",
+      "last_seen": "2026-11-17T04:33:57.501404Z",
       "unique_ip_count": 2
     },
     {
@@ -1375,111 +739,239 @@
       "version_strings": [
         "SSH-2.0-Go"
       ],
-      "session_count": 2,
+      "session_count": 1,
       "unique_ips": [
-        "120.27.122.227",
-        "152.42.246.223"
+        "160.3.5.133"
       ],
       "sessions": [
-        "IR-94e7d7779b28",
-        "IR-0b08d886d48f"
+        "IR-d2cdfe36d456"
       ],
       "kex_algs": "curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group14-sha256,diffie-hellman-group14-sha1,ext-info-c",
       "enc_algs": "aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr",
       "mac_algs": "hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1,hmac-sha1-96",
       "comp_algs": "none",
-      "first_seen": "2026-11-16T17:28:07.918347Z",
-      "last_seen": "2026-11-16T20:36:08.176137Z",
-      "unique_ip_count": 2
-    },
-    {
-      "hassh": "713bd9cc935561939c02dad25af2d3de",
-      "client_family": "libssh",
-      "botnet_signature": "Mirai/variant",
-      "version_strings": [
-        "SSH-2.0-libssh_0.11.1"
-      ],
-      "session_count": 2,
-      "unique_ips": [
-        "102.88.137.80"
-      ],
-      "sessions": [
-        "IR-e25c814cc5db",
-        "IR-a01cbfc8ba26"
-      ],
-      "kex_algs": "curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,ext-info-c,kex-strict-c-v00@openssh.com",
-      "enc_algs": "aes256-gcm@openssh.com,chacha20-poly1305@openssh.com,aes256-ctr,aes256-cbc,aes128-gcm@openssh.com,aes128-ctr,aes128-cbc",
-      "mac_algs": "hmac-sha2-256-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha2-256,hmac-sha1,hmac-sha2-512",
-      "comp_algs": "none,zlib@openssh.com",
-      "first_seen": "2026-11-16T18:30:21.125743Z",
-      "last_seen": "2026-11-16T18:30:24.536496Z",
+      "first_seen": "2026-11-17T00:00:26.178019Z",
+      "last_seen": "2026-11-17T00:00:26.178019Z",
       "unique_ip_count": 1
     },
     {
-      "hassh": "f1e5e9d24e5e345e8745613bde22d532",
+      "hassh": "4c94058d5e9e31659879f79fd5b46084",
+      "client_family": "Paramiko (Python)",
+      "botnet_signature": "libssh-based",
+      "version_strings": [
+        "SSH-2.0-paramiko_5.1.0"
+      ],
+      "session_count": 1,
+      "unique_ips": [
+        "45.14.225.216"
+      ],
+      "sessions": [
+        "IR-3109e7e1d8f2"
+      ],
+      "kex_algs": "mlkem768x25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256,ext-info-c,kex-strict-c-v00@openssh.com",
+      "enc_algs": "aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,aes192-cbc,aes256-cbc,3des-cbc,aes128-gcm@openssh.com,aes256-gcm@openssh.com",
+      "mac_algs": "hmac-sha2-256,hmac-sha2-512,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1,hmac-md5,hmac-sha1-96,hmac-md5-96",
+      "comp_algs": "none",
+      "first_seen": "2026-11-17T00:15:22.047177Z",
+      "last_seen": "2026-11-17T00:15:22.047177Z",
+      "unique_ip_count": 1
+    },
+    {
+      "hassh": "14b2ddda386a4d1006108ccd231b42fc",
+      "client_family": "libssh",
+      "botnet_signature": "Mirai/variant",
+      "version_strings": [
+        "SSH-2.0-libssh2_1.11.0"
+      ],
+      "session_count": 1,
+      "unique_ips": [
+        "193.187.110.160"
+      ],
+      "sessions": [
+        "IR-5ff50e3690f3"
+      ],
+      "kex_algs": "curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,ext-info-c",
+      "enc_algs": "aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr,aes256-cbc,rijndael-cbc@lysator.liu.se,aes192-cbc,aes128-cbc,blowfish-cbc,arcfour128,arcfour,cast128-cbc,3des-cbc",
+      "mac_algs": "hmac-sha2-256,hmac-sha2-256-etm@openssh.com,hmac-sha2-512,hmac-sha2-512-etm@openssh.com,hmac-sha1,hmac-sha1-etm@openssh.com,hmac-sha1-96,hmac-md5,hmac-md5-96,hmac-ripemd160,hmac-ripemd160@openssh.com",
+      "comp_algs": "none",
+      "first_seen": "2026-11-17T00:20:46.304565Z",
+      "last_seen": "2026-11-17T00:20:46.304565Z",
+      "unique_ip_count": 1
+    },
+    {
+      "hassh": "52c99fce46b6758a467102ce5bd1c565",
       "client_family": "Go SSH scanner",
       "botnet_signature": "Mirai/variant",
       "version_strings": [
         "SSH-2.0-Go"
       ],
-      "session_count": 2,
+      "session_count": 1,
       "unique_ips": [
-        "139.19.117.129"
+        "66.132.172.37"
       ],
       "sessions": [
-        "IR-2bd797d62494",
-        "IR-7d89861f702b"
+        "IR-6c46c9307108"
       ],
-      "kex_algs": "curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256",
-      "enc_algs": "aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,arcfour256,arcfour128,arcfour,aes128-cbc,3des-cbc,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,arcfour256,arcfour128,arcfour,aes128-cbc,3des-cbc",
+      "kex_algs": "curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha256",
+      "enc_algs": "aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,arcfour256,arcfour128,aes128-cbc,3des-cbc",
       "mac_algs": "hmac-sha2-256,hmac-sha1,hmac-sha1-96",
       "comp_algs": "none",
-      "first_seen": "2026-11-16T19:43:30.961185Z",
-      "last_seen": "2026-11-16T20:40:52.522892Z",
+      "first_seen": "2026-11-17T00:33:03.246294Z",
+      "last_seen": "2026-11-17T00:33:03.246294Z",
       "unique_ip_count": 1
     },
     {
-      "hassh": "6372ee6957562199b2fb773b0be1bf34",
-      "client_family": "Paramiko (Python)",
-      "botnet_signature": "Modern SSH client",
+      "hassh": "16443846184eafde36765c9bab2f4397",
+      "client_family": "Go SSH scanner",
+      "botnet_signature": "Generic scanner",
       "version_strings": [
-        "SSH-2.0-paramiko_5.0.0"
+        "SSH-2.0-Go"
       ],
       "session_count": 1,
       "unique_ips": [
-        "43.160.237.207"
+        "78.128.112.74"
       ],
       "sessions": [
-        "IR-0425be347d19"
+        "IR-5b15e892e6c9"
       ],
-      "kex_algs": "curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256,ext-info-c,kex-strict-c-v00@openssh.com",
+      "kex_algs": "mlkem768x25519-sha256,curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group14-sha256,diffie-hellman-group14-sha1,ext-info-c,kex-strict-c-v00@openssh.com",
+      "enc_algs": "aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr",
+      "mac_algs": "hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1,hmac-sha1-96",
+      "comp_algs": "none",
+      "first_seen": "2026-11-17T01:01:35.309543Z",
+      "last_seen": "2026-11-17T01:01:35.309543Z",
+      "unique_ip_count": 1
+    },
+    {
+      "hassh": "9052c4ab4164c78256e71143dcfc7eac",
+      "client_family": "Go SSH scanner",
+      "botnet_signature": "Mirai/variant",
+      "version_strings": [
+        "SSH-2.0-Go"
+      ],
+      "session_count": 1,
+      "unique_ips": [
+        "52.91.188.73"
+      ],
+      "sessions": [
+        "IR-cae44457b8b7"
+      ],
+      "kex_algs": "curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group14-sha256,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group14-sha256,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,ext-info-c",
+      "enc_algs": "aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com,arcfour256,arcfour128,arcfour,aes128-cbc,3des-cbc,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com,arcfour256,arcfour128,arcfour,aes128-cbc,3des-cbc",
+      "mac_algs": "hmac-sha2-256-etm@openssh.com,hmac-sha2-256,hmac-sha1,hmac-sha1-96",
+      "comp_algs": "none",
+      "first_seen": "2026-11-17T01:24:41.603166Z",
+      "last_seen": "2026-11-17T01:24:41.603166Z",
+      "unique_ip_count": 1
+    },
+    {
+      "hassh": "39810c8bc443678b01c3b856ad168ba9",
+      "client_family": "Go SSH scanner",
+      "botnet_signature": "Mirai/variant",
+      "version_strings": [
+        "SSH-2.0-Go"
+      ],
+      "session_count": 1,
+      "unique_ips": [
+        "85.206.170.188"
+      ],
+      "sessions": [
+        "IR-d43d68009399"
+      ],
+      "kex_algs": "diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,curve25519-sha256@libssh.org,curve25519-sha256,ext-info-c,kex-strict-c-v00@openssh.com",
+      "enc_algs": "aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,chacha20-poly1305@openssh.com,arcfour256,arcfour128,arcfour,aes128-cbc,3des-cbc",
+      "mac_algs": "hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1,hmac-sha1-96",
+      "comp_algs": "none",
+      "first_seen": "2026-11-17T01:39:14.924318Z",
+      "last_seen": "2026-11-17T01:39:14.924318Z",
+      "unique_ip_count": 1
+    },
+    {
+      "hassh": "a2de0f306611e0957be704f5b0e35a82",
+      "client_family": "Paramiko (Python)",
+      "botnet_signature": "Mirai/variant",
+      "version_strings": [
+        "SSH-2.0-paramiko_4.0.0"
+      ],
+      "session_count": 1,
+      "unique_ips": [
+        "144.22.238.238"
+      ],
+      "sessions": [
+        "IR-ece546e750f9"
+      ],
+      "kex_algs": "curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,ext-info-c,kex-strict-c-v00@openssh.com",
       "enc_algs": "aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,aes192-cbc,aes256-cbc,3des-cbc,aes128-gcm@openssh.com,aes256-gcm@openssh.com",
       "mac_algs": "hmac-sha2-256,hmac-sha2-512,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1,hmac-md5,hmac-sha1-96,hmac-md5-96",
       "comp_algs": "none",
-      "first_seen": "2026-11-16T08:23:56.871281Z",
-      "last_seen": "2026-11-16T08:23:56.871281Z",
+      "first_seen": "2026-11-17T01:48:08.881321Z",
+      "last_seen": "2026-11-17T01:48:08.881321Z",
       "unique_ip_count": 1
     },
     {
-      "hassh": "bc3aee897af7d3feb9fc37b89c7d15c9",
-      "client_family": "OpenSSH",
+      "hassh": "7216c7c473918b4f83d1139b3c70dbf9",
+      "client_family": "Go SSH scanner",
       "botnet_signature": "Mirai/variant",
       "version_strings": [
-        "SSH-2.0-OpenSSH_9.6p1 Ubuntu-3ubuntu13.14"
+        "SSH-2.0-Go"
       ],
       "session_count": 1,
       "unique_ips": [
-        "85.217.149.15"
+        "64.62.197.206"
       ],
       "sessions": [
-        "IR-caa69d67834d"
+        "IR-7627d451c28a"
       ],
-      "kex_algs": "curve25519-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256,curve25519-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256,ext-info-c",
-      "enc_algs": "aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,arcfour256,arcfour128,arcfour,aes128-cbc,3des-cbc,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,arcfour256,arcfour128,arcfour,aes128-cbc,3des-cbc",
-      "mac_algs": "hmac-sha2-256-etm@openssh.com,hmac-sha2-256,hmac-sha1,hmac-sha1-96",
+      "kex_algs": "curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1",
+      "enc_algs": "aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,arcfour256,arcfour128,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,arcfour256,arcfour128,aes128-cbc,3des-cbc,arcfour",
+      "mac_algs": "hmac-sha2-256,hmac-sha1,hmac-sha1-96",
       "comp_algs": "none",
-      "first_seen": "2026-11-16T09:31:13.274228Z",
-      "last_seen": "2026-11-16T09:31:13.274228Z",
+      "first_seen": "2026-11-17T02:30:13.074093Z",
+      "last_seen": "2026-11-17T02:30:13.074093Z",
+      "unique_ip_count": 1
+    },
+    {
+      "hassh": "46a2ae5b447a73d9fbe6516e4b25976e",
+      "client_family": "Go SSH scanner",
+      "botnet_signature": "Mirai/variant",
+      "version_strings": [
+        "SSH-2.0-Go"
+      ],
+      "session_count": 1,
+      "unique_ips": [
+        "86.124.210.130"
+      ],
+      "sessions": [
+        "IR-1dde4f5b3064"
+      ],
+      "kex_algs": "mlkem768x25519-sha256,curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,ext-info-c,kex-strict-c-v00@openssh.com",
+      "enc_algs": "aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc",
+      "mac_algs": "hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1,hmac-sha1-96",
+      "comp_algs": "none",
+      "first_seen": "2026-11-17T03:59:40.343073Z",
+      "last_seen": "2026-11-17T03:59:40.343073Z",
+      "unique_ip_count": 1
+    },
+    {
+      "hassh": "d1c5d296d5327da6ddb7e1367f528868",
+      "client_family": "AsyncSSH (Python)",
+      "botnet_signature": "Modern SSH client",
+      "version_strings": [
+        "SSH-2.0-AsyncSSH_2.14.2"
+      ],
+      "session_count": 1,
+      "unique_ips": [
+        "121.167.171.219"
+      ],
+      "sessions": [
+        "IR-e7651a89ac8f"
+      ],
+      "kex_algs": "curve25519-sha256,curve25519-sha256@libssh.org,curve448-sha512,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,ecdh-sha2-1.3.132.0.10,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256,diffie-hellman-group15-sha512,diffie-hellman-group16-sha512,diffie-hellman-group17-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256@ssh.com,diffie-hellman-group14-sha1,rsa2048-sha256,ext-info-c,kex-strict-c-v00@openssh.com",
+      "enc_algs": "chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr",
+      "mac_algs": "umac-64-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1,hmac-sha256-2@ssh.com,hmac-sha224@ssh.com,hmac-sha256@ssh.com,hmac-sha384@ssh.com,hmac-sha512@ssh.com",
+      "comp_algs": "zlib@openssh.com,none",
+      "first_seen": "2026-11-17T04:36:49.982701Z",
+      "last_seen": "2026-11-17T04:36:49.982701Z",
       "unique_ip_count": 1
     },
     {
@@ -1491,127 +983,17 @@
       ],
       "session_count": 1,
       "unique_ips": [
-        "8.218.211.50"
+        "39.105.56.130"
       ],
       "sessions": [
-        "IR-bb5b03f79eea"
+        "IR-db7dd873e891"
       ],
       "kex_algs": "curve25519-sha256@libssh.org,ecdh-sha2-nistp256,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1",
       "enc_algs": "aes256-ctr,aes192-ctr,aes128-ctr,aes256-cbc,aes192-cbc,aes128-cbc,3des-cbc",
       "mac_algs": "hmac-sha2-256,hmac-sha2-512,hmac-sha1",
       "comp_algs": "none",
-      "first_seen": "2026-11-16T09:42:22.331615Z",
-      "last_seen": "2026-11-16T09:42:22.331615Z",
-      "unique_ip_count": 1
-    },
-    {
-      "hassh": "e57221504a700ba6ecfb7c89dbf0009b",
-      "client_family": "libssh",
-      "botnet_signature": "Modern SSH client",
-      "version_strings": [
-        "SSH-2.0-libssh_0.11.1"
-      ],
-      "session_count": 1,
-      "unique_ips": [
-        "36.134.69.15"
-      ],
-      "sessions": [
-        "IR-13c109d87205"
-      ],
-      "kex_algs": "curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256,ext-info-c,kex-strict-c-v00@openssh.com",
-      "enc_algs": "aes256-ctr,aes192-ctr,aes128-ctr,aes256-cbc,aes192-cbc,aes128-cbc,3des-cbc",
-      "mac_algs": "hmac-sha1",
-      "comp_algs": "none,zlib@openssh.com",
-      "first_seen": "2026-11-16T11:42:41.238391Z",
-      "last_seen": "2026-11-16T11:42:41.238391Z",
-      "unique_ip_count": 1
-    },
-    {
-      "hassh": "f45fb203c31069bb280067b71ed92ccb",
-      "client_family": "libssh",
-      "botnet_signature": "Mirai/variant",
-      "version_strings": [
-        "SSH-2.0-libssh2_1.11.1"
-      ],
-      "session_count": 1,
-      "unique_ips": [
-        "14.55.199.214"
-      ],
-      "sessions": [
-        "IR-b62607f91d5d"
-      ],
-      "kex_algs": "ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,ext-info-c,kex-strict-c-v00@openssh.com",
-      "enc_algs": "chacha20-poly1305@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr,aes256-cbc,rijndael-cbc@lysator.liu.se,aes192-cbc,aes128-cbc,blowfish-cbc,arcfour128,arcfour,cast128-cbc,3des-cbc",
-      "mac_algs": "hmac-sha2-256,hmac-sha2-256-etm@openssh.com,hmac-sha2-512,hmac-sha2-512-etm@openssh.com,hmac-sha1,hmac-sha1-etm@openssh.com,hmac-sha1-96,hmac-md5,hmac-md5-96,hmac-ripemd160,hmac-ripemd160@openssh.com",
-      "comp_algs": "none",
-      "first_seen": "2026-11-16T12:06:03.038748Z",
-      "last_seen": "2026-11-16T12:06:03.038748Z",
-      "unique_ip_count": 1
-    },
-    {
-      "hassh": "bc9e7273cde22b1209d6673b5fd10bd5",
-      "client_family": "OpenSSH",
-      "botnet_signature": "Mirai/variant",
-      "version_strings": [
-        "SSH-2.0-OpenSSH_9.6p1 Ubuntu-3ubuntu13.8"
-      ],
-      "session_count": 1,
-      "unique_ips": [
-        "193.32.209.244"
-      ],
-      "sessions": [
-        "IR-09eafbdf6817"
-      ],
-      "kex_algs": "curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256",
-      "enc_algs": "aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,arcfour256,arcfour128,arcfour,aes128-cbc,3des-cbc",
-      "mac_algs": "hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1,hmac-sha1-96",
-      "comp_algs": "none",
-      "first_seen": "2026-11-16T13:22:38.627376Z",
-      "last_seen": "2026-11-16T13:22:38.627376Z",
-      "unique_ip_count": 1
-    },
-    {
-      "hassh": "52c99fce46b6758a467102ce5bd1c565",
-      "client_family": "Go SSH scanner",
-      "botnet_signature": "Mirai/variant",
-      "version_strings": [
-        "SSH-2.0-Go"
-      ],
-      "session_count": 1,
-      "unique_ips": [
-        "66.132.195.99"
-      ],
-      "sessions": [
-        "IR-143b10cfbd84"
-      ],
-      "kex_algs": "curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha256",
-      "enc_algs": "aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,arcfour256,arcfour128,aes128-cbc,3des-cbc",
-      "mac_algs": "hmac-sha2-256,hmac-sha1,hmac-sha1-96",
-      "comp_algs": "none",
-      "first_seen": "2026-11-16T13:31:25.363634Z",
-      "last_seen": "2026-11-16T13:31:25.363634Z",
-      "unique_ip_count": 1
-    },
-    {
-      "hassh": "46a2ae5b447a73d9fbe6516e4b25976e",
-      "client_family": "Go SSH scanner",
-      "botnet_signature": "Mirai/variant",
-      "version_strings": [
-        "SSH-2.0-Go"
-      ],
-      "session_count": 1,
-      "unique_ips": [
-        "118.19.121.251"
-      ],
-      "sessions": [
-        "IR-ffd4fb934757"
-      ],
-      "kex_algs": "mlkem768x25519-sha256,curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,ext-info-c,kex-strict-c-v00@openssh.com",
-      "enc_algs": "aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc",
-      "mac_algs": "hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1,hmac-sha1-96",
-      "comp_algs": "none",
-      "first_seen": "2026-11-16T14:17:45.638060Z",
-      "last_seen": "2026-11-16T14:17:45.638060Z",
+      "first_seen": "2026-11-17T04:50:50.803057Z",
+      "last_seen": "2026-11-17T04:50:50.803057Z",
       "unique_ip_count": 1
     }
   ]
