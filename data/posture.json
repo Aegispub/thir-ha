@@ -1,23 +1,22 @@
 {
-  "generated_at": "2026-11-25T05:57:30.506472744Z",
+  "generated_at": "2026-11-25T20:48:04.377567728Z",
   "services": [
     {
       "address": "150.230.174.199:2222",
       "status": "UP",
-      "checked_at": "2026-11-25T05:57:25.013618705Z"
+      "checked_at": "2026-11-25T20:48:01.912710843Z"
     },
     {
       "address": "10.0.0.53:2222",
-      "status": "DOWN",
-      "error": "remote TCP dial from VM2 to VM1 target failed (port closed or VM1 unreachable)",
-      "checked_at": "2026-11-25T05:57:25.045884058Z"
+      "status": "UP",
+      "checked_at": "2026-11-25T20:48:01.916030472Z"
     }
   ],
   "summary": {
     "total": 2,
-    "up": 1,
-    "down": 1,
-    "overall": "DEGRADED"
+    "up": 2,
+    "down": 0,
+    "overall": "HEALTHY"
   },
   "cis_controls": [
     {
