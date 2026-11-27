@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T08:54:07.289861+00:00",
+  "generated_at": "2026-11-27T21:30:34.407458+00:00",
   "thresholds": {
     "credential_replay_min_unique_ips": 50,
     "fingerprint_concentration_min_sessions": 10000,
@@ -33,41 +33,41 @@
         "corpus_key": "b7802d44e37f54dbc57410cd1056f14fb1816c330e683d80039e2578c89eceab",
         "username": "rootssssss23424123123",
         "password": "rootssssss23424123123",
-        "unique_source_ips": 492,
-        "total_success_events": 612,
+        "unique_source_ips": 506,
+        "total_success_events": 638,
         "first_seen": "2026-11-04T06:48:05.227648+00:00",
-        "last_seen": "2026-11-27T08:54:06.782150+00:00",
-        "note": "492 distinct source IPs successfully authenticated with this credential pair -- consistent with credential stuffing or botnet replay of a known-valid credential, not organic independent discovery."
+        "last_seen": "2026-11-27T21:30:33.980334+00:00",
+        "note": "506 distinct source IPs successfully authenticated with this credential pair -- consistent with credential stuffing or botnet replay of a known-valid credential, not organic independent discovery."
       },
       {
         "corpus_key": "26ac484ab33dea0a0737411fff787c6a3a0c5427838f0196e8377b13c8ccf892",
         "username": "admin",
         "password": "admin",
-        "unique_source_ips": 457,
-        "total_success_events": 973,
+        "unique_source_ips": 460,
+        "total_success_events": 977,
         "first_seen": "2026-08-30T14:51:51.555984+00:00",
-        "last_seen": "2026-11-27T08:54:06.782150+00:00",
-        "note": "457 distinct source IPs successfully authenticated with this credential pair -- consistent with credential stuffing or botnet replay of a known-valid credential, not organic independent discovery."
+        "last_seen": "2026-11-27T21:30:33.980334+00:00",
+        "note": "460 distinct source IPs successfully authenticated with this credential pair -- consistent with credential stuffing or botnet replay of a known-valid credential, not organic independent discovery."
       },
       {
         "corpus_key": "fb8f1728889e8f882df9b45b723b1eb8c4a7cb5c9104579d1d6c9d08237c8710",
         "username": "root",
         "password": "root3245gs5662d34111111111",
-        "unique_source_ips": 371,
-        "total_success_events": 446,
+        "unique_source_ips": 379,
+        "total_success_events": 460,
         "first_seen": "2026-11-04T06:48:05.227648+00:00",
-        "last_seen": "2026-11-27T08:54:06.782150+00:00",
-        "note": "371 distinct source IPs successfully authenticated with this credential pair -- consistent with credential stuffing or botnet replay of a known-valid credential, not organic independent discovery."
+        "last_seen": "2026-11-27T21:30:33.980334+00:00",
+        "note": "379 distinct source IPs successfully authenticated with this credential pair -- consistent with credential stuffing or botnet replay of a known-valid credential, not organic independent discovery."
       },
       {
         "corpus_key": "845adf5eb0c096efcd9da005e97bf9f1f3f9119896c0d7ba2a25698053af9868",
         "username": "support",
         "password": "support",
-        "unique_source_ips": 276,
-        "total_success_events": 883,
+        "unique_source_ips": 280,
+        "total_success_events": 889,
         "first_seen": "2026-08-30T03:20:37.711864+00:00",
-        "last_seen": "2026-11-27T08:54:06.782150+00:00",
-        "note": "276 distinct source IPs successfully authenticated with this credential pair -- consistent with credential stuffing or botnet replay of a known-valid credential, not organic independent discovery."
+        "last_seen": "2026-11-27T21:30:33.980334+00:00",
+        "note": "280 distinct source IPs successfully authenticated with this credential pair -- consistent with credential stuffing or botnet replay of a known-valid credential, not organic independent discovery."
       },
       {
         "corpus_key": "b6eadb3fd04c6dc6ee9b5b73b1a112718cd3bee376a2647c1d56c98f97bca78d",
@@ -122,12 +122,12 @@
         "version_strings": [
           "SSH-2.0-Go"
         ],
-        "session_count": 64108,
-        "unique_ip_count_ever": 5,
-        "sessions_per_ip": 12821.6,
+        "session_count": 64112,
+        "unique_ip_count_ever": 6,
+        "sessions_per_ip": 10685.3,
         "first_seen": "2026-08-31T12:01:48.882615+00:00",
-        "last_seen": "2026-09-27T01:35:23.608335+00:00",
-        "note": "64108 cumulative sessions from only 5 distinct source IP(s) sharing one SSH client fingerprint -- a small, fixed, sustained source set, not broad opportunistic scanning."
+        "last_seen": "2026-11-27T13:50:17.920842+00:00",
+        "note": "64112 cumulative sessions from only 6 distinct source IP(s) sharing one SSH client fingerprint -- a small, fixed, sustained source set, not broad opportunistic scanning."
       }
     ]
   }
